@@ -1,4 +1,4 @@
-# API pre 2. ročník
+# API :computer: pre 2. ročník 
 
 Na tejte hodine sa budeme učiť programovat v jazyku `Python`. Tento rok budeme spolu pracovať na tom, aby ste mali čo najviac náradí na riešenie úloh. Môžete si to predstavič, ako RPG, kde s hrdinom idete cez hracie pole, stretávate sa s inými hráčmi, bojujete, dostávate XP, pribúdajú nové schopnosti.
 
