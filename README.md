@@ -1,7 +1,10 @@
 # API pre 2. ročník
 
 Na tejte hodine sa budeme učiť programovat v jazyku `Python`. 
-- 
+- Vetvenie `if`, `elif`, `else`
+- Cykly `for` a `while`
+
+
 
 ## Pravidlá
 1. Mobily sú pozbierané
