@@ -23,6 +23,10 @@ Ako IDE budeme používať `Visual Studio Code`, kódenie budete mať uľahčen�
 7. ✅ Jesť na hodine môžete, mimo počítačov
 8. ✅ Na prestávky každý vyjde von, pohyb je dôležitý
 9. ✅ Ak cítite potrebu sa poprechádzať, dlho sedíte, môžete sa poprechádzať, premiestniť v učebni nerušiac ostatných
+10. ✅ Kľudne používajte vlastný počítač
+
+## Poznámky
+To, čo odznie na hodine, môžete si zapisovat do zošita, do notebooku, do google-drive-u. Prepis hodín bude zdielaný s vami, ale doporučujem si robiť vlastné poznámky. 
 
 > To, ako budete napredovať závisí len od vás.
 
