@@ -50,7 +50,7 @@ flowchart TB
 Výber najväčšieho čísla
 > `:=` bude rovné
 ```mermaid
-flowchart TB
+flowchart LR
 	Začiatok([Začiatok])
     Vstup[Vstup: A, B, C]
     Pokiaľ1{A>B}
