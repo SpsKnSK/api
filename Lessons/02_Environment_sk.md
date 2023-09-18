@@ -83,22 +83,17 @@ moje premenna = "Janko"
 1. Pri premenných typu číslo vyskúšajte všetky matematické operátory!
 
 ## Pomoc
-- **Číslo** – `int`
-- **Desatinné číslo**– `float`
-- **Komplexné číslo** - `complex`
-- **Reťazec** – `str` 
-- **Logická hodnota** – `bool` 
-- súčet
-- rozdiel
-- súčin
-- delenie
-- celočíselné delenie
-- zvyšok po delení
-- umocňovanie
-- rovnosť `==`
-- menšie `<`
-- menšie alebo rovné `<=`
-- väčšie `>`
-- väčšie alebo rovné `>=`
-- nerovnosť `!=`
-- priradenie `=`
+
+### Adattípusok
+
+**Číslo** – `int`|**Desatinné číslo**– `float`|**Komplexné číslo** - `complex`
+--|--|--
+**Reťazec** – `str`|**Logická hodnota** – `bool`
+
+### Operácie: 
+
+súčet | rozdiel |  súčin| delenie 
+--|--|--|--
+celočíselné delenie| zvyšok po delení| umocňovanie| rovnosť `==`
+menšie `<`|menšie alebo rovné |väčšie `>`| väčšie alebo rovné
+ nerovnosť `!=`| priradenie `=`|

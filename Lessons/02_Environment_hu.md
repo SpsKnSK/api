@@ -83,22 +83,16 @@ my var = "John"
 1. A szám adattípusú változóknál próbáljátok ki az összes matematikai operátort!
 
 ## Segítség
-- **Szám** – `int`
-- **Tizedes szám**– `float`
-- **Komplex szám** - `complex`
-- **Karakterlánc** – `str` 
-- **Logikai** – `bool` 
-- összeadás
-- kivonás
-- szorzás
-- osztás
-- egész számú osztás
-- maradékos osztás
-- hatványra emelés
-- egyenlőség `==`
-- kisebb `<`
-- kisebb vagy egyenlő `<=`
-- nagyobb `>`
-- nagyobb vagy egyenlő `>=`
-- nem egyenlő `!=`
-- értékadás `=`
+### Adattípusok
+
+**Szám** – `int`|**Tizedes szám**– `float`|**Komplex szám** - `complex`
+--|--|--
+**Karakterlánc** – `str`|**Logikai** – `bool`
+
+### Műveletek: 
+
+összeadás | kivonás |  szorzás| osztás 
+--|--|--|--
+egész számú osztás| maradékos osztás| hatványra emelés| egyenlőség `==`
+kisebb `<`|kisebb vagy egyenlő `<=`|nagyobb `>`|nagyobb vagy egyenlő `>=`
+nem egyenlő `!=` | értékadás `=`|
