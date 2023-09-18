@@ -88,6 +88,13 @@ moje premenna = "Janko"
 - **Komplexné číslo** - `complex`
 - **Reťazec** – `str` 
 - **Logická hodnota** – `bool` 
+- súčet
+- rozdiel
+- súčin
+- delenie
+- celočíselné delenie
+- zvyšok po delení
+- umocňovanie
 - rovnosť `==`
 - menšie `<`
 - menšie alebo rovné `<=`

@@ -88,6 +88,13 @@ my var = "John"
 - **Komplex szám** - `complex`
 - **Karakterlánc** – `str` 
 - **Logikai** – `bool` 
+- összeadás
+- kivonás
+- szorzás
+- osztás
+- egész számú osztás
+- maradékos osztás
+- hatványra emelés
 - egyenlőség `==`
 - kisebb `<`
 - kisebb vagy egyenlő `<=`
