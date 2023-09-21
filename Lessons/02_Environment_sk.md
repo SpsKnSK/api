@@ -33,7 +33,7 @@
     - `True` – Pravda (číselná hodnota môže byť čokoľvek okrem 0)
     - `False` – Nepravda/nedokázané (číselná hodnota je 0)
 # Operácie
-## Matematickí operátori
+## Matematické operátory
 - `5 + 3` súčet
 - `5 – 3` rozdiel
 - `5 * 3` súčin
@@ -43,7 +43,7 @@
 - `5 ** 3` umocňovanie
 - `sqrt(5)` odmocnina (na to je potrebný matematický modul)
 
-## Logickí operátori
+## Logické operátory
 - rovnosť `==`
     - napr. X==5 – skontrolujeme, či sa X rovná 5
 - menšie `<`
