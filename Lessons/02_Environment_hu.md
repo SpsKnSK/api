@@ -50,7 +50,7 @@
 - kisebb vagy egyenlő `<=`
 - nagyobb `>`
 - nagyobb vagy egyenlő `>=`
-- nem egyenlő `!=`
+- nem egyenlő `not`
 - értékadás `=`
     - Pl. `X=12` – az `X` változóba elmentjük a `12`-es értéket
 
@@ -73,14 +73,25 @@ myvar2 = "John"
 ```
 ## Nem korrekt változónév, a program nem fut le
 ```py
-2myvar = "John"  
-my-var = "John"  
-my var = "John"
+2myvar = "John" #szammal kezdodik
+my-var = "John" #kotojelet tartalmaz 
+my var = "John" #szokozt tartalmaz
+```
+
+## Ajánlom a változók következő megnevezését
+```py
+my_var = "John"
+myVar = "John"  
+MyVar = "John"  
 ```
 
 # Gyakorlat 
 1. Hozzatok létre az említett változótípusokból 2-t, és írassátok ki a képernyőre a `print()` függvény segítéségével.
 1. A szám adattípusú változóknál próbáljátok ki az összes matematikai operátort!
+1. Kérjetek a felhasználótól 2 egész számot, tizedes számot, komplex számot, és írjátok ki az összegüket, szorzatukat a képernyőre
+    1. egész szám beolvasása: `int(input())`
+    1. tizedes szám beolvasása: `float(input())`
+    1. komplex szám beolvasása: `complex(input())`
 
 ## Segítség
 ### Adattípusok
@@ -91,8 +102,9 @@ my var = "John"
 
 ### Műveletek: 
 
-összeadás | kivonás |  szorzás| osztás 
---|--|--|--
-egész számú osztás| maradékos osztás| hatványra emelés| egyenlőség `==`
-kisebb `<`|kisebb vagy egyenlő `<=`|nagyobb `>`|nagyobb vagy egyenlő `>=`
-nem egyenlő `!=` | értékadás `=`|
+| | | | |
+|-|-|-|-|
+összeadás `+`| kivonás `-` |  szorzás`*`| osztás `/` | 
+egész számú osztás `//` | maradékos osztás `%` | hatványra emelés `**`| egyenlőség `==`
+kisebb `<`|kisebb vagy egyenlő `<=` |nagyobb `>`| nagyobb vagy egyenlő `>=`
+értékadás `=`|

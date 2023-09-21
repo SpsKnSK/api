@@ -89,6 +89,10 @@ MojaPremenna = "Janko"
 # Cvičenie 
 1. Vytvorte 2 premenné pre každý spomenutý typ a pomocou funkcie `print()` ich vypíšte na obrazovku.
 1. Pri premenných typu číslo vyskúšajte všetky matematické operátory!
+1. Vypýtajte si od používateľa 2 celé čísla, potom 2 desatinné čísla a nakoniec 2 komplexné čísla a vypíšte na obrazovku ich súčet a súčin:
+    1. načítanie celého čísla: `int(input())`
+    1. načítanie desatinného čísla: `float(input())`
+    1. načítanie komplexného čísla: `complex(input())`
 
 ## Pomoc
 
