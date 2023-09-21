@@ -20,7 +20,7 @@
 # Premenné
 
 - Premenné sú prvky programu, ktoré môžu nadobúdať rôzne hodnoty a slúžia na uchovávanie rôznych údajov.
-- Miesto v pamäti s menom
+- Menom označené miesto v pamäti
 - Napr. x, z, cislo, meno, zoznam
 
 ## Typy 
@@ -28,7 +28,7 @@
 - **Desatinné číslo**– `float` – pre ukladanie desatinných čísel 95,78, 3,14, 79,21
 - **Komplexné číslo**– `complex` – pre ukladanie komplexných čísel -9+6j, 1-8j
 - **Reťazec** – `str` – pre ukladanie textu a ľubovoľných významných/ne-významných postupností znakov, môžete použiť jednoduché `''` alebo dvojité `""` úvodzovky
-    - napr. `'jablko'`, `'3tlacitko'`, atď.
+    - napr. `'jablko'`, `'3tlacitko'`, `"hram futbal"` atď.
 - **Logická hodnota** – `bool` - Môže mať dve hodnoty:
     - `True` – Pravda (číselná hodnota môže byť čokoľvek okrem 0)
     - `False` – Nepravda/nedokázané (číselná hodnota je 0)
@@ -45,37 +45,45 @@
 
 ## Logickí operátori
 - rovnosť `==`
-    - napr. X==5 – skontrolujeme, či je X rovnaké 5
+    - napr. X==5 – skontrolujeme, či sa X rovná 5
 - menšie `<`
 - menšie alebo rovné `<=`
 - väčšie `>`
 - väčšie alebo rovné `>=`
-- nerovnosť `!=`
+- nerovnosť `not`
 - priradenie `=`
-    - napr. X=12 – premenná X sa nastaví na hodnotu 12
+    - napr. `X=12` – premenná X sa nastaví na hodnotu 12
 
 # Pravidlá písania programu
 - V Pythone musíme rozlišovať medzi malými a veľkými písmenami,
 - Názvy premenných môžu obsahovať písmená, číslice a podčiarkovník `_`.
 - Názvy premenných:
-    - Nesmú začínať číslom,
+    - Nesmú sa začínať číslom,
     - Nesmú obsahovať medzery, tabulátory,
-    - Nesmú byť rezervované slová (príkazy), napr. Max, min, print, atď.
+    - Nesmú byť rezervované slová (príkazy), napr. `max`, `min`, `print`, atď.
 
 ## Správny názov pre premennú
 ```py
-mujvar = "Janko"  
-moje_premenna = "Janko"  
-_moje_premenna = "Janko"  
-mojePremenna = "Janko"  
+mojapremenna = "Janko"  
+moja_premenna = "Janko"  
+_moja_premenna = "Janko"  
+mojaPremenna = "Janko"   
+MojaPremenna = "Janko"  
 MOJAPREMENNA = "Janko"  
-mujvar2 = "Janko"
+mojaPremenna2 = "Janko"
 ```
 ## Nesprávny názov pre premennú, program sa nepustí
 ```py
-2moje_premenna = "Janko"  
-moje-premenna = "Janko"  
-moje premenna = "Janko"
+2moje_premenna = "Janko" #zacina sa cislom  
+moje-premenna = "Janko"  #obsahuje -
+moje premenna = "Janko" #obsahuje medzeru
+```
+
+## Odporúčam používať
+```py
+moja_premenna = "Janko"
+mojaPremenna = "Janko"  
+MojaPremenna = "Janko"  
 ```
 
 # Cvičenie 
@@ -84,16 +92,17 @@ moje premenna = "Janko"
 
 ## Pomoc
 
-### Adattípusok
+### Dátové typy
 
-**Číslo** – `int`|**Desatinné číslo**– `float`|**Komplexné číslo** - `complex`
+**Číslo** – `int`|**Desatinné číslo**– `float`|**Komplexné číslo**- `complex`
 --|--|--
-**Reťazec** – `str`|**Logická hodnota** – `bool`
+**Reťazec**– `str`|**Logická hodnota**– `bool`
 
 ### Operácie: 
 
-súčet | rozdiel |  súčin| delenie 
---|--|--|--
-celočíselné delenie| zvyšok po delení| umocňovanie| rovnosť `==`
-menšie `<`|menšie alebo rovné |väčšie `>`| väčšie alebo rovné
- nerovnosť `!=`| priradenie `=`|
+| | | | |
+|-|-|-|-|
+súčet `+`| rozdiel `-` |  súčin`*`| delenie `/` | 
+celočíselné delenie `//` | zvyšok po delení `%` | umocňovanie `**`| rovnosť `==`
+menšie `<`|menšie alebo rovné `<=` |väčšie `>`| väčšie alebo rovné `>=`
+priradenie `=`|
