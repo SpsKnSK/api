@@ -1,22 +1,3 @@
-# Python programovacie prostredie
-
-## Základné informácie
-
-- Zdarma na stiahnutie
-- Možnosť spustenia na akomkoľvek operačnom systéme
-- Malá náročnosť na miesto
-- Množstvo knižníc -> Veľmi využiteľný na rôznych oblastiach
-    - Základné programovanie
-    - Riadenie procesov
-    - Správa databáz
-    - Atď.
-
-## Podrobne o prostredí
-- Z hľadiska syntaxe a pokročilosti sa podobá jazyku C.
-- Pracujeme s dvoma hlavnými oknami.
-    - **Príkazový riadok** – tu spúšťame napísaný program
-    - **Editor skriptov** – tu píšeme programy
-
 # Premenné
 
 - Premenné sú prvky programu, ktoré môžu nadobúdať rôzne hodnoty a slúžia na uchovávanie rôznych údajov.

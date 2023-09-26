@@ -152,3 +152,29 @@ def ina_funkcia():
 
 ## Úloha
 Vypíšte na obrazovku pozdrav `Hello!` pomocou funkcie `print()`
+
+## Písanie kódu
+- Vytvorenie nového skriptu
+- Uloženie napísaného skriptu
+    - Každý nech si uloží do vlastného priečinka (zložky) s menom
+    - Časté ukladanie (Ctrl+S), nielen keď je program úplne hotový!!!
+- Spustenie skriptu (F5 alebo z menu Súbor)
+
+# Python programovacie prostredie
+
+## Základné informácie
+
+- Zdarma na stiahnutie
+- Možnosť spustenia na akomkoľvek operačnom systéme
+- Malá náročnosť na miesto
+- Množstvo knižníc -> Veľmi využiteľný na rôznych oblastiach
+    - Základné programovanie
+    - Riadenie procesov
+    - Správa databáz
+    - Atď.
+
+## Podrobne o prostredí
+- Z hľadiska syntaxe a pokročilosti sa podobá jazyku C.
+- Pracujeme s dvoma hlavnými oknami.
+    - **Príkazový riadok** – tu spúšťame napísaný program
+    - **Editor skriptov** – tu píšeme programy

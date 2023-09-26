@@ -225,13 +225,6 @@ Skúsime teraz k premennej `cislo` pridať `12`.
 
 Skúsime teraz k premennej `cislo` pridať 12.
 
-## Písanie kódu
-- Vytvorenie nového skriptu
-- Uloženie napísaného skriptu
-    - Každý nech si uloží do vlastného priečinka (zložky) s menom
-    - Časté ukladanie (Ctrl+S), nielen keď je program úplne hotový!!!
-- Spustenie skriptu (F5 alebo z menu Súbor)
-
 ## Úlohy
 1. Napíšte program, ktorý vás opýta na vaše meno. Keď zadáte svoje meno, opýta sa vás, koľko máte rokov, a potom vypíše súhrnnú vetu o tom, kto sedí pred počítačom.
 1. Napíšte program, ktorý zadané údaje zloží do vizitky a vypíše na obrazovku.

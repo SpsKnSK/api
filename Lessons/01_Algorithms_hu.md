@@ -152,3 +152,29 @@ def masik_fuggveny():
 
 ## Feladat
 Írjátok ki a képernyőre a következő üdvözletet `Hello!` a `print()` függvény segítésgével
+
+## Kód írása
+- Új szkript létrehozása
+- Megírt szkript mentése
+    - Midnenki a saját nevéhez tartozó könyvtárba!
+    - Gyakori mentés (Ctrl+S), nem csak ha teljesen kész a program!!!
+- Szkript futtatása (F5, vagy a Fájl menüből)
+
+# A Python programozói környezet
+
+## Alapvető tudnivalók
+
+- Ingyenesen letölthető
+- Bármilyen oprendszeren futtatható
+- Kis helyigény
+- Számtalan könyvtár -> Nagyon sok területen felhasználható
+    - Alapvető programozás
+    - Vezérléstechnika
+    - Adatbáziskezelés
+    - Stb.
+
+## A környezetről közelebbről
+- Szintaxis és fejlettség alapján a C nyelvhez hasonlít. 
+- Két fő ablakkal dolgozunk.
+    - **Shell** – itt futtatjuk a megírt programot
+    - **Script szerkesztő** – itt írjuk a programokat

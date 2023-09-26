@@ -1,22 +1,3 @@
-# A Python programozói környezet
-
-## Alapvető tudnivalók
-
-- Ingyenesen letölthető
-- Bármilyen oprendszeren futtatható
-- Kis helyigény
-- Számtalan könyvtár -> Nagyon sok területen felhasználható
-    - Alapvető programozás
-    - Vezérléstechnika
-    - Adatbáziskezelés
-    - Stb.
-
-## A környezetről közelebbről
-- Szintaxis és fejlettség alapján a C nyelvhez hasonlít. 
-- Két fő ablakkal dolgozunk.
-    - **Shell** – itt futtatjuk a megírt programot
-    - **Script szerkesztő** – itt írjuk a programokat
-
 # Változók
 
 - A változók a program azon elemei, amelyek különböző értékeket vehetnek fel, különböző adatok tárolására alkalmasak.

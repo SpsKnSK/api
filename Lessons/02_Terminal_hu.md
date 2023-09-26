@@ -210,17 +210,10 @@ Próbáljunk meg hozzáadni `12`-t a szam változóhoz.
 Mi változott? 
 Mit takar az `int` szócska?
 
-Próbáljunk meg most hozzáadni 12-t a Szam változóhoz.
-
-## Kód írása
-- Új szkript létrehozása
-- Megírt szkript mentése
-    - Midnenki a saját nevéhez tartozó könyvtárba!
-    - Gyakori mentés (Ctrl+S), nem csak ha teljesen kész a program!!!
-- Szkript futtatása (F5, vagy a Fájl menüből)
+Próbáljunk meg most hozzáadni 12-t a szam változóhoz.
 
 ## Feladatok
-1. Írjatok programot, amely megkérdezi, hogy hogy hívnak. Miután megadtuk nevünket, kérdezze meg, hány évesek vagyunk, majd írjon ki egy összegző mondatot, hogy ki ül a gép előtt.
+1. Írjatok programot, amely megkérdezi, hogy hogy hívnak. Miután megadtuk nevünket, kérdezze meg, hány évesek vagyunk, majd írjon ki egy összegző mondatot, hogy ki ül a gép előtt. `Szia [nev], latom, te ulsz a gep elott`
 1. Írjatok programot, amely a bekért adatokból összeállít egy névjegykártyát és kiírja a képernyőre.
 Adataink: Név, Lakhely, Elérhetőség
 1. Kérjünk be három természetes számot, ezek rendre 5, 2 és 1 eurósaink számát jelentik. Határozzuk meg, és írassuk ki a teljes összeget.
