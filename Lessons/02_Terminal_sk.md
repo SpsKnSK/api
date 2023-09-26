@@ -272,3 +272,7 @@ Výsledok:
     Napíšte program, ktorý vám povie, koľko peňazí si máte vziať so sebou, ak kúpite 1 kg jabĺk, 1,5 kg citrónov a 2 kg pomarančov.
     Skúste aj iné hodnoty.
     Napr. kúpite 3 kily každého ovocia, 5 kíl, atď.
+## Otázky
+1. Na čo slúži funkcia `round`, uveďte príklad.
+2. Napíšte kód, ktorý od používateľa získa jeho meno a vek, a potom na obrazovku vypíše, koľko bude mať rokov o 10 rokov. Príklad: `"Ahoj [meno], teraz máš 16 rokov, o 10 rokov budeš mať 26 rokov."`
+3. Aký dátový typ číta funkcia `input` zo klávesnice?

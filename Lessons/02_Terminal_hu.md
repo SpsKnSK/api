@@ -257,3 +257,8 @@ Végeredmény:
     Írjatok programot, amely megmondja, mennyi pénzt vigyünk magunkkal, ha 1 kg almát, 1,5 kg citromot és 2 kg narancsot veszünk.
     Próbáljunk ki más értékeket is.
     Pl. mindenből 3 kilót, 5 kilót veszünk, stb.
+
+## Kérdések
+1. Mire szolgál a `round` függvény, írjatok rá példát.
+1. Írjatok kódot, amelyik megkérdezi a felhaználótól, hogy hívják és hány éves, majd írjátok ki a képernyőre, hogy 10 év múlva hány éves lesz. `Szia [nev], most 16 éves vagy, 10 év múlva 26 leszel`
+1. Milyen adattípust olvas be az `input` függvény a billentyűzetről?
