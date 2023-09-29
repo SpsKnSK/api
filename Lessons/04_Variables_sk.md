@@ -2,7 +2,7 @@
 
 - Premenné sú prvky programu, ktoré môžu nadobúdať rôzne hodnoty a slúžia na uchovávanie rôznych údajov.
 - Menom označené miesto v pamäti
-- Napr. x, z, cislo, meno, zoznam
+- Názov premennej môže byť: x, z, cislo, meno, zoznam
 
 ## Typy 
 - **Číslo** – `int` – pre ukladanie celých čísel v rozpätí približne -36 000 až 36 000. 10, -9, 0
@@ -23,7 +23,8 @@
 - `5 % 3` zvyšok po delení
 - `5 ** 3` umocňovanie
 - `sqrt(5)` odmocnina (na to je potrebný matematický modul)
-
+## Úloha
+1. Pomocou funkcie `print()` vypíšte na obrazovku výsledky aspoň 5 vyššie uvedených matematických operácií.
 ## Logické operátory
 - rovnosť `==`
     - napr. X==5 – skontrolujeme, či sa X rovná 5
@@ -91,3 +92,11 @@ súčet `+`| rozdiel `-` |  súčin`*`| delenie `/` |
 celočíselné delenie `//` | zvyšok po delení `%` | umocňovanie `**`| rovnosť `==`
 menšie `<`|menšie alebo rovné `<=` |väčšie `>`| väčšie alebo rovné `>=`
 priradenie `=`|
+
+## Otázky
+1. Aký je rozdiel medzi `=` a `==`? Kedy použijete jeden a kedy druhý operátor?
+2. Požiadajte používateľa, aby zadal dĺžky obidvoch odvesien trojuholníka a použitím Pytagorovej vety vypočítajte dĺžku prepony.
+3. Uveďte 2 príklady povolených názvov premenných.
+4. Uveďte 2 príklady **nepovolených** názvov premenných.
+5. Ako môžeme overiť, či je číslo `a` deliteľné číslom `b`? Ktorú operáciu použijete?
+6. Aký je rozdiel medzi `\` a `\\`?

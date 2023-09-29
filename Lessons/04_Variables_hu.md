@@ -2,7 +2,7 @@
 
 - A változók a program azon elemei, amelyek különböző értékeket vehetnek fel, különböző adatok tárolására alkalmasak.
 - Névvel ellátott memóriaterület
-- Pl. x, z, szam, nev, lista
+- Változó nevei lehetnek: x, z, szam, nev, lista
 
 ## Típusai 
 - **Szám** – `int` – integer – egész számok tárolására kb. -36.000 és 36.000 közt. 10, -9, 0
@@ -23,6 +23,9 @@
 - `5 % 3` osztás maradéka
 - `5 ** 3` hatvány
 - `sqrt(5)` négyzetgyökvonás (matematikai modul szükséges hozzá)
+
+## Feladat
+1. A `print()` függvény segítségével írassátok ki a képernyőre a fenti matematikai műveltek eredményei közül legalább 5-öt
 
 ## Logikai operátorok
 - egyenlőség `==`
@@ -89,3 +92,11 @@ MyVar = "John"
 egész számú osztás `//` | maradékos osztás `%` | hatványra emelés `**`| egyenlőség `==`
 kisebb `<`|kisebb vagy egyenlő `<=` |nagyobb `>`| nagyobb vagy egyenlő `>=`
 értékadás `=`|
+
+# Kérdések
+1. Mi a különbség az `=` és az `==` között. Mikor használod az egyiket, mikor a másikat? 
+1. A felhasználótól kérjétek be a háromszög két befogóját, és a Pitagorasz tételének segítségvel határozzátok meg az átfogót.
+1. Írjatok 2 példát a megengedett változónevekre.
+1. Írjatok 2 példát a **nem** megengedett váltóznevekre.
+1. Hogyan ellenőrizhetjük, hogy `a` szám `b` szám osztója? Melyik műveletet használjátok?
+1. Mi a különbség a `\` és `\\` között?
