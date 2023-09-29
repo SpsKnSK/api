@@ -34,18 +34,18 @@ else:
 ## Szemléltető program
 
 ```py
-jegy=int (input ('Ird ide, hanyast kaptal ma:'))
+jegy= int(input('Ird ide, hanyast kaptal ma: '))
 if jegy == 1:
     print ('Gratulalok, ugyes vagy' )
-    print (Remelem, ebbo a tantargybol is ilyen jegyet kapsz')
+    print ('Remelem, ebbo a tantargybol is ilyen jegyet kapsz')
 elif jegy == 2:
     print ('Gratulalok, ez is egy szep jegy')
 elif jegy == 3:
     print('Nem rossz, de legkozelebb olvasd at meg egyszer')
 elif jegy == 4:
-    print ( 'Ez nem sokon mulott. Tanulj tobbet! ' )
+    print('Ez nem sokon mulott. Tanulj tobbet! ')
 else:
-    print ( ' Tessek sokat tanulni es elgondolkodni a jovodon! ')
+    print('Tessek sokat tanulni es elgondolkodni a jovodon! ')
 ```
 
 ### Vizsgáljuk meg az előző programot
@@ -55,6 +55,7 @@ else:
 ### Feladat
 Mini számológép készítése vezérlőmenüvel.
 Alap matematikai műveletek (+-/*) végrehajtása, két megadott számmal.
+Kérjétek be a felhasználótól az `a`, a `b` számot meg a `muvelet`et. A művelet alapján írjátok ki a képernyőre a végeredményt.
 
 ### Feladat
 Kérjünk be 3 számot és döntsük el, melyik a legnagyobb, majd írassuk ki szavakkal a képernyőre
@@ -67,10 +68,11 @@ Adj meg 3 számot.
 1
 A legnagyobb szám az: 5
 ```
+
 Az előző feladatot módosítsuk:
 1. A program a **legkisebb** számot írja ki.
 2. A program a **középső** számot írja ki.
-
+> Figyelem, a Python megengedi, hogy egyszerre több érteket is összehasonlítsatok `a<b<c`
 ### Feladat
 - Kérjük be a háromszög 3 oldalának méretét.
 - Határozzuk meg, megszerkeszthető-e a háromszög.
@@ -85,9 +87,10 @@ Készítsünk programot a következő elektrotechnikai mértékegységek megneve
 
 Pl.
 Ha beírjuk, hogy Volt, a program kiírja, hogy a feszültség mértékegysége.
+```
 Adj meg egy mertekegyseget: Volt
 Feszultseg, [V]
-
+```
 Ha nem ismeri fel a mértékegysége, informálja a felhasználót
 ### Feladat
 Készítsetek programot, amely a megadott évszámból megállapítja, milyen korúak vagyunk.
@@ -144,6 +147,13 @@ a | b | a `or` b
 1|0|**1**
 1|1|**1**
 
+## `not` logikai vagy
+megfordítja a logikai változó értékét
+a | `not` a 
+-|-
+0|**1**
+1|**0**
+
 ```py
 szam=int (input ('Adj meg egy szamot'))
 if szam>3 and szam<10 :
@@ -165,3 +175,12 @@ Készítsetek programot, amely kiszámítja az ellenállás értékét két sorb
 - Párhuzamosan kötött ellenállások kiszámítása: R=R1*R2/(R1+R2)
 
 > Létre kell hoznunk még egy változót, amely segítségével meghatározhatjuk, hogy az ellenállások sorba, vagy párhuzamosan vannak-e kötve
+
+# Kérdések
+1. Írjátok le az egyutas elágazás szintaxisát, hogyan kell helyesen feltételt írni Pythonban. Vázoljátok fel az összes ágat.
+1. Kell-e mindig az `if` parancs?
+1. Kell-e mindig az `elif` parancs?
+1. Kell-e mindig az `else` parancs?
+1. Mikor ad `False`t az `and` logikai operátor?
+1. Mikor ad `False`t az `or` logikai operátor?
+1. Mikor ad `True`t a `not` operátor?
