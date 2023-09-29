@@ -1,4 +1,4 @@
-## If – Elif - Else
+# If – Elif - Else
 ## Krátka teória
 
 - Ako program beží, aký je jeho "smer"?
@@ -6,7 +6,7 @@
 
 > Spustenie programu: obvykle krok za krokom - sekvenčné.
 
-- **Smer programu môžeme zmeniť nasledujúcimi príkazmi:**
+**Smer programu môžeme zmeniť nasledujúcimi príkazmi:**
 - Podmienený príkaz `if`
 - Cykly `while`, `for`
 
@@ -53,9 +53,14 @@ else:
 **Ak chceme vykonať viac príkazov, jednoducho ich napíšeme za sebou.**
 
 ### Úloha
+Vytvorte program, ktorý určí pH hodnotu prostredia.
+
+Ak je pH menšie ako 7, prostredie je kyslé. Ak je pH 7, je neutrálny, a ak je väčší ako 7, je zásaditý.
+
+### Úloha
 Vytvorte mini kalkulačku s riadiacim menu.
 Vykonať základné matematické operácie (+-/*) s dvoma zadanými číslami.
-Používateľa požiadajte o zadané hodnoty `a`, `b` a operáciu (`operácia`). Na základe operácie vypíšte výsledok na obrazovku.
+Používateľa požiadajte o zadané hodnoty `a`, `b` a (`operácia`). Na základe operácie vypíšte výsledok na obrazovku.
 
 ### Úloha
 Zadajte 3 čísla a zistite, ktoré z nich je najväčšie, potom ho vypíšte slovami na obrazovku.
@@ -69,12 +74,12 @@ Zadajte 3 čísla.
 Najväčšie číslo je: 5
 ```
 
-## Modifikácia predchádzajúcej úlohy
+Modifikujte predchádzajúcu úlohu tak, že: 
 1. Program vypíše **najmenšie** číslo.
 2. Program vypíše **stredné** číslo.
 > Upozornenie, Python umožňuje porovnať viac hodnôt súčasne `a<b<c`.
 ### Úloha
-- Zadajte veľkosti trojuholníka 3 strán.
+- Zadajte veľkosti 3 strán trojuholníka.
 - Určte, či sa trojuholník dá zostrojiť.
 - Ak áno, vypíšte obvod trojuholníka.
 ### Úloha
@@ -93,12 +98,12 @@ Napätie, [V]
 ```
 Ak program nepozná jednotku, informuje používateľa.
 ### Úloha
-Vytvorte program, ktorý zo zadaného roku zistí, koľko máme rokov.
+Vytvorte program, ktorý zo zadaného roku zistí, v akom štádiu živote sa nachádzate.
 
 - Detstvo - 0-11
-- Adolescencia - 11-18
+- Tinedžer - 11-18
 - Dospelosť - 18-60
-- Starnutie - 60+
+- Staroba - 60+
 
 # Vnorené podmienky
 Vždy je hlavný `if`. v ktorom môže byť viac `if` príkazov.
@@ -167,18 +172,11 @@ if číslo == 3 or číslo == 5:
 ```
 
 ### Úloha
-Vytvorte program, ktorý určí pH hodnotu prostredia.
 
-Ak je pH menšie ako 7, prostredie je kyslé. Ak je pH 7, je neutrálny, a ak je väčší ako 7, je zásaditý.
-
-### Úloha
-
-Vytvorte program, ktorý vypočíta hodnotu odporu dvoch odporov, ktoré sú zapojené sériovo alebo paralelne.
+Vytvorte program, ktorý vypočíta hodnotu odporu dvoch odporov, ktoré sú zapojené sériovo alebo paralelne. Od používateľa si vypýtajte `r1`, `r2`˙a či sú zapojené sériovo alebo paralelne.
 
 - Výpočet odporu v sérii: R = R1 + R2
 - Výpočet odporu paralelne: R = R1 * R2 / (R1 + R2)
-
-> Musíme vytvoriť ďalšiu premennú, ktorá nám umožní určiť, či sú odporové hodnoty zapojené sériovo alebo paralelne.
 
 # Otázky
 1. Opíšte syntax jednoduchého vetvenia, ako správne písať podmienky v Pythone. Prezraďte všetky vetvy.

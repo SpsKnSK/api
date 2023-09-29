@@ -5,7 +5,7 @@
 - Mi az, ami ezt befolyásolhatja?
 
 > Program futtatása: általában utasítás utasítás után – szekvens haladás.
-- **A program szekvens haladását a következő utasításokkal lehet megváltoztatni:**
+**A program szekvens haladását a következő utasításokkal lehet megváltoztatni:**
 - feltételes utsítás `if`
 - ciklusok `while`, `for`,
 
@@ -51,6 +51,11 @@ else:
 ### Vizsgáljuk meg az előző programot
 > Mit veszünk észre a programkódban:
 **Több utasítás esetén elég egymás után begépelni a végrehajtani kívánt utasításokat.**
+
+### Feladat
+Készítsetek programot, amely meghatározza a közeg pH értékét.
+
+Ha a pH érték kisebb, mint 7, akkor a közeg savas. Ha 7-tel egyenlő, akkor neutrális, ha nagyobb, mint 7, akkor lúgos.
 
 ### Feladat
 Mini számológép készítése vezérlőmenüvel.
@@ -161,17 +166,11 @@ if szam>3 and szam<10 :
 if szam==3 or szam==S :
     print('ez a szam 3as vagy 5os')
 ```
-
-### Feladat
-Készítsetek programot, amely meghatározza a közeg pH értékét.
-
-Ha a pH érték kisebb, mint 7, akkor a közeg savas. Ha 7-tel egyenlő, akkor neutrális, ha nagyobb, mint 7, akkor lúgos.
-
 ### Feladat
 
-Készítsetek programot, amely kiszámítja az ellenállás értékét két sorba, vagy két párhuzamosan kötött ellenállásból.
+Készítsetek programot, amely kiszámítja az ellenállás értékét két sorba, vagy két párhuzamosan kötött ellenállásból. A felhasználótól kérjétek be az `r1`, `r2` értékét, és azt, hogy sorosan vagy párhuzamosan vannak-e bekötve.
 
-- Sorbakötött ellenállások kiszámítása: R=R1+R2
+- Sorba kötött ellenállások kiszámítása: R=R1+R2
 - Párhuzamosan kötött ellenállások kiszámítása: R=R1*R2/(R1+R2)
 
 > Létre kell hoznunk még egy változót, amely segítségével meghatározhatjuk, hogy az ellenállások sorba, vagy párhuzamosan vannak-e kötve
