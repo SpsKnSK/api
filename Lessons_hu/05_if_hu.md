@@ -20,7 +20,6 @@ elif feltétel_n:
     utasítások_n
 else:
     utasítások_else
-
 ```
 
 # Működése

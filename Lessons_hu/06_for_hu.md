@@ -19,6 +19,7 @@ Kétfajta intervallumot különböztetünk meg:
 # `for` ciklus
 Számolt ciklus, előre tudjuk, hányszor fog lefutni. Felhasználása:
 - valamit x-szer kell végrehajtanunk
+- tömb elemeit kell végigjárnunk
 ## Szintaxis, szabálykészlet, leírás
 ```py
 for [ciklusvaltozo] in range(x,y):
@@ -33,7 +34,7 @@ else:
     utasitas
 ```
 ## Értelmezés
-- a ciklusmagot egy bekezdéssel, tabbal, tanbulátorral válasszuk külön a `for` parancstól, így tudja a fordító, hogy éppen a ciklusmagban van.
+- a ciklusmagot tanbulátorral vagy szóközzel válasszuk külön a `for` parancstól (ajánlom a tabot), így tudja a fordító, hogy éppen a ciklusmagban van.
 - Az `x` és `y` változók a tartomány elejét és végét jelölik, pl. <1;10)
 - A `ciklusvaltozo`t, ha egész szám, általában `i`vel jelöljük, értéket pedig a `range` által határolt intervallumban vesz fel
 - Ahogy az `if`nél a `for` ciklusnál is van lehetőség `else` ágat létrehozni (_Python nyelv különlegessége_), akkor kerül lefutásra, ha a ciklusmagot **nem** szakítottuk meg `break` paranccsal
@@ -54,7 +55,7 @@ for i in range(1, 5):
 A for ciklus mindig egy tartományon, intervallumon belül fut, amely egyértelműen behatárolható. Nem mindig szükséges a `range()` függvény, mivel ilyen behatárolható tartomány egy `string` is lehet.
 
 ```py
-text = "apple"
+text = "alma"
 for c in text: # c mint character
     print(c)
 ```
@@ -70,7 +71,7 @@ Készítsetek egy programot, amely 1-től 15-ig kiírja az összes egész számo
 ```
 ## Feladat
 Írjatok programot, amely az általatok megadott tartományból kiírja az összes:
-- 2-vel és 4-gyel osztható számot.
+- 2-vel és 4-gyel egyidejűleg osztható számot.
 - 5-tel osztható számot.
 - 35-nél nagyobb számokat.
 > Tehetitek egy `for` ciklusba is vagy 3 külön ciklust csináltok
@@ -78,7 +79,7 @@ Készítsetek egy programot, amely 1-től 15-ig kiírja az összes egész számo
 Határozzátok meg és írassátok ki az összes hárommal és öttel egyaránt osztható, 1000-nél kisebb természetes számot.
 ## Feladat
 Kérjünk be **N** darab természetes számot (először **N**-t kérjük be). Az adatok beírása után a program írja ki:
-- a páros  számok darabszámát
+- a páros számok darabszámát
 - a páratlan számok darabszámát
 - a páratlan számok összegét!
 
@@ -124,6 +125,11 @@ for i in range(0,10,3):
 1. Működik a `for` ciklus `break` nélkül?
 1. Működik a `for` ciklus `continue` nélkül?
 1. Mire szolgál a `range()` függvény? Soroljátok fel a paramétereit.
+1. Mit ír ki a képernyőre az alábbi program?
+    ```py
+    for i in range(2, 10, 3):
+        print(i, end=" ")
+    ```
 1. Mit ír ki a képernyőre az alábbi program?
     ```py
     for i in range(0,10):
