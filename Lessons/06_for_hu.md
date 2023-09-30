@@ -36,7 +36,50 @@ else:
 - Ahogy az `if`nél a `for` ciklusnál is van lehetőség `else` ágat létrehozni (Python nyelv különlegessége), akkor kerül lefutásra, ha a ciklusmagot **nem** szakítottuk meg `break` paranccsal
 - A `continue` utáni utasítások nem futnak le (de figyelem, ebben az esetben feltételhez kötött)
 - A `break` befejezi a ciklusmag futtatását, és a ciklus utáni parancsot hajtja végre
-### `range()`
+
+### Példák
+```py
+for i in range(0,3):
+    print(x)
+```
+```py
+a = 10
+for i in range(1, 5):
+    print(a+i)
+```
+# For ciklus tulajdonságai
+A for ciklus mindig egy tartományon, intervallumon belül fut, amely egyértelműen behatárolható. Nem mindig szükséges a `range()` függvény, mivel ilyen behatárolható tartomány egy `string` is lehet.
+
+```py
+text = "apple"
+for c in text: # c mint character
+    print(c)
+```
+## Feladat
+Készítsetek egy programot, amely 1-től 15-ig kiírja az összes egész számot és mellé a szám négyzetét is.
+```
+1 1
+2 4
+3 9
+...
+14 196
+15 225
+```
+## Feladat
+Írjatok programot, amely az általatok megadott tartományból kiírja az összes:
+- 2-vel és 4-gyel osztható számot.
+- 5-tel osztható számot.
+- 35-nél nagyobb számokat.
+> Tehetitek egy `for` ciklusba is vagy 3 külön ciklust csináltok
+## Feladat 
+Határozzátok meg és írassátok ki az összes hárommal és öttel egyaránt osztható, 1000-nél kisebb természetes számot.
+## Feladat
+Kérjünk be **N** darab természetes számot (először **N**-t kérjük be). Az adatok beírása után a program írja ki:
+- a páros  számok darabszámát
+- a páratlan számok darabszámát
+- a páratlan számok összegét!
+
+# `range()`
 ```py
 class range(
     __start: SupportsIndex,
@@ -49,31 +92,19 @@ class range(
 - `__stop`  az intervallum felső határa, nyitott
 - `__step`  lépés
 
-### Példák
-```py
-for i in range(0,3):
-    print(x)
-```
-```py
-a = 10
-for i in range(1, 5):
-    print(a+i)
-```
 ```py
 for i in range(0,10,3):
     print(x)
 ```
-# For ciklus tulajdonságai
-A for ciklus mindig egy tartományon, intervallumon belül fut, amely egyértelműen behatárolható. Nem mindig szükséges a `range()` függvény, mivel ilyen behatárolható tartomány egy `string` is lehet.
 
-```py
-text = "apple"
-for c in text: # c mint character
-    print(c)
-```
+- `range(5, 10)`: 5, 6, 7, 8, 9
+- `range(0, 10, 3)`: 0, 3, 6, 9 
+- `range(-10, -100, -30)`:  -10, -40, -70
+
 ## Feladat
-Készítsetek egy programot, amely 1-től 15-ig kiírja az összes egész számot és mellé a szám négyzetét is.
-
+- Írassátok ki a 3-mal osztható számokat 100-ig.
+- Írassátok ki a 7-tel osztható számokat 50 és 99 közt.
+- Számoljatok vissza 50-től 20-ig 4-esével és írassátok ki az egyes számokat!
 
 # Kérdések
 1. Mi a különbség a nyitott és a zárt intervallum között? 
@@ -88,3 +119,4 @@ Készítsetek egy programot, amely 1-től 15-ig kiírja az összes egész számo
 1. Kell-e mindig `else` ág?
 1. Működik a `for` ciklus `break` nélkül?
 1. Működik a `for` ciklus `continue` nélkül?
+1. Mire szolgál a `range()` függvény? Soroljátok fel a paramétereit.
