@@ -1,7 +1,7 @@
 # Feladat
 A program döntse el, hogy a bekért a, b, c természetes számok lehetnek-e egy derékszögű háromszög oldalhosszúságai. Az **a** és **b** legyen a két befogó (használjuk Pitagorasz-tételét).
 
-### Feladat
+# Feladat
 Készítsünk programot, amely a beolvasott szövegből eldönti, hogy a megadott szöveg
 - kisbetű `islower()`
 - nagybetű `isupper()`
