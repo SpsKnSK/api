@@ -37,3 +37,31 @@ while (i<5):
 ```
 
 ## Feladatok mellekelve
+
+# Kérdések
+1. Írjátok fel a `while` ciklus szintaxisát.
+1. `while` ciklus segítségével írjátok ki a szorzótáblát, amelyiket a felhasználó határozza meg.
+1. Számoljatok vissza 20tól 0ig `while` ciklussal, és írassátok ki a képernyőre minden 4. számot.
+1. Mi a különbség a `break` és a `continue` parancsok között?
+1. Hány `else` ága lehet a `while` ciklusnak? 
+1. Kell-e mindig `else` ág?
+1. Mikor fut le az `else` ág?
+1. Működik a `while` ciklus `break` nélkül?
+1. Működik a `while` ciklus `continue` nélkül?
+1. Hogyan lehet végtelenig futó `while` ciklust létrehozni?
+1. Mit ír ki a képernyőre az alábbi program?
+    ```py
+    while 1==1:
+        break
+        print("a")
+    else:
+        print("Else")
+    print("Szep napot!")
+    ```
+1. Mit ír ki a képernyőre az alábbi program?
+    ```py
+    while 10 > 20:
+        print("a")
+    else:
+        print("Else")
+    ```
