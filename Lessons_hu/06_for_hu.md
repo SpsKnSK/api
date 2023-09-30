@@ -1,8 +1,7 @@
-# Ciklusok bevezető és `for`
+# Ciklusok bevezető 
 A Python programozási nyelvben kétféle ciklusttípust különböztetünk meg:
 - számolt `for`, előre tudjuk, hányszor fog lefutni, az ismétlések száma adott
 - számolatlan `while`, előre nem tudjuk meghatározni, hányszor fog lefutni, addig fut, míg a feltétel teljesül
-
 ## Ciklus
 Parancs, amely lehetővé teszik, hogy egy utasítás többször fusson le.
 > A ciklusok módosítják a program lefutási irányát, mivel visszaugrunk a ciklus elejére.
@@ -17,25 +16,29 @@ Kétfajta intervallumot különböztetünk meg:
 - nyitott (0; 5), ahol a két szélső érték **nem** tartozik bele: 1, 2, 3, 4
 - zárt <0; 5>, ahol a két szélső érték **bele**tartozik: 0, 1, 2, 3, 4, 5
 
+# `for` ciklus
+Számolt ciklus, előre tudjuk, hányszor fog lefutni. Felhasználása:
+- valamit x-szer kell végrehajtanunk
 ## Szintaxis, szabálykészlet, leírás
 ```py
 for [ciklusvaltozo] in range(x,y):
-    if feltetel1:
-        continue
-    utasitas #ciklusmag
-    utasitas #ciklusmag
-    utasitas #ciklusmag
-    if feltetel2:
-        break
+    if feltetel1:   #ciklusmag
+        continue    #ciklusmag
+    utasitas        #ciklusmag
+    utasitas        #ciklusmag
+    utasitas        #ciklusmag
+    if feltetel2:   #ciklusmag
+        break       #ciklusmag
 else:
     utasitas
 ```
 ## Értelmezés
+- a ciklusmagot egy bekezdéssel, tabbal, tanbulátorral válasszuk külön a `for` parancstól, így tudja a fordító, hogy éppen a ciklusmagban van.
 - Az `x` és `y` változók a tartomány elejét és végét jelölik, pl. <1;10)
 - A `ciklusvaltozo`t, ha egész szám, általában `i`vel jelöljük, értéket pedig a `range` által határolt intervallumban vesz fel
-- Ahogy az `if`nél a `for` ciklusnál is van lehetőség `else` ágat létrehozni (Python nyelv különlegessége), akkor kerül lefutásra, ha a ciklusmagot **nem** szakítottuk meg `break` paranccsal
-- A `continue` utáni utasítások nem futnak le (de figyelem, ebben az esetben feltételhez kötött)
-- A `break` befejezi a ciklusmag futtatását, és a ciklus utáni parancsot hajtja végre
+- Ahogy az `if`nél a `for` ciklusnál is van lehetőség `else` ágat létrehozni (_Python nyelv különlegessége_), akkor kerül lefutásra, ha a ciklusmagot **nem** szakítottuk meg `break` paranccsal
+- A `continue` utáni utasítások nem futnak le,a ciklus veszi a következő értéket, amin le kell futtatni a ciklusmagot (de figyelem, ebben az esetben feltételhez kötött)
+- A `break` befejezi a ciklusmag futtatását, és a ciklus utáni parancsot hajtja végre (de figyelem, ebben az esetben feltételhez kötött)
 
 ### Példák
 ```py
@@ -111,12 +114,31 @@ for i in range(0,10,3):
 1. Milyen értékek tartoznak bele a következő intervallumokba: <1; 6), <-2;1>, (6;3)?
 1. Milyen típusú ciklusokat ismertek? Vázoljátok a különbségeket.
 1. Mennyi parancs lehet a ciklusmagban? 
-1. Írjátok fel a `for` ciklus szintaxiságt
-1. `for` ciklus segítségével írjátok ki a szorzótáblát, amelyiket a felhasználótól bekéritek.
-1. Számoljatok vissza 20tól 0ig `for` ciklussal, és írassátok ki a képernyőre
+1. Írjátok fel a `for` ciklus szintaxisát.
+1. `for` ciklus segítségével írjátok ki a szorzótáblát, amelyiket a felhasználó határozza meg.
+1. Számoljatok vissza 20tól 0ig `for` ciklussal, és írassátok ki a képernyőre minden 4. számot.
 1. Mi a különbség a `break` és a `continue` parancsok között?
 1. Hány `else` ága lehet a `for` ciklusnak? 
 1. Kell-e mindig `else` ág?
+1. Mikor fut le az `else` ág?
 1. Működik a `for` ciklus `break` nélkül?
 1. Működik a `for` ciklus `continue` nélkül?
 1. Mire szolgál a `range()` függvény? Soroljátok fel a paramétereit.
+1. Mit ír ki a képernyőre az alábbi program?
+    ```py
+    for i in range(0,10):
+        break
+        print(i)
+    else:
+        print("Else")
+    print("Szep napot!")
+    ```
+1. Mit ír ki a képernyőre az alábbi program?
+    ```py
+    for i in range(0,10):
+        continue
+        print(i)
+    else:
+        print("Else")
+    print("Szep napot!")
+    ```
