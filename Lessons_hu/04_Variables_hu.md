@@ -34,7 +34,7 @@
 - kisebb vagy egyenlő `<=`
 - nagyobb `>`
 - nagyobb vagy egyenlő `>=`
-- nem egyenlő `not`
+- nem egyenlő `!=`
 - értékadás `=`
     - Pl. `X=12` – az `X` változóba elmentjük a `12`-es értéket
 
