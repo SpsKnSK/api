@@ -40,6 +40,12 @@ Próbáljunk meg most hozzáadni 12-t a szam változóhoz.
 1. Írjatok programot, amely megkérdezi, hogy hogy hívnak. Miután megadtuk nevünket, kérdezze meg, hány évesek vagyunk, majd írjon ki egy összegző mondatot, hogy ki ül a gép előtt. `Szia [evszam] eves [nev], latom, te ulsz a gep elott`
 1. Írjatok programot, amely a bekért adatokból összeállít egy névjegykártyát és kiírja a képernyőre.
 Adataink: Név, Lakhely, Elérhetőség
+
+```
+Nev: [nev]
+Lakhely: [lakhely]
+Elerhetoseg: [elerhetoseg]
+```
 1. Kérjünk be három természetes számot, ezek rendre 5, 2 és 1 eurósaink számát jelentik. Határozzuk meg, és írassuk ki a teljes összeget.
 példa:
 ```
