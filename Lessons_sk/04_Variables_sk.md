@@ -32,7 +32,7 @@
 - menšie alebo rovné `<=`
 - väčšie `>`
 - väčšie alebo rovné `>=`
-- nerovnosť `not`
+- nerovnosť `!=`
 - priradenie `=`
     - napr. `X=12` – premenná X sa nastaví na hodnotu 12
 
@@ -69,7 +69,7 @@ MojaPremenna = "Janko"
 ```
 
 # Cvičenie 
-1. Vytvorte 2 premenné pre každý spomenutý typ a pomocou funkcie `print()` ich vypíšte na obrazovku.
+1. Vytvorte 2 premenné pre každý spomenutý dátový typ a pomocou funkcie `print()` ich vypíšte na obrazovku.
 1. Pri premenných typu číslo vyskúšajte všetky matematické operátory!
 1. Vypýtajte si od používateľa 2 celé čísla, potom 2 desatinné čísla a nakoniec 2 komplexné čísla a vypíšte na obrazovku ich súčet a súčin:
     1. načítanie celého čísla: `int(input())`

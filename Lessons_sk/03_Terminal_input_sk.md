@@ -37,12 +37,14 @@ Skúsime teraz k premennej `cislo` pridať `12`.
 Skúsime teraz k premennej `cislo` pridať 12.
 
 ## Úlohy
-1. Napíšte program, ktorý vás opýta na vaše meno. Keď zadáte svoje meno, opýta sa vás, koľko máte rokov, a potom vypíše súhrnnú vetu o tom, kto sedí pred počítačom.
-1. Napíšte program, ktorý zadané údaje zloží do vizitky a vypíše na obrazovku.
-Naše údaje: Meno, By
-
-dlisko, Kontakt
-1. Poprosíme o tri prirodzené čísla, ktoré postupne znamenajú počet 5, 2 a 1 eurových mincí. Určte a vypíšte celkovú sumu.
+1. Napíšte program, ktorý vás opýta na vaše meno. Keď zadáte svoje meno, opýta sa vás, koľko máte rokov, a potom vypíše súhrnnú vetu o tom, kto sedí pred počítačom `Ahoj [pocetRokov] rocny [meno], vidim, ze ty sedis pred pocitacom`
+1. Napíšte program, ktorý zo zadaných údajov (meno, bydlisko a kontakt) vypíše na obrazovku vizitku.
+```
+Meno: [meno]
+Bydlisko: [bydlisko]
+Kontakt: [kontakt]
+```
+1. Vypýtajte od používateľa tri prirodzené čísla, ktoré postupne znamenajú počet 5, 2 a 1 eur. Určte a vypíšte celkovú sumu.
 príklad:
 ```
 Počet 5 eur: 2
