@@ -111,7 +111,7 @@ Vždy je hlavný `if`. v ktorom môže byť viac `if` príkazov.
 ## Ilustračný príklad
 
 ```py
-print ("myslím si číslo")
+print ("myslím na číslo")
 číslo = 55
 if číslo > 30:
     if číslo > 40:
@@ -122,13 +122,13 @@ if číslo > 30:
 ```
 
 ### Úloha
-Zadajte číslo a zistite, či je nepárne alebo párne.
+Zadajte číslo a zistite, či je párne alebo nepárne.
 
-- Ak je **párne**, overte:
+- Ak je **párne**, overte či:
     - Deliteľné 6-timi.
     - Je väčšie ako 100.
 
-- Ak je **nepárne**, overte:
+- Ak je **nepárne**, overte či:
     - Deliteľné 5-timi.
     - Je väčšie ako 100.
 
