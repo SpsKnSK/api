@@ -1,11 +1,8 @@
 # Úloha
-Vytvorte program, ktorý si vypýta od používateľa nepárne číslo <5,11> a vykreslí maticu tak, že dá `I` uprostred, všade inde `*` 
+Vytvorte program, ktorý si vypýta od používateľa nepárne celé číslo z intervalu <5, 11> a vykreslí maticu tak, že dá `I` uprostred, všade inde `*` 
 
 # Feladat
-Készítsetek egy programot, amely kiírja az összes háromjegyű páratlan számot számot egymás mellé vesszővel elválasztva, amelyek oszthatóak 7tel.
-```
-105, 119, 133, 147, ... 945, 959, 973, 987,
-```
+Készítsetek egy programot, amely a felhasználótól bekér egy páratlan egész számot az <5, 11> tartományből, és kirajzol egy mátrixot úgy, hogy `I` betűt rak középre, mindenhova máshova `*`ot.
 
 # Example
 ```
