@@ -164,13 +164,13 @@ a | `not` a
 1|**0**
 
 ```py
-číslo = int(input('Zadajte číslo: '))
-if číslo > 3 and číslo < 10:
+cislo = int(input('Zadajte číslo: '))
+if (cislo > 3) and (cislo < 10):
     print ('Toto číslo je medzi 3 a 10.')
-if číslo == 3 or číslo == 5:
+if (cislo == 3) or (cislo == 5):
     print('Toto číslo je buď 3 alebo 5.')
 ```
-
+> Zátvorky `()` nie sú potrebné pre python, ale pre nás, lepšie si tak oddelíme jednotlivé podmienky
 ### Úloha
 
 Vytvorte program, ktorý vypočíta hodnotu odporu dvoch odporov, ktoré sú zapojené sériovo alebo paralelne. Od používateľa si vypýtajte `r1`, `r2`˙a či sú zapojené sériovo alebo paralelne.
@@ -180,9 +180,10 @@ Vytvorte program, ktorý vypočíta hodnotu odporu dvoch odporov, ktoré sú zap
 
 # Otázky
 1. Opíšte syntax jednoduchého vetvenia, ako správne písať podmienky v Pythone. Prezraďte všetky vetvy.
-2. Je vždy potrebné použiť príkaz `if`?
-3. Je vždy potrebné použiť príkaz `elif`?
-4. Je vždy potrebné použiť príkaz `else`?
+2. Je vždy potrebné použiť príkaz `if`? Kedy použijeme?
+3. Je vždy potrebné použiť príkaz `elif`? Kedy použijeme?
+4. Je vždy potrebné použiť príkaz `else`? Kedy použijeme?
 5. Kedy vráti operátor `and` hodnotu `False`?
 6. Kedy vráti operátor `or` hodnotu `False`?
 7. Kedy vráti operátor `not` hodnotu `True`?
+1. Kedy bude nasledovný výrok `True`: `(a > b) and (c < b) or (c == 1)` uveďte 2 príklady.

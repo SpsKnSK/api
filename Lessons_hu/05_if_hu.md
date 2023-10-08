@@ -95,7 +95,7 @@ Ha beírjuk, hogy Volt, a program kiírja, hogy a feszültség mértékegysége.
 Adj meg egy mertekegyseget: Volt
 Feszultseg, [V]
 ```
-Ha nem ismeri fel a mértékegysége, informálja a felhasználót
+Ha nem ismeri fel a mértékegységet, informálja a felhasználót
 ### Feladat
 Készítsetek programot, amely a megadott évszámból megállapítja, milyen korúak vagyunk.
 
@@ -110,7 +110,7 @@ Mindig van egy fő `if`. amiben lehet több `if` utasítás
 ## Szemléltető
 
 ```py
-print ("gondtam egy szamra")
+print ("gondoltam egy szamra")
 szam=55
 if szam>30 :
     if szam>40 :
@@ -151,7 +151,7 @@ a | b | a `or` b
 1|0|**1**
 1|1|**1**
 
-## `not` logikai vagy
+## `not` logikai negálás
 megfordítja a logikai változó értékét
 a | `not` a 
 -|-
@@ -159,12 +159,13 @@ a | `not` a
 1|**0**
 
 ```py
-szam=int (input ('Adj meg egy szamot'))
-if szam>3 and szam<10 :
+szam = int (input ('Adj meg egy szamot'))
+if (szam > 3) and (szam < 10) :
     print ('ez a szam 3 es 10 kozott van')
-if szam==3 or szam==S :
+if (szam == 3) or (szam == 5) :
     print('ez a szam 3as vagy 5os')
 ```
+> a `()` nem kellenek, de jobban szemléltei, melyik feltétel tartozik egybe
 ### Feladat
 
 Készítsetek programot, amely kiszámítja az ellenállás értékét két sorba, vagy két párhuzamosan kötött ellenállásból. A felhasználótól kérjétek be az `r1`, `r2` értékét, és azt, hogy sorosan vagy párhuzamosan vannak-e bekötve.
@@ -176,9 +177,10 @@ Készítsetek programot, amely kiszámítja az ellenállás értékét két sorb
 
 # Kérdések
 1. Írjátok le az egyutas elágazás szintaxisát, hogyan kell helyesen feltételt írni Pythonban. Vázoljátok fel az összes ágat.
-1. Kell-e mindig az `if` parancs?
-1. Kell-e mindig az `elif` parancs?
-1. Kell-e mindig az `else` parancs?
+1. Kell-e mindig az `if` parancs? Mikor használjuk?
+1. Kell-e mindig az `elif` parancs? Mikor használjuk?
+1. Kell-e mindig az `else` parancs? Mikor használjuk?
 1. Mikor ad `False`t az `and` logikai operátor?
 1. Mikor ad `False`t az `or` logikai operátor?
 1. Mikor ad `True`t a `not` operátor?
+1. Mikor lesz `True` a következő kifejezés: `(a > b) and (c < b) or (c == 1)`, írjatok rá két példát.
