@@ -17,3 +17,46 @@ Különböző területeken különböző sebességekkel.
 - Túl gyors
 - Optimális
 - Számíthatunk-e bírságra, vagy nem.
+
+# Example
+```
+You are driving in
+1- residential area
+2- outside of residential area
+3- highway
+3
+Give me your speed in km/h: 120
+you're driving optimal
+```
+```
+You are driving in
+1- residential area
+2- outside of residential area
+3- highway
+3
+Give me your speed in km/h: 150
+you will get a ticket
+```
+```
+You are driving in
+1- residential area
+2- outside of residential area
+3- highway
+1
+Give me your speed in km/h: 55 
+you are driving too fast
+```
+<--
+placeOfDriving = int(input("You are driving in\n1- residential area\n2- outside of residential area\n3- highway\n"))
+speed = int(input("Give me your speed in km/h: "))
+
+placeAndSpeed = {1:[30,50,55], 2:[60,90,99], 3:[80,130,139]}[placeOfDriving]
+if(0<=speed<=placeAndSpeed[0]):
+    print("you are too slow")
+elif(placeAndSpeed[0]<=speed<=placeAndSpeed[1]):
+    print("you're driving optimal")
+elif(placeAndSpeed[1]<=speed<=placeAndSpeed[2]):
+    print("you are driving too fast")
+else:
+    print("you will get a ticket")
+-->
