@@ -46,7 +46,7 @@ You are driving in
 Give me your speed in km/h: 55 
 you are driving too fast
 ```
-<--
+<!--
 placeOfDriving = int(input("You are driving in\n1- residential area\n2- outside of residential area\n3- highway\n"))
 speed = int(input("Give me your speed in km/h: "))
 
