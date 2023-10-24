@@ -64,3 +64,23 @@ elif(placeAndSpeed[1]<=speed<=placeAndSpeed[2]):
 else:
     print("you will get a ticket")
 -->
+
+
+<!--- 
+evenNumbersCount, oddNumbersCount, smallerThan10Count, biggerThan10Count = 0,0,0,0
+while True:
+    value = input("give me a number or `q` to quit: ")
+    if (value == 'q') :
+        break
+    value = int(value)
+    if not(5<=value<=25):
+        print("the value has to be <5;25>")
+        continue
+    evenNumbersCount += 1 if value %2 == 0 else 0
+    oddNumbersCount += 1 if value %2 == 1 else 0
+    smallerThan10Count += 1 if value <10 else 0
+    biggerThan10Count += 1 if value >=10 else 0
+
+print(f"There were:\n{evenNumbersCount} even numbers\n{oddNumbersCount} odd numbers\n{smallerThan10Count} smaller numbers than 10\n{biggerThan10Count} bigger numbers than 10")
+
+--->
