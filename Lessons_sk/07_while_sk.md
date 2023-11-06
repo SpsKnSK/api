@@ -1,4 +1,4 @@
-# `while` ciklus
+# `while` cyklus
 ## Syntax, pravidlá a popis
 ```py
 while hlavnaPodmienka:

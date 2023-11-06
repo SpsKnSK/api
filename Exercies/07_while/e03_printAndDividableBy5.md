@@ -1,5 +1,5 @@
 # Úloha
-Napíšte program, ktorý vypíše čísla od 20 do 1 a zároveň zistí, či je dané číslo deliteľné 5.
+Napíšte program, ktorý vypíše čísla od 25 do 1 a zároveň zistí, či je dané číslo deliteľné 5.
 
 Príklad výstupu:
 ```
@@ -13,7 +13,7 @@ Príklad výstupu:
 ```
 
 # Feladat
-Készítsetek egy programot, 20tól 1ig kiírja a számokat, illetve azt, hogy a szám osztható-e 5-tel
+Készítsetek egy programot, 25től 1ig kiírja a számokat, illetve azt, hogy a szám osztható-e 5-tel
 
 Szemlétetés:
 ```
