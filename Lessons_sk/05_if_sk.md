@@ -171,7 +171,7 @@ if (cislo == 3) or (cislo == 5):
 > Zátvorky `()` nie sú potrebné pre python, ale pre nás, lepšie si tak oddelíme jednotlivé podmienky
 ### Úloha
 
-Vytvorte program, ktorý vypočíta hodnotu odporu dvoch odporov, ktoré sú zapojené sériovo alebo paralelne. Od používateľa si vypýtajte `r1`, `r2`˙a či sú zapojené sériovo alebo paralelne.
+Vytvorte program, ktorý vypočíta hodnotu odporu dvoch odporov, ktoré sú zapojené sériovo alebo paralelne. Od používateľa si vypýtajte `r1`, `r2` a či sú zapojené sériovo alebo paralelne.
 
 - Výpočet odporu v sérii: $$R = R_1 + R_2$$
 - Výpočet odporu paralelne: $$R=\frac{R_1*R_2}{R_1+R_2}$$
