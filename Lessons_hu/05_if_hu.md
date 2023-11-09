@@ -135,7 +135,7 @@ Kérjünk be egy számot, majd állapítsuk meg páratlan-e, vagy páros.
 ## `and` logakai és
 Akkor igaz, ha **minden** feltétel egyszerre teljesül 
 
-a | b | a `and` b 
+a | b | `a and b` 
 -|-|-
 0|0|0
 0|1|0
@@ -144,7 +144,7 @@ a | b | a `and` b
 
 ## `or` logikai vagy
 akkor igaz, ha **legalább egy** feltétel teljesül
-a | b | a `or` b 
+a | b | `a or b` 
 -|-|-
 0|0|0
 0|1|**1**
@@ -153,7 +153,7 @@ a | b | a `or` b
 
 ## `not` logikai negálás
 megfordítja a logikai változó értékét
-a | `not` a 
+a | `not a` 
 -|-
 0|**1**
 1|**0**
@@ -170,8 +170,8 @@ if (szam == 3) or (szam == 5) :
 
 Készítsetek programot, amely kiszámítja az ellenállás értékét két sorba, vagy két párhuzamosan kötött ellenállásból. A felhasználótól kérjétek be az `r1`, `r2` értékét, és azt, hogy sorosan vagy párhuzamosan vannak-e bekötve.
 
-- Sorba kötött ellenállások kiszámítása: R=R1+R2
-- Párhuzamosan kötött ellenállások kiszámítása: R=R1*R2/(R1+R2)
+- Sorba kötött ellenállások kiszámítása: $$R = R_1 + R_2$$
+- Párhuzamosan kötött ellenállások kiszámítása: $$R=\frac{R_1*R_2}{R_1+R_2}$$
 
 > Létre kell hoznunk még egy változót, amely segítségével meghatározhatjuk, hogy az ellenállások sorba, vagy párhuzamosan vannak-e kötve
 

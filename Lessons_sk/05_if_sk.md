@@ -136,10 +136,8 @@ Zadajte číslo a zistite, či je párne alebo nepárne.
 ## `and` logické a
 Je pravdivý, keď **všetky** podmienky sú splnené.
 
-a | b | a `and` b 
--|-|
-
--
+a | b | `a and b` 
+-|-|-|
 0|0|0
 0|1|0
 1|0|0
@@ -148,17 +146,17 @@ a | b | a `and` b
 ## `or` logické alebo
 Je pravdivý, keď je splnená **aspoň jedna** podmienka.
 
-a | b | a `or` b 
+a | b | `a or b`
 -|-|-
 0|0|0
 0|1|**1**
 1|0|**1**
 1|1|**1**
 
-## `not` logický NOT
+## `not` logický zápor
 Obráti hodnotu logického výrazu.
 
-a | `not` a 
+a | `not a` 
 -|-
 0|**1**
 1|**0**
@@ -175,8 +173,8 @@ if (cislo == 3) or (cislo == 5):
 
 Vytvorte program, ktorý vypočíta hodnotu odporu dvoch odporov, ktoré sú zapojené sériovo alebo paralelne. Od používateľa si vypýtajte `r1`, `r2`˙a či sú zapojené sériovo alebo paralelne.
 
-- Výpočet odporu v sérii: R = R1 + R2
-- Výpočet odporu paralelne: R = R1 * R2 / (R1 + R2)
+- Výpočet odporu v sérii: $$R = R_1 + R_2$$
+- Výpočet odporu paralelne: $$R=\frac{R_1*R_2}{R_1+R_2}$$
 
 # Otázky
 1. Opíšte syntax jednoduchého vetvenia, ako správne písať podmienky v Pythone. Prezraďte všetky vetvy.
