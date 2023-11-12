@@ -1,8 +1,12 @@
-# HU 
-1. A program kérjen be egy hosszú szót. 
-1. A program ezután kérdezze meg, melyik betűt cserélje ki és milyenre.
+# SK
+1. Program vyžiada od používateľa text.
+1. Potom program opýtať, ktoré písmeno má nahradiť a na aké.
+1. Vypíšte nový text.
 
-1. Írja ki az új szót
+# HU 
+1. A program kérjen be egy hosszú széveget. 
+1. A program ezután kérdezze meg, melyik betűt cserélje ki és milyenre.
+1. Írja ki az új széveget.
 
 # Tools
 - `.replace()`

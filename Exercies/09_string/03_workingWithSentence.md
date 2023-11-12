@@ -1,3 +1,8 @@
+# SK
+1. Program by mal požiadať o vetu a potom ju vypísať veľkými písmenami.
+1. Tú istú vetu vypíšte tak, že každé druhé písmeno bude s veľkým písmenom.
+1. Tú istú vetu vypíšte tak, že každé slovo sa začne s veľkým písmenom.
+
 # HU 
 1. A program kérjen be egy mondatot, majd írja ki nagybetűkkel.
 1. Minden második betű legyen nagybetű.

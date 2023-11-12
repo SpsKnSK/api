@@ -1,3 +1,10 @@
+# SK
+1. Program vyžiada od používateľa text.
+1. Program spočíta a vypíše, koľko slov obsahuje text.
+1. Požiadajme používateľa o číslo, ktoré určí, ktoré slovo máme z vety vypísať.
+    1. (ak je číslo väčšie ako počet slov, môžete použiť modulo)
+1. Vypíšte toto slovo veľkými písmenami.
+
 # HU 
 1. Kérjünk be egy mondatot.
 1. A program számolja meg és írja ki, mennyi szót tartalmaz a mondat.

@@ -13,7 +13,7 @@ print(szoveg[1:len(szoveg)]) #kiíratjuk a stringet a 2. karaktertől a végéig
 - `.replace('s', 'a')` – 's' betűt 'a'-ra cseréli
 - `.split()` – szétvágja a stringet valamilyen karakter alapján
 - `.index('karakter')` – megadja a karakter pozícióját
-- `.count(`karakter`)` – megadja hány ilyen karakter van a stringben
+- `.count('karakter')` – megadja hány ilyen karakter van a stringben
 - `len()` – megadja a karakterlánc hosszát.
 
 ## Példa

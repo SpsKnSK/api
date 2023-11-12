@@ -1,3 +1,8 @@
+# SK
+1. Kým užívateľ nezadá `.`, dovtedy si pýtajte od neho slova.
+1. Po `.` vypíšte celú vetu.
+1. Vypíšte, z koľkých slov sa skladá veta.
+
 # HU 
 1. Kérjünk be a felhasználótól szavakat, míg `.`ot nem tesz
 1. Írjátok ki az egész mondatot

@@ -1,3 +1,10 @@
+# SK
+Požiadajte používateľa o vetu a znak, ktorého početnosť chce zistiť. Vypíšte:
+1. dĺžku vety
+1. koľkokrát sa vyskytuje znak, ktorý používateľ zadal
+1. vetu veľkými písmenami
+1. každé 3. písmeno
+
 # HU
 Kérjetek be egy mondatot a felhasználótól, és hogy melyik betű előfordulási számát írja ki. Írjátok ki:
 1. a mondat hosszát
