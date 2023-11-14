@@ -42,16 +42,16 @@ print(f"A{szo} szó {place} a '{limonade}' szót a névsorban")
 ```
 
 ## Feladat
-> 01_workWithCharacters.md
+> [01_workWithCharacters.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/01_workWithCharacters.md)
 
 ## Feladat
-> 02_ducks.md
+> [02_ducks.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/02_ducks.md)
 
 ## Feladat
-> 03_workingWithSentence.md
+> [03_workingWithSentence.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/03_workingWithSentence.md)
 ## Feladat
-> 04_replace.md
+> [04_replace.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/04_replace.md)
 ## Feladat
-> 05_printWord.md
+> [05_printWord.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/05_printWord.md)
 ## Feladat
-> 06_assemblyASentence.md
+> [06_assemblyASentence.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/06_assemblyASentence.md)
