@@ -4,6 +4,7 @@ V tomto programe budete pracovať s prvočíslami, výpíšete všetky v danom i
 	 1. **len** prvočísla
 	 2. len **nie** prvočísla, vypíše aj ľubovoľný násobok 2 čísel, z ktorého sa skladá dané číslo
 	 3. **všetky** čísla a napíše, či je **prvočíslo**, alebo ak **nie**, vypíše aj ľubovoľný násobok 2 čísel, z ktorého sa skladá dané číslo
+	 1. `'q'` na vystúpenie z programu
 1. Potom si vypýtate hornú hranicu intervalu výpisu. Interval je uzavretý z oboch strán: 1 až horná hranica.
 ## Dôležité
 Odovzdaný súbor má mať formát: `03_priezvisko_meno.py`
@@ -19,6 +20,7 @@ Ebben a feladatban prímszámokkal fogtok dolgozni, kiírjátok őket egy adott 
 	 1. **csak** a prímszámokat
 	 2. csak **nem** a prímszámokat, és hozzá kiír egy tetszőleges szorzatot, amiből az adott szám áll
 	 3. **minden** számot, amihez kiírja, hogy az adott szám **prímszám**, vagy ha **nem** prímszám, kiír egy tetszőleges szorzatot, amiből az adott szám áll
+	 1. `'q'` a program befejezése
 1. Utána felszólítja a felhasználót, hogy adja meg az intervallum felső határát, az intervallum zárt: 1től a felső határig
 ## Fontos
 A leadott fájl formátuma: `03_vezeteknev_nev.py`
@@ -34,6 +36,7 @@ This program will find the prime numbers for you. You can choose:
 1- just the prime numbers
 2- numbers that are not prime numbers
 3- both
+q- quit
 - 1
 Give the upper border: 20
 2, is a prime number
@@ -52,6 +55,7 @@ This program will find the prime numbers for you. You can choose:
 1- just the prime numbers
 2- numbers that are not prime numbers
 3- both
+q- quit
 - 2
 Give the upper border: 20
 4 equals 2*2
@@ -72,6 +76,7 @@ This program will find the prime numbers for you. You can choose:
 1- just the prime numbers
 2- numbers that are not prime numbers
 3- both
+q- quit
 - 3
 Give the upper border: 29
 2, is a prime number
