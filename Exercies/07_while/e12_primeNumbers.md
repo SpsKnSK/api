@@ -6,8 +6,7 @@ V tomto programe budete pracovať s prvočíslami, výpíšete všetky v danom i
 	 3. **všetky** čísla a napíše, či je **prvočíslo**, alebo ak **nie**, vypíše aj ľubovoľný násobok 2 čísel, z ktorého sa skladá dané číslo
 	 1. `'q'` na vystúpenie z programu
 1. Potom si vypýtate hornú hranicu intervalu výpisu. Interval je uzavretý z oboch strán: 1 až horná hranica.
-## Dôležité
-Odovzdaný súbor má mať formát: `03_priezvisko_meno.py`
+1. budete sa ho pýtať, kým nezadá `'q'`
 ## Poznámky
 _Prvočíslo: číslo, ktoré sa dá deliť len 1 a samým sebou_
 
@@ -22,8 +21,7 @@ Ebben a feladatban prímszámokkal fogtok dolgozni, kiírjátok őket egy adott 
 	 3. **minden** számot, amihez kiírja, hogy az adott szám **prímszám**, vagy ha **nem** prímszám, kiír egy tetszőleges szorzatot, amiből az adott szám áll
 	 1. `'q'` a program befejezése
 1. Utána felszólítja a felhasználót, hogy adja meg az intervallum felső határát, az intervallum zárt: 1től a felső határig
-## Fontos
-A leadott fájl formátuma: `03_vezeteknev_nev.py`
+1. addig kéritek be az információt, míg `'q'`t nem nyom
 ## Megjegyzések
 _Prímszám: olyan szám, ami csak 1-gyel és önmagával osztható_
 
