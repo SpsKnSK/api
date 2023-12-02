@@ -1,3 +1,9 @@
+# SK
+Od používateľas si vypýtajte počet prvkov v zozname a vytvorte z neho zoznam náhodných celých čísel.
+
+- Nájdite najmenšie a najväčšie číslo v zozname.
+- Vložte najmenšie číslo na začiatok zoznamu a najväčšie na koniec.
+- 
 # HU
 Kérjétek be a felhasználótól a lista elemeinek a számát, és készítsetek egy annyi véletlen egész számból álló listát. 
 

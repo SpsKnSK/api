@@ -1,3 +1,9 @@
+# SK
+Od používateľas si vypýtajte počet prvkov v zozname a vytvorte z neho zoznam náhodných celých čísel.
+
+- Uložte párne a nepárne čísla do samostatných zoznamov `parneCisla` a `neparneCisla`.
+- Vypíšte najmenšiu a najväčšiu hodnotu z oboch zoznamov!
+
 # HU
 Kérjétek be a felhasználótól a lista elemeinek a számát, és készítsetek egy annyi véletlen egész számból álló listát. 
 
