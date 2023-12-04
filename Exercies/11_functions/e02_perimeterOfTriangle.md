@@ -3,6 +3,6 @@
 - Na príklade zavolajte funkciu.
   
 # HU
-- Írjatok függvényt, amely kiszámítja egy háromszög területét, ha megvannak adva az oldalhosszai.
+- Írjatok függvényt, amely kiszámítja egy háromszög kerületét, ha megvannak adva az oldalhosszai.
 - Egy példán hívjátok meg a függvényt
 
