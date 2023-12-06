@@ -138,18 +138,14 @@ myList[bananaIndex], myList[appleIndex] = myList[appleIndex], myList[bananaIndex
 print(myList)
 ```
 
+## Feladatok
+[e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e01_fillList.md)
 
+[e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e02_fillListWithinInterval.md)
 
-## Feladat
-> [e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e01_fillList.md)
-## Feladat
-> [e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e02_fillListWithinInterval.md)
-## Feladat
-> [e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e03_maxMin.md)
+[e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e03_maxMin.md)
 
-## Feladat
-> [e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e04_maxMinIndexAverage.md)
-
+[e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e04_maxMinIndexAverage.md)
 
 ## Véletlen számokkal való feltöltés
 ### variant 1

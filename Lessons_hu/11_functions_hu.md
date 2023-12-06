@@ -51,11 +51,16 @@ else:
 - **Függvény** van visszaadó értéke `return`, kapunk végeredményt az elvégzés után `def fuggvenyNeve (parameterek)->visszaadottAdatTipus:`
 - **Eljárások** nincs visszaadó érték, valamit élvégez, de nem érdekes a végeredmény  `def fuggvenyNeve (parameterek)->None:`
 
-## Feladat
-> [e01_areaOfTriangle.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e01_areaOfTriangle.md)
+## Feladatok
+[e01_areaOfTriangle.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e01_areaOfTriangle.md)
 
-## Feladat
-> [e02_perimeterOfTriangle.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e02_perimeterOfTriangle.md)
+[e02_perimeterOfTriangle.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e02_perimeterOfTriangle.md)
+
+[e03_workerPosition.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e03_workerPosition.md)
+
+[e04_workerPosition_2.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e04_workerPosition_2.md)
+
+[e05_averageConsumption.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e05_averageConsumption.md)
 
 ## Egy függvényben meghívhatunk másik függvény(eke)t is
 ```py
@@ -68,8 +73,9 @@ print(maximum)
 
 # Kérdések
 1. Hogyan definiálunk függvényt? írjátok le a szintaxist.
-1. Kell-e mindig `return` parancs? 
-1. Mondjatok példát függvényre, amelynek nincs bemenő paramétere, és visszad egy `int` értéket `def fuggvenyNeve()->int:`
-1. Mondjatok példát függvényre, amely két egészszám típusú bemenő paraméterrel rendelkezik, és visszad egy `bool` értéket `def fuggvenyNeve(a:int, b:int)->bool:`
-1. Mondjatok példát függvényre, amely egy `str` bemenő paraméterrel rendelkezik,  `int` értéket `def fuggvenyNeve(a:str)->int:`
-1. Írjatok függvényt, amelynek bemenő paramétere egy lista, és visszaadtok egy olyan listát, amelyik az eredeti lista páratlan indexű elemeit taratlmazza. `[1,2,3,4] -> [2,4]`
+2. Mire szolgál a `return` parancs? Mutassátok be példán
+3. Kell-e mindig `return` parancs? Mutassátok be példán
+4. Mondjatok példát függvényre, amelynek nincs bemenő paramétere, és visszad egy `int` értéket `def fuggvenyNeve()->int:`
+5. Mondjatok példát függvényre, amely két egészszám típusú bemenő paraméterrel rendelkezik, és visszad egy `bool` értéket `def fuggvenyNeve(a:int, b:int)->bool:`
+6. Mondjatok példát függvényre, amely egy `str` bemenő paraméterrel rendelkezik,  `int` értéket ad vissza `def fuggvenyNeve(a:str)->int:`
+7. Írjatok függvényt, amelynek bemenő paramétere egy lista, és visszaadtok egy olyan listát, amelyik az eredeti lista páratlan indexű elemeit taratlmazza. `[1,2,3,4] -> [2,4]`

@@ -70,7 +70,7 @@ print(moj_zoznam)
 print(hodnota)
 ```
 
-## Úplné vymazanie zoznamu `clear()`
+## Úplné vymazanie zoznamu `.clear()`
 ```py
 moj_zoznam = ["jablko", "hruška", "čerešňa"]
 moj_zoznam.clear()
@@ -110,9 +110,7 @@ Zlúči dva zoznamy.
 ```py
 from random import sample
 
-moj
-
-_zoznam = sample(range(1, 50), 3)
+moj_zoznam = sample(range(1, 50), 3)
 tvoj_zoznam = sample(range(100, 500), 2)
 print(moj_zoznam)
 print(tvoj_zoznam)
@@ -143,14 +141,13 @@ print(moj_zoznam)
 ```
 
 ## Úlohy
-> [e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e01_fillList.md)
-## Úlohy
-> [e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e02_fillListWithinInterval.md)
-## Úlohy
-> [e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e03_maxMin.md)
+[e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e01_fillList.md)
 
-## Úlohy
-> [e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e04_maxMinIndexAverage.md)
+[e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e02_fillListWithinInterval.md)
+
+[e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e03_maxMin.md)
+
+[e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e04_maxMinIndexAverage.md)
 
 
 ## Naplnenie zoznamu náhodnými číslami
