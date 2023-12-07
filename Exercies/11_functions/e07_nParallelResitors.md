@@ -5,7 +5,7 @@
 $$R=\frac{1}{\sum_{i=1}^n{\frac{1}{R_i}}}$$
 $$\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}$$
 $$R=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}}$$
--Od používateľa si výpýtajte hodnoty $R_i$, kým nezadá 0 a vypíšte na obrazovku výsledný odpor.
+- Od používateľa si výpýtajte hodnoty $R_i$, kým nezadá 0 a vypíšte na obrazovku výsledný odpor.
   
 # HU
 - Írjatok függvényt, amely kiszámolja az eredőellenállást $n$ párhuzamosan kapcsolt ellenállás esetén 
@@ -14,7 +14,7 @@ $$R=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}}$$
 $$R=\frac{1}{\sum_{i=1}^n{\frac{1}{R_i}}}$$
 $$\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}$$
 $$R=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}}$$
--A felhasználótól kérjétek be az $R_i$ ellenállás értékét, míg 0-t nem ad be.
+- A felhasználótól kérjétek be az $R_i$ ellenállások értékét, míg 0-t nem ad be.
 
 # Example
 ```
