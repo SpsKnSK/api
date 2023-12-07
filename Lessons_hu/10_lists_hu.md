@@ -68,7 +68,7 @@ print(mylist)
 print(value)
 ```
 
-## Teljes lista törlése `clear()`
+## Teljes lista törlése `.clear()`
 ```py
 mylist = ["apple", "banana", "cherry"]
 mylist.clear()

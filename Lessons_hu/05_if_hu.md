@@ -170,8 +170,10 @@ if (szam == 3) or (szam == 5) :
 
 Készítsetek programot, amely kiszámítja az ellenállás értékét két sorba, vagy két párhuzamosan kötött ellenállásból. A felhasználótól kérjétek be az `r1`, `r2` értékét, és azt, hogy sorosan vagy párhuzamosan vannak-e bekötve.
 
-- Sorba kötött ellenállások kiszámítása: $$R = R_1 + R_2$$
-- Párhuzamosan kötött ellenállások kiszámítása: $$R=\frac{R_1*R_2}{R_1+R_2}$$
+- Sorba kötött ellenállások kiszámítása: 
+$$R = R_1 + R_2$$
+- Párhuzamosan kötött ellenállások kiszámítása
+$$R=\frac{R_1*R_2}{R_1+R_2}$$
 
 > Létre kell hoznunk még egy változót, amely segítségével meghatározhatjuk, hogy az ellenállások sorba, vagy párhuzamosan vannak-e kötve
 

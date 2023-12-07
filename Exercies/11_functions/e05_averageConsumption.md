@@ -9,3 +9,7 @@ $$fogyasztás = \frac{üzemanyag}{\frac{út}{100}}[\frac{l}{100km}]$$
 - Egy példán hívjátok meg a függvényt
 
 
+# Example
+```
+The car drove 1426km and consumed 41.10l of fuel, the average consumption is: 2.88l/100km
+```

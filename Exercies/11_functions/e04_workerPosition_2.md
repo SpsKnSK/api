@@ -14,4 +14,10 @@
   - "Worker": 1000 < fizetés < 4000
 - Egy példán hívjátok meg a függvényt
 
-
+# Example
+```
+Worker on position            Worker earns 3387EUR
+Worker on position          Director earns 8309EUR
+Worker on position           Manager earns 6305EUR
+Worker on position Associate Manager earns 5021EUR
+```
