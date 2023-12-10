@@ -8,6 +8,8 @@ $$\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}$$
 $$R=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}}$$
 - Od používateľa si výpýtajte hodnoty $R_i$, kým nezadá 0 
 - Pomocou funkcie vypočítajte výsledný odpor a vypíšte na obrazovku jeho hodnotu.
+
+> Dbajte na ošetrenie chýb pri vstupe
   
 # HU
 - Írjatok függvényt, amely kiszámolja az eredőellenállást $n$ párhuzamosan kapcsolt ellenállás esetén 
@@ -19,6 +21,8 @@ $$\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}$$
 $$R=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}}$$
 - A felhasználótól kérjétek be az $R_i$ ellenállások értékét, míg 0-t nem ad be.
 - Számoljátok ki az eredő ellenállást, és írassátok ki a képernyőre
+
+> Ügyeljetek, és kezeljétek a fellépő hibákat
 
 # Example
 ```
