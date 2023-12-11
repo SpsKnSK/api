@@ -34,7 +34,7 @@ else:
     utasitas
 ```
 ## Értelmezés
-- a ciklusmagot tanbulátorral vagy szóközzel válasszuk külön a `for` parancstól (ajánlom a tabot), így tudja a fordító, hogy éppen a ciklusmagban van.
+- a ciklusmagot tabulátorral vagy szóközzel válasszuk külön a `for` parancstól (ajánlom a tabot), így tudja a fordító, hogy éppen a ciklusmagban van.
 - Az `x` és `y` változók a tartomány elejét és végét jelölik, pl. <1;10)
 - A `ciklusvaltozo`t, ha egész szám, általában `i`vel jelöljük, értéket pedig a `range` által határolt intervallumban vesz fel
 - Ahogy az `if`nél a `for` ciklusnál is van lehetőség `else` ágat létrehozni (_Python nyelv különlegessége_), akkor kerül lefutásra, ha a ciklusmagot **nem** szakítottuk meg `break` paranccsal

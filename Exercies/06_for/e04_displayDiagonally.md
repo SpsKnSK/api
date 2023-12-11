@@ -2,7 +2,7 @@
 Vytvorte program, ktorý si vypýta od používateľa nepárne celé číslo z intervalu <5, 11> a vykreslí maticu tak, že dá `I` diagonálne, všade inde `*` 
 
 # Feladat
-Készítsetek egy programot, amely a felhasználótól bekér egy páratlan egész számot az <5, 11> tartományből, és kirajzol egy mátrixot úgy, hogy `I` betűt rak keresztbe, mindenhova máshova `*`ot.
+Készítsetek egy programot, amely a felhasználótól bekér egy páratlan egész számot az <5, 11> tartományből, és kirajzol egy mátrixot úgy, hogy `I` betűt rak átlósan, mindenhova máshova `*`ot.
 
 # Example
 ```
