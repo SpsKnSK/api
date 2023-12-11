@@ -1,5 +1,5 @@
 # SK
-Od používateľas si vypýtajte počet prvkov `<1;20>` v zozname a vytvorte z neho zoznam náhodných celých čísel `(100,1000)`.
+Od používateľa si vypýtajte počet prvkov `<1;20>` v zozname a vytvorte z neho zoznam náhodných celých čísel `(100,1000)`.
 
 - Uložte párne a nepárne čísla do samostatných zoznamov `parneCisla` a `neparneCisla`.
 - Vypíšte najmenšiu a najväčšiu hodnotu z oboch zoznamov!
