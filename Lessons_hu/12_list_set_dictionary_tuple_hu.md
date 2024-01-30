@@ -120,7 +120,7 @@ print(x,y)
 `(x, y)` koordinátapár tárolása, dolgozók rekordjai egy adatbázisban
 
 # Frekvenciatáblázat szemléltető példa
-Ebben a feladatban elindulunk egy egyszerű feladatból egészen addig, míg az elmúlt órákon tanultakból is használunk elemeket (függvények, szótárak, listák, halmazok...)
+A következőkben egy olyan feladatot fogunk megoldani, ahol egy mondatban a fellelhető betűk gyakoriságát jelenítjük meg a felhasználónak. Minden egyes lépést kommentek kísérnek, mit miért teszünk, és a végén eljutunk egy lehetséges megoldáshoz, amelyben az eddig tanultakat is felhasználjuk (függvények, szótárak, listák, halmazok...)
 
 Legyen egy mondatunk: `"A Pisti elment 2 tejert, de kenyeret vett. Pisti nem vitt magaval sok penzt."`, keressük meg benne, melyik betű hányszor található. 
 ## 1. lépés
@@ -152,7 +152,7 @@ for c in set(mondat):
     print(f"{c}\t{mondat.count(c)}\t{100*mondat.count(c)/len(mondat):0.2f}%")
 ```
 ## 5. lépés
-Szűrjük le az egészet csak betűkre
+Szűrjük le az egészet **csak betűkre**
 ```py
 mondat = "A Pisti elment 2 tejert, de kenyeret vett. Pisti nem vitt magaval sok penzt."
 
@@ -160,7 +160,7 @@ for c in set(mondat):
     if c.isalpha():
         print(f"{c}\t{mondat.count(c)}\t{100*mondat.count(c)/len(mondat):0.2f}%")
 ```
-Ez viszont nem pontos, mert az egész mondatot vettük alapul, ahol szóközök, számok, más írásjelek is találhatók, nem beszélve, a kis és nagy betűkről
+Ez viszont nem pontos, mert az egész mondatot, szöveget vettük alapul, ahol szóközök, számok, más írásjelek is találhatók, nem beszélve, a kis és nagy betűkről, ezt fogjuk a következőkben szűkíteni.
 ## 6. lépés
 Szűrjük le az egészet **csak kisbetűkre**
 ```py
@@ -222,29 +222,29 @@ def IrdKiKekkel(mondat: str) -> None:
     print(f"{bcolors.OKBLUE}{mondat}{bcolors.ENDC}")
 
 
-def KeszitsFrekvenciatablazotot(mondat: str) -> dict[str, list[int, float]]:
+def KeszitsFrekvenciatablazatot(mondat: str) -> dict[str, list[int, float]]:
     mondat = "".join([c for c in mondat.lower() if c.isalpha()])
     szotar = {c: [mondat.count(c), 100 * mondat.count(c) / len(mondat)] for c in mondat}
     return szotar
 
 
-def IrdKiAFrekvenciatablat(frekvenciatablazat: dict[str, list[int, float]]) -> None:
+def IrdKiAFrekvenciatablazatot(frekvenciatablazat: dict[str, list[int, float]]) -> None:
     print(f"{bcolors.BOLD}{bcolors.OKCYAN}betu\tdarab\tarany{bcolors.ENDC}")
     for key, value in frekvenciatablazat.items():
         print(f"{key}\t{value[0]}\t{value[1]:0.2f}%")
 
 
 enMondatom ="A Pisti elment 2 tejert, de kenyeret vett. Pisti nem vitt magaval sok penzt."
-frekvenciatabla = KeszitsFrekvenciatablazotot(enMondatom)
+frekvenciatablazat = KeszitsFrekvenciatablazatot(enMondatom)
 
 IrdKiKekkel("Veletlenszeru elemek a halmazban")
-IrdKiAFrekvenciatablat(frekvenciatabla)
+IrdKiAFrekvenciatablazatot(frekvenciatablazat)
 
 IrdKiKekkel("Abc szerint sorba rendezett elemek")
-frekvenciatabla = dict(sorted(frekvenciatabla.items()))
-IrdKiAFrekvenciatablat(frekvenciatabla)
+frekvenciatablazat = dict(sorted(frekvenciatablazat.items()))
+IrdKiAFrekvenciatablazatot(frekvenciatablazat)
 
 IrdKiKekkel("Fellelhetoseg szerint sorba rendezett elemek")
-frekvenciatabla = dict(sorted(frekvenciatabla.items(), key=lambda item: item[1][0], reverse=True))
-IrdKiAFrekvenciatablat(frekvenciatabla)
+frekvenciatablazat = dict(sorted(frekvenciatablazat.items(), key=lambda item: item[1][0], reverse=True))
+IrdKiAFrekvenciatablazatot(frekvenciatablazat)
 ```
