@@ -7,7 +7,7 @@
   - `[1,2.3,"alma", True]` kevert
   - `[1,2,3]` csak számok
 - index-szel jutunk hozzá az értékhez, `0`val kezdődik 
-  - ha az egyenlőségjel "jobb" oldalán van az érték, vagy nincs egyenlőségjel, akkor **visszakapjuk** az érték
+  - ha az egyenlőségjel "jobb" oldalán van az érték `ertek = listam[i]`, vagy nincs egyenlőségjel `print(listam[i])`, akkor **visszakapjuk** az értéket
   ```py
   lista = ['alma', 'korte', 'cseresznye']
   print(lista[1]) #kiirja korte
@@ -21,8 +21,8 @@
   lista[1] = "kiwi"
   print(lista[1]) #kiirja kiwi
   ```
-- `.append(érték)` - új értéket adunk a lista végére
-- `.index(érték)` - visszaadja az `érték` helyét, sorszámát, indexét, ha nem találja az értéket, akkor `-1`et ad vissza
+- `.append(érték)` - új értéket adunk a lista **végére**
+- `.index(érték)` - visszaadja az `érték` **helyét**, sorszámát, indexét, ha nem találja az értéket, akkor `-1`et ad vissza
 
 
 ## Halmaz `set`
