@@ -43,7 +43,7 @@ mojeCisla = {1, 2, 7, 8, 9, 0}
 print("Tieto som uhádol: ", vyherneCisla & mojeCisla)
 ```
 
-### Zo zoznamu do množiny
+### Zo zoznamu množina
 ```py
 kosik = ["jablko", "pomaranč", "jablko", "hruška", "pomaranč", "banán"]
 print("pomaranč" in kosik)
@@ -65,14 +65,12 @@ print(f'Unikátne prvky v abrakadabra {abrakadabra}')
 print(f'Unikátne prvky v alhambra {alhambra}')
 print(f'Prvky v abrakadabra, ktoré nie sú v alhambra: {abrakadabra-alhambra}')
 print(f'Prvky v abrakadabra alebo v alhambra: {abrakadabra|alhambra}')
-print(f'Prvky v abrakadabra
-
- a v alhambra súčasne: {abrakadabra&alhambra}')
+print(f'Prvky v abrakadabra a v alhambra súčasne: {abrakadabra&alhambra}')
 print(f'Prvky v abrakadabra alebo v alhambra, ale nie oboje súčasne: {abrakadabra^alhambra}')
 ```
 ## Slovník `dictionary`
-Dátový typ slovník slúži na ukladanie párov kľúč:hodnota. Slovník je kolekcia, kde:
-- {kľúč:hodnota}, pričom kľúč a hodnota môžu byť ľubovoľného dátového typu, môžu byť aj zmiešané v rámci jedného slovníka
+Dátový typ slovník slúži na ukladanie párov `kľúč:hodnota`. Slovník je kolekcia, kde:
+- `{kľúč:hodnota}`, pričom kľúč a hodnota môžu byť ľubovoľného dátového typu, môžu byť aj zmiešané v rámci jedného slovníka
 - na prístup k hodnote používame zátvorky `[]`, rovnako ako pri zoznamoch, pričom tu udávame kľúč: `print(mojSlovnik["kluc"])`
 - je zoradený (od Pythonu verzie >3.7)
 - je modifikovateľný
@@ -147,10 +145,6 @@ print(autoSlovnik)
 ```
 
 ### `.get`
-## SK
-
-### Preklad
-
 Ak chceme pristupovať k neexistujúcemu kľúču v slovníku, program signalizuje chybu a zastaví sa:
 
 ```py
@@ -176,7 +170,7 @@ print(autoSlovnik.get("isElectric", "neobsahuje"))
 
 ## Tuple `tuple`
 
-**Tuple** je nemodifikovateľný dátový typ s možnosťou obsahovať modifikovateľné prvky. Tuple výstup vždy obsahuje zátvorky, takže môžu byť správne vnorené; môžeme ich zadávať s alebo bez zátvoriek, ale v niektorých prípadoch sú zátvorky nevyhnutné (keď sú súčasťou väčšieho výrazu).
+**Tuple**, n-tica, je nemodifikovateľný dátový typ s možnosťou obsahovať modifikovateľné prvky. Tuple výstup vždy obsahuje zátvorky, takže môžu byť správne vnorené; môžeme ich zadávať s alebo bez zátvoriek, ale v niektorých prípadoch sú zátvorky nevyhnutné (keď sú súčasťou väčšieho výrazu).
 
 Napríklad, ak vložíme **zoznam** do tuple:
 
@@ -197,10 +191,10 @@ ovocie[0] = 'kiwi'
 
 ### Vlastnosti
 - Používajú sa zátvorky `()`
-- Prvky poľa nie sú modifikovateľné
+- Prvky tuple nie sú modifikovateľné
 - Môžeme použiť ľubovoľný dátový typ
-- Podobne ako reťazce sú nemodifikovateľné, nemôžeme priradiť hodnotu jednotlivému prvku (`myTuple[0] = 10` vyvolá chybu)
-- Môžeme vytvoriť tuple, ktorý obsahuje modifikovateľné prvky, napríklad polia/zoznamy (`myTuple = ([1,2,3],4)`, tu môžeme meniť hodnoty `myTuple[0]`, pretože ide o zoznam)
+- Podobne ako reťazce, tuple sú nemodifikovateľné, nemôžeme priradiť hodnotu jednotlivému prvku (`myTuple[0] = 10` vyvolá chybu)
+- Môžeme vytvoriť tuple, ktorý obsahuje modifikovateľné prvky, napríklad polia/zoznamy (`myTuple = ([1,2,3],4)`, tu môžeme meniť hodnoty `myTuple[0][1]=10`, pretože ide o zoznam)
 
 ### Načo je to dobré?
 
