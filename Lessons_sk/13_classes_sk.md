@@ -1,183 +1,182 @@
-# Osztályok, saját/összetett adattípusok `class`
+# Triedy, vlastné/složené dátové typy `class`
 
-Eddig olyan adattípusokkal találkoztunk, és dolgoztunk, mint `int`, `float`, `str`, `Random`, `list`, `dict`, most viszont szintet lépve képesek leszünk definiálni, létrehozni saját _adattípust_. 
+Doposiaľ sme sa stretli a pracovali s dátovými typmi ako `int`, `float`, `str`, `random`, `list`, `dict`, ale teraz sme schopní ísť ďalej a definovať si vlastný dátový typ.
 
-`class` paranccsal definiáljuk, elmondjuk a Pythonnak, hogyan szernénk, hogy a saját addattípusunk kinézzen:
-- milyen tulajdonságokkal (attributes, property) rendelkezzen -> mije **van**
-- milyen függvényeket tartalmazzon -> mit tud **csinálni**
+S `class` príkazom definujeme, hovoríme Pythonu, ako by sme chceli, aby náš vlastný dátový typ vyzeral:
+- s akými vlastnosťami (attributes, property) by mal byť vybavený -> čo **má**
+- s akými funkciami by mal byť vybavený -> čo vie **robiť**
 
-A `class` amolyan **tervrajz**, hogyan szeretnénk, ha belőle elkészített **példány** kinézne.
+`class` je akýsi **návrh**, ako by sme chceli, aby vyzerali **objekty**, **inštancie**, ktoré z neho vytvoríme.
 
-## Objektum orientáltság
+> **Objekt** alebo **inštancia** je súhrn dát, ktorý je reálne uložený v pamäti. Premenná ukazuje na túto konkrétnu adresu a tak určuje alebo mení jej hodnotu.
 
-A Python egy objektum orientált programozási nyelv, ahol (szinte) minden adattípus objektum, tulajdonságaival (attributes, property) és függvényeivel (functions) együtt. Az osztály olyan, mint egy "tervrajz" az **objektumok**, **instanciók** létrehozásához.
+Definovanie triedy pomocou príkazu `class`. V nasledujúcom príklade vytvárame návrh triedy, ktorá sa volá `MyClass` a má vlastnosť `x`:
 
-> **objektum** vagy akár példány, a memóriában konkrét helyen tárolt adatok halmaza. A változó erre a konkrét címre "mutat", és úgy határozza meg, vagy éppen változtatja meg az értékét.
-
-Egy osztály definiálásához a `class` parancsot használjuk. A következő példában egy olyan osztály tervrajzát készítjük el, amelyiknek a neve `MyClass` és egy tulajdonsága van az `x`:
 ```py
 class MyClass:
   x = 5
 ```
-Ha ebből a osztályból, tervrajzból objektumot akarunk létrehozni, akkor azt a következőképpen tegyük meg:
+
+Ak chceme z tejto triedy, návrhu, vytvoriť objekt, môžeme to urobiť nasledovne:
 
 ```py
 p1 = MyClass()
 print(p1.x)
 ```
-Tehát egy tervrajzzal még nem tudunk dolgozni (pár kivételtől eltekintve), abból objektumot kell létrehoznunk. 
-## Macska
-Elképzelhetjük ezt úgy is, mint az állatvilágban a **macska**, tudjuk, hogy  általában szőrös, 4 lába van, van neve, nyávog, simul, dorombol, stb. ez egy "tervrajz" a macskához. Viszont, ha már van egy konkrént macskánk (Cirmi, Kormos, Aladár), akkor neki már konkrét tulajdonságokat adunk.
+
+S triedou ešte nevieme pracovať (okrem niekoľkých výnimiek), z nej musíme vytvoriť objekt, inštanciu.
+
+## Mačka
+
+Môžeme si to predstaviť aj tak, že v prírode je **mačka**, vieme, že je obvykle chlpatá, má 4 nohy, má meno, mňauká, mazná sa, spí, atď. - toto je návrh na "výrobu" mačky. Ale ak už máme konkrétnu mačku u nás doma, alebo v susedstve (Murko, Labka, Belka, Cilka), už pre ňu udeľujeme konkrétne vlastnosti. V nasledujúcom príklade zadefinujeme typ `Macka`, ktorý bude mať vlastnosti: Meno, PocetNoh a Farba, plus bude sa vediet predstavit.
 ```py
-class Macska:
-	def __init__(self, nev, labakSzama, szin) -> None:
-		self.Nev = nev
-		self.LabakSzama = labakSzama
-		self.Szin = szin
+class Macka:
+    def __init__(self, meno, pocetNoh, farba) -> None:
+        self.Meno = meno
+        self.PocetNoh = pocetNoh
+        self.Farba = farba
 
-	def Dorombol(self):
-		print(f"{self.Nev} a {self.LabakSzama} labu {self.Szin} macska dorombol")
+    def PredstavSa(self):
+        print(f"Som mačka a volam sa {self.Meno}. Mam {self.PocetNoh} noh a moj kozuch je {self.Farba}")
 
-enMacskam = Macska("Cirmi", 3.5, "ezust")
-enMacskam.Dorombol()
+mojaMacka = Macka("Belka", 3, "strieborna")
+mojaMacka.PredstavSa()
 ```
 
-## `__init__()` függvény
- > A **példányosítás** során az osztályból objektumpéldányt készítünk. Tehát az általános formai leírásunknak (ami az osztály) egy konkrét példányát gyártjuk le az `__init__()` függvény segítségével.
+## `__init__()` funkcia
+> Počas **inicializácie** vytvárame inštanciu objektu z triedy, to znamená, že v pamäti počítača sa sa alokuje, prideluje oblasť vo veľkosti potrebnej pre vytvorenie danej triedy. Takže z všeobecného opisu (čo je tá trieda) vytvárame konkrétny objekt v pamäti pomocou funkcie `__init__()`.
 
-
-Ezzel a függvénnyel mondjuk el, hogyan akarjuk, hogy az osztályunk létrejöttekor, hogyan is nézzen ki, a tulajdonságai milyen konkrét értékeket vegyenek fel. Meg lehet oldani anélkül is, csak ilyenkor a felhasználónak tudnia kell, mi mindent kell beállítania, hogy működjön a program. Az `__init__()` függvény **garantálja**, hogy az osztályból objektumot **csak akkor tudunk** készíteni, ha a benne felsorolt tulajdonságokat megadjuk.
+Táto funkcia nám hovorí, ako by sme chceli, aby vyzeralo vytváranie objektu z našej triedy. Môže to fungovať aj bez nej, v tedy funkcia nemá vstupné parametre, ale v tom prípade by používateľ musel vlastnosti nastaviť "ručne". Funkcia `__init__()` **zabezpečuje**, že z triedy môžeme vytvoriť objekt **len vtedy**, ak mu poskytneme uvedené vlastnosti.
 ```py
-class Macska:
+class Macka:
 
-	Nev:str
-	LabakSzama:float
-	Szin:str
+    Meno: str
+    PocetNoh: float
+    Farba: str
 
-	def Dorombol(self):
-		print(f"{self.Nev} a {self.LabakSzama} labu {self.Szin} macska dorombol")
+    def PredstavSa(self):
+        print(f"Som mačka a volam sa {self.Meno}. Mam {self.PocetNoh} noh a moj kozuch je {self.Farba}")
 
-enMacskam = Macska()
-enMacskam.Nev = "Cirmi"
-enMacskam.LabakSzama = 3.5
-#enMacskam.Szin = "ezust"
-enMacskam.Dorombol()
+mojaMacka = Macka()
+mojaMacka.Meno = "Belka"
+mojaMacka.PocetNoh = 3.5
+#mojaMacka.Farba = "strieborna"
+mojaMacka.PredstavSa()
 ```
-> Minden osztálynak van egy `__init__()` nevű függvénye, amely mindig végrehajtásra kerül az objektum létrehozásakor, ha nem adunk meg tulajdonságokat, akkor is. Ha üres az init függvény, nem kell külön létrehozni.
+> Každá trieda má funkciu s názvom `__init__()`, ktorá je vždy vykonaná pri vytváraní objektu, aj keď neposkytneme žiadne vstupné parametre. Ak je funkcia `__init__()` prázdna, nemusíte ju samostatne vytvárať.
 ```py
-class TulajdonsagNelkuliOsztaly :
-	def __init__(self) -> None:
-		print("Az init fuggvenyt meghivtuk")
+class TriedaBezVlastnosti:
+    def __init__(self) -> None:
+        print("Funkciu init sme zavolali")
 
-test = TulajdonsagNelkuliOsztaly()
+test = TriedaBezVlastnosti()
 ```
 
 ## `self`
-A self paraméter az osztály aktuális példányára, objektumára, instanciójára való hivatkozás, és a hozzá tartozó függvények és tulajdonságok elérésére szolgál.
+Parameter `self` je odkaz na aktuálnu inštanciu triedy, a slúži na prístup k funkciám a vlastnostiam tejto inštancie.
 
 ```py
-class Auto :
-	def __init__(self, marka) -> None:
-		self.Marka = marka
-	def IrdKiAMarkajat(self):
-		print(f"az auto markaja {self.Marka}")
+class Auto:
+    def __init__(self, znacka) -> None:
+        self.Znacka = znacka
+    
+    def VypisZnacku(self):
+        print(f"Značka auta je {self.Znacka}")
 
-	def IrdKi():
-		print("Csak ugy kiirom")
+    def Vypis():
+        print("Jednoducho vypíšem")
 
 test = Auto("Skoda")
-test.IrdKiAMarkajat()
-Auto.IrdKi()
+test.VypisZnacku()
+Auto.Vypis()
 ```
-`self`en keresztül jutunk hozza a konkrét objektum tulajdonságaihoz, függvényeihez: 
-- `IrdKiAMarkajat` csak a `test` objektumon működik, ezt nevezzük az **objektum függvényének** vagy az objektumhoz tartozó függvénynek
-- az `test.IrdKi()` nem fog működni, hiszen a `test` objektumnak nincs `IrdKi()` függvénye (hiányzik a `self`)
-- `Auto.IrdKi()` működik, és ez az **osztályhoz tartozó függvény**, vagy más programozási nyelveken **statikus** függvénynek is ismertetik
-- `Auto.IrdKiAMarkajat()` nem működik, mert ez nem osztályhoz, hanem az objektumhoz, instancióhoz tartozik
-
-### Példa
+Pomocou `self` môžeme pristupovať k vlastnostiam a funkciám konkrétneho objektu:
+- `VypisZnacku` funguje len na objekte `test`, to sa nazýva **funkcia objektu** alebo funkcia priradená k objektu
+- `test.Vypis()` nebude fungovať, pretože objekt `test` nemá funkciu `Vypis()` (chýba `self`)
+- `Auto.Vypis()` funguje, a je to **funkcia triedy**, alebo v iných programovacích jazykoch je to považované za **statickú** funkciu
+- `Auto.VypisZnacku()` nebude fungovať, pretože to nie je funkcia triedy, ale funkcia inštancie, objektu
+### Príklad
 ```py
-class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
+class Osoba:
+  def __init__(self, meno, vek):
+    self.meno = meno
+    self.vek = vek
 
-p1 = Person("John", 36)
+o1 = Osoba("Janko", 36)
 
-print(p1)
-print(p1.name)
-print(p1.age)
+print(o1)
+print(o1.meno)
+print(o1.vek)
 ```
-Kimeneten valami hasonlót láthattok:
+Výstup by mal byť podobný:
 ```
-<__main__.Person object at 0x00000185EC9D75D0>
-John
+<__main__.Osoba object at 0x00000185EC9D75D0>
+Janko
 36
 ```
-## A `__str__()` függvény
-Ennek a függvénynek a segítségével tudjuk módosítani, hogyan nézzen ki az osztályunk, ha a `str`vé alakítjuk
+## Funkcia `__str__()`
+Pomocou tejto funkcie môžeme ovplyvniť, ako bude naša trieda vyzerať, keď ju premeníme na `str`
 ```py
-class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
+class Osoba:
+  def __init__(self, meno, vek):
+    self.meno = meno
+    self.vek = vek
 
   def __str__(self):
-    return f"{self.name}({self.age})"
+    return f"{self.meno}({self.vek})"
 
-p1 = Person("John", 36)
+o1 = Osoba("Janko", 36)
 
-print(p1, type(p1))
-# esetleg
-personString = str(p1)
-print(personString, type(personString))
+print(o1, type(o1))
+# prípadne
+osobaString = str(o1)
+print(osobaString, type(osobaString))
 ```
 
 ## `dict` vs `class`
 ```py
-class Person:
-	def __init__(self, name, age):
-		self.Name, self.Age = name, age
+class Osoba:
+	def __init__(self, meno, vek):
+		self.Meno, self.Vek = meno, vek
     
 	def __str__(self) -> str:
-		return f"{self.Name}({self.Age})"
+		return f"{self.Meno}({self.Vek})"
 
-personDictionary = {"name":"John", "Age": 16}
-person = Person("John", 17)
+osobaSlovnik = {"meno":"Janko", "Vek": 16}
+osoba = Osoba("Janko", 17)
 
-print(personDictionary, type(personDictionary))
-print(person, type(person))
+print(osobaSlovnik, type(osobaSlovnik))
+print(osoba, type(osoba))
 
-# az egyes tulajdonsagok kiirasa:
-print("personDictionary['Age']", personDictionary["Age"])
-print('person.Age', person.Age)
+# vypísanie individuálnych vlastností:
+print("osobaSlovnik['Vek']", osobaSlovnik["Vek"])
+print('osoba.Vek', osoba.Vek)
 
-# az egyes tulajdonsagok megvaltoztatasa
-personDictionary["Age"] = 98
-person.Age = 10
+# zmena individuálnych vlastností
+osobaSlovnik["Vek"] = 98
+osoba.Vek = 10
 
-print("personDictionary['Age']", personDictionary["Age"])
-print('person.Age', person.Age)
+print("osobaSlovnik['Vek']", osobaSlovnik["Vek"])
+print('osoba.Vek', osoba.Vek)
 ```
-A szótár kulcsai lehetnek az osztály/objektum tulajdonságai, előbbinél vigyáznunk kell, hogy **mindig** helyesen adjuk meg a kulcsot, osztálynál a Python fordító maga kínálja fel a tulajdonság nevét (VS Codeban a szótárnál is). Az osztály kiegészíthető különböző függvényekkel.
+Kľúče slovníka môžeme považovať vlastnosťami triedy, pri slovníku musíme dávať pozor, aby sme **vždy** správne zadali kľúč, pri triede nám Python editor sám ponúkne názov vlastnosti Trieda môže byť rozšírená o rôzne funkcie.
 
-# Kérdések
-1. Készítsetek egy `Kutya` osztályt, amelyiknek van neve és színe. Ezeket az értékeket a példányosítás során az `__init__` függvény segítségével adjátok meg. Hozzatok létre 2 példányt:
-   1. neve legyen Blöki, szinét rátok bízom
-   1. nevét rátok bízom, színe legyen fehér
-   - Írjátok ki a képernyőre a tulajdonságaikat
-1. Készítsetek egy `Auto` osztályt a következő tulajdonságokkal: szín, márka, model, gyártási év. Használhatjátok az `__init__` függvényt, de nem muszáj. Definiáljátok a következő 2 függvényt:
-   1. Inditas- írja ki a képernyőre: "A [szin] szinu [gyartasi ev]es/os [márka] [model] elindult"
-   2. Leállás- írja ki a képernyőre: "Az autó leállt"
-	- készítsetek 3 példányt
-	- tegyétek őket listába 
-	- és hívjátok meg rajtuk a két függvényt
-1. Készítsetek egy `Munkas` osztályt a következő tulajdonságokkal: id, fizetés, nem, életkor. A `__str__` függvényt módosítsátok úgy, hogy a következő stringet adja vissza: "A [id] számú [nem] alkalmazott [fizetés] eurót keres, és [életkor] éves." A `random` könyvtár segítségével: 
-   - generáljatok ki véletlen számú alkalmazottat a <75;120> tartományból
-     - `id` a <10000;100000> tartományból legyen
-     - `fizetés` a <1000;5000> tartományból legyen
-     - `nem`: férfi vagy nő
-     - `életkor` a <20;99> tartományból legyen
-   - a kigenerált `Munkás` példányokat tegyétek listába, és írassátok ki az értéküket a képernyőre
-1. 
+# Otázky
+1. Vytvorte triedu `Pes`, ktorá bude mať meno a farbu. Tieto hodnoty zadajte počas inicializácie pomocou funkcie `__init__`. Vytvorte 2 príklady:
+   1. meno nech je Cezar, farbu si zvoľte sami
+   1. farba nech je biela, meno si zvoľte sami
+   - Vypíšte ich vlastnosti na obrazovku
+1. Vytvorte triedu `Auto` s nasledujúcimi vlastnosťami: farba, značka, model, rok výroby. Môžete použiť funkciu `__init__`, ale nie je to nevyhnutné. Definujte nasledujúce 2 funkcie:
+   1. `Start` - vypíše na obrazovku: "Auto farby [farba] z roku [rok výroby] značky [značka] [model] sa rozbehlo"
+   1. `Stop` - vypíše na obrazovku: "Auto sa zastavilo"
+	- vytvorte 3 inštancie áut
+	- vložte ich do zoznamu 
+	- a zavolajte obe ich funkcie
+1. Vytvorte triedu `Pracovnik` s nasledujúcimi vlastnosťami: id, plat, pohlavie, vek. Funkciu `__str__` upravte tak, aby vrátila nasledujúci reťazec: "Zamestnanec s id [id] je [pohlavie], zarába [plat] eurá a má [vek] rokov." Pomocou knižnice `random`:
+   - vygenerujte náhodný počet zamestnancov v rozmedzí <75;120>
+      - `id` nech je z rozsahu <10000;100000>
+      - `plat` nech je z rozsahu <1000;5000>
+      - `pohlavie`: muž alebo žena
+      - `vek` nech je z rozsahu <20;99>
+	- vygenerované inštancie Pracovnik vložte do zoznamu a vypíšte ich hodnoty na obrazovku
 

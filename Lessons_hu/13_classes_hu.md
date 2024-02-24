@@ -1,6 +1,6 @@
 # Osztályok, saját/összetett adattípusok `class`
 
-Eddig olyan adattípusokkal találkoztunk, és dolgoztunk, mint `int`, `float`, `str`, `Random`, `list`, `dict`, most viszont szintet lépve képesek leszünk definiálni, létrehozni saját _adattípust_. 
+Eddig olyan adattípusokkal találkoztunk, és dolgoztunk, mint `int`, `float`, `str`, `random`, `list`, `dict`, most viszont szintet lépve képesek leszünk definiálni, létrehozni saját _adattípust_. 
 
 `class` paranccsal definiáljuk, elmondjuk a Pythonnak, hogyan szernénk, hogy a saját addattípusunk kinézzen:
 - milyen tulajdonságokkal (attributes, property) rendelkezzen -> mije **van**
@@ -12,7 +12,7 @@ A `class` amolyan **tervrajz**, hogyan szeretnénk, ha belőle elkészített **p
 
 A Python egy objektum orientált programozási nyelv, ahol (szinte) minden adattípus objektum, tulajdonságaival (attributes, property) és függvényeivel (functions) együtt. Az osztály olyan, mint egy "tervrajz" az **objektumok**, **instanciók** létrehozásához.
 
-> **objektum** vagy akár példány, a memóriában konkrét helyen tárolt adatok halmaza. A változó erre a konkrét címre "mutat", és úgy határozza meg, vagy éppen változtatja meg az értékét.
+> **objektum** vagy **példány**, a memóriában konkrét helyen tárolt adatok halmaza. A változó erre a konkrét címre "mutat", és úgy határozza meg, vagy éppen változtatja meg az értékét.
 
 Egy osztály definiálásához a `class` parancsot használjuk. A következő példában egy olyan osztály tervrajzát készítjük el, amelyiknek a neve `MyClass` és egy tulajdonsága van az `x`:
 ```py
