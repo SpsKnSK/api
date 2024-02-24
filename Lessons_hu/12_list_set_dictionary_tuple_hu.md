@@ -1,4 +1,4 @@
-# Listák, halmazok, szótárok, tuplek
+# Listák, halmazok, szótárok, tuplek- kollekció
 
 ## Lista `list`
 ### Tulajdonságok
@@ -26,12 +26,14 @@
 
 
 ## Halmaz `set`
-A Python a `set` adattípust is alaptípusként definiálja. a `set`: elemek rendezetlen halmaza, amelyben minden elem csak egyszer fordulhat elő.
+A Python a `set` adattípust is alaptípusként definiálja. a `set`: elemek rendezetlen halmaza, amelyben minden elem **csak egyszer** fordulhat elő.
 
-Alapvető használata: megadott elem meglétének ellenőrzése, elemek kettőzésének kiszűrése. 
+Alapvető használata: 
+- megadott elem meglétének ellenőrzése
+- elemek kettőzésének kiszűrése. 
 
 ### Tulajdonságok
-- `{}` kapcsos zárójeleket használjuk, vagy a listából, stringből a `set()` paranccsal csinálunk halmazt
+- `{}` kapcsos zárójeleket használjuk, vagy a listából, stringből a `set()` paranccsal csinálunk halmazt `halmaz = set([1,1,1,2,3,5,4,4,4,8])`
 - bármilyen adattípust tartalmazhat, akár keverve is
 - minden eleme egyedi, csak egyszer fordul elő
 ### Példa

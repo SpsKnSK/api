@@ -1,4 +1,4 @@
-# Zoznam, množiny, slovníky, n-tice
+# Zoznam, množiny, slovníky, n-tice- kolekcie
 ## Zoznam `list`
 ### Vlastnosti
 - Používame hranaté zátvorky `[]`
@@ -24,21 +24,23 @@
 - `.index(hodnota)` - vráti **pozíciu** `hodnoty`, ak ju nenájde, vráti `-1`
 
 ## Množina `set`
-Python definuje dátový typ `set` ako základný typ. Množina je neusporiadaná kolekcia, kde každý prvok môže byť prítomný iba raz.
+Python definuje dátový typ množina, `set` ako základný typ. Množina je neusporiadaná kolekcia, kde každý prvok môže byť prítomný **iba raz**.
 
-Základné použitie: kontrola prítomnosti daného prvku, filtrovanie duplicitných prvkov.
+Základné použitie: 
+- kontrola prítomnosti daného prvku
+- filtrovanie duplicitných prvkov.
 
 ### Vlastnosti
-- Používame zložené zátvorky `{}`, alebo zo zoznamu, reťazca použijeme príkaz `set()` na vytvorenie množiny
+- Používame zložené zátvorky `{}`, alebo zo zoznamu, reťazca použijeme príkaz `set()` na vytvorenie množiny `mnozina = set([1,1,1,2,3,5,4,4,4,8])`
 - Môže obsahovať ľubovoľný dátový typ, aj zmiešane
 - Každý prvok je jedinečný, vyskytuje sa len raz
 ### Príklad
-Koľko čísel som trafil v lotérii:
+Koľko čísel som uhádol v lotérii:
 ```py
 vyherneCisla = {1, 2, 3, 4, 5, 6}
 mojeCisla = {1, 2, 7, 8, 9, 0}
 
-print("Tieto som trafal: ", vyherneCisla & mojeCisla)
+print("Tieto som uhádol: ", vyherneCisla & mojeCisla)
 ```
 
 ### Zo zoznamu do množiny
