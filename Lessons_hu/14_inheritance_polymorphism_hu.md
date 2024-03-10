@@ -29,6 +29,28 @@ flowchart
     Child2 --> Parent
     Child3 --> Parent
 ```
+## Állat, kutya, macska
+[Class diagramok, vagy UML diagramok](https://mermaid.js.org/syntax/classDiagram.html)
+```mermaid
+---
+title: Állat, kutya, macska
+---
+classDiagram
+    Állat <|-- Kutya
+    Állat <|-- Macska
+   
+    class Állat{
+        +string Név
+    }
+
+    class Kutya{
+        +Ugat()
+    }
+    class Macska{
+        +Nyávog()
+    }
+```
+[e01_animal.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/e01_animal.py)
 ## Ember, diák, tanár, igazgató
 [Class diagramok, vagy UML diagramok](https://mermaid.js.org/syntax/classDiagram.html)
 ```mermaid
@@ -53,14 +75,17 @@ classDiagram
         +Felel()
     }
     class Tanár{
-        -int HetiÓrákSzáma
-        -Feleltet()
-        -DolgozatotJavít()
+        +str Szakirány
+        +int HetiÓrákSzáma
+        +Feleltet()
+        +DolgozatotJavít()
     }
     class Igazgató{
         +Igazgat()
     }
 ```
+
+[e02_man.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/e02_man.py)  
 
 # Polimorifmus
 
