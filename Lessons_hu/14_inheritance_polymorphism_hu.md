@@ -87,43 +87,74 @@ classDiagram
 
 [e02_man.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/e02_man.py)  
 
-# Polimorifmus
+# Polimorfizmus
+Angol szóból ered, aminek a jelentése "many forms", sok forma. Programozásban azt jelenti, hogy ugyanazon nevű függvény/metódus/operáció több fajta objektumon, osztályon is elvégezhető. 
 
-The word "polymorphism" means "many forms", and in programming it refers to methods/functions/operators with the same name that can be executed on many objects or classes.
-
-For strings len() returns the number of characters:
-Példa:
+## `len()`
+Ha a len parancsot **karakterláncon**, `str` használjuk, visszaadja a karakterek számát.
+### Példa:
 ```py
 x = "Hello World!"
-
 print(len(x))
 ```
 
-Tuple
-For tuples len() returns the number of items in the tuple:
-Példa:
+Ha a len parancsot **listán**, `list` használjuk, visszaadja a listában levő elemek számát.
+### Példa:
 ```py
-mytuple = ("apple", "banana", "cherry")
-
-print(len(mytuple))
+myList = ["apple", "banana", "cherry"]
+print(len(myList))
 ```
 
-Dictionary
-For dictionaries len() returns the number of key/value pairs in the dictionary:
-Példa:
+Ha a len parancsot **szótáron**, `dict` használjuk, visszaadja a szótárban levő kulcs-értékpárok számát.
+### Példa:
 ```py
-thisdict = {
+myDictionary = {
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
 }
 
-print(len(thisdict))
+print(len(myDictionary))
 ```
-Class Polymorphism
-Polymorphism is often used in Class methods, where we can have multiple classes with the same method name.
+## Függvények polimorfizmusa
+A fenti példában azt vesszük észre, hogy egy adott függvény hasonló bemenő paraméterekkel (karakterlánc, lista, szótár, mindegyiket lehet `for` ciklusban használni) a hosszukat adja meg. 
+## Osztályok polimorfizmusa
+A polimorfizmus általában osztályokban találhatóis often used in Class methods, where we can have multiple classes with the same method name.
 
 For example, say we have three classes: Car, Boat, and Plane, and they all have a method called move():
+
+```mermaid
+---
+title: Ember, diák, tanár, igazgató
+---
+classDiagram
+    Ember <|-- Diák
+    Ember <|-- Tanár
+    Ember <|-- Igazgató
+   
+    note for Ember "Általálnos, és az összes többi\nosztályra jellemző tulajdonságok,\nműveletek"
+    class Ember{
+        +string Név
+        +string Vezetéknév
+        +int Kor
+    }
+
+    class Diák{
+        +list[int] Jegyek
+        +Tanul()
+        +Felel()
+    }
+    class Tanár{
+        +str Szakirány
+        +int HetiÓrákSzáma
+        +Feleltet()
+        +DolgozatotJavít()
+    }
+    class Igazgató{
+        +Igazgat()
+    }
+```
+
 
 ```py
 class Car:
