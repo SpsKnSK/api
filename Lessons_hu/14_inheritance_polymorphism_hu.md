@@ -121,38 +121,6 @@ class Student(Man):
         self.Notes = []
 ```
 [e02_man.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/e02_man.py)  
-
-# Polimorfizmus
-Angol szóból ered, aminek a jelentése "many forms", sok forma. Programozásban azt jelenti, hogy ugyanazon nevű függvény/metódus/operáció több fajta objektumon, osztályon is elvégezhető. 
-
-## `len()`
-Ha a len parancsot **karakterláncon**, `str` használjuk, visszaadja a karakterek számát.
-### Példa:
-```py
-x = "Hello World!"
-print(len(x))
-```
-
-Ha a len parancsot **listán**, `list` használjuk, visszaadja a listában levő elemek számát.
-### Példa:
-```py
-myList = ["apple", "banana", "cherry"]
-print(len(myList))
-```
-
-Ha a len parancsot **szótáron**, `dict` használjuk, visszaadja a szótárban levő kulcs-értékpárok számát.
-### Példa:
-```py
-myDictionary = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-
-print(len(myDictionary))
-```
->A fenti példában azt vesszük észre, hogy egy adott függvény hasonló bemenő paraméterekkel (karakterlánc, lista, szótár, mindegyiket lehet `for` ciklusban használni) a hosszukat adja meg. 
-
 ## Többszörös öröklés
 Pythonban lehetséges, hogy egy osztály több osztálytól is örököljön, gyakorlatban nehéz elképzelni, hogy egy adott dolog egyszerre két különböző szülővel rendelkezzen (például a repülő örököljön a járműtől és az állattól egyaránt). (*Megjegyzés: így oldották meg az interface-ek lehetőségét*)
 ```mermaid
@@ -193,6 +161,36 @@ class C(A, B):
 c = C(10, 11)
 print(c)
 ```
+# Polimorfizmus
+Angol szóból ered, aminek a jelentése "many forms", sok forma. Programozásban azt jelenti, hogy ugyanazon nevű függvény/metódus/operáció több fajta objektumon, osztályon is elvégezhető. 
+
+## `len()`
+Ha a len parancsot **karakterláncon**, `str` használjuk, visszaadja a karakterek számát.
+### Példa:
+```py
+x = "Hello World!"
+print(len(x))
+```
+
+Ha a len parancsot **listán**, `list` használjuk, visszaadja a listában levő elemek számát.
+### Példa:
+```py
+myList = ["apple", "banana", "cherry"]
+print(len(myList))
+```
+
+Ha a len parancsot **szótáron**, `dict` használjuk, visszaadja a szótárban levő kulcs-értékpárok számát.
+### Példa:
+```py
+myDictionary = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+print(len(myDictionary))
+```
+>A fenti példában azt vesszük észre, hogy egy adott függvény hasonló bemenő paraméterekkel (karakterlánc, lista, szótár, mindegyiket lehet `for` ciklusban használni) a hosszukat adja meg. 
 
 ## Osztályok polimorfizmusa
 A polimorfizmus általában osztályokban található, amikoris több osztályban ugyanaz a függvény található. Például van 3 osztályunk: `Autó`, `Hajó`, `Repülő`, és mnindegyik képes `mozdulni()`. Mind a három ugyanazokkal a tulajdonságokkal és függvényekkel rendelkezik
