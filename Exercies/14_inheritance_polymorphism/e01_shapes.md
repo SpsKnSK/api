@@ -24,10 +24,14 @@ class Circle:
 class Rectangle:
     pass
     
-def Main()->None:
-    c = Circle(10)
-    r = Rectangle(10,20)
-    shapes : list[Shape] = [c, r]    
+def GetRandomLength() -> int:
+    from random import randint
+    return randint(10, 30)
+
+def Main() -> None:
+    c = Circle(GetRandomLength())
+    r = Rectangle(GetRandomLength(), GetRandomLength())
+    shapes: list[Shape] = [c, r]
     for s in shapes:
         print(f"The perimeter of {s.GetName()} is {s.CalulatePerimeter()} cm")
         print(f"The area of {s.GetName()} is {s.CalculateArea()} cm^2")
