@@ -3,7 +3,7 @@
   - `Kör`, inicializálásnál állítsátok be a sugarat
   - `Téglalap`, inicializálásnál állítsátok be a két oldal hosszúságát
 
-A következő kódot egészítsétek ki, a `Main` függvényt ne változtassátok
+A következő kódot egészítsétek ki, a `Main` függvényt és a `Shape` osztályt ne változtassátok!
 # Fill
 
 ```py
@@ -18,10 +18,10 @@ class Shape:
         return self.__class__.__name__
 
 
-class Circle(Shape):
+class Circle:
     pass
 
-class Rectangle(Shape):
+class Rectangle:
     pass
     
 def Main()->None:
