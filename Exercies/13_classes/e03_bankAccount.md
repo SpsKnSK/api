@@ -33,8 +33,7 @@ class BankAccount:
   Balance: float
   AccountNumber: id
   AccountHolder: str
-	pass
-
+	
 def Main():
   bankAccount = BankAccount("John Doe", 1000)
 

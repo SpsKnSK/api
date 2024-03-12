@@ -37,3 +37,10 @@ def Main() -> None:
 Main()
 
 ```
+# Output
+```
+The perimeter of Circle is 157.00 cm
+The area of Circle is 1962.50 cm^2
+The perimeter of Rectangle is 102.00 cm
+The area of Rectangle is 644.00 cm^2
+```
