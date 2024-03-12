@@ -14,6 +14,14 @@ finally:
     print("Finally branch will be always executed")
 ```
 
+## Saját hiba generálása `Exception` segítségeével
+```py
+try:
+    raise Exception("Ez egy saját hiba")
+except Exception as e:
+    print(f"Hiba tortent: {e}")
+```
+
 # format
 [Itt találtok hozzá több leírást](https://www.w3schools.com/python/python_string_formatting.asp)
 ## format parancs
