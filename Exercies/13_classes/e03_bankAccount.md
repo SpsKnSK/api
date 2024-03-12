@@ -24,25 +24,30 @@ Készítsetek egy `Bankszámla` osztályt a következő attribútumokkal:
 - `Befizet`, bemenő paramétere letétbe helyezeni kívánt pénzösszeg.
   >Minden befizetésnél írja ki: "(Tulajdonos neve) deposited (penzosszeg) Eur to his account"
 - `__str__()` legyen: "(Tulajdonos neve)'s bank account with Id (Számla id) has balance of {Egyenleg} Eur"
-- használjátok a kódot lejebb
+- Helyettesítsetek be a 
 # Fill
 
 ```py
 from random import randint
 class BankAccount:
+  Balance: float
+  AccountNumber: id
+  AccountHolder: str
 	pass
 
-bankAccount = BankAccount("John Doe", 1000)
+def Main():
+  bankAccount = BankAccount("John Doe", 1000)
 
-for _ in range(randint(5, 15)):
-    try:
-        if randint(0, 100) % 2 == 1:
-            bankAccount.Deposit(randint(100, 1000))
-        else:
-            bankAccount.Widthdraw(randint(100, 1000))
-        print(bankAccount)
-    except Exception as ex:
-        print(ex)
+  for _ in range(15):
+      try:
+          if randint(0, 100) % 2 == 1:
+              bankAccount.Deposit(randint(100, 1000))
+          else:
+              bankAccount.Widthdraw(randint(100, 1000))
+          print(bankAccount)
+      except Exception as ex:
+          print(ex)
+Main()
 
 ```
 
