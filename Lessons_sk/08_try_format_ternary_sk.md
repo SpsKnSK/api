@@ -13,6 +13,13 @@ except Exception as e:
 finally:
     print("Vždy sa vykoná vetva finally")
 ```
+## Generovanie vlastnej chyby pomocou `Exception` 
+```py
+try:
+    raise Exception("Toto je vlastna chyba")
+except Exception as e:
+    print(f"Nastala chyba: {e}")
+```
 
 # Format
 [Tu nájdete viac informácií](https://www.w3schools.com/python/python_string_formatting.asp)
