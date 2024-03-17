@@ -47,6 +47,7 @@ print(l)
 ```py
 from random import randint
 from faker import Faker  # from command line run `pip install faker`
+# https://faker.readthedocs.io/en/master/providers/faker.providers.person.html
 
 
 class Person:

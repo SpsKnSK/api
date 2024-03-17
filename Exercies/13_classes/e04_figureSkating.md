@@ -13,4 +13,14 @@ Feladatok:
 ```py
 from random import randint
 from faker import Faker  # from command line run `pip install faker`
+# https://faker.readthedocs.io/en/master/providers/faker.providers.person.html
+
+def Main() -> None:
+    faker = Faker()
+    skaters = [faker.name() for _ in range(20)]
+    for s in skaters:
+        print(s)
+
+Main()
+
 ```
