@@ -1,3 +1,4 @@
+# main class, that has the common properties and functions 
 class Man:
     Name:str
     Surname:str
@@ -6,10 +7,12 @@ class Man:
     def __init__(self, name:str, surname:str, age:int) -> None:
         self.Name, self.Surname, self.Age = name, surname, age
 
+# student inherits from Man class properties (Name, Surname and Age)
 class Student(Man):
     Notes:list[int]
 
     def __init__(self, name: str, surname: str, age: int) -> None:
+        # this method points to Man.__init__() as it is already done there
         super().__init__(name, surname, age)
         self.Notes = []
 
@@ -19,11 +22,13 @@ class Student(Man):
     def Answers(self)->None:
         print(f"{self.Name} {self.Surname} at age {self.Age} answers")
 
+# teacher inherits from Man class properties (Name, Surname and Age)
 class Teacher(Man):
     NumberOfLessonsPerWeek:int
     FieldOfStudy:str
 
     def __init__(self, name:str, surname:str, age:int, numberOfLessonsPerWeek:int, fieldOfStudy:str) -> None:
+        # this method points to Man.__init__() as it is already done there
         super().__init__(name,surname, age)
         self.NumberOfLessonsPerWeek, self.FieldOfStudy = numberOfLessonsPerWeek, fieldOfStudy
 
