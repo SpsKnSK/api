@@ -11,7 +11,7 @@ class Shape:
     def CalculateArea(self) -> float:
         raise("Implement in child class")
 
-    def CalulatePerimeter(self) -> float:
+    def CalculatePerimeter(self) -> float:
         raise("Implement in child class")
 
     def GetName(self) -> str:
@@ -32,7 +32,7 @@ def Main() -> None:
     r = Rectangle(GetRandomLength(), GetRandomLength())
     shapes: list[Shape] = [c, r]
     for s in shapes:
-        print(f"The perimeter of {s.GetName()} is {s.CalulatePerimeter():0.2f} cm")
+        print(f"The perimeter of {s.GetName()} is {s.CalculatePerimeter():0.2f} cm")
         print(f"The area of {s.GetName()} is {s.CalculateArea():0.2f} cm^2")
 Main()
 
