@@ -50,7 +50,7 @@ flowchart TB
 A legnagyobb szám kiválasztása
 > `:=` legyen egyenlő
 ```mermaid
-flowchart LR
+flowchart TB
 	Kezdet([Kezdet])
     Bemenet[Bemenet: A, B, C]
     If1{A>B}
