@@ -146,4 +146,5 @@ with open(full_path, "r") as f:
       print(sor)
 ```
 # Feladatok
-[Véletlen számok beírása]()
+[Véletlen számok beírása](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e01_saveRandomNumbers.md)
+[Véletlen számok sorbarendezése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e02_sortRandomNumbers.md)
