@@ -13,7 +13,7 @@ def CalculateAverage(l: list[int]) -> float:
     pass
 
 
-def PrintListsAverage(l: list) -> float:
+def PrintListsAverage(l: list) -> None:
     pass
 
 
