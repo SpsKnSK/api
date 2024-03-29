@@ -1,3 +1,10 @@
+# SK
+Podľa pravidiel dedenia a polymorfizmu dopíšte, doplňte nasledujúce dve triedy tak, aby kód fungoval a vypočítal správnu hodnotu obvodu a obsahu:
+  - `Kružnica`, pri inicializácií nastavte **polomer**
+  - `Obdĺžnik`, pri inicializácií nastavte **obe stray**
+
+Zmeňte len **Circle** a **Rectangle**, `Main`,  `GetRandomLength` a `Shape` nechajte tak, ako sú
+
 # HU
 Az öröklés és polimorfizmus alapján bővítsétek ki a két osztályt úgy, hogy működjön a kód, és helyes értékeket adjon vissza a terület és kerület számításánál:
   - `Kör`, inicializálásnál állítsátok be a sugarat
