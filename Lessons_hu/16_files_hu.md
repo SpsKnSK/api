@@ -38,7 +38,9 @@ további lehetőségek
 módosító| tulajdonság
 -|-
 `t`|a fájlt szövegként nyissa meg, alapméretezett
-`x`|a fájlt binárisan nyissa meg
+`b`|a fájlt binárisan nyissa meg
+
+> Ha egy fáljt binárisan akarunk megnyitni: `f = open('munkafajl.txt', 'rb')` akkor **read binary** módosítót használunk
 
 ## Fájl olvasása
 - `f.read(size)`
@@ -64,8 +66,7 @@ módosító| tulajdonság
 `f.write("szoveg")` a zárójelbe írt szöveg kerül bele a fájlba.
 
 ## Fájl bezárása
-`f.close()` 
-
+`f.close()` A
 ## Példa
 
 - Hozzunk létre egy `munkafajl.txt` állományt.
@@ -110,3 +111,23 @@ f.close()
 print(szoveg)
 ```
 Ezzel a függvénnyel a `*.py` fájlunk mellett keresi, hozza létre a fájlokat, nem a megnyitott munkalapon (workspace)
+
+### Feladat
+Változtassátok meg a programot úgy, hogy a felhasználó írhasson be a fájldbbtetszőleges szöveget!
+
+## Fájl olvasása soronként
+
+```py
+from os import path
+
+fileName = "munkafajl.txt"
+print(__file__)
+full_path = f"{path.dirname(__file__)}\\{fileName}"
+
+fajl = open(full_path,"r")
+for sor in fajl.readlines():
+   print(sor)
+fajl.close()
+```
+
+# Feladatok
