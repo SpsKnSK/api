@@ -64,9 +64,10 @@ módosító| tulajdonság
 
 ## Írás a fájlba
 `f.write("szoveg")` a zárójelbe írt szöveg kerül bele a fájlba.
+> A fájlba csak `str` adattípust tudunk írni, ha nás típusú értékünk van, akkor azt `string`-gé kell alakítani `str(1)`
 
 ## Fájl bezárása
-`f.close()` A
+`f.close()` A fájlokat minden használat után be kell zárni (maradjunk annyiban, hogy **kell**)
 ## Példa
 
 - Hozzunk létre egy `munkafajl.txt` állományt.
@@ -74,11 +75,11 @@ módosító| tulajdonság
 - Majd olvassuk ki az állományba írt szöveget.
 
 ```py
-f = open('munkafajl.txt', 'w')
+f = open("munkafajl.txt", "w")
 f.write("Ez egy tesztsor 12345")
 f.close()
-f = open('munkafajl.txt', 'r')
-a=f.read()
+f = open("munkafajl.txt", "r")
+a = f.read()
 f.close()
 print(a)
 ```
@@ -130,4 +131,19 @@ for sor in fajl.readlines():
 fajl.close()
 ```
 
+## `with` parancs
+A `with` parancs arra szolgál, hogy egyes bezárható objektumokat a blokk elhagyása után automatikusan bezár: 
+
+```py
+from os import path
+
+fileName = "munkafajl.txt"
+print(__file__)
+full_path = f"{path.dirname(__file__)}\\{fileName}"
+
+with open(full_path, "r") as f:
+   for sor in f.readlines():
+      print(sor)
+```
 # Feladatok
+[Véletlen számok beírása]()
