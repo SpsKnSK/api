@@ -4,10 +4,22 @@ Eddig olyan adattípusokkal találkoztunk, és dolgoztunk, mint `int`, `float`, 
 
 `class` paranccsal definiáljuk, elmondjuk a Pythonnak, hogyan szernénk, hogy a saját addattípusunk kinézzen:
 - milyen tulajdonságokkal (attributes, property) rendelkezzen -> mije **van**
-- milyen függvényeket tartalmazzon -> mit tud **csinálni**
+- milyen viselkedése legyen, függvényeket tartalmazzon -> mit tud **csinálni**
 
 A `class` amolyan **tervrajz**, hogyan szeretnénk, ha belőle elkészített **példány** kinézne.
 
+## Tulajdonság (protpery), viselkedés (behaviour)
+Egy kutya:
+- rendelkezik: lábakkal, szőrrel, névvel, stb, ezek a kutya **tulajdonságai** 
+- tud: futni, harapni, ugatni, stb, ezek a kutya **viselkedései**
+- 
+Egy kutya:
+- rendelkezik: lábakkal, szőrrel, névvel, stb, ezek a kutya **tulajdonságai** 
+- tud: futni, harapni, ugatni, stb, ezek a kutya **viselkedései**
+
+Egy számítógép:
+- rendelkezik: processzorral, alaplappal, tápegységgel, stb, ezek a számítógép **tulajdonságai** 
+- tud: bekapcsolni, kikapcsolni, zúgni, stb, ezek a számítógép **viselkedései**
 ## Objektum orientáltság
 
 A Python egy objektum orientált programozási nyelv, ahol (szinte) minden adattípus objektum, tulajdonságaival (attributes, property) és függvényeivel (functions) együtt. Az osztály olyan, mint egy "tervrajz" az **objektumok**, **instanciók** létrehozásához.
