@@ -2,23 +2,23 @@
 
 Eddig olyan adattípusokkal találkoztunk, és dolgoztunk, mint `int`, `float`, `str`, `random`, `list`, `dict`, most viszont szintet lépve képesek leszünk definiálni, létrehozni saját _adattípust_. 
 
-`class` paranccsal definiáljuk, elmondjuk a Pythonnak, hogyan szernénk, hogy a saját addattípusunk kinézzen:
-- milyen tulajdonságokkal (attributes, property) rendelkezzen -> mije **van**
+Néha szükségünk van saját magunk által elkészített adattípusra, erre használjuk a `class` parancsot. Elmondjuk a Pythonnak, hogyan szernénk, hogy a saját addattípusunk kinézzen:
+- milyen tulajdonságokkal, állapotokkal (attributes, property, state) rendelkezzen -> mije **van**
 - milyen viselkedése legyen, függvényeket tartalmazzon -> mit tud **csinálni**
 
-A `class` amolyan **tervrajz**, hogyan szeretnénk, ha belőle elkészített **példány** kinézne.
+A `class` **tervrajz**, hogyan szeretnénk, ha belőle elkészített **példány** kinézne.
 
 ## Tulajdonság (protpery), viselkedés (behaviour)
+Egy karakterlánc, `str`:
+- nem rendelkezik tulajdonságokkal
+- tud: upper, lower, count, stb, ezek a karakterlánc, `str` **viselkedései**
+
 Egy kutya:
-- rendelkezik: lábakkal, szőrrel, névvel, stb, ezek a kutya **tulajdonságai** 
-- tud: futni, harapni, ugatni, stb, ezek a kutya **viselkedései**
-- 
-Egy kutya:
-- rendelkezik: lábakkal, szőrrel, névvel, stb, ezek a kutya **tulajdonságai** 
+- rendelkezik: lábakkal, szőrrel, névvel, stb, ezek a kutya **tulajdonságai**, éhes, szomjas, fáradt ezek lehetnek a kutya **állapotai**
 - tud: futni, harapni, ugatni, stb, ezek a kutya **viselkedései**
 
 Egy számítógép:
-- rendelkezik: processzorral, alaplappal, tápegységgel, stb, ezek a számítógép **tulajdonságai** 
+- rendelkezik: processzorral, alaplappal, tápegységgel, stb, ezek a számítógép **tulajdonságai**, kikapcsolt, bekapcsolt **állapotban**
 - tud: bekapcsolni, kikapcsolni, zúgni, stb, ezek a számítógép **viselkedései**
 ## Objektum orientáltság
 
