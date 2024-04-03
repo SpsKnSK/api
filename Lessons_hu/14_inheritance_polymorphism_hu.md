@@ -22,7 +22,7 @@ class A:
 class B(A):
     pass
 ```
-> `pass` parancs olyan parancs, ami nem csinál semmit, mivel a python nyelvnek kell legalább egy parancs a bekezdésben (ebben az esetben a `class A`)
+> `pass` parancs olyan parancs, ami nem csinál semmit, mivel a python nyelvnek kell legalább egy parancs egy blokkban (ebben az esetben a `class A`), ezt használjuk "töltésnek"
 ## Szemléltető
 
 ```mermaid
