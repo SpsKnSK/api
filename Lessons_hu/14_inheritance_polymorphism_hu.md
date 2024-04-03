@@ -60,7 +60,7 @@ classDiagram
         +Nyávog()
     }
 ```
-[e01_animal.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/e01_animal.py)
+[01_animal.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/01_animal.py)
 ## Ember, diák, tanár, igazgató
 [Class diagramok, vagy UML diagramok](https://mermaid.js.org/syntax/classDiagram.html)
 ```mermaid
