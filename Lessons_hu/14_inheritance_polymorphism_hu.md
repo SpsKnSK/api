@@ -120,7 +120,8 @@ class Student(Man):
         super().__init__(name, surname, age)
         self.Notes = []
 ```
-[e02_man.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/e02_man.py)  
+ - [01_animal2_super.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/01_animal2_super.py) 
+ - [02_man_super.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/02_man_super.py)  
 ## Többszörös öröklés
 Pythonban lehetséges, hogy egy osztály több osztálytól is örököljön, gyakorlatban nehéz elképzelni, hogy egy adott dolog egyszerre két különböző szülővel rendelkezzen (például a repülő örököljön a járműtől és az állattól egyaránt). (*Megjegyzés: így oldották meg az interface-ek lehetőségét*)
 ```mermaid
