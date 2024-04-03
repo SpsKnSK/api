@@ -7,6 +7,9 @@ full_path = f"{path.dirname(__file__)}\\{fileName}"
 
 with open(full_path, "w") as f:
     for _ in range(10):
-        f.write(f"{randint(10, 20)}\n")
+        i = randint(10, 20)
+        f.write(str(i))
+        # or
+        # f.write(f"{randint(10, 20)}\n")
         # or
         # f.write(f"{randint(10, 20)}, ")

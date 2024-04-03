@@ -67,7 +67,7 @@ módosító| tulajdonság
 > A fájlba csak `str` adattípust tudunk írni, ha nás típusú értékünk van, akkor azt `string`-gé kell alakítani `str(1)`
 
 ## Fájl bezárása
-`f.close()` A fájlokat minden használat után be kell zárni (maradjunk annyiban, hogy **kell**)
+`f.close()` A fájlokat minden használat után be **kell** zárni
 ## Példa
 
 - Hozzunk létre egy `munkafajl.txt` állományt.
@@ -83,6 +83,9 @@ a = f.read()
 f.close()
 print(a)
 ```
+
+## A `.write()` függvény **csak** `str`-t fogad el bemenő paraméterként
+Ha számot, vagy egyéb más adattípust akarunk a fájlba írni, akkor azt előbb át kell alakítani `str`-gé: például: `str(10)`
 
 ## `os.path` függvény használata
 > Ügyelni kell arra, hogy jó könyvtárba helyezze a fájlt, ajánlom használni az `os.path` osztályt, ezzel meg lehet határozni a könyvtár nevét a fájl nevéből
@@ -114,7 +117,7 @@ print(szoveg)
 Ezzel a függvénnyel a `*.py` fájlunk mellett keresi, hozza létre a fájlokat, nem a megnyitott munkalapon (workspace)
 
 ### Feladat
-Változtassátok meg a programot úgy, hogy a felhasználó írhasson be a fájldbbtetszőleges szöveget!
+Változtassátok meg a programot úgy, hogy a felhasználó írhasson be a fájlba tetszőleges szöveget! (Akár egyszeri beírás, akár addig, míg egy bizonyos karaktert nem üt be)
 
 ## Fájl olvasása soronként
 
@@ -132,7 +135,7 @@ fajl.close()
 ```
 
 ## `with` parancs
-A `with` parancs arra szolgál, hogy egyes bezárható objektumokat a blokk elhagyása után automatikusan bezár: 
+A `with` parancs arra szolgál, hogy egyes bezárható objektumokat (mint a fájl is) a blokk elhagyása után automatikusan bezár, és nem kell meghívni a `.close()` függvényt.
 
 ```py
 from os import path
@@ -145,6 +148,9 @@ with open(full_path, "r") as f:
    for sor in f.readlines():
       print(sor)
 ```
+# Szemlétetők
+1. [Egész számok mentése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/01_saveNumbers.py)
+1. [Saját adattípus mentése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/01_saveClass.py)
 # Feladatok
-[Véletlen számok beírása](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e01_saveRandomNumbers.md)
-[Véletlen számok sorbarendezése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e02_sortRandomNumbers.md)
+1. [Véletlen számok beírása](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e01_saveRandomNumbers.md)
+1. [Véletlen számok sorbarendezése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e02_sortRandomNumbers.md)
