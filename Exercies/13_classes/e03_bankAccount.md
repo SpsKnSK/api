@@ -9,7 +9,7 @@ a nasledujúcimi funkciami:
   > Pri každom výbere peňazí vypíšte: "(MenoVlastnika) vybral (penaznaSuma) Eur zo svojho účtu"
 - `Vklad`, so vstupným parameterom sumy peniaze.
   > Pri každom vklade vypíšte: "(MenoVlastnika) vložil (penaznaSuma) Eur na svoj účet"
-- `__str__()` nech vráti `str`: "Bankový účet (MenoVlastnika) s ID (IdUctu) má zostatok {Zostatok} Eur"
+- `__str__()` nech vráti `str`: "Bankový účet (MenoVlastnika) s ID (IdUctu) má zostatok (Zostatok) Eur"
 - Použite kód nižšie na beh programu
 
 # HU
@@ -20,11 +20,11 @@ Készítsetek egy `Bankszámla` osztályt a következő attribútumokkal:
 
 és a követketkező függvényekkel:
 - `Kivétel`, bemenő paramétere kivenni szánt pénzösszeg, visszaadó értéke nincs. Ha nincs elegendő pénz a számlán, írja ki, hogy ez a művelet nem végrehajtható, mert nincs elegendő pénz a számlán, vagy [akár dobjatok egy saját hibát `raise`](https://github.com/SpsKnSK/api/blob/main/Lessons_hu/08_try_format_ternary_hu.md#try-except-finally)
-  > Minden kivételnél írja ki: "(Tulajdonos neve) withdrew (penzosszeg) Eur to his account"
-- `Befizet`, bemenő paramétere letétbe helyezeni kívánt pénzösszeg.
-  >Minden befizetésnél írja ki: "(Tulajdonos neve) deposited (penzosszeg) Eur to his account"
-- `__str__()` legyen: "(Tulajdonos neve)'s bank account with Id (Számla id) has balance of {Egyenleg} Eur"
-- Helyettesítsetek be a 
+  > Minden kivételnél írja ki: "(Tulajdonos neve) kivett (penzosszeg) Eurot"
+- `Befizet`, bemenő paramétere a letétbe helyezeni kívánt pénzösszeg.
+  >Minden befizetésnél írja ki: "(Tulajdonos neve) (penzosszeg) Eurot tett letetbe a szamlajara"
+- `__str__()` legyen: "(Tulajdonos neve) bankszamlajan (Számla id) az egyenleg (Egyenleg) Eur"
+- Helyettesítsetek be a kódot, hogy működjön
 # Fill
 
 ```py
