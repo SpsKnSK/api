@@ -35,7 +35,7 @@ class BankAccount:
   AccountHolder: str
 	
 def Main():
-  bankAccount = BankAccount("John Doe", 1000)
+  bankAccount = BankAccount("John Doe", 1000) # AccountHolder, starting balance
 
   for _ in range(15):
       try:
