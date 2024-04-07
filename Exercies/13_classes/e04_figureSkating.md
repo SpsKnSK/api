@@ -8,8 +8,7 @@ Feladatok:
 5. Az első 3 helyezett nevét, és elért pontszámát írjátok ki
 6. Az utolsó 3 helyezett nevét, és elért pontszámát írjátok ki
 
-- Használhatjátok a `faker` könyvtárat nevek generálásához
-- Vagy ki is találhattok neveket
+> Használhatjátok a `faker` könyvtárat a nevek generálásához, vagy ki is találhattok neveket
   
 # Code
 
