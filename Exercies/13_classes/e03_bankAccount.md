@@ -4,6 +4,8 @@ Vytvorte triedu `BankovyUcet` s nasledujúcimi atribútmi:
 - `IdUctu`: int
 - `Zostatok`: float
 
+Meno vlastníka a zostatok na účte sú vstupné parametre `__init__` funkcie, id účtu vygenerujte náhodne pri inicializácií. 
+
 a nasledujúcimi funkciami:
 - `Vyber`, so vstupným parameterom peniaze, bez návratovej hodnoty. Ak nie je dostatok peňazí na účte, vypíšte, že táto operácia nie je možná, pretože nie je dostatok peňazí na účte, alebo [zavolajte vlastnú výnimku pomocou `raise`](https://github.com/SpsKnSK/api/blob/main/Lessons_sk/08_try_format_ternary_sk.md#try-except-finally)
   > Pri každom výbere peňazí vypíšte: "(MenoVlastnika) vybral (penaznaSuma) Eur zo svojho účtu"
@@ -17,6 +19,8 @@ Készítsetek egy `Bankszámla` osztályt a következő attribútumokkal:
 - `Tulajdonos neve`:str
 - `Számla id`: int
 - `Egyenleg`: float
+
+A tulajdonos nevét és a számlaegyenleget az `__init__` függvény bemenő paraméterei, a számla id-t generáljátok ki véletlenszerűen.
 
 és a követketkező függvényekkel:
 - `Kivétel`, bemenő paramétere kivenni szánt pénzösszeg, visszaadó értéke nincs. Ha nincs elegendő pénz a számlán, írja ki, hogy ez a művelet nem végrehajtható, mert nincs elegendő pénz a számlán, vagy [akár dobjatok egy saját hibát `raise`](https://github.com/SpsKnSK/api/blob/main/Lessons_hu/08_try_format_ternary_hu.md#try-except-finally)
