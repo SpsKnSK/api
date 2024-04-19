@@ -1,6 +1,6 @@
 # HU
 - Készítsetek egy diák osztályt név, vezetéknév, születési év attribútumokkal, amelyeket inicializáció során adtok be
-- Olvassátok be a `students.txt` fájlt, amelyiknek minden egyes sora egy diákot takar, az attribútumok vesszővel vannak elválasztva
+- Olvassátok be a [`f04_students.txt`](https://github.com/SpsKnSK/api/blob/main/Exercies/16_files/f04_students.txt) fájlt, amelyiknek minden egyes sora egy diákot takar, az attribútumok vesszővel vannak elválasztva
 - Írjátok ki a legfiatalabb és legidősebb diák nevét és vezetéknevét
 - :dizzy: Minden évhez írjátok ki:
   - Hány diák született abban az évben
