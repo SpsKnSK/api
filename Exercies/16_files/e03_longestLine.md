@@ -1,5 +1,5 @@
 # HU
-- Olvassátok be a `loremIpsum.txt` fájlt
+- Olvassátok be a [`f03_loremIpsum.txt`](https://github.com/SpsKnSK/api/blob/main/Exercies/16_files/f03_loremIpsum.txt) fájlt
 - Keressétek meg, és írassátok ki a leghosszabb sorát
 - Keressétek meg a legrövidebb sorát, és írjátok ki a leghosszabb szavát
 
