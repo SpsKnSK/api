@@ -3,8 +3,7 @@ Az eddigi programjaink csak nagyon kevés adatot kezeltek, kétféleképpen vitt
 - billentyűzetről az `input` függvény segétségével
 - véletlenszerűen generáltuk őket a `random` osztállyal
 
-Amikor nagymennyiségű adatot akarunk kezelni, akkor jönnek kapóra a fájlok
-Ez az eljaras azonban alkalmatlan nagy mennyisegű adat kezelésére.
+Amikor nagymennyiségű adatot akarunk kezelni, akkor jönnek kapóra a fájlok (adatbázisok).
 
 ## Fájlkezelés
 ```mermaid
@@ -45,13 +44,13 @@ módosító| tulajdonság
 ## Fájl olvasása
 - `f.read(size)`
   - `size` hosszúságú karakterlánccal tér vissza
-  - a `size` elhagyása, vagy negatív értéke esetén a teljes tartalmat visszaadja
+  - a `size` elhagyása, vagy negatív értéke esetén a **teljes** tartalmat visszaadja
 - `f.readline()`
   - egy sort olvas ki a fájlból.
   - a sor végét az újsor karakter `\n` jelenti. 
   - itt is megadhatjuk, mennyi karaktert akarunk kiolvasni a sorból.
 - `f.readlines()`
-  - egy listával tér vissza, amely a fájl minden sorát tartalmazza
+  - egy listával tér vissza, amely a fájl **minden** sorát tartalmazza
   
 ### Kurzor mozgatás
 `f.seek(léptetés, innen_kezdve)`
@@ -71,7 +70,7 @@ módosító| tulajdonság
 ## Példa
 
 - Hozzunk létre egy `munkafajl.txt` állományt.
-- Nyissuk meg Python programmal, majd írjuk bele a következő szöveget: `"Ez egy tesztsor 12345"`
+- Nyissuk meg, majd írjuk bele a következő szöveget: `"Ez egy tesztsor 12345"`
 - Majd olvassuk ki az állományba írt szöveget.
 
 ```py
