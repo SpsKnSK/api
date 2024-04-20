@@ -1,8 +1,16 @@
+# SK
+1. Vygenerujte 100 náhodných čísel.
+2. Uložte ich do súboru.
+3. Načítajte ich zo súboru.
+4. Vypíšte ich priemer na obrazovku.
+
+> Jednotlivé čísla oddelte od seba ľubovolľným znakom. Pamätáte si funkciu `.split()`?
+
 # HU
-1. generáljatok ki 100 véletlen számot
-2. mentsétek el őket egy fájlba
-3. olvassátok be őket a fájlból
-4. írjátok ki a képernyőre az átlagukat
+1. Generáljatok ki 100 véletlen számot
+2. Mentsétek el őket egy fájlba
+3. Olvassátok be őket a fájlból
+4. Írjátok ki a képernyőre az **átlagukat**
 
 > Az egyes számokat válasszátok el egy tetszőleges karakterrel egymástól. Rémlik a `.split()` függvény?
 

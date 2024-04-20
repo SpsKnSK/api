@@ -1,10 +1,13 @@
 # SK
-V nasledujúcom kóde zmente `CalculateAverage` tak, aby vám vrátil priemer, v iných prípadoch vnechvráti `0`. Funkciu `Main` nemente!
+V nasledujúcom kóde zmente 
+- `CalculateAverage` tak, aby vám vrátil priemer, v iných prípadoch nech vráti `0`. 
+- `PrintListsAverage`, tak, aby vám vypísal `"The average of the following list: (l) is (average)"`. 
+Funkciu `Main` nemente!
 
 # HU
 A következő kódban változtassátok meg
 - a `CalculateAverage`-t, hogy helyes átlagot számoljon, bármi egyéb lehetőségnél `0`-t adjon vissza
-- `PrintListsAverage`, hogy kiirja "The average of the following list: (l) is (average)". 
+- `PrintListsAverage`, hogy kiirja `"The average of the following list: (l) is (average)"`. 
 
 A `Main` függvényt ne változtassátok!
 

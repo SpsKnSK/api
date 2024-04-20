@@ -1,3 +1,11 @@
+# SK
+- Vytvorte triedu `Student` s atribútmi meno, priezvisko a rok narodenia, ktoré sa poskytnú počas inicializácie.
+- Načítajte súbor [`f04_students.txt`](https://github.com/SpsKnSK/api/blob/main/Exercies/16_files/f04_students.txt), kde každý riadok predstavuje študenta s atribútmi oddelenými čiarkami.
+- Vypíšte meno a priezvisko najmladšieho a najstaršieho študenta.
+- :dizzy: Pre každý rok vypíšte:
+  - Koľko študentov sa narodilo v tomto roku.
+  - Prvého študenta podľa priezviska.
+
 # HU
 - Készítsetek egy diák osztályt név, vezetéknév, születési év attribútumokkal, amelyeket inicializáció során adtok be
 - Olvassátok be a [`f04_students.txt`](https://github.com/SpsKnSK/api/blob/main/Exercies/16_files/f04_students.txt) fájlt, amelyiknek minden egyes sora egy diákot takar, az attribútumok vesszővel vannak elválasztva

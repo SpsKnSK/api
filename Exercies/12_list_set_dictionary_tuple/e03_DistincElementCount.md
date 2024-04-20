@@ -1,3 +1,6 @@
+# SK
+Zmeňte nasledujúci kód tak, aby funkcia `CountDistinctElements` namiesto `pass` vrátila slovník, kde kľúčom je **číslo**, a hodnotou je **počet výskytov v zozname**.
+
 # HU
 A következő kódot változtassátok meg úgy, hogy a `pass` helyett egy olyan szótárat adjon vissza a `CountDistinctElements` függvény, amelyik kulcsa a **szám**, értéke pedig a listában az **előbukkanása**.
 > _The pass statement: How to Do Nothing in Python_
