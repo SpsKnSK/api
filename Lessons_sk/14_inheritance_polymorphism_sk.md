@@ -2,19 +2,19 @@
 ## Úvod
 **Dedenie** je najčastejšie používaný jazykový mechanizmus v objektovo orientovanom programovaní. Dedenie umožňuje definovať nové triedy ako modifikované verzie existujúcich tried, čo nám umožňuje písať menej kódu.
 ## Základné pojmy
-Proces sa nazýva dedikácia, pretože nová trieda "dedí" všetky metódy a atribúty existujúcej triedy, môže ich používať. Metafora sa rozširuje tak, že existujúcu triedu často označujeme ako **rodičovskú**, a novú triedu ako **potomka** alebo **podtriedu**.
-- **dedikácia** (inheritance) _je mechanizmus, ktorý umožňuje definovať triedu ako modifikovanú verziu predtým definovanej triedy._
+Proces sa nazýva dedenie, pretože nová trieda "dedí" všetky metódy a atribúty existujúcej triedy, môže ich používať. Metafora sa rozširujeme tak, že existujúcu triedu často označujeme ako **rodičovskú**, a novú, dedenú triedu ako **potomok** alebo **podtriedu**.
+- **dedenie** (inheritance) _je mechanizmus, ktorý umožňuje definovať triedu ako modifikovanú verziu predtým definovanej triedy._
 - **rodičovská trieda** (parent class) _je trieda, z ktorej dedíme potomka._
 - **potomok, podtrieda** (child class) _je nová trieda, ktorá je odvodená z existujúcej triedy. Často sa označuje ako podtrieda._
 
 ## Teória
 
-Dedikácia je efektívny jazykový nástroj, ktorý tiež podporuje opätovné použitie kódu, pretože môžeme upraviť správanie rodičovskej triedy v potomkovi bez modifikácie samotnej triedy. V niektorých prípadoch hierarchia dedikácie odráža prirodzenú štruktúru problému, čo zjednodušuje pochopenie programu.
+Dedenie je efektívny jazykový nástroj, ktorý tiež podporuje opätovné použitie kódu, pretože môžeme upraviť správanie rodičovskej triedy v potomkovi bez modifikácie rodičovskej triedy. V niektorých prípadoch hierarchia dedenia odráža prirodzenú štruktúru problému, čo zjednodušuje pochopenie programu.
 
-Na druhej strane môže použitie dedikácie komplikovať čitateľnosť kódu. Pri volaní metód nie je vždy jasné, **kde** hľadať definíciu volanej metódy, hlavná časť kódu môže byť rozptýlená do viacerých modulov. Existuje mnoho problémov, ktoré možno riešiť dedikáciou, ale ktoré by boli rovnako elegantne (alebo ešte elegantnejšie) riešiteľné bez nej. Ak povaha problému nezodpovedá dedikácii, tento programovací štýl môže spôsobiť viac škody ako úžitku.
+Na druhej strane môže použitie dedenia komplikovať čitateľnosť kódu. Pri volaní metód nie je vždy jasné, **kde** hľadať definíciu volanej metódy, hlavná časť kódu môže byť rozptýlená do viacerých modulov. Existuje mnoho problémov, ktoré možno riešiť dedením, ale ktoré by boli rovnako elegantne (alebo ešte elegantnejšie) riešiteľné bez nej. Ak povaha problému nezodpovedá dedenia, tento programovací štýl môže spôsobiť viac škody ako úžitku.
 
 ## Syntax
-Keď chceme, aby trieda `B` dedila od triedy `A`, za názov triedy `B` dáme v zátvorkách názov triedy, od ktorej dedíme:
+Keď chceme, aby trieda `B` dedila od triedy `A`, za názov triedy `B` dáme v zátvorkách názov triedy `A`, od ktorej dedíme:
 ```py
 class A:
     pass
@@ -27,13 +27,13 @@ class B(A):
 
 ```mermaid
 ---
-title: Vzťah rodič-potomok
+title: Vzťah rodič-dieťa
 ---
 flowchart 
 	Parent[Rodičovia]
-    Child1[Potomok 1]
-    Child2[Potomok 2]
-    Child3[Potomok 3]
+    Child1[Dieťa 1]
+    Child2[Dieťa 2]
+    Child3[Dieťa 3]
 
     Child1 --> Parent
     Child2 --> Parent
@@ -56,6 +56,10 @@ classDiagram
     class Pes{
         +Haf()
     }
+
+    class Mačka{
+        +Mňavká()
+    }
 ```
 [01_animal.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/01_animal.py)
 
@@ -71,7 +75,7 @@ classDiagram
     Človek <|-- Učiteľ
     Človek <|-- Riaditeľ
    
-    note for Človek "Všeobecné vlastnosti a operácie\naplikovateľné na všetky triedy"
+    note for Človek "Všeobecné vlastnosti a funkcie\naplikovateľné na všetky triedy"
     class Človek{
         +string Meno
         +string Priezvisko
@@ -80,20 +84,20 @@ classDiagram
 
     class Študent{
         +list[int] Známky
-        +UčiťSa()
-        +Odpovedať()
+        +UčSa()
+        +Odpovedaj()
     }
     class Učiteľ{
         +str Odbor
         +int PočetHodínTýždenne
-        +Skúšať()
-        +KorigovaťTesty()
+        +Skúšaj()
+        +OpravujPisomky()
     }
     class Riaditeľ{
-        +Riaditeľovať()
+        +Riaď()
     }
 ```
-> Keďže `Študent`, `Učiteľ` a `Riaditeľ` dedia od `Človek`, obsahujú atribúty triedy `Človek`.
+> Keďže `Študent`, `Učiteľ` a `Riaditeľ` dedia od triedy `Človek`, obsahujú všetky atribúty triedy `Človek`.
 
 > `Študent` rozširuje triedu `Človek` o jeden atribút a dve metódy.
 
@@ -121,8 +125,8 @@ class Student(Man):
 ```
  - [01_animal2_super.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/01_animal2_super.py) 
  - [02_man_super.py](https://github.com/SpsKnSK/api/blob/main/Exercies/14_inheritance_polymorphism/02_man_super.py)  
-## Viacnásobné dedičstvo
-V Pythone je možné, aby trieda dedila od viacerých tried. V praxi je ťažké si predstaviť, že by niečo malo naraz dvoch rôznych rodičov (napríklad lietadlo by dedilo od vozidla aj od zvieraťa). (*Poznámka: Týmto spôsobom sa rieši možnosť použitia rozhraní*)
+## Viacnásobné dedenie
+V Pythone je možné, aby trieda dedila od viacerých tried. V praxi je ťažké si predstaviť, že by niečo malo naraz dvoch rôznych rodičov (napríklad lietadlo by dedilo od vozidla aj od zvieraťa). (*Poznámka: Týmto spôsobom sa rieši možnosť použitia rozhraní, interface-ov*)
 ```mermaid
 ---
 title: Viacnásobné dedičstvo
@@ -193,7 +197,7 @@ print(len(myDictionary))
 >V uvedených príkladoch si všimneme, že rovnaká funkcia s podobnými vstupnými parametrami (reťazec, zoznam, slovník) vracia ich dĺžku.
 
 ## Polymorfizmus tried
-Polymorfizmus sa často vyskytuje v triedach, keď viacero tried má rovnakú funkciu. Napríklad máme 3 triedy: `Auto`, `Loď` a `Lietadlo`, a všetky majú schopnosť `pohybovať sa()`. Všetky tri triedy majú rovnaké atribúty a metódy.
+Polymorfizmus sa často vyskytuje v triedach, keď viacero tried má rovnakú funkciu. Napríklad máme 3 triedy: `Auto`, `Loď` a `Lietadlo`, a všetky majú schopnosť `PohybujSa()`. Všetky tri triedy majú rovnaké atribúty a metódy.
 
 ```mermaid
 ---
@@ -267,11 +271,46 @@ classDiagram
     class Vozidlo{
         +string Značka
         +string Model
+        +PohniSa()
+    }
 ```
+### Príklad:
+```py
+class Vehicle:
+  def __init__(self, brand, model):
+    self.Brand = brand
+    self.Model = model
+
+  def Move(self):
+    print("Move!")
+
+class Car(Vehicle):
+  pass
+
+class Boat(Vehicle):
+  def Move(self):
+    print("Sail!")
+
+class Plane(Vehicle):
+  def Move(self):
+    print("Fly!")
+
+car1 = Car("Ford", "Mustang")       #Nová inštancia
+boat1 = Boat("Ibiza", "Touring 20") #Nová inštancia
+plane1 = Plane("Boeing", "747")     #Nová inštancia
+
+for v in (car1, boat1, plane1):
+  print(v.Brand)
+  print(v.Model)
+  v.Move()
+```
+> Treda `Auto` nerozširuje rodičovskú triedu, ani hodnotu nemeni, trieda je dobrá tak, ako je. 
+
+> Triedy `Loď` a `Lietadlo` prepisujú funkciu `PohybSa` 
 # Otázky
-1. Ako označiť večnosť v pythone, uveďte príklad.
-2. Na čo je polymorfizmus dobrý?
+1. Ako značíme dedičnosť v pythone, uveďte príklad.
+2. Na čo je dobrý polymorfizmus?
 3. Z koľkých tried môže odvodená trieda zdediť?
 4. Napíšte príklad nasledujúceho: 
    1. Vytvorte atribúty triedy `Policajt` (`Meno`:`str`, `PočetPokút`: `int`) a funkciu `Pokutuj`, ktorá zobrazuje jeho meno a počet pokút
-   2. Odvodiť triedu `PolicajnýPrezident` od triedy `Policajt`, ktorý bude mať atribút navyše (`PočetPolicajtov`:`int`) a prepísať funkciu `Pokutuj`, ktorá bude zobrazovať to isté ako pre triedu `Policajt`, plus to, že je prezidentom a koľko policajtov je mu podriadených
+   2. Odvodte triedu `PolicajnýPrezident` od triedy `Policajt`, ktorý bude mať atribút navyše (`PočetPolicajtov`:`int`) a prepíšte funkciu `Pokutuj`, ktorá bude zobrazovať to isté ako pre triedu `Policajt`, plus to, že je prezidentom a koľko policajtov je mu podriadených

@@ -9,12 +9,12 @@ A folyamatot azért nevezik öröklődésnek, mert az új osztály a létező os
 
 ## Elmélet
 
-Az öröklődés hatékony nyelvi eszköz, amely a kód újrahasznosítást is elősegíti, hiszen átszabhatjuk a szülő osztály viselkedését az osztály módosítása nélkül a származtatott osztályban. Bizonyos esetekben az öröklődési hierarchia a probléma természetes szerkezetét is tükrözi, ami egyszerűbbé teszi a program megértését.
+Az öröklődés hatékony nyelvi eszköz, amely a kód újrahasznosítást is elősegíti, hiszen átszabhatjuk a szülő osztály viselkedését annak módosítása nélkül a származtatott osztályban. Bizonyos esetekben az öröklődési hierarchia a probléma természetes szerkezetét is tükrözi, ami egyszerűbbé teszi a program megértését.
 
 Másrészről az öröklődés használata megnehezítheti a kód olvasását. A metódus hívásoknál nem mindig egyértelmű, hogy **hol** kell keresni a hívott metódus definícióját, a kód lényegi része több modulba lehet szétszórva. Számos olyan öröklődéssel megoldható probléma van, amely öröklődés használta nélkül is éppen olyan elegánsan (vagy még elegánsabban) megoldható. Ha a probléma természete nem illeszkedik az öröklődéshez, akkor ez a programozási stílus több kárt okozhat, mint hasznot.
 
 ## Szintaxis
-Amikor azt szeretnénk, hogy `B` osztály örököljön az `A` osztálytól, a `B` osztály után zárójelbe tesszük annak az osztálynak a nevét, amelyiktől származtatjuk:
+Amikor azt szeretnénk, hogy `B` osztály örököljön az `A` osztálytól, a `B` osztály után zárójelbe tesszük annak az osztálynak a nevét, `A`, amelyiktől származtatjuk:
 ```py
 class A:
     pass
@@ -94,7 +94,7 @@ classDiagram
         +Igazgat()
     }
 ```
-> Mivel a `Diák`, a `Tanár` és az `Igazgató` örökölnek az `Ember`től, ezért tartalmazzák az `Ember` osztály 3 attribútumját
+> Mivel a `Diák`, a `Tanár` és az `Igazgató` örökölnek az `Ember`től, ezért tartalmazzák az `Ember` osztály midnegyik attribútumját
 
 > A `Diák` kibővíti az `Ember` osztályt egy attribútummal és két függvénnyel
 
