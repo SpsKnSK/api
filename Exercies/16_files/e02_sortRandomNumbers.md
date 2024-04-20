@@ -1,8 +1,14 @@
+# SK
+1. Vygenerujte 50 náhodných čísel.
+2. Uložte ich do súboru.
+3. Načítajte ich zo súboru.
+4. Vypíšte na obrazovku 10 najväčších čísel.
+> Jednotlivé čísla oddelte od seba ľubovolľným znakom. Pamätáte si funkciu `.split()`?
 # HU
-1. generáljatok ki 50 véletlen számot
-2. mentsétek el őket egy fájlba
-3. olvassátok be őket a fájlból
-4. írjátok ki a képernyőre a 10 legnagyobbat
+1. Generáljatok ki 50 véletlen számot
+2. Mentsétek el őket egy fájlba
+3. Olvassátok be őket a fájlból
+4. Írjátok ki a képernyőre a 10 legnagyobbat
 
 > Az egyes számokat válasszátok el egy tetszőleges karakterrel egymástól. Rémlik a `.split()` függvény?
 
