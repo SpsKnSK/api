@@ -1,12 +1,14 @@
 # SK
 - Načítajte súbor [`f03_loremIpsum.txt`](https://github.com/SpsKnSK/api/blob/main/Exercies/16_files/f03_loremIpsum.txt).
-- Nájdite najdlhšiu vetu a vypíšte ju.
-- Nájdite najkratšiu vetu a vypíšte ju, následne vyhľadajte v nej najdlhšie slovo a vypíšte ho na obrazovku.
+- Nájdite **najdlhšiu** vetu, vypíšte, koľko má znakov a potom vetu.
+- Nájdite **najkratšiu** vetu, vypíšte, koľko má znakov a potom vetu.
+- V najkratšej vete nájdite **najdlhšie** slovo a vypíšte ho na obrazovku.
 
 # HU
 - Olvassátok be a [`f03_loremIpsum.txt`](https://github.com/SpsKnSK/api/blob/main/Exercies/16_files/f03_loremIpsum.txt) fájlt
-- Keressétek meg, és írassátok ki a leghosszabb sorát
-- Keressétek meg a legrövidebb sorát, és a legrövidebb sorból írjátok ki a leghosszabb szót
+- Keressétek meg a **leghosszabb** sorát, és írassátok ki, mennyi karakterből áll, majd magát a sort is
+- Keressétek meg a **legrövidebb** sorát, és írassátok ki, mennyi karakterből áll, majd magát a sort is
+- A legrövidebb sorban keressétek meg a **leghosszab** szót, és írjátok ki a képernyőre.
 
 > `allLinesSortedByLength = sorted(f.readlines(),key=len, reverse=True)`
 
