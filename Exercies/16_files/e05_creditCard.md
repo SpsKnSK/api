@@ -9,8 +9,7 @@ V tejto úlohe budete kontrolovať kreditné karty. V súbore [`f05_creditCard.c
 
 
 # HU
-Ebben a feladatban hitelkártyákat fogtok ellenőrizni. A következő fájlban
-[`f05_creditCard.csv`](https://github.com/SpsKnSK/api/blob/main/Exercies/16_files/f05_creditCard.csv) találjátok a hitelkártyákat (kiadó, kártyaszám, érvényesség, cvv). A feladatotok a következő:
+Ebben a feladatban hitelkártyákat fogtok ellenőrizni. A következő fájlban [`f05_creditCard.csv`](https://github.com/SpsKnSK/api/blob/main/Exercies/16_files/f05_creditCard.csv) találjátok a hitelkártyákat (kiadó, kártyaszám, érvényesség, cvv). A feladatotok a következő:
 1. Olvassátok be a fájlt
 2. Készítsetek egy függvényt a hitelkártya számsorának hitelesítésére, amelynek bemenő paramétere a hitelkártya száma, kimenő értéke `True` (érvényes kártya) vagy `False` (nem érvényes kártya). A kártya számsorának ellenőrzéséhez szükséges lépéseket megtaláljátok [itt](https://dnschecker.org/credit-card-validator.php)
 3. Amint megvagytok az ellenőrzéssel, összegezzétek, és írjátok ki kártyakiadó-társaság szerint:
