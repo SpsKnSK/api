@@ -99,4 +99,4 @@ kisebb `<`|kisebb vagy egyenlő `<=` |nagyobb `>`| nagyobb vagy egyenlő `>=`
 1. Írjatok 2 példát a megengedett változónevekre.
 1. Írjatok 2 példát a **nem** megengedett váltóznevekre.
 1. Hogyan ellenőrizhetjük, hogy `a` szám `b` szám osztója? Melyik műveletet használjátok?
-1. Mi a különbség a `\` és `\\` között?
+1. Mi a különbség a `/` és `//` között?

@@ -99,4 +99,4 @@ priradenie `=`|
 3. Uveďte 2 príklady povolených názvov premenných.
 4. Uveďte 2 príklady **nepovolených** názvov premenných.
 5. Ako môžeme overiť, či je číslo `a` deliteľné číslom `b`? Ktorú operáciu použijete?
-6. Aký je rozdiel medzi `\` a `\\`?
+6. Aký je rozdiel medzi `/` a `//`?
