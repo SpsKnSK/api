@@ -355,6 +355,6 @@ root.mainloop()
 1. **Időjárás alkalmazás**: Hozz létre egy olyan programot, amely lekéri az aktuális időjárási adatokat egy API segítségével, és megjeleníti azokat a felhasználó számára.
 1. **Színválasztó**: Hozz létre egy olyan programot, ahol a felhasználók kiválaszthatnak színeket, és az alkalmazás megjeleníti a kiválasztott színt.
 1. **Számológép**: Hozz létre egy egyszerű számológép programot, ahol a felhasználók összeadhatnak, kivonhatnak, szorozhatnak és oszthatnak számokat.
-1. **Pénzváltó**:  Hozz létre egy egyszerű valutaváltó programot, lekéred az aktuális árfolyamokat a Szlovák nemzeti bank oldaláról `https://nbs.sk/export/sk/exchange-rate/2024-05-02/csv`, ahol a mai napot határozod meg a linkben, és az ott levó valutákból tud majd a felhasználó választani. Működjön eurórol valutára és vissza is. 
+1. **Pénzváltó**:  Hozz létre egy egyszerű valutaváltó programot, lekéred az aktuális árfolyamokat a Szlovák nemzeti bank oldaláról `https://nbs.sk/export/sk/exchange-rate/yyyy-mm-dd/csv`, ahol a mai napot határozod meg a linkben, és az ott levó valutákból tud majd a felhasználó választani. Működjön eurórol valutára és vissza is. 
 1. **Számjegyek összege**: Hozz létre egy olyan programot, ahol a felhasználók beírhatnak egy számot, és az alkalmazás kiszámolja a számjegyek összegét.
 1. **Képnézegető**: Hozz létre egy egyszerű képnézegető programot, ahol a felhasználók kiválaszthatnak egy mappát, és az alkalmazás megjeleníti a mappában található képeket.

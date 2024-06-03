@@ -352,6 +352,6 @@ root.mainloop()
 1. **Počasie**: Vytvorte aplikáciu, ktorá získa aktuálne údaje o počasí pomocou API a zobrazí ich používateľovi.
 1. **Výber farby**: Vytvorte program, kde používatelia môžu vybrať farby a aplikácia ich zobrazí.
 1. **Kalkulačka**: Vytvorte jednoduchú kalkulačku, kde používatelia môžu sčítať, odčítať, násobiť a deliť čísla.
-1. **Menový prevodník**: Vytvorte jednoduchý prevodník mien, ktorý získa aktuálne výmenné kurzy zo stránky Národnej banky Slovenska `https://nbs.sk/export/sk/exchange-rate/2024-05-02/csv`, kde dátum určíte v odkaze, a používatelia budú môcť vybrať meny na konverziu. Program by mal fungovať z eura na inú menu a naopak.
+1. **Menový prevodník**: Vytvorte jednoduchý prevodník mien, ktorý získa aktuálne výmenné kurzy zo stránky Národnej banky Slovenska `https://nbs.sk/export/sk/exchange-rate/yyyy-mm-dd/csv`, kde dátum určíte v odkaze, a používatelia budú môcť vybrať meny na konverziu. Program by mal fungovať z eura na inú menu a naopak.
 1. **Súčet číslic**: Vytvorte program, kde používatelia môžu zadať číslo a aplikácia vypočíta súčet jeho číslic.
 1. **Prehliadač obrázkov**: Vytvorte jednoduchý prehliadač obrázkov, kde používatelia môžu vybrať priečinok a aplikácia zobrazí obrázky v tomto priečinku.
