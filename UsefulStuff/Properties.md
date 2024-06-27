@@ -127,3 +127,32 @@ print(p.Name)
 p.Name = "new name"
 print(p.Name)
 ```
+
+We can have a guarding clausule in the setter method that does not allow empty strings to be set: it raises exception:
+```py
+class Person:
+    def __init__(self, name: str, surname: str, age: int) -> None:
+        self._name, self._surname, self._age = name, surname, age
+
+    @property
+    def Name(self) -> str:
+        return self._name
+
+    @Name.setter
+    def Name(self, name) -> None:
+        if not name:
+            raise Exception("Name cannot be empty")
+        self._name = name
+
+    def __str__(self) -> str:
+        return f"{self._name} {self._surname} is {self._age} years old"
+
+
+p = Person("John", "Doe", 10)
+print(p.Name)
+try:
+    p.Name = ""
+    print(p.Name)
+except Exception as ex:
+    print(ex)
+```
