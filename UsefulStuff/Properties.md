@@ -1,4 +1,7 @@
 # Properties
+
+The idea is to create private members, that should not be changed from outside the class only through methods, that are allowed to manipulate the members (getters/setters). More can be read [here](https://stackoverflow.com/questions/17330160/how-does-the-property-decorator-work-in-python)
+
 Creating properties using `init`
 ```py
 class Person:
@@ -43,7 +46,7 @@ p.ChangeSurname("Smith")
 print(p.Surname)
 ```
 
-## _Single Leading Underscores
+## _Single Leading Underscores -> private members
 
 One underline at the beginning of a method, function, or data member means you shouldn’t access this method because it’s not part of the API. Let’s look at this snippet of code: 
 
@@ -59,7 +62,8 @@ p = Person("John", "Doe", 10)
 print(p)
 ```
 
-Accessing the members should be through *properties*
+## Getters
+Accessing the members should be through *properties*, those are methods that have the name of the member, in this case `def Name(self)->str:`
 ```py
 class Person:
     def __init__(self, name: str, surname: str, age: int) -> None:
@@ -74,6 +78,32 @@ class Person:
 p = Person("John", "Doe", 10)
 print(p.Name())
 ```
+
+When we want to get the value of `_name_` we call the method on the object `print(p.Name())`.
+
+## Properties
+
+If you add a decorator `@property` you can get rid of the parenthesis: `print(p.Name)`. It is a so called *syntactic sugar*, which means, that it is fancier to use.
+
+```py
+class Person:
+    def __init__(self, name: str, surname: str, age: int) -> None:
+        self._name, self._surname, self._age = name, surname, age
+
+    @property
+    def Name(self) -> str:
+        return self._name
+
+    def __str__(self) -> str:
+        return f"{self._name} {self._surname} is {self._age} years old"
+
+
+p = Person("John", "Doe", 10)
+print(p.Name)
+```
+
+## Setters
+Setters are a way to handle value association. Private members of a class should **not** be changed outside of the class, hence it can have some *rules*. These rules can be applied in the getter/setter methods (mostly the other one).
 
 If you want to set the value of the member through a setter method, you should use `NameOfTheProperty.setter`:
 ```py
@@ -91,7 +121,6 @@ class Person:
 
     def __str__(self) -> str:
         return f"{self._name} {self._surname} is {self._age} years old"
-
 
 p = Person("John", "Doe", 10)
 print(p.Name)
