@@ -32,7 +32,7 @@ Ako IDE budeme používať `Visual Studio Code`, kódenie budete mať uľahčen�
 ### Rušenie hodín
 Ak sa niekto rozhodne rušiť hodinu (či už mobilom alebo online hrou), beriem to tak, že sa dobrovoľne prihlásil pre ďalšiu domácu úlohu. Jej kontrola samozrejme zaberá čas od ostatných, čo môže znamenať, že sa na prípadnú písomku budete musieť pripraviť doma.
 
-> Vy rozhodujete, ako sa budete k sebe správať
+> Vy rozhodujete, ako sa budeme k sebe správať
 
 ## Poznámky
 To, čo odznie na hodine, môžete si zapisovat do zošita, do google-drive-u. Prepis hodín bude zdielaný s vami, ale doporučujem si robiť vlastné poznámky. 
