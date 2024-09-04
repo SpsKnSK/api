@@ -131,7 +131,7 @@ Kérjünk be egy számot, majd állapítsuk meg páratlan-e, vagy páros.
     - Oszthaó-e 5-tel.
     - Nagyobb-e 100-nál.
 
-# Logikai kapcsolatok
+# Logikai operátorok, feltételek összekapcsolása
 ## `and` logakai és
 Akkor igaz, ha **minden** feltétel egyszerre teljesül 
 
