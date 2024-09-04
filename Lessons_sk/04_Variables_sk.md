@@ -14,26 +14,26 @@
     - `False` – Nepravda/nedokázané (číselná hodnota je 0)
 # Operácie
 ## Matematické operátory
-- `5 + 3` súčet
-- `5 – 3` rozdiel
-- `5 * 3` súčin
-- `5 / 3` delenie
-- `5 // 3` celočíselné delenie
-- `5 % 3` zvyšok po delení
-- `5 ** 3` umocňovanie
+- `5 + 3 = 8` súčet
+- `5 – 3 = 2` rozdiel
+- `5 * 3 = 15` súčin
+- `5 / 3 = 1.666` delenie
+- `5 // 3 = 1` celočíselné delenie
+- `5 % 3 = 2` zvyšok po delení
+- `5 ** 3 = 125` umocňovanie
 - `sqrt(5)` odmocnina (na to je potrebný matematický modul)
 ## Úloha
 1. Pomocou funkcie `print()` vypíšte na obrazovku výsledky aspoň 5 vyššie uvedených matematických operácií.
 ## Logické operátory
-- rovnosť `==`
-    - napr. X==5 – skontrolujeme, či sa X rovná 5
+možné výstupy logických operátorov: `True`, `False`
+- rovnosť `==`, napr. X==5 – skontrolujeme, či sa X rovná 5
 - menšie `<`
 - menšie alebo rovné `<=`
 - väčšie `>`
 - väčšie alebo rovné `>=`
 - nerovnosť `!=`
-- priradenie `=`
-    - napr. `X=12` – premenná X sa nastaví na hodnotu 12
+
+Priradenie **nie je** logický operátor `=` napr. `X=12` – premenná X sa nastaví na hodnotu 12
 
 # Pravidlá písania programu
 - V Pythone musíme rozlišovať medzi malými a veľkými písmenami,
@@ -79,8 +79,8 @@ MojaPremenna = "Janko"
 
 ### Dátové typy
 
-**Číslo** – `int`|**Desatinné číslo**– `float`|**Komplexné číslo**- `complex`
---|--|--
+**Číslo** – `int`|**Desatinné číslo**– `float`|
+--|--
 **Reťazec**– `str`|**Logická hodnota**– `bool`
 
 ### Operácie: 

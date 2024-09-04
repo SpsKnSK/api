@@ -14,28 +14,28 @@
     - `False` – Hamis/nem igaz (számértéke 0)
 # Műveletek
 ## Matematikai operátorok
-- `5 + 3`összeg
-- `5 – 3` különbség
-- `5 * 3` szorzat
-- `5 / 3` osztás
-- `5 // 3` osztás egész része
-- `5 % 3` osztás maradéka
-- `5 ** 3` hatvány
+- `5 + 3 = 8`összeg
+- `5 – 3 = 2` különbség
+- `5 * 3 = 15` szorzat
+- `5 / 3 = 1.666` osztás
+- `5 // 3 = 1` osztás egész része
+- `5 % 3 = 2` osztás maradéka
+- `5 ** 3 = 125` hatvány
 - `sqrt(5)` négyzetgyökvonás (matematikai modul szükséges hozzá)
 
 ## Feladat
 1. A `print()` függvény segítségével írassátok ki a képernyőre a fenti matematikai műveltek eredményei közül legalább 5-öt
 
 ## Logikai operátorok
-- egyenlőség `==`
-    - Pl. X==5 – megvizsgáljuk `X` egyenlő-e `5`-tel
+A logikai operátorok lehetséges kimenetei:  `True`, `False`
+- egyenlőség `==`, pl. X==5 – megvizsgáljuk `X` egyenlő-e `5`-tel
 - kisebb `<`
 - kisebb vagy egyenlő `<=`
 - nagyobb `>`
 - nagyobb vagy egyenlő `>=`
 - nem egyenlő `!=`
-- értékadás `=`
-    - Pl. `X=12` – az `X` változóba elmentjük a `12`-es értéket
+
+Az értékadás **nem** logikai operátor: `=`, pl. `X=12` – az `X` változóba elmentjük a `12`-es értéket
 
 # Program írásának szabályai
 - Python-ban meg kell különböztetni a nagy és kisbetűt,
@@ -79,8 +79,8 @@ MyVar = "John"
 ## Segítség
 ### Adattípusok
 
-**Szám** – `int`|**Tizedes szám**– `float`|**Komplex szám** - `complex`
---|--|--
+**Szám** – `int`|**Tizedes szám**– `float`
+--|--
 **Karakterlánc** – `str`|**Logikai** – `bool`
 
 ### Műveletek: 
