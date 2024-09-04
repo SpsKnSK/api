@@ -7,7 +7,6 @@
 ## Typy 
 - **Číslo** – `int` – pre ukladanie celých čísel v rozpätí približne -36 000 až 36 000. 10, -9, 0
 - **Desatinné číslo**– `float` – pre ukladanie desatinných čísel 95,78, 3,14, 79,21
-- **Komplexné číslo**– `complex` – pre ukladanie komplexných čísel -9+6j, 1-8j
 - **Reťazec** – `str` – pre ukladanie textu a ľubovoľných významných/ne-významných postupností znakov, môžete použiť jednoduché `''` alebo dvojité `""` úvodzovky
     - napr. `'jablko'`, `'3tlacitko'`, `"hram futbal"` atď.
 - **Logická hodnota** – `bool` - Môže mať dve hodnoty:

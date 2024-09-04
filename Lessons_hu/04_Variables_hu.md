@@ -7,7 +7,6 @@
 ## Típusai 
 - **Szám** – `int` – integer – egész számok tárolására kb. -36.000 és 36.000 közt. 10, -9, 0
 - **Tizedes szám**– `float` – tizedes számok tárolására 95.78, 3.14, 79.21
-- **Komplex szám**– `complex` – komplex számok tárolására -9+6j, 1-8j
 - **Karakterlánc** – `str` – `string` – szöveg és bármilyen értelmes/értelmetlen karaktersorozat tárolására, használhattok `''` vagy `""`
     - pl. `'alma'`, `'3gomb'`, stb.
 - **Logikai** – `bool` - Két értéke lehet:
