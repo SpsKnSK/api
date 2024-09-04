@@ -132,7 +132,7 @@ Zadajte číslo a zistite, či je párne alebo nepárne.
     - Deliteľné 5-timi.
     - Je väčšie ako 100.
 
-# Logické spojenie
+# Logické operátory, spojenie podmienok
 ## `and` logické a
 Je pravdivý, keď **všetky** podmienky sú splnené.
 
