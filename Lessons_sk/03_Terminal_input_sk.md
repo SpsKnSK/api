@@ -64,6 +64,11 @@ Do miesta čísla môže ísť aj premenná!
 1. Napíšte program, ktorý zistí dve čísla od vás, a potom vypíše ich podiel na 3 desatinné miesta.
 Potom vypíšte celočíselný výsledok delenia a zvyšok po delení.
 Dávajte pozor, aby bol program použiteľný aj pre laických používateľov (nech program napíše aj jedno-dva slová, nie len konkrétne výsledky).
+> `/` delenie na desatinné čisla: `18/7=2.571428571428571`
+ 
+> `//` celočíselné delenie: `18//7=2`
+ 
+> `%` zvyšok po delení: `18 % 7=4`
 1. Napíšte program na výpočet obvodu a plochy kruhu.
 Zadané údaje: priemer kruhu, hodnota Pí: `3.14159`.
 Výsledok:
@@ -82,9 +87,10 @@ Výsledok:
     - Cena za kilogram citrónov je 1.2 € 
     - Cena za kilogram pomarančov je 1.5 €
     
-    Napíšte program, ktorý vám povie, koľko peňazí si máte vziať so sebou, ak kúpite 1 kg jabĺk, 1,5 kg citrónov a 2 kg pomarančov.
+    1. Napíšte program, ktorý vám povie, koľko peňazí si máte vziať so sebou, ak kúpite 1 kg jabĺk, 1,5 kg citrónov a 2 kg pomarančov.
     Skúste aj iné hodnoty.
     Napr. kúpite 3 kily každého ovocia, 5 kíl, atď.
+    1. Spýtajte sa používateľa, koľko peňazí má u seba a z toho koľko **celých** kilogramov jabĺk, citrónov alebo pomarančov vie kúpiť.
 ## Otázky
 1. Na čo slúži funkcia `round`, uveďte príklad.
 2. Napíšte kód, ktorý od používateľa získa jeho meno a vek, a potom na obrazovku vypíše, koľko bude mať rokov o 10 rokov. Príklad: `"Ahoj [meno], teraz máš 16 rokov, o 10 rokov budeš mať 26 rokov."`
