@@ -66,6 +66,11 @@ A szám helyére változó is írható!
 1. Írjatok programot, amely bekér két számot, majd kiírja a hányadosukat 3 tizedes helyre.
 Ezután írassátok ki az egész részre való osztás eredményét és a maradékot.
 Ügyeljetek rá, hogy a program laikus felhasználók számára is használható legyen (a program írjon egy-két szót is, ne csak a konkrét eredményeket).
+> `/` tizedes osztás: `18/7=2.571428571428571`
+ 
+> `//` egészszámú osztás: `18//7=2`
+ 
+> `%` osztás utáni maradék: `18 % 7=4`
 1. Írjunk programot a kör kerületének és területének kiszámítására.
 Adatok, amiket megadunk: kör átmérője, Pí értéke: `3.14159`.
 Végeredmény:
@@ -81,12 +86,13 @@ Végeredmény:
     ```
 1. Gyümölcsöt vásárolunk a sarki kisboltban.
     - Az alma kilója 0.65€
-    - A citrom 1.2€ 
-    - A narancs 1.5€
+    - A citrom kilója 1.2€ 
+    - A narancs kilója 1.5€
     
-    Írjatok programot, amely megmondja, mennyi pénzt vigyünk magunkkal, ha 1 kg almát, 1,5 kg citromot és 2 kg narancsot veszünk.
+    1. Írjatok programot, amely megmondja, mennyi pénzt vigyünk magunkkal, ha 1 kg almát, 1,5 kg citromot és 2 kg narancsot veszünk.
     Próbáljunk ki más értékeket is.
     Pl. mindenből 3 kilót, 5 kilót veszünk, stb.
+    1. Kérjétek be a felhasználótól, mennyi pénze van, s abból hány **egész** kiló almát, citromot és narancsot tud venni.
 
 ## Kérdések
 1. Mire szolgál a `round` függvény, írjatok rá példát.
