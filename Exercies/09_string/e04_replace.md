@@ -4,9 +4,9 @@
 1. Vypíšte nový text.
 
 # HU 
-1. A program kérjen be egy hosszú széveget. 
+1. A program kérjen be egy hosszú szöveget. 
 1. A program ezután kérdezze meg, melyik betűt cserélje ki és milyenre.
-1. Írja ki az új széveget.
+1. Írja ki az új szöveget.
 
 # Tools
 - `.replace()`

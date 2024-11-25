@@ -41,17 +41,15 @@ print(f"{slovo} sa nachadza {place} slove '{limonada}'")
 
 ```
 
-## Úloha
-> [01_workWithCharacters.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/01_workWithCharacters.md)
+## Úlohy
+- [Analýza vety](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e01_workWithCharacters.md#sk)
 
-## Úloha
->  [02_ducks.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/02_ducks.md)
+- [Kačky](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e02_ducks.md#sk)
 
-## Úloha
-> [03_workingWithSentence.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/03_workingWithSentence.md)
-## Úloha
-> [04_replace.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/04_replace.md)
-## Úloha
-> [05_printWord.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/05_printWord.md)
-## Úloha
-> [06_assemblyASentence.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/06_assemblyASentence.md)
+- [Analýza vety 2](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e03_workingWithSentence.md#sk)
+
+- [Výmena písmen](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e04_replace.md#sk)
+
+- [Vypísanie slova](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e05_printWord.md#sk)
+
+- [Generovanie vety](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e06_assemblyASentence.md#sk)
