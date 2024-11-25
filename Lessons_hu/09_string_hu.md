@@ -42,14 +42,14 @@ print(f"A{szo} szó {place} a '{limonade}' szót a névsorban")
 ```
 
 ## Feladatok
-- [01_workWithCharacters.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e01_workWithCharacters.md#hu)
+- [Mondatelemzés](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e01_workWithCharacters.md#hu)
 
-- [02_ducks.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e02_ducks.md#hu)
+- [Kacsák](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e02_ducks.md#hu)
 
-- [03_workingWithSentence.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e03_workingWithSentence.md#hu)
+- [Mondatelemzés 2](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e03_workingWithSentence.md#hu)
 
-- [04_replace.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e04_replace.md#hu)
+- [Betűcsere](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e04_replace.md#hu)
 
-- [05_printWord.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e05_printWord.md#hu)
+- [Szókiírás](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e05_printWord.md#hu)
 
-- [06_assemblyASentence.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e06_assemblyASentence.md#hu)
+- [Mondategyesítés](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e06_assemblyASentence.md#hu)
