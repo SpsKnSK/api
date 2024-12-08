@@ -22,7 +22,9 @@ except Exception as e:
 ```
 
 # Format
-[Tu nájdete viac informácií](https://www.w3schools.com/python/python_string_formatting.asp)
+[Tu nájdete viac informácií na github.com/SpsKnSK/api](https://github.com/SpsKnSK/api/tree/main/UsefulStuff/08_format.md)
+
+[Tu nájdete viac informácií na w3schools](https://www.w3schools.com/python/python_string_formatting.asp)
 ## format príkaz
 
 Reťazec vytvoríte takto: `"nejaky text {index_premennej} este nejaky text{index_premennej}"`. Index sa začína od 0, hodnoty zadávame, ako vstupné parametre príkazu `format`.

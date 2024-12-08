@@ -23,7 +23,9 @@ except Exception as e:
 ```
 
 # format
-[Itt találtok hozzá több leírást](https://www.w3schools.com/python/python_string_formatting.asp)
+[Itt találtok hozzá több leírást a github.com/SpsKnSK/ oldalon](https://github.com/SpsKnSK/api/tree/main/UsefulStuff/08_format.md)
+
+[Itt találtok hozzá több leírást a w3schools oldalán](https://www.w3schools.com/python/python_string_formatting.asp)
 ## format parancs
 
 A `str`-t elkészítitek a következőképpen: `"valami szoveg {valtozo_indexe} meg valami szoveg {valtozo_indexe}"`. Az index 0-tól indul, és a `format` parancs bemenő paramétereiként használjátok
