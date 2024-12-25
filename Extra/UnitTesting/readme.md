@@ -138,4 +138,22 @@ def test_divideByZero_1(self):
             self.target.divide(1, 0)
 ```
 
-# How to pass value to external methods
+# Mocking- change behavior of external methods
+Sometimes it is necessary to call external methods that we did not write, for this we use **mocking**. *Mocking* in Python is like creating a fake version of something (like a function or object) to test how your code behaves without using the real thing.
+
+In this case we have a method `GetNumberFromInput` in [enteredNumberChecker.py](https://github.com/SpsKnSK/api/Extra/UnitTesting/06_step_useInput/enteredNumberChecker.py). This method calls `input` method, how do we test this automatically, so that we don't have to enter the input manually every time the test runs?
+
+For this we use the `patch` from `unittest.mock` library. This ensures, that the patched method will behave as we like (returns values that we expect). Let's add the `@patch("builtins.input", return_value="10")` attribute and ensure, that the test method has an extra parameter for the return value (but we don't need to use it ) `def test_GetNumberFromInput_correctNumberFormat(self, input):`. The whole method looks like this:
+
+```py
+@patch("builtins.input", return_value="10")
+def test_GetNumberFromInput_correctNumberFormat(self, input):
+    result: int = self.target.GetNumberFromInput()
+    self.assertEqual(10, result)
+```
+1. We want the `input` method to return string value `"10"`
+2. When `self.target.GetNumberFromInput()` calls `input()`, it returns `"10"`
+3. That value is then checked in the `GetNumberFromInput` method and returns conversion to int: `10`
+4. The last step in the test is to check, if the result is the expected value
+
+The next 2 methods are working with the sad scenarios, where we know that if there is anything else entered but number, it will raise an exception. We can handle this situation either with the block `with self.assertRaises` or attribute `@unittest.expectedFailure` 
