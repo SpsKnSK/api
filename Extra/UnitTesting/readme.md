@@ -156,4 +156,6 @@ def test_GetNumberFromInput_correctNumberFormat(self, input):
 3. That value is then checked in the `GetNumberFromInput` method and returns conversion to int: `10`
 4. The last step in the test is to check, if the result is the expected value
 
+The whole test file can be found [here](https://github.com/SpsKnSK/api/blob/main/Extra/UnitTesting/06_step_useInput/enteredNumberChecker_test.py) 
+
 The next 2 methods are working with the sad scenarios, where we know that if there is anything else entered but number, it will raise an exception. We can handle this situation either with the block `with self.assertRaises` or attribute `@unittest.expectedFailure` 
