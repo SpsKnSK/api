@@ -87,12 +87,12 @@ for book in updated_books:
     )
 
 # Delete records
-# book_to_delete = (
-#     session.query(Book).filter_by(title="Harry Potter and the Sorcerer's Stone").first()
-# )
-# if book_to_delete:
-#     session.delete(book_to_delete)
-#     session.commit()
+book_to_delete = (
+    session.query(Book).filter_by(title="Harry Potter and the Sorcerer's Stone").first()
+)
+if book_to_delete:
+    session.delete(book_to_delete)
+    session.commit()
 
 # Query records after deletion
 remaining_books = session.query(Book).all()
