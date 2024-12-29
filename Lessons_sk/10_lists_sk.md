@@ -168,6 +168,53 @@ moj_zoznam = sample(range(minimum, maximum), pocet_prvkov)
 print(moj_zoznam)
 ```
 
+
+# Zoradenie
+
+Prvky zoznamu môžeme zoradiť pomocou dvoch funkcií:
+- `myList.sort()`
+- `sorted(myList)`
+
+## `.sort()`
+
+```python
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+numbers.sort()
+print(numbers)  # [-5, -3, 1, 2, 3, 4, 98, 565]
+```
+
+Zoradí prvky **vzostupne**.
+
+```python
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+numbers.sort(reverse=True)
+print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
+```
+
+Zoradí prvky **zostupne** pomocou `reverse=True`.
+
+## `sorted()`
+
+```python
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+sorted(numbers)
+print(numbers)  # [1, 2, 3, 4, -5, 98, 565, -3]
+numbers = sorted(numbers)
+print(numbers)  # [-5, -3, 1, 2, 3, 4, 98, 565]
+```
+
+Zoradí prvky **vzostupne**, ale treba si uvedomiť, že `sorted` vytvorí nový zoznam, preto je potrebné znovu priradiť hodnotu premennej `numbers`.
+
+```python
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+sorted(numbers, reverse=True)
+print(numbers)  # [1, 2, 3, 4, -5, 98, 565, -3]
+numbers = sorted(numbers, reverse=True)
+print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
+```
+
+Zoradí prvky **zostupne** pomocou `reverse=True`.
+
 ## Úlohy
 > [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e05_randomEvenOdd.md)
 
