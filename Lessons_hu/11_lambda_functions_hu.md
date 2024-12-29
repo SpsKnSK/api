@@ -1,6 +1,6 @@
 # Lambda függvények
 
-A lambda függvényt nem a `def` paranccsal definiáljuk, hanem a `lambda` paranccsal, általában *"soron belüli függvénynek (in-line function)"*
+A lambda függvényt nem a `def` paranccsal definiáljuk, hanem a `lambda` paranccsal, általában *"soron belüli függvénynek (in-line function)"* nevezzük.
 ```python
 def függvény(argument1, argument2, ...): 
     return kifejezés
@@ -16,7 +16,7 @@ A lambda függvények különösen hasznosak akkor, amikor egy egyszerű függv�
 
 # Példák lambda függvényekre
 
-## 1. Egyszerű lambda függvény
+## Egyszerű lambda függvény
 
 Ez a lambda függvény két számot ad össze:
 
@@ -31,7 +31,7 @@ def add(x,y):
 print(add(2, 3))  # 5
 ```
 
-## 2. Lambda függvény a `map` függvénnyel
+## Lambda függvény a `map` függvénnyel
 
 A `map` függvény egy lambda függvényt alkalmaz egy lista minden elemére:
 
@@ -54,7 +54,7 @@ print(list(squared))  # [1, 4, 9, 16]
 
 > A `map` függvény egy `squared` iterálható objektumot hoz létre, amit mi listává alakítunk át a `list(squared)` meghívásával.
 
-## 3. Lambda függvény a `filter` függvénnyel
+## Lambda függvény a `filter` függvénnyel
 
 A `filter` függvény egy lambda függvényt alkalmaz egy lista minden elemére, és csak azokat az elemeket adja vissza, amelyekre a lambda függvény igaz értéket ad:
 
@@ -75,7 +75,7 @@ print(list(even_numbers))  # [2, 4, 6]
 ```
 > A `filter` függvény egy `even_numbers` iterálható objektumot hoz létre, amit mi listává alakítunk át a `list(even_numbers)` meghívásával.
 > 
-## 4. Lambda függvény a `sorted` függvénnyel
+## Lambda függvény a `sorted` függvénnyel
 
 A `sorted` függvény egy lambda függvényt használ a lista elemeinek rendezéséhez:
 
@@ -90,7 +90,7 @@ print(sorted_names)  # ['Vi', 'Al', 'Bob', 'Alice', 'David', 'Charlie']
 ## Aggregate functions- összesítő függvények
 Az **összesítő függvények** olyan függvények, amelyek több értékből hoznak létre egyet. Például a `min`, `max`, `sum`, `len`, ezeket egy listán alkalmazva egyetlen értéket adnak vissza.
 
-## 5. Lambda függvény a `reduce` függvénnyel
+## Lambda függvény a `reduce` függvénnyel
 
 A `reduce` függvény egy lambda függvényt alkalmaz egy lista elemeire, hogy egyetlen értéket állítson elő, egy összesítő függvény. Ehhez az `functools` modulból kell importálni a `reduce` függvényt:
 
@@ -110,6 +110,6 @@ A `reduce` segítségével írjátok fel a következő függvényeket
 - `max`
 - `sum`
 
-## Összefoglalás
+# Összefoglalás
 
 A lambda függvények rövid, névtelen függvények, amelyek egyszerű műveletekhez használhatók. Ezek különösen hasznosak, amikor egy egyszerű függvényt szeretnénk átadni egy másik függvénynek, például a `map`, `filter`, `sorted` vagy `reduce` függvényeknek. 
