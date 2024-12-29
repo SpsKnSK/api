@@ -165,6 +165,44 @@ mylist = sample(range(lowest, highest), numberOfElements)
 print(myList)
 ```
 
+# Sorba rendezés
+A listák elemeit sorba redenzhetjük 2 függvény segítségevel:
+- `myList.sort()`
+- `sorted(myList)`
+
+## `.sort()`
+```py
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+numbers.sort()
+print(numbers) # [-5, -3, 1, 2, 3, 4, 98, 565]
+```
+Sorba rendezi az elemeket **növekvő** sorrend szerint.
+```py
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+numbers.sort(reverse=True)
+print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
+```
+Sorba rendezi az elemeket **csökkenő** sorrend szerint a `reverse = True` segítségével.
+
+
+## `sorted()`
+```py
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+sorted(numbers)
+print(numbers)  # [1, 2, 3, 4, -5, 98, 565, -3]
+numbers = sorted(numbers)
+print(numbers)  # [-5, -3, 1, 2, 3, 4, 98, 565]
+```
+Sorba rendezi az elemeket **növekvő** sorrend szerint, viszont ügyelni kell rá, hogy a `sorted` az egy új listát hoz létre, ezért újból értékként kell megadni a `numbers` változónak.
+```py
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+sorted(numbers, reverse=True)
+print(numbers)  # [1, 2, 3, 4, -5, 98, 565, -3]
+numbers = sorted(numbers, reverse=True)
+print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
+```
+Sorba rendezi az elemeket **csökkenő** sorrend szerint a `reverse = True` segítségével.
+
 ## Feladat
 > [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e05_randomEvenOdd.md)
 
