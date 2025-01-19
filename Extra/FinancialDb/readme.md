@@ -11,17 +11,19 @@ A database (DB) is a collection of organized data that can be easily accessed, m
 DB Browser for **SQLite** is a graphical tool that allows you to create, design, and edit **SQLite** databases. Here's how to get started:
 
 1. **Download and Install**: [Download](https://**SQLite**browser.org/dl/) and install DB Browser for **SQLite** from its official website.
-2. **Create a New Database**: Open the DB Browser and click on "New Database" to create a new database file.
-3. **Create Tables**: Use the "Create Table" option to define the structure of your tables.
+2. **Create a New Database**: Open the DB Browser and click on *"New Database"* to create a new database file.
+3. **Create Tables**: 
+   1. Use the *"Create Table"* option to define the structure of your tables.
+   2. Go to the *"Execute SQL"* tab and create the tables via commands
 
 ## What is a Table?
 
-A table is a collection of related data organized in rows and columns. Each row represents a record, and each column represents a field within the record. For example, a table called `students` might have columns like `id`, `name`, and `grade`.
+A table is a collection of related data organized in rows and columns. Each row represents a record, and each column represents a field within the record. For example, a table called `students` might have columns like `id`, `name`, and `sex`.
 
 ## What are Primary Keys (PK) and Foreign Keys (FK)?
 
 - **Primary Key (PK)**: A primary key is a unique identifier for each record in a table. It ensures that each record can be uniquely identified. For example, the `id` column in the `students` table can be a primary key.
-- **Foreign Key (FK)**: A foreign key is a column that creates a relationship between two tables. It references the primary key of another table. For example, if you have a `grades` table, the `student_id` column can be a foreign key that references the `id` column in the `students` table.
+- **Foreign Key (FK)**: A foreign key is a column that creates a relationship between two tables. It references the primary key of another table. For example, if you have a `grades` table, the `student_id` column can be a foreign key that references the `id` column in the `students` table. With this relationship you can keep the data integrity: you cannot insert any other value to the `grades` table's `student_id`, only the ones that **exist** in the `student` table!
 
 ## What Data Types Can Be Used?
 
@@ -32,49 +34,30 @@ A table is a collection of related data organized in rows and columns. Each row 
 - **TEXT**: Text strings
 - **BLOB**: Binary data
 
-## What is a `SELECT`/Query?
-
-A `SELECT` statement, or query, is used to **retrieve** data from a database. For example, to get all records from the `students` table, you can use:
-
-```sql
-SELECT * FROM students;
+## Prepare the demo database
+In this demo we will be using a school DB. There are students, that have more grades. Each grade is connected to one lesson. We can write it as 
+```mermaid
+erDiagram
+    STUDENTS {
+        INTEGER id
+        TEXT name
+        TEXT sex
+    }
+    LESSONS {
+        INTEGER id
+        TEXT name
+    }
+    GRADES {
+        INTEGER id
+        INTEGER student_id
+        INTEGER lesson_id
+        INTEGER grade
+    }
+    STUDENTS ||--o{ GRADES : "has"
+    LESSONS ||--o{ GRADES : "has"
 ```
 
-## What is a `JOIN`?
-
-A `JOIN` is used to **combine** rows from two or more tables based on a related column. For example, to get the names and grades of students, you can use:
-
-```sql
-SELECT students.name, grades.grade
-FROM students
-JOIN grades ON students.id = grades.student_id;
-```
-
-## What is `WHERE`?
-
-The `WHERE` clause is used to **filter** records based on a condition. For example, to get students with a grade higher than 80, you can use:
-
-```sql
-SELECT * FROM students
-WHERE grade > 80;
-```
-
-## What is `GROUP BY`?
-
-The `GROUP BY` clause is used to **group** rows that have the same values in specified columns. For example, to count the number of students in each sex group, you can use:
-
-```sql
-SELECT 
-	s.sex,
-	COUNT(s.sex) countOfStudents
-FROM students s 
-GROUP BY
-	s.sex
-```
-
-Sure! Let's expand the examples to include the `grades` and `lessons` tables, and insert some data into them.
-
-### Example 1: Creating Tables
+### Creating Tables
 
 ```sql
 CREATE TABLE students (
@@ -98,7 +81,7 @@ CREATE TABLE grades (
 );
 ```
 
-### Example 2: Inserting Data
+### Inserting Data
 
 ```sql
 -- Insert data into students table
@@ -188,13 +171,24 @@ INSERT INTO grades (student_id, lesson_id, grade) VALUES
 (12, 5, 85);
 ```
 
-### Example 3: Selecting Data
+## What is a `SELECT`/Query?
+
+A `SELECT` statement, or query, is used to **retrieve** data from a database. For example, to get all records from the `students` table, you can use:
 
 ```sql
 SELECT * FROM students;
 ```
 
-### Example 4: Joining Tables
+## What is a `JOIN`?
+
+A `JOIN` is used to **combine** rows from two or more tables based on a related column. For example, to get the names and grades of students, you can use:
+
+```sql
+SELECT students.name, grades.grade
+FROM students
+JOIN grades ON students.id = grades.student_id;
+```
+### Joining Tables
 
 ```sql
 SELECT 
@@ -205,8 +199,15 @@ FROM students s
 JOIN grades g ON s.id = g.student_id
 JOIN lessons l ON g.lesson_id = l.id;
 ```
+## What is `WHERE`?
 
-### Example 5: Using WHERE
+The `WHERE` clause is used to **filter** records based on a condition. For example, to get students with a grade higher than 80, you can use:
+
+```sql
+SELECT * FROM students
+WHERE grade > 80;
+```
+### Using WHERE
 
 ```sql
 SELECT 
@@ -221,8 +222,20 @@ WHERE
 	AND g.grade > 90
 ```
 
-### Example 6: Using GROUP BY
-Number of lessons per student
+## What is `GROUP BY`?
+
+The `GROUP BY` clause is used to **group** rows that have the same values in specified columns. For example, to count the number of students in each sex group, you can use:
+
+```sql
+SELECT 
+	s.sex,
+	COUNT(s.sex) countOfStudents
+FROM students s 
+GROUP BY
+	s.sex
+```
+### Using GROUP BY
+#### Number of lessons per student
 ```sql
 SELECT 
 	s.name,
@@ -234,7 +247,7 @@ GROUP BY
 	s.name
 ```
 
-Counting average grade
+#### Counting average grade
 ```sql
 SELECT 
 	s.name, 
@@ -244,7 +257,7 @@ JOIN grades g ON s.id = g.student_id
 GROUP BY 
 	s.name;
 ```
-Average of grade sorted by the top ranked lesson
+#### Average of grade sorted by the top ranked lesson
 ```sql
 SELECT 
 	l.name,
