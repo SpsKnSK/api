@@ -61,12 +61,15 @@ WHERE grade > 80;
 
 ## What is `GROUP BY`?
 
-The `GROUP BY` clause is used to **group** rows that have the same values in specified columns. For example, to count the number of students in each grade, you can use:
+The `GROUP BY` clause is used to **group** rows that have the same values in specified columns. For example, to count the number of students in each sex group, you can use:
 
 ```sql
-SELECT grade, COUNT(*)
-FROM students
-GROUP BY grade;
+SELECT 
+	s.sex,
+	COUNT(s.sex) countOfStudents
+FROM students s 
+GROUP BY
+	s.sex
 ```
 
 Sure! Let's expand the examples to include the `grades` and `lessons` tables, and insert some data into them.
@@ -76,7 +79,8 @@ Sure! Let's expand the examples to include the `grades` and `lessons` tables, an
 ```sql
 CREATE TABLE students (
     id INTEGER PRIMARY KEY,
-    name TEXT
+    name TEXT,
+    sex text
 );
 
 CREATE TABLE lessons (
@@ -98,20 +102,20 @@ CREATE TABLE grades (
 
 ```sql
 -- Insert data into students table
-INSERT INTO students (name) VALUES 
-('Alice'),
-('Bob'),
-('Charlie'),
-('Diana'),
-('Eve'),
-('Frank'),
-('Grace'),
-('Hannah'),
-('Ian'),
-('Jack'),
-('Karen'),
-('Liam');
-
+INSERT INTO students (name, sex) VALUES 
+('Alice', 'Female'),
+('Bob', 'Male'),
+('Charlie', 'Male'),
+('Diana', 'Female'),
+('Eve', 'Female'),
+('Frank', 'Male'),
+('Grace', 'Female'),
+('Hannah', 'Female'),
+('Ian', 'Male'),
+('Jack', 'Male'),
+('Karen', 'Female'),
+('Liam', 'Male'),
+('Melany', 'Female');
 -- Insert data into lessons table
 INSERT INTO lessons (name) VALUES 
 ('Math'),
@@ -218,11 +222,11 @@ WHERE
 ```
 
 ### Example 6: Using GROUP BY
-
+Number of lessons per student
 ```sql
 SELECT 
 	s.name,
-	COUNT(*) numberOfGrades
+	COUNT(l.id) numberOfLessons
 FROM students s 
 JOIN grades g ON s.id = g.student_id
 JOIN lessons l ON g.lesson_id = l.id
@@ -230,6 +234,29 @@ GROUP BY
 	s.name
 ```
 
+Counting average grade
+```sql
+SELECT 
+	s.name, 
+	SUM(g.grade)/COUNT(g.grade) averageGrade
+FROM students s 
+JOIN grades g ON s.id = g.student_id
+GROUP BY 
+	s.name;
+```
+Average of grade sorted by the top ranked lesson
+```sql
+SELECT 
+	l.name,
+	SUM(g.grade)/COUNT(l.name) averageOfGrade
+FROM students s 
+JOIN grades g ON s.id = g.student_id
+JOIN lessons l ON g.lesson_id = l.id
+GROUP BY
+	l.name
+ORDER BY
+	averageOfGrade DESC
+```
 ## Delete data
 ```sql
 DELETE FROM grades;
