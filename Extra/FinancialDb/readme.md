@@ -76,8 +76,7 @@ Sure! Let's expand the examples to include the `grades` and `lessons` tables, an
 ```sql
 CREATE TABLE students (
     id INTEGER PRIMARY KEY,
-    name TEXT,
-    grade INTEGER
+    name TEXT
 );
 
 CREATE TABLE lessons (
@@ -99,21 +98,90 @@ CREATE TABLE grades (
 
 ```sql
 -- Insert data into students table
-INSERT INTO students (name, grade) VALUES ('Alice', 85);
-INSERT INTO students (name, grade) VALUES ('Bob', 90);
+INSERT INTO students (name) VALUES 
+('Alice'),
+('Bob'),
+('Charlie'),
+('Diana'),
+('Eve'),
+('Frank'),
+('Grace'),
+('Hannah'),
+('Ian'),
+('Jack'),
+('Karen'),
+('Liam');
 
 -- Insert data into lessons table
-INSERT INTO lessons (name) VALUES ('Math');
-INSERT INTO lessons (name) VALUES ('Physics');
-INSERT INTO lessons (name) VALUES ('PE');
-INSERT INTO lessons (name) VALUES ('Drawing');
-INSERT INTO lessons (name) VALUES ('History');
+INSERT INTO lessons (name) VALUES 
+('Math'),
+('Physics'),
+('PE'),
+('Drawing'),
+('History');
 
 -- Insert data into grades table
-INSERT INTO grades (student_id, lesson_id, grade) VALUES (1, 1, 95); -- Alice, Math
-INSERT INTO grades (student_id, lesson_id, grade) VALUES (1, 2, 88); -- Alice, Physics
-INSERT INTO grades (student_id, lesson_id, grade) VALUES (2, 1, 92); -- Bob, Math
-INSERT INTO grades (student_id, lesson_id, grade) VALUES (2, 3, 85); -- Bob, PE
+INSERT INTO grades (student_id, lesson_id, grade) VALUES 
+(1, 1, 85),
+(1, 2, 90),
+(1, 3, 78),
+(1, 4, 82),
+(1, 5, 88),
+(2, 1, 91),
+(2, 2, 76),
+(2, 3, 79),
+(2, 4, 85),
+(2, 5, 87),
+(3, 1, 92),
+(3, 2, 89),
+(3, 3, 80),
+(3, 4, 83),
+(3, 5, 90),
+(4, 1, 94),
+(4, 2, 88),
+(4, 3, 82),
+(4, 4, 86),
+(4, 5, 89),
+(5, 1, 93),
+(5, 2, 87),
+(5, 3, 81),
+(5, 4, 84),
+(5, 5, 88),
+(6, 1, 90),
+(6, 2, 85),
+(6, 3, 78),
+(6, 4, 82),
+(6, 5, 87),
+(7, 1, 88),
+(7, 2, 83),
+(7, 3, 76),
+(7, 4, 80),
+(7, 5, 85),
+(8, 1, 91),
+(8, 2, 86),
+(8, 3, 79),
+(8, 4, 83),
+(8, 5, 88),
+(9, 1, 89),
+(9, 2, 84),
+(9, 3, 77),
+(9, 4, 81),
+(9, 5, 86),
+(10, 1, 92),
+(10, 2, 87),
+(10, 3, 80),
+(10, 4, 84),
+(10, 5, 89),
+(11, 1, 90),
+(11, 2, 85),
+(11, 3, 78),
+(11, 4, 82),
+(11, 5, 87),
+(12, 1, 88),
+(12, 2, 83),
+(12, 3, 76),
+(12, 4, 80),
+(12, 5, 85);
 ```
 
 ### Example 3: Selecting Data
@@ -125,25 +193,45 @@ SELECT * FROM students;
 ### Example 4: Joining Tables
 
 ```sql
-SELECT students.name, lessons.name AS lesson, grades.grade
-FROM students
-JOIN grades ON students.id = grades.student_id
-JOIN lessons ON grades.lesson_id = lessons.id;
+SELECT 
+	s.name, 
+	l.name AS lesson, 
+	g.grade
+FROM students s 
+JOIN grades g ON s.id = g.student_id
+JOIN lessons l ON g.lesson_id = l.id;
 ```
 
 ### Example 5: Using WHERE
 
 ```sql
-SELECT * FROM students
-WHERE grade > 80;
+SELECT 
+	s.name, 
+	l.name AS lesson, 
+	g.grade
+FROM students s 
+JOIN grades g ON s.id = g.student_id
+JOIN lessons l ON g.lesson_id = l.id
+WHERE 
+	1=1
+	AND g.grade > 90
 ```
 
 ### Example 6: Using GROUP BY
 
 ```sql
-SELECT grade, COUNT(*)
-FROM students
-GROUP BY grade;
+SELECT 
+	s.name,
+	COUNT(*) numberOfGrades
+FROM students s 
+JOIN grades g ON s.id = g.student_id
+JOIN lessons l ON g.lesson_id = l.id
+GROUP BY
+	s.name
 ```
 
-By understanding these basic concepts and examples, you'll be well on your way to using SQLite effectively. Happy learning!
+## Delete data
+```sql
+DELETE FROM grades;
+DELETE FROM students;
+```
