@@ -258,7 +258,16 @@ ORDER BY
 	averageOfGrade DESC
 ```
 ## Delete data
+this command deletes **all the data** from the specified tables.
 ```sql
 DELETE FROM grades;
 DELETE FROM students;
+DELETE FROM lessons;
+```
+## Remove tables
+This command will delete the **whole table**, then you need to recreate the tables using the `CREATE TABLE ...` commands
+```sql
+DROP TABLE grades;
+DROP TABLE students; 
+DROP TABLE lessons;
 ```
