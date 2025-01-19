@@ -98,7 +98,8 @@ INSERT INTO students (name, sex) VALUES
 ('Jack', 'Male'),
 ('Karen', 'Female'),
 ('Liam', 'Male'),
-('Melany', 'Female');
+('Melany', 'Female'),
+('Nancy', 'Female');
 -- Insert data into lessons table
 INSERT INTO lessons (name) VALUES 
 ('Math'),
@@ -168,7 +169,8 @@ INSERT INTO grades (student_id, lesson_id, grade) VALUES
 (12, 2, 83),
 (12, 3, 76),
 (12, 4, 80),
-(12, 5, 85);
+(12, 5, 85),
+(13, 5, 85);
 ```
 
 ## What is a `SELECT`/Query?
@@ -199,6 +201,48 @@ FROM students s
 JOIN grades g ON s.id = g.student_id
 JOIN lessons l ON g.lesson_id = l.id;
 ```
+#### `LEFT JOIN`
+`A LEFT JOIN` is a type of SQL join that returns **all** records from the *left* table (the first table in the join), and the **matched** records from the *right* table (the second table in the join). If there is **no match**, the result is **NULL** on the side of the *right* table.
+
+In our example Melany has only grade and Nancy has no grades.
+```sql
+SELECT DISTINCT
+	s.name
+FROM students s 
+JOIN grades g ON s.id = g.student_id
+JOIN lessons l ON g.lesson_id = l.id;
+```
+returns:
+```
+name	numberOfLessons
+Alice	5
+Bob	    5
+...
+Liam	5
+Melany	1
+```
+To see, how many grades/lessons Nancy has, we have to use the `LEFT JOIN` (for both of the tables grades and lessons, to maintain **all** values from the *left* table)
+```sql
+SELECT DISTINCT
+	s.name,
+	COUNT(l.id) numberOfLessons
+FROM students s 
+LEFT JOIN grades g ON s.id = g.student_id
+LEFT JOIN lessons l ON g.lesson_id = l.id
+GROUP BY
+	s.name;
+```
+returns:
+```
+name	numberOfLessons
+Alice	5
+Bob	    5
+...
+Liam	5
+Melany	1
+Nancy	0
+```
+
 ## What is `WHERE`?
 
 The `WHERE` clause is used to **filter** records based on a condition. For example, to get students with a grade higher than 80, you can use:
