@@ -1,6 +1,4 @@
-# Working with data
-
-## Reading values from file
+# Reading values from file
 There is the following file of students (name, surname, age, sex, average grade, height (cm) and weight (kg))
 ```
 Emily,Wilson,12,F,1.95,160,35
@@ -20,7 +18,7 @@ Benjamin,King,14,M,4.58,165,40
 Harper,Williams,15,F,1.14,168,48
 ```
 
-### Write them out
+## Write them out
 
 ```py
 import os
@@ -32,7 +30,7 @@ with open(file_path, 'r') as file:
         print(l.strip())
 ```
 
-### Write out just the names and sex
+## Write out just the names and sex
 
 ```py
 import os
@@ -45,7 +43,44 @@ with open(file_path, 'r') as file:
         print(columns[0], "Girl" if columns[3]== 'F' else "Boy")
 ```
 
-## Use `class`
-For more complex operations, use class `Student` as in `03_writeOut_withClass.py`
+# Use `class`
+For more complex operations, use class `Student` as in:
+- `03_writeOut_withClass.py`
+- `04_writeOut_withClass.py`
+- `05_writeOut_withClass.py`
 
-Let's write a program, that will sort the students by height and write out their name
+With the class it is easier to get the correct value, as the value is named as a property of the class. Instead of `line[5]` where we have no context, what that value contains, we use `student.HeightInCm` and we already have the context.
+
+> Have a note that in `05_writeOut_withClass.py` `Student` class has a method without `self`: `FromLine` that returns a `Student` instance, this is called **on class** not on instance as: `student = Student.FromLine(l)` 
+
+## Sorting
+Sorting data can be tricky on a dataset, that is without context and wirking with indexes can lead to messy code. Our next task is to read the students' file and sort them by height and write out their names. `06_sortByheight.py`
+
+```py
+students : list[Student] = []
+
+with open(file_path, 'r') as file:
+    [students.append(Student.FromLine(l)) for l in file.readlines()]
+
+students.sort(key=lambda x: x.HeightInCm, reverse=True)
+header:str = f"{'Name':<10}HeightInCm"
+print(header)
+print("-"*len(header))
+for s in students:
+    print(f"{s.Name:<10}{s.HeightInCm}")
+```
+Here we fill the `students` list with a student then sort them by height and finally we write out their name and height
+
+## Groups
+Lets' make a program, that will print out how many students do we have by gender.
+
+> With **pandas** it is just as followinig: 
+> ```py
+> import pandas as pd
+> df = pd.DataFrame(data)
+> grouped_Data = df.groupby('sex')
+> for name, group in grouped_df:
+>    print(f"**{name.upper()}**")
+>    print(group)
+>    print()
+> ```
