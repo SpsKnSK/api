@@ -1,0 +1,29 @@
+[
+    {
+        "Name": "Emily",
+        "Surname": "Wilson",
+        "Age": 12,
+        "Sex": "F",
+        "AverageGrade": 1.0,
+        "HeightInCm": 160,
+        "WeightInKg": 35
+    },
+    {
+        "Name": "Oliver",
+        "Surname": "Gray",
+        "Age": 11,
+        "Sex": "M",
+        "AverageGrade": 3.0,
+        "HeightInCm": 165,
+        "WeightInKg": 40
+    },
+    {
+        "Name": "Ava",
+        "Surname": "Taylor",
+        "Age": 13,
+        "Sex": "F",
+        "AverageGrade": 2.0,
+        "HeightInCm": 155,
+        "WeightInKg": 32
+    }
+]
