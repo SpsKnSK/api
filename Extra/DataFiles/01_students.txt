@@ -1,0 +1,15 @@
+Emily,Wilson,12,F,1.95,160,35
+Oliver,Gray,11,M,3.62,165,40
+Ava,Taylor,13,F,2.02,155,32
+Ethan,Brown,14,M,1.99,170,45
+Lily,White,12,F,4.03,158,36
+Noah,Miller,13,M,2.91,162,38
+Sophia,Patel,14,F,1.51,165,42
+Mason,Harris,15,M,3.22,168,48
+Isabella,Rodriguez,13,F,2.78,160,35
+Logan,Walker,14,M,4.30,165,40
+Charlotte,Davis,15,F,1.27,170,45
+Alexander,Thomas,12,M,3.65,162,38
+Mia,Robinson,13,F,2.12,155,32
+Benjamin,King,14,M,4.58,165,40
+Harper,Williams,15,F,1.14,168,48
