@@ -72,7 +72,12 @@ for s in students:
 Here we fill the `students` list with a student then sort them by height and finally we write out their name and height
 
 ## Groups
-Lets' make a program, that will print out how many students do we have by gender.
+Lets' make a program, that will print the students by gender. `07_groupByGender.py`
+```py
+sexDictionary : dict[str, list[Student]] = {"Boys" if s == 'M' else 'Girls':[student for student in students if student.Sex == s] for s in set([s.Sex for s in students])}
+```
+
+1. We create a set of 
 
 > With **pandas** it is just as followinig: 
 > ```py
