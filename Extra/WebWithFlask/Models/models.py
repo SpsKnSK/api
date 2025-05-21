@@ -1,4 +1,5 @@
 from datetime import date
+from random import randint
 
 
 class Lesson:
@@ -8,13 +9,13 @@ class Lesson:
 
 
 class Student:
-    def __init__(self, id, surname, name, dob, address, grades):
+    def __init__(self, id, surname, name, dob, address, grades=None):
         self.id = id
         self.surname = surname
         self.name = name
         self.dob = dob
         self.address = address
-        self.grades = grades  # List of grades, one per lesson
+        self.grades = grades if grades else [randint(1, 5) for _ in range(6)]  #
 
     def age(self):
         today = date.today()

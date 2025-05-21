@@ -19,26 +19,15 @@ classes = [
         1,
         "Class 1A",
         [
-            Student(
-                1, "Smith", "John", date(2010, 5, 14), "123 Main St", [4, 5, 3, 4, 5, 4]
-            ),
-            Student(
-                2,
-                "Brown",
-                "Alice",
-                date(2011, 7, 22),
-                "456 Oak Ave",
-                [5, 5, 4, 5, 5, 5],
-            ),
+            Student(1, "Smith", "John", date(2010, 5, 14), "123 Main St"),
+            Student(2, "Brown", "Alice", date(2011, 7, 22), "456 Oak Ave"),
         ],
     ),
     SchoolClass(
         2,
         "Class 2B",
         [
-            Student(
-                3, "Taylor", "Bob", date(2010, 3, 2), "789 Pine Rd", [3, 4, 4, 3, 4, 3]
-            ),
+            Student(3, "Taylor", "Bob", date(2010, 3, 2), "789 Pine Rd"),
         ],
     ),
     SchoolClass(3, "Class 3C", []),
