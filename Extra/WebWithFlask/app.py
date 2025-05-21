@@ -100,6 +100,15 @@ classes = [
                 31, "Young", "Matthew", date(2011, 10, 28), "159 Redwood Ct", sex="M"
             ),
             Student(32, "Allen", "Chloe", date(2010, 2, 16), "753 Dogwood St", sex="F"),
+            Student(
+                33, "Smith", "Bob", date(2011, 3, 19), "798/A Washington St", sex="M"
+            ),
+            Student(
+                34, "Smith", "Amalia", date(2011, 3, 19), "798/A Washington St", sex="F"
+            ),
+            Student(
+                35, "Bluehorn", "Jessica", date(2009, 12, 19), "11 Pinewood St", sex="F"
+            ),
         ],
     ),
     SchoolClass(3, "Class 3C", []),
