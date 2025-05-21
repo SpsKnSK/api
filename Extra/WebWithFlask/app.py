@@ -56,7 +56,7 @@ def average(grades):
 
 @app.route("/")
 def index():
-    return render_template('classes.html', classes=classes)
+    return render_template("classes.html", classes=classes)
 
 
 @app.route("/class/<int:class_id>")
