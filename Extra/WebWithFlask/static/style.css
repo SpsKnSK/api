@@ -22,7 +22,7 @@ a {
     transition: color 0.2s;
 }
 a:hover {
-    color: #0d47a1;
+    color: #b0c9ec;
     text-decoration: underline;
 }
 table {
