@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}{{ student.surname }} {{ student.name }}{% endblock %}
 {% block content %}
-<a class="btn" href="{{ url_for('index') }}">Back to classes</a>
-
 <h1>{{ student.surname }}, {{ student.name }}</h1>        
 <table>
     <tr><td><strong>Name</strong></td><td>{{ student.name }}</td></tr>
