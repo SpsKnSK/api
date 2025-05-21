@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}{{ student.surname }} {{ student.name }}{% endblock %}
-{% block content %}
-<h1>{{ student.surname }}, {{ student.name }}</h1>        
+{% block header_title %}Student: {{ student.surname }}, {{ student.name }}{% endblock %}
+{% block content %}     
 <table>
     <tr><td><strong>Name</strong></td><td>{{ student.name }}</td></tr>
     <tr><td><strong>Surname</strong></td><td>{{ student.surname }}</td></tr>
