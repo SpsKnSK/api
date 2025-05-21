@@ -16,6 +16,7 @@
             <tr><td><strong>Date of Birth</strong></td><td>{{ student.dob.strftime('%Y-%m-%d') }}</td></tr>
             <tr><td><strong>Age</strong></td><td>{{ student.age() }}</td></tr>
             <tr><td><strong>Address</strong></td><td>{{ student.address }}</td></tr>
+            <tr><td><strong>Sex</strong></td><td>{{ student.sex }}</td></tr>
             <tr><td><strong>Class</strong></td><td><a href="{{ url_for('class_detail', class_id=cls.id) }}">{{ cls.name }}</a></td></tr>
         </table>
         <h2>Grades</h2>
