@@ -3,11 +3,28 @@
 This is a simple Flask web application to demonstrate how to handle web/API development in Python. The app manages school classes and students, showing how to build multi-page web apps with **Flask**.
 
 ## Features
-| Page                | Description                                                                              |
-| ------------------- | ---------------------------------------------------------------------------------------- |
-| Main page           | Lists all classes (max 3)                                                                |
-| Class detail page   | Shows class name and a table of students (surname, name, age, average grade)             |
-| Student detail page | Shows student info (name, surname, date of birth, age, address) and grades for 6 lessons |
+| Page                | Description                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Main page           | Lists all classes in a table, showing class size, number of girls/boys, and class average                           |
+| Class detail page   | Shows class name, statistics (overall average, by lesson, by sex), and a table of students                          |
+| Student detail page | Shows student info (name, surname, date of birth, age, address, sex with icon, class link) and grades for 6 lessons |
+
+## Statistics
+- **Overall average**: The mean of all grades for all students in the class.
+- **Average by lesson**: For each lesson, the mean grade across all students in the class.
+- **Average by sex**: The mean of all grades for boys (♂) and girls (♀) in the class, with icons for clarity.
+- **Class list**: The main page shows, for each class, the number of students, number of girls/boys, and the class average.
+
+## Sex (Male/Female)
+- Each student has a sex attribute (Male or Female), displayed with a corresponding icon (♂ for male, ♀ for female) in both the student detail and class statistics.
+- The number of boys and girls is shown in the class list, and averages are calculated by sex in the statistics.
+
+## Other Useful Features
+- **Modern UI**: The app uses a clean, modern style for all tables and buttons.
+- **Navigation**: Class and student names are clickable for easy navigation between details.
+- **Tooltips**: Lesson names in the student detail page have an info icon with a tooltip showing the lesson description.
+- **Data structure**: The app uses Python classes for SchoolClass, Student, and Lesson, making it easy to extend or modify.
+- **Randomized data**: Student grades are randomly generated for demonstration, and the sample includes a realistic mix of names, addresses, and sexes.
 
 ## How to Run
 1. Open a terminal in the `WebWithFlask` folder.
