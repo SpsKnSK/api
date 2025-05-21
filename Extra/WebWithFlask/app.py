@@ -134,6 +134,7 @@ def login():
         password = request.form.get("password")
         if username in USERS and USERS[username] == password:
             session["logged_in"] = True
+            session["user_name"] = username
             return redirect(url_for("index"))
         else:
             error = "Invalid username or password."
@@ -159,7 +160,9 @@ def login_required(f):
 @app.route("/")
 @login_required
 def index():
-    return render_template("classes.html", classes=classes)
+    return render_template(
+        "classes.html", classes=classes, user_name=session.get("user_name", "")
+    )
 
 
 @app.route("/class/<int:class_id>")
@@ -170,7 +173,11 @@ def class_detail(class_id):
         return "Class not found", 404
     students = sorted(cls.students, key=lambda s: (s.surname, s.name))
     return render_template(
-        "class_detail.html", cls=cls, lessons=lessons, students=students
+        "class_detail.html",
+        cls=cls,
+        lessons=lessons,
+        students=students,
+        user_name=session.get("user_name", ""),
     )
 
 
@@ -181,7 +188,11 @@ def student_detail(student_id):
         for s in cls.students:
             if s.id == student_id:
                 return render_template(
-                    "student_detail.html", student=s, lessons=lessons, cls=cls
+                    "student_detail.html",
+                    student=s,
+                    lessons=lessons,
+                    cls=cls,
+                    user_name=session.get("user_name", ""),
                 )
     return "Student not found", 404
 

@@ -14,6 +14,7 @@
             </form>
             <div class="header-title">{% block header_title %}School Classes{% endblock %}</div>
             <form action="{{ url_for('logout') }}" method="get" style="display:inline; float:right; margin: 16px 24px 0 0;">
+                <span style="margin-right: 10px;">Logged in as: <strong>{{user_name}}</strong></span>
                 <button class="btn" type="submit">Logout</button>
             </form>
         {% endif %}
