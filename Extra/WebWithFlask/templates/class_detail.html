@@ -35,8 +35,8 @@
             </tr>
             <tr><td><h3>Average by sex</h3></td><td>
                 <table>
-                    <tr><td style="width: 60%;">Male</td><td style="width: 40%;">{% if male_grades %}{{ (male_grades | sum / male_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
-                    <tr><td style="width: 60%;">Female</td><td style="width: 40%;">{% if female_grades %}{{ (female_grades | sum / female_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
+                    <tr><td style="width: 60%;"><span style="font-size:1.2em;">&#9794;</span> Male</td><td style="width: 40%;">{% if male_grades %}{{ (male_grades | sum / male_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
+                    <tr><td style="width: 60%;"><span style="font-size:1.2em;">&#9792;</span> Female</td><td style="width: 40%;">{% if female_grades %}{{ (female_grades | sum / female_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
                 </table>
             </td></tr>
             <tr><td><h3>Average by lesson </h3></td>
