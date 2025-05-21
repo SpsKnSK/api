@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>School Classes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>School Classes</h1>
-    <ul>
-        {% for cls in classes %}
-            <li>
-                <a href="{{ url_for('class_detail', class_id=cls.id) }}">{{ cls.name }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <h1>School Classes</h1>
+        <ul>
+            {% for cls in classes %}
+                <li>
+                    <a class="btn" href="{{ url_for('class_detail', class_id=cls.id) }}">{{ cls.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>

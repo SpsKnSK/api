@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ cls.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>{{ cls.name }}</h1>
-    <a href="{{ url_for('index') }}">Back to classes</a>
-    <h2>Students</h2>
-    {% if students %}
-    <table border="1">
-        <tr>
-            <th>Surname</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Average Grade</th>
-            <th>Details</th>
-        </tr>
-        {% for s in students %}
-        <tr>
-            <td>{{ s.surname }}</td>
-            <td>{{ s.name }}</td>
-            <td>{{ s.age }}</td>
-            <td>{{ s.avg }}</td>
-            <td><a href="{{ url_for('student_detail', student_id=s.id) }}">View</a></td>
-        </tr>
-        {% endfor %}
-    </table>
-    {% else %}
-    <p>No students in this class.</p>
-    {% endif %}
+    <div class="container">
+        <h1>{{ cls.name }}</h1>
+        <a class="btn" href="{{ url_for('index') }}">Back to classes</a>
+        <h2>Students</h2>
+        {% if students %}
+        <table>
+            <tr>
+                <th>Surname</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Average Grade</th>
+                <th>Details</th>
+            </tr>
+            {% for s in students %}
+            <tr>
+                <td>{{ s.surname }}</td>
+                <td>{{ s.name }}</td>
+                <td>{{ s.age }}</td>
+                <td>{{ s.avg }}</td>
+                <td><a class="btn" href="{{ url_for('student_detail', student_id=s.id) }}">View</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No students in this class.</p>
+        {% endif %}
+    </div>
 </body>
 </html>

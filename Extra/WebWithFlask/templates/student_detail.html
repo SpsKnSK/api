@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ student.surname }} {{ student.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>{{ student.surname }} {{ student.name }}</h1>
-    <a href="{{ url_for('index') }}">Back to classes</a>
-    <ul>
-        <li><strong>Name:</strong> {{ student.name }}</li>
-        <li><strong>Surname:</strong> {{ student.surname }}</li>
-        <li><strong>Date of Birth:</strong> {{ student.dob.strftime('%Y-%m-%d') }}</li>
-        <li><strong>Age:</strong> {{ student.age }}</li>
-        <li><strong>Address:</strong> {{ student.address }}</li>
-    </ul>
-    <h2>Grades</h2>
-    <ul>
-        {% for grade in student.grades %}
-            <li>Lesson {{ loop.index }}: {{ grade }}</li>
-        {% endfor %}
-    </ul>
-    <p><strong>Average Grade:</strong> {{ student.avg }}</p>
+    <div class="container">
+        <h1>{{ student.surname }} {{ student.name }}</h1>
+        <a class="btn" href="{{ url_for('index') }}">Back to classes</a>
+        <ul>
+            <li><strong>Name:</strong> {{ student.name }}</li>
+            <li><strong>Surname:</strong> {{ student.surname }}</li>
+            <li><strong>Date of Birth:</strong> {{ student.dob.strftime('%Y-%m-%d') }}</li>
+            <li><strong>Age:</strong> {{ student.age }}</li>
+            <li><strong>Address:</strong> {{ student.address }}</li>
+        </ul>
+        <h2>Grades</h2>
+        <ul>
+            {% for grade in student.grades %}
+                <li>Lesson {{ loop.index }}: {{ grade }}</li>
+            {% endfor %}
+        </ul>
+        <p><strong>Average Grade:</strong> {{ student.avg }}</p>
+    </div>
 </body>
 </html>
