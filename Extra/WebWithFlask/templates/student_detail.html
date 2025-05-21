@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ student.surname }} {{ student.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a class="btn" href="{{ url_for('index') }}">Back to classes</a>
+        
+        <h1>{{ student.surname }}, {{ student.name }}</h1>        
+        <table>
+            <tr><td><strong>Name</strong></td><td>{{ student.name }}</td></tr>
+            <tr><td><strong>Surname</strong></td><td>{{ student.surname }}</td></tr>
+            <tr><td><strong>Date of Birth</strong></td><td>{{ student.dob.strftime('%Y-%m-%d') }}</td></tr>
+            <tr><td><strong>Age</strong></td><td>{{ student.age() }}</td></tr>
+            <tr><td><strong>Address</strong></td><td>{{ student.address }}</td></tr>
+            <tr><td><strong>Sex</strong></td>
+                <td>
+                    {% if student.sex == 'M' %}
+                        <span style="font-size:1.2em;">&#9794;</span> Male
+                    {% elif student.sex == 'F' %}
+                        <span style="font-size:1.2em;">&#9792;</span> Female
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr><td><strong>Class</strong></td><td><a href="{{ url_for('class_detail', class_id=cls.id) }}">{{ cls.name }}</a></td></tr>
+        </table>
+        <h2>Grades</h2>
+        <table>
+            <tr>
+                <th>Lesson</th>
+                <th>Grade</th>
+            </tr>
+            {% for i in range(lessons|length) %}
+            <tr>
+                <td>
+                    <span style="cursor: pointer; border-bottom: 1px dotted #888;" title="{{ lessons[i].description }}">
+                        <strong style="color:#1976d2;">&#9432;</strong>
+                    </span>
+                    {{ lessons[i].name }}
+                </td>
+                <td>{{ student.grades[i] }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td><strong>Average:</strong></td>
+                <td>{{ student.avg() }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

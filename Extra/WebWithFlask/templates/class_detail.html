@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ cls.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a class="btn" href="{{ url_for('index') }}">Back to classes</a>
+        <h1>{{ cls.name }}</h1>
+        <h2>Statistics</h2>
+        {% set all_grades = [] %}
+        {% set lesson_averages = [] %}
+        {% set male_grades = [] %}
+        {% set female_grades = [] %}
+        {% for s in students %}
+            {% set _ = all_grades.extend(s.grades) %}
+            {% if s.sex == 'M' %}
+                {% set _ = male_grades.extend(s.grades) %}
+            {% elif s.sex == 'F' %}
+                {% set _ = female_grades.extend(s.grades) %}
+            {% endif %}
+        {% endfor %}
+        <table >
+            <tr><td><h3>All students</h3></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="width: 60%;"></td>
+                            <td style="width: 40%;"><strong>{% if all_grades %}{{ (all_grades | sum / all_grades | length) | round(2) }}{% else %}-{% endif %}</strong></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td><h3>Average by sex</h3></td><td>
+                <table>
+                    <tr><td style="width: 60%;"><span style="font-size:1.2em;">&#9794;</span> Male</td><td style="width: 40%;">{% if male_grades %}{{ (male_grades | sum / male_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
+                    <tr><td style="width: 60%;"><span style="font-size:1.2em;">&#9792;</span> Female</td><td style="width: 40%;">{% if female_grades %}{{ (female_grades | sum / female_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
+                </table>
+            </td></tr>
+            <tr><td><h3>Average by lesson </h3></td>
+                <td>
+                    <table >
+                        {% for i in range(lessons|length) %}
+                        <tr>
+                            <td style="width: 60%;">{{ lessons[i].name }}</td>
+                            {% set lesson_grades = [] %}
+                            {% for s in students %}
+                                {% if s.grades and s.grades|length > i %}
+                                    {% set _ = lesson_grades.append(s.grades[i]) %}
+                                {% endif %}
+                            {% endfor %}
+                            <td style="width: 40%;">{% if lesson_grades %}{{ (lesson_grades | sum / lesson_grades | length) | round(2) }}{% else %}-{% endif %}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </td></tr>
+        </table>
+        <h2>Students</h2>
+        {% if students %}
+        <table>
+            <tr>
+                <th>Surname</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Average Grade</th>
+                <th>Details</th>
+            </tr>
+            {% for s in students %}
+            <tr>
+                <td>{{ s.surname }}</td>
+                <td>{{ s.name }}</td>
+                <td>{{ s.age() }}</td>
+                <td>{{ s.avg() }}</td>
+                <td><a class="btn" href="{{ url_for('student_detail', student_id=s.id) }}">View</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No students in this class.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
