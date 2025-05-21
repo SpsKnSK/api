@@ -1,7 +1,23 @@
+<script>
+function toggleStats() {
+    var stats = document.getElementById('statsTable');
+    var btn = document.getElementById('toggleStatsBtn');
+    if (stats.style.display === 'none') {
+        stats.style.display = '';
+        btn.textContent = 'Hide Statistics';
+    } else {
+        stats.style.display = 'none';
+        btn.textContent = 'Show Statistics';
+    }
+}
+</script>
+
 {% extends 'base.html' %}
 {% block title %}{{ cls.name }}{% endblock %}
 {% block header_title %}Class: {{ cls.name }}{% endblock %}
 {% block content %}
+<button class="btn" type="button" onclick="toggleStats()" id="toggleStatsBtn">Show Statistics</button>
+<div id="statsTable" style="display:none; margin-top: 16px;">
 <h2>Statistics</h2>
 {% set all_grades = [] %}
 {% set lesson_averages = [] %}
@@ -50,6 +66,7 @@
             </table>
         </td></tr>
 </table>
+</div>
 <h2>Students</h2>
 {% if students %}
 <table>
