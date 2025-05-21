@@ -13,16 +13,16 @@
             <li><strong>Name:</strong> {{ student.name }}</li>
             <li><strong>Surname:</strong> {{ student.surname }}</li>
             <li><strong>Date of Birth:</strong> {{ student.dob.strftime('%Y-%m-%d') }}</li>
-            <li><strong>Age:</strong> {{ student.age }}</li>
+            <li><strong>Age:</strong> {{ student.age() }}</li>
             <li><strong>Address:</strong> {{ student.address }}</li>
         </ul>
         <h2>Grades</h2>
         <ul>
-            {% for grade in student.grades %}
-                <li>Lesson {{ loop.index }}: {{ grade }}</li>
+            {% for i in range(lessons|length) %}
+                <li><strong>{{ lessons[i].name }}</strong> ({{ lessons[i].description }}): {{ student.grades[i] }}</li>
             {% endfor %}
         </ul>
-        <p><strong>Average Grade:</strong> {{ student.avg }}</p>
+        <p><strong>Average Grade:</strong> {{ student.avg() }}</p>
     </div>
 </body>
 </html>

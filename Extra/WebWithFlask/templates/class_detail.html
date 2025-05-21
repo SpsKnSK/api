@@ -23,8 +23,8 @@
             <tr>
                 <td>{{ s.surname }}</td>
                 <td>{{ s.name }}</td>
-                <td>{{ s.age }}</td>
-                <td>{{ s.avg }}</td>
+                <td>{{ s.age() }}</td>
+                <td>{{ s.avg() }}</td>
                 <td><a class="btn" href="{{ url_for('student_detail', student_id=s.id) }}">View</a></td>
             </tr>
             {% endfor %}
