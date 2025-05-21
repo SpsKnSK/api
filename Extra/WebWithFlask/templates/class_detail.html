@@ -7,8 +7,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>{{ cls.name }}</h1>
         <a class="btn" href="{{ url_for('index') }}">Back to classes</a>
+        <h1>{{ cls.name }}</h1>
         <h2>Students</h2>
         {% if students %}
         <table>

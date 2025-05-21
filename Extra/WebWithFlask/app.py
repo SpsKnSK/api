@@ -67,7 +67,7 @@ def student_detail(student_id):
         for s in cls.students:
             if s.id == student_id:
                 return render_template(
-                    "student_detail.html", student=s, lessons=lessons
+                    "student_detail.html", student=s, lessons=lessons, cls=cls
                 )
     return "Student not found", 404
 

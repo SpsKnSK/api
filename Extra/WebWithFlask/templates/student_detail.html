@@ -7,22 +7,39 @@
 </head>
 <body>
     <div class="container">
-        <h1>{{ student.surname }} {{ student.name }}</h1>
         <a class="btn" href="{{ url_for('index') }}">Back to classes</a>
-        <ul>
-            <li><strong>Name:</strong> {{ student.name }}</li>
-            <li><strong>Surname:</strong> {{ student.surname }}</li>
-            <li><strong>Date of Birth:</strong> {{ student.dob.strftime('%Y-%m-%d') }}</li>
-            <li><strong>Age:</strong> {{ student.age() }}</li>
-            <li><strong>Address:</strong> {{ student.address }}</li>
-        </ul>
+        
+        <h1>{{ student.surname }}, {{ student.name }}</h1>        
+        <table>
+            <tr><td><strong>Name</strong></td><td>{{ student.name }}</td></tr>
+            <tr><td><strong>Surname</strong></td><td>{{ student.surname }}</td></tr>
+            <tr><td><strong>Date of Birth</strong></td><td>{{ student.dob.strftime('%Y-%m-%d') }}</td></tr>
+            <tr><td><strong>Age</strong></td><td>{{ student.age() }}</td></tr>
+            <tr><td><strong>Address</strong></td><td>{{ student.address }}</td></tr>
+            <tr><td><strong>Class</strong></td><td><a href="{{ url_for('class_detail', class_id=cls.id) }}">{{ cls.name }}</a></td></tr>
+        </table>
         <h2>Grades</h2>
-        <ul>
+        <table>
+            <tr>
+                <th>Lesson</th>
+                <th>Grade</th>
+            </tr>
             {% for i in range(lessons|length) %}
-                <li><strong>{{ lessons[i].name }}</strong> ({{ lessons[i].description }}): {{ student.grades[i] }}</li>
+            <tr>
+                <td>
+                    <span style="cursor: pointer; border-bottom: 1px dotted #888;" title="{{ lessons[i].description }}">
+                        <strong style="color:#1976d2;">&#9432;</strong>
+                    </span>
+                    {{ lessons[i].name }}
+                </td>
+                <td>{{ student.grades[i] }}</td>
+            </tr>
             {% endfor %}
-        </ul>
-        <p><strong>Average Grade:</strong> {{ student.avg() }}</p>
+            <tr>
+                <td><strong>Average:</strong></td>
+                <td>{{ student.avg() }}</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
