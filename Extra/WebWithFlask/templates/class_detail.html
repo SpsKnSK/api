@@ -9,6 +9,46 @@
     <div class="container">
         <a class="btn" href="{{ url_for('index') }}">Back to classes</a>
         <h1>{{ cls.name }}</h1>
+        {% set all_grades = [] %}
+        {% set lesson_averages = [] %}
+        {% set male_grades = [] %}
+        {% set female_grades = [] %}
+        {% for s in students %}
+            {% set _ = all_grades.extend(s.grades) %}
+            {% if s.sex == 'M' %}
+                {% set _ = male_grades.extend(s.grades) %}
+            {% elif s.sex == 'F' %}
+                {% set _ = female_grades.extend(s.grades) %}
+            {% endif %}
+        {% endfor %}
+        <table>
+            <tr><th colspan="2">Statistics</th></tr>
+            <tr><td>Overall average </td><td>{% if all_grades %}{{ (all_grades | sum / all_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
+            <tr><td>Average by <strong>lesson</strong></td>
+                <td>
+                    <table>
+                        {% for i in range(lessons|length) %}
+                        <tr>
+                            <td>{{ lessons[i].name }}</td>
+                            {% set lesson_grades = [] %}
+                            {% for s in students %}
+                                {% if s.grades and s.grades|length > i %}
+                                    {% set _ = lesson_grades.append(s.grades[i]) %}
+                                {% endif %}
+                            {% endfor %}
+                            <td>{% if lesson_grades %}{{ (lesson_grades | sum / lesson_grades | length) | round(2) }}{% else %}-{% endif %}</td>
+                        </tr>
+                        {% endfor %}
+               
+                </table>
+            </td></tr>
+            <tr><td>Average by <strong>sex</strong></td><td>
+                <table>
+                    <tr style="width: 150px;"><td>Male</td><td>{% if male_grades %}{{ (male_grades | sum / male_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
+                    <tr><td>Female</td><td>{% if female_grades %}{{ (female_grades | sum / female_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
+                </table>
+            </td></tr>
+        </table>
         <h2>Students</h2>
         {% if students %}
         <table>
