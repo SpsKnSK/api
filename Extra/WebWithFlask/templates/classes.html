@@ -8,13 +8,30 @@
 <body>
     <div class="container">
         <h1>School Classes</h1>
-        <ul>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th># of Students</th>
+                <th># of girls</th>
+                <th># of Boys</th>
+                <th>Class Lesson Average</th>
+            </tr>
             {% for cls in classes %}
-                <li>
-                    <a class="btn" href="{{ url_for('class_detail', class_id=cls.id) }}">{{ cls.name }}</a>
-                </li>
+                {% set girls = cls.students | selectattr('sex', 'equalto', 'F') | list %}
+                {% set boys = cls.students | selectattr('sex', 'equalto', 'M') | list %}
+                {% set all_grades = [] %}
+                {% for s in cls.students %}
+                    {% set _ = all_grades.extend(s.grades) %}
+                {% endfor %}
+                <tr>
+                    <td><a class="btn" href="{{ url_for('class_detail', class_id=cls.id) }}">{{ cls.name }}</a></td>
+                    <td>{{ cls.students|length }}</td>
+                    <td>{{ girls|length }}</td>
+                    <td>{{ boys|length }}</td>
+                    <td>{% if all_grades %}{{ (all_grades | sum / all_grades | length) | round(2) }}{% else %}-{% endif %}</td>
+                </tr>
             {% endfor %}
-        </ul>
+        </table>
     </div>
 </body>
 </html>
