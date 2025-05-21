@@ -1,7 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, session
 from datetime import date
 from Models.models import Lesson, Student, SchoolClass
 import random
+from functools import wraps
 
 
 # Define lessons
@@ -115,14 +116,54 @@ classes = [
 ]
 
 app = Flask(__name__)
+app.secret_key = "supersecretkey"  # Use a secure key in production
+
+# Dummy user for demonstration
+USERS = {"admin": "password123"}
+
+
+def is_logged_in():
+    return session.get("logged_in", False)
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    error = None
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        if username in USERS and USERS[username] == password:
+            session["logged_in"] = True
+            return redirect(url_for("index"))
+        else:
+            error = "Invalid username or password."
+    return render_template("login.html", error=error)
+
+
+@app.route("/logout")
+def logout():
+    session.pop("logged_in", None)
+    return redirect(url_for("login"))
+
+
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not is_logged_in():
+            return redirect(url_for("login"))
+        return f(*args, **kwargs)
+
+    return decorated_function
 
 
 @app.route("/")
+@login_required
 def index():
     return render_template("classes.html", classes=classes)
 
 
 @app.route("/class/<int:class_id>")
+@login_required
 def class_detail(class_id):
     cls = next((c for c in classes if c.id == class_id), None)
     if not cls:
@@ -134,6 +175,7 @@ def class_detail(class_id):
 
 
 @app.route("/student/<int:student_id>")
+@login_required
 def student_detail(student_id):
     for cls in classes:
         for s in cls.students:

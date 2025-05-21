@@ -65,7 +65,17 @@ li {
     font-weight: 500;
     margin-top: 12px;
     transition: background 0.2s;
+    box-sizing: border-box;
 }
 .btn:hover {
     background: #0d47a1;
+}
+.defaultInput{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+.loggingBtn{
+    width: 100%;
 }

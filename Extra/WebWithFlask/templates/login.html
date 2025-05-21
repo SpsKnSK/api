@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - School Classes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container" style="max-width: 400px; margin-top: 80px;">
+        <h1>Login</h1>
+        {% if error %}
+            <div style="color: #b71c1c; margin-bottom: 16px;">{{ error }}</div>
+        {% endif %}
+        <form method="post">
+            <label for="username"><strong>Username:</strong></label><br>
+            <input class="defaultInput" type="text" id="username" name="username" required><br>
+            <label for="password"><strong>Password:</strong></label><br>
+            <input class="defaultInput" type="password" id="password" name="password" required ><br>
+            <button class="btn loggingBtn" type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
