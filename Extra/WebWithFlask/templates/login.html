@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login - School Classes</title>
+    <title>{% block title %}Login - School Classes{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    {% block content %}
     <div class="container" style="max-width: 400px; margin-top: 80px;">
         <h1>Login</h1>
         {% if error %}
@@ -19,5 +20,6 @@
             <button class="btn loggingBtn" type="submit">Login</button>
         </form>
     </div>
+    {% endblock %}
 </body>
 </html>

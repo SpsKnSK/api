@@ -115,11 +115,11 @@ classes = [
     SchoolClass(3, "Class 3C", []),
 ]
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="static")
 app.secret_key = "supersecretkey"  # Use a secure key in production
 
 # Dummy user for demonstration
-USERS = {"admin": "password123"}
+USERS = {"admin": "password123", "test": "123"}
 
 
 def is_logged_in():

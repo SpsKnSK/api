@@ -79,3 +79,9 @@ li {
 .loggingBtn{
     width: 100%;
 }
+.master-header {
+    width: 100%;
+    min-height: 48px;
+    background: transparent;
+    position: relative;
+}
