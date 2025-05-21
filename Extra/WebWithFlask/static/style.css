@@ -6,7 +6,7 @@ body {
 }
 .container {
     max-width: 800px;
-    margin: 40px auto;
+    margin: 80px auto 0 auto;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -65,7 +65,38 @@ li {
     font-weight: 500;
     margin-top: 12px;
     transition: background 0.2s;
+    box-sizing: border-box;
 }
 .btn:hover {
     background: #0d47a1;
+}
+.defaultInput{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+.loggingBtn{
+    width: 100%;
+}
+.master-header {
+    width: 100%;
+    min-height: 48px;
+    background: rgba(255,255,255,0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.header-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #2d3a4a;
+    text-align: center;
+    white-space: nowrap;
 }
