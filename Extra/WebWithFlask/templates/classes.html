@@ -3,9 +3,11 @@
 {% block header_title %}School Classes{% endblock %}
 
 {% block content %}
+{% if 'admin' in session['roles'] %}
 <form method="GET" action="{{ url_for('students.student_create') }}">
     <button class="btn" type="submit">Create New Student</button>
 </form>
+{% endif %}
 <table>
     <tr>
         <th>Class Name</th>
