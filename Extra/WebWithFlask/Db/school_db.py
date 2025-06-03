@@ -11,7 +11,7 @@ from Models.models import (
 )
 
 
-DB_PATH = "tamas.torok\FlaskApplicationWithCopilot\Db\school.db"
+DB_PATH = r"Extra\WebWithFlask\Db\school.db"
 
 
 class SchoolDB:
