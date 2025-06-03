@@ -1,66 +1,105 @@
 # Flask School Classes Example
 
-This is a simple Flask web application to demonstrate how to handle web/API development in Python. The app manages school classes and students, showing how to build multi-page web apps with **Flask**.
+This is a modern Flask web application for managing school classes, students, lessons, and grades. It demonstrates best practices in web/API development, database integration, authentication, and UI/UX design using **Flask** and **SQLite**.
 
-## Features
-| Page                | Description                                                                                                         |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Main page           | Lists all classes in a table, showing class size, number of girls/boys, and class average                           |
-| Class detail page   | Shows class name, statistics (overall average, by lesson, by sex), and a table of students                          |
-| Student detail page | Shows student info (name, surname, date of birth, age, address, sex with icon, class link) and grades for 6 lessons |
-
-## Statistics
-- **Overall average**: The mean of all grades for all students in the class.
-- **Average by lesson**: For each lesson, the mean grade across all students in the class.
-- **Average by sex**: The mean of all grades for boys (♂) and girls (♀) in the class, with icons for clarity.
-- **Class list**: The main page shows, for each class, the number of students, number of girls/boys, and the class average.
-
-## Sex (Male/Female)
-- Each student has a sex attribute (Male or Female), displayed with a corresponding icon (♂ for male, ♀ for female) in both the student detail and class statistics.
-- The number of boys and girls is shown in the class list, and averages are calculated by sex in the statistics.
-
-## Other Useful Features
-- **Modern UI**: The app uses a clean, modern style for all tables and buttons.
-- **Navigation**: Class and student names are clickable for easy navigation between details.
-- **Tooltips**: Lesson names in the student detail page have an info icon with a tooltip showing the lesson description.
-- **Data structure**: The app uses Python classes for SchoolClass, Student, and Lesson, making it easy to extend or modify.
-- **Randomized data**: Student grades are randomly generated for demonstration, and the sample includes a realistic mix of names, addresses, and sexes.
+## Virtual environment
+Virtual environment is a local storage of python libraries. Use this method when you don't want to install the libraries to your global folder
+1. Run the followinig command `python -m venv venv` This will cerate a folder named `venv` containing your virtual environment
+2. Activate it in the terminal as following `.\venv\Scripts\Activate
+3. You should see `(venv)` at the start of your promt
+4. You can install the requirements in the virtual environment
 
 ## How to Run
-1. Open a terminal in the `WebWithFlask` folder.
-2. Install dependencies:
+1. Open a terminal in the project folder.
+2. Install dependencies (you have to specify the full path the the `requirements.txt`):
    ```powershell
-   pip install -r requirements.txt
+   pip install -r .\Extra\WebWithFlask\requirements.txt
    ```
-3. Start the Flask app:
+3. Initialize the database (only needed once):
+   ```powershell
+   python createDb.py
+   ```
+4. Start the Flask app:
    ```powershell
    python app.py
    ```
-4. Open your browser and go to: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+5. Open your browser and go to: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
+
+## Features
+| Page                | Description                                                                                                           |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Main page           | Lists all classes in a table, showing class size, number of girls/boys, and class average                             |
+| Class detail page   | Shows class name, statistics (overall average, by lesson, by sex), and a table of students                            |
+| Student detail page | Shows student info (name, surname, date of birth, age, address, sex with icon, class link) and grades for all lessons |
+| Edit student        | Admins can edit student info and grades, with validation and role-based access                                        |
+| Login/logout        | Secure login with hashed passwords, role-based access, and session management                                         |
+
+## Database & Data Layer
+- **SQLite Database**: All data (students, classes, lessons, grades, users, roles) is stored in a local SQLite database for persistence and easy setup.
+- **Database Layer**: The `Db/school_db.py` file contains the `SchoolDB` class, which abstracts all database operations (CRUD, authentication, aggregation, etc.), making the code modular and maintainable.
+- **Database Creation**: Use `createDb.py` to initialize the database schema and populate it with demo data. Run it once before starting the app:
+  ```powershell
+  python createDb.py
+  ```
+- **Why a DB Layer?**
+  - Centralizes all data access logic, making it easier to maintain, test, and extend.
+  - Keeps your Flask routes clean and focused on business logic.
+  - Allows for easy migration to other databases in the future.
+
+## Authentication & Authorization
+- **Login**: Users log in with a username and password. Passwords are securely hashed and checked using industry-standard methods.
+- **Session Management**: Flask sessions store the logged-in user's ID and role.
+- **Role-based Access**: Decorators (e.g., `@login_required`, `@admin_required`) restrict access to certain routes. Only admins can edit students.
+- **How Password Check Works**: On login, the password is hashed and compared to the stored hash in the database. No plain-text passwords are stored.
+
+## Decorators
+- `@login_required`: Ensures the user is logged in before accessing a route.
+- `@admin_required`: Ensures the user is both logged in and has the 'admin' role.
+- These decorators keep your route functions clean and enforce security consistently.
+
+## Light/Dark Theme
+- The app supports both light and dark themes for better accessibility and user preference.
+- **Switching Themes**: Use the sun/moon icon in the header to toggle between light and dark mode. The preference is saved and persists across sessions.
+
+## Model & Data Structure
+- The app uses Python classes (e.g., `Student`, `SchoolClass`, `Lesson`) to represent entities.
+- **Why Use Class Instances?**
+  - Encapsulates related data and behavior, making code more readable and maintainable.
+  - Easier to pass around, extend, and refactor than using raw dictionaries or tuples.
+  - Supports methods for computed properties (e.g., age, averages).
+
+## Other Useful Features
+- **Modern UI**: Clean, responsive design with consistent button and table styles.
+- **Navigation**: Clickable class and student names for easy navigation.
+- **Tooltips**: Info icons with tooltips for lesson descriptions.
+- **Bulk Data Generation**: Demo data (students, lessons, grades) is generated for realistic testing.
+- **Multilanguage Ready**: Instructions and code for adding Flask-Babel for multilanguage support.
 ## File Structure
-| File/Folder        | Description                  |
-| ------------------ | ---------------------------- |
-| `app.py`           | Main Flask application       |
-| `templates/`       | HTML templates for the pages |
-| `requirements.txt` | Python dependencies          |
-| `static/style.cs`  | Style sheet for modern looks |
 
-## How Flask Works
-**Flask** is a lightweight Python web framework that makes it easy to build web applications. Here’s a quick overview:
+```
+FlaskApplicationWithCopilot/
+├── app.py                # Main Flask application
+├── Db/
+│   └── school_db.py      # Database access layer
+├── Models/
+│   └── models.py         # Data model classes
+├── createDb.py           # Script to create/populate DB
+├── templates/            # HTML templates for the pages
+├── static/               # CSS and static assets
+├── requirements.txt      # Python dependencies
+```
 
-- **Routing**: Flask uses routes to map URLs to Python functions. Each route (using `@app.route`) defines what should happen when a user visits a specific URL. For example, `/` shows the main page, `/class/<id>` shows a class detail, and `/student/<id>` shows a student detail.
-- **Templates**: Flask uses HTML template files (in the `templates/` folder) to display content. The `render_template` function fills these templates with data and sends the result to the browser.
-- **Data Connection**: Data (like classes and students) is stored in Python variables or can come from a database. The route functions prepare this data and pass it to the templates, which then display it to the user.
-- **Static Files**: CSS and other static files are placed in the `static/` folder and linked in templates for styling.
+## Suggestions for Future Improvements
+1. **User Registration & Management**: Add user registration, password reset, and user management features.
+2. **REST API**: Expose data via a RESTful API for integration with other systems or a mobile app.
+3. **Advanced Analytics**: Add charts and more detailed statistics (e.g., grade distributions, trends over time).
+4. **Notifications**: Email or in-app notifications for grade updates or class announcements.
+5. **Parent/Teacher Roles**: Add more user roles (e.g., parent, teacher) with custom dashboards and permissions.
+6. **Import/Export**: Allow CSV/Excel import/export of students, grades, and classes.
+7. **Unit Tests**: Add automated tests for the database layer and Flask routes.
+8. **Deployment**: Add instructions for deploying to cloud platforms (Heroku, Azure, etc.).
+9. **Accessibility**: Improve accessibility for users with disabilities (ARIA, keyboard navigation).
+10. **Mobile Optimization**: Enhance the UI for mobile and tablet devices.
 
-This structure makes it easy to separate logic (Python code), data, and presentation (HTML/CSS), helping you build clear and maintainable web applications.
-
-## What this example shows:
-- How to define routes and render templates in Flask
-- How to pass data (classes, students) to templates
-- How to use Python functions for logic (age, average)
-- How to link between pages using Flask's `url_for`
-
-## Future
-Feel free to modify the data or templates to experiment further!
+Feel free to experiment, extend, and adapt this project for your own needs!

@@ -3,6 +3,11 @@
 {% block header_title %}School Classes{% endblock %}
 
 {% block content %}
+{% if 'admin' in session['roles'] %}
+<form method="GET" action="{{ url_for('students.student_create') }}">
+    <button class="btn" type="submit">Create New Student</button>
+</form>
+{% endif %}
 <table>
     <tr>
         <th>Class Name</th>
@@ -12,18 +17,12 @@
         <th>Class Lesson Average</th>
     </tr>
     {% for cls in classes %}
-        {% set girls = cls.students | selectattr('sex', 'equalto', 'F') | list %}
-        {% set boys = cls.students | selectattr('sex', 'equalto', 'M') | list %}
-        {% set all_grades = [] %}
-        {% for s in cls.students %}
-            {% set _ = all_grades.extend(s.grades) %}
-        {% endfor %}
         <tr>
-            <td><a class="btn" href="{{ url_for('class_detail', class_id=cls.id) }}">{{ cls.name }}</a></td>
-            <td>{{ cls.students|length }}</td>
-            <td>{{ girls|length }}</td>
-            <td>{{ boys|length }}</td>
-            <td>{% if all_grades %}{{ (all_grades | sum / all_grades | length) | round(2) }}{% else %}-{% endif %}</td>
+            <td><a class="btn" href="{{ url_for('classes.class_detail', class_id=cls.id) }}">{{ cls.name }}</a></td>
+            <td>{{ cls.studentCount }}</td>
+            <td>{{ cls.girlsCount }}</td>
+            <td>{{ cls.boysCount }}</td>
+            <td>{{ cls.averageGrade }}</td>
         </tr>
     {% endfor %}
 </table>

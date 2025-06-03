@@ -1,36 +1,38 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f6f8fa;
+    background: #181a1b;
     margin: 0;
     padding: 0;
+    color: #e0e0e0;
 }
 .container {
     max-width: 80%;
     margin: 80px auto 0 auto;
-    background: #fff;
+    background: #23272a;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
     padding: 32px 40px 40px 40px;
     padding-bottom: 72px; 
+    color: #e0e0e0;
 }
 h1, h2 {
-    color: #2d3a4a;
+    color: #e3eaf2;
     margin-bottom: 16px;
 }
 a {
-    color: #1976d2;
+    color: #7abaff;
     text-decoration: none;
     transition: color 0.2s;
 }
 a:hover {
-    color: #b0c9ec;
+    color: #a3d8ff;
     text-decoration: underline;
 }
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 16px;
-    background: #fafbfc;
+    background: #23272a;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -39,15 +41,15 @@ th, td {
     text-align: left;
 }
 th {
-    background: #e3eaf2;
-    color: #2d3a4a;
+    background: #202225;
+    color: #fafafa;
     font-weight: 600;
 }
 tr:nth-child(even) {
-    background: #f3f6fa;
+    background: #202225;
 }
 tr:hover {
-    background: #e3eaf2;
+    background: #2d3136;
 }
 ul {
     list-style: none;
@@ -57,10 +59,11 @@ li {
     margin-bottom: 8px;
 }
 .btn, a.btn, button.btn, input[type="submit"].btn, input[type="button"].btn {
+    padding-bottom: 10px;
     font-size: medium;
     display: inline-block;
     padding: 8px 18px;
-    background: #1976d2;
+    background: #2d8cf0;
     color: #fff !important;
     border-radius: 6px;
     text-decoration: none;
@@ -71,9 +74,11 @@ li {
     border: none;
     cursor: pointer;
     height: 37px;
+    /* padding-block: 6px; */
+    /* padding-inline: 6px; */
 }
 .btn:hover, a.btn:hover, button.btn:hover, input[type="submit"].btn:hover, input[type="button"].btn:hover {
-    background: #0d47a1;
+    background: #186bb5;
     color: #fff !important;
     text-decoration: none;
 }
@@ -82,6 +87,10 @@ li {
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
+    background: #23272a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
 }
 .loggingBtn{
     width: 100%;
@@ -93,9 +102,31 @@ li {
     transform: translate(-50%, -50%);
     font-size: 2.5em;
     font-weight: 600;
-    color: #2d3a4a;
+    color: #e3eaf2;
     text-align: center;
     white-space: nowrap;
+}
+input, select, textarea {
+    background: #23272a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 6px 0;
+    font-size: 1em;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2d8cf0;
+    background: #1a1d1f;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: #23272a;
+}
+::-webkit-scrollbar-thumb {
+    background: #2d3136;
+    border-radius: 5px;
 }
 html {
     overflow-y: scroll;
@@ -104,10 +135,10 @@ html {
 .master-header, .footer {
     width: 100%;
     min-height: 48px;
-    background: rgba(255,255,255,0.75);
+    background: rgba(35,39,42,0.75);
     position: fixed;    
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 .master-header
 {
@@ -120,6 +151,7 @@ html {
     bottom:0;
     right:0;
 }
+
 .divniput
 {
     display: flex;
@@ -132,15 +164,17 @@ html {
     margin-right: 8px;
     margin-bottom:18px;
 }
+
 .tableContainer
 {
     display: flex; 
     column-gap: 30px;
     margin-bottom: 16px;
 }
+
 .statisticsCard, .studentDetailCard
 {
-    background-color: #c5c1be;
+    background-color: #3a3e41;
     box-shadow: #52565a 0px 2px 8px;
     opacity: 0.9;
     width: 100%;
