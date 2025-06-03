@@ -2,11 +2,18 @@
 
 This is a modern Flask web application for managing school classes, students, lessons, and grades. It demonstrates best practices in web/API development, database integration, authentication, and UI/UX design using **Flask** and **SQLite**.
 
+## Virtual environment
+Virtual environment is a local storage of python libraries. Use this method when you don't want to install the libraries to your global folder
+1. Run the followinig command `python -m venv venv` This will cerate a folder named `venv` containing your virtual environment
+2. Activate it in the terminal as following `.\venv\Scripts\Activate
+3. You should see `(venv)` at the start of your promt
+4. You can install the requirements in the virtual environment
+
 ## How to Run
 1. Open a terminal in the project folder.
-2. Install dependencies:
+2. Install dependencies (you have to specify the full path the the `requirements.txt`):
    ```powershell
-   pip install -r requirements.txt
+   pip install -r .\Extra\WebWithFlask\requirements.txt
    ```
 3. Initialize the database (only needed once):
    ```powershell
