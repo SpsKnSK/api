@@ -54,14 +54,12 @@ def student_create():
 
 
 def parse_student_form(form):
-    return {
-        "name": form.get("name", ""),
-        "surname": form.get("surname", ""),
-        "dob": form.get("dob", ""),
-        "address": form.get("address", ""),
-        "sex": form.get("sex", "M"),
-        "class_id": int(form.get("class_id", 0)),
-    }
+    return {k: form.get(k, "") for k in ["name", "surname", "dob", "address", "sex"]}
+
+
+def parse_class_id_form(form):
+    class_id = form.get("class_id", "")
+    return int(class_id) if class_id.isdigit() else 0
 
 
 def parse_lesson_grades(form):
@@ -95,9 +93,8 @@ def student_edit(student_id):
                 dob=student_data["dob"],
                 address=student_data["address"],
             )
-            schoolDB.add_student_to_class(
-                student_id=student_id, class_id=student_data["class_id"]
-            )
+            class_id = parse_class_id_form(request.form)
+            schoolDB.add_student_to_class(student_id=student_id, class_id=class_id)
             for lesson_id, grade in lesson_grades:
                 schoolDB.add_student_lesson(
                     student_id=student_id,
@@ -112,7 +109,7 @@ def student_edit(student_id):
             student.dob = student_data["dob"]
             student.address = student_data["address"]
             student.sex = student_data["sex"]
-            student.classId = student_data["class_id"]
+            student.classId = parse_class_id_form(request.form)
             schoolDB.update_student(student)
             for lesson_id, grade in lesson_grades:
                 schoolDB.update_student_lesson(lesson_id, grade)
