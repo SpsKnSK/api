@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}School Classes{% endblock %}</title>
+    <link id="theme-style" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    {% block head %}{% endblock %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggledark = document.getElementById('toggle-dark');
+            const themeStyle = document.getElementById('theme-style');
+            const darkCss = "{{ url_for('static', filename='dark.css') }}";
+            const lightCss = "{{ url_for('static', filename='style.css') }}";
+
+            function setTheme(dark) {
+                themeStyle.href = dark ? darkCss : lightCss;
+                toggledark.textContent = dark ? '☀️' : '🌙';
+                localStorage.setItem('darkMode', dark ? '1' : '0');
+            }
+
+            if (localStorage.getItem('darkMode') === '1') {
+                setTheme(true);
+            }
+
+            if (toggledark) {
+                toggledark.addEventListener('click', function() {
+                    setTheme(themeStyle.href.indexOf('dark.css') === -1);
+                });
+            }
+        });
+    </script>
+    
+</head>
+<body>
+    <div class="master-header">
+        {% if session.get('logged_in') %}
+            <form action="{{ url_for('classes.index') }}" method="get" style="display:inline; float:left; margin: 16px 24px 16px 16px;">
+                <button class="btn" type="submit">Back to classes</button>
+            </form>
+        {% endif %}
+            <div class="header-title">{% block header_title %}School Classes{% endblock %}</div>
+        {% if session.get('logged_in') %}
+            <form action="{{ url_for('auth.logout') }}" method="get" style="display:inline; float:right; margin: 16px 24px 0 0;">
+                <span style="margin-right: 10px;">Logged in as: <strong>{{user_name}}</strong></span>
+                <button class="btn" type="submit">Logout</button>
+            </form>
+        {% endif %}
+        <div style="clear:both;"></div>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="footer">
+        <p style="display:inline; float:left; margin: 16px 24px 16px 16px;">&copy; School Classes Application</p>
+        <button class="btn" id="toggle-dark" style="display:inline; float:right; margin: 16px 24px 16px 16px; padding:5px; width: 90px;">Toggle Dark Mode</button>
+    </div>     
+</body>
+</html>

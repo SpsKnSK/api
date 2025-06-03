@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}{{ student.surname }} {{ student.name }}{% endblock %}
+{% block header_title %}&#127891; {{ student.surname }}, {{ student.name }}{% endblock %}
+{% block content %}  
+<div class="tableContainer">
+    <div style="width: 50%;" class="studentDetailCard">
+        <h2>Details</h2>
+        <table>
+            <tr><td style="width: 30%;"><strong>Name</strong></td><td style="width: 70%;">{{ student.name }}</td></tr>
+            <tr><td><strong>Surname</strong></td><td>{{ student.surname }}</td></tr>
+            <tr><td><strong>Date of Birth</strong></td><td>{{ student.dob.strftime('%Y-%m-%d') }}</td></tr>
+            <tr><td><strong>Age</strong></td><td>{{ student.age() }}</td></tr>
+            <tr><td><strong>Address</strong></td><td>{{ student.address }}</td></tr>
+            <tr><td><strong>Sex</strong></td>
+                <td>
+                    {% if student.sex == 'M' %}
+                        <span style="font-size:1.2em;">&#9794;</span> Male
+                    {% elif student.sex == 'F' %}
+                        <span style="font-size:1.2em;">&#9792;</span> Female
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr><td><strong>Class</strong></td><td><a href="{{ url_for('classes.class_detail', class_id=student.classId) }}">{{ student.className }}</a></td></tr>
+        </table>
+    </div>
+    
+    <div style="width: 50%;" class="studentDetailCard">
+        <h2>Grades</h2>
+        <table>
+            <tr>
+                <th>Lesson</th>
+                <th>Grade</th>
+            </tr>
+            {% for l in lessons %}
+            <tr>
+                <td style="width: 30%;">
+                    <span style="cursor: pointer; border-bottom: 1px dotted #888;" title="{{ l.description }}">
+                        <strong style="color:#1976d2;">&#9432;</strong>
+                    </span>
+                    {{ l.name }}
+                </td>
+                <td style="width: 70%;">{{ l.grade }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td><strong>Average:</strong></td>
+                <td><strong>{% if lessons %}{{ (lessons | map(attribute='grade') | sum / lessons | length) | round(2) }}{% else %}-{% endif %}</strong></td>
+            </tr>
+        </table>
+    </div>
+    
+</div>  
+
+
+{% if 'admin' in session['roles'] %}
+    <a class="btn" href="{{ url_for('students.student_edit', student_id=student.id) }}">Edit Student</a>
+{% endif %}
+
+
+{% endblock %}

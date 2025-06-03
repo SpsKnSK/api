@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}{% if student.id == 0 %}Create Student{% else %}Edit: {{student.surname}}, {{student.name}}{% endif %}{% endblock %}
+{% block header_title %}{% if student.id == 0 %}Create Student{% else %}Edit: {{student.surname}}, {{student.name}}{% endif %}{% endblock %}
+{% block content %}
+<form method="POST" action="{{ url_for('students.student_edit', student_id = student.id) }}">
+    <table>
+        <tr>
+            <td style="width: 30%;"><strong><label for="name">Name:</label></strong></td>
+            <td style="width: 70%;"><input class="defaultInput" type="text" id="name" name="name" value="{{ student.name }}" required></td>
+        </tr>
+        <tr>
+            <td><strong><label for="surname">Surname:</label></strong></td>
+            <td><input class="defaultInput" type="text" id="surname" name="surname" value="{{ student.surname }}" required></td>
+        </tr>
+        <tr>
+            <td><strong><label for="dob">Date of Birth:</label></strong></td>
+            <td><input class="defaultInput" type="text" id="dob" name="dob" value="{{ student.dob }}" required pattern="\d{4}-\d{1,2}-\d{1,2}" title="YYYY-MM-DD"></td>
+        </tr>
+        <tr>
+            <td><strong><label for="address">Address:</label></strong></td>
+            <td><input class="defaultInput" type="text" id="address" name="address" value="{{ student.address }}" required></td>
+        </tr>
+        <tr>
+            <td><strong><label for="sex">Sex:</label></strong></td>
+            <td>
+                <select class="defaultInput" id="sex" name="sex" required>
+                    <option value="M" {% if student.sex == 'M' %}selected{% endif %}>Male</option>
+                    <option value="F" {% if student.sex == 'F' %}selected{% endif %}>Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><strong><label for="class_id">Class:</label></strong></td>
+            <td>
+                <select class="defaultInput" id="class_id" name="class_id" required>
+                    <option value="">-- Select Class --</option>
+                    {% for cls in all_classes %}
+                        <option value="{{ cls.id }}" {% if student.classId == cls.id %}selected{% endif %}>{{ cls.name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+    </table>
+    {% if lessons %}
+    <h2>Grades</h2>
+    <table>
+        <tr>
+            <th style="width: 30%;">Lesson</th>
+            <th style="width: 70%;">Grade</th>
+        </tr>
+        {% for l in lessons %}
+        <tr>
+            <td>
+                <span style="cursor: pointer; border-bottom: 1px dotted #888;" title="{{ l.description }}">
+                    <strong style="color:#1976d2;">&#9432;</strong>
+                </span>
+                {{ l.name }}
+            </td>
+            <td><input class="defaultInput" type="number" min="1" max="5" maxlength="1" id="student_lesson_{{ l.id }}" name="student_lesson_{{ l.id }}" value="{{ l.grade }}" required></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <input type="hidden" name="_method" value="{{method}}">
+    <button class="btn" id="saveBtn" type="submit">Save</button>
+    {% if student.id != 0 %}
+    <a class="btn" href="{{ url_for('students.student_detail', student_id=student.id) }}">Cancel</a>
+    {% else %}
+    <a class="btn" href="{{ url_for('classes.index') }}">Cancel</a>
+    {% endif %}
+</form>
+{% endblock %}

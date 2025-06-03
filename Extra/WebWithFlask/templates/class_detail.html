@@ -1,0 +1,123 @@
+<script>
+function toggleStats() {
+    var stats = document.getElementById('statsTable');
+    var btn = document.getElementById('toggleStatsBtn');
+    if (stats.style.display === 'none') {
+        stats.style.display = '';
+        btn.textContent = 'Hide Statistics';
+    } else {
+        stats.style.display = 'none';
+        btn.textContent = 'Show Statistics';
+    }
+}
+// Student search filter
+window.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('studentSearch');
+    const studentsTable = document.getElementById('studentsTable');
+    if (searchInput && studentsTable) {
+        searchInput.addEventListener('keyup', function() {
+            const filter = searchInput.value.toLowerCase();
+            const rows = studentsTable.getElementsByTagName('tr');
+            for (let i = 1; i < rows.length; i++) { // skip header
+                // Only filter rows with the expected number of cells (avoid accidental header/footer rows)
+                if (rows[i].cells.length >= 2) {
+                    const surname = rows[i].cells[0].textContent.toLowerCase();
+                    const name = rows[i].cells[1].textContent.toLowerCase();
+                    if (surname.includes(filter) || name.includes(filter)) {
+                        rows[i].style.display = '';
+                    } else {
+                        rows[i].style.display = 'none';
+                    }
+                }
+            }
+        });
+    }
+});
+</script>
+
+{% extends 'base.html' %}
+{% block title %}{{ cls.name }}{% endblock %}
+{% block header_title %}Class: {{ cls.name }}{% endblock %}
+{% block content %}
+<button class="btn" type="button" onclick="toggleStats()" id="toggleStatsBtn">Show Statistics</button>
+<div id="statsTable" style="display:none; margin-top: 16px;">
+<h2>Statistics</h2>
+{% set all_grades = [] %}
+{% set lesson_averages = [] %}
+{% set male_grades = [] %}
+{% set female_grades = [] %}
+{% for l in lessons %}
+    {% set _ = all_grades.append(l.grade) %}
+    {% if l.sex == 'M' %}
+        {% set _ = male_grades.append(l.grade) %}
+    {% elif l.sex == 'F' %}
+        {% set _ = female_grades.append(l.grade) %}
+    {% endif %}
+{% endfor %}
+<div class="tableContainer" style="width: 100%;">
+    <div class="tableContainer statisticsCard">
+        <h3>All students</h3>
+        <div>
+            <h3>{% if all_grades %}{{ (all_grades | sum / all_grades | length) | round(2) }}{% else %}-{% endif %}</h3>
+        </div>
+    </div>
+    <div class="statisticsCard">
+        <h3>Average by sex</h3>
+        <table style="width: 100%;">
+                <tr><td style="width: 60%;"><span style="font-size:1.2em;">&#9794;</span> Male</td><td style="width: 40%;">{% if male_grades %}{{ (male_grades | sum / male_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
+                <tr><td ><span style="font-size:1.2em;">&#9792;</span> Female</td><td >{% if female_grades %}{{ (female_grades | sum / female_grades | length) | round(2) }}{% else %}-{% endif %}</td></tr>
+            </table>
+    </div>
+    <div class="statisticsCard">
+        <h3>Average by lesson </h3>
+        <table style="width: 100%;">
+                {% for l in lessons | map(attribute='name') | unique | sort %}
+                {% set lesson_grades = lessons | selectattr('name', 'equalto', l) | map(attribute='grade') | list %}
+                <tr>
+                    <td style="width: 60%;">{{ l }}</td>
+                    <td style="width: 40%;">{% if lesson_grades %}{{ (lesson_grades | sum / lesson_grades | length) | round(2) }}{% else %}-{% endif %}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+            
+        </td></tr>
+    <tr><td></td>
+        <td>
+            
+        </td></tr>
+</table>
+</div>
+<h2>Students</h2>
+{% if students %}
+<input type="text" id="studentSearch" class="defaultInput" placeholder="Search by name or surname..." style="margin-bottom:16px;max-width:300px;">
+<table id="studentsTable">
+    <tr>
+        <th style="width: 20%;">Surname</th>
+        <th style="width: 20%;">Name</th>
+        <th style="width: 10%;">Age</th>
+        <th style="width: 20%;">Average Grade</th>
+        <th style="width: 30%;">Action</th>
+    </tr>
+    {% for s in students %}
+    <tr>
+        <td>{{ s.surname }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.age() }}</td>
+        <td>{{ s.averageGrade }}</td>
+        <td>
+            <a class="btn" href="{{ url_for('students.student_detail', student_id=s.id) }}">View</a>
+            {% if 'admin' in session['roles']%}
+            <form method="GET" action="{{ url_for('students.student_edit', student_id=s.id) }}">
+                <button class="btn" type="submit">Edit</button>
+            </form>
+            {% endif %}
+        </td>        
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No students in this class.</p>
+{% endif %}
+{% endblock %}

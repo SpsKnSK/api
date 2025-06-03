@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fa;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 80%;
+    margin: 80px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px 40px 40px 40px;
+    padding-bottom: 72px; 
+}
+h1, h2 {
+    color: #2d3a4a;
+    margin-bottom: 16px;
+}
+a {
+    color: #1976d2;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #b0c9ec;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    background: #fafbfc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+}
+th {
+    background: #e3eaf2;
+    color: #2d3a4a;
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background: #f3f6fa;
+}
+tr:hover {
+    background: #e3eaf2;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 8px;
+}
+.btn, a.btn, button.btn, input[type="submit"].btn, input[type="button"].btn {
+    font-size: medium;
+    display: inline-block;
+    padding: 8px 18px;
+    background: #1976d2;
+    color: #fff !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 12px;
+    transition: background 0.4s;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    height: 37px;
+}
+.btn:hover, a.btn:hover, button.btn:hover, input[type="submit"].btn:hover, input[type="button"].btn:hover {
+    background: #0d47a1;
+    color: #fff !important;
+    text-decoration: none;
+}
+.defaultInput{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+.loggingBtn{
+    width: 100%;
+}
+.header-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #2d3a4a;
+    text-align: center;
+    white-space: nowrap;
+}
+html {
+    overflow-y: scroll;
+}
+
+.master-header, .footer {
+    width: 100%;
+    min-height: 48px;
+    background: rgba(255,255,255,0.75);
+    position: fixed;    
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.master-header
+{
+    top: 0;
+    left: 0;
+}
+
+.footer
+{
+    bottom:0;
+    right:0;
+}
+.divniput
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.loginIcon
+{
+    font-size:1.4em; 
+    margin-right: 8px;
+    margin-bottom:18px;
+}
+.tableContainer
+{
+    display: flex; 
+    column-gap: 30px;
+    margin-bottom: 16px;
+}
+.statisticsCard, .studentDetailCard
+{
+    background-color: #c5c1be;
+    box-shadow: #52565a 0px 2px 8px;
+    opacity: 0.9;
+    width: 100%;
+    padding: 16px;
+    height: 350;
+    border-radius: 16px;
+}

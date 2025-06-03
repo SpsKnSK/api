@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}School Classes{% endblock %}
+{% block header_title %}School Classes{% endblock %}
+
+{% block content %}
+<form method="GET" action="{{ url_for('students.student_create') }}">
+    <button class="btn" type="submit">Create New Student</button>
+</form>
+<table>
+    <tr>
+        <th>Class Name</th>
+        <th>Number of Students</th>
+        <th>Girls</th>
+        <th>Boys</th>
+        <th>Class Lesson Average</th>
+    </tr>
+    {% for cls in classes %}
+        <tr>
+            <td><a class="btn" href="{{ url_for('classes.class_detail', class_id=cls.id) }}">{{ cls.name }}</a></td>
+            <td>{{ cls.studentCount }}</td>
+            <td>{{ cls.girlsCount }}</td>
+            <td>{{ cls.boysCount }}</td>
+            <td>{{ cls.averageGrade }}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

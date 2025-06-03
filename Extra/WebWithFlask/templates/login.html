@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block header_title %}Login{% endblock %}
+{% block content %}
+<div class="container" style="max-width: 400px; margin-top: 80px;">
+    {% if error %}
+        <div style="color: #b71c1c; margin-bottom: 16px;">{{ error }}</div>
+    {% endif %}
+    <form method="post">
+        <div class="divniput">
+            <span class="loginIcon">&#128100;</span>
+            <input class="defaultInput" type="text" id="username" name="username" required placeholder="Username" style="flex:1;">
+        </div>
+        <div class="divniput">
+            <span class="loginIcon">&#128274;</span>
+            <input class="defaultInput" type="password" id="password" name="password" required placeholder="Password" style="flex:1;">
+        </div>
+        <button class="btn loggingBtn" type="submit">Login</button>
+    </form>
+</div>
+{% endblock %}
