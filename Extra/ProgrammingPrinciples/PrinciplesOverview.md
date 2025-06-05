@@ -7,6 +7,7 @@
     - Don’t copy-paste code. Reuse code using functions.
 ## 💡 KISS – Keep It Simple, Stupid
 
+### Example
 ❌ Bad Example (Too complicated)
 ```py
 def add_numbers(a, b):
@@ -31,8 +32,40 @@ def add_numbers(a, b):
 - Easy to read, easy to understand.
 - No unnecessary code.
 
-## 💡 YAGNI – You Ain’t Gonna Need It
+### Example
+❌ Bad Example (Unnecessarily complex loop)
+```py
+def print_numbers():
+    i = 0
+    while i < 5:
+        if i == 0:
+            print(0)
+        elif i == 1:
+            print(1)
+        elif i == 2:
+            print(2)
+        elif i == 3:
+            print(3)
+        elif i == 4:
+            print(4)
+        i += 1
+```
+❗ Why it's bad:
+- The code is much longer than needed.
+- It repeats similar logic for each number.
 
+✅ Good Example (Simple loop)
+```py
+def print_numbers():
+    for i in range(5):
+        print(i)
+```
+👍 Why it’s good:
+- Much shorter and easier to read.
+- Uses a simple for loop to do the same thing.
+
+## 💡 YAGNI – You Ain’t Gonna Need It
+### Example
 ❌ Bad Example (Adding features you don’t need yet)
 ```py
 def calculate_area(shape, length, width=0):
@@ -61,7 +94,34 @@ def calculate_rectangle_area(length, width):
 👍 Why it’s good:
 - Only includes what’s needed right now.
 - You can add new shapes later if you actually need them.
+
+### Example
+❌ Bad Example (Adding unused parameters and logic)
+```py
+def greet_user(name, greeting="Hello", language=None):
+    if language == "es":
+        print(f"Hola, {name}!")
+    elif language == "fr":
+        print(f"Bonjour, {name}!")
+    else:
+        print(f"{greeting}, {name}!")
+```
+❗ Why it's bad:
+- Adds support for multiple languages even if you only need English.
+- Makes the function harder to understand and maintain.
+
+✅ Good Example (Only what you need)
+```py
+def greet_user(name):
+    print(f"Hello, {name}!")
+```
+
+👍 Why it’s good:
+- Only includes the required functionality.
+- Easy to read and use.
+
 ## 💡 DRY – Don’t Repeat Yourself
+### Example
 ❌ Bad Example (Copy-pasted code)
 ```py
 def print_user1():
@@ -92,6 +152,31 @@ print_user("Bob", 17)
 👍 Why it’s good:
 - Code is shorter and easier to change.
 - You reuse the print logic.
+
+### Example
+❌ Bad Example (Repeated calculation logic)
+```py
+def area_rectangle(length, width):
+    return length * width
+
+def area_square(side):
+    return side * side
+```
+❗ Why it's bad:
+- The logic for area calculation is duplicated.
+- If you want to change how area is calculated, you have to update it in multiple places.
+
+✅ Good Example (Reuse with a function)
+```py
+def area_rectangle(length, width):
+    return length * width
+
+def area_square(side):
+    return area_rectangle(side, side)
+```
+👍 Why it’s good:
+- The calculation logic is written only once.
+- Easier to update and maintain.
 
 ## ✅ Summary Table
 | Principle | What It Means                 | Why It's Good              | Tip for Students             |
