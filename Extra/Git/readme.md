@@ -20,9 +20,8 @@ Git is a distributed version control system that tracks changes in your code, al
 - **[Git Branches](./02_branching.md)** - Branches, branching strategies
 - **[Git Merge](./03_merging.md)** - Step-by-step guide for common Git merging strategies 
 - **[Git Merge](./04_remote.md)** - Working with remote repositories and collaboration 
+- **[Git Collaboration](./05_collaborationWorkflowe.md)** - Working with remote repositories and collaboration
 
-### Coming Soon:
-- **Git Remote** - Working with remote repositories and collaboration
 - **Git Merge Conflicts** - How to resolve merge conflicts like a pro
 - **Git Best Practices** - Tips and conventions for clean Git history
 
