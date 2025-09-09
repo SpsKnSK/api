@@ -134,6 +134,17 @@ gitGraph
 - **Working alone?** You might be okay with just the main branch.
 - **In a team?** Learn Git Flow or choose a strategy that fits your workflow.
 
+# 💡 Why It's Better to Branch the Whole Project (Not Just Subfolders)
+
+Branching the entire project folder keeps all related changes together in one place. This is important because:
+- Most features or fixes touch multiple parts of the project (e.g., code, styles, config)
+- It’s easier to track, test, and review when everything is in one branch
+- Git is designed to manage the full project, not individual folders
+
+Creating separate branches for each subfolder can lead to confusion, conflicts, and missing pieces — especially in larger or team projects.
+
+In short: **Branch for the feature, not the folder.**
+
 # 🎉 Final Thought
 
 Branching is like having a "sandbox" to play in — you can try new things without fear of breaking your main work. Once you're confident, you can bring your changes back into the main project. 💪
