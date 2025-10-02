@@ -1,54 +1,58 @@
 # Algoritmusok és  tulajdonságaik
 
-## Az algoritmus
-- Azon instrukciók halmazát, mely egy feladat megoldásához vezetnek, **algoritmusnak** nevezzük, a hétköznapokban is lépten-nyomon találkozunk.
-- **Instrukciók** sokféleképpen megadhatók: szóban, rajzban, írásban, magyar nyelven, angol nyelven vagy programozási nyelven.
-- Az algoritmus egy út a felvetődött probléma megoldásához. 
-    - Legyen a feladat például két darab filctoll szerzése. 
+## Mit jelent az algoritmus?
+- Az **algoritmus** egy lépésről-lépésre szóló útmutató, ami segít megoldani egy feladatot. Mindennapi életben is használunk algoritmusokat!
+- Ezeket az utasításokat sokféleképpen leírhatjuk: beszélhetünk róla, lerajzolhatjuk, leírhatjuk magyarul vagy akár programozási nyelven is.
+- Az algoritmus egyszerűen egy recept a probléma megoldásához.
+    - Például: hogyan szerezzünk be két filctollat? 
 
 ## Fajtái
 
-1. Lehet, hogy az algoritmus néhány elemi tevékenység egymás után végrehajtandó (**szekvenciális**) sorozata, mint például.
-    - Menj be a Tanszékre!
-    - Keresd meg az adminisztrátort!
+1. **Egyszerű lépések egymás után** (**szekvencia**) - mint egy recept:
+    - Menj be az irodába!
+    - Keresd meg a tanárt!
     - Kérj tőle két filctollat!
-    - Hozd be a filctollat az előadóba!
+    - Hozd vissza a terembe!
 
-1. Lehet, hogy a megoldás bizonyos pontokon nem látható előre és **feltételektől függően** más és más megoldást kell választanunk. Ilyen például:
-    - Menj be a Tanszékre!
-    - Keresd meg az adminisztrátort!
-    - <ins>Ha</ins> megtalálod, <ins>akkor</ins>
+2. **Döntés a helyzetnek megfelelően** (**elágazás**) - választanunk kell:
+    - Menj be az irodába!
+    - Keresd meg a tanárt!
+    - <ins>Ha</ins> ott van, <ins>akkor</ins>
         - Kérj tőle két filctollat!
-    - <ins>különben</ins>
+    - <ins>Ha nincs ott</ins>
         - Keress máshol filctollat!
-    - Gyere vissza az előadóba!
+    - Gyere vissza a terembe!
 
-1. Előfordulhat, hogy a megoldás érdekében valamely tevékenységet többször is végre kell hajtani, vagyis ismételni **(iterálni)** kell.
-    - Csináld kétszer
-        - Kérj tőle egy darab filctollat!
-Az iterációt ciklusnak is szokás nevezni. 
+3. **Ismétlés** **(ciklus)** - amikor valamit többször kell csinálni:
+    - Csináld kétszer:
+        - Kérj egy filctollat!
+    
+Az ismétlést ciklusnak is hívjuk, mert "körbe-körbe" járunk vele. 
 
-## Algoritmus az informatikában
+## Algoritmus a programozásban
 
-Az algoritmus struktúráját tehát **szekvenciák**, **szelekciók** illetve **iterációk** adják, amelyeket tetszőleges mélységben egymásba lehet ágyazni.
+Tehát minden algoritmus ezekből a részekből áll: **lépések egymás után**, **döntések** és **ismétlések**. Ezeket kombinálhatjuk és egymásba ágyazhatjuk.
 
-Az algoritmus készítését algoritmizálásnak nevezzük.
+Az algoritmus megtervezését algoritmizálásnak hívjuk.
 
-Három féle módon írhatjuk le.
-- Folyamatábra segítségével
-- Szóban
-- Struktúrogram segítségével
+Háromféleképpen írhatjuk le:
+- **Folyamatábrával** (rajzzal)
+- **Szavakkal** (leírással)
+- **Struktúrogrammal** (speciális rajz)
 
 ## Folyamatábra
+
+A folyamatábra olyan, mint egy térkép a programnak:
 
 ```mermaid
 flowchart TB
     kezdetVagyVeg([Kezdet vagy vég])
-    parancs[Parancs]
-    if{feltetel, elagazas}
+    parancs[Utasítás/Parancs]
+    if{Kérdés/Döntés}
 ```
-A legnagyobb szám kiválasztása
-> `:=` legyen egyenlő
+
+**Példa:** A legnagyobb szám kiválasztása három szám közül
+> A `:=` jel azt jelenti: "legyen egyenlő"
 ```mermaid
 flowchart TB
 	Kezdet([Kezdet])
@@ -73,31 +77,36 @@ flowchart TB
     Kimenet --> Vege
 ```
 
-## Az algoritmus tulajdonságai
-### Általánosság
-Ahhoz, hogy az algoritmusunk alkalmas legyen több eltérő, de azonos típusú feladat megoldására, általánosan kell megírnunk.
-- Például négyzet területének kiszámítása.
-### Determinisztikusság
-Ugyanazon bemeneti értékek megadása után, az algoritmus kimenetének is ugyanolyan eredményt kell adnia.
+# Az algoritmus fontos tulajdonságai
 
-## Feladat
+## Általánosság
+Az algoritmus legyen használható többféle hasonló feladatra, ne csak egy konkrét esetre.
+- Például: bármilyen négyzet területét ki tudjuk számítani, nem csak egy konkrét négyzetét.
 
-- Találjatok ki egy példát a mindennapi életből olyan tevékenységre, ami algoritmussal leírható!
-- Ceruzával rajzoljatok hozzá folyamatábrát!
+## Megbízhatóság
+Ha ugyanazokat az adatokat adjuk meg, mindig ugyanazt az eredményt kell kapnunk.
+- Például: 5+3 mindig 8, nem egyszer 8, máskor 9.
 
-## Feladat
-- Diák irányítása filctoll megszerzéséért a teremben egyszerű parancsokkal
+# Feladatok
 
-# Python
+## 1. feladat
+- Gondoljatok egy mindennapi tevékenységre (pl. kávé főzése, bicikli javítása), amit lépésekre lehet bontani!
+- Rajzoljatok hozzá egyszerű folyamatábrát!
 
-## A Python nyelv szerkezete
+## 2. feladat
+- Párosával dolgozzatok: az egyik "robot", a másik "programozó"
+- A programozó adjon egyszerű parancsokat a robotnak, hogy szerezzen be egy filctollat a teremben
+
+# Python programozás
+
+## Hogyan épül fel egy Python program?
 
 ```py
-# Importálások (modulok és csomagok betöltése)
+# Könyvtárak betöltése (ha szükséges)
 import modul_nev
 from masik_modul import fuggveny_nev
 
-# Globális változók deklarálása (opcionális)
+# Változók létrehozása (az egész programban használható)
 global_valtozo = 10
 
 # Osztályok definiálása
@@ -142,39 +151,38 @@ def masik_fuggveny():
     pass
 ```
 
-## Változók és konstansok
-- `int` egész számok
-- `str` karakterlánc
-- `float` valós számok
-- `datetime` dátum
-- `list[]` lista, tömb
-- `dict[,]` szótár
+## Milyen típusú adatokat tárolhatunk?
+- `int` - egész számok (pl. 5, -3, 100)
+- `str` - szöveg (pl. "Hello", "Péter")
+- `float` - tizedes számok (pl. 3.14, -2.5)
+- `list[]` - lista/tömb több adat tárolására (pl. [1, 2, 3])
+- `dict{}` - szótár kulcs-érték párokhoz (pl. {"név": "Anna"})
 
 ## Feladat
 Írjátok ki a képernyőre a következő üdvözletet `Hello!` a `print()` függvény segítésgével
 
-## Kód írása
-- Új szkript létrehozása
-- Megírt szkript mentése
-    - Midnenki a saját nevéhez tartozó könyvtárba!
-    - Gyakori mentés (Ctrl+S), nem csak ha teljesen kész a program!!!
-- Szkript futtatása (F5, vagy a Fájl menüből)
+## Hogyan írjunk kódot?
 
-# A Python programozói környezet
+1. **Új fájl létrehozása** - `.py` végződéssel
+2. **Gyakori mentés** (Ctrl+S) - ne csak a végén!
+   - Mindenki a saját mappájába mentsen!
+3. **Program futtatása** (F5 gomb vagy futtatás gomb)
 
-## Alapvető tudnivalók
+# Miért jó a Python?
 
-- Ingyenesen letölthető
-- Bármilyen oprendszeren futtatható
-- Kis helyigény
-- Számtalan könyvtár -> Nagyon sok területen felhasználható
-    - Alapvető programozás
-    - Vezérléstechnika
-    - Adatbáziskezelés
-    - Stb.
+## Előnyök
 
-## A környezetről közelebbről
-- Szintaxis és fejlettség alapján a C nyelvhez hasonlít. 
-- Két fő ablakkal dolgozunk.
-    - **Shell** – itt futtatjuk a megírt programot
-    - **Script szerkesztő** – itt írjuk a programokat
+- **Ingyenes** - bárki letöltheti és használhatja
+- **Minden gépen működik** - Windows, Mac, Linux
+- **Könnyen tanulható** - egyszerű szavakkal írhatunk
+- **Sok mindenre használható:**
+    - Játékok készítése
+    - Weboldalak
+    - Adatok elemzése
+    - Robotok programozása
+    - És még sok más!
+
+## VS Code környezet
+- **Szerkesztő** - itt írjuk a kódot
+- **Terminal** - itt futtatjuk a programot és látjuk az eredményt
+- **Fájlkezelő** - itt látjuk a projektünk fájljait

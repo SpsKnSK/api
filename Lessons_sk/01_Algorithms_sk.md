@@ -1,54 +1,88 @@
 # Algoritmy a ich vlastnosti
 
-## Algoritmus
-- Množinu inštrukcií, ktoré vedú k riešeniu úlohy, nazývame **algoritmus**, s nimi sa stretávame každý deň.
-- **Inštrukcie** môžu byť udelené rôznymi spôsobmi: ústne, kreslením, písaním, maďarským jazykom, anglickým jazykom alebo programovacím jazykom.
-- Algoritmus je cesta k riešeniu nastalého problému.
-    - Máme úlohu získať napríklad dva fixy.
+## Čo je algoritmus?
+- **Algoritmus** je návod## Dôležité vlastnosti algoritmu
+
+### Univerzalita
+Algoritmus by mal byť použiteľný pre viacerok podobných úloh, # Prečo je Python dobrý?
+
+## VS Code prostredie
+- **Editor** - tu píšeme kód
+- **Terminál** - tu spúšťame program a vidíme výsledky
+- **Správca súborov** - tu vidíme súbory našho projektukonkrétny prípad.
+- Napríklad: dokážeme vypočítať plochu hoci akého štvorca, nie len jedného konkrétneho.
+
+### Spolählivosť
+Ak zadáme rovnaké údaje, vždy musíme dostať rovnaký výsledok.
+- Napríklad: 5+3 je vždy 8, nie raz 8 a inokedy 9.a## Úlohy
+
+### 1. úloha
+- Premyslite si nejakú každodennú činnosť (napr. varenie čaju, opravu bicykla), ktorú možno rozdeliť na kroky!
+- Nakreslite k nej jednoduchý vývojový diagram!
+
+### 2. úloha
+- Pracujte v pároch: jeden bude "robot", druhý "programátor"
+- Programátor nech dáva jednoduché príkazy robotovi, aby získal fix v triedek# Python programovanie
+
+## Ako vyzerá Python program?
+
+```py
+# Načítanie knižníc (ak ich potrebujeme)
+import nazov_modulu
+from iny_modul import nazov_funkcie
+# Vytvorenie premenných (použiteľných v celom programe)
+globalna_premenna = 10ám pomôže vyriešiť nejakú úlohu. Používame ich každý deň!
+- Tieto pokyny môžeme zapísať rôzne: môžeme o nich hovoriť, nakresliť ich, napísať slovami alebo aj programovacím jazykom.
+- Algoritmus je jednoducho recept na riešenie problému.
+    - Napríklad: ako získať dva fixy?
 
 ## Typy
 
-1. Algoritmus môže byť sekvencia niekoľkých elementárnych činností vykonávaných za sebou (**sekvenčný**) postup, ako napríklad.
-    - Choďte na oddelenie!
-    - Nájdite správcu!
-    - Požiadajte ho o dva fixy!
-    - Prineste fixy do prednáškovej miestnosti!
+1. **Jednoduché kroky za sebou** (**sekvencia**) - ako recept na varenie:
+    - Choď do kancelárie!
+    - Nájdi učiteľa!
+    - Požiadaj ho o dva fixy!
+    - Vráť sa do triedy!
 
-1. Riešenie môže na určitých bodoch nebyť viditeľné dopredu a bude závislé na **podmienkach**, ktoré musíme vybrať iné a iné riešenie. Napríklad:
-    - Choďte na oddelenie!
-    - Nájdite správcu!
-    - <ins>Ak</ins> ho nájdete, <ins>tak</ins>
-        - Požiadajte ho o dva fixy!
-    - <ins>inak</ins>
-        - Nájdite fixy niekde inde!
-    - Vráťte sa do prednáškovej miestnosti!
+2. **Rozhodovanie podľa situácie** (**vetvenie**) - musíme sa rozhodnúť:
+    - Choď do kancelárie!
+    - Nájdi učiteľa!
+    - <ins>Ak</ins> je tam, <ins>tak</ins>
+        - Požiadaj ho o dva fixy!
+    - <ins>Ak tam nie je</ins>
+        - Nájdi fixy niekde inde!
+    - Vráť sa do triedy!
 
-1. Môže sa stať, že pre riešenie bude nutné niektorú činnosť vykonať viac krát, teda opakovať (**iterovať**).
-    - Urob to dvakrát
-        - Požiadajte ho o jeden fix!
-Iteráciu niekedy nazývame cyklus.
+3. **Opakovanie** **(cyklus)** - keď musíme niečo robiť viackrát:
+    - Urob to dvakrát:
+        - Požiadaj o jeden fix!
+    
+Opakovanie nazývame aj cyklus, lebo "chodíme dokola".
 
-## Algoritmus v informatike
+## Algoritmus v programovaní
 
-Štruktúru algoritmu teda tvoria **sekvencie**, **selekcie** a **iterácie**, ktoré môžu byť ľubovoľne vnorené do seba v ľubovoľnej hĺbke.
+Teda každý algoritmus sa skladá z týchto častí: **kroky za sebou**, **rozhodnutia** a **opakovania**. Môžeme ich kombinovať a vkladať do seba.
 
-Tvorbe algoritmu sa hovorí algoritmizácia.
+Návrh algoritmu sa nazýva algoritmizácia.
 
-Má tri spôsoby zápisu.
-- Pomocou priebehového diagramu
-- Ústne
-- Pomocou štruktúrovanej formy
+Môžeme ho zapísať tromi spôsobmi:
+- **Vývojovým diagramom** (obrázkom)
+- **Slovami** (opisom)
+- **Štruktúrovanou formou** (špeciálny diagram)
 
-## Priebehový diagram
+## Vývojový diagram
+
+Vývojový diagram je ako mapa pre náš program:
 
 ```mermaid
 flowchart TB
     kezdetVagyVeg([Začiatok alebo koniec])
-    parancs[Prikaz]
-    if{podmienka, vetvenie}
+    parancs[Pokyn/Príkaz]
+    if{Otázka/Rozhodnutie}
 ```
-Výber najväčšieho čísla
-> `:=` bude rovné
+
+**Príklad:** Výber najväčšieho čísla z troch čísel
+> Znak `:=` znamená: "nech sa rovná"
 ```mermaid
 flowchart LR
 	Začiatok([Začiatok])
@@ -142,36 +176,41 @@ def ina_funkcia():
     pass
 ```
 
-## Premenné a konštanty
-- `int` celé čísla
-- `str` reťazec znakov
-- `float` desatinné čísla
-- `datetime` dátum
-- `list[]` zoznam, pole
-- `dict[,]` slovník
+## Aké typy údajov môžeme ukladať?
+- `int` - celé čísla (napr. 5, -3, 100)
+- `str` - text (napr. "Ahoj", "Peter")
+- `float` - desatinné čísla (napr. 3.14, -2.5)
+- `list[]` - zoznam pre viac údajov (napr. [1, 2, 3])
+- `dict{}` - slovník pre páry kľúč-hodnota (napr. {"meno": "Anna"})
 
-## Úloha
-Vypíšte na obrazovku pozdrav `Hello!` pomocou funkcie `print()`
+## Prvá úloha
+Vypíšte na obrazovku: `Hello!`
 
-## Písanie kódu
-- Vytvorenie nového skriptu
-- Uloženie napísaného skriptu
-    - Každý nech si uloží do vlastného priečinka (zložky) s menom
-    - Časté ukladanie (Ctrl+S), nielen keď je program úplne hotový!!!
-- Spustenie skriptu (F5 alebo z menu Súbor)
+Použite príkaz `print()`! Takto:
+```python
+print("Hello!")
+```
+
+## Ako píšeme kód?
+
+1. **Vytvorenie nového súboru** - s koncovkou `.py`
+2. **Časté ukladanie** (Ctrl+S) - nie len na konci!
+   - Každý nech si ukláda do svojho priečinka!
+3. **Spustenie programu** (tlačidlo F5 alebo gombík pre spustenie)
 
 # Python programovacie prostredie
 
-## Základné informácie
+## Výhody
 
-- Zdarma na stiahnutie
-- Možnosť spustenia na akomkoľvek operačnom systéme
-- Malá náročnosť na miesto
-- Množstvo knižníc -> Veľmi využiteľný na rôznych oblastiach
-    - Základné programovanie
-    - Riadenie procesov
-    - Správa databáz
-    - Atď.
+- **Zadarmo** - každý si ho môže stiahnuť a používať
+- **Funguje na všetkých počítačoch** - Windows, Mac, Linux
+- **Ľahko sa učí** - môžeme písať jednoduchými slovami
+- **Dá sa použiť na veľa vecí:**
+    - Tvorba hier
+    - Webové stránky
+    - Analýza údajov
+    - Programovanie robotov
+    - A ešte veľa iného!
 
 ## Podrobne o prostredí
 - Z hľadiska syntaxe a pokročilosti sa podobá jazyku C.
