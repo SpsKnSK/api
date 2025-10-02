@@ -265,3 +265,27 @@ HP: ████████░░ (850/1000)
    ```
 
 > **Pro tipp:** Ezeket mind ki tudod próbálni VS Code-ban! 🔥 
+
+## 📝 Gyakorlati kérdések - Ellenőrizd a tudásod!
+1. **Jellemezd a `print()` függvényt, mire szolgál?** (Gondolj a chat üzenetekre! 💬)
+2. **Ha több értéket, változót akarunk használni a `print()` függvényben, hogyan tehetjük azt meg?** 
+3. **Hogyan jelenik meg a `""` üres karakter a képernyőn?** 
+4. **Hogyan jelenik meg a `"\n"` karakter a képernyőn?** 
+5. **Mi a különbség az `5` és az `"5"` között?** (Hint: mint a szint számok vs. gamer tagek! 🏆)
+6. **Mire használjuk a `print()` függvény `sep` paraméterét, mi az alapértelmezett értéke?** Adj példát URL vagy hashtag készítésre!
+7. **Mire használjuk a `print()` függvény `end` paraméterét, mi az alapértelmezett értéke?** Adj példát loading animációra vagy chat üzenetre!
+8. **Változtassátok meg a `sep` paramétert a következő kódban úgy, hogy reális gaming server IP-címet kapjatok:**
+    ```py
+    print(192, 168, 0, 100)
+    ```
+    elvárt kimenet:
+    > 192.168.0.100
+9. **Változtassátok meg az `end` paramétert a következő kódban úgy, hogy egymás mellé írja ki a szöveget, mint egy Twitch chat üzenet:**
+    ```py
+    print('xX_Gamer_Xx:')
+    print('GG! 🔥')
+    ```
+    elvárt kimenet:
+    > xX_Gamer_Xx: GG! 🔥
+
+10. **Mire szolgál a `#` jel a Python kódban?**
