@@ -20,7 +20,7 @@ Ako IDE budeme používať `Visual Studio Code`, kódenie budete mať uľahčen�
   
 ## Pravidlá
 1. :no_mobile_phones: Mobily cez hodiny budete mať mimo vás položené na zvlášť miesto
-2. ✅ Počas hodín môžete používať internet, na riešenie zadaní
+2. ✅ Počas hodín môžete používať internet, na riešenie zadaní, ale hlavne vlastnú hlavu
 3. ✅ Aktivita sa cení 
 4. ✅ Diskusie a skupinu budeme mať na `Discord`e, tam sa môžete pýtať
 5. ✅ Čím viac sa pýtate, tým viac sa naučíte 
@@ -28,11 +28,25 @@ Ako IDE budeme používať `Visual Studio Code`, kódenie budete mať uľahčen�
 7. ✅ Na hodine môžete jesť mimo počítačov
 8. ✅ Na prestávky každý vyjde von, pohyb je dôležitý
 9. ✅ Ak cítite potrebu sa rozhýbať, lebo dlho sedíte, môžete sa poprechádzať, môžete tak urobiť nerušiac ostatných
-10. Využívať môžete len školský počítač, látku, súbory, poznámky si môžete uložiť na vlastný cloud
+10. ✅ Využívať môžete len školský počítač, látku, súbory, poznámky si môžete uložiť na vlastný cloud
 ### Rušenie hodín
 Ak sa niekto rozhodne rušiť hodinu (či už mobilom alebo online hrou), beriem to tak, že sa dobrovoľne prihlásil pre ďalšiu domácu úlohu. Jej kontrola samozrejme zaberá čas od ostatných, čo môže znamenať, že sa na prípadnú písomku budete musieť pripraviť doma.
 
 > Vy rozhodujete, ako sa budeme k sebe správať
+
+## Známkovanie
+Budete mať veľa známok, aby sa lepšie určil priemer, ale to je len nezáväzné číslo. Keď budete na hodinách dávať pozor, robiť úlohy, odovzdávať DÚ na čas a používať jednoduchý sedliacky mozog, dáte to bez ťažkostí. 
+
+| Hranica | Známka |
+|---------|--------|
+|   0     |   5    |
+|  35     |   4    |
+|  50     |   3    |
+|  70     |   2    |
+|  90     |   1    |
+
+## Známky na vysvedčenie
+Berie sa priemer známok, okerm:  priemer nižší, ako **4,00** --> **5** 
 
 ## Poznámky
 To, čo odznie na hodine, môžete si zapisovat do zošita, do google-drive-u. Prepis hodín bude zdielaný s vami, ale doporučujem si robiť vlastné poznámky. 
@@ -52,9 +66,6 @@ Domáce úlohy sú na doma a pre každého zvlášť, budú to náročnejšie ú
 - Úlohy cez kopirák budem hodnotiť nasledovne:
   - Časovo prvá odovzdaná úloha bude oznámkovaná, aj keď to nebude od autora
   - Ostatné úlohy za 5
-
-## Známkovanie
-Budete mať veľa známok, aby sa lepšie určil priemer, ale to je len nezáväzné číslo. Keď budete na hodinách dávať pozor, robiť úlohy, odovzdávať DÚ na čas a používať jednoduchý sedliacky mozog, dáte to bez ťažkostí. 
 
 # HU API :computer: 2. osztály számára 
 
@@ -93,6 +104,17 @@ Amennyiben úgy dönt valaki, hogy az órát zavarni fogja (legyen az mobilozás
 
 > Ti döntésetek, hogyan viselkedjünk egymással
 
+## Értékelés
+Sok jegyet fogtok kapni, így könnyebben meghatározhatjuk az átlagotokat, viszont ez csak egy referencia érték. Ha odafigyelsz az órákon, elvégzed a feladatokat, időben beadod a házi feladatokat, és használod a józan paraszti eszed, akkor könnyedén elsajátítjátok, és elvégzitek a tantárgyat.
+
+| Ponthatár |Jegy |
+|---------|--------|
+|   0     |   5    |
+|  35     |   4    |
+|  50     |   3    |
+|  70     |   2    |
+|  90     |   1    |
+
 ## Jegyzetek
 Ami az órán elhangzik, azt megosztom veletek, viszont ajnálom, hogy készítsetek **saját** jegyzeteket. A saját jegyzet módját rátok bízom (füzet, notebook, GoogleDrive, egyéb)
 
@@ -111,6 +133,3 @@ A házi feladatok otthonra lesznek, és mindenki egyedül dolgozza ki. Ezek a fe
 - A házi feladatok másolását az alábbiak szerint értékelem:
   - Az időrendi sorrend szerint elsőként elküldött feladatot értékelem, függetlenül attól, hogy ki volt a szerző.
   - A többi feladatot 5össel jutalmazom.
-
-## Értékelés
-Sok jegyet fogtok kapni, így könnyebben meghatározhatjuk az átlagotokat, viszont ez csak egy referencia érték. Ha odafigyelsz az órákon, elvégzed a feladatokat, időben beadod a házi feladatokat, és használod a józan paraszti eszed, akkor könnyedén elsajátítjátok, és elvégzitek a tantárgyat.
