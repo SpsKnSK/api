@@ -1,42 +1,12 @@
 # Algoritmy a ich vlastnosti
 
-## Čo je algoritmus?
-- **Algoritmus** je návod## Dôležité vlastnosti algoritmu
-
-### Univerzalita
-Algoritmus by mal byť použiteľný pre viacerok podobných úloh, # Prečo je Python dobrý?
-
-## VS Code prostredie
-- **Editor** - tu píšeme kód
-- **Terminál** - tu spúšťame program a vidíme výsledky
-- **Správca súborov** - tu vidíme súbory našho projektukonkrétny prípad.
-- Napríklad: dokážeme vypočítať plochu hoci akého štvorca, nie len jedného konkrétneho.
-
-### Spolählivosť
-Ak zadáme rovnaké údaje, vždy musíme dostať rovnaký výsledok.
-- Napríklad: 5+3 je vždy 8, nie raz 8 a inokedy 9.a## Úlohy
-
-### 1. úloha
-- Premyslite si nejakú každodennú činnosť (napr. varenie čaju, opravu bicykla), ktorú možno rozdeliť na kroky!
-- Nakreslite k nej jednoduchý vývojový diagram!
-
-### 2. úloha
-- Pracujte v pároch: jeden bude "robot", druhý "programátor"
-- Programátor nech dáva jednoduché príkazy robotovi, aby získal fix v triedek# Python programovanie
-
-## Ako vyzerá Python program?
-
-```py
-# Načítanie knižníc (ak ich potrebujeme)
-import nazov_modulu
-from iny_modul import nazov_funkcie
-# Vytvorenie premenných (použiteľných v celom programe)
-globalna_premenna = 10ám pomôže vyriešiť nejakú úlohu. Používame ich každý deň!
+## Čo znamená algoritmus?
+- **Algoritmus** je návod krok za krokom, ktorý nám pomôže vyriešiť nejakú úlohu. V každodennom živote používame algoritmy!
 - Tieto pokyny môžeme zapísať rôzne: môžeme o nich hovoriť, nakresliť ich, napísať slovami alebo aj programovacím jazykom.
 - Algoritmus je jednoducho recept na riešenie problému.
     - Napríklad: ako získať dva fixy?
 
-## Typy
+## Druhy
 
 1. **Jednoduché kroky za sebou** (**sekvencia**) - ako recept na varenie:
     - Choď do kancelárie!
@@ -84,53 +54,60 @@ flowchart TB
 **Príklad:** Výber najväčšieho čísla z troch čísel
 > Znak `:=` znamená: "nech sa rovná"
 ```mermaid
-flowchart LR
-	Začiatok([Začiatok])
+flowchart TB
+	Zaciatok([Začiatok])
     Vstup[Vstup: A, B, C]
-    Pokiaľ1{A>B}
+    If1{A>B}
     MaxB[Max := B]
     MaxA[Max := A]
-    Pokiaľ2{C>Max}
+    If2{C>Max}
     Koniec([Koniec]) 
     MaxC[Max := C]
-    Výstup[Výstup: Max]
+    Vystup[Výstup: Max]
 
-    Začiatok --> Vstup
-    Vstup --> Pokiaľ1
-    Pokiaľ1 -- B>A --> MaxB
-    Pokiaľ1 -- A>B --> MaxA
-    MaxA --> Pokiaľ2
-    MaxB --> Pokiaľ2
-    Pokiaľ2 -- C < Max --> Výstup
-    Pokiaľ2 -- C > Max --> MaxC
-    MaxC --> Výstup
-    Výstup --> Koniec
+    Zaciatok --> Vstup
+    Vstup --> If1
+    If1 -- B>A --> MaxB
+    If1 -- A>B --> MaxA
+    MaxA --> If2
+    MaxB --> If2
+    If2 -- C < Max --> Vystup
+    If2 -- C > Max --> MaxC
+    MaxC --> Vystup
+    Vystup --> Koniec
 ```
 
-## Vlastnosti algoritmu
-### Univerzalita
-Aby bol náš algoritmus vhodný na riešenie rôznych, ale rovnakého typu úloh, musí byť napísaný všeobecne.
-- Napríklad výpočet plochy štvorca.
+# Dôležité vlastnosti algoritmu
 
-### Determinizmus
-Po zadání rovnakých vstupných hodnôt musí algoritmus vrátiť rovnaký výsledok.
+## Univerzálnosť
+Algoritmus by mal byť použiteľný pre viacero podobných úloh, nie len pre jeden konkrétny prípad.
+- Napríklad: dokážeme vypočítať plochu hoci akého štvorca, nie len jedného konkrétneho.
 
-## Úloha
+## Spoľahlivosť
+Ak zadáme rovnaké údaje, vždy musíme dostať rovnaký výsledok.
+- Napríklad: 5+3 je vždy 8, nie raz 8 a inokedy 9.
 
-- Vymyslite príklad každodenných činností, ktoré je možné popísať algoritmom!
-- Nakreslite k tomu priebehový diagram ceruzkou!
+# Úlohy
 
-# Python
+## 1. úloha
+- Premyslite si nejakú každodennú činnosť (napr. varenie čaju, opravu bicykla), ktorú možno rozdeliť na kroky!
+- Nakreslite k nej jednoduchý vývojový diagram!
 
-## Štruktúra jazyka Python
+## 2. úloha
+- Pracujte v pároch: jeden bude "robot", druhý "programátor"
+- Programátor nech dáva jednoduché príkazy robotovi, aby získal fix v triede
+
+# Python programovanie
+
+## Ako vyzerá Python program?
 
 ```py
-# Importy (načítanie modulov a balíkov)
+# Načítanie knižníc (ak ich potrebujeme)
 import nazov_modulu
 from iny_modul import nazov_funkcie
 
-# Deklarácia globálnych premenných (voliteľné)
-globalna premenna = 10
+# Vytvorenie premenných (použiteľných v celom programe)
+globalna_premenna = 10
 
 # Definícia tried
 class Osoba:
@@ -150,7 +127,7 @@ if __name__ == "__main__":
     argumenty = sys.argv
 
     # Deklarácia lokálnych premenných
-    lokalna premenna = "Ahoj, svet!"
+    lokalna_premenna = "Ahoj, svet!"
 
     # Volanie funkcie a spracovanie výsledku
     vysledok = nazov_funkcie(5, 3)
@@ -163,9 +140,7 @@ if __name__ == "__main__":
         print("Výsledok nie je väčší ako 5.")
 
     for i in range(3):
-        print("Cyklus:", i
-
-)
+        print("Cyklus:", i)
 
     # Čítanie vstupu a výstupu
     vstupny_text = input("Prosím, napíšte niečo: ")
@@ -198,7 +173,7 @@ print("Hello!")
    - Každý nech si ukláda do svojho priečinka!
 3. **Spustenie programu** (tlačidlo F5 alebo gombík pre spustenie)
 
-# Python programovacie prostredie
+# Prečo je Python dobrý?
 
 ## Výhody
 
@@ -212,8 +187,7 @@ print("Hello!")
     - Programovanie robotov
     - A ešte veľa iného!
 
-## Podrobne o prostredí
-- Z hľadiska syntaxe a pokročilosti sa podobá jazyku C.
-- Pracujeme s dvoma hlavnými oknami.
-    - **Príkazový riadok** – tu spúšťame napísaný program
-    - **Editor skriptov** – tu píšeme programy
+## VS Code prostredie
+- **Editor** - tu píšeme kód
+- **Terminál** - tu spúšťame program a vidíme výsledky
+- **Správca súborov** - tu vidíme súbory nášho projektu
