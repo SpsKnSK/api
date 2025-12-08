@@ -15,6 +15,8 @@ Növekszik/csökken egyel/kettővel/tízzel/…
 Kétfajta intervallumot különböztetünk meg:
 - nyitott (0; 5), ahol a két szélső érték **nem** tartozik bele: 1, 2, 3, 4
 - zárt <0; 5>, ahol a két szélső érték **bele**tartozik: 0, 1, 2, 3, 4, 5
+- nyitott zárt (0; 5>, számok, amelyek az intervallumba tartoznak : 1, 2, 3, 4, 5 
+- zárt nyitott <0; 5), számok, amelyek az intervallumba tartoznak: 0, 1, 2, 3, 4 -> `range(5)`, vagy `range(0,5)`, vagy `range(0,5,1)`
 
 # `for` ciklus
 Számolt ciklus, előre tudjuk, hányszor fog lefutni. Felhasználása:
