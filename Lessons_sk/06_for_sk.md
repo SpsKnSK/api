@@ -14,9 +14,10 @@ Rastie/klesá o jeden/dva/desať...
 
 # Intervaly
 Rozlišujeme dva druhy intervalov:
-- otvorený (0; 5), kde hranice **ne**patria do intervalu: 1, 2, 3, 4
-- uzavretý <0; 5>, kde hranice **patria** do intervalu: 0, 1, 2, 3, 4, 5
-
+- celý otvorený (0; 5), kde hranice **ne**patria do intervalu: 1, 2, 3, 4
+- celý uzavretý <0; 5>, kde hranice **patria** do intervalu: 0, 1, 2, 3, 4, 5
+- otvorený uzavretý (0; 5>, čísla patriace do intervalu: 1, 2, 3, 4, 5 
+- uzavretý otvorený <0; 5), čísla patriace do intervalu: 0, 1, 2, 3, 4 -> `range(5)`, alebo `range(0,5)`, alebo `range(0,5,1)`
 # `for` cyklus
 Počítaný cyklus, vieme vopred, koľkokrát sa vykoná. Použitie:
 - potrebujeme niečo vykonať `x`-krát
