@@ -163,7 +163,33 @@ elif szo > limonade :
 else:
     place = "fedi"
 print(f"A{szo} szó {place} a '{limonade}' szót a névsorban")
+```
 
+## `str` mint kollekció
+
+A Pythonban a szöveg (string) egy kollekció, ami azt jelenti, hogy feldarabolható karakterekre, és használható `for` ciklusban:
+
+```py
+text = "test"
+for c in text:
+    print(c)
+```
+```
+t
+e
+s
+t
+```
+
+vagy egyszerűen listává alakíthatjuk:
+
+```py
+text = "test"
+zoznamZnakov = list(text)
+print(zoznamZnakov)
+```
+```
+['t', 'e', 's', 't']
 ```
 
 ## Feladatok

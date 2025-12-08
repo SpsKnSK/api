@@ -163,7 +163,30 @@ elif slovo > limonada :
 else:
     place = "v"
 print(f"{slovo} sa nachadza {place} slove '{limonada}'")
+```
 
+## `str` ako kolekcia
+Text v pythone je kolekcia, čo znamená, že sa dá rozsekať na jednotlivé znaky a môžeme použiť vo `for` cykle:
+```py
+text = "test"
+for c in text:
+    print(c)
+```
+```
+t
+e
+s
+t
+```
+
+alebo môžeme jednoducho premeniť na zoznam:
+```py
+text = "test"
+zoznamZnakov = list(text)
+print(zoznamZnakov)
+```
+```
+['t', 'e', 's', 't']
 ```
 
 ## Úlohy
