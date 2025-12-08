@@ -97,10 +97,11 @@ They lived happily ever after.
 Count of x 0
 ```
 
-## `.count(character)`
+## `len("text")`
 ```py
 text: str = "They lived happily ever after."
-print(f"{text}\nNumber of characters: {len(text)}")
+lenghtOfText = len(text)
+print(f"{text}\nNumber of characters: {lenghtOfText}")
 ```
 ```
 They lived happily ever after.
