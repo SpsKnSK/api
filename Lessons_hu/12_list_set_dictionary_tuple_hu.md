@@ -1,6 +1,34 @@
-# Listák, halmazok, szótárok, tuplek- kollekció
+# Listák, halmazok, szótárak, tuplek- kollekció
 
 ## Lista `list`
+```mermaid
+graph TB
+    subgraph Lista["Lista (list) - []"]
+        L0["Index: 0<br/>Érték: 'alma'"]
+        L1["Index: 1<br/>Érték: 'körte'"]
+        L2["Index: 2<br/>Érték: 'barack'"]
+        L3["Index: 3<br/>Érték: 'alma'"]
+        L0 --> L1 --> L2 --> L3
+        style L0 fill:#90EE90,color:#000000
+        style L1 fill:#90EE90,color:#000000
+        style L2 fill:#90EE90,color:#000000
+        style L3 fill:#90EE90,color:#000000
+    end
+
+    ListaJegyzet["✏️ Módosítható<br/>📍 Indexelt<br/>🔄 Duplikátumok engedélyezettek"]
+
+    Lista -.-> ListaJegyzet
+
+    style ListaJegyzet fill:#E8F5E9,color:#000000
+```
+```python
+# Lista - indexelt, módosítható, duplikátumok engedélyezettek
+gyumolcsok_lista = ['alma', 'körte', 'barack', 'alma']
+print(f"Lista: {gyumolcsok_lista}")
+print(f"Első elem: {gyumolcsok_lista[0]}")
+gyumolcsok_lista[1] = 'szilva'  # Módosítható
+print(f"Módosított lista: {gyumolcsok_lista}")
+```
 ### Tulajdonságok
 - `[]` szögeletes zárójeleket használjuk
 - bármilyen adattípust tartalmazhat, akár keverve is
@@ -26,6 +54,26 @@
 
 
 ## Halmaz `set`
+```mermaid
+graph TB
+    subgraph Halmaz["Halmaz (set) - {}"]
+        S1["'alma'"]
+        S2["'körte'"]
+        S3["'barack'"]
+        style S1 fill:#FFB6C1,color:#000000
+        style S2 fill:#FFB6C1,color:#000000
+        style S3 fill:#FFB6C1,color:#000000
+    end
+  
+  HalmazJegyzet["❌ Duplikátumok tiltottak<br/>🔀 Rendezetlen<br/>✏️ Módosítható"]
+  Halmaz -.-> HalmazJegyzet
+  style HalmazJegyzet fill:#FCE4EC,color:#000000
+```
+```python
+# Halmaz - rendezetlen, egyedi elemek, duplikátumok automatikusan törlődnek
+gyumolcsok_halmaz = {'alma', 'körte', 'barack', 'alma'}
+print(f"\nHalmaz: {gyumolcsok_halmaz}")  # 'alma' csak egyszer jelenik meg
+```
 A Python a `set` adattípust is alaptípusként definiálja. a `set`: elemek rendezetlen halmaza, amelyben minden elem **csak egyszer** fordulhat elő.
 
 Alapvető használata: 
@@ -72,6 +120,28 @@ print(f'abrakadabra-ban vagy alhambra-ban megvan, de egyszerre mindkettoben nem:
 ```
 
 ## Szótár `dictionary`
+```mermaid
+graph TB
+    subgraph Szotar["Szótár (dictionary) - {}"]
+        D1["Kulcs: 'név'<br/>Érték: 'János'"]
+        D2["Kulcs: 'kor'<br/>Érték: 25"]
+        D3["Kulcs: 'város'<br/>Érték: 'Budapest'"]
+        style D1 fill:#87CEEB,color:#000000
+        style D2 fill:#87CEEB,color:#000000
+        style D3 fill:#87CEEB,color:#000000
+    end
+    SzotarJegyzet["🔑 Kulcs-érték párok<br/>📍 Kulcs alapján indexelt<br/>✏️ Módosítható"]
+    Szotar -.-> SzotarJegyzet
+    style SzotarJegyzet fill:#E1F5FE,color:#000000
+```
+```python
+# Szótár - kulcs-érték párok
+szemely = {'név': 'János', 'kor': 25, 'város': 'Budapest'}
+print(f"\nSzótár: {szemely}")
+print(f"Név: {szemely['név']}")
+szemely['kor'] = 26  # Módosítható
+print(f"Módosított szótár: {szemely}")
+```
 A szótár adatípus arra szolgál, hogy kulcs:érték párosokat mentsen el. A szótár olyan gyűjtemény, amely: 
 - {kulcs:érték}, ahol a kulcs és az érték bármilyen adattípus lehet, egy szótáron belül akár keveredhet is 
 - ha egy értékhez akarunk hozzáférni, akkor a `[]` zárójeleket használjuk, mint a listáknál, éppenséggel itt a kulcsot adjuk meg: `print(myDict["key"])`
@@ -137,10 +207,10 @@ carDictionary = {
   "model": "Mustang",
   "year": 1964,
 }
-# ha létezik model kulcs, felülírja az értéket
+# ha létezik `model` kulcs, felülírja az értéket
 carDictionary.update({"model":"Mondeo"})
 
-# ha nem létezik model kulcs, hozzácsatolja
+# ha nem létezik `isElectric` kulcs, hozzácsatolja
 carDictionary.update({"isElectric":False})
 
 print(carDictionary)
@@ -170,6 +240,33 @@ print(carDictionary.get("isElectric", "nem tartalmazza"))
 ```
 
 ## Tuple `tuple`
+
+```mermaid
+graph TB
+    subgraph Tuple["Tuple (tuple) - ()"]
+        T0["Index: 0<br/>Érték: 10"]
+        T1["Index: 1<br/>Érték: 20"]
+        T2["Index: 2<br/>Érték: 30"]
+        T0 -.-> T1 -.-> T2
+        style T0 fill:#FFD700,color:#000000
+        style T1 fill:#FFD700,color:#000000
+        style T2 fill:#FFD700,color:#000000
+    end
+
+    TupleJegyzet["🔒 NEM módosítható<br/>📍 Indexelt<br/>🔄 Duplikátumok engedélyezettek"]
+    
+    Tuple -.-> TupleJegyzet
+
+    style TupleJegyzet fill:#FFF9C4,color:#000000
+```
+
+```python
+# Tuple - indexelt, NEM módosítható
+koordinatak = (10, 20, 30)
+print(f"\nTuple: {koordinatak}")
+print(f"Első elem: {koordinatak[0]}")
+# koordinatak[0] = 15  # Ez hibát okozna! Tuple nem módosítható
+```
 
 A **tuple** nem megváltoztatható adattípus, az elemei lehetnek megváltoztatható elemei. A kimeneten a tuple-k mindig zárójelezve vannak, így azok egymásba ágyazva is helyesen értelmezhetők; megadhatjuk zárójelekkel és anélkül is, néha azonban feltétlenül szükségesek a zárójelek (amikor az egy nagyobb kifejezés része).
 

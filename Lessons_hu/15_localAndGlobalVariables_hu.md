@@ -84,11 +84,11 @@ Python is fantastic
 Python is awesome
 ```
 
-Előbb a `myFunc` ír ki a terminálra, utána a sima print. Az **globális** `x` változót ebben az esetben `awesome` értékre állítottuk be, majd kiírtuk, a **lokális** `x` változó csak a `myFunc` függvényben létezik.
+Először a `myfunc` ír ki a terminálra, utána a sima print. A **globális** `x` változót ebben az esetben `awesome` értékre állítottuk be, majd kiírtuk, a **lokális** `x` változó csak a `myfunc` függvényben létezik.
 
 ## A `global` kulcsszó
 
-Ha változót hozunk létre egy függvényen belül, az a változó **lokális**, és csak a függvényen belül használható. Egy függvényen belüli **globális** változó létrehozásához használhatja a `global` kulcsszót.
+Ha változót hozunk létre egy függvényen belül, az a változó **lokális**, és csak a függvényen belül használható. Egy függvényen belüli **globális** változó létrehozásához használhatjuk a `global` kulcsszót.
 
 ```py
 def myfunc():
@@ -105,7 +105,7 @@ Python is fantastic
 ```
 
 ### Globális változó értékének megváltoztatása függvényben
-Egy függvényen belüli globális változó értékének megváltoztatásához a globális változóhoz a `global` kulcsszó használja:
+Egy függvényen belüli globális változó értékének megváltoztatásához a globális változóhoz a `global` kulcsszót használjuk:
 
 ```py
 x = "awesome"
@@ -122,4 +122,4 @@ Kimenet:
 ```
 Python is fantastic
 ```
-Ebben az esetben a `myFunc` függvényen belül az `x` változó ugyanaz, mint amelyiknek az `awesome` értéket adtuk. A függvényben megváltoztatjuk az értékét, és később azt használjuk
+Ebben az esetben a `myfunc` függvényen belül az `x` változó ugyanaz, mint amelyiknek az `awesome` értéket adtuk. A függvényben megváltoztatjuk az értékét, és később azt használjuk

@@ -11,7 +11,7 @@ A folyamatot azért nevezik öröklődésnek, mert az új osztály a létező os
 
 Az öröklődés hatékony nyelvi eszköz, amely a kód újrahasznosítást is elősegíti, hiszen átszabhatjuk a szülő osztály viselkedését annak módosítása nélkül a származtatott osztályban. Bizonyos esetekben az öröklődési hierarchia a probléma természetes szerkezetét is tükrözi, ami egyszerűbbé teszi a program megértését.
 
-Másrészről az öröklődés használata megnehezítheti a kód olvasását. A metódus hívásoknál nem mindig egyértelmű, hogy **hol** kell keresni a hívott metódus definícióját, a kód lényegi része több modulba lehet szétszórva. Számos olyan öröklődéssel megoldható probléma van, amely öröklődés használta nélkül is éppen olyan elegánsan (vagy még elegánsabban) megoldható. Ha a probléma természete nem illeszkedik az öröklődéshez, akkor ez a programozási stílus több kárt okozhat, mint hasznot.
+Másrészről az öröklődés használata megnehízítheti a kód olvasását. A metódus hívásoknál nem mindig egyértelmű, hogy **hol** kell keresni a hívott metódus definícióját, a kód lényegi része több modulba lehet szétszórva. Számos olyan öröklődéssel megoldható probléma van, amely öröklődés használata nélkül is éppen olyan elegánsan (vagy még elegánsabban) megoldható. Ha a probléma természete nem illeszkedik az öröklődéshez, akkor ez a programozási stílus több kárt okozhat, mint hasznot.
 
 ## Szintaxis
 Amikor azt szeretnénk, hogy `B` osztály örököljön az `A` osztálytól, a `B` osztály után zárójelbe tesszük annak az osztálynak a nevét, `A`, amelyiktől származtatjuk:
@@ -72,7 +72,7 @@ classDiagram
     Ember <|-- Tanár
     Ember <|-- Igazgató
    
-    note for Ember "Általálnos, és az összes többi\nosztályra jellemző tulajdonságok,\nműveletek"
+    note for Ember "Általános, és az összes többi\nosztályra jellemző tulajdonságok,\nműveletek"
     class Ember{
         +string Név
         +string Vezetéknév
@@ -94,16 +94,16 @@ classDiagram
         +Igazgat()
     }
 ```
-> Mivel a `Diák`, a `Tanár` és az `Igazgató` örökölnek az `Ember`től, ezért tartalmazzák az `Ember` osztály midnegyik attribútumját
+> Mivel a `Diák`, a `Tanár` és az `Igazgató` örökölnek az `Ember`től, ezért tartalmazzák az `Ember` osztály mindegyik attribútumát
 
 > A `Diák` kibővíti az `Ember` osztályt egy attribútummal és két függvénnyel
 
-> A `Tanár` kibővíti az `Ember` osztályt két atribútummal és két függvénnyel
+> A `Tanár` kibővíti az `Ember` osztályt két attribútummal és két függvénnyel
 
 > Az `Igazgató` kibővíti az `Ember` osztályt egy függvénnyel
 
 ### `super()`
-A `Student` osztályban láthattok olyat, hogy `super()`, ez azt jelenti, hogy a szülő osztály függvényeihez jutunk hozzá. Ebben az esetben a `Man` osztály `__init__` függvényével "meg vagyunk elégedve", újrahasználjuk, és közben még a `Notes` attribútumot inicilizáljuk: `super().__init__(name, surname, age)`
+A `Student` osztályban láthattok olyat, hogy `super()`, ez azt jelenti, hogy a szülő osztály függvényeihez jutunk hozzá. Ebben az esetben a `Man` osztály `__init__` függvényével "meg vagyunk elégedve", újrahasználjuk, és közben még a `Notes` attribútumát inicializáljuk: `super().__init__(name, surname, age)`
 ```py
 class Man:
     Name:str
@@ -194,7 +194,7 @@ print(len(myDictionary))
 >A fenti példában azt vesszük észre, hogy egy adott függvény hasonló bemenő paraméterekkel (karakterlánc, lista, szótár, mindegyiket lehet `for` ciklusban használni) a hosszukat adja meg. 
 
 ## Osztályok polimorfizmusa
-A polimorfizmus általában osztályokban található, amikoris több osztályban ugyanaz a függvény található. Például van 3 osztályunk: `Autó`, `Hajó`, `Repülő`, és mnindegyik képes `mozdulni()`. Mind a három ugyanazokkal a tulajdonságokkal és függvényekkel rendelkezik
+A polimorfizmus általában osztályokban található, amikoris több osztályban ugyanaz a függvény található. Például van 3 osztályunk: `Autó`, `Hajó`, `Repülő`, és mindegyik képes `mozdulni()`. Mind a három ugyanazokkal a tulajdonságokkal és függvényekkel rendelkezik
 
 ```mermaid
 ---
@@ -263,7 +263,7 @@ classDiagram
     Jármű <|-- Autó
     Jármű <|-- Hajó
     Jármű <|-- Repülő
-    note for Jármű "Általálnos, és az összes többi\nosztályra jellemző tulajdonságok,\nműveletek helyezkednek itt el"
+    note for Jármű "Általános, és az összes többi\nosztályra jellemző tulajdonságok,\nműveletek helyezkednek itt el"
     note for Autó "Mindent átvesz a Járműtől, és nem bővíti azt"
     class Jármű{
         +string Márka
@@ -321,5 +321,5 @@ for v in (car1, boat1, plane1):
 2. Mire jó a polimorfizmus?
 3. Hány osztálytól örökölhet a származtatott osztály?
 4. Írjatok példát a következőre: 
-   1. Készítsetek egy `Kozrendor` osztályt (`Nev`:`str`, `BirsagokSzama`: `int`) attribútumokkal és egy `Birsagol` függvénnyel, amely kiírja a nevét és a bírságok számát
-   2. Származtassatok egy `Rendorfokapitany` osztályt a `Kozrendor`ből, akinek lesz még egy attribútuma (`RendorokSzama`:`int`) és átírja a  `Birsagol` függvényt, amely kiírja ugyanazt, mint a `Kozrendor`, plusz, hogy ő a főkapitány, és hány kozrendor tartozik alája
+   1. Készítsetek egy `Közrendőr` osztályt (`Nev`:`str`, `BirsagokSzama`: `int`) attribútumokkal és egy `Birsagol` függvénnyel, amely kiírja a nevét és a bírságok számát
+   2. Származtassatok egy `Rendorfokapitany` osztályt a `Közrendőr`ből, akinek lesz még egy attribútuma (`RendorokSzama`:`int`) és átírja a  `Birsagol` függvényt, amely kiírja ugyanazt, mint a `Közrendőr`, plusz, hogy ő a főkapitány, és hány közrendőr tartozik alája

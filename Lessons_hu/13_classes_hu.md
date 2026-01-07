@@ -2,13 +2,13 @@
 
 Eddig olyan adattípusokkal találkoztunk, és dolgoztunk, mint `int`, `float`, `str`, `random`, `list`, `dict`, most viszont szintet lépve képesek leszünk definiálni, létrehozni saját _adattípust_. 
 
-Néha szükségünk van saját magunk által elkészített adattípusra, erre használjuk a `class` parancsot. Elmondjuk a Pythonnak, hogyan szernénk, hogy a saját addattípusunk kinézzen:
+Néha szükségünk van saját magunk által elkészített adattípusra, erre használjuk a `class` parancsot. Elmondjuk a Pythonnak, hogyan szeretnénk, hogy a saját adattípusunk kinézzen:
 - milyen tulajdonságokkal, állapotokkal (attributes, property, state) rendelkezzen -> mije **van**
 - milyen viselkedése legyen, függvényeket tartalmazzon -> mit tud **csinálni**
 
 A `class` **tervrajz**, hogyan szeretnénk, ha belőle elkészített **példány** kinézne.
 
-## Tulajdonság (protpery), viselkedés (behaviour)
+## Tulajdonság (property), viselkedés (behaviour)
 Egy karakterlánc, `str`:
 - nem rendelkezik tulajdonságokkal
 - tud: upper, lower, count, stb, ezek a karakterlánc, `str` **viselkedései**
@@ -38,8 +38,32 @@ p1 = MyClass()
 print(p1.x)
 ```
 Tehát egy tervrajzzal még nem tudunk dolgozni (pár kivételtől eltekintve), abból objektumot kell létrehoznunk. 
+
 ## Macska
-Elképzelhetjük ezt úgy is, mint az állatvilágban a **macska**, tudjuk, hogy  általában szőrös, 4 lába van, van neve, nyávog, simul, dorombol, stb. ez egy "tervrajz" a macskához. Viszont, ha már van egy konkrént macskánk (Cirmi, Kormos, Aladár), akkor neki már konkrét tulajdonságokat adunk.
+Elképzelhetjük ezt úgy is, mint az állatvilágban a **macska**, tudjuk, hogy  általában szőrös, 4 lába van, van neve, nyávog, simul, dorombol, stb. ez egy "tervrajz" a macskához. Viszont, ha már van egy konkrét macskánk (Cirmi, Kormos, Aladár), akkor neki már konkrét tulajdonságokat adunk.
+
+```mermaid
+classDiagram
+    class Macska {
+        -str Nev
+        -float LabakSzama
+        -str Szin
+        +__init__(nev, labakSzama, szin)
+        +Dorombol()
+    }
+    
+    class enMacskam {
+        Nev = "Cirmi"
+        LabakSzama = 3.5
+        Szin = "ezüst"
+    }
+    
+    Macska <|.. enMacskam : <<instance>>
+    
+    note for Macska "Osztály = Tervrajz</br>Meghatározza a struktúrát"
+    note for enMacskam "Példány = Konkrét objektum</br>Konkrét értékekkel"
+```
+
 ```py
 class Macska:
 	def __init__(self, nev, labakSzama, szin) -> None:
@@ -79,13 +103,31 @@ enMacskam.Dorombol()
 ```py
 class TulajdonsagNelkuliOsztaly :
 	def __init__(self) -> None:
-		print("Az init fuggvenyt meghivtuk")
+		print("Az init függvényt meghívtuk")
 
 test = TulajdonsagNelkuliOsztaly()
 ```
 
 ## `self`
 A self paraméter az osztály aktuális példányára, objektumára, instanciójára való hivatkozás, és a hozzá tartozó függvények és tulajdonságok elérésére szolgál.
+
+```mermaid
+classDiagram
+    class Auto {
+        -str Marka
+        +__init__(marka)
+        +IrdKiAMarkajat() : instance method
+        +IrdKi()$ : static method
+    }
+    
+    class test {
+        Marka = "Skoda"
+    }
+    
+    Auto <|.. test : <<instance>>
+    
+    note for Auto "*IrdKiAMarkajat()* - self paraméterrel</br>Az objektumhoz tartozik</br>*IrdKi()* - self nélkül</br>Az osztályhoz tartozik (statikus)"
+```
 
 ```py
 class Auto :
@@ -101,11 +143,11 @@ test = Auto("Skoda")
 test.IrdKiAMarkajat()
 Auto.IrdKi()
 ```
-`self`en keresztül jutunk hozza a konkrét objektum tulajdonságaihoz, függvényeihez: 
+`self`en keresztül jutunk hozzá a konkrét objektum tulajdonságaihoz, függvényeihez: 
 - `IrdKiAMarkajat` csak a `test` objektumon működik, ezt nevezzük az **objektum függvényének** vagy az objektumhoz tartozó függvénynek
 - az `test.IrdKi()` nem fog működni, hiszen a `test` objektumnak nincs `IrdKi()` függvénye (hiányzik a `self`)
 - `Auto.IrdKi()` működik, és ez az **osztályhoz tartozó függvény**, vagy más programozási nyelveken **statikus** függvénynek is ismertetik
-- `Auto.IrdKiAMarkajat()` nem működik, mert ez nem osztályhoz, hanem az objektumhoz, instancióhoz tartozik
+- `Auto.IrdKiAMarkajat()` nem működik, mert ez nem osztályhoz, hanem az objektumhoz, instanciához tartozik
 
 ### Példa
 ```py
@@ -128,6 +170,27 @@ John
 ```
 ## A `__str__()` függvény
 Ennek a függvénynek a segítségével tudjuk módosítani, hogyan nézzen ki az osztályunk, ha a `str`vé alakítjuk
+
+```mermaid
+classDiagram
+    class Person {
+        -str name
+        -int age
+        +__init__(name, age)
+        +__str__() str
+    }
+    
+    class p1 {
+        name = "John"
+        age = 36
+    }
+    
+    Person <|.. p1 : <<instance>>
+    
+    note for Person "__str__() határozza meg,</br>hogyan néz ki az objektum</br>ha stringgé alakítjuk"
+    note for p1 "*print(p1)* eredénye: John(36)</br> Helyett: *Person object*"
+```
+
 ```py
 class Person:
   def __init__(self, name, age):
@@ -160,11 +223,11 @@ person = Person("John", 17)
 print(personDictionary, type(personDictionary))
 print(person, type(person))
 
-# az egyes tulajdonsagok kiirasa:
+# az egyes tulajdonságok kiírása:
 print("personDictionary['Age']", personDictionary["Age"])
 print('person.Age', person.Age)
 
-# az egyes tulajdonsagok megvaltoztatasa
+# az egyes tulajdonságok megváltoztatása
 personDictionary["Age"] = 98
 person.Age = 10
 
@@ -179,7 +242,7 @@ A szótár kulcsai lehetnek az osztály/objektum tulajdonságai, előbbinél vig
    1. nevét rátok bízom, színe legyen fehér
    - Írjátok ki a képernyőre a tulajdonságaikat
 1. Készítsetek egy `Auto` osztályt a következő tulajdonságokkal: szín, márka, model, gyártási év. Használhatjátok az `__init__` függvényt, de nem muszáj. Definiáljátok a következő 2 függvényt:
-   1. Inditas- írja ki a képernyőre: "A [szin] szinu [gyartasi ev]es/os [márka] [model] elindult"
+   1. Inditas- írja ki a képernyőre: "A [szin] színű [gyártási év]es/os [márka] [model] elindult"
    2. Leállás- írja ki a képernyőre: "Az autó leállt"
 	- készítsetek 3 példányt
 	- tegyétek őket listába 

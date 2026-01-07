@@ -1,6 +1,6 @@
 # Fájlkezelés
 Az eddigi programjaink csak nagyon kevés adatot kezeltek, kétféleképpen vittünk be adatokat:
-- billentyűzetről az `input` függvény segétségével
+- billentyűzetről az `input` függvény segítségével
 - véletlenszerűen generáltuk őket a `random` osztállyal
 
 Amikor nagymennyiségű adatot akarunk kezelni, akkor jönnek kapóra a fájlok (adatbázisok).
@@ -39,7 +39,7 @@ módosító| tulajdonság
 `t`|a fájlt szövegként nyissa meg, alapméretezett
 `b`|a fájlt binárisan nyissa meg
 
-> Ha egy fáljt binárisan akarunk megnyitni: `f = open('munkafajl.txt', 'rb')` akkor **read binary** módosítót használunk
+> Ha egy fájlt binárisan akarunk megnyitni: `f = open('munkafajl.txt', 'rb')` akkor **read binary** módosítót használunk
 
 ## Fájl olvasása
 - `f.read(size)`
@@ -62,8 +62,8 @@ módosító| tulajdonság
 - Egy paraméter esetén az aktuális indexű pozícióra állítja a kurzort.
 
 ## Írás a fájlba
-`f.write("szoveg")` a zárójelbe írt szöveg kerül bele a fájlba.
-> A fájlba csak `str` adattípust tudunk írni, ha nás típusú értékünk van, akkor azt `string`-gé kell alakítani `str(1)`
+`f.write("szöveg")` a zárójelbe írt szöveg kerül bele a fájlba.
+> A fájlba csak `str` adattípust tudunk írni, ha más típusú értékünk van, akkor azt `string`-gé kell alakítani `str(1)`
 
 ## Fájl bezárása
 `f.close()` A fájlokat minden használat után be **kell** zárni
@@ -147,7 +147,7 @@ with open(full_path, "r") as f:
    for sor in f.readlines():
       print(sor)
 ```
-# Szemlétetők
+# Szemléltetők
 1. [Egész számok mentése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/01_saveNumbers.py)
 1. [Saját adattípus mentése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/01_saveClass.py)
 # Feladatok
