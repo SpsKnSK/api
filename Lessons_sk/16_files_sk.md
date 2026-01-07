@@ -69,15 +69,15 @@ Mód| Vlastnosť
 `f.close()` Súbory je potrebné vždy zatvárať po použití.
 ## Príklad
 
-- Vytvorte súbor `subor.txt`.
+- Vytvorte súbor `pracovnysubor.txt`.
 - Otvorte ho a napíšte `Toto je testovaci riadok 12345`
 - Potom si prečítajte text napísaný v súbore.
 
 ```py
-f = open("subor.txt", "w")
+f = open("pracovnysubor.txt", "w")
 f.write("Toto je testovaci riadok 12345")
 f.close()
-f = open("subor.txt", "r")
+f = open("pracovnysubor.txt", "r")
 a = f.read()
 f.close()
 print(a)
@@ -91,7 +91,7 @@ Ak chcete do súboru zapísať číslo alebo iný typ údajov, musíte ho najprv
 
 ```py
 from os import path
-fileName = "subor.txt"
+fileName = "pracovnysubor.txt"
 full_path = f"{path.dirname(__file__)}\\{fileName}"
 ```
 - z knižnice `os` importneme `path` triedu

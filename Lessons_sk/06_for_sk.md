@@ -106,7 +106,53 @@ for i in range(0,10,3):
 ```
 
 - `range(5, 10)`: 5, 6, 7, 8, 9
-- `range(0, 10, 3)`: 0, 3, 6, 9 
+- `range(0, 10, 3)`: 0, 3, 6, 9
+- `range(-10, -100, -30)`:  -10, -40, -70
+
+## Úloha
+- Vypíšte čísla delteľné 3 do 100.
+- Vypíšte čísla delteľné 7 medzi 50 a 99.
+- Spätné počítanie od 50 do 20 po 4-och a vypíšte jednotlivé čísla!
+
+# Otázky
+1. Aký je rozdiel medzi otvoreným a uzavretým intervalom? 
+1. Aké hodnoty patria do nasledujúcich intervalov: <1; 6), <-2;1>, (6;3)?
+1. Aké typy cyklov poznáte? Náčrtnte rozdiely.
+1. Koľko príkazov môže byť v jadre cyklu? 
+1. Napíšte syntax cyklu `for`.
+1. Pomo.cou cyklu `for` vypíšte násobovaciu tabuľku, ktorú určí používateľ.
+1. Spätné počítanie od 20 do 0 cyklom `for` a vypíšte na obrazovku každé 4. číslo.
+1. Aký je rozdiel medzi príkazmi `break` a `continue`?
+1. Koľko vetiev `else` môže mať cyklus `for`? 
+1. Je vetva `else` vždy povinná?
+1. Kedy sa vykoná vetva `else`?
+1. Funguje cyklus `for` bez `break`?
+1. Funguje cyklus `for` bez `continue`?
+1. Načo slúži funkcia `range()`? Vymenujte jej parametre.
+1. Čo vypíše na obrazovku nasledujúci program?
+    ```py
+    for i in range(2, 10, 3):
+        print(i, end=" ")
+    ```
+1. Čo vypíše na obrazovku nasledujúci program?
+    ```py
+    for i in range(0,10):
+        break
+        print(i)
+    else:
+        print("Inak")
+    print("Krásny deň!")
+    ```
+1. Čo vypíše na obrazovku nasledujúci program?
+    ```py
+    for i in range(0,10):
+        continue
+        print(i)
+    else:
+        print("Inak")
+    print("Krásny deň!")
+    ```
+- `range(-10, -100, -30)`:  -10, -40, -70 
 - `range(-10, -100, -30)`:  -10, -40, -70
 
 ## Úlohy

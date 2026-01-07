@@ -34,7 +34,7 @@ speedLimit = 130
 speed = 110
 formatovanyRetazec = "Prekračujete rýchlosť {0} v oblasti s obmedzením na {1}"
 
-retazecNaZobrazenie = formatovanyRetazec.format(speedLimit, speed)
+retazecNaZobrazenie = formatovanyRetazec.format(speed, speedLimit)
 
 print(retazecNaZobrazenie)
 ```

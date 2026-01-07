@@ -1,4 +1,4 @@
-# Triedy, vlastné/složené dátové typy `class`
+# Triedy, vlastné/zložené dátové typy `class`
 
 Doposiaľ sme sa stretli a pracovali s dátovými typmi ako `int`, `float`, `str`, `random`, `list`, `dict`, ale teraz sme schopní ísť ďalej a definovať si vlastný dátový typ.
 
@@ -27,8 +27,30 @@ print(p1.x)
 S triedou ešte nevieme pracovať (okrem niekoľkých výnimiek), z nej musíme vytvoriť objekt, inštanciu.
 
 ## Mačka
+Môžeme si to predstaviť aj tak, že v prírode je **mačka**, vieme, že je obvykle chlpatá, má 4 nohy, má meno, mňauká, mazná sa, spí, atď. - toto je návrh na "výrobu" mačky. Ale ak už máme konkrétnu mačku u nás doma, alebo v susedstve (Murko, Labka, Belka, Cilka), už pre ňu udeľujeme konkrétne vlastnosti.
 
-Môžeme si to predstaviť aj tak, že v prírode je **mačka**, vieme, že je obvykle chlpatá, má 4 nohy, má meno, mňauká, mazná sa, spí, atď. - toto je návrh na "výrobu" mačky. Ale ak už máme konkrétnu mačku u nás doma, alebo v susedstve (Murko, Labka, Belka, Cilka), už pre ňu udeľujeme konkrétne vlastnosti. V nasledujúcom príklade zadefinujeme typ `Macka`, ktorý bude mať vlastnosti: Meno, PocetNoh a Farba, plus bude sa vediet predstavit.
+```mermaid
+classDiagram
+    class Macka {
+        -str Meno
+        -float PocetNoh
+        -str Farba
+        +__init__(meno, pocetNoh, farba)
+        +PredstavSa()
+    }
+    
+    class mojaMacka {
+        Meno = "Belka"
+        PocetNoh = 3.5
+        Farba = "strieborna"
+    }
+    
+    Macka <|.. mojaMacka : <<instance>>
+    
+    note for Macka "Trieda = Návrh</br>Určuje štruktúru"
+    note for mojaMacka "Inštancia = Konkrétny objekt</br>S konkrétnymi hodnotami"
+```
+
 ```py
 class Macka:
     def __init__(self, meno, pocetNoh, farba) -> None:
@@ -74,27 +96,43 @@ test = TriedaBezVlastnosti()
 
 ## `self`
 Parameter `self` je odkaz na aktuálnu inštanciu triedy, a slúži na prístup k funkciám a vlastnostiam tejto inštancie.
-
+```mermaid
+classDiagram
+    class Auto {
+        -str Vyrobca
+        +__init__(vyrobca)
+        +VypisZnacku() : instance method
+        +Vypis()$ : static method
+    }
+    
+    class test {
+        Vyrobca = "Skoda"
+    }
+    
+    Auto <|.. test : <<instance>>
+    
+    note for Auto "*VypisZnacku()* - s parametrom self</br>Patrí k objektu</br>*Vypis()* - bez self</br>Patrí k triede (statická)"
+```
 ```py
 class Auto:
     def __init__(self, znacka) -> None:
         self.Znacka = znacka
     
-    def VypisZnacku(self):
-        print(f"Značka auta je {self.Znacka}")
+    def VypisVyrobcu(self):
+        print(f"Výrobca auta je {self.Znacka}")
 
     def Vypis():
         print("Jednoducho vypíšem")
 
 test = Auto("Skoda")
-test.VypisZnacku()
+test.VypisVyrobcu()
 Auto.Vypis()
 ```
 Pomocou `self` môžeme pristupovať k vlastnostiam a funkciám konkrétneho objektu:
-- `VypisZnacku` funguje len na objekte `test`, to sa nazýva **funkcia objektu** alebo funkcia priradená k objektu
+- `VypisVyrobcu` funguje len na objekte `test`, to sa nazýva **funkcia objektu** alebo funkcia priradená k objektu
 - `test.Vypis()` nebude fungovať, pretože objekt `test` nemá funkciu `Vypis()` (chýba `self`)
 - `Auto.Vypis()` funguje, a je to **funkcia triedy**, alebo v iných programovacích jazykoch je to považované za **statickú** funkciu
-- `Auto.VypisZnacku()` nebude fungovať, pretože to nie je funkcia triedy, ale funkcia inštancie, objektu
+- `Auto.VypisVyrobcu()` nebude fungovať, pretože to nie je funkcia triedy, ale funkcia inštancie, objektu
 ### Príklad
 ```py
 class Osoba:
@@ -116,6 +154,27 @@ Janko
 ```
 ## Funkcia `__str__()`
 Pomocou tejto funkcie môžeme ovplyvniť, ako bude naša trieda vyzerať, keď ju premeníme na `str`
+
+```mermaid
+classDiagram
+    class Osoba {
+        -str meno
+        -int vek
+        +__init__(meno, vek)
+        +__str__() str
+    }
+    
+    class p1 {
+        meno = "Ján"
+        vek = 36
+    }
+    
+    Osoba <|.. p1 : <<instance>>
+    
+    note for Osoba "__str__() určuje,</br>ako vyzerá objekt</br>keď ho prevedieme na string"
+    note for p1 "*print(p1)* výsledok: Ján(36)</br> Namiesto: *Osoba object*"
+```
+
 ```py
 class Osoba:
   def __init__(self, meno, vek):

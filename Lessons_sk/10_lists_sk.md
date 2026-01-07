@@ -90,7 +90,7 @@ moj_zoznam.insert(1, 'kiwi')
 print(moj_zoznam)
 ```
 ### `.index(element)`
-Vráti index zadaného prvku, ak ho nájde, inak vráti `-1`.
+Vráti index zadaného prvku, ak ho nájde, inak vráti `ValueError` výnimku.
 
 ```py
 from random import sample

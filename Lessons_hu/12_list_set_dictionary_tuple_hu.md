@@ -1,6 +1,4 @@
-# Listák, halmazok, szótárak, tuplek- kollekció
-
-## Lista `list`
+# Lista `list`: `[]`
 ```mermaid
 graph TB
     subgraph Lista["Lista (list) - []"]
@@ -29,7 +27,7 @@ print(f"Első elem: {gyumolcsok_lista[0]}")
 gyumolcsok_lista[1] = 'szilva'  # Módosítható
 print(f"Módosított lista: {gyumolcsok_lista}")
 ```
-### Tulajdonságok
+## Tulajdonságok
 - `[]` szögeletes zárójeleket használjuk
 - bármilyen adattípust tartalmazhat, akár keverve is
   - `[1,2.3,"alma", True]` kevert
@@ -52,8 +50,7 @@ print(f"Módosított lista: {gyumolcsok_lista}")
 - `.append(érték)` - új értéket adunk a lista **végére**
 - `.index(érték)` - visszaadja az `érték` **helyét**, sorszámát, indexét. Ha nem találja az értéket, akkor `ValueError` kivételt dob.
 
-
-## Halmaz `set`
+# Halmaz `set`: `{}`
 ```mermaid
 graph TB
     subgraph Halmaz["Halmaz (set) - {}"]
@@ -80,11 +77,11 @@ Alapvető használata:
 - megadott elem meglétének ellenőrzése
 - elemek kettőzésének kiszűrése. 
 
-### Tulajdonságok
+## Tulajdonságok
 - `{}` kapcsos zárójeleket használjuk, vagy a listából, stringből a `set()` paranccsal csinálunk halmazt `halmaz = set([1,1,1,2,3,5,4,4,4,8])`
 - bármilyen adattípust tartalmazhat, akár keverve is
 - minden eleme egyedi, csak egyszer fordul elő
-### Példa
+## Példa
 Hány számot találtam el a lottón:
 ```py
 nyeroSzamok = {1, 2, 3, 4, 5, 6}
@@ -93,7 +90,7 @@ enSzamaim = {1, 2, 7, 8, 9, 0}
 print("Ezeket eltalaltam: ", nyeroSzamok & enSzamaim)
 ```
 
-### Listából halmaz
+## Listából halmaz
 ```py
 kosar = ["alma", "narancs", "alma", "korte", "narancs", "banan"]
 print("narancs" in kosar)
@@ -101,8 +98,8 @@ kosarHalmaz = set(kosar)
 print(kosarHalmaz)
 ```
 
-### Halmazok műveletei
-A set objektumok támogatják az olyan matematikai műveleteket, mint az: 
+## Halmazok műveletei
+A `set` objektumok támogatják az olyan matematikai műveleteket, mint az: 
 - egyesítés (union), `a | b`
 - közös metszet (intersection), `a & b`
 - különbség (difference),  `a - b`
@@ -119,7 +116,7 @@ print(f'abrakadabra-ban es alhambra-ban megvan egyszerre: {abrakadabra&alhambra}
 print(f'abrakadabra-ban vagy alhambra-ban megvan, de egyszerre mindkettoben nem: {abrakadabra^alhambra}')
 ```
 
-## Szótár `dictionary`
+# Szótár `dictionary`: `{}`
 ```mermaid
 graph TB
     subgraph Szotar["Szótár (dictionary) - {}"]
@@ -148,7 +145,7 @@ A szótár adatípus arra szolgál, hogy kulcs:érték párosokat mentsen el. A 
 - sorba rendezett (Python >3.7)
 - megváltoztatható
 - nem tartalmaz kettőzött kulcsokat
-### Példa kiírni az egész szótárat
+## Példa kiírni az egész szótárat
 ```py
 carDictionary = {
   "brand": "Ford",
@@ -157,7 +154,7 @@ carDictionary = {
 }
 print(carDictionary)
 ```
-### Példa kiírni a kulcshoz tartozó értéket
+## Példa kiírni a kulcshoz tartozó értéket
 ```py
 carDictionary = {
   "brand": "Ford",
@@ -176,7 +173,7 @@ carDictionary = {
 }
 print(carDictionary[brandKey])
 ```
-### Példa megváltoztatni egy adott kulcshoz az értéket
+## Példa megváltoztatni egy adott kulcshoz az értéket
 ```py
 brandKey = "brand"
 carDictionary = {
@@ -189,7 +186,7 @@ carDictionary[brandKey] = "Hyundai"
 print(carDictionary[brandKey])
 ```
 
-### Kettőzött kulcsok nem engedélyezettek
+## Kettőzött kulcsok nem engedélyezettek
 Hibát nem jelez ugyan, de mindig felülírja az értéket
 ```py
 carDictionary = {
@@ -200,7 +197,7 @@ carDictionary = {
 }
 print(carDictionary)
 ```
-### Frissítés, `.update`
+## Frissítés, `.update`
 ```py
 carDictionary = {
   "brand": "Ford",
@@ -216,7 +213,7 @@ carDictionary.update({"isElectric":False})
 print(carDictionary)
 ```
 
-### `.get`
+## `.get`
 
 Ha a szótár nem létező kulcsához akarunk hozzáférni, hibát jelez futtatásnál, a program leáll:
 ```py
@@ -239,7 +236,7 @@ print(carDictionary.get("isElectric"))
 print(carDictionary.get("isElectric", "nem tartalmazza"))
 ```
 
-## Tuple `tuple`
+# Tuple `tuple`: `()`
 
 ```mermaid
 graph TB
@@ -285,14 +282,14 @@ gyumolcsok = ('alma', 'korte', 'cseresznye')
 gyumolcsok[0] = 'kiwi'
 ```
 
-### Tulajdonságok
+## Tulajdonságok
 - `()` zárójeleket használjuk
 - a tömb elemei nem változtathatók
 - bármilyen adattípust használhatunk
 - karakterláncokhoz hasonlóan megváltoztathatatlanok, nem adhatunk értéket egyetlen elemének (`myTuple[0] = 10` hibát jelez)
 - létrehozható olyan tuple, amely megváltoztatható elemeket - például tömböket/listákat - tartalmaz (`myTuple = ([1,2,3],4)`, itt tudjuk a `myTuple[0]` értékeit változtatni, hiszen az egy lista )
 
-### Mire jó? 
+## Mire jó? 
 
 Függvény csak egy értéket adhat vissza, de ha az az egy érték olyan típus, ami több értéket tartalmaz, akkor épp a **tuple** lehet a megoldás. Szabályosan leírva:
 ```py
@@ -316,6 +313,7 @@ print(x,y)
 1. Mik a `set` fő tulajdonságai, hogyan jelöljük?
 1. Mik a `dict` fő tulajdonságai, hogyan jelöljük?
 1. Mik a `list` fő tulajdonságai, hogyan jelöljük?
+1. Mik a `tuple` fő tulajdonságai, hogyan jelöljük?
 1. Hogyan határozzuk meg 2 halmaz metszetét, írjatok rá példát.
 1. Készítsetek egy listát, amelyben 3 szótár típusú érték van, amelyek személyeket takarnak a következő kulcsokkal: név, vezetéknév, születési év.
 1. A következő listából csináljatok halmazt: `myList = [5,10,30,28,-99,5,0,0,65,124,214,25,5]`
