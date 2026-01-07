@@ -9,7 +9,7 @@ Ilyen esetekben használhatjuk a `try-except-finally` parancsokat:
 try:
     int('alma')
 except Exception as e:
-    print(f"Hiba tortent: {e}")
+    print(f"Hiba történt: {e}")
 finally:
     print("Finally branch will be always executed")
 ```
@@ -19,7 +19,7 @@ finally:
 try:
     raise Exception("Ez egy saját hiba")
 except Exception as e:
-    print(f"Hiba tortent: {e}")
+    print(f"Hiba történt: {e}")
 ```
 
 # format
@@ -28,14 +28,14 @@ except Exception as e:
 [Itt találtok hozzá több leírást a w3schools oldalán](https://www.w3schools.com/python/python_string_formatting.asp)
 ## format parancs
 
-A `str`-t elkészítitek a következőképpen: `"valami szoveg {valtozo_indexe} meg valami szoveg {valtozo_indexe}"`. Az index 0-tól indul, és a `format` parancs bemenő paramétereiként használjátok
+A `str`-t elkészítitek a következőképpen: `"valami szöveg {változó_indexe} még valami szöveg {változó_indexe}"`. Az index 0-tól indul, és a `format` parancs bemenő paramétereiként használjátok
 
 ```py
 speedLimit = 130
 speed = 110
 formattedString = "You are going {0} in a {1} area"
 
-stringToDisplay = formattedString.format(speedLimit, speed)
+stringToDisplay = formattedString.format(speed, speedLimit)
 
 print(stringToDisplay)
 ```

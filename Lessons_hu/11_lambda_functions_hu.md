@@ -85,7 +85,7 @@ sorted_names = sorted(names, key=lambda x: len(x))
 print(sorted_names)  # ['Vi', 'Al', 'Bob', 'Alice', 'David', 'Charlie']
 ```
 
-> A `key` parametéter a kulcsot jelöli, hogy mi alapján rendezze sorba az egyes elemeket. A fenti példában a betűk száma alapján kerülnek egymás után a szavak. A lambda függvény így olvasható: olyan függvény, amelyik bemenő paramétere x (szöveg, mert épp olyan listánk van), annak add vissza a hosszát, ami alapján rendezd sorba. Ha észreveszitek, a "Vi" és az "Al" nem cserélnek helyet abc sorrendben, a listában a "Vi" volt előbb, kevesebb a karaktere, megy előre.
+> A `key` paraméter a kulcsot jelöli, hogy mi alapján rendezze sorba az egyes elemeket. A fenti példában a betűk száma alapján kerülnek egymás után a szavak. A lambda függvény így olvasható: olyan függvény, amelyik bemenő paramétere x (szöveg, mert épp olyan listánk van), annak add vissza a hosszát, ami alapján rendezd sorba. Ha észreveszitek, a "Vi" és az "Al" nem cserélnek helyet abc sorrendben, a listában a "Vi" volt előbb, kevesebb a karaktere, megy előre.
 
 ## Aggregate functions- összesítő függvények
 Az **összesítő függvények** olyan függvények, amelyek több értékből hoznak létre egyet. Például a `min`, `max`, `sum`, `len`, ezeket egy listán alkalmazva egyetlen értéket adnak vissza.

@@ -22,7 +22,7 @@
   print(lista[1]) #kiirja kiwi
   ```
 - `.append(érték)` - új értéket adunk a lista **végére**
-- `.index(érték)` - visszaadja az `érték` **helyét**, sorszámát, indexét, ha nem találja az értéket, akkor `-1`et ad vissza
+- `.index(érték)` - visszaadja az `érték` **helyét**, sorszámát, indexét. Ha nem találja az értéket, akkor `ValueError` kivételt dob.
 
 
 ## Halmaz `set`
@@ -197,7 +197,7 @@ gyumolcsok[0] = 'kiwi'
 
 ### Mire jó? 
 
-Függvény csak egy értéket adhat vissza, de ha az az egy érték olyan típus, ami több értéket tartalmaz, akkor épp a **tuple** lehet a megoldás. Szabályosan lírva:
+Függvény csak egy értéket adhat vissza, de ha az az egy érték olyan típus, ami több értéket tartalmaz, akkor épp a **tuple** lehet a megoldás. Szabályosan leírva:
 ```py
 def Add10(a:int, b:int)->tuple[int,int]:
     return (a+10, b+10) 
@@ -208,7 +208,7 @@ print(result)
 Vagy egy kicsit egyszerűsítve, és felbontva a tuple-t két (vagy több) változóra
 ```py
 def Add10(a:int, b:int)->tuple[int,int]:
-    return a+10, b+10 # ilyenkor elmaradhat a zarojel
+    return a+10, b+10 # ilyenkor elmaradhat a zárójel
 
 x, y = Add10(40,50)
 print(x,y)
