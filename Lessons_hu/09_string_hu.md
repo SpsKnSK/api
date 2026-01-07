@@ -98,6 +98,7 @@ Count of x 0
 ```
 
 ## `len("text")`
+## `len("text")`
 ```py
 text: str = "They lived happily ever after."
 lengthOfText = len(text)
