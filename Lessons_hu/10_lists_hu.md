@@ -75,20 +75,20 @@ mylist.clear()
 print(mylist)
 ```
 ## Új elem hozzáadása 
-### `.append(erték)` új elem a lista végére
+### `.append(érték)` új elem a lista végére
 ```py
 mylist = ["apple", "banana", "cherry"]
 mylist.append('kiwi')
 print(mylist)
 ```
-### `.insert(index, erték)` új elem az index helyére
+### `.insert(index, érték)` új elem az index helyére
 ```py
 mylist = ["apple", "banana", "cherry"]
 mylist.insert(1, 'kiwi')
 print(mylist)
 ```
 ### `.index(elem)`
-Visszaadja egy adott elem indexét, ha nem találja meg, akkor `-1`et ad vissza.
+Visszaadja egy adott elem indexét. Ha nem találja meg az elemet, akkor `ValueError` kivételt dob.
 
 ```py
 from random import sample
@@ -98,7 +98,7 @@ legkisebbIndex = mylist.index(min(mylist))
 print(f"A {mylist} legkisebb eleme a {legkisebbIndex}. indexen van, értéke pedig {mylist[legkisebbIndex]}")
 ```
 ### `.count(keresettElem)`
-Megszámolja a megadott elemek darabszámát a listában. 
+Megszámolja a megadott elem darabszámát a listában. 
 ```py
 mylist = [1, 1, 2, 3, 4, 5, 5, 1, 1]
 print(mylist.count(1))
@@ -153,7 +153,8 @@ print(myList)
 from random import randint
 
 myList = []
-while index < listLenght:
+index = 0
+while index < listLength:
     myList.append(randint(rangeMinimum, rangeMaximum))
     index += 1
 print(myList)
@@ -161,12 +162,12 @@ print(myList)
 ### variant 2
 ```py
 from random import sample
-mylist = sample(range(lowest, highest), numberOfElements)
+mylist = sample(range(legkisebb, legnagyobb), numberOfElements)
 print(myList)
 ```
 
 # Sorba rendezés
-A listák elemeit sorba redenzhetjük 2 függvény segítségevel:
+A listák elemeit sorba rendezhetjük 2 függvény segítségével:
 - `myList.sort()`
 - `sorted(myList)`
 

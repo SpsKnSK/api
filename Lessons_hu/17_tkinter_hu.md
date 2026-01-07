@@ -7,7 +7,7 @@ A python programozási nyelv grafikus környezetével fogunk megismerkedni ebben
 4. `mainloop`
 
 
-## Ablak generálásáa
+## Ablak generálása
 ```py
 import tkinter as tk
 
@@ -19,7 +19,7 @@ root.mainloop()
 
 `root` változóban mentjük el az ablak példányt, s a `mainloop` példányfüggvénnyel tartjuk nyitva, míg ki nem lépünk belőle.
 
-### Ablka neve
+### Ablak neve
 ```py
 import tkinter as tk
 
@@ -117,7 +117,7 @@ my_button.pack()
 parent.mainloop()
 ```
 
-### Ket gomb
+### Két gomb
 ```py
 import tkinter as tk   
 
@@ -236,7 +236,7 @@ def Megall():
 irany=0
 
 root=Tk()
-cim=Label(root,text=" _ globalis valtozo atallitasa _ ")
+cim=Label(root,text=" _ globális változó átállítása _ ")
 cim.pack(side=TOP)
 
 gomb_kilepes=Button(root,text=' Kilépés ',bg="#FFB8B4",command=root.destroy)
@@ -254,7 +254,7 @@ gomb_megall.pack()
 root.mainloop()
 ```
 
-## Negyzet megjelenítése
+## Négyzet megjelenítése
 
 ```py
 #

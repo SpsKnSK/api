@@ -28,7 +28,7 @@ def nazovFunkcie(parameter1, parameter2)->TypVratenejHodnoty:
 ### Príklad
 Funkcia, ktorá vráti súčet dvoch hodnôt
 ```py
-def Scitaj(a, b)->int:
+def Osszead(a, b)->int:
     return a + b
 ```
 ### Príklad
@@ -59,12 +59,10 @@ else:
 
 ## V jednej funkcii môžeme volať inú funkciu(y)
 ```py
-def Pripocitaj(a: int, b: int) -> int:
-
-
+def Add(a: int, b: int) -> int:
     return a + b
 
-maximum = max(Pripocitaj(10, 5), Pripocitaj(-9, 13), Pripocitaj(9, 0))
+maximum = max(Add(10, 5), Add(-9, 13), Add(9, 0))
 print(maximum)
 ```
 

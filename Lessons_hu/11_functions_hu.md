@@ -22,8 +22,8 @@ Kulcsszavak:
 
 ## Szintaxis
 ```py
-def fuggvenyNeve(parameter1, parameter2)->VisszaadottAdattipus:
-    return visszaadottErtek
+def függvényNeve(parameter1, parameter2)->VisszaadottÁdattípus:
+    return visszaadottÉrték
 ```
 ### Példa
 függvény, ami 2 érték összegét adja vissza
@@ -48,8 +48,8 @@ else:
 ```
 
 ## Függvények (functions), eljárások (methods)
-- **Függvény** van visszaadó értéke `return`, kapunk végeredményt az elvégzés után `def fuggvenyNeve (parameterek)->visszaadottAdatTipus:`
-- **Eljárások** nincs visszaadó érték, valamit élvégez, de nem érdekes a végeredmény  `def fuggvenyNeve (parameterek)->None:`
+- **Függvény** van visszaadó értéke `return`, kapunk végeredményt az elvégzés után `def függvényNeve (paraméterek)->visszaadottÁdatTípus:`
+- **Eljárások** nincs visszaadó érték, valamit elvégez, de nem érdekes a végeredmény  `def függvényNeve (paraméterek)->None:`
 
 ## Feladatok
 [e01_areaOfTriangle.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e01_areaOfTriangle.md)
@@ -75,7 +75,7 @@ print(maximum)
 1. Hogyan definiálunk függvényt? írjátok le a szintaxist.
 2. Mire szolgál a `return` parancs? Mutassátok be példán
 3. Kell-e mindig `return` parancs? Mutassátok be példán
-4. Mondjatok példát függvényre, amelynek nincs bemenő paramétere, és visszad egy `int` értéket `def fuggvenyNeve()->int:`
-5. Mondjatok példát függvényre, amely két egészszám típusú bemenő paraméterrel rendelkezik, és visszad egy `bool` értéket `def fuggvenyNeve(a:int, b:int)->bool:`
-6. Mondjatok példát függvényre, amely egy `str` bemenő paraméterrel rendelkezik,  `int` értéket ad vissza `def fuggvenyNeve(a:str)->int:`
-7. Írjatok függvényt, amelynek bemenő paramétere egy lista, és visszaadtok egy olyan listát, amelyik az eredeti lista páratlan indexű elemeit taratlmazza. `[1,2,3,4] -> [2,4]`
+4. Mondjatok példát függvényre, amelynek nincs bemenő paramétere, és visszad egy `int` értéket `def függvényNeve()->int:`
+5. Mondjatok példát függvényre, amely két egészszám típusú bemenő paraméterrel rendelkezik, és visszad egy `bool` értéket `def függvényNeve(a:int, b:int)->bool:`
+6. Mondjatok példát függvényre, amely egy `str` bemenő paraméterrel rendelkezik,  `int` értéket ad vissza `def függvényNeve(a:str)->int:`
+7. Írjatok függvényt, amelynek bemenő paramétere egy lista, és visszaadja egy olyan listát, amely az eredeti lista páratlan indexű elemeit tartalmazza. `[1,2,3,4] -> [2,4]`

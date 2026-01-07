@@ -26,8 +26,8 @@ print(f"{text}\n{textWithLower}")
 ## `.upper()`
 ```py
 text: str = "Pista elment a Tescoba."
-textWithLower: str = text.upper()
-print(f"{text}\n{textWithLower}")
+textWithUpper: str = text.upper()
+print(f"{text}\n{textWithUpper}")
 ```
 
 ## `.replace(from, to)`

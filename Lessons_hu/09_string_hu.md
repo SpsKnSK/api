@@ -1,7 +1,7 @@
 # String, karakterláncok és műveletek
 
 ```py
-szoveg='szoveg'
+szoveg='szöveg'
 print(szoveg[3])   # kiíratjuk a 4. karaktert a stringből
 print(szoveg[1:])  # kiíratjuk a stringet 2. karaktertől
 print(szoveg[:4])  # kiíratjuk a stringet a 4. karakterig
@@ -26,8 +26,8 @@ print(f"{text}\n{textWithLower}")
 ## `.upper()`
 ```py
 text: str = "Pista elment a Tescoba."
-textWithLower: str = text.upper()
-print(f"{text}\n{textWithLower}")
+textWithUpper: str = text.upper()
+print(f"{text}\n{textWithUpper}")
 ```
 
 ## `.replace(from, to)`
@@ -100,8 +100,8 @@ Count of x 0
 ## `len("text")`
 ```py
 text: str = "They lived happily ever after."
-lenghtOfText = len(text)
-print(f"{text}\nNumber of characters: {lenghtOfText}")
+lengthOfText = len(text)
+print(f"{text}\nNumber of characters: {lengthOfText}")
 ```
 ```
 They lived happily ever after.
@@ -143,14 +143,14 @@ print(numbersString)
 
 ## `in`
 ```py
-betu = input("Adj meg egy betut")
+betu = input("Adj meg egy betűt")
 maganhangzok = "aeiouAEIOU"
 if betu in maganhangzok:
-    print(betu, "maganhangzo")
+    print(betu, "magánhangzó")
 else:
-    print(betu, "massalhangzo")
+    print(betu, "mássalhangzó")
 ```
-> Mit valtoztatnatok rajta? 
+> Mit változtatnátok rajta? 
 
 ##  Példa
 ```py
@@ -162,7 +162,7 @@ elif szo > limonade :
     place = "követi"
 else:
     place = "fedi"
-print(f"A{szo} szó {place} a '{limonade}' szót a névsorban")
+print(f"A '{szo}' szó {place} a '{limonade}' szót a névsorban")
 ```
 
 ## `str` mint kollekció
@@ -185,8 +185,8 @@ vagy egyszerűen listává alakíthatjuk:
 
 ```py
 text = "test"
-zoznamZnakov = list(text)
-print(zoznamZnakov)
+karakterLista = list(text)
+print(karakterLista)
 ```
 ```
 ['t', 'e', 's', 't']
