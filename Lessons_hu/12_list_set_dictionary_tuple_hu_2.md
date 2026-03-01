@@ -46,4 +46,39 @@ print('Unió:', my_set | other)
 print('Különbség:', my_set - other)
 ```
 
-# Kérdések
+## Példa: telefonkönyv
+
+Egy gyakori feladat egy telefonszámokból álló könyvtár kezelése. A kulcs lehet a név, az érték pedig a szám:
+
+```python
+phonebook = {'János': '06-20-123-4567', 'Anna': '06-30-765-4321'}
+phonebook['Péter'] = '06-70-111-2222'
+
+print(phonebook.get('Anna'))  # 06-30-765-4321
+
+print(phonebook.get('József'))
+print(phonebook.get('József', 'Ilyen név nem szerepel a nyilvántartásban'))
+# print(phonebook['József']) ez miért nem jó így?
+
+# mit csinál ez a sor?
+phonebook['János'] = '06-20-999-8888'
+
+del phonebook['Anna']
+
+for name, number in phonebook.items():
+    print(f"{name}: {number}")
+
+for nama in phonebook:
+    print(f"{name}: {phonebook[name]}")
+```
+
+A halmazok jól jöhetnek például a megadott számok egyediségének ellenőrzéséhez, vagy olyan funkciókhoz, ahol csak egyszer számít, hogy be van-e jegyezve valaki.
+
+## Gyakorló kérdések 📝
+
+1. Hogyan lehet egy szótárból csak a kulcsokat listaként kinyerni?
+2. Mivel különbözik az `.remove()` és a `.discard()` halmazművelet?
+3. Hogyan lehet eltávolítani egy véletlenszerű elemet a halmazból?
+4. Mi történik, ha egy nem létező kulcsot kérünk le `my_dict['foo']` vs. `my_dict.get('foo')`?
+5. Hogyan lehet egy szótárat fordított sorrendben (kulcs szerint) bejárni?
+
