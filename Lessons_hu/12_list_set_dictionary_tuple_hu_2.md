@@ -26,26 +26,6 @@ val = my_dict.pop('alma')     # visszaadja az eltávolított értéket
 print('Végső szótár:', my_dict)
 ```
 
-## Halmaz `(set)`
-
-```python
-my_set = {1, 2, 3}
-
-my_set.add(4)
-my_set.update([5, 6])
-
-my_set.remove(2)    # KeyError, ha nincs az elem
-my_set.discard(10)  # nem dob hibát, ha nem létezik
-
-for elem in my_set:
-    print(elem)
-
-other = {3, 4, 7}
-print('Metszet:', my_set & other)
-print('Unió:', my_set | other)
-print('Különbség:', my_set - other)
-```
-
 ## Példa: telefonkönyv
 
 Egy gyakori feladat egy telefonszámokból álló könyvtár kezelése. A kulcs lehet a név, az érték pedig a szám:
@@ -71,14 +51,56 @@ for name, number in phonebook.items():
 for nama in phonebook:
     print(f"{name}: {phonebook[name]}")
 ```
-
+## Halmaz `(set)`
 A halmazok jól jöhetnek például a megadott számok egyediségének ellenőrzéséhez, vagy olyan funkciókhoz, ahol csak egyszer számít, hogy be van-e jegyezve valaki.
+```python
+my_set = {1, 2, 3}
 
-## Gyakorló kérdések 📝
+my_set.add(4)
+my_set.update([5, 6])
+
+my_set.remove(2)    # KeyError, ha nincs az elem
+my_set.discard(10)  # nem dob hibát, ha nem létezik
+
+for elem in my_set:
+    print(elem)
+
+other = {3, 4, 7}
+print('Metszet:', my_set & other)
+print('Unió:', my_set | other)
+print('Különbség:', my_set - other)
+```
+
+## Halmaz és előfordulás-számlálás
+
+Ha egy sorozatban szeretnénk megszámolni, hogy melyik szám hányszor fordul elő,
+akkor halmaz helyett gyakran szótárat használunk: a szám a kulcs, az előfordulás
+a érték.
+
+```python
+numbers = [1, 2, 3, 2, 1, 4, 2]
+counts = {}
+for n in numbers:
+    if n in counts:
+        counts[n] += 1
+    else:
+        counts[n] = 1
+
+print(counts)  # {1: 2, 2: 3, 3: 1, 4: 1}
+
+# ha egyedi számokra van szükségünk, halmazt készíthetünk belőle:
+unique = set(numbers)
+print('Egyedi értékek:', unique)
+```
+
+A `counts` szótárban minden számhoz az előfordulások száma tartozik. így az
+egyszeri és többszöri megjelenés nyomon követhető, míg a halmazból gyorsan
+kaphatunk egyedi elemeket.
+
+
+## Gyakorló kérdések
 
 1. Hogyan lehet egy szótárból csak a kulcsokat listaként kinyerni?
-2. Mivel különbözik az `.remove()` és a `.discard()` halmazművelet?
-3. Hogyan lehet eltávolítani egy véletlenszerű elemet a halmazból?
-4. Mi történik, ha egy nem létező kulcsot kérünk le `my_dict['foo']` vs. `my_dict.get('foo')`?
-5. Hogyan lehet egy szótárat fordított sorrendben (kulcs szerint) bejárni?
-
+1. Hogyan lehet eltávolítani egy véletlenszerű elemet a halmazból?
+1. Mi történik, ha egy nem létező kulcsot kérünk le `my_dict['foo']` vs. `my_dict.get('foo')`?
+1. Hogyan lehet egy szótárat fordított sorrendben (kulcs szerint) bejárni?
