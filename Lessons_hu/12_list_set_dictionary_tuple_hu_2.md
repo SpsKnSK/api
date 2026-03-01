@@ -2,7 +2,7 @@
 
 A következő példák bemutatják a Python szótárak (`dict`) és halmazok (`set`) használatát.
 
-## Szótár `(dictionary)`
+## Szótár `dict`
 
 ```python
 my_dict = {'alma': 1, 'körte': 2}
@@ -51,7 +51,7 @@ for name, number in phonebook.items():
 for nama in phonebook:
     print(f"{name}: {phonebook[name]}")
 ```
-## Halmaz `(set)`
+## Halmaz `set`
 A halmazok jól jöhetnek például a megadott számok egyediségének ellenőrzéséhez, vagy olyan funkciókhoz, ahol csak egyszer számít, hogy be van-e jegyezve valaki.
 ```python
 my_set = {1, 2, 3}
