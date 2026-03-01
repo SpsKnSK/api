@@ -45,3 +45,5 @@ print('Metszet:', my_set & other)
 print('Unió:', my_set | other)
 print('Különbség:', my_set - other)
 ```
+
+# Kérdések
