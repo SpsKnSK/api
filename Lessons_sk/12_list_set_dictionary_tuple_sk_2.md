@@ -31,17 +31,17 @@ print('Konečný slovník:', my_dict)
 Častou úlohou je spravovať adresár telefónnych čísiel. Kľúčom je meno, hodnotou číslo:
 
 ```python
-phonebook = {'Ján': '06-20-123-4567', 'Anna': '06-30-765-4321'}
-phonebook['Peter'] = '06-70-111-2222'
+phonebook = {'Ján': '0903-123654', 'Anna': '0902-123654'}
+phonebook['Peter'] = '0905-123654'
 
-print(phonebook.get('Anna'))  # 06-30-765-4321
+print(phonebook.get('Anna'))  # 0902-123654
 
 print(phonebook.get('Jozef'))
 print(phonebook.get('Jozef', 'Také meno nie je v zázname'))
 # print(phonebook['Jozef']) prečo by toto nebolo dobré?
 
 # čo robí tento riadok?
-phonebook['Ján'] = '06-20-999-8888'
+phonebook['Ján'] = '0911-987654'
 
 del phonebook['Anna']
 
@@ -55,7 +55,7 @@ for name in phonebook:
 ## Množina `set`
 
 Množiny sa hodia napríklad na overenie, či sú zadané čísla jedinečné, alebo pre
-type funkcie, kde stačí vedieť, či je niekto zapísaný len raz.
+tie funkcie, kde stačí vedieť, či je nejaká hodnota zapísaná len raz.
 
 ```python
 my_set = {1, 2, 3}
@@ -97,7 +97,7 @@ print('Jedinečné hodnoty:', unique)
 ```
 
 V slovníku `counts` má každé číslo priradený počet výskytov, takže vidíme, či sa
-ekzempliár objavil raz alebo viackrát, zatiaľ čo z množiny rýchlo získame
+daná hodnota objavila raz alebo viackrát, zatiaľ čo z množiny rýchlo získame
 jedinečné prvky.
 
 ## Cvičné otázky
