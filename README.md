@@ -17,51 +17,47 @@ Preto:
 
 ## 🔍 Keď sa zasekneš, urob toto
 
-1. Čo určite viem?  
-2. Aký je cieľ?  
-3. Aký je **najmenší krok**, ktorý viem spraviť?  
-4. Napíšem `print` a pozriem sa, čo sa deje  
+1. Spýtaj sa: _"Čo určite viem?"_
+2. Spýtaj sa: _"Aký je cieľ?"_
+3. Spýtaj sa: _"Aký je **najmenší krok**, ktorý viem spraviť?"_
+4. Napíš `print` a pozri sa, čo sa deje  
 
 👉 Toto je najdôležitejšia schopnosť počas celého roka.
 
 ---
 
-## 🚫 Pravidlo „neviem“
+## 🚫 Pravidlo "neviem"
 
-👉 Nemôžeš povedať „neviem“, pokiaľ si neskúsil aspoň **jednu vec**.
-
-✔️ „Skúsil som toto, stalo sa toto, tu som sa zasekol“ → pomôžem  
-❌ „neviem“ → premýšľaš ďalej
+👉 Nemôžeš povedať "neviem", pokiaľ si neskúsil aspoň **jednu vec**.  
+✔️ "Skúsil som toto, stalo sa toto, tu som sa zasekol" → pomôžem  
+❌ "neviem" → premýšľaš ďalej
 
 ---
 
 ## 🤖 Používanie AI
 
-Môžeš používať (ChatGPT a pod.), ale rozumne:
-
+Bude na to priestor, hlavne maj pred očami, aby si ju používal rozumne:  
 ✔️ pýtaj sa  
 ✔️ pýtaj si vysvetlenie  
 ✔️ hľadaj chyby  
-
-❌ nekopíruj len hotové riešenie  
-
-👉 **Ak tomu nerozumieš, nepočíta sa to.**
+❌ Kopírovanie hotových riešení s hláškou "veď to funguje" bez akéhokoľvek vysvetlenia je jasný dôkaz, že tomu nerozumieš – takéto riešenie sa **nepočíta**.  
+👉 To, čo odovzdáš, musíš vedieť aj obhájiť. 
 
 ---
 
 ## 🎮 Premýšľaj ako v hre
 
-- Nepodarí sa? → skúsiš znova  
-- Zasekneš sa? → rozdelíš na menšie kroky  
+- Nepodarilo sa? → skúsiš znova  
+- Zasekol si sa? → rozdelíš na menšie kroky  
 - Chyba? → poučíš sa z nej  
 
 ---
 
 ## 🧩 Ako sa učíme?
 
-- postupujeme po malých krokoch  
-- veľa budeme trénovať  
-- často dostaneš čiastočne hotový kód  
+- postupujeme malými krokmi  
+- budeme veľa trénovať  
+- často dostanete čiastočne hotový kód, doplníte  
 
 👉 Nejde o rýchlosť, ale o pochopenie.
 
@@ -89,14 +85,14 @@ Môžeš používať (ChatGPT a pod.), ale rozumne:
 
 ## 📏 Základné pravidlá (rámec)
 
-1. 📵 Mobil počas hodiny nesmie rušiť prácu  
+1. 📵 Mobil počas hodiny nesmie rušiť prácu (vlastnú, ani ostatných)  
 2. 💻 Používame školské počítače  
 3. ☁️ Svoje súbory si ukladaj do cloudu  
 4. 🗣️ Pýtať sa je dovolené a odporúčané  
 5. 🤝 Môžete si navzájom pomáhať  
-6. 🍎 Jesť a piť môžeš, ale mimo počítača  
-7. 🚶 Môžeš sa postaviť alebo prejsť, ale neruš ostatných  
-8. 🌿 Počas prestávky všetci idú von a hýbu sa  
+6. 🍎 Jesť a piť môžeš mimo počítača  
+7. 🚶 Môžeš sa postaviť alebo sa prejsť, ale neruš ostatných  
+8. 🌿 Počas prestávky si dajte oddych od počítača  
 
 ---
 
@@ -106,7 +102,9 @@ Ak niekto nepracuje (napr. hrá hry, stále je na mobile):
 
 👉 beriem to tak, že **nechce napredovať**
 
-Dôsledok:
+Možné dôsledky:
+- rýchle odpovedanie na známku
+- 5ka za aktivitu (nerobenie úlohy)
 - individuálna úloha  
 - viac samostatnej práce  
 
@@ -130,33 +128,31 @@ Nezáleží len na výsledku:
 ## 🧠 To najdôležitejšie
 
 👉 **Cieľom nie je poznať odpoveď.  
-Cieľom je vedieť, čo robiť, keď odpoveď nepoznáš.**
+👉 Cieľom je vedieť, čo robiť, keď odpoveď nepoznáš.**
 
 # HU API :computer: 2. osztály számára 
 
-Ezen az órán a Python :snake: programozási nyelvet tanuljuk.  
-A cél nem csak az, hogy kódot írj, hanem hogy **meg tudd oldani a problémákat akkor is, amikor nem tudod a választ**.
+Ezen az órán a Python :snake: programozási nyelvet tanuljuk. A cél nem csak az, hogy kódot írj, hanem hogy **meg tudd oldani a problémákat akkor is, amikor nem tudod a választ**.
 
 ---
 
 ## 🧠 Hogyan dolgozunk az órán?
 
-👉 A tanulás nem akkor történik, amikor nézed, amit csinálok,  
-hanem amikor **te próbálkozol és gondolkodsz**.
+👉 A tanulás nem csak akkor történik, amikor nézed, amit csinálok, hanem amikor **te magad próbálkozol és gondolkodsz**.
 
 Ezért:
-- dolgozni fogsz
-- hibázni fogsz (ez jó)
-- el fogsz akadni (ez még jobb)
+- dolgozni fogsz  
+- hibázni fogsz (ez jó)  
+- el fogsz akadni (ez még jobb)  
 
 ---
 
 ## 🔍 Ha elakadsz, ezt csináld
 
-1. Mit tudok biztosan?  
-2. Mi a cél?  
-3. Mi a legkisebb lépés?  
-4. Írok egy `print`-et és megnézem mi történik  
+1. Kérdezd meg: _„Mit tudok biztosan?”_  
+2. Kérdezd meg: _„Mi a cél?”_  
+3. Kérdezd meg: _„Mi a **legkisebb lépés**, amit meg tudok csinálni?”_  
+4. Írj egy `print`-et, és nézd meg mi történik  
 
 👉 Ez a legfontosabb skill az egész évben.
 
@@ -164,24 +160,24 @@ Ezért:
 
 ## 🚫 „Nem tudom” szabály
 
-👉 Nem mondhatod, hogy „nem tudom”, amíg nem próbáltál ki legalább egy dolgot.
+👉 Nem mondhatod, hogy „nem tudom”, amíg nem próbáltál ki legalább **egy dolgot**.  
 
 ✔️ „Ezt próbáltam, ez történt, itt akadtam el” → segítek  
-❌ „nem tudom” → gondolkodsz tovább
+❌ „nem tudom” → gondolkodsz tovább  
 
 ---
 
-## 🤖 AI használat
+## 🤖 AI használata
 
-Használhatod (ChatGPT, stb.), de okosan:
+Lesz rá lehetőség, de használd okosan:  
 
 ✔️ kérdezz  
 ✔️ kérj magyarázatot  
-✔️ hibát keress  
+✔️ keress hibákat  
 
-❌ ne csak bemásold a megoldást  
+❌ Kész megoldások bemásolása „de hát működik” alapon, bármilyen magyarázat nélkül egyértelmű jele annak, hogy nem érted – az ilyen megoldás **nem számít**.  
 
-👉 **Ha nem érted, amit beadod, az nem számít.**
+👉 Amit beadod, azt meg is kell tudnod védeni.
 
 ---
 
@@ -196,10 +192,10 @@ Használhatod (ChatGPT, stb.), de okosan:
 ## 🧩 Hogyan tanulunk?
 
 - kis lépésekben haladunk  
-- sok gyakorlás lesz  
-- gyakran kapsz félig kész kódot  
+- sokat fogunk gyakorolni  
+- gyakran kapsz félig kész kódot, amit kiegészítesz  
 
-👉 Nem a gyorsaság számít, hanem hogy megértsd.
+👉 Nem a gyorsaság számít, hanem a megértés.
 
 ---
 
@@ -225,26 +221,28 @@ Használhatod (ChatGPT, stb.), de okosan:
 
 ## 📏 Alapszabályok (keretek)
 
-1. 📵 Órán a mobil nem zavarhatja a munkát  
+1. 📵 Órán a mobil nem zavarhatja a munkát (a sajátodat és másokét sem)  
 2. 💻 Az iskola gépeit használjuk  
-3. ☁️ Saját fájljaidat mentsd a cloud-ba  
-4. 🗣️ Kérdezni ér, sőt ajánlott  
+3. ☁️ A fájljaidat mentsd felhőbe  
+4. 🗣️ Kérdezni szabad, sőt ajánlott  
 5. 🤝 Segíthettek egymásnak  
 6. 🍎 Enni, inni lehet, de a géptől távol  
-7. 🚶 Ha kell, felállhatsz, mozoghatsz, de másokat nem zavarsz  
-8. 🌿 Szünetben mindenki kimegy, mozog egy kicsit  
+7. 🚶 Felállhatsz, mozoghatsz, de másokat ne zavarj  
+8. 🌿 Szünetben pihenj egyet a számítógéptől  
 
 ---
 
 ## ⚠️ Az óra zavarása
 
-Ha valaki nem dolgozik (pl. játék, folyamatos mobilozás):
+Ha valaki nem dolgozik (pl. játszik, folyamatosan telefonozik):
 
 👉 azt úgy veszem, hogy **nem szeretne haladni**
 
-Ennek következménye:
-- külön feladat  
-- több egyéni munka  
+Lehetséges következmények:
+- gyors felelés jegyre  
+- 5-ös aktivitásra (feladat nem végzése)  
+- egyéni feladat  
+- több önálló munka  
 
 👉 Te döntöd el, hogyan használod az idődet.
 
@@ -265,5 +263,5 @@ Nem csak a végeredmény számít:
 
 ## 🧠 A legfontosabb
 
-👉 **Nem az a cél, hogy tudd a megoldást.  
-Az a cél, hogy tudd, mit csinálj, amikor nem tudod.**
+👉 **Nem az a cél, hogy tudd a választ.  
+👉 Az a cél, hogy tudd, mit csinálj, amikor nem tudod.**
