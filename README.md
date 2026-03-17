@@ -1,116 +1,269 @@
 # SK API :computer: pre 2. ročník 
 
-Na tejto hodine sa budeme učiť programovat v jazyku `Python` :snake: budeme pracovať spolu na tom, aby ste mali čo najviac náradí a vedomostí na riešenie problémov, ktorými sa stretnete. 
+Na tomto predmete sa budeme učiť programovací jazyk Python :snake:. Cieľom nie je len písať kód, ale naučiť sa **riešiť problémy aj vtedy, keď nepoznáš odpoveď**.
 
-Môžete si to predstavič, ako **RPG**, kde s hrdinom idete cez hracie pole, stretávate sa s inými hráčmi, bojujete, dostávate XP, pribúdajú nové schopnosti a na konci budete namakaní.
+---
 
-## Programové prostredie
-Ako IDE budeme používať `Visual Studio Code`, kódenie budete mať uľahčené. Odporúčam tmavé pozadie. 
+## 🧠 Ako pracujeme na hodine?
 
-## Tento rok nás čakajú:
-- Základné dátové typy: `int`, `string`, `float`
-- Vetvenie `if`, `elif`, `else`
-- Cykly `for` a `while`
-- Práca s reťazcami `string`
-- Definícia a použitie funkcií `def`
-- Triedy, dedenie `class`
-- Práca s dátumom `import datetime`
-- Práca so súbormi `open`
-- Ošetrenie chýb `try-except-finally`
-  
-## Pravidlá
-1. :no_mobile_phones: Mobily cez hodiny budete mať mimo vás položené na zvlášť miesto
-2. ✅ Počas hodín môžete používať internet, na riešenie zadaní
-3. ✅ Aktivita sa cení 
-4. ✅ Diskusie a skupinu budeme mať na `Discord`e, tam sa môžete pýtať
-5. ✅ Čím viac sa pýtate, tým viac sa naučíte 
-6. ✅ Ak niečo nie je jasné, pýtajte sa
-7. ✅ Na hodine môžete jesť mimo počítačov
-8. ✅ Na prestávky každý vyjde von, pohyb je dôležitý
-9. ✅ Ak cítite potrebu sa rozhýbať, lebo dlho sedíte, môžete sa poprechádzať, môžete tak urobiť nerušiac ostatných
-10. Využívať môžete len školský počítač, látku, súbory, poznámky si môžete uložiť na vlastný cloud
-### Rušenie hodín
-Ak sa niekto rozhodne rušiť hodinu (či už mobilom alebo online hrou), beriem to tak, že sa dobrovoľne prihlásil pre ďalšiu domácu úlohu. Jej kontrola samozrejme zaberá čas od ostatných, čo môže znamenať, že sa na prípadnú písomku budete musieť pripraviť doma.
+👉 Učenie neprebieha len vtedy, keď len sleduješ, čo robím, ale keď **sám skúšaš a premýšľaš**.
 
-> Vy rozhodujete, ako sa budeme k sebe správať
+Preto:
+- budeš pracovať
+- budeš robiť chyby (to je dobré)
+- zasekneš sa (to je ešte lepšie)
 
-## Poznámky
-To, čo odznie na hodine, môžete si zapisovat do zošita, do google-drive-u. Prepis hodín bude zdielaný s vami, ale doporučujem si robiť vlastné poznámky. 
+---
 
-> To, ako budete napredovať závisí len od vás.
+## 🔍 Keď sa zasekneš, urob toto
 
-## Písomky
-Písomky budú cez EduPage pri počítači, ak neurčím ináč. V písomke sa budem pýtať **len** na prebratú a precvičenú látku:
-- *Otvorené otázky*, na ktoré odpovedáte písomne, čím jednoduchšie vysvetlíte, tým lepšie. 
-- *Zadania*, v ktorých napíšete krátky program.
+1. Čo určite viem?  
+2. Aký je cieľ?  
+3. Aký je **najmenší krok**, ktorý viem spraviť?  
+4. Napíšem `print` a pozriem sa, čo sa deje  
 
-## Domáce úlohy
-Domáce úlohy sú na doma a pre každého zvlášť, budú to náročnejšie úlohy, ale len v rozpätí logiky a prebranej látky. 
+👉 Toto je najdôležitejšia schopnosť počas celého roka.
 
-### Známkovanie DÚ
-- Po zadaní domácej úlohy do EduPage budete mať **1 týžden** na to, aby ste odovzdali, ak neurčím ináč. Kto neodovzdá do termínu, bude to hodnotene 5
-- Úlohy cez kopirák budem hodnotiť nasledovne:
-  - Časovo prvá odovzdaná úloha bude oznámkovaná, aj keď to nebude od autora
-  - Ostatné úlohy za 5
+---
 
-## Známkovanie
-Budete mať veľa známok, aby sa lepšie určil priemer, ale to je len nezáväzné číslo. Keď budete na hodinách dávať pozor, robiť úlohy, odovzdávať DÚ na čas a používať jednoduchý sedliacky mozog, dáte to bez ťažkostí. 
+## 🚫 Pravidlo „neviem“
+
+👉 Nemôžeš povedať „neviem“, pokiaľ si neskúsil aspoň **jednu vec**.
+
+✔️ „Skúsil som toto, stalo sa toto, tu som sa zasekol“ → pomôžem  
+❌ „neviem“ → premýšľaš ďalej
+
+---
+
+## 🤖 Používanie AI
+
+Môžeš používať (ChatGPT a pod.), ale rozumne:
+
+✔️ pýtaj sa  
+✔️ pýtaj si vysvetlenie  
+✔️ hľadaj chyby  
+
+❌ nekopíruj len hotové riešenie  
+
+👉 **Ak tomu nerozumieš, nepočíta sa to.**
+
+---
+
+## 🎮 Premýšľaj ako v hre
+
+- Nepodarí sa? → skúsiš znova  
+- Zasekneš sa? → rozdelíš na menšie kroky  
+- Chyba? → poučíš sa z nej  
+
+---
+
+## 🧩 Ako sa učíme?
+
+- postupujeme po malých krokoch  
+- veľa budeme trénovať  
+- často dostaneš čiastočne hotový kód  
+
+👉 Nejde o rýchlosť, ale o pochopenie.
+
+---
+
+## 🛠️ Nástroje
+
+- IDE: `Visual Studio Code`  
+- Komunikácia: `Discord`  
+- Poznámky: vlastný systém (zošit / digitálne)
+
+---
+
+## 📚 Témy
+
+- Základné dátové typy (`int`, `string`, `float`)
+- Podmienky (`if`, `elif`, `else`)
+- Cykly (`for`, `while`)
+- Funkcie (`def`)
+- Triedy a dedenie (`class`)
+- Práca so súbormi
+- Ošetrenie chýb
+
+---
+
+## 📏 Základné pravidlá (rámec)
+
+1. 📵 Mobil počas hodiny nesmie rušiť prácu  
+2. 💻 Používame školské počítače  
+3. ☁️ Svoje súbory si ukladaj do cloudu  
+4. 🗣️ Pýtať sa je dovolené a odporúčané  
+5. 🤝 Môžete si navzájom pomáhať  
+6. 🍎 Jesť a piť môžeš, ale mimo počítača  
+7. 🚶 Môžeš sa postaviť alebo prejsť, ale neruš ostatných  
+8. 🌿 Počas prestávky všetci idú von a hýbu sa  
+
+---
+
+## ⚠️ Rušenie hodiny
+
+Ak niekto nepracuje (napr. hrá hry, stále je na mobile):
+
+👉 beriem to tak, že **nechce napredovať**
+
+Dôsledok:
+- individuálna úloha  
+- viac samostatnej práce  
+
+👉 Je na tebe, ako využiješ svoj čas.
+
+---
+
+## 📊 Hodnotenie
+
+Nezáleží len na výsledku:
+
+- snaha  
+- premýšľanie  
+- aktivita  
+- zlepšenie  
+
+👉 Ak pracuješ a napreduješ, bude to v poriadku.
+
+---
+
+## 🧠 To najdôležitejšie
+
+👉 **Cieľom nie je poznať odpoveď.  
+Cieľom je vedieť, čo robiť, keď odpoveď nepoznáš.**
 
 # HU API :computer: 2. osztály számára 
 
-Ezen az órán a Python :snake: programozási nyelvet fogjuk tanulni. A fő feladatunk, hogy minél több eszköz álljon rendelkezésetekre a feladatok megoldásához. 
+Ezen az órán a Python :snake: programozási nyelvet tanuljuk.  
+A cél nem csak az, hogy kódot írj, hanem hogy **meg tudd oldani a problémákat akkor is, amikor nem tudod a választ**.
 
-Elképzelheted ezt úgy is, mint egy **RPG**t, ahol a te vagy a főhős, végigjárod a játékteret, találkozol más játékosokkal, harcolsz szörnyekkel, feladatokat oldasz meg, ezáltal tapasztalatot szerezel, és új képességekkel bővül a tudástárad.
+---
 
-## Programozási környezet
-Az IDE-ként a `Visual Studio Code`-ot fogjuk használni, ami megkönnyíti a kódolást. Ajánlom a sötét háttér beállítását.
+## 🧠 Hogyan dolgozunk az órán?
 
-## Amikkel idén találkozni fogunk:
-- Alap adattípusok: `int`, `string`, `float`
-- Elágazások: `if`, `elif`, `else`
-- Ciklusok: `for` és `while`
-- Munka karakterláncokkal `string`
-- Függvények definiálása és használata `def`
-- Osztályok és öröklés `class`
-- Dátumok kezelése `import datetime`
-- Fájlok műveletei `open`
-- Hibakezelés `try-except-finally`
+👉 A tanulás nem akkor történik, amikor nézed, amit csinálok,  
+hanem amikor **te próbálkozol és gondolkodsz**.
 
-## Szabályok
-1. :no_mobile_phones: Az órákon a mobiltelefonokat külön helyre kell tenni.
-2. ✅ Az órák során használhatod az internetet, és kereshetsz olyan dolgokat, amelyek a tananyaggal kapcsolatosak. 
-3. ✅ Az aktív részvétel értékelve lesz
-4. ✅ A beszélgetéseket és a csoportmunkát a `Discord`on fogjuk végezni, így ott felteheted a kérdéseidet
-5. ✅ Minél többet kérdezel, annál többet tanulsz.
-6. ✅ Ha valami nem világos, kérdezz.
-7. ✅ Az óra alatt a számítógéptől távol ehetsz, ihatsz.
-8. ✅ Szünetekben mindenki kimegy, fontos a mozgás.
-9. ✅ Ha úgy érzed, hogy elgémberedtek a végtagjaid, nyugodtan sétálj, nyújtózz, de másokat ezzel ne zavarj.
-10. Csak az iskola gépeit használhatjátok, az anyagot, a fájlokat, jegyzeteket a saját cloud-otokba feltölthetitek.
+Ezért:
+- dolgozni fogsz
+- hibázni fogsz (ez jó)
+- el fogsz akadni (ez még jobb)
 
-### Óra zavarása
-Amennyiben úgy dönt valaki, hogy az órát zavarni fogja (legyen az mobilozás, vagy online játék), ezt úgy fogom venni, hogy önként jelentkezett egy extra házi feladatra. Persze, annak ellenőrzése időt vesz el a többiektől, ami azt fogja maga után vonni, hogy egy esetleges felmerőre otthon kell majd készülni.
+---
 
-> Ti döntésetek, hogyan viselkedjünk egymással
+## 🔍 Ha elakadsz, ezt csináld
 
-## Jegyzetek
-Ami az órán elhangzik, azt megosztom veletek, viszont ajnálom, hogy készítsetek **saját** jegyzeteket. A saját jegyzet módját rátok bízom (füzet, notebook, GoogleDrive, egyéb)
+1. Mit tudok biztosan?  
+2. Mi a cél?  
+3. Mi a legkisebb lépés?  
+4. Írok egy `print`-et és megnézem mi történik  
 
-> Az előrehaladás csak tőled függ.
+👉 Ez a legfontosabb skill az egész évben.
 
-## Dolgozatok
-A dolgozatokat az EduPage-en keresztül fogom szervezni, kivéve, ha nem döntök másként. A dolgozatokban **csak** az átvett és gyakorolt anyagból készítem:
-- *Nyitott kérdések*, amelyekre írásban válaszoltok, minél egyszerűbben megmagyarázva.
-- *Feladatok*, amelyekben rövid programokat kell írnotok.
+---
 
-## Házi feladatok
-A házi feladatok otthonra lesznek, és mindenki egyedül dolgozza ki. Ezek a feladatok összetettebbek lesznek, mint amit órán átveszünk, de csak az átvett anyaghoz kapcsolódnak.
+## 🚫 „Nem tudom” szabály
 
-### Házi feladatok értékelése
-- Miután elküldted a házi feladatot az EduPage-en, **1 hét** áll rendelkezésedre, ha nem határozok másképp. Aki a határidő letelte után küldi be, azt 5t kap.
-- A házi feladatok másolását az alábbiak szerint értékelem:
-  - Az időrendi sorrend szerint elsőként elküldött feladatot értékelem, függetlenül attól, hogy ki volt a szerző.
-  - A többi feladatot 5össel jutalmazom.
+👉 Nem mondhatod, hogy „nem tudom”, amíg nem próbáltál ki legalább egy dolgot.
 
-## Értékelés
-Sok jegyet fogtok kapni, így könnyebben meghatározhatjuk az átlagotokat, viszont ez csak egy referencia érték. Ha odafigyelsz az órákon, elvégzed a feladatokat, időben beadod a házi feladatokat, és használod a józan paraszti eszed, akkor könnyedén elsajátítjátok, és elvégzitek a tantárgyat.
+✔️ „Ezt próbáltam, ez történt, itt akadtam el” → segítek  
+❌ „nem tudom” → gondolkodsz tovább
+
+---
+
+## 🤖 AI használat
+
+Használhatod (ChatGPT, stb.), de okosan:
+
+✔️ kérdezz  
+✔️ kérj magyarázatot  
+✔️ hibát keress  
+
+❌ ne csak bemásold a megoldást  
+
+👉 **Ha nem érted, amit beadod, az nem számít.**
+
+---
+
+## 🎮 Gondolkodj úgy, mint egy játékban
+
+- Nem sikerül? → újrapróbálod  
+- Elakadsz? → kisebb lépésekre bontod  
+- Hiba? → tanulsz belőle  
+
+---
+
+## 🧩 Hogyan tanulunk?
+
+- kis lépésekben haladunk  
+- sok gyakorlás lesz  
+- gyakran kapsz félig kész kódot  
+
+👉 Nem a gyorsaság számít, hanem hogy megértsd.
+
+---
+
+## 🛠️ Eszközök
+
+- IDE: `Visual Studio Code`  
+- Kommunikáció: `Discord`  
+- Jegyzet: saját rendszer (füzet / digitális)
+
+---
+
+## 📚 Témák
+
+- Alap adattípusok (`int`, `string`, `float`)
+- Elágazások (`if`, `elif`, `else`)
+- Ciklusok (`for`, `while`)
+- Függvények (`def`)
+- Osztályok és öröklés (`class`)
+- Fájlkezelés
+- Hibakezelés
+
+---
+
+## 📏 Alapszabályok (keretek)
+
+1. 📵 Órán a mobil nem zavarhatja a munkát  
+2. 💻 Az iskola gépeit használjuk  
+3. ☁️ Saját fájljaidat mentsd a cloud-ba  
+4. 🗣️ Kérdezni ér, sőt ajánlott  
+5. 🤝 Segíthettek egymásnak  
+6. 🍎 Enni, inni lehet, de a géptől távol  
+7. 🚶 Ha kell, felállhatsz, mozoghatsz, de másokat nem zavarsz  
+8. 🌿 Szünetben mindenki kimegy, mozog egy kicsit  
+
+---
+
+## ⚠️ Az óra zavarása
+
+Ha valaki nem dolgozik (pl. játék, folyamatos mobilozás):
+
+👉 azt úgy veszem, hogy **nem szeretne haladni**
+
+Ennek következménye:
+- külön feladat  
+- több egyéni munka  
+
+👉 Te döntöd el, hogyan használod az idődet.
+
+---
+
+## 📊 Értékelés
+
+Nem csak a végeredmény számít:
+
+- próbálkozás  
+- gondolkodás  
+- aktivitás  
+- fejlődés  
+
+👉 Ha dolgozol és haladsz, nem lesz gond.
+
+---
+
+## 🧠 A legfontosabb
+
+👉 **Nem az a cél, hogy tudd a megoldást.  
+Az a cél, hogy tudd, mit csinálj, amikor nem tudod.**
