@@ -1,3 +1,28 @@
+﻿> # ✏️ Triedy (`class`)
+>
+> Trieda je **plán**, inštancia (objekt) je z nej vytvorená **konkrétna vec**.
+>
+> ```py
+> class Macka:
+>     def __init__(self, meno, farba) -> None:
+>         self.Meno = meno
+>         self.Farba = farba
+>
+>     def Predie(self):
+>         print(f"{self.Meno} je {self.Farba} mačka a pradie")
+>
+> cica = Macka("Cilka", "strieborná")   # vytvorenie inštancie - konkrétny objekt
+> cica.Predie()
+> ```
+>
+> - `class Nazov:` - vytvorenie triedy (plánu)
+> - `__init__(self, ...)` - spustí sa pri každom vytvorení inštancie, nastaví počiatočné vlastnosti
+> - `self` - "táto konkrétna inštancia", cez ňu pristupujeme k vlastným vlastnostiam a funkciám
+> - `self.Vlastnost = hodnota` - nastavenie vlastnosti
+> - `__str__(self)` - určuje, ako bude objekt vyzerať po prevedení na text (`str`) alebo pri výpise
+>
+> **Metafora:** trieda je ako **forma na sušienky**: samotná forma nie je sušienka, ale každá sušienka z nej dostane rovnaký základný tvar (a pritom ju môžeme ozdobiť inak).
+
 # Triedy, vlastné/zložené dátové typy `class`
 
 Doposiaľ sme sa stretli a pracovali s dátovými typmi ako `int`, `float`, `str`, `random`, `list`, `dict`, ale teraz sme schopní ísť ďalej a definovať si vlastný dátový typ.
@@ -220,22 +245,46 @@ print('osoba.Vek', osoba.Vek)
 ```
 Kľúče slovníka môžeme považovať vlastnosťami triedy, pri slovníku musíme dávať pozor, aby sme **vždy** správne zadali kľúč, pri triede nám Python editor sám ponúkne názov vlastnosti Trieda môže byť rozšírená o rôzne funkcie.
 
-# Otázky
-1. Vytvorte triedu `Pes`, ktorá bude mať meno a farbu. Tieto hodnoty zadajte počas inicializácie pomocou funkcie `__init__`. Vytvorte 2 príklady:
-   1. meno nech je Cezar, farbu si zvoľte sami
-   1. farba nech je biela, meno si zvoľte sami
-   - Vypíšte ich vlastnosti na obrazovku
-1. Vytvorte triedu `Auto` s nasledujúcimi vlastnosťami: farba, značka, model, rok výroby. Môžete použiť funkciu `__init__`, ale nie je to nevyhnutné. Definujte nasledujúce 2 funkcie:
-   1. `Start` - vypíše na obrazovku: "Auto farby [farba] z roku [rok výroby] značky [značka] [model] sa rozbehlo"
-   1. `Stop` - vypíše na obrazovku: "Auto sa zastavilo"
-	- vytvorte 3 inštancie áut
-	- vložte ich do zoznamu 
-	- a zavolajte obe ich funkcie
-1. Vytvorte triedu `Pracovnik` s nasledujúcimi vlastnosťami: id, plat, pohlavie, vek. Funkciu `__str__` upravte tak, aby vrátila nasledujúci reťazec: "Zamestnanec s id [id] je [pohlavie], zarába [plat] eurá a má [vek] rokov." Pomocou knižnice `random`:
-   - vygenerujte náhodný počet zamestnancov v rozmedzí <75;120>
-      - `id` nech je z rozsahu <10000;100000>
-      - `plat` nech je z rozsahu <1000;5000>
-      - `pohlavie`: muž alebo žena
-      - `vek` nech je z rozsahu <20;99>
-	- vygenerované inštancie Pracovnik vložte do zoznamu a vypíšte ich hodnoty na obrazovku
+> # 💥 Pokazte to!
+>
+> Aká je chyba v tomto programe?
+>
+> ```py
+> class Macka:
+>     def __init__(self, meno, farba) -> None:
+>         self.Meno = meno
+>         self.Farba = farba
+>
+> cirmi = Macka("Cirmi", "strieborná")
+> print(cirmi.Predie())
+> ```
+>
+> Prečo to nefunguje? Čo treba doplniť, aby trieda `Macka` vedela priasť a nielen uchovávať svoje meno a farbu?
+>
+> # 📋 Úlohy
+> - [e01_fish.md](../Exercies/13_classes/e01_fish.md)
+> - [e02_worker.md](../Exercies/13_classes/e02_worker.md)
+> - [e03_bankAccount.md](../Exercies/13_classes/e03_bankAccount.md)
+> - [e04_figureSkating.md](../Exercies/13_classes/e04_figureSkating.md)
+>
+> # ❓ Otázky
+>
+> 1. Vytvorte triedu `Pes`, ktorá má meno a farbu. Tieto hodnoty nastavte pri vytvorení inštancie pomocou funkcie `__init__`. Vytvorte 2 inštancie:
+>    1. meno nech je Cezar, farbu si zvoľte sami
+>    2. meno si zvoľte sami, farba nech je biela
+>    - Vypíšte ich vlastnosti na obrazovku.
+> 2. Vytvorte triedu `Auto` s týmito vlastnosťami: farba, značka, model, rok výroby. Môžete použiť funkciu `__init__`, ale nemusíte. Definujte tieto 2 funkcie:
+>    1. `Start` - vypíše na obrazovku: "[farba] auto z roku [rok výroby], značky [značka] [model], sa rozbehlo"
+>    2. `Stop` - vypíše na obrazovku: "Auto sa zastavilo"
+>    - vytvorte 3 inštancie
+>    - vložte ich do zoznamu
+>    - a zavolajte na nich obe funkcie
+> 3. Vytvorte triedu `Pracovnik` s týmito vlastnosťami: id, plat, pohlavie, vek. Upravte funkciu `__str__` tak, aby vracala tento reťazec: "Zamestnanec s id [id] je [pohlavie], zarába [plat] eur a má [vek] rokov." Pomocou knižnice `random`:
+>    - vygenerujte náhodný počet zamestnancov v intervale <75;120>
+>      - `id` nech je z intervalu <10000;100000>
+>      - `plat` nech je z intervalu <1000;5000>
+>      - `pohlavie`: muž alebo žena
+>      - `vek` nech je z intervalu <20;99>
+>    - vygenerované inštancie `Pracovnik` vložte do zoznamu a vypíšte ich hodnoty na obrazovku
+> 4. Na čo slúži parameter `self` a kedy ho môžeme vynechať z definície funkcie?
 

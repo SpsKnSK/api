@@ -34,6 +34,9 @@
 > 192.168.100.1
 > Ahoj Peter!
 > ```
+>
+> **Metafora:** `print()` je ako **výklad obchodu**: čo tam vystavíš (napíšeš do zátvoriek), to uvidí zákazník (uvidí sa na obrazovke).
+
 # `print()`
 - Výpis údajov a informácií na obrazovku
 - Môžeme vypísať:

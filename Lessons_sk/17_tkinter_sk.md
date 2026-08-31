@@ -1,3 +1,29 @@
+> # ✏️ Tkinter — grafické rozhranie
+>
+> Vytvorenie okna má 4 kroky:
+> 1. `import tkinter as tk` — načítanie knižnice
+> 2. `root = tk.Tk()` — vytvorenie hlavného okna
+> 3. vytvorenie a rozmiestnenie widgetov (`.pack()` alebo `.grid()` alebo `.place()`)
+> 4. `root.mainloop()` — udržiava okno „nažive“, kým ho nezavrieme
+>
+> ```py
+> import tkinter as tk
+>
+> root = tk.Tk()
+> root.title("Moje prvé okno")
+>
+> label = tk.Label(root, text="Ahoj, svet!")
+> label.pack()
+>
+> tlacidlo = tk.Button(root, text="Klikni na mňa!", command=lambda: print("Stlačil si tlačidlo!"))
+> tlacidlo.pack()
+>
+> root.mainloop()
+> ```
+>
+> **Dôležité:** ak k tlačidlu priraďujeme funkciu (`command=funkcia`), píšeme **iba názov funkcie bez zátvoriek** (hneď ju nespúšťame, iba hovoríme tlačidlu, čo má zavolať po kliknutí).
+>
+> **Metafora:** okno `root` je ako **prázdny výklad**, widgety (`Label`, `Button`, `Entry`) sú predmety vystavené vo výklade. `mainloop()` je ako keď **necháme obchod otvorený** — sleduje, či sa niečo deje (kliknutie, písanie), až kým okno nezavrieme.
 # Grafické prostredie s knižnicou Tkinter
 
 V tejto kapitole sa zoznámime s grafickým prostredím programovacieho jazyka python. Viac príkladov nájdete [tu](https://www.pythontutorial.net/tkinter/) alebo inde na internete. Vytváranie okna pozostáva z nasledujúcich krokov:
@@ -344,14 +370,40 @@ root.mainloop()
 
 ```
 
-# Úlohy
-1. **Vytvorte vizitky** (meno, priezvisko, bydlisko, vek) usporiadané v mriežke.
-1. **Prevodník teploty**: Vytvorte program, ktorý prevádza teplotu z Celsiusov na Fahrenheity a naopak.
-1. **Prevodník času**: Vytvorte program, ktorý prevádza čas v hodinách-minút-sekundách na sekundy a naopak.
-1. **Jednoduchá hra**: Vytvorte jednoduchú hru, napríklad kameň-nožnice-papier alebo hru na zapamätanie.
-1. **Počasie**: Vytvorte aplikáciu, ktorá získa aktuálne údaje o počasí pomocou API a zobrazí ich používateľovi.
-1. **Výber farby**: Vytvorte program, kde používatelia môžu vybrať farby a aplikácia ich zobrazí.
-1. **Kalkulačka**: Vytvorte jednoduchú kalkulačku, kde používatelia môžu sčítať, odčítať, násobiť a deliť čísla.
-1. **Menový prevodník**: Vytvorte jednoduchý prevodník mien, ktorý získa aktuálne výmenné kurzy zo stránky Národnej banky Slovenska `https://nbs.sk/export/sk/exchange-rate/yyyy-mm-dd/csv`, kde dátum určíte v odkaze, a používatelia budú môcť vybrať meny na konverziu. Program by mal fungovať z eura na inú menu a naopak.
-1. **Súčet číslic**: Vytvorte program, kde používatelia môžu zadať číslo a aplikácia vypočíta súčet jeho číslic.
-1. **Prehliadač obrázkov**: Vytvorte jednoduchý prehliadač obrázkov, kde používatelia môžu vybrať priečinok a aplikácia zobrazí obrázky v tomto priečinku.
+> # 💥 Pokazte to!
+>
+> Aká je chyba v tomto programe?
+>
+> ```py
+> import tkinter as tk
+>
+> def pozdrav():
+>     print("Ahoj!")
+>
+> root = tk.Tk()
+> tlacidlo = tk.Button(root, text="Pozdrav", command=pozdrav())
+> tlacidlo.pack()
+> root.mainloop()
+> ```
+>
+> Všimnite si: text `"Ahoj!"` sa vypíše hneď pri spustení programu, ešte pred kliknutím na tlačidlo! Aká je chyba v časti `command=pozdrav()` a ako to treba zapísať správne?
+>
+> # 📋 Úlohy
+> 1. Vytvorte vizitku (meno, priezvisko, bydlisko, vek) usporiadanú do mriežky.
+> 2. **Prevodník teploty**: vytvorte program, ktorý prevádza teplotu z Celzia na Fahrenheit a naopak.
+> 3. **Prevodník času**: vytvorte program, ktorý prevádza čas hodina-minúta-sekunda na sekundy a naopak.
+> 4. **Jednoduchá hra**: vytvorte jednoduchú hru, napríklad kameň-papier-nožnice alebo pexeso.
+> 5. **Aplikácia počasia**: vytvorte program, ktorý pomocou API získa aktuálne údaje o počasí a zobrazí ich používateľovi.
+> 6. **Výber farby**: vytvorte program, v ktorom si používatelia môžu vybrať farby a aplikácia zobrazí vybranú farbu.
+> 7. **Kalkulačka**: vytvorte jednoduchú kalkulačku, v ktorej používatelia môžu sčítať, odčítať, násobiť a deliť čísla.
+> 8. **Menový prevodník**: vytvorte jednoduchý prevodník mien, ktorý načíta aktuálne kurzy zo stránky Národnej banky Slovenska `https://nbs.sk/export/sk/exchange-rate/yyyy-mm-dd/csv`, kde v odkaze určíte dnešný dátum, a používateľ si bude môcť vybrať z ponúkaných mien. Program musí fungovať z eura na inú menu aj naspäť.
+> 9. **Súčet číslic**: vytvorte program, v ktorom používatelia zadajú číslo a aplikácia vypočíta súčet jeho číslic.
+> 10. **Prehliadač obrázkov**: vytvorte jednoduchý prehliadač obrázkov, v ktorom si používatelia môžu vybrať priečinok a aplikácia zobrazí obrázky z tohto priečinka.
+>
+> # ❓ Otázky
+>
+> 1. Z akých 4 krokov sa skladá vytvorenie tkinter okna?
+> 2. Aký je rozdiel medzi spôsobmi rozmiestnenia `.pack()`, `.grid()` a `.place()`?
+> 3. Prečo nesmieme pri parametri `command=` uviesť funkciu so zátvorkami?
+> 4. Na čo slúži `root.mainloop()`?
+> 5. Ako vieme upraviť globálnu premennú z funkcie priradenej k tkinter tlačidlu?

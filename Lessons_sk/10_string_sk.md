@@ -1,3 +1,23 @@
+> # ✏️ Reťazce (texty)
+>
+> **Reťazec** je postupnosť znakov. Každý znak má svoj **index** (poradové číslo), ktoré začína od **0**.
+>
+> ```text
+> s  l  o  v  o
+> 0  1  2  3  4
+> ```
+>
+> | Operácia | Význam | Príklad (`text = "slovo"`) |
+> |---|---|---|
+> | `text[i]` | `i`-ty znak | `text[3]` → `"v"` |
+> | `text[a:b]` | od `a` po `b` (`b` sa nepočíta) | `text[1:4]` → `"lov"` |
+> | `.lower()` / `.upper()` | zmení na malé/veľké písmená | |
+> | `.replace(x, y)` | nahradí `x` za `y` | |
+> | `.split()` | rozdelí podľa medzier | |
+> | `len(text)` | dĺžka reťazca | |
+>
+> **Metafora:** reťazec je ako **retiazka z korálikov** — každý korálik je jeden znak a každý má svoju menovku: 0, 1, 2, 3... Výraz `[a:b]` vystrihne kus tejto retiazky.
+
 # String, reťazce, slová
 
 ## 📑 Obsah
@@ -205,16 +225,36 @@ print(zoznamZnakov)
 ['t', 'e', 's', 't']
 ```
 
+> # 💥 Pokazte to!
+>
+> Čo vypíše tento program? Prečo sa zobrazí len `"azec"`, a nie `"ťazec"`?
+>
+> ```py
+> retazec = "reťazec"
+> print(retazec[3:8])
+> ```
+>
+> Opravte ho tak, aby výstup naozaj bol `"ťazec"` (pozrite sa, na akom indexe je písmeno `ť`). Potom vyskúšajte: čo sa stane, ak si vypýtate `retazec[10]` z 8-znakového reťazca?
 
-## Úlohy
-- [Analýza vety](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e01_workWithCharacters.md#sk)
+> # 📋 Úlohy
+> - [Analýza vety](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e01_workWithCharacters.md#sk)
+> - [Kačky](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e02_ducks.md#sk)
+> - [Analýza vety 2](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e03_workingWithSentence.md#sk)
+> - [Výmena písmen](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e04_replace.md#sk)
+> - [Vypísanie slova](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e05_printWord.md#sk)
+> - [Generovanie vety](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e06_assemblyASentence.md#sk)
 
-- [Kačky](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e02_ducks.md#sk)
-
-- [Analýza vety 2](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e03_workingWithSentence.md#sk)
-
-- [Výmena písmen](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e04_replace.md#sk)
-
-- [Vypísanie slova](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e05_printWord.md#sk)
-
-- [Generovanie vety](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e06_assemblyASentence.md#sk)
+> # ❓ Otázky
+>
+> 1. Aký index má prvý znak reťazca?
+> 2. Čo vráti `retazec[2:5]`?
+> 3. Aký je rozdiel medzi `.lower()` a `.upper()`?
+> 4. Ako zistíte, koľkokrát sa určitý znak nachádza v reťazci?
+> 5. Čo robí `.split()` a čo vracia?
+> 6. Prečo sa dá cez reťazec prechádzať cyklom `for`?
+> 7. Čo vypíše tento program?
+>
+>    ```py
+>    slovo = "python"
+>    print(slovo[1:4])
+>    ```

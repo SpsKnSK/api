@@ -1,3 +1,24 @@
+> # ✏️ Dedenie a polymorfizmus
+>
+> **Dedenie**: nova trieda (dieta/podtrieda) ziska vsetky vlastnosti a funkcie uz existujucej triedy (rodica).
+>
+> ```py
+> class Zviera:
+>     def __init__(self, meno):
+>         self.Meno = meno
+>
+> class Pes(Zviera):        # Pes dedi od triedy Zviera
+>     def Haf(self):
+>         print(f"{self.Meno}: Hav!")
+>
+> pes = Pes("Bodrik")
+> pes.Haf()   # zdedil aj Meno, metodu Haf() si pridava sam
+> ```
+>
+> - `class Dieta(Rodic):` — zapis dedenia
+> - `super().__init__(...)` — zavola `__init__` rodica, aby sme ho nemuseli pisat znova
+> - **Polymorfizmus**: rovnaky nazov funkcie (napr. `PohniSa()`) sa v roznych triedach sprava rozne
+
 # Dedenie
 ## Úvod
 **Dedenie** je najčastejšie používaný jazykový mechanizmus v objektovo orientovanom programovaní. Dedenie umožňuje definovať nové triedy ako modifikované verzie existujúcich tried, čo nám umožňuje písať menej kódu.
@@ -307,10 +328,34 @@ for v in (car1, boat1, plane1):
 > Treda `Auto` nerozširuje rodičovskú triedu, ani hodnotu nemeni, trieda je dobrá tak, ako je. 
 
 > Triedy `Loď` a `Lietadlo` prepisujú funkciu `PohybSa` 
-# Otázky
-1. Ako značíme dedičnosť v pythone, uveďte príklad.
-2. Na čo je dobrý polymorfizmus?
-3. Z koľkých tried môže odvodená trieda zdediť?
-4. Napíšte príklad nasledujúceho: 
-   1. Vytvorte atribúty triedy `Policajt` (`Meno`:`str`, `PočetPokút`: `int`) a funkciu `Pokutuj`, ktorá zobrazuje jeho meno a počet pokút
-   2. Odvodte triedu `PolicajnýPrezident` od triedy `Policajt`, ktorý bude mať atribút navyše (`PočetPolicajtov`:`int`) a prepíšte funkciu `Pokutuj`, ktorá bude zobrazovať to isté ako pre triedu `Policajt`, plus to, že je prezidentom a koľko policajtov je mu podriadených
+> # 💥 Pokazte to!
+>
+> Aka je chyba v tomto programe?
+>
+> ```py
+> class Car:
+>   def __init__(self, brand, model):
+>     self.Brand = brand
+>     self.Model = model
+>   def Move(self):
+>     print("Drive!")
+>
+> car1 = Car("Ford", "Mustang")
+> car1.move()
+> ```
+>
+> Preco Python vyhodi `AttributeError`? Davajte pozor na male a velke pismena - Python je **case sensitive**, takze `move()` a `Move()` su dve rozne mena!
+
+> # 📋 Úlohy
+> - [e01_shapes.md](../Exercies/14_inheritance_polymorphism/e01_shapes.md)
+> - [e02_vehicles.md](../Exercies/14_inheritance_polymorphism/e02_vehicles.md)
+
+> # ❓ Otázky
+>
+> 1. Ako v Pythone oznacujeme dedicnost? Uvedte priklad.
+> 2. Na co je dobry polymorfizmus?
+> 3. Z kolkych tried moze odvodena trieda dedit?
+> 4. Napiste priklad na nasledovne:
+>    1. Vytvorte triedu `Policajt` s atributmi `Meno` (`str`) a `PocetPokut` (`int`) a s funkciou `Pokutuj`, ktora vypise jeho meno a pocet pokut.
+>    2. Odvodte triedu `PolicajnyPrezident` od triedy `Policajt`, ktora bude mat navyse atribut `PocetPolicajtov` (`int`) a prepise funkciu `Pokutuj` tak, aby vypisala to iste ako trieda `Policajt`, plus ze je prezidentom a kolko policajtov mu je podriadenych.
+> 5. Na co sluzi volanie `super()` v `__init__` funkcii podtriedy?

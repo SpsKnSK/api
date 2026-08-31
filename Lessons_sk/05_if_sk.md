@@ -44,6 +44,9 @@
 > if (vek > 12) and (vek < 20):
 >     print("tínedžer")
 > ```
+>
+> **Metafora:** `if` je ako **rázcestie**: program tam dorazí, pozrie sa na tabuľu (podmienku) a podľa nej pôjde ďalej jednou alebo druhou cestou — vydať sa môže iba **jednou**.
+
 # If – Elif - Else
 ## Krátka teória
 

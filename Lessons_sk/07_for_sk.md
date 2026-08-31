@@ -18,6 +18,8 @@
 > | `range(1, 10, 2)` | `1, 3, 5, 7, 9` |
 >
 > Horná hranica **nepatrí** do intervalu. Jadro cyklu je aj tu odsadený blok.
+>
+> **Metafora:** `for` je ako **čítanie zoznamu mien**: vopred vieš, kto je na zozname, a postupne ich všetkých prejdeš — nemusíš si sám počítať, koľkokrát máš opakovať.
 
 # Cyklus `for`
 

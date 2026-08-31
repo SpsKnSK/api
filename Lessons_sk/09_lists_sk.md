@@ -1,3 +1,24 @@
+> # ✏️ Zoznamy
+>
+> **Zoznam** je viac hodnôt spolu, v jednej premennej. Na rozdiel od jednej „krabice“ je to celá **polica**, kde má každé miesto svoje poradové číslo (**index**), od 0.
+>
+> ```py
+> moj_zoznam = ["jablko", "banán", "čerešňa"]
+> print(moj_zoznam[0])   # "jablko"
+> ```
+>
+> | Operácia | Význam |
+> |---|---|
+> | `moj_zoznam[i]` | `i`-ty prvok (počítané od 0) |
+> | `.append(x)` | pridá `x` na **koniec** zoznamu |
+> | `.insert(i, x)` | vloží `x` na pozíciu `i` |
+> | `.remove(x)` | odstráni prvý prvok s hodnotou `x` |
+> | `.pop()` | vyberie a odstráni posledný prvok |
+> | `len(moj_zoznam)` | dĺžka zoznamu (počet prvkov) |
+> | `.sort()` | zoradí vzostupne (na mieste) |
+>
+> **Metafora:** zoznam je ako **polica s krabicami** — každá krabica má svoje číslo (0, 1, 2...) a kedykoľvek do nej môžete niečo pridať, vybrať z nej niečo alebo krabice popresúvať.
+
 # Zoznamy
 
 ## 📑 Obsah
@@ -28,6 +49,11 @@ Môže obsahovať:
 ## Prvky v zozname
 
 V zozname zaberá každý prvok určitú pozíciu, ktorá sa nazýva **index**. Index začína od 0 až po pozíciu posledného prvku.
+```mermaid
+flowchart LR
+    A["0: 'apple'"] --- B["1: 'banana'"] --- C["2: 'cherry'"]
+```
+
 ```py
 moj_zoznam = ["jablko", "hruška", "čerešňa"]
 print(moj_zoznam)
@@ -156,16 +182,6 @@ moj_zoznam[hruškaIndex], moj_zoznam[jablkoIndex] = moj_zoznam[jablkoIndex], moj
 print(moj_zoznam)
 ```
 
-## Úlohy
-[e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e01_fillList.md)
-
-[e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e02_fillListWithinInterval.md)
-
-[e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e03_maxMin.md)
-
-[e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e04_maxMinIndexAverage.md)
-
-
 ## Naplnenie zoznamu náhodnými číslami
 ### Variant 1
 ```py
@@ -231,22 +247,43 @@ print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
 
 Zoradí prvky **zostupne** pomocou `reverse=True`.
 
+> # 💥 Pokazte to!
+>
+> Aký je problém s týmto programom? Prečo výstup nie je `[1, 2, 3]`?
+>
+> ```py
+> numbers = [3, 1, 2]
+> sorted(numbers)
+> print(numbers)
+> ```
+>
+> Opravte ho tak, aby `numbers` naozaj bol zoradený. Aký je rozdiel medzi `.sort()` a `sorted()`?
 
-## Úlohy
-> [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e05_randomEvenOdd.md)
+> # 📋 Úlohy
+> - [e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e01_fillList.md)
+> - [e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e02_fillListWithinInterval.md)
+> - [e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e03_maxMin.md)
+> - [e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e04_maxMinIndexAverage.md)
+> - [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e05_randomEvenOdd.md)
+> - [e06_switchNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e06_switchNumbers.md)
+> - [e07_separateTextNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e07_separateTextNumbers.md)
 
-## Úlohy
-> [e06_switchNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e06_switchNumbers.md)
-
-## Úlohy
-> [e07_separateTextNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e07_separateTextNumbers.md)
-
-# Otázky
-1. Načo slúžia zoznamy?
-1. Vytvorte prázdny zoznam a vypíšte ho na obrazovku.
-1. Načo slúži index?
-1. Vypíšte prvý a posledný prvok ľubovoľného zoznamu.
-1. Odstráňte všetky prvky v ľubovoľnom zozname pomocou príkazu `del`.
-1. Pridajte do zoznamu s 4 prvkami ľubovoľný nový prvok pomocou príkazu `.insert()`.
-1. Pridajte do zoznamu s ľubovoľným počtom prvkov ľubovoľný nový prvok pomocou príkazu `.insert()`.
-1. V zozname čísel vypíšte najmenšiu a najväčšiu hodnotu, a ich indexy.
+> # ❓ Otázky
+>
+> 1. Na čo slúžia zoznamy?
+> 2. Vytvorte prázdny zoznam a vypíšte ho na obrazovku.
+> 3. Na čo slúži index?
+> 4. Vypíšte prvý a posledný prvok ľubovoľného zoznamu.
+> 5. Odstráňte všetky prvky ľubovoľného zoznamu pomocou príkazu `del`.
+> 6. Do 4-prvkového zoznamu pridajte ľubovoľný nový prvok pomocou príkazu `.insert()`.
+> 7. Do ľubovoľného zoznamu pridajte ľubovoľný nový prvok pomocou príkazu `.append()`.
+> 8. V zozname čísel vypíšte najmenšiu a najväčšiu hodnotu a ich indexy.
+> 9. Aký je rozdiel medzi `.remove()` a `.pop()`?
+> 10. Čo vypíše tento program?
+>
+>     ```py
+>     mylist = [10, 20, 30]
+>     mylist.append(40)
+>     mylist.pop(0)
+>     print(mylist)
+>     ```

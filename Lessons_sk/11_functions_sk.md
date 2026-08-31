@@ -1,3 +1,27 @@
+> # ✏️ Funkcie
+>
+> **Funkcia** je pomenovaný kus kódu, ktorý sa dá odkiaľkoľvek **zavolať**. Môže mať vstup (parametre) a môže mať návratovú hodnotu (`return`).
+>
+> ```py
+> def nazovFunkcie(parameter1, parameter2) -> vratenyTyp:
+>     return nieco
+> ```
+>
+> ```py
+> def scitaj(a, b) -> int:
+>     return a + b
+>
+> vysledok = scitaj(3, 5)
+> print(vysledok)   # 8
+> ```
+>
+> **Nezabudnite:**
+> 1. `def` + názov + parametre v zátvorke + dvojbodka;
+> 2. `return` vráti výsledok a **ukončí** funkciu;
+> 3. **postup**: nemá návratovú hodnotu, len niečo vykoná (napr. niečo vypíše).
+>
+> **Metafora:** funkcia je ako **kuchynský stroj** (napr. mixér): vložíte parametre (ovocie), stlačíte gombík (zavoláte ju) a vyjde výsledok (`return`). Stroj treba postaviť iba **raz** (`def`), potom ho môžete použiť koľkokrát chcete.
+
 # Funkcie alebo podprogramy
 
 - **Funkcie** je časť kódu, ktorá vykonáva **transformáciu údajov** alebo vykonáva **činnosť**.
@@ -51,12 +75,6 @@ else:
 - **Funkcia** má návratovú hodnotu `return`, dostaneme výsledok po vykonaní `def nazovFunkcie (parametre)->TypVratenejHodnoty:`
 - **Postupy** nemajú návratovú hodnotu, vykonávajú niečo, ale výsledok nie je dôležitý `def nazovFunkcie (parametre)->None:`
 
-## Úlohy
-> [e01_areaOfTriangle.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e01_areaOfTriangle.md)
-
-## Úlohy
-> [e02_perimeterOfTriangle.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e02_perimeterOfTriangle.md)
-
 ## V jednej funkcii môžeme volať inú funkciu(y)
 ```py
 def Add(a: int, b: int) -> int:
@@ -66,10 +84,33 @@ maximum = max(Add(10, 5), Add(-9, 13), Add(9, 0))
 print(maximum)
 ```
 
-# Otázky
-1. Ako definujeme funkciu? Napíšte syntax.
-1. Je vždy potrebný príkaz `return`?
-1. Dajte príklad funkcie bez vstupného parametra, ktorá vráti `int` hodnotu `def nazovFunkcie()->int:`
-1. Dajte príklad funkcie s dvoma vstupnými parametrami typu celé číslo, ktorá vráti `bool` hodnotu `def nazovFunkcie(a:int, b:int)->bool:`
-1. Dajte príklad funkcie s jedným vstupným parametrom typu `str` `def nazovFunkcie(a:str)->int:`
-1. Napíšte funkciu, ktorá má vstupný parameter ako zoznam a vráti zoznam, ktorý obsahuje nepárne indexované prvky pôvodného zoznamu. `[1,2,3,4] -> [2,4]`
+> # 💥 Pokazte to!
+>
+> Prečo tento program nič nevypíše?
+>
+> ```py
+> def stvorec(cislo):
+>     cislo ** 2
+>
+> print(stvorec(4))
+> ```
+>
+> Opravte ho tak, aby vypísal `16`. Čo vo funkcii chýba?
+
+> # 📋 Úlohy
+> - [e01_areaOfTriangle.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e01_areaOfTriangle.md)
+> - [e02_perimeterOfTriangle.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e02_perimeterOfTriangle.md)
+> - [e03_workerPosition.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e03_workerPosition.md)
+> - [e04_workerPosition_2.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e04_workerPosition_2.md)
+> - [e05_averageConsumption.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e05_averageConsumption.md)
+
+> # ❓ Otázky
+>
+> 1. Ako definujeme funkciu? Napíšte syntax.
+> 2. Na čo slúži príkaz `return`? Ukážte to na príklade.
+> 3. Je príkaz `return` vždy potrebný? Ukážte to na príklade.
+> 4. Uveďte príklad funkcie bez vstupného parametra, ktorá vráti hodnotu `int`: `def nazovFunkcie()->int:`
+> 5. Uveďte príklad funkcie s dvoma vstupnými parametrami typu celé číslo, ktorá vracia hodnotu `bool`: `def nazovFunkcie(a:int, b:int)->bool:`
+> 6. Uveďte príklad funkcie s jedným vstupným parametrom typu `str`, ktorá vracia `int`: `def nazovFunkcie(a:str)->int:`
+> 7. Napíšte funkciu, ktorej vstupným parametrom je zoznam a ktorá vráti zoznam obsahujúci prvky z nepárnych indexov pôvodného zoznamu. `[1,2,3,4] -> [2,4]`
+> 8. Aký je rozdiel medzi funkciou a postupom?

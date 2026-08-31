@@ -1,3 +1,29 @@
+﻿> # ✏️ Triedy - pokročilé (`__repr__`, `__dict__`, JSON)
+>
+> *Voliteľné, pokročilé učivo.*
+>
+> - `__str__(self)` - používateľsky prívetivý výpis (`print(objekt)`)
+> - `__repr__(self)` - vývojársky prívetivý, podrobný výpis (v zoznamoch sa zobrazí tento)
+> - `objekt.__dict__` - vlastnosti objektu ako slovník
+> - `json.dump(data, file)` / `json.load(file)` - uloženie a načítanie z JSON súboru
+> - `Trieda(**slovnik)` - vytvorí objekt zo slovníka ("rozbalenie")
+>
+> ```py
+> class Kniha:
+>     def __init__(self, nazov, cena):
+>         self.nazov = nazov
+>         self.cena = cena
+>     def __repr__(self):
+>         return f"Kniha(nazov='{self.nazov}', cena={self.cena})"
+>
+> kniha = Kniha("1984", 3500)
+> print(kniha.__dict__)                 # {'nazov': '1984', 'cena': 3500}
+> nova_kniha = Kniha(**kniha.__dict__)  # späť na objekt
+> print(nova_kniha)
+> ```
+>
+> **Metafora:** `__dict__` je, akoby sme objekt **vybalili zo škatule**: každá jeho vlastnosť je v označenej priehradke, ktorú vieme ľahko uložiť (do JSON-u) a neskôr ju rovnako ľahko znovu zabaliť.
+
 # Triedy - Pokročilé témy
 
 Táto kapitola je určená študentom, ktorí sa chcú hlbšie zaoberať programovaním a používaním tried.
@@ -358,12 +384,32 @@ print(udalost.to_dict())
 # {'nazov': 'Programátorská súťaž', 'datum': '2026-03-15T00:00:00'}
 ```
 
-## Úlohy
+> # 💥 Pokazte to!
+>
+> Aká je chyba v tomto programe?
+>
+> ```py
+> class Kniha:
+>     def __init__(self, nazov, cena):
+>         self.nazov = nazov
+>         self.cena = cena
+>
+> kniha = Kniha("1984", 3500)
+> print(kniha)
+> ```
+>
+> Výpis bude vyzerať asi takto: `<__main__.Kniha object at 0x...>`. Čo v triede chýba, aby `print(kniha)` vypísal údaje pekne a čitateľne?
+>
+> # 📋 Úlohy
+> 1. Vytvor triedu `Ziak`, ktorá obsahuje meno žiaka, vek a obľúbené predmety (zoznam). Implementuj metódy `__str__()` a `__repr__()`.
+> 2. Vytvor triedu `Kapela`, ktorá ukladá zoznam hudobníkov. Implementuj ukladanie a načítavanie z JSON.
+> 3. Rozšír príklad Správca knižnice o metódu `hladaj(autor)`, ktorá vráti všetky knihy daného autora.
+> 4. Vytvor triedu `Dennik`, ktorá ukladá denné záznamy (dátum a text). Použij JSON súbor na ukladanie údajov.
+>
+> # ❓ Otázky
+>
+> 1. Aký je rozdiel medzi funkciami `__str__()` a `__repr__()`?
+> 2. Na čo slúži atribút `__dict__` objektu?
+> 3. Prečo je pohodlné vytvoriť objekt zo slovníka pomocou operátora `**`?
+> 4. Prečo sa oplatí mať v triede `Kniznica` samostatné funkcie `uloz()` a `nacitaj()`, namiesto ručnej práce so súbormi zakaždým?
 
-1. Vytvor triedu `Ziak`, ktorá obsahuje meno žiaka, vek a obľúbené predmety (zoznam). Implementuj metódy `__str__()` a `__repr__()`.
-
-2. Vytvor triedu `Kapela`, ktorá ukladá zoznam hudobníkov. Implementuj ukladanie a načítavanie z JSON.
-
-3. Rozšír príklad Správca knižnice o metódu `hladaj(autor)`, ktorá vráti všetky knihy daného autora.
-
-4. Vytvor triedu `Dennik`, ktorá ukladá denné záznamy (dátum a text). Použij JSON súbor na ukladanie údajov.

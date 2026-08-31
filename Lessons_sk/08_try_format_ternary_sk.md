@@ -1,3 +1,28 @@
+> # ✏️ Extra - try, format, ternary
+>
+> Táto lekcia nie je povinné učivo, ale zbierka užitočných doplnkových trikov. Nevadí, ak ju teraz preskočíte — môžete sa k nej kedykoľvek vrátiť.
+>
+> **`try-except`:** spracuje chybu, aby sa program nezastavil.
+> ```py
+> try:
+>     int("jablko")
+> except Exception as e:
+>     print(f"Nastala chyba: {e}")
+> ```
+>
+> **f-string:** najpohodlnejšie formátovanie.
+> ```py
+> meno = "Anna"
+> print(f"Ahoj, {meno}!")
+> ```
+>
+> **Ternary (jednoriadkový if):** krátke priradenie s podmienkou.
+> ```py
+> a = 20 if 10 > 20 else 10
+> ```
+>
+> **Metafora:** `try-except` je ako **záchranná sieť**: keď sa niečo roztrhne (nastane chyba), nespadnete dole (program sa nezastaví), ale pekne vás zachytí.
+
 # Try-except-finally
 Slúži na spracovanie chýb. Chyba môže nastať v týchto prípadoch:
 - Delenie nulou `print(10/0)`

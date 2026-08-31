@@ -1,3 +1,27 @@
+﻿> # ✏️ Zoznam, množina, slovník, n-tica
+>
+> Štyri typy **kolekcií**, každá má inú "osobnosť":
+>
+> | Typ | Znak | Poradie? | Môžu sa opakovať? | Dá sa meniť? |
+> |---|---|---|---|---|
+> | `list` | `[]` | áno (index) | áno | áno |
+> | `set` | `{}` | nie | **nie** | áno |
+> | `dict` | `{kľúč: hodnota}` | áno (kľúč) | kľúč nie, hodnota áno | áno |
+> | `tuple` | `()` | áno (index) | áno | **nie** |
+>
+> ```py
+> zoznam = ['jablko', 'hruška']      # má poradie, dá sa indexovať aj meniť
+> mnozina = {'jablko', 'hruška'}     # nemá poradie, nemá duplicity
+> slovnik = {'meno': 'Anna'}         # kľúč -> hodnota
+> ntica = (10, 20)                   # ako zoznam, ale nedá sa meniť
+> ```
+>
+> **Metafora:**
+> - **Zoznam** = **očíslovaná polica**: môžeš z nej brať, pridávať aj presúvať veci.
+> - **Množina** = **vrece s jedinečnými guľôčkami**: poradie nie je dôležité a dve rovnaké tam nezostanú.
+> - **Slovník** = **telefónny zoznam**: nehľadáš podľa poradia, ale podľa **mena** (kľúč -> hodnota).
+> - **N-tica** = **zapečatená škatuľa**: čo do nej raz vložíš, to už nevymeníš.
+
 # Zoznam `list`: `[]`
 ```mermaid
 graph TB
@@ -269,13 +293,33 @@ print(x, y)
 
 `(x, y)` uchovávanie súradníc, záznamy o zamestnancoch v databáze
 
-# Otázky
-1. Aké sú hlavné vlastnosti množiny (`set`), a ako sa označuje?
-2. Aké sú hlavné vlastnosti slovníka (`dict`), a ako sa označuje?
-3. Aké sú hlavné vlastnosti zoznamu (`list`), a ako sa označuje?
-3. Aké sú hlavné vlastnosti ntíc (`tuple`), a ako sa označuje?
-4. Ako určíme prienik dvoch množín, uveďte príklad.
-5. Vytvorte zoznam s tromi hodnotami typu slovník, kde kľúče sú: meno, priezvisko, rok narodenia.
-6. Vytvorte množinu z tohto zoznamu: `myList = [5,10,30,28,-99,5,0,0,65,124,214,25,5]`
-7. Kedy môžeme použiť funkciu `.get` pri slovníkoch, uveďte príklad!
-8. Vytvorte slovník s tromi kľúč-hodnota párovmi a aktualizujte hodnotu jedného kľúča, pridajte nový kľúč-hodnota pár.
+> # 💥 Pokazte to!
+>
+> Aká je chyba v tomto programe?
+>
+> ```py
+> suradnice = (10, 20, 30)
+> suradnice[0] = 15
+> print(suradnice)
+> ```
+>
+> Prečo nie je možné zmeniť prvok n-tice? Upravte kód tak, aby sa `suradnice` správali ako **zoznam** a zmena už fungovala.
+>
+> # 📋 Úlohy
+> - [e01_workerDb.md](../Exercies/12_list_set_dictionary_tuple/e01_workerDb.md)
+> - [e02_checkDuplicates.md](../Exercies/12_list_set_dictionary_tuple/e02_checkDuplicates.md)
+> - [e03_DistincElementCount.md](../Exercies/12_list_set_dictionary_tuple/e03_DistincElementCount.md)
+>
+> # ❓ Otázky
+>
+> 1. Aké sú hlavné vlastnosti `set`, ako ho označujeme?
+> 2. Aké sú hlavné vlastnosti `dict`, ako ho označujeme?
+> 3. Aké sú hlavné vlastnosti `list`, ako ho označujeme?
+> 4. Aké sú hlavné vlastnosti `tuple`, ako ho označujeme?
+> 5. Ako určíme prienik dvoch množín? Uveďte príklad.
+> 6. Vytvorte zoznam, v ktorom budú 3 hodnoty typu slovník predstavujúce osoby s kľúčmi: meno, priezvisko, rok narodenia.
+> 7. Z nasledujúceho zoznamu vytvorte množinu: `myList = [5,10,30,28,-99,5,0,0,65,124,214,25,5]`
+> 8. Kedy môžeme použiť funkciu `.get` pri slovníkoch? Uveďte príklad.
+> 9. Vytvorte slovník s 3 pármi kľúč-hodnota, potom aktualizujte jeden kľúč a pridajte nový pár kľúč-hodnota.
+> 10. Prečo nie je možné zmeniť prvok n-tice?
+

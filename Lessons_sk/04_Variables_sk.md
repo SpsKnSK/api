@@ -29,6 +29,9 @@
 > x = 5      # vložil som 5
 > x == 5     # otázka: je vnútri 5? -> True
 > ```
+>
+> **Metafora:** premenná je ako **krabica s nálepkou**: nálepka je jej meno, obsah je jej hodnota. Ak do nej vložíme niečo nové, staré vypadne — v krabici je naraz iba jedna vec.
+
 # Premenné
 - Premenné sú prvky programu, ktoré môžu nadobúdať rôzne hodnoty a slúžia na uchovávanie rôznych údajov.
 - Menom označené miesto v pamäti

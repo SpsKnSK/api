@@ -1,3 +1,26 @@
+﻿> # ✏️ Slovník a množina
+>
+> **Slovník (`dict`)**: kľúč -> hodnota, ako telefónny zoznam.
+> ```py
+> phonebook = {'Anna': '0902-123-456'}
+> print(phonebook['Anna'])          # chyba, ak kľúč chýba
+> print(phonebook.get('Anna'))      # bezpečné: vráti None, ak tam nie je
+> ```
+>
+> **Množina (`set`)**: jedinečné prvky, bez poradia a bez indexov.
+> ```py
+> cisla = {1, 2, 2, 3}
+> print(cisla)   # {1, 2, 3} - duplicita zmizne
+> ```
+>
+> | Operácia | Slovník | Množina |
+> |---|---|---|
+> | pridanie prvku | `d['kľúč'] = hodnota` | `.add(hodnota)` |
+> | odstránenie prvku | `del d['kľúč']` | `.remove(hodnota)` |
+> | bezpečné zistenie / prístup | `.get('kľúč', predvolené)` | `hodnota in mnozina` |
+>
+> **Metafora:** slovník je ako **telefónny zoznam** - nehľadáš podľa čísla v poradí, ale podľa **mena**. Množina je ako **vrece rovnakých guľôčok**: ak doň vložíš rovnakú dvakrát, zostane tam len raz.
+
 # Príklady slovníka a množiny
 
 Nasledujúce príklady ukazujú použitie Python slovníkov (`dict`) a množín (`set`).
@@ -100,9 +123,24 @@ V slovníku `counts` má každé číslo priradený počet výskytov, takže vid
 daná hodnota objavila raz alebo viackrát, zatiaľ čo z množiny rýchlo získame
 jedinečné prvky.
 
-## Cvičné otázky
+> # 💥 Pokazte to!
+>
+> Aká je chyba v tomto programe?
+>
+> ```py
+> phonebook = {'Anna': '0902-123-456', 'Bela': '0905-987-654'}
+> print(phonebook['Cecil'])
+> ```
+>
+> Prečo sa program zastaví? Prepíšte ho tak, aby nespadol, ale vypísal peknú správu, ak hľadané meno nie je v telefónnom zozname.
+>
+> # 📋 Úlohy
+> - [01_frequencyTable_sk.md](../Exercies/12_list_set_dictionary_tuple/01_frequencyTable_sk.md)
+>
+> # ❓ Otázky
+>
+> 1. Ako možno zo slovníka získať len kľúče ako zoznam?
+> 2. Ako možno odstrániť náhodný prvok z množiny?
+> 3. Čo sa stane, ak si vyžiadame neexistujúci kľúč pomocou `my_dict['foo']` vs. `my_dict.get('foo')`?
+> 4. Ako možno prechádzať slovník v opačnom poradí podľa kľúčov?
 
-1. Ako získať zo slovníka len kľúče ako zoznam?
-2. Ako odstrániť náhodný prvok z množiny?
-3. Čo sa stane, keď požiadame o neexistujúci kľúč cez `my_dict['foo']` vs. `my_dict.get('foo')`?
-4. Ako prechádzať slovník v opačnom poradí podľa kľúčov?

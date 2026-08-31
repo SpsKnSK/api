@@ -1,3 +1,38 @@
+> # ✏️ Triedy — hlbšie poznatky
+>
+> *Voliteľné, pokročilé učivo.*
+>
+> - `@property` — vlastnost mozeme citat alebo nastavovat, akoby to bol obycajny atribut, ale pritom mozeme vykonat kontrolu alebo vypocet
+> - **Triedna premenna** — spolocna pre vsetky instancie (napr. `Pes.pocet_jedincov`)
+> - **Instancna premenna** — kazda instancia ma vlastnu (napr. `self.meno`)
+> - `@staticmethod` — nema `self` ani `cls`, je to len "pomocna" funkcia v triede
+> - `@classmethod` — dostane parameter `cls`, casto ju pouzivame ako alternativny konstruktor
+> - `__eq__`, `__add__`, `__lt__` atd. — "magic methods", nimi urcujeme, ako sa trieda sprava pri `==`, `+`, `<`
+> - `with` + context manager (`__enter__`, `__exit__`) — automaticky "uprace" (napr. zatvori subor) aj pri chybe
+> - `@dataclass` — kratsi sposob zapisu jednoduchych tried na uchovavanie udajov
+>
+> ```py
+> class Teplomer:
+>     def __init__(self):
+>         self._celsius = 0
+>
+>     @property
+>     def celsius(self):
+>         return self._celsius
+>
+>     @celsius.setter
+>     def celsius(self, hodnota):
+>         if hodnota < -273.15:
+>             raise ValueError("Prilis nizka teplota!")
+>         self._celsius = hodnota
+>
+> t = Teplomer()
+> t.celsius = 25      # navonok to vyzera ako obycajny atribut...
+> print(t.celsius)    # ...ale v pozadi sa v skutocnosti vola funkcia
+> ```
+>
+> **Metafora:** `@property` je ako **vratnik pri vytahu**: zvonka to vyzera, ze len stlacis tlacidlo (`objekt.celsius`), ale vratnik (setter/getter) medzitym skontroluje, ci tam mozes ist.
+
 # Triedy - Hlbšie poznatky
 
 Táto kapitola sa už vážne zaoberá detailmi objektovo orientovaného programovania. Je odporúčaná tým, ktorí sa vážne venujú programovaniu.
@@ -886,14 +921,34 @@ kosik.objednavka(platba)
 print(f"\nLaptop zostávajúci sklad: {laptop.sklad}")
 ```
 
-## Úlohy
+> # 💥 Pokazte to!
+>
+> Aka je chyba v tomto programe?
+>
+> ```py
+> class Teplomer:
+>     def __init__(self):
+>         self.celsius = 0
+>
+> t = Teplomer()
+> t.celsius = -500
+> print(t.celsius)
+> ```
+>
+> Program sa spusti, ale dovoli fyzikalne nemoznu hodnotu (-500 C neexistuje, absolutna nula je -273.15 C). Ako by sa dala trieda ochranit pomocou `@property`?
 
-1. Vytvor triedu `PrevodnikTeploty` s použitím `@property`, ktorá dokáže prepínať medzi Celsius, Fahrenheit a Kelvin.
+> # 📋 Úlohy
+> 1. Vytvor triedu `PrevodnikTeploty` s pouzitim `@property`, ktora dokaze prepinat medzi Celsius, Fahrenheit a Kelvin.
+> 2. Implementuj triedu `Penazenka`, ktora dokaze pracovat s roznymi menami. Pouzi magic methods na scitanie a odcitanie.
+> 3. Vytvor context manager `Zapisovac`, ktory do suboru zaznamenava cas vykonania a pripadne chyby.
+> 4. Vytvor abstraktnu triedu `Tvar` a implementuj z nej triedy `Trojuholnik`, `Stvorec` a `Kruh`.
+> 5. Navrhni system `Kniznica` s pouzitim zlozenia, kde `Kniznica` obsahuje objekty `Kniha`, objekty `Pozicka` a objekty `Citatel`.
 
-2. Implementuj triedu `Penazenka`, ktorá dokáže pracovať s rôznymi menami. Použij magic methods na sčítanie a odčítanie.
-
-3. Vytvor context manager `Zapisovac`, ktorý do súboru zaznamenáva čas vykonania a prípadné chyby.
-
-4. Vytvor abstraktnú triedu `Tvar` a implementuj z nej triedy `Trojuholnik`, `Stvorec` a `Kruh`.
-
-5. Navrhni systém `Kniznica` s použitím zloženia, kde `Kniznica` obsahuje objekty `Kniha`, objekty `Pozicka` a objekty `Citatel`.
+> # ❓ Otázky
+>
+> 1. Na co sluzi dekorator `@property` a kedy sa oplati ho pouzit?
+> 2. Aky je rozdiel medzi triednou premennou a instancnou premennou?
+> 3. Kedy pouzivame `@staticmethod` a kedy `@classmethod`?
+> 4. Na co sluzi prikaz `with` a co je context manager?
+> 5. Kedy sa oplati pouzit dekorator `@dataclass` namiesto obycajnej triedy?
+> 6. Aky je rozdiel medzi dedenim (IS-A) a zlozenim (HAS-A)?

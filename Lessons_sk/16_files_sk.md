@@ -1,3 +1,28 @@
+> # ✏️ Práca so súbormi
+>
+> ```py
+> with open("pracovnysubor.txt", "w") as f:
+>     f.write("Toto je testovaci riadok 12345")
+>
+> with open("pracovnysubor.txt", "r") as f:
+>     obsah = f.read()
+>     print(obsah)
+> ```
+>
+> | Mód | Význam |
+> |---|---|
+> | `r` | iba čítanie |
+> | `w` | iba zápis (prepíše súbor!) |
+> | `a` | pridanie na koniec súboru |
+> | `r+` | zápis aj čítanie naraz |
+>
+> - `f.read()` — celý obsah
+> - `f.readline()` — jeden riadok
+> - `f.readlines()` — zoznam, každý riadok je jeden prvok
+> - `f.write(text)` — prijíma iba `str`! (použi `str(cislo)`)
+> - `with open(...) as f:` — súbor sa na konci bloku **automaticky zatvorí**, netreba volať `f.close()`
+>
+> **Metafora:** súbor je ako **spoločný zošit**: keď ho otvoríš (`open`), môžeš doň písať alebo z neho čítať, ale ak ho zabudneš zavrieť (`close`), iný program sa k nemu nemusí dostať. `with` je ako **automatické dvere**: samy sa zatvoria, keď odídeš.
 # Súborové operácie
 Naše doterajšie programy menežovali len veľmi malé množstvo údajov. Dáta sme získavali dvoma spôsobmi:
 - Z klávesnice, pomocou funkcie `input`.
@@ -148,9 +173,33 @@ with open(full_path, "r") as f:
       print(riadok)
 ```
 
-# Príklady
-1. [Uloženie čísel](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/01_saveNumbers.py)
-1. [Uloženie vlastného dátového typu](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/01_saveClass.py)
-# Feladatok
-1. [Zapisovanie náhodných čísel](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e01_saveRandomNumbers.md)
-1. [Usporiadanie náhodných čísel](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e02_sortRandomNumbers.md)
+> # 💥 Pokazte to!
+>
+> Aká je chyba v tomto programe?
+>
+> ```py
+> f = open("pracovnysubor.txt", "w")
+> f.write(12345)
+> f.close()
+> ```
+>
+> Aké chybové hlásenie dostanete? Prečo? Ako to treba opraviť, aby sme aj číslo `12345` vedeli zapísať do súboru?
+>
+> # 📋 Úlohy
+> - [01_saveNumbers.py](../Exercies/16_files/01_saveNumbers.py) — ukážka: ukladanie celých čísel
+> - [02_saveClass.py](../Exercies/16_files/02_saveClass.py) — ukážka: ukladanie vlastného dátového typu
+> - [e01_saveRandomNumbers.md](../Exercies/16_files/e01_saveRandomNumbers.md)
+> - [e02_sortRandomNumbers.md](../Exercies/16_files/e02_sortRandomNumbers.md)
+> - [e03_longestLine.md](../Exercies/16_files/e03_longestLine.md)
+> - [e04_loadStudents.md](../Exercies/16_files/e04_loadStudents.md)
+> - [e05_creditCard.md](../Exercies/16_files/e05_creditCard.md)
+> - [e06_longestWordInFile.md](../Exercies/16_files/e06_longestWordInFile.md)
+> - [e07_characterCount.md](../Exercies/16_files/e07_characterCount.md)
+>
+> # ❓ Otázky
+>
+> 1. Aký je rozdiel medzi módmi otvorenia súboru `r`, `w` a `a`?
+> 2. Prečo sa oplatí používať príkaz `with` pri otváraní súborov?
+> 3. Aký dátový typ prijíma funkcia `.write()` a čo treba urobiť, ak chceme zapísať číslo?
+> 4. Na čo slúži `os.path.dirname(__file__)`?
+> 5. Aký je rozdiel medzi funkciami `.read()`, `.readline()` a `.readlines()`?

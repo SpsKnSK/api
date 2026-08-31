@@ -32,6 +32,9 @@
 >                       --> ano, desatinne     --> float(input(...))
 >                       --> nie (meno, mesto)  --> input(...)
 > ```
+>
+> **Metafora:** `input()` je ako **poštová schránka**: čokoľvek do nej hodíme, program dostane len **obálku** (text), a ak to chceme použiť ako číslo, musíme ju sami "rozbaliť" (`int()`, `float()`).
+
 # `input()`
 Načítanie údajov (textu) a uloženie do premennej.
 ```py
