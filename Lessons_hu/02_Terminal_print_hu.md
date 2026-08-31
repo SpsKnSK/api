@@ -42,7 +42,6 @@
     - Több változóval elvégzett matematikai műveletek eredményét
 
 ### Feladat
-1. A `print` függvény használatával keressetek olyan értékeket, amelyek futtatáskor hibát jeleznek, nem működik a program.
 1. Szöveg kiíratása (mi a különbség?):
     ```py
     print("Hello World")
@@ -64,6 +63,14 @@
     szam2=11
     print(szam1+szam2)
     ```
+1. Rontsátok el szándékosan! Írjatok olyan `print` sorokat, amiket a Python hibával utasít vissza. Ötletek: 
+- hiányzó zárójel vagy idézőjel
+- kevert idézőjel
+- függvény neve
+- idézőjel nélküli szöveg
+- több vessző, pont alkalmazása
+    
+    Olvassátok el a hibaüzenetet: melyik sorra mutat, és mi a hiba neve? Mire jutottatok?
 
 ## `print()` – vegyes kiíratás
 Lehetőség van egy print-en belül több adat kiíratására.
