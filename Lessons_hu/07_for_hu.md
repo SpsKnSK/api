@@ -18,6 +18,8 @@
 > | `range(1, 10, 2)` | `1, 3, 5, 7, 9` |
 >
 > A felső határ **nem tartozik bele**. A ciklusmag itt is egy behúzott blokk.
+>
+> **Metafora:** a `for` olyan, mint egy **névsorolvasás**: előre tudod, kik vannak a listán, és sorban végigmész rajtuk — nem kell magadnak számolgatnod, hogy hányszor lépj.
 
 # `for` ciklus
 

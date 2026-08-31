@@ -34,6 +34,8 @@
 > 192.168.100.1
 > Szia Peter!
 > ```
+>
+> **Metafora:** a `print()` olyan, mint egy **kirakat**: bármit teszel bele zárójelbe, azt kiteszi, hogy mindenki lássa a "kirakatban" (a képernyőn).
 # print()
 - Adatok, információk kiíratása a képernyőre
 - Kiírathatunk:

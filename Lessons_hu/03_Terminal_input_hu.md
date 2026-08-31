@@ -32,6 +32,8 @@
 >                        --> igen, tizedes     --> float(input(...))
 >                        --> nem (nev, varos)  --> input(...)
 > ```
+>
+> **Metafora:** az `input()` olyan, mint egy **postaláda**: bármit dobnak bele, a program csak egy **borítékot** (szöveget) kap, amit ha számként akarunk használni, nekünk kell "kibontani" (`int()`, `float()`).
 
 # `input()` függvény
 Adat, szöveg (karakterlánc) beolvasása, amit utána egy változóba menthetünk el.

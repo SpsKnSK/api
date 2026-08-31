@@ -31,6 +31,8 @@
 > x = 5      # betettem az 5-öt
 > x == 5     # kérdés: x "dobozban" 5 van? -> True
 > ```
+>
+> **Metafora:** a változó olyan, mint egy **felcímkézett doboz**: a címke a neve, a tartalma az értéke. Ha újat teszünk bele, a régi kiesik — egyszerre csak egy dolog van a dobozban.
 
 - A változók a program azon elemei, amelyek különböző értékeket vehetnek fel, különböző adatok tárolására alkalmasak.
 - Névvel ellátott memóriaterület

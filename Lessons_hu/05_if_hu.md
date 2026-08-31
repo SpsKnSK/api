@@ -44,6 +44,8 @@
 > if (kor > 12) and (kor < 20):
 >     print("tini")
 > ```
+>
+> **Metafora:** az `if` olyan, mint egy **útelágazás**: a program odaér, megnézi a táblát (feltétel), és aszerint megy tovább az egyik vagy a másik úton — csak **egy** ágon indulhat el.
 # If – Elif - Else
 ## Rövid ismétlő elmélet
 

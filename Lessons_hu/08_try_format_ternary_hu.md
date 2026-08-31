@@ -20,6 +20,8 @@
 > ```py
 > a = 20 if 10 > 20 else 10
 > ```
+>
+> **Metafora:** a `try-except` olyan, mint egy **biztonsági háló**: ha valami elszakad (hiba történik), nem zuhansz le (nem áll le a program), hanem szépen elkapja.
 
 # try-except-finally
 A hibák kezelésére szolgál. Hiba merülhet fel a következő esetekben:

@@ -21,6 +21,8 @@
 >     i = i + 1
 > ```
 > Kimenet: `1`, `2`, `3`
+>
+> **Metafora:** a `while` olyan, mint egy **társasjáték szabálya**: "amíg van pénzed, lépj egy mezőt". Minden kör után újra megkérdezzük: igaz még a feltétel? Ha igen, jön a következő kör, ha nem, vége.
 
 # Ciklusok és a `while`
 
