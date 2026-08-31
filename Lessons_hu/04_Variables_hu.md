@@ -23,8 +23,32 @@
 - `5 ** 3 = 125` hatvány
 - `sqrt(5)` négyzetgyökvonás (matematikai modul szükséges hozzá)
 
+## Kerekítés
+- `round` függvénnyel
+- `round(a, x)`
+- `a` – szám
+- `x` - tizedes helyek száma
+
+Pl. `round(12.345, 2)` eredménye `12.35`
+
+Ha az `x`-et elhagyjuk, egész számra kerekít: `round(12.345)` eredménye `12`.
+
+A szám helyére változó is írható!
+
 ## Feladat
 1. A `print()` függvény segítségével írassátok ki a képernyőre a fenti matematikai műveltek eredményei közül legalább 5-öt
+1. Írjatok programot, amely bekér két számot, majd kiírja a hányadosukat 3 tizedes helyre.
+Ezután írassátok ki az egész részre való osztás eredményét és a maradékot.
+Ügyeljetek rá, hogy a program laikus felhasználók számára is használható legyen (a program írjon egy-két szót is, ne csak a konkrét eredményeket).
+    > `/` tizedes osztás: `18/7=2.5714285714285716`
+
+    > `//` egészszámú osztás: `18//7=2`
+
+    > `%` osztás utáni maradék: `18 % 7=4`
+1. Írjunk programot a kör kerületének és területének kiszámítására.
+Adatok, amiket megadunk: kör átmérője, Pí értéke: `3.14159`.
+Végeredmény:
+`Az X cm átmérőjű körnek Y cm a kerülete és Z négyzetcm a területe.`
 
 ## Logikai operátorok
 A logikai operátorok lehetséges kimenetei:  `True`, `False`
@@ -94,6 +118,7 @@ kisebb `<`|kisebb vagy egyenlő `<=` |nagyobb `>`| nagyobb vagy egyenlő `>=`
 
 # Kérdések
 1. Mi a különbség az `=` és az `==` között. Mikor használod az egyiket, mikor a másikat? 
+1. Mire szolgál a `round` függvény, írjatok rá példát.
 1. A felhasználótól kérjétek be a háromszög két befogóját, és a Pitagorasz tételének segítségvel határozzátok meg az átfogót.
 1. Írjatok 2 példát a megengedett változónevekre.
 1. Írjatok 2 példát a **nem** megengedett váltóznevekre.

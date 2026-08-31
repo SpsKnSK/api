@@ -96,30 +96,6 @@ példa:
     1 eurosok szama: 1
     Ez osszesen 17 euro.
     ```
-# Kerekítés
-- `round` függvénnyel
-- `round(a, x)`
-- `a` – szám
-- `x` - tizedes helyek száma
-
-Pl. `round(12.345, 2)` eredménye `12.35`
-
-Ha az `x`-et elhagyjuk, egész számra kerekít: `round(12.345)` eredménye `12`.
-
-A szám helyére változó is írható!
-## Feladatok
-1. Írjatok programot, amely bekér két számot, majd kiírja a hányadosukat 3 tizedes helyre.
-Ezután írassátok ki az egész részre való osztás eredményét és a maradékot.
-Ügyeljetek rá, hogy a program laikus felhasználók számára is használható legyen (a program írjon egy-két szót is, ne csak a konkrét eredményeket).
-    > `/` tizedes osztás: `18/7=2.5714285714285716`
- 
-    > `//` egészszámú osztás: `18//7=2`
- 
-    > `%` osztás utáni maradék: `18 % 7=4`
-1. Írjunk programot a kör kerületének és területének kiszámítására.
-Adatok, amiket megadunk: kör átmérője, Pí értéke: `3.14159`.
-Végeredmény:
-`Az X cm átmérőjű körnek Y cm a kerülete és Z négyzetcm a területe.`
 1. Írjátok ki a kis szorzótáblát a beadott számra (1-től 10-ig). Egyelőre elég 10 külön `print` sorral.
     ```
     Melyik szorzótáblát írjam ki? 11
@@ -141,6 +117,5 @@ Végeredmény:
     1. Kérjétek be a felhasználótól, mennyi pénze van, s abból hány **egész** kiló almát, citromot és narancsot tud venni.
 
 ## Kérdések
-1. Mire szolgál a `round` függvény, írjatok rá példát.
 1. Írjatok kódot, amelyik megkérdezi a felhaználótól, hogy hívják és hány éves, majd írjátok ki a képernyőre, hogy 10 év múlva hány éves lesz. `Szia [nev], most 16 éves vagy, 10 év múlva 26 leszel`
 1. Milyen adattípust olvas be az `input` függvény a billentyűzetről?
