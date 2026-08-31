@@ -1,152 +1,175 @@
-# Ciklusok bevezető 
-A Python programozási nyelvben kétféle ciklusttípust különböztetünk meg:
-- számolt `for`, előre tudjuk, hányszor fog lefutni, az ismétlések száma adott
-- számolatlan `while`, előre nem tudjuk meghatározni, hányszor fog lefutni, addig fut, míg a feltétel teljesül
-## Ciklus
-Parancs, amely lehetővé teszik, hogy egy utasítás többször fusson le.
-> A ciklusok módosítják a program lefutási irányát, mivel visszaugrunk a ciklus elejére.
-## Ciklusmag
-A ciklusban lefutó utasítások halmaza.
-## Ciklusváltozó (for ciklus)
-a ciklus segédváltozója, amely a ciklus minden egyes lefutásakor megváltoztatja az értékét.
-Növekszik/csökken egyel/kettővel/tízzel/…
-
-# Intervallumok
-Kétfajta intervallumot különböztetünk meg:
-- nyitott (0; 5), ahol a két szélső érték **nem** tartozik bele: 1, 2, 3, 4
-- zárt <0; 5>, ahol a két szélső érték **bele**tartozik: 0, 1, 2, 3, 4, 5
-- nyitott zárt (0; 5>, számok, amelyek az intervallumba tartoznak : 1, 2, 3, 4, 5 
-- zárt nyitott <0; 5), számok, amelyek az intervallumba tartoznak: 0, 1, 2, 3, 4 -> `range(5)`, vagy `range(0,5)`, vagy `range(0,5,1)`
+> # ✏️ Ciklusok - `for`
+>
+> A `for` ciklust akkor használjuk, ha előre tudjuk, milyen értékeken vagy hányszor ismétlünk.
+>
+> ```py
+> for i in range(1, 6):
+>     print(i)
+> ```
+>
+> Kimenet: `1`, `2`, `3`, `4`, `5`
+>
+> **A `range()` legfontosabb alakjai:**
+>
+> | Kód | Kiírt értékek |
+> |---|---|
+> | `range(5)` | `0, 1, 2, 3, 4` |
+> | `range(2, 5)` | `2, 3, 4` |
+> | `range(1, 10, 2)` | `1, 3, 5, 7, 9` |
+>
+> A felső határ **nem tartozik bele**. A ciklusmag itt is egy behúzott blokk.
 
 # `for` ciklus
-Számolt ciklus, előre tudjuk, hányszor fog lefutni. Felhasználása:
-- valamit x-szer kell végrehajtanunk
-- tömb elemeit kell végigjárnunk
-## Szintaxis, szabálykészlet, leírás
-```py
-for [ciklusvaltozo] in range(x,y):
-    if feltetel1:   #ciklusmag
-        continue    #ciklusmag
-    utasitas        #ciklusmag
-    utasitas        #ciklusmag
-    utasitas        #ciklusmag
-    if feltetel2:   #ciklusmag
-        break       #ciklusmag
-else:
-    utasitas
-```
-## Értelmezés
-- a ciklusmagot tabulátorral vagy szóközzel válasszuk külön a `for` parancstól (ajánlom a tabot), így tudja a fordító, hogy éppen a ciklusmagban van.
-- Az `x` és `y` változók a tartomány elejét és végét jelölik, pl. <1;10)
-- A `ciklusvaltozo`t, ha egész szám, általában `i`vel jelöljük, értéket pedig a `range` által határolt intervallumban vesz fel
-- Ahogy az `if`nél a `for` ciklusnál is van lehetőség `else` ágat létrehozni (_Python nyelv különlegessége_), akkor kerül lefutásra, ha a ciklusmagot **nem** szakítottuk meg `break` paranccsal
-- A `continue` utáni utasítások nem futnak le,a ciklus veszi a következő értéket, amin le kell futtatni a ciklusmagot (de figyelem, ebben az esetben feltételhez kötött)
-- A `break` befejezi a ciklusmag futtatását, és a ciklus utáni parancsot hajtja végre (de figyelem, ebben az esetben feltételhez kötött)
 
-### Példák
-```py
-for i in range(0,3):
-    print(x)
-```
-```py
-a = 10
-for i in range(1, 5):
-    print(a+i)
-```
-# For ciklus tulajdonságai
-A for ciklus mindig egy tartományon, intervallumon belül fut, amely egyértelműen behatárolható. Nem mindig szükséges a `range()` függvény, mivel ilyen behatárolható tartomány egy `string` is lehet.
+A `while` ciklusnál nekünk kellett megváltoztatnunk a számlálót. A `for` ciklus ezt elvégzi helyettünk: sorban megkapja az értékeket egy tartományból.
+
+## Rávezető kérdés
+
+Ki kell írni az 1-től 20-ig terjedő számokat. Hogyan oldanátok meg `while` ciklussal? Mi lenne kényelmesebb, ha előre tudjuk, hogy pontosan melyik számokat szeretnénk?
+
+Erre való a `for`: végigmegy egy előre megadott sorozaton.
+
+## Szintaxis
 
 ```py
-text = "alma"
-for c in text: # c mint character
-    print(c)
+for ciklusvaltozo in range(kezdet, veg):
+    utasitasok
 ```
-## Feladat
-Készítsetek egy programot, amely 1-től 15-ig kiírja az összes egész számot és mellé a szám négyzetét is.
+
+- A `ciklusvaltozo` minden körben a következő értéket kapja. Egész számoknál gyakran `i` a neve.
+- A `range()` állítja elő a számok sorozatát.
+- Az `utasitasok` a ciklusmag: a behúzott blokk minden értékre lefut.
+
+```mermaid
+flowchart TD
+    A([Start]) --> B["range(1, 4): 1, 2, 3"]
+    B --> C["i = 1<br/>ciklusmag"]
+    C --> D["i = 2<br/>ciklusmag"]
+    D --> E["i = 3<br/>ciklusmag"]
+    E --> F([A ciklus utáni programrész])
 ```
+
+## `range()`: számsorozat
+
+A `range()` felső határa mindig **nyitott**, vagyis nem része a sorozatnak.
+
+```py
+for i in range(1, 6):
+    print(i)
+```
+
+Itt az `i` egymás után az `1`, `2`, `3`, `4`, `5` értéket kapja. A `6` már nem, mert a felső határ.
+
+| Alak | Jelentés | Példa |
+|---|---|---|
+| `range(veg)` | 0-tól a `veg` előtti számig | `range(4)` → `0, 1, 2, 3` |
+| `range(kezdet, veg)` | a `kezdet`-től a `veg` előtti számig | `range(2, 5)` → `2, 3, 4` |
+| `range(kezdet, veg, lepes)` | adott lépésközzel | `range(0, 10, 2)` → `0, 2, 4, 6, 8` |
+
+Visszafelé számoláshoz negatív lépés kell:
+
+```py
+for i in range(10, 0, -2):
+    print(i)
+```
+
+Kimenet: `10`, `8`, `6`, `4`, `2`
+
+## Példák
+
+### Szám és négyzete
+
+```py
+for i in range(1, 6):
+    print(i, i * i)
+```
+
+Kimenet:
+
+```text
 1 1
 2 4
 3 9
-...
-14 196
-15 225
+4 16
+5 25
 ```
-## Feladat
-Írjatok programot, amely az általatok megadott tartományból kiírja az összes:
-- 2-vel és 4-gyel egyidejűleg osztható számot.
-- 5-tel osztható számot.
-- 35-nél nagyobb számokat.
-> Tehetitek egy `for` ciklusba is vagy 3 külön ciklust csináltok
-## Feladat 
-Határozzátok meg és írassátok ki az összes hárommal és öttel egyaránt osztható, 1000-nél kisebb természetes számot.
-## Feladat
-Kérjünk be **N** darab természetes számot (először **N**-t kérjük be). Az adatok beírása után a program írja ki:
-- a páros számok darabszámát
-- a páratlan számok darabszámát
-- a páratlan számok összegét!
 
-# `range()`
-```py
-class range(
-    __start: SupportsIndex,
-    __stop: SupportsIndex,
-    __step: SupportsIndex = ...,
-    /
-)
-```
-- `__start` az intervallum alsó határa, zárt
-- `__stop`  az intervallum felső határa, nyitott
-- `__step`  lépés
+### Betűk bejárása
+
+A `for` nemcsak számokon tud végigmenni. Egy szöveg betűi is sorozatot alkotnak:
 
 ```py
-for i in range(0,10,3):
-    print(x)
+nev = "Anna"
+for betu in nev:
+    print(betu)
 ```
 
-- `range(5, 10)`: 5, 6, 7, 8, 9
-- `range(0, 10, 3)`: 0, 3, 6, 9 
-- `range(-10, -100, -30)`:  -10, -40, -70
+Kimenet:
 
-## Feladat
-- Írassátok ki a 3-mal osztható számokat 100-ig.
-- Írassátok ki a 7-tel osztható számokat 50 és 99 közt.
-- Számoljatok vissza 50-től 20-ig 4-esével és írassátok ki az egyes számokat!
+```text
+A
+n
+n
+a
+```
 
-# Kérdések
-1. Mi a különbség a nyitott és a zárt intervallum között? 
-1. Milyen értékek tartoznak bele a következő intervallumokba: <1; 6), <-2;1>, (6;3)?
-1. Milyen típusú ciklusokat ismertek? Vázoljátok a különbségeket.
-1. Mennyi parancs lehet a ciklusmagban? 
-1. Írjátok fel a `for` ciklus szintaxisát.
-1. `for` ciklus segítségével írjátok ki a szorzótáblát, amelyiket a felhasználó határozza meg.
-1. Számoljatok vissza 20tól 0ig `for` ciklussal, és írassátok ki a képernyőre minden 4. számot.
-1. Mi a különbség a `break` és a `continue` parancsok között?
-1. Hány `else` ága lehet a `for` ciklusnak? 
-1. Kell-e mindig `else` ág?
-1. Mikor fut le az `else` ág?
-1. Működik a `for` ciklus `break` nélkül?
-1. Működik a `for` ciklus `continue` nélkül?
-1. Mire szolgál a `range()` függvény? Soroljátok fel a paramétereit.
-1. Mit ír ki a képernyőre az alábbi program?
-    ```py
-    for i in range(2, 10, 3):
-        print(i, end=" ")
-    ```
-1. Mit ír ki a képernyőre az alábbi program?
-    ```py
-    for i in range(0,10):
+## `break` és `continue`
+
+A `break` azonnal kilép a ciklusból:
+
+```py
+for i in range(1, 10):
+    if i == 5:
         break
-        print(i)
-    else:
-        print("Else")
-    print("Szep napot!")
-    ```
-1. Mit ír ki a képernyőre az alábbi program?
-    ```py
-    for i in range(0,10):
+    print(i)
+```
+
+Kimenet: `1`, `2`, `3`, `4`
+
+A `continue` kihagyja az aktuális kör hátralévő részét:
+
+```py
+for i in range(1, 6):
+    if i == 3:
         continue
-        print(i)
-    else:
-        print("Else")
-    print("Szep napot!")
-    ```
+    print(i)
+```
+
+Kimenet: `1`, `2`, `4`, `5`
+
+> # 💥 Rontsátok el!
+>
+> Mit ír ki ez a program? Miért nem szerepel benne az `5`?
+>
+> ```py
+> for i in range(1, 5):
+>     print(i)
+> ```
+>
+> Javítsátok úgy, hogy `1`-től `5`-ig írjon ki. Ezután próbáljátok ki a `range(5, 1)` alakot is: miért nem ír ki semmit?
+
+> # 📋 Feladatok
+>
+> 1. Írjátok ki az 1-től 15-ig terjedő egész számokat és melléjük a négyzetüket.
+> 2. Írjátok ki a 3-mal osztható számokat 100-ig.
+> 3. Írjátok ki az 50 és 99 közötti, 7-tel osztható számokat.
+> 4. Számoljatok vissza 50-től 20-ig négyesével.
+> 5. Kérjetek be egy számot, majd írjátok ki a szorzótábláját 1-től 10-ig.
+>
+> További feladatokat a [for gyakorlómappában](../Exercies/07_for/) találtok.
+
+> # ❓ Kérdések
+>
+> 1. Mikor választanál `for` ciklust a `while` helyett?
+> 2. Mi a ciklusváltozó szerepe?
+> 3. Mit jelent az, hogy a `range()` felső határa nyitott?
+> 4. Mit ír ki a `range(2, 10, 3)`?
+> 5. Mit ír ki az alábbi program?
+>
+>    ```py
+>    for i in range(0, 8, 2):
+>        print(i, end=" ")
+>    ```
+>
+> 6. Mi a különbség a `break` és a `continue` között?
+> 7. Több mintapéldát a [for gyakorlómappában](../Exercies/07_for/) találtok.

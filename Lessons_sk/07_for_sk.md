@@ -1,200 +1,174 @@
-# Úvod do cyklov
-V programovaní v jazyku Python rozlišujeme dva druhy cyklov:
-- počítaný `for` - vopred vieme, koľkokrát sa vykoná, počet opakovaní je daný
-- nepočítaný `while`- vopred nevieme určiť, koľkokrát sa vykoná, cyklus sa opakuje, kým je splnená podmienka
+> # ✏️ Cykly - `for`
+>
+> Cyklus `for` používame vtedy, keď vopred vieme, na akých hodnotách alebo koľkokrát opakujeme.
+>
+> ```py
+> for i in range(1, 6):
+>     print(i)
+> ```
+>
+> Výstup: `1`, `2`, `3`, `4`, `5`
+>
+> **Najdôležitejšie tvary `range()`:**
+>
+> | Kód | Vypísané hodnoty |
+> |---|---|
+> | `range(5)` | `0, 1, 2, 3, 4` |
+> | `range(2, 5)` | `2, 3, 4` |
+> | `range(1, 10, 2)` | `1, 3, 5, 7, 9` |
+>
+> Horná hranica **nepatrí** do intervalu. Jadro cyklu je aj tu odsadený blok.
 
-## Cyklus
-Príkaz, ktorý umožňuje vykonať inštrukciu viackrát.
-> Cykly menia smer behu programu, pretože sa vracajú na začiatok cyklu.
-## Jadro cyklu
-Súbor príkazov vykonávaných v cykle.
-## Premenná cyklu (pre cyklus `for`)
-Pomocná premenná cyklu, ktorá mení svoju hodnotu pri každom behu cyklu.
-Rastie/klesá o jeden/dva/desať...
+# Cyklus `for`
 
-# Intervaly
-Rozlišujeme dva druhy intervalov:
-- celý otvorený (0; 5), kde hranice **ne**patria do intervalu: 1, 2, 3, 4
-- celý uzavretý <0; 5>, kde hranice **patria** do intervalu: 0, 1, 2, 3, 4, 5
-- otvorený uzavretý (0; 5>, čísla patriace do intervalu: 1, 2, 3, 4, 5 
-- uzavretý otvorený <0; 5), čísla patriace do intervalu: 0, 1, 2, 3, 4 -> `range(5)`, alebo `range(0,5)`, alebo `range(0,5,1)`
-# `for` cyklus
-Počítaný cyklus, vieme vopred, koľkokrát sa vykoná. Použitie:
-- potrebujeme niečo vykonať `x`-krát
-- potrebujeme prejsť prvky v zozname
-## Syntax, sada pravidiel, popis
-```py
-for [premenna_cyklu] in range(x,y):
-    if podmienka1:   # jadro cyklu
-        continue     # jadro cyklu
-    prikaz           # jadro cyklu
-    prikaz           # jadro cyklu
-    prikaz           # jadro cyklu
-    if podmienka2:   # jadro cyklu
-        break        # jadro cyklu
-else:
-    prikaz
-```
-## Interpretácia
-- Jadro cyklu oddelíme od príkazu `for` tabulátorom alebo medzerami (odporúčam tab)
-- Premenné `x` a `y` označujú začiatok a koniec rozsahu, intervalu, napr. <1;10)
-- `remenna_cyklu`, ak je celé číslo, zvyčajne označujeme `i` a hodnotu získa v rozsahu určenom `range`
-- Ako pri `if`, aj pri cykle `for` máme možnosť vytvoriť vetvu `else` (_špecifikum jazyka Python_), ktorá sa vykoná, ak sa cyklus **ne** preruší príkazom `break`
-- Po `continue` sa ďalšie príkazy nevykonajä, cyklus pokračuje s ďalšou hodnotou, na ktorej sa má vykonať jadro cyklu (ale pozor, v príklade je tento prípad je podmienený)
-- `break` ukončuje vykonávanie jadro cyklu a vykoná príkaz nasledujúci po cykle (ale pozor, v príklade je tento prípad je podmienený)
+Pri cykle `while` sme sami museli meniť počítadlo. Cyklus `for` to urobí za nás: postupne dostáva hodnoty z rozsahu.
 
-### Príklady
-```py
-for i in range(0,3):
-    print(x)
-```
-```py
-a = 10
-for i in range(1, 5):
-    print(a+i)
-```
-# Vlastnosti `for` cyklu
-`for` cyklus vždy beží v určenom rozsahu, ktorý je jednoznačne definovaný. `range()` funkciu nie je vždy nutné použiť, pretože takýmto definovaným rozsahom môže byť aj reťazec `string`.
+## Úvodná otázka
+
+Treba vypísať čísla od 1 do 20. Ako by ste to riešili cyklom `while`? Čo by bolo pohodlnejšie, ak vopred vieme presne, ktoré čísla chceme?
+
+Práve na to slúži `for`: prejde vopred daný rad hodnôt.
+
+## Syntax
 
 ```py
-text = "jablko"
-for c in text: # c ako znak
-    print(c)
+for premenna_cyklu in range(zaciatok, koniec):
+    prikazy
 ```
-## Úloha
-Vytvorte program, ktorý vypíše všetky celé čísla od 1 do 15 a k nim druhú mocninu.
+
+- `premenna_cyklu` dostáva v každom kole nasledujúcu hodnotu. Pri celých číslach sa často volá `i`.
+- `range()` vytvára postupnosť čísel.
+- `prikazy` tvoria jadro cyklu: odsadený blok sa vykoná pre každú hodnotu.
+
+```mermaid
+flowchart TD
+    A([Začiatok]) --> B["range(1, 4): 1, 2, 3"]
+    B --> C["i = 1<br/>jadro cyklu"]
+    C --> D["i = 2<br/>jadro cyklu"]
+    D --> E["i = 3<br/>jadro cyklu"]
+    E --> F([Časť programu po cykle])
 ```
+
+## `range()`: postupnosť čísel
+
+Horná hranica `range()` je vždy **otvorená**, teda nie je súčasťou postupnosti.
+
+```py
+for i in range(1, 6):
+    print(i)
+```
+
+Tu `i` postupne dostáva hodnoty `1`, `2`, `3`, `4`, `5`. Číslo `6` už nie, pretože je hornou hranicou.
+
+| Tvar | Význam | Príklad |
+|---|---|---|
+| `range(koniec)` | od 0 po číslo pred `koniec` | `range(4)` → `0, 1, 2, 3` |
+| `range(zaciatok, koniec)` | od `zaciatok` po číslo pred `koniec` | `range(2, 5)` → `2, 3, 4` |
+| `range(zaciatok, koniec, krok)` | s daným krokom | `range(0, 10, 2)` → `0, 2, 4, 6, 8` |
+
+Na počítanie odzadu potrebujeme záporný krok:
+
+```py
+for i in range(10, 0, -2):
+    print(i)
+```
+
+Výstup: `10`, `8`, `6`, `4`, `2`
+
+## Príklady
+
+### Číslo a jeho druhá mocnina
+
+```py
+for i in range(1, 6):
+    print(i, i * i)
+```
+
+Výstup:
+
+```text
 1 1
 2 4
 3 9
-...
-14 196
-15 225
+4 16
+5 25
 ```
-## Úloha
-Napíšte program, ktorý v zadanom rozsahu vypíše všetky:
-- čísla deliteľné 2 a 4 navzájom
-- čísla deliteľné 5
-- čísla väčšie ako 35
-> Môžete to urobiť v jednom `for` cyklom alebo vytvoriť 3 samostatné cykly.
-## Úloha 
-Určte a vypíšte všetky prirodzené čísla menšie ako 1000, ktoré sú deliteľné tromi aj piatimi navzájom.
-## Úloha
-Požiadajte o **N** prirodzených čísel (najprv vypýtajte **N**). Po zadaní dát program vypíše:
-- počet párnych čísel
-- počet nepárnych čísel
-- súčet nepárnych čísel!
 
-# `range()`
-```py
-class range(
-    __
+### Prechádzanie písmen
 
-start: SupportsIndex,
-    __stop: SupportsIndex,
-    __step: SupportsIndex = ...,
-    /
-)
-```
-- `__start` začiatok intervalu, uzavretý
-- `__stop` koniec intervalu, otvorený
-- `__step` krok
+`for` nefunguje len s číslami. Aj písmená v texte tvoria postupnosť:
 
 ```py
-for i in range(0,10,3):
-    print(x)
+meno = "Anna"
+for pismeno in meno:
+    print(pismeno)
 ```
 
-- `range(5, 10)`: 5, 6, 7, 8, 9
-- `range(0, 10, 3)`: 0, 3, 6, 9
-- `range(-10, -100, -30)`:  -10, -40, -70
+Výstup:
 
-## Úloha
-- Vypíšte čísla delteľné 3 do 100.
-- Vypíšte čísla delteľné 7 medzi 50 a 99.
-- Spätné počítanie od 50 do 20 po 4-och a vypíšte jednotlivé čísla!
+```text
+A
+n
+n
+a
+```
 
-# Otázky
-1. Aký je rozdiel medzi otvoreným a uzavretým intervalom? 
-1. Aké hodnoty patria do nasledujúcich intervalov: <1; 6), <-2;1>, (6;3)?
-1. Aké typy cyklov poznáte? Náčrtnte rozdiely.
-1. Koľko príkazov môže byť v jadre cyklu? 
-1. Napíšte syntax cyklu `for`.
-1. Pomo.cou cyklu `for` vypíšte násobovaciu tabuľku, ktorú určí používateľ.
-1. Spätné počítanie od 20 do 0 cyklom `for` a vypíšte na obrazovku každé 4. číslo.
-1. Aký je rozdiel medzi príkazmi `break` a `continue`?
-1. Koľko vetiev `else` môže mať cyklus `for`? 
-1. Je vetva `else` vždy povinná?
-1. Kedy sa vykoná vetva `else`?
-1. Funguje cyklus `for` bez `break`?
-1. Funguje cyklus `for` bez `continue`?
-1. Načo slúži funkcia `range()`? Vymenujte jej parametre.
-1. Čo vypíše na obrazovku nasledujúci program?
-    ```py
-    for i in range(2, 10, 3):
-        print(i, end=" ")
-    ```
-1. Čo vypíše na obrazovku nasledujúci program?
-    ```py
-    for i in range(0,10):
+## `break` a `continue`
+
+`break` okamžite ukončí cyklus:
+
+```py
+for i in range(1, 10):
+    if i == 5:
         break
-        print(i)
-    else:
-        print("Inak")
-    print("Krásny deň!")
-    ```
-1. Čo vypíše na obrazovku nasledujúci program?
-    ```py
-    for i in range(0,10):
-        continue
-        print(i)
-    else:
-        print("Inak")
-    print("Krásny deň!")
-    ```
-- `range(-10, -100, -30)`:  -10, -40, -70 
-- `range(-10, -100, -30)`:  -10, -40, -70
+    print(i)
+```
 
-## Úlohy
-- Vypíšte čísla deliteľné 3 do 100.
-- Vypíšte čísla deliteľné 7 v intervale od 50 do 99.
-- Odpočítajte naspäť od 50 do 20 s krokom 4 a vypíšte jednotlivé čísla!
+Výstup: `1`, `2`, `3`, `4`
 
-# Otázky
-1. Čo je rozdiel medzi otvoreným a uzavretým intervalom?
-1. Do ktorých hodnôt patria nasledujúce intervaly: <1; 6), <-2;1>, (6;3)?
-1. Aké druhy cyklov poznáte? Nastriekajte rozdiely.
-1. Koľko príkazov môže byť v telocvični?
-1. Napíšte syntax `for` cyklu.
-1. Pomocou cyklu `for` vypíšte násobkovú tabuľku, ktorú určuje používateľ.
-1. Spočítajte späť od 20 do 0 s krokom 4 a vypíšte každé štvrté číslo.
-1. Aký je rozdiel medzi príkazmi `break` a `continue`?
-1. Koľko `else` vetiev môže mať `for` cyklus?
-1. Je vždy potrebná vetva `else`?
-1. Kedy sa vykoná vetva `else`?
-1. Môže `for` cyklus fungovať bez `break`?
-1. Môže `for` cyklus fungovať bez `continue`?
-1. Načo slúži funkcia `range()`? Uveďte jej parametre.
-1. Čo vypíše nasledujúci program?
-    ```py
-    for i in range(2, 10, 3):
-        print(i, end=" ")
-    ```
-1. Čo vypíše nasledujúci program?
-    ```py
-    for i in range(0,10):
-        break
-        print(i)
-    else:
-        print("Else")
-    print("Krásny deň!")
-    ```
-1. Čo vypíše nasledujúci program?
-    ```py
-    for i in range(0,10):
+`continue` preskočí zvyšok aktuálneho kola:
+
+```py
+for i in range(1, 6):
+    if i == 3:
         continue
-        print(i)
-    else:
-        print("Else")
-    print("Krásny deň!")
-    ```
+    print(i)
+```
+
+Výstup: `1`, `2`, `4`, `5`
+
+> # 💥 Pokazte to!
+>
+> Čo vypíše tento program? Prečo v ňom nie je `5`?
+>
+> ```py
+> for i in range(1, 5):
+>     print(i)
+> ```
+>
+> Opravte ho tak, aby vypísal čísla od `1` do `5`. Potom skúste aj tvar `range(5, 1)`: prečo nevypíše nič?
+
+> # 📋 Úlohy
+>
+> 1. Vypíšte celé čísla od 1 do 15 a k nim ich druhú mocninu.
+> 2. Vypíšte čísla deliteľné 3 do 100.
+> 3. Vypíšte čísla medzi 50 a 99 deliteľné 7.
+> 4. Odpočítajte od 50 do 20 po štyroch.
+> 5. Vypýtajte si číslo od používateľa a vypíšte jeho násobkovú tabuľku od 1 do 10.
+>
+> Ďalšie úlohy nájdete v [priečinku s úlohami pre for](../Exercies/07_for/).
+
+> # ❓ Otázky
+>
+> 1. Kedy by ste zvolili cyklus `for` namiesto `while`?
+> 2. Akú úlohu má premenná cyklu?
+> 3. Čo znamená, že horná hranica `range()` je otvorená?
+> 4. Čo vypíše `range(2, 10, 3)`?
+> 5. Čo vypíše nasledujúci program?
+>
+>    ```py
+>    for i in range(0, 8, 2):
+>        print(i, end=" ")
+>    ```
+>
+> 6. Aký je rozdiel medzi `break` a `continue`?

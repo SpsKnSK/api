@@ -149,4 +149,5 @@ Kimenet: `1`, `2`, `4`, `5`
 >    ```
 >
 > 6. Mire való a `break`, és mire a `continue`?
-> 7. Több mintapéldát a [while gyakorlómappában](../Exercies/06_while/) találtok.
+>
+> További feladatokat a [for gyakorlómappában](../Exercies/06_while/) találtok.

@@ -137,6 +137,15 @@ Výstup: `1`, `2`, `4`, `5`
 >
 > Opravte ho tak, aby vypísal `0`, `1`, `2` a potom sa zastavil. Potom skúste, čo sa stane, keď riadok `i = i + 1` umiestnite pred `print(i)`.
 
+> # 📋 Úlohy
+>
+> 1. Vypýtajte si od používateľa číslo, potom pomocou cyklu `while` vypíšte všetky celé čísla od 1 po dané číslo.
+> 2. Napíšte program, ktorý odpočítava od 100 do 0 a potom vypíše: „Šťastný nový rok!“
+> 3. Vypýtajte si od používateľa čísla postupne, kým nezadá `0`, potom vypíšte súčet doteraz zadaných čísel.
+> 4. Pomocou cyklu `while` vypíšte čísla deliteľné 3 do 50.
+>
+> Ďalšie úlohy nájdete v [priečinku s úlohami pre while](../Exercies/06_while/).
+
 > # ❓ Otázky
 >
 > 1. Akú bežnú situáciu poznáte, v ktorej niečo opakujeme „kým“?
