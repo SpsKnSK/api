@@ -15,6 +15,9 @@
 > | `print(a, b)` | a vessző = szóköz a kimenetben |
 > | `sep="."` | mi kerüljön az értékek **közé** (alap: szóköz) |
 > | `end=" "` | mi kerüljön a sor **végére** (alap: új sor `\n`) |
+> | `""` | üres string |
+> | `\n` | új sor jele |
+> | `\t` | tabulátor |
 >
 > **Szám vs. szöveg:**
 > ```py
@@ -204,11 +207,11 @@ masodik=24
 harmadik=34
 ```
 1. Írassátok ki ezt a három számot a képernyőre a következő formában: 
-```
-Elso szam: 12
-Masodik szam: 24
-Harmadik szam: 34
-```
+    ```
+    Elso szam: 12
+    Masodik szam: 24
+    Harmadik szam: 34
+    ```
     Oldjátok meg úgy is, hogy csak **egy** `print`-et használtok.
 2. Írassátok ki a három szám összegét és az első két szám szorzatát.
 
