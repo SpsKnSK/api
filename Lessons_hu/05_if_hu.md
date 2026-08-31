@@ -1,3 +1,49 @@
+> # ✏️ If, elágazás
+>
+> **Mire jó?** A program **elágazik**: csak akkor fut le egy kódrészlet, ha egy feltétel igaz.
+>
+> ```py
+> if feltetel1:
+>     utasitasok1
+> elif feltetel2:
+>     utasitasok2
+> else:
+>     utasitasok_else
+> ```
+>
+> | Rész | Kell? | Mikor fut le |
+> |---|---|---|
+> | `if` | **mindig** | ha a feltétele igaz |
+> | `elif` | nem | ha a fentiek hamisak, de ez igaz (akárhány lehet) |
+> | `else` | nem | ha **egyik** feltétel sem volt igaz |
+>
+> **⚠️ 3 dolog, amit el ne felejts:**
+> 1. a sor végén **kettőspont** `:`
+> 2. az alatta lévő sorok **beljebb** (behúzás, Tab)
+> 3. `==` az összehasonlítás, `=` csak értékadás
+>
+> **Blokk:** az `if` alatt beljebb írt utasítások csoportja. Együtt futnak le, vagy együtt maradnak ki. A **behúzás** jelöli ki, meddig tart.
+> ```py
+> if jegy == 1:
+>     print("Gratulalok!")   # \_ blokk: az if-hez tartozik
+>     print("Ugyes vagy!")   # /
+> print("Vege")              # ez mindig lefut
+> ```
+>
+> **Csak az első igaz ág fut le!** Ha `jegy = 2`, a 2-es ág lefut, a többit meg se nézi.
+>
+> **Feltételek:**
+>
+> | | | | |
+> |-|-|-|-|
+> | `==` egyenlő | `!=` nem egyenlő | `<` kisebb | `>` nagyobb |
+> | `<=` kisebb-egyenlő | `>=` nagyobb-egyenlő | | |
+>
+> **Összekapcsolás:** `and` = mindkettő igaz · `or` = legalább az egyik igaz · `not` = megfordítja
+> ```py
+> if (kor > 12) and (kor < 20):
+>     print("tini")
+> ```
 # If – Elif - Else
 ## Rövid ismétlő elmélet
 
@@ -8,6 +54,35 @@
 **A program szekvens haladását a következő utasításokkal lehet megváltoztatni:**
 - feltételes utsítás `if`
 - ciklusok `while`, `for`,
+
+## Mi az a blokk?
+Eddig minden utasításunk **egyesével**, egymás után futott le. Az `if` viszont nem egyetlen utasítást kapcsol be vagy ki, hanem egy **egész csoportot**.
+
+> **Blokk** = egymáshoz tartozó utasítások csoportja, amelyek **együtt** futnak le (vagy együtt maradnak ki).
+
+A Python a **behúzásból** (indentálás) tudja, mi tartozik egy blokkba: ami beljebb van, az a blokk része. Más nyelvek erre kapcsos zárójelet használnak, a Pythonban maga a behúzás jelöli ki.
+
+```py
+if jegy == 1:
+    print("Gratulalok!")     # \_ blokk: az if-hez tartozik
+    print("Ugyes vagy!")     # /
+print("A program vege")      # ez már NEM a blokk része, mindig lefut
+```
+
+- A blokkot bevezető sor mindig **kettősponttal** `:` végződik
+- A blokk minden sora **azonos mértékben** van behúzva (egy Tab vagy 4 szóköz)
+- A blokk ott ér véget, ahol visszaáll a behúzás
+- Egy blokkban lehet 1 utasítás, de akár 20 is
+- Egy blokkon belül lehet **újabb** blokk (lásd: egymásba ágyazott `if`)
+
+```mermaid
+flowchart TD
+    A["if jegy == 1:"] --> B["<b>BLOKK</b><br/>print('Gratulalok!')<br/>print('Ugyes vagy!')"]
+    A -- hamis --> C["print('A program vege')"]
+    B --> C
+```
+
+> Ugyanez a szabály érvényes majd a ciklusoknál (`while`, `for`) és a függvényeknél is – a blokk fogalma végigkíséri az egész programozást.
 
 ## Feltételes utasítás
 ```py
@@ -30,26 +105,68 @@ else:
 - **else if == `elif`**
 - Ha egy feltétel se igaz akkor az `else` utáni utasítások végződnek el.
 
+## Mi történik, ha a feltétel igaz?
+A Python **felülről lefelé** haladva sorra megnézi a feltételeket. Az **első igaznál** megáll: lefuttatja annak az ágnak az utasításait, a többit **át is ugorja**. Utána a program a teljes `if` szerkezet után folytatódik.
+
+```mermaid
+flowchart TD
+    S([Start]) --> F1{feltétel_1?}
+    F1 -- igaz --> U1[utasítások_1]
+    F1 -- hamis --> F2{feltétel_2?}
+    F2 -- igaz --> U2[utasítások_2]
+    F2 -- hamis --> F3{feltétel_n?}
+    F3 -- igaz --> U3[utasítások_n]
+    F3 -- hamis --> UE[utasítások_else]
+    U1 --> V([program folytatódik])
+    U2 --> V
+    U3 --> V
+    UE --> V
+```
+
+> Fontos: **legfeljebb egy ág** fut le! Ha több feltétel is igaz lenne, akkor is csak a **legelső** teljesül.
+
+Ha nincs `else`, és egyik feltétel sem igaz, akkor egyszerűen **nem történik semmi**:
+
+```mermaid
+flowchart TD
+    S([Start]) --> F1{feltétel?}
+    F1 -- igaz --> U1[utasítások]
+    F1 -- hamis --> V([program folytatódik])
+    U1 --> V
+```
+
 ## Szemléltető program
 
 ```py
-jegy= int(input('Ird ide, hanyast kaptal ma: '))
+jegy = int(input('Ird ide, hanyast kaptal ma: '))
 if jegy == 1:
-    print ('Gratulalok, ugyes vagy' )
-    print ('Remelem, ebbo a tantargybol is ilyen jegyet kapsz')
+    print('Gratulalok, ugyes vagy')
+    print('Remelem, ebbol a tantargybol is ilyen jegyet kapsz')
 elif jegy == 2:
-    print ('Gratulalok, ez is egy szep jegy')
+    print('Gratulalok, ez is egy szep jegy')
 elif jegy == 3:
     print('Nem rossz, de legkozelebb olvasd at meg egyszer')
 elif jegy == 4:
-    print('Ez nem sokon mulott. Tanulj tobbet! ')
+    print('Ez nem sokon mulott. Tanulj tobbet!')
 else:
-    print('Tessek sokat tanulni es elgondolkodni a jovodon! ')
+    print('Tessek sokat tanulni es elgondolkodni a jovodon!')
 ```
 
 ### Vizsgáljuk meg az előző programot
 > Mit veszünk észre a programkódban:
-**Több utasítás esetén elég egymás után begépelni a végrehajtani kívánt utasításokat.**
+**Több utasítás esetén elég egymás után begépelni a végrehajtani kívánt utasításokat** – a lényeg, hogy **azonos behúzással** legyenek, hiszen így alkotnak egy blokkot (lásd az 1-es ág két `print`-jét).
+
+### Feladat: Rontsátok el szándékosan!
+Írjatok olyan `if` szerkezeteket, amiket a Python hibával utasít vissza, vagy amik **nem azt csinálják**, amit várnánk. Ötletek:
+- lemarad a kettőspont: `if jegy == 1`
+- nincs behúzás az `if` alatti sorban
+- a blokk sorai **eltérő** behúzással: az egyik 4 szóköz, a másik 8
+- `=` írása `==` helyett: `if jegy = 1:`
+- `else` mögé is feltételt írtok: `else jegy == 5:`
+- `elif` az `if` **elé** kerül
+- a feltétel mindig igaz: `if jegy == 1 or jegy == 2 or True:`
+
+Olvassátok el a hibaüzenetet: hogy hívják a hibát, és melyik sorra mutat? Melyik hiba az, amit a Python **nem** jelez, mégis rossz eredményt ad?
 
 ### Feladat
 Készítsetek programot, amely meghatározza a közeg pH értékét.
