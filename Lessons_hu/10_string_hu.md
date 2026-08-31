@@ -35,8 +35,6 @@
 > | [`in`](#in) | tartalmazás vizsgálat |
 > | [`str` mint kollekció](#str-mint-kollekció) | bejárás, indexelés |
 
-<details>
-<summary>📖 Teljes tananyag (kattints a kinyitáshoz)</summary>
 
 # String, karakterláncok és műveletek
 
@@ -253,7 +251,6 @@ print(karakterLista)
 ['t', 'e', 's', 't']
 ```
 
-</details>
 
 > # 💥 Rontsátok el!
 >

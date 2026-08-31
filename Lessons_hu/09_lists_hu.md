@@ -33,8 +33,6 @@
 > | [Véletlen számokkal való feltöltés](#véletlen-számokkal-való-feltöltés) | `random` |
 > | [Sorba rendezés](#sorba-rendezés) | `.sort()` vs `sorted()` |
 
-<details>
-<summary>📖 Teljes tananyag (kattints a kinyitáshoz)</summary>
 
 # Listák
 
@@ -240,7 +238,6 @@ print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
 ```
 Sorba rendezi az elemeket **csökkenő** sorrend szerint a `reverse = True` segítségével.
 
-</details>
 
 > # 💥 Rontsátok el!
 >

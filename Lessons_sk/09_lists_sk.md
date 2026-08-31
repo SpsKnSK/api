@@ -15,8 +15,6 @@
 | [Naplnenie zoznamu náhodnými číslami](#naplnenie-zoznamu-náhodnými-číslami) | `random` |
 | [Zoradenie](#zoradenie) | `.sort()` vs `sorted()` |
 
-<details>
-<summary>📖 Celé učivo (klikni na rozbalenie)</summary>
 
 Zoznam je dátový typ, ktorý slúži na uchovávanie viacerých hodnôt v jednej premennej.
 
@@ -233,7 +231,6 @@ print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
 
 Zoradí prvky **zostupne** pomocou `reverse=True`.
 
-</details>
 
 ## Úlohy
 > [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e05_randomEvenOdd.md)

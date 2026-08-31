@@ -15,8 +15,6 @@
 | [`.join(intCollection)`](#joinintcollection) | spojenie čísel |
 | [`str` ako kolekcia](#str-ako-kolekcia) | prechádzanie, indexovanie |
 
-<details>
-<summary>📖 Celé učivo (klikni na rozbalenie)</summary>
 
 ```py
 text='text'
@@ -207,7 +205,6 @@ print(zoznamZnakov)
 ['t', 'e', 's', 't']
 ```
 
-</details>
 
 ## Úlohy
 - [Analýza vety](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e01_workWithCharacters.md#sk)
