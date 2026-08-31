@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Osztályok — haladó (`__repr__`, `__dict__`, JSON)
 >
 > *Opcionális, haladó tananyag.*

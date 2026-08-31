@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ `print()`
 >
 > **Mire jó?** Kiírja a képernyőre azt, amit a zárójelbe teszünk: szöveget, számot, változót, művelet eredményét.

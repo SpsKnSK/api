@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Dedenie a polymorfizmus
 >
 > **Dedenie**: nova trieda (dieta/podtrieda) ziska vsetky vlastnosti a funkcie uz existujucej triedy (rodica).

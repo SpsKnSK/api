@@ -4,6 +4,36 @@ Ez az oldal segít eligazodni a tananyagon: **mi a kötelező alap**, mi az, ami
 
 > 🧰 **Gondolj rá úgy, mint egy szerszámosládára!** Minden lecke egy új szerszám. A cél nem az, hogy az összes szerszám nevét fejből fújjátok, hanem hogy amikor egy feladatba belefutsz, **tudjátok, melyik fiókban keressétek** a megoldást.
 
+```mermaid
+flowchart TD
+    A["01 Algoritmusok"] --> B["02 print()"]
+    B --> C["03 input()"]
+    C --> D["04 Változók"]
+    D --> E["05 If"]
+    E --> F["06 while"]
+    F --> G["07 for"]
+    G --> H["08 try/format/ternary 🟡"]
+    H --> I["09 Listák"]
+    I --> J["10 String-ek"]
+    J --> K["11 Függvények"]
+    K --> L["11 Lambda 🔵"]
+    K --> M["12 Szótár, halmaz 🟡"]
+    K --> N["15 Globális/lokális változók 🟡"]
+    K --> O["16 Fájlkezelés 🟡"]
+    K --> P["13 Osztályok 🔵"]
+    P --> Q["14 Öröklődés 🔵"]
+    P --> R["17 Tkinter 🔵"]
+
+    classDef alap fill:#c8f7c5,stroke:#2e7d32,color:#1b1b1b;
+    classDef extra fill:#fff3b0,stroke:#b8860b,color:#1b1b1b;
+    classDef opcio fill:#cfe3ff,stroke:#1565c0,color:#1b1b1b;
+    class A,B,C,D,E,F,G,I,J,K alap;
+    class H,M,N,O extra;
+    class L,P,Q,R opcio;
+```
+
+🟢 zöld = alap, végigmész rajta sorban · 🟡 sárga = hasznos kiegészítés, ha van rá idő · 🔵 kék = elég tudni, hogy létezik
+
 ---
 ## A tananyagok struktúrája
 

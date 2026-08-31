@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ `input()`
 >
 > **Na čo slúži?** Načíta text z klávesnice, ktorý uložíme do premennej.

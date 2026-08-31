@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Függvények
 >
 > A **függvény** egy elnevezett kódrészlet, amit bárhonnan meg lehet **hívni**. Bemenete lehet (paraméterek), és lehet visszatérési értéke (`return`).

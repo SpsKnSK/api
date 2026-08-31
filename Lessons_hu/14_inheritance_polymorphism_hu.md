@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Öröklődés és polimorfizmus
 >
 > **Öröklődés**: egy új osztály (gyerek/alosztály) megkapja egy már létező osztály (szülő) minden tulajdonságát és függvényét.

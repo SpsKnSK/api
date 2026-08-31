@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Fájlkezelés
 >
 > ```py

@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Cykly - `for`
 >
 > Cyklus `for` používame vtedy, keď vopred vieme, na akých hodnotách alebo koľkokrát opakujeme.

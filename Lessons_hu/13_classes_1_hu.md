@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Osztályok (`class`)
 >
 > Az osztály egy **tervrajz**, a példány (objektum) az abból elkészített **konkrét dolog**.

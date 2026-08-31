@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ If, elágazás
 >
 > **Mire jó?** A program **elágazik**: csak akkor fut le egy kódrészlet, ha egy feltétel igaz.

@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 # Algoritmy a ich vlastnosti
 
 ## Algoritmus

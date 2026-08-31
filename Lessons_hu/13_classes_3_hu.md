@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Osztályok — mélyebb ismeretek
 >
 > *Opcionális, haladó tananyag.*

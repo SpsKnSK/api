@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Listák
 >
 > A **lista** több érték egyben, egy változóban. A dobozokkal ellentétben ez egy egész **polc**, ahol minden helynek van sorszáma (**index**), 0-tól kezdve.

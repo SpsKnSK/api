@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Premenné
 >
 > **Čo to je?** Menom označená krabica v pamäti, do ktorej uložíme jednu hodnotu. Podľa mena ju vieme kedykoľvek vybrať.

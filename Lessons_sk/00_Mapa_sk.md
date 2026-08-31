@@ -4,6 +4,36 @@ Táto stránka pomáha zorientovať sa v učive: čo je **povinný základ**, o 
 
 > 🧰 **Predstav si to ako skrinku s náradím!** Každá lekcia je nový nástroj. Cieľom nie je poznať naspamäť názvy všetkých nástrojov, ale vedieť, **v ktorej zásuvke ho hľadať**, keď narazíš na úlohu.
 
+```mermaid
+flowchart TD
+    A["01 Algoritmy"] --> B["02 print()"]
+    B --> C["03 input()"]
+    C --> D["04 Premenné"]
+    D --> E["05 If"]
+    E --> F["06 while"]
+    F --> G["07 for"]
+    G --> H["08 try/format/ternary 🟡"]
+    H --> I["09 Zoznamy"]
+    I --> J["10 Reťazce"]
+    J --> K["11 Funkcie"]
+    K --> L["11 Lambda 🔵"]
+    K --> M["12 Slovník, množina 🟡"]
+    K --> N["15 Globálne/lokálne premenné 🟡"]
+    K --> O["16 Práca so súbormi 🟡"]
+    K --> P["13 Triedy 🔵"]
+    P --> Q["14 Dedenie 🔵"]
+    P --> R["17 Tkinter 🔵"]
+
+    classDef alap fill:#c8f7c5,stroke:#2e7d32,color:#1b1b1b;
+    classDef extra fill:#fff3b0,stroke:#b8860b,color:#1b1b1b;
+    classDef opcio fill:#cfe3ff,stroke:#1565c0,color:#1b1b1b;
+    class A,B,C,D,E,F,G,I,J,K alap;
+    class H,M,N,O extra;
+    class L,P,Q,R opcio;
+```
+
+🟢 zelená = základ, ideš postupne po poradí · 🟡 žltá = užitočný doplnok, ak je čas · 🔵 modrá = stačí vedieť, že existuje
+
 ---
 ## Štruktúra lekcií
 

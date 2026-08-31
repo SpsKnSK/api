@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Globális és lokális változók
 >
 > - **Globális változó**: a függvényeken kívül létezik, mindenhonnan elérhető

@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Lambda függvények (opcionális)
 >
 > A **lambda** egy rövid, névtelen, egysoros függvény.

@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Globálne a lokálne premenné
 >
 > - **Globalna premenna**: existuje mimo funkcii, je dostupna odkialkolvek

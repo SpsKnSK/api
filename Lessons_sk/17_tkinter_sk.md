@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Tkinter — grafické rozhranie
 >
 > Vytvorenie okna má 4 kroky:

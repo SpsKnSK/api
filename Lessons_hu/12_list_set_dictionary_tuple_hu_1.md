@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Lista, halmaz, szótár, tuple
 >
 > Négyféle **gyűjtemény** típus, mindegyiknek más a "személyisége":

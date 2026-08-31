@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Zoznamy
 >
 > **Zoznam** je viac hodnôt spolu, v jednej premennej. Na rozdiel od jednej „krabice“ je to celá **polica**, kde má každé miesto svoje poradové číslo (**index**), od 0.

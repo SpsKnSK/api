@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ `print()`
 >
 > **Na čo slúži?** Vypíše na obrazovku to, čo napíšeme do zátvoriek: text, číslo, premennú, výsledok operácie.

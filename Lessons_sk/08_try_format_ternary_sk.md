@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Extra - try, format, ternary
 >
 > Táto lekcia nie je povinné učivo, ale zbierka užitočných doplnkových trikov. Nevadí, ak ju teraz preskočíte — môžete sa k nej kedykoľvek vrátiť.

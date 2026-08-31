@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Extrák - try, format, ternary
 >
 > Ez a lecke **nem kötelező tananyag**, hanem hasznos kiegészítő trükkök gyűjteménye. Nem baj, ha most kihagyjátok, később bármikor visszatérhettek rá.

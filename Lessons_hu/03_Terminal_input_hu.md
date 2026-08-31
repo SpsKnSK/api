@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ `input()`
 >
 > **Mire jó?** Szöveget olvas be a billentyűzetről, amit elmentünk egy változóba.

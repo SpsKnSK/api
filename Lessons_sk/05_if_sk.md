@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ If, vetvenie
 >
 > **Na čo slúži?** Program sa **rozvetví**: časť kódu sa vykoná iba vtedy, ak je podmienka pravdivá.

@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Stringek (szövegek)
 >
 > A **string** karakterek sorozata. Minden karakternek van egy **indexe** (sorszáma), ami **0-tól** indul.

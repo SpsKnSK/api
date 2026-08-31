@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Cykly - `while`
 >
 > **Cyklus:** opakujeme tie isté príkazy.

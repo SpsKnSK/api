@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Tkinter — grafikus felület
 >
 > Egy ablak létrehozásának 4 lépése:

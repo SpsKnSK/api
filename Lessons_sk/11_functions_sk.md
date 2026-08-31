@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Funkcie
 >
 > **Funkcia** je pomenovaný kus kódu, ktorý sa dá odkiaľkoľvek **zavolať**. Môže mať vstup (parametre) a môže mať návratovú hodnotu (`return`).
