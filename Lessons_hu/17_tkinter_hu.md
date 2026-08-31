@@ -166,83 +166,6 @@ exit_button.pack(side=tk.RIGHT)
 
 parent.mainloop()
 ```
-### Idézet kiírása
-```py
-# pip install tkinter
-
-import tkinter as tk
-from tkinter import END, Text
-from tkinter.ttk import Button
-import requests
-
-
-def get_quote():
-    r = requests.get("https://api.quotable.io/random")
-    data = r.json()
-    quote = data["content"]
-    text_box.delete("1.0", END)
-    text_box.insert(END, quote)
-
-
-root = tk.Tk()
-root.title("Quoter")
-text_box = Text(root, height=10, width=50)
-get_button = Button(root, text="Get Quote", command=get_quote)
-
-text_box.pack()
-get_button.pack()
-root.mainloop()
-```
-
-## `Combobox`
-```py
-import tkinter as tk
-from tkinter import ttk
-
-def on_field_change(index, value, op):
-    print ("combobox updated to ", my_combobox.get())
-    
-root = tk.Tk()
-my_str_var = tk.StringVar()
-my_str_var.trace("w", on_field_change)
-
-my_combobox = ttk.Combobox(
-    root, 
-    textvariable = my_str_var,
-    values=["PHP", "Java", "Python"],
-    )
-
-my_combobox.pack()
-root.mainloop()
-```
-
-## `Text` alkalmazása
-```py
-from tkinter import *
-from tkinter import ttk
-
-def open_popup():
-   top= Toplevel(parent)
-   top.geometry("750x250")
-   top.title("Child Window")
-   Label(top, text= f"Name: {entry1.get()}, Id: {entry2.get()}, password: {entry3.get()}",).place(x=150,y=80)
-
-parent = Tk()
-parent.geometry("400x250")
-name = Label(parent, text = "Name").place(x = 30, y = 50)
-email = Label(parent, text = "User ID").place(x = 30, y = 90)
-password =  ttk.Label(parent, text = "Password", ).place(x = 30, y = 130)
-sbmitbtn = Button(parent, text = "Submit", activebackground = "green", activeforeground = "blue", command=open_popup).place(x = 120, y = 170)
-entry1 = ttk.Entry(parent)
-entry2 = ttk.Entry(parent)
-entry3 = ttk.Entry(parent,show="*",)
-
-entry1.place(x = 85, y = 50)
-entry2.place(x = 85, y = 90)
-entry3.place(x = 90, y = 130)
-parent.mainloop()
-```
-
 ## Gombok és függvények
 ```py
 from tkinter import *
@@ -283,7 +206,12 @@ gomb_megall.pack()
 root.mainloop()
 ```
 
-## Négyzet megjelenítése
+## Extra, ha kíváncsi vagy
+
+> Ez a rész **nem kötelező tananyag** — ha érdekel, hogyan lehet ennél sokkal többet is csinálni tkinterrel (animáció, időzítés, mozgó ablak), nézd át, de a fenti alapok nélküle is elegendők.
+
+<details>
+<summary>Négyzet megjelenítése (animáció Canvas-szal)</summary>
 
 ```py
 #
@@ -312,7 +240,11 @@ hatter.after(1, idozit)
 root.mainloop()
 
 ```
-## Ugráló ablak
+</details>
+
+<details>
+<summary>Ugráló ablak</summary>
+
 ```py
 from tkinter import *
 import random as m
@@ -339,8 +271,11 @@ def ugral():
 foAblak.after(1000, ugral)
 foAblak.mainloop()
 ```
+</details>
 
-## Digitális óra
+<details>
+<summary>Digitális óra</summary>
+
 ```py
 from tkinter import *
 from datetime import *
@@ -375,6 +310,7 @@ tick()
 root.mainloop()
 
 ```
+</details>
 
 > # 💥 Rontsátok el!
 >

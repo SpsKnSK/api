@@ -192,55 +192,6 @@ get_button.pack()
 root.mainloop()
 ```
 
-## `Combobox`
-```py
-import tkinter as tk
-from tkinter import ttk
-
-def on_field_change(index, value, op):
-    print ("combobox updated to ", my_combobox.get())
-    
-root = tk.Tk()
-my_str_var = tk.StringVar()
-my_str_var.trace("w", on_field_change)
-
-my_combobox = ttk.Combobox(
-    root, 
-    textvariable = my_str_var,
-    values=["PHP", "Java", "Python"],
-    )
-
-my_combobox.pack()
-root.mainloop()
-```
-
-## Použitie `Text`
-```py
-from tkinter import *
-from tkinter import ttk
-
-def open_popup():
-   top= Toplevel(parent)
-   top.geometry("750x250")
-   top.title("Child Window")
-   Label(top, text= f"Name: {entry1.get()}, Id: {entry2.get()}, password: {entry3.get()}",).place(x=150,y=80)
-
-parent = Tk()
-parent.geometry("400x250")
-name = Label(parent, text = "Name").place(x = 30, y = 50)
-email = Label(parent, text = "User ID").place(x = 30, y = 90)
-password =  ttk.Label(parent, text = "Password", ).place(x = 30, y = 130)
-sbmitbtn = Button(parent, text = "Submit", activebackground = "green", activeforeground = "blue", command=open_popup).place(x = 120, y = 170)
-entry1 = ttk.Entry(parent)
-entry2 = ttk.Entry(parent)
-entry3 = ttk.Entry(parent,show="*",)
-
-entry1.place(x = 85, y = 50)
-entry2.place(x = 85, y = 90)
-entry3.place(x = 90, y = 130)
-parent.mainloop()
-```
-
 ## Tlačidlá a funkcie
 ```py
 from tkinter import *
@@ -281,7 +232,12 @@ buttonStop.pack()
 root.mainloop()
 ```
 
-## Zobrazenie štvoruholníka
+## Extra, ak si zvedavý
+
+> Táto časť **nie je povinná** — ak ťa zaujíma, ako sa dá s tkinterom robiť oveľa viac (animácia, časovanie, pohyblivé okno), pozri si to, ale ani bez toho vyššie uvedený základ nič nechýba.
+
+<details>
+<summary>Zobrazenie štvoruholníka (animácia s Canvas)</summary>
 
 ```py
 #
@@ -310,7 +266,11 @@ background.after(1, Timing)
 root.mainloop()
 
 ```
-## Skákajúce okno
+</details>
+
+<details>
+<summary>Skákajúce okno</summary>
+
 ```py
 from tkinter import *
 import random as m
@@ -336,8 +296,11 @@ def Jump():
 root.after(1000, Jump)
 root.mainloop()
 ```
+</details>
 
-## Digitálne hodinky
+<details>
+<summary>Digitálne hodinky</summary>
+
 ```py
 from tkinter import *
 from datetime import *
@@ -371,6 +334,7 @@ tick()
 root.mainloop()
 
 ```
+</details>
 
 > # 💥 Pokazte to!
 >
