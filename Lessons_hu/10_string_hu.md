@@ -18,6 +18,26 @@
 >
 > **Metafora:** a string olyan, mint egy **gyöngysor**, ahol minden gyöngy egy karakter, és mindegyiknek van egy cimkéje: 0, 1, 2, 3... A `[a:b]` egy darabot vág ki a gyöngysorból.
 
+> ## 📑 Tartalom
+> | Rész | Miről szól |
+> |---|---|
+> | [Mi az a string?](#mi-az-a-string) | alapfogalom |
+> | [`.lower()`](#lower) | kisbetűssé alakítás |
+> | [`.upper()`](#upper) | nagybetűssé alakítás |
+> | [`.replace(from, to)`](#replacefrom-to) | csere |
+> | [`.split()`](#split) | szétvágás szóköz mentén |
+> | [`.split()` by character](#split-by-character) | szétvágás adott karakter mentén |
+> | [`.index(character)`](#indexcharacter) | karakter helye |
+> | [`.count(character)`](#countcharacter) | darabszám |
+> | [`len("text")`](#lentext) | hossz |
+> | [`.join(stringCollection)`](#joinstringcollection) | összefűzés |
+> | [`.join(intCollection)`](#joinintcollection) | számok összefűzése |
+> | [`in`](#in) | tartalmazás vizsgálat |
+> | [`str` mint kollekció](#str-mint-kollekció) | bejárás, indexelés |
+
+<details>
+<summary>📖 Teljes tananyag (kattints a kinyitáshoz)</summary>
+
 # String, karakterláncok és műveletek
 
 ## Mi az a string?
@@ -233,6 +253,8 @@ print(karakterLista)
 ['t', 'e', 's', 't']
 ```
 
+</details>
+
 > # 💥 Rontsátok el!
 >
 > Mit ír ki ez a program? Miért csak `"veg"` jelenik meg, nem `"öveg"`?
@@ -245,12 +267,12 @@ print(karakterLista)
 > Javítsátok ki úgy, hogy tényleg `"öveg"` legyen a kimenet (nézzétek meg, hányadik indexen van az `ö` betű). Utána próbáljátok ki: mi történik, ha `szoveg[10]`-et kértek le egy 6 karakteres stringből?
 
 > # 📋 Feladatok
-> - [Mondatelemzés](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e01_workWithCharacters.md#hu)
-> - [Kacsák](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e02_ducks.md#hu)
-> - [Mondatelemzés 2](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e03_workingWithSentence.md#hu)
-> - [Betűcsere](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e04_replace.md#hu)
-> - [Szókiírás](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e05_printWord.md#hu)
-> - [Mondategyesítés](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e06_assemblyASentence.md#hu)
+> - [Mondatelemzés](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e01_workWithCharacters.md#hu)
+> - [Kacsák](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e02_ducks.md#hu)
+> - [Mondatelemzés 2](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e03_workingWithSentence.md#hu)
+> - [Betűcsere](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e04_replace.md#hu)
+> - [Szókiírás](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e05_printWord.md#hu)
+> - [Mondategyesítés](https://github.com/SpsKnSK/api/blob/main/Exercies/10_string/e06_assemblyASentence.md#hu)
 
 > # ❓ Kérdések
 >

@@ -19,6 +19,23 @@
 >
 > **Metafora:** a lista olyan, mint egy **polc dobozokkal**, minden doboznak van egy száma (0, 1, 2...), és bármikor tehettek bele, vehettek ki, vagy átrendezhetitek a dobozokat.
 
+> ## 📑 Tartalom
+> | Rész | Miről szól |
+> |---|---|
+> | [Elemek a listában](#elemek-a-listában) | index, elérés |
+> | [Listaelem értékének megváltoztatása](#listaelem-értékének-megváltoztatása) | `lista[i] = ...` |
+> | [`len()`](#len) | hossz lekérdezése |
+> | [Elem törlése](#elem-törlése) | `del`, `.remove()` |
+> | [Elem kiemelése `.pop()`](#elem-kiemelése-pop) | kivesz + visszaad |
+> | [Teljes lista törlése `.clear()`](#teljes-lista-törlése-clear) | üres lista |
+> | [Új elem hozzáadása](#új-elem-hozzáadása) | `.append()`, `.insert()`, `.index()`, `.count()`, `.extend()`, `.reverse()` |
+> | [Lista két elemének cseréje](#lista-két-elemének-cseréje) | csere indexekkel |
+> | [Véletlen számokkal való feltöltés](#véletlen-számokkal-való-feltöltés) | `random` |
+> | [Sorba rendezés](#sorba-rendezés) | `.sort()` vs `sorted()` |
+
+<details>
+<summary>📖 Teljes tananyag (kattints a kinyitáshoz)</summary>
+
 # Listák
 
 A lista egy olyan adattípus, amely több érték tárolására szolgál egy változóban. 
@@ -223,6 +240,8 @@ print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
 ```
 Sorba rendezi az elemeket **csökkenő** sorrend szerint a `reverse = True` segítségével.
 
+</details>
+
 > # 💥 Rontsátok el!
 >
 > Mi a probléma ezzel a programmal? Miért nem `[1, 2, 3]` a kimenet?
@@ -236,13 +255,13 @@ Sorba rendezi az elemeket **csökkenő** sorrend szerint a `reverse = True` seg�
 > Javítsátok ki úgy, hogy a `numbers` valóban rendezve legyen. Mi a különbség a `.sort()` és a `sorted()` között?
 
 > # 📋 Feladatok
-> - [e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e01_fillList.md)
-> - [e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e02_fillListWithinInterval.md)
-> - [e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e03_maxMin.md)
-> - [e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e04_maxMinIndexAverage.md)
-> - [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e05_randomEvenOdd.md)
-> - [e06_switchNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e06_switchNumbers.md)
-> - [e07_separateTextNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e07_separateTextNumbers.md)
+> - [e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e01_fillList.md)
+> - [e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e02_fillListWithinInterval.md)
+> - [e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e03_maxMin.md)
+> - [e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e04_maxMinIndexAverage.md)
+> - [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e05_randomEvenOdd.md)
+> - [e06_switchNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e06_switchNumbers.md)
+> - [e07_separateTextNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e07_separateTextNumbers.md)
 
 > # ❓ Kérdések
 >
