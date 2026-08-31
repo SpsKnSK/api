@@ -42,6 +42,7 @@
     - Több változóval elvégzett matematikai műveletek eredményét
 
 ### Feladat
+1. A `print` függvény használatával keressetek olyan értékeket, amelyek futtatáskor hibát jeleznek, nem működik a program.
 1. Szöveg kiíratása (mi a különbség?):
     ```py
     print("Hello World")
@@ -146,10 +147,10 @@ print('Peter!')
 ```
 kimenet: 
 ```
-`Szia Peter!`
+Szia Peter!
 ```
 
-Próbáljátok meg más karakterekkel. Mit ír ki a következő: `print("alma", "banan", "cseresznye", sep=".")`
+Próbáljátok meg más karakterekkel.
 
 ## Speciális karakterek
 - `""` üres szöveg (üres string): nem látszik semmi a képernyőn. Olyan, mint a `0` az összeadásnál: `"alma" + ""` továbbra is `alma`
@@ -206,11 +207,11 @@ Harmadik szam: 34
 ## Kérdések
 1. Jellemezd a `print` függvényt, mire szolgál?
 1. Ha több értéket, változót akarunk használni a `print` függvényben, hogyan tehetjük azt meg? Soroljatok fel példákat.
-1. Hogyan jelenik meg a `""` karakter a képernyőn? Mutassatok rá példát!
+1. Hogyan jelenik meg a `""` üres string a képernyőn? Mutassatok rá példát!
 1. Hogyan jelenik meg a `"\n"` karakter a képernyőn? Mutassatok rá példát!
 1. Mi a különbség az `5` és az `"5"` között?
-1. Mire használjuk a `print` függvény `sep` paraméterét, mi az alapméretezett értéke?
-1. Mire használjuk a `print` függvény `end` paraméterét, mi az alapméretezett értéke?
+1. Mire használjuk a `print` függvény `sep` paraméterét, mi az alapértelmezett értéke?
+1. Mire használjuk a `print` függvény `end` paraméterét, mi az alapértelmezett értéke?
 1. Változtassátok meg a `sep` paramétert a következő kódban úgy, hogy reális ip-címet kapjatok:
     ```py
     print(192,168,100,1)
