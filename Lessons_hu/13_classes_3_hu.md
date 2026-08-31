@@ -1,3 +1,40 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
+> # ✏️ Osztályok — mélyebb ismeretek
+>
+> *Opcionális, haladó tananyag.*
+>
+> - `@property` — úgy nézhetjük meg/állíthatjuk be egy tulajdonságot, mintha sima attribútum lenne, de közben ellenőrzést, számítást is végezhetünk
+> - **Osztályváltozó** — minden példány között közös (pl. `Kutya.egyedek_szama`)
+> - **Példányváltozó** — minden objektumnak saját (pl. `self.nev`)
+> - `@staticmethod` — nincs `self`/`cls`, csak "kényelmi" függvény az osztályon belül
+> - `@classmethod` — `cls` paramétert kap, gyakran alternatív konstruktorként használjuk
+> - `__eq__`, `__add__`, `__lt__` stb. — "magic method"-ok, ezekkel definiáljuk, hogyan viselkedjen az osztály `==`, `+`, `<` esetén
+> - `with` + context manager (`__enter__`, `__exit__`) — automatikusan "takarít" (pl. fájlt zár be) hiba esetén is
+> - `@dataclass` — rövidebb módja az egyszerű, adatokat tároló osztályok írásának
+>
+> ```py
+> class Homero:
+>     def __init__(self):
+>         self._celsius = 0
+>
+>     @property
+>     def celsius(self):
+>         return self._celsius
+>
+>     @celsius.setter
+>     def celsius(self, ertek):
+>         if ertek < -273.15:
+>             raise ValueError("Túl alacsony!")
+>         self._celsius = ertek
+>
+> h = Homero()
+> h.celsius = 25       # úgy nézhet ki, mint egy sima attribútum...
+> print(h.celsius)      # ...pedig valójában egy függvény fut le mögötte
+> ```
+>
+> **Metafora:** a `@property` olyan, mint egy **portás egy liftnél**: kívülről úgy tűnik, csak megnyomod a gombot (`objektum.celsius`), de a portás (a setter/getter függvény) közben ellenőrzi, hogy szabad-e odamenned.
+
 # Osztályok - Mélyebb ismeretek
 
 Ez a fejezet már komolyan belemegy az objektumorientált programozás részleteibe. Azoknak ajánlott, akik komolyabban foglalkoznak a programozással.
@@ -886,14 +923,36 @@ kosár.megrendelés(fizetés)
 print(f"\nLaptop maradék készlet: {laptop.készlet}")
 ```
 
-## Feladatok
+> # 💥 Rontsátok el!
+>
+> Mi a hiba ebben a programban?
+>
+> ```py
+> class Hőmérő:
+>     def __init__(self):
+>         self.celsius = 0
+>
+> h = Hőmérő()
+> h.celsius = -500
+> print(h.celsius)
+> ```
+>
+> A program lefut, de fizikailag lehetetlen értéket enged be (-500°C nem létezik, az abszolút nulla -273.15°C). Hogyan lehetne `@property`-vel megvédeni az osztályt ettől?
 
-1. Készíts egy `HőmérsékletÁtalakító` osztályt `@property` használatával, amely Celsius, Fahrenheit és Kelvin között is tud váltani.
+> # 📋 Feladatok
+> 1. Készíts egy `HőmérsékletÁtalakító` osztályt `@property` használatával, amely Celsius, Fahrenheit és Kelvin között is tud váltani.
+> 2. Implementálj egy `Pénztárca` osztályt, amely különböző valuták kezelésére képes. Használd a magic methodsot az összeadáshoz és kivonáshoz.
+> 3. Készíts egy `Naplózó` context managert, amely fájlba naplózza a végrehajtási időt és esetleges hibákat.
+> 4. Hozz létre egy `Alakzat` absztrakt osztályt és implementálj belőle `Háromszög`, `Négyzet` és `Kör` osztályokat.
+> 5. Tervezz egy `Könyvtár` rendszert composition használatával, ahol a `Könyvtár` tartalmaz `Könyv` objektumokat, `Kölcsönzés` objektumokat és `Olvasó` objektumokat.
+>
+> További feladatokat a [gyakorlómappában](../Exercies/13_classes/) találtok.
 
-2. Implementálj egy `Pénztárca` osztályt, amely különböző valuták kezelésére képes. Használd a magic methodsot az összeadáshoz és kivonáshoz.
-
-3. Készíts egy `Naplózó` context managert, amely fájlba naplózza a végrehajtási időt és esetleges hibákat.
-
-4. Hozz létre egy `Alakzat` absztrakt osztályt és implementálj belőle `Háromszög`, `Négyzet` és `Kör` osztályokat.
-
-5. Tervezz egy `Könyvtár` rendszert composition használatával, ahol a `Könyvtár` tartalmaz `Könyv` objektumokat, `Kölcsönzés` objektumokat és `Olvasó` objektumokat.
+> # ❓ Kérdések
+>
+> 1. Mire jó a `@property` dekorátor, mikor érdemes használni?
+> 2. Mi a különbség egy osztályváltozó és egy példányváltozó között?
+> 3. Mikor használunk `@staticmethod`-ot, és mikor `@classmethod`-ot?
+> 4. Mire jó a `with` utasítás, és mi a context manager?
+> 5. Mikor érdemes a `@dataclass` dekorátort használni egy sima osztály helyett?
+> 6. Mi a különbség az öröklés (IS-A) és az összetétel (HAS-A) között?

@@ -1,14 +1,39 @@
-﻿# Szótár és halmaz példák
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
 
-A következő példák bemutatják a Python szótárak (`dict`) és halmazok (`set`) használatát.
+> # ?? Sz�t�r �s halmaz
+>
+> **Sz�t�r (`dict`)**: kulcs ? �rt�k p�rok, mint egy telefonk�nyv.
+> ```py
+> phonebook = {'Anna': '06-30-123-4567'}
+> print(phonebook['Anna'])          # hib�t dob, ha a kulcs nincs benne
+> print(phonebook.get('Anna'))      # biztons�gos: None-t ad, ha nincs
+> ```
+>
+> **Halmaz (`set`)**: egyedi elemek, nincs sorrend, nincs index.
+> ```py
+> szamok = {1, 2, 2, 3}
+> print(szamok)   # {1, 2, 3} - a duplik�tum eltunik
+> ```
+>
+> | Muvelet | Sz�t�r | Halmaz |
+> |---|---|---|
+> | elem hozz�ad�sa | `d['kulcs'] = ertek` | `.add(ertek)` |
+> | elem t�rl�se | `del d['kulcs']` | `.remove(ertek)` |
+> | biztons�gos lek�rdez�s | `.get('kulcs', alapertek)` | `ertek in halmaz` |
+>
+> **Metafora:** a sz�t�r olyan, mint egy **telefonk�nyv** � nem sorsz�m alapj�n keresel benne, hanem **n�v** alapj�n. A halmaz olyan, mint egy **zs�k egyforma goly�kkal**: ha k�tszer teszel bele ugyanolyat, az csak egyszer marad benne.
 
-## Szótár `dict`
+# Sz�t�r �s halmaz p�ld�k
+
+A k�vetkezo p�ld�k bemutatj�k a Python sz�t�rak (`dict`) �s halmazok (`set`) haszn�lat�t.
+
+## Sz�t�r `dict`
 
 ```python
-my_dict = {'alma': 1, 'körte': 2}
+my_dict = {'alma': 1, 'k�rte': 2}
 
 print('Kulcsok:', my_dict.keys())   
-print('Értékek:', my_dict.values()) 
+print('�rt�kek:', my_dict.values()) 
 print('Elemek:', my_dict.items())   
 
 for key in my_dict:
@@ -17,42 +42,42 @@ for key in my_dict:
 for k, v in my_dict.items():
     print(k, '->', v)
 
-my_dict['banán'] = 3
+my_dict['ban�n'] = 3
 my_dict['alma'] = 5
 
-del my_dict['körte']          # a kulcs törlése, érték elveszik
-val = my_dict.pop('alma')     # visszaadja az eltávolított értéket
+del my_dict['k�rte']          # a kulcs t�rl�se, �rt�k elveszik
+val = my_dict.pop('alma')     # visszaadja az elt�vol�tott �rt�ket
 
-print('Végső szótár:', my_dict)
+print('V�gso sz�t�r:', my_dict)
 ```
 
-## Példa: telefonkönyv
+## P�lda: telefonk�nyv
 
-Egy gyakori feladat egy telefonszámokból álló könyvtár kezelése. A kulcs lehet a név, az érték pedig a szám:
+Egy gyakori feladat egy telefonsz�mokb�l �ll� k�nyvt�r kezel�se. A kulcs lehet a n�v, az �rt�k pedig a sz�m:
 
 ```python
-phonebook = {'János': '06-20-123-4567', 'Anna': '06-30-765-4321'}
-phonebook['Péter'] = '06-70-111-2222'
+phonebook = {'J�nos': '06-20-123-4567', 'Anna': '06-30-765-4321'}
+phonebook['P�ter'] = '06-70-111-2222'
 
 print(phonebook.get('Anna'))  # 06-30-765-4321
 
-print(phonebook.get('József'))
-print(phonebook.get('József', 'Ilyen név nem szerepel a nyilvántartásban'))
-# print(phonebook['József']) ez miért nem jó így?
+print(phonebook.get('J�zsef'))
+print(phonebook.get('J�zsef', 'Ilyen n�v nem szerepel a nyilv�ntart�sban'))
+# print(phonebook['J�zsef']) ez mi�rt nem j� �gy?
 
-# mit csinál ez a sor?
-phonebook['János'] = '06-20-999-8888'
+# mit csin�l ez a sor?
+phonebook['J�nos'] = '06-20-999-8888'
 
 del phonebook['Anna']
 
 for name, number in phonebook.items():
     print(f"{name}: {number}")
 
-for nama in phonebook:
+for name in phonebook:
     print(f"{name}: {phonebook[name]}")
 ```
 ## Halmaz `set`
-A halmazok jól jöhetnek például a megadott számok egyediségének ellenőrzéséhez, vagy olyan funkciókhoz, ahol csak egyszer számít, hogy be van-e jegyezve valaki.
+A halmazok j�l j�hetnek p�ld�ul a megadott sz�mok egyedis�g�nek ellenorz�s�hez, vagy olyan funkci�khoz, ahol csak egyszer sz�m�t, hogy be van-e jegyezve valaki.
 ```python
 my_set = {1, 2, 3}
 
@@ -60,22 +85,22 @@ my_set.add(4)
 my_set.update([5, 6])
 
 my_set.remove(2)    # KeyError, ha nincs az elem
-my_set.discard(10)  # nem dob hibát, ha nem létezik
+my_set.discard(10)  # nem dob hib�t, ha nem l�tezik
 
 for elem in my_set:
     print(elem)
 
 other = {3, 4, 7}
 print('Metszet:', my_set & other)
-print('Unió:', my_set | other)
-print('Különbség:', my_set - other)
+print('Uni�:', my_set | other)
+print('K�l�nbs�g:', my_set - other)
 ```
 
-## Halmaz és előfordulás-számlálás
+## Halmaz �s elofordul�s-sz�ml�l�s
 
-Ha egy sorozatban szeretnénk megszámolni, hogy melyik szám hányszor fordul elő,
-akkor halmaz helyett gyakran szótárat használunk: a szám a kulcs, az előfordulás
-a érték.
+Ha egy sorozatban szeretn�nk megsz�molni, hogy melyik sz�m h�nyszor fordul elo,
+akkor halmaz helyett gyakran sz�t�rat haszn�lunk: a sz�m a kulcs, az elofordul�s
+a �rt�k.
 
 ```python
 numbers = [1, 2, 3, 2, 1, 4, 2]
@@ -88,19 +113,34 @@ for n in numbers:
 
 print(counts)  # {1: 2, 2: 3, 3: 1, 4: 1}
 
-# ha egyedi számokra van szükségünk, halmazt készíthetünk belőle:
+# ha egyedi sz�mokra van sz�ks�g�nk, halmazt k�sz�thet�nk belole:
 unique = set(numbers)
-print('Egyedi értékek:', unique)
+print('Egyedi �rt�kek:', unique)
 ```
 
-A `counts` szótárban minden számhoz az előfordulások száma tartozik. így az
-egyszeri és többszöri megjelenés nyomon követhető, míg a halmazból gyorsan
+A `counts` sz�t�rban minden sz�mhoz az elofordul�sok sz�ma tartozik. �gy az
+egyszeri �s t�bbsz�ri megjelen�s nyomon k�vetheto, m�g a halmazb�l gyorsan
 kaphatunk egyedi elemeket.
 
+> # ?? Ronts�tok el!
+>
+> Mi a hiba ebben a programban?
+>
+> ```py
+> phonebook = {'Anna': '06-30-123-4567', 'B�la': '06-20-987-6543'}
+> print(phonebook['Cecil'])
+> ```
+>
+> Mi�rt �ll le a program? �rj�tok �t �gy, hogy ne omoljon �ssze, hanem egy sz�p �zenetet �rjon ki, ha a keresett n�v nincs a telefonk�nyvben!
 
-## Gyakorló kérdések
+> # ?? Feladatok
+> - [01_frequencyTable_hu.md](../Exercies/12_list_set_dictionary_tuple/01_frequencyTable_hu.md)
+>
+> Tov�bbi feladatokat a [gyakorl�mapp�ban](../Exercies/12_list_set_dictionary_tuple/) tal�ltok.
 
-1. Hogyan lehet egy szótárból csak a kulcsokat listaként kinyerni?
-1. Hogyan lehet eltávolítani egy véletlenszerű elemet a halmazból?
-1. Mi történik, ha egy nem létező kulcsot kérünk le `my_dict['foo']` vs. `my_dict.get('foo')`?
-1. Hogyan lehet egy szótárat fordított sorrendben (kulcs szerint) bejárni?
+> # ? K�rd�sek
+>
+> 1. Hogyan lehet egy sz�t�rb�l csak a kulcsokat listak�nt kinyerni?
+> 2. Hogyan lehet elt�vol�tani egy v�letlenszeru elemet a halmazb�l?
+> 3. Mi t�rt�nik, ha egy nem l�tezo kulcsot k�r�nk le `my_dict['foo']` vs. `my_dict.get('foo')`?
+> 4. Hogyan lehet egy sz�t�rat ford�tott sorrendben (kulcs szerint) bej�rni?

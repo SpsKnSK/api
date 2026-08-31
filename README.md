@@ -4,6 +4,8 @@ Na tomto predmete sa budeme učiť programovací jazyk Python :snake:. Cieľom n
 
 ---
 
+🗺️ [Mapa učiva](Lessons_sk/00_Mapa_sk.md) — tu nájdeš prehľad všetkých lekcií, čo je základ a čo je len navyše.
+
 ## 🧠 Ako pracujeme na hodine?
 
 👉 Učenie neprebieha len vtedy, keď len sleduješ, čo robím, ale keď **sám skúšaš a premýšľaš**.
@@ -135,6 +137,8 @@ Nezáleží len na výsledku:
 Ezen az órán a Python :snake: programozási nyelvet tanuljuk. A cél nem csak az, hogy kódot írj, hanem hogy **meg tudd oldani a problémákat akkor is, amikor nem tudod a választ**.
 
 ---
+
+🗺️ [Térkép a tananyaghoz](Lessons_hu/00_Terkep_hu.md) — itt találod az összes lecke áttekintését, hogy mi az alap és mi a kiegészítés.
 
 ## 🧠 Hogyan dolgozunk az órán?
 

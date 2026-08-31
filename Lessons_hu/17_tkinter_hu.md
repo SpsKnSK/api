@@ -1,3 +1,32 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
+> # ✏️ Tkinter — grafikus felület
+>
+> Egy ablak létrehozásának 4 lépése:
+> 1. `import tkinter as tk` — könyvtár betöltése
+> 2. `root = tk.Tk()` — fő ablak létrehozása
+> 3. widgetek létrehozása és elhelyezése (`.pack()` vagy `.grid()` vagy `.place()`)
+> 4. `root.mainloop()` — az ablak "életben tartása", amíg be nem zárjuk
+>
+> ```py
+> import tkinter as tk
+>
+> root = tk.Tk()
+> root.title("Első ablakom")
+>
+> label = tk.Label(root, text="Szia, Világ!")
+> label.pack()
+>
+> gomb = tk.Button(root, text="Kattints rám!", command=lambda: print("Megnyomtad!"))
+> gomb.pack()
+>
+> root.mainloop()
+> ```
+>
+> **Fontos:** ha egy gombhoz függvényt rendelünk (`command=fuggveny`), a függvény nevét **zárójel nélkül** írjuk (nem hívjuk meg azonnal, csak megmondjuk, mit hívjon meg a gomb, ha rákattintanak).
+>
+> **Metafora:** a `root` ablak olyan, mint egy **üres kirakat**, a widgetek (`Label`, `Button`, `Entry`) pedig a kirakatba helyezett tárgyak. A `mainloop()` olyan, mint amikor "nyitva tartjuk a boltot" — figyeli, hogy történik-e valami (kattintás, gépelés), amíg be nem zárjuk.
+
 # Grafikus környezet Tkinter könyvtárral
 
 A python programozási nyelv grafikus környezetével fogunk megismerkedni ebben a fejezetben. Több példát találtok [itt](https://www.pythontutorial.net/tkinter/), vagy másutt a neten. Alapjáraton a következő lépésekből áll egy ablak létrehozása:
@@ -137,83 +166,6 @@ exit_button.pack(side=tk.RIGHT)
 
 parent.mainloop()
 ```
-### Idézet kiírása
-```py
-# pip install tkinter
-
-import tkinter as tk
-from tkinter import END, Text
-from tkinter.ttk import Button
-import requests
-
-
-def get_quote():
-    r = requests.get("https://api.quotable.io/random")
-    data = r.json()
-    quote = data["content"]
-    text_box.delete("1.0", END)
-    text_box.insert(END, quote)
-
-
-root = tk.Tk()
-root.title("Quoter")
-text_box = Text(root, height=10, width=50)
-get_button = Button(root, text="Get Quote", command=get_quote)
-
-text_box.pack()
-get_button.pack()
-root.mainloop()
-```
-
-## `Combobox`
-```py
-import tkinter as tk
-from tkinter import ttk
-
-def on_field_change(index, value, op):
-    print ("combobox updated to ", my_combobox.get())
-    
-root = tk.Tk()
-my_str_var = tk.StringVar()
-my_str_var.trace("w", on_field_change)
-
-my_combobox = ttk.Combobox(
-    root, 
-    textvariable = my_str_var,
-    values=["PHP", "Java", "Python"],
-    )
-
-my_combobox.pack()
-root.mainloop()
-```
-
-## `Text` alkalmazása
-```py
-from tkinter import *
-from tkinter import ttk
-
-def open_popup():
-   top= Toplevel(parent)
-   top.geometry("750x250")
-   top.title("Child Window")
-   Label(top, text= f"Name: {entry1.get()}, Id: {entry2.get()}, password: {entry3.get()}",).place(x=150,y=80)
-
-parent = Tk()
-parent.geometry("400x250")
-name = Label(parent, text = "Name").place(x = 30, y = 50)
-email = Label(parent, text = "User ID").place(x = 30, y = 90)
-password =  ttk.Label(parent, text = "Password", ).place(x = 30, y = 130)
-sbmitbtn = Button(parent, text = "Submit", activebackground = "green", activeforeground = "blue", command=open_popup).place(x = 120, y = 170)
-entry1 = ttk.Entry(parent)
-entry2 = ttk.Entry(parent)
-entry3 = ttk.Entry(parent,show="*",)
-
-entry1.place(x = 85, y = 50)
-entry2.place(x = 85, y = 90)
-entry3.place(x = 90, y = 130)
-parent.mainloop()
-```
-
 ## Gombok és függvények
 ```py
 from tkinter import *
@@ -254,7 +206,12 @@ gomb_megall.pack()
 root.mainloop()
 ```
 
-## Négyzet megjelenítése
+## Extra, ha kíváncsi vagy
+
+> Ez a rész **nem kötelező tananyag** — ha érdekel, hogyan lehet ennél sokkal többet is csinálni tkinterrel (animáció, időzítés, mozgó ablak), nézd át, de a fenti alapok nélküle is elegendők.
+
+<details>
+<summary>Négyzet megjelenítése (animáció Canvas-szal)</summary>
 
 ```py
 #
@@ -283,7 +240,11 @@ hatter.after(1, idozit)
 root.mainloop()
 
 ```
-## Ugráló ablak
+</details>
+
+<details>
+<summary>Ugráló ablak</summary>
+
 ```py
 from tkinter import *
 import random as m
@@ -310,8 +271,11 @@ def ugral():
 foAblak.after(1000, ugral)
 foAblak.mainloop()
 ```
+</details>
 
-## Digitális óra
+<details>
+<summary>Digitális óra</summary>
+
 ```py
 from tkinter import *
 from datetime import *
@@ -346,15 +310,42 @@ tick()
 root.mainloop()
 
 ```
+</details>
 
-# Feladatok
-1. Készítsetek névjegykártyát (név, vezetéknév, lakhely, életkor) gridbe elrendezve
-1. **Hőmérséklet konverter**: készíts egy programot, amely átalakítja a hőmérsékletet Celsiusból Fahrenheitbe és fordítva.
-1. **Idő konverter**: készíts egy programot, amely átalakítja az óra-perc-másodperc időt másodpercekre és fordítva.
-1. **Egyszerű játék** készíts egy egyszerű játékot, például kő-papír-ollót vagy memóriajátékot.
-1. **Időjárás alkalmazás**: Hozz létre egy olyan programot, amely lekéri az aktuális időjárási adatokat egy API segítségével, és megjeleníti azokat a felhasználó számára.
-1. **Színválasztó**: Hozz létre egy olyan programot, ahol a felhasználók kiválaszthatnak színeket, és az alkalmazás megjeleníti a kiválasztott színt.
-1. **Számológép**: Hozz létre egy egyszerű számológép programot, ahol a felhasználók összeadhatnak, kivonhatnak, szorozhatnak és oszthatnak számokat.
-1. **Pénzváltó**:  Hozz létre egy egyszerű valutaváltó programot, lekéred az aktuális árfolyamokat a Szlovák nemzeti bank oldaláról `https://nbs.sk/export/sk/exchange-rate/yyyy-mm-dd/csv`, ahol a mai napot határozod meg a linkben, és az ott levó valutákból tud majd a felhasználó választani. Működjön eurórol valutára és vissza is. 
-1. **Számjegyek összege**: Hozz létre egy olyan programot, ahol a felhasználók beírhatnak egy számot, és az alkalmazás kiszámolja a számjegyek összegét.
-1. **Képnézegető**: Hozz létre egy egyszerű képnézegető programot, ahol a felhasználók kiválaszthatnak egy mappát, és az alkalmazás megjeleníti a mappában található képeket.
+> # 💥 Rontsátok el!
+>
+> Mi a hiba ebben a programban?
+>
+> ```py
+> import tkinter as tk
+>
+> def koszones():
+>     print("Szia!")
+>
+> root = tk.Tk()
+> gomb = tk.Button(root, text="Köszönés", command=koszones())
+> gomb.pack()
+> root.mainloop()
+> ```
+>
+> Figyeljétek meg: a `"Szia!"` azonnal, a program indulásakor kiíródik, még a gombra kattintás előtt is! Mi a hiba a `command=koszones()` résznél, és hogyan kell helyesen megadni?
+
+> # 📋 Feladatok
+> 1. Készítsetek névjegykártyát (név, vezetéknév, lakhely, életkor) gridbe elrendezve
+> 2. **Hőmérséklet konverter**: készíts egy programot, amely átalakítja a hőmérsékletet Celsiusból Fahrenheitbe és fordítva.
+> 3. **Idő konverter**: készíts egy programot, amely átalakítja az óra-perc-másodperc időt másodpercekre és fordítva.
+> 4. **Egyszerű játék** készíts egy egyszerű játékot, például kő-papír-ollót vagy memóriajátékot.
+> 5. **Időjárás alkalmazás**: Hozz létre egy olyan programot, amely lekéri az aktuális időjárási adatokat egy API segítségével, és megjeleníti azokat a felhasználó számára.
+> 6. **Színválasztó**: Hozz létre egy olyan programot, ahol a felhasználók kiválaszthatnak színeket, és az alkalmazás megjeleníti a kiválasztott színt.
+> 7. **Számológép**: Hozz létre egy egyszerű számológép programot, ahol a felhasználók összeadhatnak, kivonhatnak, szorozhatnak és oszthatnak számokat.
+> 8. **Pénzváltó**: Hozz létre egy egyszerű valutaváltó programot, lekéred az aktuális árfolyamokat a Szlovák nemzeti bank oldaláról `https://nbs.sk/export/sk/exchange-rate/yyyy-mm-dd/csv`, ahol a mai napot határozod meg a linkben, és az ott levő valutákból tud majd a felhasználó választani. Működjön euróról valutára és vissza is.
+> 9. **Számjegyek összege**: Hozz létre egy olyan programot, ahol a felhasználók beírhatnak egy számot, és az alkalmazás kiszámolja a számjegyek összegét.
+> 10. **Képnézegető**: Hozz létre egy egyszerű képnézegető programot, ahol a felhasználók kiválaszthatnak egy mappát, és az alkalmazás megjeleníti a mappában található képeket.
+
+> # ❓ Kérdések
+>
+> 1. Milyen 4 lépésből áll egy tkinter ablak létrehozása?
+> 2. Mi a különbség a `.pack()`, `.grid()` és `.place()` elhelyezési módok között?
+> 3. Miért nem szabad zárójellel megadni a függvényt a `command=` paraméternél?
+> 4. Mire jó a `root.mainloop()`?
+> 5. Hogyan tudunk egy globális változót módosítani egy tkinter gombhoz rendelt függvényből?

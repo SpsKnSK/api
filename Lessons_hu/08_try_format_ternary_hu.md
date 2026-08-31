@@ -1,3 +1,30 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
+> # ✏️ Extrák - try, format, ternary
+>
+> Ez a lecke **nem kötelező tananyag**, hanem hasznos kiegészítő trükkök gyűjteménye. Nem baj, ha most kihagyjátok, később bármikor visszatérhettek rá.
+>
+> **`try-except`:** hibát kezel, hogy a program ne álljon le.
+> ```py
+> try:
+>     int("alma")
+> except Exception as e:
+>     print(f"Hiba történt: {e}")
+> ```
+>
+> **f-string:** a legkényelmesebb formázás.
+> ```py
+> nev = "Anna"
+> print(f"Szia, {nev}!")
+> ```
+>
+> **Ternary (soros if):** rövid értékadás feltétellel.
+> ```py
+> a = 20 if 10 > 20 else 10
+> ```
+>
+> **Metafora:** a `try-except` olyan, mint egy **biztonsági háló**: ha valami elszakad (hiba történik), nem zuhansz le (nem áll le a program), hanem szépen elkapja.
+
 # try-except-finally
 A hibák kezelésére szolgál. Hiba merülhet fel a következő esetekben:
 - 0-val osztunk `print(10/0)`
@@ -82,3 +109,7 @@ print(a)
 a = 20 if 10 > 20 else 10
 print(a)
 ```
+
+> # 📋 Feladatok
+> - [e01_get2NumbersAndWriteThemOut.md](../Exercies/08_try_format_ternary/e01_get2NumbersAndWriteThemOut.md)
+>

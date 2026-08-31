@@ -1,3 +1,29 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
+> # ✏️ Lista, halmaz, szótár, tuple
+>
+> Négyféle **gyűjtemény** típus, mindegyiknek más a "személyisége":
+>
+> | Típus | Jel | Sorrend? | Ismétlődhet? | Módosítható? |
+> |---|---|---|---|---|
+> | `list` | `[]` | igen (index) | igen | igen |
+> | `set` | `{}` | nem | **nem** | igen |
+> | `dict` | `{kulcs: érték}` | igen (kulcs) | kulcs nem, érték igen | igen |
+> | `tuple` | `()` | igen (index) | igen | **nem** |
+>
+> ```py
+> lista = ['alma', 'körte']       # sorrend van, indexelhető, módosítható
+> halmaz = {'alma', 'körte'}      # nincs sorrend, nincs duplikátum
+> szotar = {'nev': 'Anna'}        # kulcs -> érték
+> tuple_ = (10, 20)               # mint a lista, de nem módosítható
+> ```
+>
+> **Metafora:**
+> - **Lista** = **sorszámozott polc**: bármikor kivehetsz, betehetsz, átrendezheted.
+> - **Halmaz** = **zsák egyedi golyókkal**: nem számít a sorrend, és két egyforma golyó nem fér bele.
+> - **Szótár** = **telefonkönyv**: nem sorszám alapján keresel, hanem **név alapján** (kulcs → érték).
+> - **Tuple** = **lepecsételt doboz**: amit egyszer beletettél, azt már nem cserélheted ki.
+
 # Lista `list`: `[]`
 ```mermaid
 graph TB
@@ -309,13 +335,32 @@ print(x,y)
 ```
 `(x, y)` koordinátapár tárolása, dolgozók rekordjai egy adatbázisban
 
-# Kérdések
-1. Mik a `set` fő tulajdonságai, hogyan jelöljük?
-1. Mik a `dict` fő tulajdonságai, hogyan jelöljük?
-1. Mik a `list` fő tulajdonságai, hogyan jelöljük?
-1. Mik a `tuple` fő tulajdonságai, hogyan jelöljük?
-1. Hogyan határozzuk meg 2 halmaz metszetét, írjatok rá példát.
-1. Készítsetek egy listát, amelyben 3 szótár típusú érték van, amelyek személyeket takarnak a következő kulcsokkal: név, vezetéknév, születési év.
-1. A következő listából csináljatok halmazt: `myList = [5,10,30,28,-99,5,0,0,65,124,214,25,5]`
-1. Mikor használhatjuk a `.get` függvényt a szótáraknál, írjatok rá példát!
-1. Készítsetek egy 3 kulcs-érték párossal rendelkező szótárat és frissítsétek az egyik kulcsot, majd adjatok hozzá egy újabb kulcs-érték párost
+> # 💥 Rontsátok el!
+>
+> Mi a hiba ebben a programban?
+>
+> ```py
+> koordinatak = (10, 20, 30)
+> koordinatak[0] = 15
+> print(koordinatak)
+> ```
+>
+> Miért nem lehet módosítani egy tuple elemét? Alakítsátok át úgy a kódot, hogy `koordinatak` egy **listaként** viselkedjen, és így már működjön a módosítás.
+
+> # 📋 Feladatok
+> - [e01_workerDb.md](../Exercies/12_list_set_dictionary_tuple/e01_workerDb.md)
+> - [e02_checkDuplicates.md](../Exercies/12_list_set_dictionary_tuple/e02_checkDuplicates.md)
+> - [e03_DistincElementCount.md](../Exercies/12_list_set_dictionary_tuple/e03_DistincElementCount.md)
+
+> # ❓ Kérdések
+>
+> 1. Mik a `set` fő tulajdonságai, hogyan jelöljük?
+> 2. Mik a `dict` fő tulajdonságai, hogyan jelöljük?
+> 3. Mik a `list` fő tulajdonságai, hogyan jelöljük?
+> 4. Mik a `tuple` fő tulajdonságai, hogyan jelöljük?
+> 5. Hogyan határozzuk meg 2 halmaz metszetét, írjatok rá példát.
+> 6. Készítsetek egy listát, amelyben 3 szótár típusú érték van, amelyek személyeket takarnak a következő kulcsokkal: név, vezetéknév, születési év.
+> 7. A következő listából csináljatok halmazt: `myList = [5,10,30,28,-99,5,0,0,65,124,214,25,5]`
+> 8. Mikor használhatjuk a `.get` függvényt a szótáraknál, írjatok rá példát!
+> 9. Készítsetek egy 3 kulcs-érték párossal rendelkező szótárat és frissítsétek az egyik kulcsot, majd adjatok hozzá egy újabb kulcs-érték párost.
+> 10. Miért nem lehet egy tuple elemét megváltoztatni?
