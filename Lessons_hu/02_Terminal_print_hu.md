@@ -1,4 +1,39 @@
 # print()
+
+> ## ✏️ Füzetbe `print()`
+>
+> **Mire jó?** Kiírja a képernyőre azt, amit a zárójelbe teszünk: szöveget, számot, változót, művelet eredményét.
+>
+> **Alak:** `print(érték1, érték2, sep=" ", end="\n")` a `sep` és az `end` nem kötelező
+>
+> | Amit írok | Mit jelent |
+> |---|---|
+> | `print("Szia")` | szöveg (idézőjelben!) |
+> | `print(12)` | szám (idézőjel nélkül) |
+> | `print(szam)` | változó **tartalma** |
+> | `print(a+b)` | előbb számol, aztán ír |
+> | `print(a, b)` | a vessző = szóköz a kimenetben |
+> | `sep="."` | mi kerüljön az értékek **közé** (alap: szóköz) |
+> | `end=" "` | mi kerüljön a sor **végére** (alap: új sor `\n`) |
+>
+> **Szám vs. szöveg:**
+> ```py
+> print(1+1)      # 2   -> összeadás
+> print("1"+"1")  # 11  -> összeragasztás
+> ```
+>
+> **Példa:**
+> ```py
+> print(192, 168, 100, 1, sep=".")
+> print("Szia", end=" ")
+> print("Peter!")
+> ```
+> képernyőn
+> ```
+> 192.168.100.1
+> Szia Peter!
+> ```
+
 - Adatok, információk kiíratása a képernyőre
 - Kiírathatunk:
     - Szöveget
