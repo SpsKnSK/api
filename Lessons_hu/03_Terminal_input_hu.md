@@ -111,11 +111,11 @@ A szám helyére változó is írható!
 1. Írjatok programot, amely bekér két számot, majd kiírja a hányadosukat 3 tizedes helyre.
 Ezután írassátok ki az egész részre való osztás eredményét és a maradékot.
 Ügyeljetek rá, hogy a program laikus felhasználók számára is használható legyen (a program írjon egy-két szót is, ne csak a konkrét eredményeket).
-> `/` tizedes osztás: `18/7=2.5714285714285716`
+    > `/` tizedes osztás: `18/7=2.5714285714285716`
  
-> `//` egészszámú osztás: `18//7=2`
+    > `//` egészszámú osztás: `18//7=2`
  
-> `%` osztás utáni maradék: `18 % 7=4`
+    > `%` osztás utáni maradék: `18 % 7=4`
 1. Írjunk programot a kör kerületének és területének kiszámítására.
 Adatok, amiket megadunk: kör átmérője, Pí értéke: `3.14159`.
 Végeredmény:
