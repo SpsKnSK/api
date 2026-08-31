@@ -209,6 +209,7 @@ Elso szam: 12
 Masodik szam: 24
 Harmadik szam: 34
 ```
+    Oldjátok meg úgy is, hogy csak **egy** `print`-et használtok.
 2. Írassátok ki a három szám összegét és az első két szám szorzatát.
 
 ## Kérdések
