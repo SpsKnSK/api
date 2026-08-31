@@ -1,6 +1,4 @@
-# `print()`
-
-> ## ✏️ Do zošita `print()`
+> # ✏️ `print()`
 >
 > **Na čo slúži?** Vypíše na obrazovku to, čo napíšeme do zátvoriek: text, číslo, premennú, výsledok operácie.
 >
@@ -36,7 +34,7 @@
 > 192.168.100.1
 > Ahoj Peter!
 > ```
-
+# `print()`
 - Výpis údajov a informácií na obrazovku
 - Môžeme vypísať:
     - Text

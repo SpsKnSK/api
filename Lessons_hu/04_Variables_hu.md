@@ -1,30 +1,89 @@
+> # ✏️ Változók
+>
+> **Mi az?** Névvel ellátott doboz a memóriában, amiben egy értéket tárolunk. A neve alapján bármikor előszedhetjük.
+>
+> **Értékadás:** `nev = ertek` – a `=` **nem** egyenlőség, hanem: „tedd bele!”
+> ```py
+> kor = 16          # a kor dobozba bekerül a 16
+> kor = kor + 1     # kivesszük, hozzáadunk 1-et, visszatesszük -> 17
+> ```
+>
+> | Típus | Jele | Példa |
+> |---|---|---|
+> | egész szám | `int` | `10`, `-9`, `0` |
+> | tizedes szám | `float` | `3.14`, `95.78` |
+> | szöveg | `str` | `"alma"`, `'3gomb'`, `'11'`, `"-38"` |
+> | logikai | `bool` | `True`, `False` |
+>
+> **Névadás:** csak betű, szám és `_`; **nem** kezdődhet számmal; nincs benne szóköz és kötőjel; nem lehet foglalt szó (`print`, `input`).
+>
+> **Fontos műveletek:**
+>
+> | | | | |
+> |-|-|-|-|
+> | `+` összeadás | `-` kivonás | `*` szorzás | `/` osztás |
+> | `//` egész osztás | `%` maradék | `**` hatvány | `round(a, x)` kerekítés |
+>
+> **⚠️ A leggyakoribb hiba:** `=` értékadás, `==` összehasonlítás!
+> ```py
+> x = 5      # betettem az 5-öt
+> x == 5     # kérdés: x "dobozban" 5 van? -> True
+> ```
 # Változók
-
 - A változók a program azon elemei, amelyek különböző értékeket vehetnek fel, különböző adatok tárolására alkalmasak.
 - Névvel ellátott memóriaterület
 - Változó nevei lehetnek: x, z, szam, nev, lista
 
+## Képzeljétek el így!
+A változó olyan, mint egy **felcímkézett doboz** a polcon:
+
+- a **címke** a változó neve (`kor`),
+- a **doboz tartalma** a változó értéke (`16`),
+- ha új dolgot teszünk bele, a régi **kiesik** – egy dobozban egyszerre egy érték van,
+- a címkét felolvasva bármikor megnézhetjük, mi van benne.
+
+Vagy gondolj a **ruhatárra**: leadod a kabátot, kapsz egy számot. A szám maga nem a kabát, de bármikor visszakérheted vele. A változó neve ez a ruhatári szám.
+
+```mermaid
+flowchart LR
+    A["kor = 16"] --> B["📦 kor<br/>16"]
+    B --> C["print(kor)"]
+    C --> D["képernyő: 16"]
+    E["kor = kor + 1"] --> B
+```
+
+Az értékadás mindig **jobbról balra** működik: előbb kiszámolja a jobb oldalt, majd beteszi a bal oldali dobozba.
+
+```mermaid
+flowchart RL
+    J["jobb oldal: kor + 1 = 17"] --> B["bal oldal: kor 📦"]
+```
+
 ## Típusai 
-- **Szám** – `int` – integer – egész számok tárolására kb. -36.000 és 36.000 közt. 10, -9, 0
-- **Tizedes szám**– `float` – tizedes számok tárolására 95.78, 3.14, 79.21
-- **Karakterlánc** – `str` – `string` – szöveg és bármilyen értelmes/értelmetlen karaktersorozat tárolására, használhattok `''` vagy `""`
-    - pl. `'alma'`, `'3gomb'`, stb.
-- **Logikai** – `bool` - Két értéke lehet:
-    - `True` – Igaz (számértéke bármi, de nem 0)
-    - `False` – Hamis/nem igaz (számértéke 0)
+
+| Típus | Jele | Mire való | Példa |
+|---|---|---|---|
+| **Szám** | `int` | egész számok tárolására | `10`, `-9`, `0` |
+| **Tizedes szám** | `float` | tizedes számok tárolására (tizedes **pont**tal!) | `95.78`, `3.14`, `79.21` |
+| **Karakterlánc** | `str` | szöveg, bármilyen karaktersorozat; `''` vagy `""` közé | `'alma'`, `'3gomb'`, `"Szia"` |
+| **Logikai** | `bool` | igaz/hamis érték | `True`, `False` |
+
+- A `float` esetében **pontot** használunk, nem vesszőt: `1.5` és nem `1,5`
+- A `bool` két értéke: `True` – igaz, `False` – hamis. Figyelem, nagy kezdőbetűvel!
+- A típust a `type()` függvénnyel kérdezhetjük le: `print(type(kor))`
 # Műveletek
 ## Matematikai operátorok
-- `5 + 3 = 8`összeg
-- `5 – 3 = 2` különbség
+- `5 + 3 = 8` összeg
+- `5 - 3 = 2` különbség
 - `5 * 3 = 15` szorzat
-- `5 / 3 = 1.666` osztás
+- `5 / 3 = 1.6666666666666667` osztás
 - `5 // 3 = 1` osztás egész része
 - `5 % 3 = 2` osztás maradéka
 - `5 ** 3 = 125` hatvány
 - `sqrt(5)` négyzetgyökvonás (matematikai modul szükséges hozzá)
+> Hogyan lehet másképp négyzetgyököt vonni?
 
-## Kerekítés
-- `round` függvénnyel
+## Kerekítés `round` függvénnyel
 - `round(a, x)`
 - `a` – szám
 - `x` - tizedes helyek száma

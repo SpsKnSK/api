@@ -1,5 +1,38 @@
-# Funkcia `input()`
-
+> # ✏️ `input()`
+>
+> **Na čo slúži?** Načíta text z klávesnice, ktorý uložíme do premennej.
+>
+> **Tvar:** `premenna = input("otázka pre používateľa")`
+>
+> | Čo napíšem | Čo to robí |
+> |---|---|
+> | `input()` | čaká, kým niečo napíšeme + Enter |
+> | `input("Kolko mas rokov? ")` | najprv vypíše otázku, potom čaká (ušetríme `print`) |
+> | `meno = input(...)` | zadaný údaj sa uloží do premennej `meno` |
+>
+> **⚠️ Najdôležitejšie:** `input()` vracia **vždy text (string)**, aj keď zadáme číslo!
+>
+> | Čo napíšem | Výsledok |
+> |---|---|
+> | `cislo = input(...)` | `"50"` – text, nedá sa s ním počítať |
+> | `cislo = int(input(...))` | `50` – celé číslo |
+> | `cena = float(input(...))` | `1.5` – desatinné číslo |
+>
+> ```py
+> cislo = input("Zadaj cislo: ")   # zadáme: 50
+> print(cislo + 12)   # CHYBA! text + číslo nejde
+>
+> cislo = int(input("Zadaj cislo: "))
+> print(cislo + 12)   # 62
+> ```
+>
+> **Ako sa rozhodnúť:**
+> ```
+> Chcem s tym pocitat?  --> ano, cele cislo    --> int(input(...))
+>                       --> ano, desatinne     --> float(input(...))
+>                       --> nie (meno, mesto)  --> input(...)
+> ```
+# `input()`
 Načítanie údajov (textu) a uloženie do premennej.
 ```py
 >>> text = input()
@@ -14,8 +47,8 @@ Program pri spustení zobrazí správu a potom čaká na zadané údaje. Ušetr�
 ## Príklad 
 
 ```py
->>> text = input("Koľko je hodín?")
-Koľko je hodín?9
+>>> text = input("Kolko je hodin? ")
+Kolko je hodin? 9
 >>> print(text)
 9
 ```
@@ -37,43 +70,30 @@ Skúsime teraz k premennej `cislo` pridať `12`.
 Skúsime teraz k premennej `cislo` pridať 12.
 
 ## Úlohy
-1. Napíšte program, ktorý vás opýta na vaše meno. Keď zadáte svoje meno, opýta sa vás, koľko máte rokov, a potom vypíše súhrnnú vetu o tom, kto sedí pred počítačom `Ahoj [pocetRokov] rocny [meno], vidim, ze ty sedis pred pocitacom`
+1. Pokazte to naschvál! Napíšte také riadky s `input()`, ktoré Python odmietne s chybou. Nápady:
+    - `cislo = input("Zadaj cislo: ")` a potom `print(cislo + 12)`
+    - `int(input("Kolko mas rokov? "))`, ale zadáte písmeno, nie číslo
+    - `int(input("Cena: "))`, ale zadáte desatinné číslo, napr. `1.5`
+    - chýba jedna zátvorka na konci `int(input(...))`
+
+    Prečítajte si chybovú správu: ako sa chyba volá a čo prezrádza o tom, kde je problém?
+1. Napíšte program, ktorý sa vás opýta na vaše meno. Keď zadáte svoje meno, opýta sa vás, koľko máte rokov, a potom vypíše súhrnnú vetu o tom, kto sedí pred počítačom `Ahoj [pocetRokov] rocny [meno], vidim, ze ty sedis pred pocitacom`
 1. Napíšte program, ktorý zo zadaných údajov (meno, bydlisko a kontakt) vypíše na obrazovku vizitku.
-```
-Meno: [meno]
-Bydlisko: [bydlisko]
-Kontakt: [kontakt]
-```
+
+    ```
+    Meno: [meno]
+    Bydlisko: [bydlisko]
+    Kontakt: [kontakt]
+    ```
 1. Vypýtajte od používateľa tri prirodzené čísla, ktoré postupne znamenajú počet 5, 2 a 1 eur. Určte a vypíšte celkovú sumu.
 príklad:
-```
-Počet 5 eur: 2
-Počet 2 eur: 3
-Počet 1 eur: 1
-To je celkovo 17 eur.
-```
-# Zaokrúhlenie
-- pomocou funkcie `round`
-- `round(a, x)`
-- `a` – číslo
-- `x` - počet desatinných miest
-
-Napr. `round(12.345, 2)` dáva výsledok `12.35`
-Do miesta čísla môže ísť aj premenná!
-## Úlohy
-1. Napíšte program, ktorý zistí dve čísla od vás, a potom vypíše ich podiel na 3 desatinné miesta.
-Potom vypíšte celočíselný výsledok delenia a zvyšok po delení.
-Dávajte pozor, aby bol program použiteľný aj pre laických používateľov (nech program napíše aj jedno-dva slová, nie len konkrétne výsledky).
-> `/` delenie na desatinné čisla: `18/7=2.571428571428571`
- 
-> `//` celočíselné delenie: `18//7=2`
- 
-> `%` zvyšok po delení: `18 % 7=4`
-1. Napíšte program na výpočet obvodu a plochy kruhu.
-Zadané údaje: priemer kruhu, hodnota Pí: `3.14159`.
-Výsledok:
-`Kruh s priemerom X cm má obvod Y cm a plochu Z cm².`
-1. Napíšte program, ktorý vypíše malú násobilku pre zadané číslo (od 1 do 10).
+    ```
+    Pocet 5 eur: 2
+    Pocet 2 eur: 3
+    Pocet 1 eur: 1
+    To je celkovo 17 eur.
+    ```
+1. Vypíšte malú násobilku pre zadané číslo (od 1 do 10). Zatiaľ stačí 10 samostatných príkazov `print`.
     ```
     Ktorú násobilku vypíšem? 11
     1*11=11
@@ -87,11 +107,13 @@ Výsledok:
     - Cena za kilogram citrónov je 1.2 € 
     - Cena za kilogram pomarančov je 1.5 €
     
-    1. Napíšte program, ktorý vám povie, koľko peňazí si máte vziať so sebou, ak kúpite 1 kg jabĺk, 1,5 kg citrónov a 2 kg pomarančov.
+    1. Napíšte program, ktorý vám povie, koľko peňazí si máte vziať so sebou, ak kúpite 1 kg jabĺk, 1.5 kg citrónov a 2 kg pomarančov.
     Skúste aj iné hodnoty.
     Napr. kúpite 3 kily každého ovocia, 5 kíl, atď.
+    > Pozor: počet kíl môže byť aj desatinné číslo, preto tu treba `float(input(...))`!
     1. Spýtajte sa používateľa, koľko peňazí má u seba a z toho koľko **celých** kilogramov jabĺk, citrónov alebo pomarančov vie kúpiť.
+
 ## Otázky
-1. Na čo slúži funkcia `round`, uveďte príklad.
-2. Napíšte kód, ktorý od používateľa získa jeho meno a vek, a potom na obrazovku vypíše, koľko bude mať rokov o 10 rokov. Príklad: `"Ahoj [meno], teraz máš 16 rokov, o 10 rokov budeš mať 26 rokov."`
-3. Aký dátový typ číta funkcia `input` zo klávesnice?
+1. Napíšte kód, ktorý od používateľa získa jeho meno a vek, a potom na obrazovku vypíše, koľko bude mať rokov o 10 rokov. Príklad: `Ahoj [meno], teraz máš 16 rokov, o 10 rokov budeš mať 26 rokov.`
+1. Aký dátový typ číta funkcia `input` z klávesnice?
+1. Čo robí `int()` a čo `float()`? Kedy ktoré použijeme okolo `input()`?

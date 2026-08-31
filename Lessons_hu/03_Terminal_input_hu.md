@@ -1,6 +1,4 @@
-# `input()` függvény
-
-> ## ✏️ Füzetbe `input()`
+> # ✏️ `input()`
 >
 > **Mire jó?** Szöveget olvas be a billentyűzetről, amit elmentünk egy változóba.
 >
@@ -35,7 +33,8 @@
 >                        --> nem (nev, varos)  --> input(...)
 > ```
 
-Adat (karakterlánc) beolvasása és elmentése egy változóba.
+# `input()` függvény
+Adat, szöveg (karakterlánc) beolvasása, amit utána egy változóba menthetünk el.
 ```py
 >>> szoveg = input()
 alma

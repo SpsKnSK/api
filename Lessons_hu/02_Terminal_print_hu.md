@@ -1,6 +1,4 @@
-# print()
-
-> ## ✏️ Füzetbe `print()`
+> # ✏️ `print()`
 >
 > **Mire jó?** Kiírja a képernyőre azt, amit a zárójelbe teszünk: szöveget, számot, változót, művelet eredményét.
 >
@@ -36,7 +34,7 @@
 > 192.168.100.1
 > Szia Peter!
 > ```
-
+# print()
 - Adatok, információk kiíratása a képernyőre
 - Kiírathatunk:
     - Szöveget
