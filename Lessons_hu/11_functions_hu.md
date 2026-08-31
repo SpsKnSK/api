@@ -124,6 +124,8 @@ print(maximum)
 > - [e03_workerPosition.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e03_workerPosition.md)
 > - [e04_workerPosition_2.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e04_workerPosition_2.md)
 > - [e05_averageConsumption.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e05_averageConsumption.md)
+>
+> További feladatokat a [gyakorlómappában](../Exercies/11_functions/) találtok.
 
 > # ❓ Kérdések
 >

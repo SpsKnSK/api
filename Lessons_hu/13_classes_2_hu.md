@@ -405,6 +405,8 @@ print(esemeny.to_dict())
 > 2. Készíts egy `Zenekar` osztályt, amely zenészek listáját tárolja. Valósítsd meg a JSON mentést és betöltést.
 > 3. Bővítsd a Könyvtár kezelő példát egy `kereses(szerzo)` metódussal, amely visszaadja az adott szerző összes könyvét.
 > 4. Készíts egy `Naplo` osztályt, amely napi bejegyzéseket tárol (dátum és szöveg). Használj JSON fájlt az adatok tárolására.
+>
+> További feladatokat a [gyakorlómappában](../Exercies/13_classes/) találtok.
 
 > # ❓ Kérdések
 >

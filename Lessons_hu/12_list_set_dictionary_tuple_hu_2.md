@@ -133,6 +133,8 @@ kaphatunk egyedi elemeket.
 
 > # 📋 Feladatok
 > - [01_frequencyTable_hu.md](../Exercies/12_list_set_dictionary_tuple/01_frequencyTable_hu.md)
+>
+> További feladatokat a [gyakorlómappában](../Exercies/12_list_set_dictionary_tuple/) találtok.
 
 > # ❓ Kérdések
 >

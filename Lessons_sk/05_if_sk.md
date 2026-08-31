@@ -335,3 +335,5 @@ Vytvorte program, ktorý vypočíta hodnotu odporu dvoch odporov, ktoré sú zap
 > 1. Kedy vráti operátor `or` hodnotu `False`?
 > 1. Kedy vráti operátor `not` hodnotu `True`?
 > 1. Kedy bude nasledovný výrok `True`: `(a > b) and (c < b) or (c == 1)` uveďte 2 príklady.
+>
+> Ďalšie úlohy nájdete v [priečinku s cvičeniami k if](../Exercies/05_if/).

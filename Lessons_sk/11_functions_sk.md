@@ -103,6 +103,8 @@ print(maximum)
 > - [e03_workerPosition.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e03_workerPosition.md)
 > - [e04_workerPosition_2.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e04_workerPosition_2.md)
 > - [e05_averageConsumption.md](https://github.com/SpsKnSK/api/blob/main/Exercies/11_functions/e05_averageConsumption.md)
+>
+> Ďalšie úlohy nájdete v [priečinku s cvičeniami](../Exercies/11_functions/).
 
 > # ❓ Otázky
 >

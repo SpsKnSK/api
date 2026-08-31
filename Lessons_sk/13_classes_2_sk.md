@@ -406,6 +406,8 @@ print(udalost.to_dict())
 > 3. Rozšír príklad Správca knižnice o metódu `hladaj(autor)`, ktorá vráti všetky knihy daného autora.
 > 4. Vytvor triedu `Dennik`, ktorá ukladá denné záznamy (dátum a text). Použij JSON súbor na ukladanie údajov.
 >
+> Ďalšie úlohy nájdete v [priečinku s cvičeniami](../Exercies/13_classes/).
+>
 > # ❓ Otázky
 >
 > 1. Aký je rozdiel medzi funkciami `__str__()` a `__repr__()`?

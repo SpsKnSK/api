@@ -108,3 +108,7 @@ print(a)
 a = 20 if 10 > 20 else 10
 print(a)
 ```
+
+> # 📋 Úlohy
+> - [e01_get2NumbersAndWriteThemOut.md](../Exercies/08_try_format_ternary/e01_get2NumbersAndWriteThemOut.md)
+>

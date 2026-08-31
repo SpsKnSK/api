@@ -306,3 +306,5 @@ $$R=\frac{R_1*R_2}{R_1+R_2}$$
 > 1. Mikor ad `False`t az `or` logikai operátor?
 > 1. Mikor ad `True`t a `not` operátor?
 > 1. Mikor lesz `True` a következő kifejezés: `(a > b) and (c < b) or (c == 1)`, írjatok rá két példát.
+>
+> További feladatokat az [if gyakorlómappában](../Exercies/05_if/) találtok.

@@ -943,6 +943,8 @@ print(f"\nLaptop maradék készlet: {laptop.készlet}")
 > 3. Készíts egy `Naplózó` context managert, amely fájlba naplózza a végrehajtási időt és esetleges hibákat.
 > 4. Hozz létre egy `Alakzat` absztrakt osztályt és implementálj belőle `Háromszög`, `Négyzet` és `Kör` osztályokat.
 > 5. Tervezz egy `Könyvtár` rendszert composition használatával, ahol a `Könyvtár` tartalmaz `Könyv` objektumokat, `Kölcsönzés` objektumokat és `Olvasó` objektumokat.
+>
+> További feladatokat a [gyakorlómappában](../Exercies/13_classes/) találtok.
 
 > # ❓ Kérdések
 >

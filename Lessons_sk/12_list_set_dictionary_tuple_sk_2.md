@@ -137,6 +137,8 @@ jedinečné prvky.
 > # 📋 Úlohy
 > - [01_frequencyTable_sk.md](../Exercies/12_list_set_dictionary_tuple/01_frequencyTable_sk.md)
 >
+> Ďalšie úlohy nájdete v [priečinku s cvičeniami](../Exercies/12_list_set_dictionary_tuple/).
+>
 > # ❓ Otázky
 >
 > 1. Ako možno zo slovníka získať len kľúče ako zoznam?
