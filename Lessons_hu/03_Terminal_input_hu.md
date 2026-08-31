@@ -71,13 +71,6 @@ Mit takar az `int` szócska?
 Próbáljunk meg most hozzáadni 12-t a szam változóhoz.
 
 ## Feladatok
-1. Rontsátok el szándékosan! Írjatok olyan sorokat `input()`-tal, amiket a Python hibával utasít vissza. Ötletek:
-    - `szam = input("Adj meg egy szamot: ")` után `print(szam + 12)`
-    - `int(input("Hany eves vagy? "))`, de betűt írtok be, nem számot
-    - `int(input("Terulet: "))`, de tizedes számot írtok be, pl. `1.5`
-    - lemarad az egyik zárójel az `int(input(...))` végéről
-
-    Olvassátok el a hibaüzenetet: hogy hívják a hibát, és mit árul el arról, mi a baj?
 1. Írjatok programot, amely megkérdezi, hogy hogy hívnak. Miután megadtuk nevünket, kérdezze meg, hány évesek vagyunk, majd írjon ki egy összegző mondatot, hogy ki ül a gép előtt. `Szia [evszam] eves [nev], latom, te ulsz a gep elott`
 1. Írjatok programot, amely a bekért adatokból összeállít egy névjegykártyát és kiírja a képernyőre.
 Adataink: Név, Lakhely, Elérhetőség
@@ -115,6 +108,16 @@ példa:
     > Figyelem: a kilók tizedes számok is lehetnek, ezért itt `float(input(...))` kell!
     1. Kérjétek be a felhasználótól, mennyi pénze van, s abból hány **egész** kiló almát, citromot és narancsot tud venni.
 
-## Kérdések
-1. Írjatok kódot, amelyik megkérdezi a felhaználótól, hogy hívják és hány éves, majd írjátok ki a képernyőre, hogy 10 év múlva hány éves lesz. `Szia [nev], most 16 éves vagy, 10 év múlva 26 leszel`
-1. Milyen adattípust olvas be az `input` függvény a billentyűzetről?
+> # 💥 Rontsátok el!
+> Írjatok olyan sorokat `input()`-tal, amiket a Python hibával utasít vissza. Ötletek:
+>
+> - `szam = input("Adj meg egy szamot: ")` után `print(szam + 12)`
+> - `int(input("Hany eves vagy? "))`, de betűt írtok be, nem számot
+> - `int(input("Terulet: "))`, de tizedes számot írtok be, pl. `1.5`
+> - lemarad az egyik zárójel az `int(input(...))` végéről
+>
+> Olvassátok el a hibaüzenetet: hogy hívják a hibát, és mit árul el arról, mi a baj?
+
+> # ❓ Kérdések
+> 1. Írjatok kódot, amelyik megkérdezi a felhaználótól, hogy hívják és hány éves, majd írjátok ki a képernyőre, hogy 10 év múlva hány éves lesz. `Szia [nev], most 16 éves vagy, 10 év múlva 26 leszel`
+> 1. Milyen adattípust olvas be az `input` függvény a billentyűzetről?

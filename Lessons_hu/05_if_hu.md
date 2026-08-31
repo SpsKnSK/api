@@ -156,18 +156,6 @@ else:
 > Mit veszünk észre a programkódban:
 **Több utasítás esetén elég egymás után begépelni a végrehajtani kívánt utasításokat** – a lényeg, hogy **azonos behúzással** legyenek, hiszen így alkotnak egy blokkot (lásd az 1-es ág két `print`-jét).
 
-### Feladat: Rontsátok el szándékosan!
-Írjatok olyan `if` szerkezeteket, amiket a Python hibával utasít vissza, vagy amik **nem azt csinálják**, amit várnánk. Ötletek:
-- lemarad a kettőspont: `if jegy == 1`
-- nincs behúzás az `if` alatti sorban
-- a blokk sorai **eltérő** behúzással: az egyik 4 szóköz, a másik 8
-- `=` írása `==` helyett: `if jegy = 1:`
-- `else` mögé is feltételt írtok: `else jegy == 5:`
-- `elif` az `if` **elé** kerül
-- a feltétel mindig igaz: `if jegy == 1 or jegy == 2 or True:`
-
-Olvassátok el a hibaüzenetet: hogy hívják a hibát, és melyik sorra mutat? Melyik hiba az, amit a Python **nem** jelez, mégis rossz eredményt ad?
-
 ### Feladat
 Készítsetek programot, amely meghatározza a közeg pH értékét.
 
@@ -294,12 +282,25 @@ $$R=\frac{R_1*R_2}{R_1+R_2}$$
 
 > Létre kell hoznunk még egy változót, amely segítségével meghatározhatjuk, hogy az ellenállások sorba, vagy párhuzamosan vannak-e kötve
 
-# Kérdések
-1. Írjátok le az egyutas elágazás szintaxisát, hogyan kell helyesen feltételt írni Pythonban. Vázoljátok fel az összes ágat.
-1. Kell-e mindig az `if` parancs? Mikor használjuk?
-1. Kell-e mindig az `elif` parancs? Mikor használjuk?
-1. Kell-e mindig az `else` parancs? Mikor használjuk?
-1. Mikor ad `False`t az `and` logikai operátor?
-1. Mikor ad `False`t az `or` logikai operátor?
-1. Mikor ad `True`t a `not` operátor?
-1. Mikor lesz `True` a következő kifejezés: `(a > b) and (c < b) or (c == 1)`, írjatok rá két példát.
+> # 💥 Rontsátok el!
+> Írjatok olyan `if` szerkezeteket, amiket a Python hibával utasít vissza, vagy amik **nem azt csinálják**, amit várnánk. Ötletek:
+>
+> - lemarad a kettőspont: `if jegy == 1`
+> - nincs behúzás az `if` alatti sorban
+> - a blokk sorai **eltérő** behúzással: az egyik 4 szóköz, a másik 8
+> - `=` írása `==` helyett: `if jegy = 1:`
+> - `else` mögé is feltételt írtok: `else jegy == 5:`
+> - `elif` az `if` **elé** kerül
+> - a feltétel mindig igaz: `if jegy == 1 or jegy == 2 or True:`
+>
+> Olvassátok el a hibaüzenetet: hogy hívják a hibát, és melyik sorra mutat? Melyik hiba az, amit a Python **nem** jelez, mégis rossz eredményt ad?
+
+> # ❓ Kérdések
+> 1. Írjátok le az egyutas elágazás szintaxisát, hogyan kell helyesen feltételt írni Pythonban. Vázoljátok fel az összes ágat.
+> 1. Kell-e mindig az `if` parancs? Mikor használjuk?
+> 1. Kell-e mindig az `elif` parancs? Mikor használjuk?
+> 1. Kell-e mindig az `else` parancs? Mikor használjuk?
+> 1. Mikor ad `False`t az `and` logikai operátor?
+> 1. Mikor ad `False`t az `or` logikai operátor?
+> 1. Mikor ad `True`t a `not` operátor?
+> 1. Mikor lesz `True` a következő kifejezés: `(a > b) and (c < b) or (c == 1)`, írjatok rá két példát.

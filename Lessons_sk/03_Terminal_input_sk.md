@@ -70,13 +70,6 @@ Skúsime teraz k premennej `cislo` pridať `12`.
 Skúsime teraz k premennej `cislo` pridať 12.
 
 ## Úlohy
-1. Pokazte to naschvál! Napíšte také riadky s `input()`, ktoré Python odmietne s chybou. Nápady:
-    - `cislo = input("Zadaj cislo: ")` a potom `print(cislo + 12)`
-    - `int(input("Kolko mas rokov? "))`, ale zadáte písmeno, nie číslo
-    - `int(input("Cena: "))`, ale zadáte desatinné číslo, napr. `1.5`
-    - chýba jedna zátvorka na konci `int(input(...))`
-
-    Prečítajte si chybovú správu: ako sa chyba volá a čo prezrádza o tom, kde je problém?
 1. Napíšte program, ktorý sa vás opýta na vaše meno. Keď zadáte svoje meno, opýta sa vás, koľko máte rokov, a potom vypíše súhrnnú vetu o tom, kto sedí pred počítačom `Ahoj [pocetRokov] rocny [meno], vidim, ze ty sedis pred pocitacom`
 1. Napíšte program, ktorý zo zadaných údajov (meno, bydlisko a kontakt) vypíše na obrazovku vizitku.
 
@@ -113,7 +106,17 @@ príklad:
     > Pozor: počet kíl môže byť aj desatinné číslo, preto tu treba `float(input(...))`!
     1. Spýtajte sa používateľa, koľko peňazí má u seba a z toho koľko **celých** kilogramov jabĺk, citrónov alebo pomarančov vie kúpiť.
 
-## Otázky
-1. Napíšte kód, ktorý od používateľa získa jeho meno a vek, a potom na obrazovku vypíše, koľko bude mať rokov o 10 rokov. Príklad: `Ahoj [meno], teraz máš 16 rokov, o 10 rokov budeš mať 26 rokov.`
-1. Aký dátový typ číta funkcia `input` z klávesnice?
-1. Čo robí `int()` a čo `float()`? Kedy ktoré použijeme okolo `input()`?
+> # 💥 Pokazte to!
+> Napíšte také riadky s `input()`, ktoré Python odmietne s chybou. Nápady:
+>
+> - `cislo = input("Zadaj cislo: ")` a potom `print(cislo + 12)`
+> - `int(input("Kolko mas rokov? "))`, ale zadáte písmeno, nie číslo
+> - `int(input("Cena: "))`, ale zadáte desatinné číslo, napr. `1.5`
+> - chýba jedna zátvorka na konci `int(input(...))`
+>
+> Prečítajte si chybovú správu: ako sa chyba volá a čo prezrádza o tom, kde je problém?
+
+> # ❓ Otázky
+> 1. Napíšte kód, ktorý od používateľa získa jeho meno a vek, a potom na obrazovku vypíše, koľko bude mať rokov o 10 rokov. Príklad: `Ahoj [meno], teraz máš 16 rokov, o 10 rokov budeš mať 26 rokov.`
+> 1. Aký dátový typ číta funkcia `input` z klávesnice?
+> 1. Čo robí `int()` a čo `float()`? Kedy ktoré použijeme okolo `input()`?

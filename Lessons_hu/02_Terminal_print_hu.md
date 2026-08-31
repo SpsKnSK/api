@@ -64,14 +64,6 @@
     szam2=11
     print(szam1+szam2)
     ```
-1. Rontsátok el szándékosan! Írjatok olyan `print` sorokat, amiket a Python hibával utasít vissza. Ötletek:
-    - hiányzó zárójel vagy idézőjel
-    - kevert idézőjel
-    - a függvény nevének elrontása (pl. nagy `P` betű)
-    - idézőjel nélküli szöveg
-    - több vessző, pont alkalmazása
-
-    Olvassátok el a hibaüzenetet: melyik sorra mutat, és mi a hiba neve? Mire jutottatok?
 
 ## `print()` – vegyes kiíratás
 Lehetőség van egy print-en belül több adat kiíratására.
@@ -213,25 +205,34 @@ harmadik=34
     Oldjátok meg úgy is, hogy csak **egy** `print`-et használtok.
 2. Írassátok ki a három szám összegét és az első két szám szorzatát.
 
-## Kérdések
-1. Jellemezd a `print` függvényt, mire szolgál?
-1. Ha több értéket, változót akarunk használni a `print` függvényben, hogyan tehetjük azt meg? Soroljatok fel példákat.
-1. Hogyan jelenik meg a `""` üres string a képernyőn? Mutassatok rá példát!
-1. Hogyan jelenik meg a `"\n"` karakter a képernyőn? Mutassatok rá példát!
-1. Mi a különbség az `5` és az `"5"` között?
-1. Mire használjuk a `print` függvény `sep` paraméterét, mi az alapértelmezett értéke?
-1. Mire használjuk a `print` függvény `end` paraméterét, mi az alapértelmezett értéke?
-1. Változtassátok meg a `sep` paramétert a következő kódban úgy, hogy reális ip-címet kapjatok:
-    ```py
-    print(192,168,100,1)
-    ```
-    elvárt kimenet:
-    > 192.168.100.1
-1. Változtassátok meg az `end` paramétert a következő kódban úgy, hogy egymás mellé írja ki a szöveget:
-    ```py
-    print('Szia')
-    print('Peter!')
-    ```
-    elvárt kimenet:
-    >Szia Peter!
-1. Mire szolgál a `#` jel? 
+> # 💥 Rontsátok el!
+> Írjatok olyan `print` sorokat, amiket a Python hibával utasít vissza. Ötletek:
+>
+> - hiányzó zárójel vagy idézőjel
+> - kevert idézőjel
+> - a függvény nevének elrontása (pl. nagy `P` betű)
+> - idézőjel nélküli szöveg
+> - több vessző, pont alkalmazása
+>
+> Olvassátok el a hibaüzenetet: melyik sorra mutat, és mi a hiba neve? Mire jutottatok?
+
+> # ❓ Kérdések
+> 1. Jellemezd a `print` függvényt, mire szolgál?
+> 1. Ha több értéket, változót akarunk használni a `print` függvényben, hogyan tehetjük azt meg? Soroljatok fel példákat.
+> 1. Hogyan jelenik meg a `""` üres string a képernyőn? Mutassatok rá példát!
+> 1. Hogyan jelenik meg a `"\n"` karakter a képernyőn? Mutassatok rá példát!
+> 1. Mi a különbség az `5` és az `"5"` között?
+> 1. Mire használjuk a `print` függvény `sep` paraméterét, mi az alapértelmezett értéke?
+> 1. Mire használjuk a `print` függvény `end` paraméterét, mi az alapértelmezett értéke?
+> 1. Változtassátok meg a `sep` paramétert a következő kódban úgy, hogy reális ip-címet kapjatok:
+>     ```py
+>     print(192,168,100,1)
+>     ```
+>     elvárt kimenet: `192.168.100.1`
+> 1. Változtassátok meg az `end` paramétert a következő kódban úgy, hogy egymás mellé írja ki a szöveget:
+>     ```py
+>     print('Szia')
+>     print('Peter!')
+>     ```
+>     elvárt kimenet: `Szia Peter!`
+> 1. Mire szolgál a `#` jel?

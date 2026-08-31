@@ -1,4 +1,6 @@
-> # ✏️ Változók
+# Változók
+
+> ## ✏️ Füzetbe – Változók
 >
 > **Mi az?** Névvel ellátott doboz a memóriában, amiben egy értéket tárolunk. A neve alapján bármikor előszedhetjük.
 >
@@ -29,7 +31,7 @@
 > x = 5      # betettem az 5-öt
 > x == 5     # kérdés: x "dobozban" 5 van? -> True
 > ```
-# Változók
+
 - A változók a program azon elemei, amelyek különböző értékeket vehetnek fel, különböző adatok tárolására alkalmasak.
 - Névvel ellátott memóriaterület
 - Változó nevei lehetnek: x, z, szam, nev, lista
@@ -73,17 +75,17 @@ flowchart RL
 - A típust a `type()` függvénnyel kérdezhetjük le: `print(type(kor))`
 # Műveletek
 ## Matematikai operátorok
-- `5 + 3 = 8` összeg
-- `5 - 3 = 2` különbség
+- `5 + 3 = 8`összeg
+- `5 – 3 = 2` különbség
 - `5 * 3 = 15` szorzat
-- `5 / 3 = 1.6666666666666667` osztás
+- `5 / 3 = 1.666` osztás
 - `5 // 3 = 1` osztás egész része
 - `5 % 3 = 2` osztás maradéka
 - `5 ** 3 = 125` hatvány
 - `sqrt(5)` négyzetgyökvonás (matematikai modul szükséges hozzá)
-> Hogyan lehet másképp négyzetgyököt vonni?
 
-## Kerekítés `round` függvénnyel
+## Kerekítés
+- `round` függvénnyel
 - `round(a, x)`
 - `a` – szám
 - `x` - tizedes helyek száma
@@ -161,25 +163,27 @@ MyVar = "John"
 
 ## Segítség
 ### Adattípusok
-
-**Szám** – `int`|**Tizedes szám**– `float`
+|||
 --|--
-**Karakterlánc** – `str`|**Logikai** – `bool`
+**Szám** |`int`
+**Tizedes szám**|`float`
+**Karakterlánc** | `str`
+**Logikai** | `bool`
 
 ### Műveletek: 
 
-| | | | |
-|-|-|-|-|
-összeadás `+`| kivonás `-` |  szorzás`*`| osztás `/` | 
-egész számú osztás `//` | maradékos osztás `%` | hatványra emelés `**`| egyenlőség `==`
-kisebb `<`|kisebb vagy egyenlő `<=` |nagyobb `>`| nagyobb vagy egyenlő `>=`
-értékadás `=`|
+| | | | | | | | |
+|-|-|-|-|-|-|-|-|
+| `+` | összeadás | `-` | kivonás | `*` | szorzás | `/` | osztás |
+| `//` | egész számú osztás | `%` | maradékos osztás | `**` | hatványra emelés | `==` | egyenlőség |
+| `<` | kisebb | `<=` | kisebb vagy egyenlő | `>` | nagyobb | `>=` | nagyobb vagy egyenlő |
+| `!=` | nem egyenlő | `=` | értékadás | | | | |
 
-# Kérdések
-1. Mi a különbség az `=` és az `==` között. Mikor használod az egyiket, mikor a másikat? 
-1. Mire szolgál a `round` függvény, írjatok rá példát.
-1. A felhasználótól kérjétek be a háromszög két befogóját, és a Pitagorasz tételének segítségvel határozzátok meg az átfogót.
-1. Írjatok 2 példát a megengedett változónevekre.
-1. Írjatok 2 példát a **nem** megengedett váltóznevekre.
-1. Hogyan ellenőrizhetjük, hogy `a` szám `b` szám osztója? Melyik műveletet használjátok?
-1. Mi a különbség a `/` és `//` között?
+> # ❓ Kérdések
+> 1. Mi a különbség az `=` és az `==` között. Mikor használod az egyiket, mikor a másikat? 
+> 1. Mire szolgál a `round` függvény, írjatok rá példát.
+> 1. A felhasználótól kérjétek be a háromszög két befogóját, és a Pitagorasz tételének segítségével határozzátok meg az átfogót.
+> 1. Írjatok 2 példát a megengedett változónevekre.
+> 1. Írjatok 2 példát a **nem** megengedett változónevekre.
+> 1. Hogyan ellenőrizhetjük, hogy `a` szám `b` szám osztója? Melyik műveletet használjátok?
+> 1. Mi a különbség a `/` és `//` között?
