@@ -63,13 +63,13 @@
     szam2=11
     print(szam1+szam2)
     ```
-1. Rontsátok el szándékosan! Írjatok olyan `print` sorokat, amiket a Python hibával utasít vissza. Ötletek: 
-- hiányzó zárójel vagy idézőjel
-- kevert idézőjel
-- függvény neve
-- idézőjel nélküli szöveg
-- több vessző, pont alkalmazása
-    
+1. Rontsátok el szándékosan! Írjatok olyan `print` sorokat, amiket a Python hibával utasít vissza. Ötletek:
+    - hiányzó zárójel vagy idézőjel
+    - kevert idézőjel
+    - a függvény nevének elrontása (pl. nagy `P` betű)
+    - idézőjel nélküli szöveg
+    - több vessző, pont alkalmazása
+
     Olvassátok el a hibaüzenetet: melyik sorra mutat, és mi a hiba neve? Mire jutottatok?
 
 ## `print()` – vegyes kiíratás
