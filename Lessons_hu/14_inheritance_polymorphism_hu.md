@@ -1,3 +1,26 @@
+> # ✏️ Öröklődés és polimorfizmus
+>
+> **Öröklődés**: egy új osztály (gyerek/alosztály) megkapja egy már létező osztály (szülő) minden tulajdonságát és függvényét.
+>
+> ```py
+> class Allat:
+>     def __init__(self, nev):
+>         self.Nev = nev
+>
+> class Kutya(Allat):        # Kutya örököl Allat-tól
+>     def Ugat(self):
+>         print(f"{self.Nev}: Vau!")
+>
+> kutya = Kutya("Bodri")
+> kutya.Ugat()   # a Nev-et is örökölte, az Ugat()-ot maga adja hozzá
+> ```
+>
+> - `class Gyerek(Szulo):` — öröklés jelölése
+> - `super().__init__(...)` — meghívja a szülő `__init__`-jét, hogy ne kelljen újraírni
+> - **Polimorfizmus**: ugyanaz a függvénynév (pl. `Mozdulj()`) más-más osztályokon más-más módon viselkedik
+>
+> **Metafora:** a szülő osztály olyan, mint egy **családi recept**: minden gyerek megkapja az alaprecept lépéseit, de bármelyikük hozzáadhat saját ízesítést (felülírhatja a függvényt).
+
 # Öröklődés
 ## Bevezető
 Az **objektumorientált** programozáshoz leggyakrabban társított nyelvi mechanizmus az öröklődés. Az öröklődés lehetővé teszi, hogy olyan új osztályokat definiáljunk, amelyek valamely létező osztály módosított változatai, ergo kevesebbet kell gépelnünk. 
@@ -251,7 +274,7 @@ boat1 = Boat("Ibiza", "Touring 20") #Új Hajó példány
 plane1 = Plane("Boeing", "747")     #Új Repülő példány
 
 for v in (car1, boat1, plane1):
-  v.move()
+  v.Move()
 ```
 Ebben az esetben készíthetünk egy szülő osztályt `Jármű` névvel, amelyik már tartalmazza az előre meghatározott attribútumokat és függvényeket. Az öröklő osztályok "megkapják" a szülő osztálytól a függvényeket, s ha szükséges, felül tudják azokat írni.
 
@@ -316,10 +339,34 @@ for v in (car1, boat1, plane1):
 
 > A `Hajó` és a `Repülő` osztályok a `Mozdulj` függvényt "másítják meg"
 
-# Kérdések
-1. Hogyan jelöljük pythonban az örökést, mutassatok rá példát.
-2. Mire jó a polimorfizmus?
-3. Hány osztálytól örökölhet a származtatott osztály?
-4. Írjatok példát a következőre: 
-   1. Készítsetek egy `Közrendőr` osztályt (`Nev`:`str`, `BirsagokSzama`: `int`) attribútumokkal és egy `Birsagol` függvénnyel, amely kiírja a nevét és a bírságok számát
-   2. Származtassatok egy `Rendorfokapitany` osztályt a `Közrendőr`ből, akinek lesz még egy attribútuma (`RendorokSzama`:`int`) és átírja a  `Birsagol` függvényt, amely kiírja ugyanazt, mint a `Közrendőr`, plusz, hogy ő a főkapitány, és hány közrendőr tartozik alája
+> # 💥 Rontsátok el!
+>
+> Mi a hiba ebben a programban?
+>
+> ```py
+> class Car:
+>   def __init__(self, brand, model):
+>     self.Brand = brand
+>     self.Model = model
+>   def Move(self):
+>     print("Drive!")
+>
+> car1 = Car("Ford", "Mustang")
+> car1.move()
+> ```
+>
+> Miért dob a Python `AttributeError`-t? Figyeljetek a kis- és nagybetűkre — Python **kis- és nagybetű érzékeny** (case sensitive), tehát a `move()` és a `Move()` két különböző név!
+
+> # 📋 Feladatok
+> - [e01_shapes.md](../Exercies/14_inheritance_polymorphism/e01_shapes.md)
+> - [e02_vehicles.md](../Exercies/14_inheritance_polymorphism/e02_vehicles.md)
+
+> # ❓ Kérdések
+>
+> 1. Hogyan jelöljük pythonban az örökést, mutassatok rá példát.
+> 2. Mire jó a polimorfizmus?
+> 3. Hány osztálytól örökölhet a származtatott osztály?
+> 4. Írjatok példát a következőre:
+>    1. Készítsetek egy `Közrendőr` osztályt (`Nev`:`str`, `BirsagokSzama`: `int`) attribútumokkal és egy `Birsagol` függvénnyel, amely kiírja a nevét és a bírságok számát
+>    2. Származtassatok egy `Rendorfokapitany` osztályt a `Közrendőr`ből, akinek lesz még egy attribútuma (`RendorokSzama`:`int`) és átírja a  `Birsagol` függvényt, amely kiírja ugyanazt, mint a `Közrendőr`, plusz, hogy ő a főkapitány, és hány közrendőr tartozik alája
+> 5. Mire szolgál a `super()` hívás egy alosztály `__init__` függvényében?

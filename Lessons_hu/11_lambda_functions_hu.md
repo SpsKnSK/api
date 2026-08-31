@@ -1,3 +1,22 @@
+> # ✏️ Lambda függvények (opcionális)
+>
+> A **lambda** egy rövid, névtelen, egysoros függvény.
+>
+> ```py
+> negyzet = lambda x: x ** 2
+> print(negyzet(4))   # 16
+> ```
+>
+> Ugyanaz, mint:
+> ```py
+> def negyzet(x):
+>     return x ** 2
+> ```
+>
+> Leggyakrabban a `map()`, `filter()`, `sorted(key=...)` függvényekkel együtt használjuk, amikor egy egyszerű műveletet kell egy másik függvénynek átadni.
+>
+> **Metafora:** a lambda olyan, mint egy **post-it cetli**, amire gyorsan felírsz egy egysoros utasítást, és rögtön oda is adod valakinek — nem éri meg neki nevet adni, mint egy „rendes” függvénynek.
+
 # Lambda függvények
 
 A lambda függvényt nem a `def` paranccsal definiáljuk, hanem a `lambda` paranccsal, általában *"soron belüli függvénynek (in-line function)"* nevezzük.
@@ -113,3 +132,35 @@ A `reduce` segítségével írjátok fel a következő függvényeket
 # Összefoglalás
 
 A lambda függvények rövid, névtelen függvények, amelyek egyszerű műveletekhez használhatók. Ezek különösen hasznosak, amikor egy egyszerű függvényt szeretnénk átadni egy másik függvénynek, például a `map`, `filter`, `sorted` vagy `reduce` függvényeknek. 
+
+> # 💥 Rontsátok el!
+>
+> Mi a hiba ebben a programban?
+>
+> ```py
+> numbers = [1, 2, 3, 4]
+> squared = map(lambda x: x**2, numbers)
+> print(squared)
+> ```
+>
+> Miért nem `[1, 4, 9, 16]` jelenik meg? Javítsátok ki, hogy tényleg a listát lássuk kiírva.
+
+> # 📋 Feladatok
+> - A `reduce` segítségével írjátok fel a következő függvényeket: `min`, `max`, `sum`.
+> - Egy szólistából (`["alma", "körte", "dió", "szilva"]`) `sorted()` és lambda segítségével rendezzétek a szavakat hossz szerint.
+> - `filter()` és lambda segítségével válogassátok ki egy számlistából a 10-nél nagyobb elemeket.
+
+> # ❓ Kérdések
+>
+> 1. Miben különbözik a lambda függvény a `def`-fel írt függvénytől?
+> 2. Mikor érdemes lambda függvényt használni, és mikor nem?
+> 3. Mire való a `map()` függvény?
+> 4. Mire való a `filter()` függvény?
+> 5. Mit csinál a `sorted(lista, key=lambda x: ...)`?
+> 6. Mit ír ki ez a program?
+>
+>    ```py
+>    numbers = [1, 2, 3, 4, 5]
+>    odd_numbers = list(filter(lambda x: x % 2 != 0, numbers))
+>    print(odd_numbers)
+>    ```

@@ -1,3 +1,25 @@
+> # ✏️ Globális és lokális változók
+>
+> - **Globális változó**: a függvényeken kívül létezik, mindenhonnan elérhető
+> - **Lokális változó**: egy függvényen belül jön létre, csak ott létezik
+> - Ha egy függvényen belül **ugyanazt a nevet** használjuk, az egy **új, lokális** változó lesz — nem nyúl a globálishoz!
+> - `global x` — ezzel mondjuk meg, hogy a függvényen belül **ne** hozzon létre új lokális változót, hanem a globálist módosítsa
+>
+> ```py
+> x = "awesome"
+>
+> def myfunc():
+>     x = "fantastic"     # ez lokális, nem érinti a globálist
+>     print(f"Python is {x}")
+>
+> myfunc()                # Python is fantastic
+> print(f"Python is {x}") # Python is awesome (a globális változatlan)
+> ```
+>
+> **Miért jobb paramétert használni globális változó helyett?** Mert így a függvény csak azzal dolgozik, amit **átadunk neki** — nem lehet meglepetés abból, hogy valahol máshol megváltozott egy érték a hátunk mögött.
+>
+> **Metafora:** a globális változó olyan, mint egy **közös iskolai tábla**: bárki írhat rá, bárki törölhet róla, és ha két diák egyszerre firkál rá, könnyen összezavarodik. A paraméterek olyanok, mint a **saját füzet**: csak azt írod bele, amire szükséged van, senki más nem piszkálja.
+
 # Globális változók
 
 ## Példa a mindennapi életből:
@@ -123,3 +145,32 @@ Kimenet:
 Python is fantastic
 ```
 Ebben az esetben a `myfunc` függvényen belül az `x` változó ugyanaz, mint amelyiknek az `awesome` értéket adtuk. A függvényben megváltoztatjuk az értékét, és később azt használjuk
+
+> # 💥 Rontsátok el!
+>
+> Mi a hiba ebben a programban? Mit fog kiírni?
+>
+> ```py
+> x = 10
+>
+> def novel():
+>     x += 1
+>     print(x)
+>
+> novel()
+> ```
+>
+> A program hibát dob: `UnboundLocalError`. Miért? Mi hiányzik ahhoz, hogy a függvény módosítani tudja a globális `x`-et?
+
+> # 📋 Feladatok
+> 1. Írj egy `szamlalo()` függvényt, amely egy globális `szamlalo` nevű változót minden híváskor eggyel növel, és kiírja az aktuális értékét. Hívd meg 5-ször.
+> 2. Írd át az előző feladatot úgy, hogy a függvény ne globális változót használjon, hanem paraméterként kapja meg és adja is vissza az értéket.
+> 3. Mi történik, ha egy függvényen belül létrehozol egy `nev` nevű lokális változót, miközben van egy `nev` nevű globális változó is? Írj egy rövid programot, ami ezt bemutatja.
+
+> # ❓ Kérdések
+>
+> 1. Mi a különbség a globális és a lokális változó között?
+> 2. Miért lehet veszélyes sok globális változót használni egy programban?
+> 3. Mire szolgál a `global` kulcsszó?
+> 4. Miért jobb megoldás paramétereket átadni egy függvénynek, mint globális változót használni benne?
+> 5. Mi történik, ha egy függvényben létrehozunk egy ugyanolyan nevű változót, mint ami globálisan is létezik?

@@ -1,4 +1,27 @@
-﻿# Szótár és halmaz példák
+﻿> # ✏️ Szótár és halmaz
+>
+> **Szótár (`dict`)**: kulcs → érték párok, mint egy telefonkönyv.
+> ```py
+> phonebook = {'Anna': '06-30-123-4567'}
+> print(phonebook['Anna'])          # hibát dob, ha a kulcs nincs benne
+> print(phonebook.get('Anna'))      # biztonságos: None-t ad, ha nincs
+> ```
+>
+> **Halmaz (`set`)**: egyedi elemek, nincs sorrend, nincs index.
+> ```py
+> szamok = {1, 2, 2, 3}
+> print(szamok)   # {1, 2, 3} - a duplikátum eltűnik
+> ```
+>
+> | Művelet | Szótár | Halmaz |
+> |---|---|---|
+> | elem hozzáadása | `d['kulcs'] = ertek` | `.add(ertek)` |
+> | elem törlése | `del d['kulcs']` | `.remove(ertek)` |
+> | biztonságos lekérdezés | `.get('kulcs', alapertek)` | `ertek in halmaz` |
+>
+> **Metafora:** a szótár olyan, mint egy **telefonkönyv** — nem sorszám alapján keresel benne, hanem **név** alapján. A halmaz olyan, mint egy **zsák egyforma golyókkal**: ha kétszer teszel bele ugyanolyat, az csak egyszer marad benne.
+
+# Szótár és halmaz példák
 
 A következő példák bemutatják a Python szótárak (`dict`) és halmazok (`set`) használatát.
 
@@ -48,7 +71,7 @@ del phonebook['Anna']
 for name, number in phonebook.items():
     print(f"{name}: {number}")
 
-for nama in phonebook:
+for name in phonebook:
     print(f"{name}: {phonebook[name]}")
 ```
 ## Halmaz `set`
@@ -97,10 +120,23 @@ A `counts` szótárban minden számhoz az előfordulások száma tartozik. így 
 egyszeri és többszöri megjelenés nyomon követhető, míg a halmazból gyorsan
 kaphatunk egyedi elemeket.
 
+> # 💥 Rontsátok el!
+>
+> Mi a hiba ebben a programban?
+>
+> ```py
+> phonebook = {'Anna': '06-30-123-4567', 'Béla': '06-20-987-6543'}
+> print(phonebook['Cecil'])
+> ```
+>
+> Miért áll le a program? Írjátok át úgy, hogy ne omoljon össze, hanem egy szép üzenetet írjon ki, ha a keresett név nincs a telefonkönyvben!
 
-## Gyakorló kérdések
+> # 📋 Feladatok
+> - [01_frequencyTable_hu.md](../Exercies/12_list_set_dictionary_tuple/01_frequencyTable_hu.md)
 
-1. Hogyan lehet egy szótárból csak a kulcsokat listaként kinyerni?
-1. Hogyan lehet eltávolítani egy véletlenszerű elemet a halmazból?
-1. Mi történik, ha egy nem létező kulcsot kérünk le `my_dict['foo']` vs. `my_dict.get('foo')`?
-1. Hogyan lehet egy szótárat fordított sorrendben (kulcs szerint) bejárni?
+> # ❓ Kérdések
+>
+> 1. Hogyan lehet egy szótárból csak a kulcsokat listaként kinyerni?
+> 2. Hogyan lehet eltávolítani egy véletlenszerű elemet a halmazból?
+> 3. Mi történik, ha egy nem létező kulcsot kérünk le `my_dict['foo']` vs. `my_dict.get('foo')`?
+> 4. Hogyan lehet egy szótárat fordított sorrendben (kulcs szerint) bejárni?

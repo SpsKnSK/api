@@ -1,3 +1,24 @@
+> # ✏️ Listák
+>
+> A **lista** több érték egyben, egy változóban. A dobozokkal ellentétben ez egy egész **polc**, ahol minden helynek van sorszáma (**index**), 0-tól kezdve.
+>
+> ```py
+> mylist = ["alma", "banán", "cseresznye"]
+> print(mylist[0])   # "alma"
+> ```
+>
+> | Művelet | Jelentés |
+> |---|---|
+> | `mylist[i]` | az `i`. elem (0-tól számolva) |
+> | `.append(x)` | `x` hozzáadása a lista **végére** |
+> | `.insert(i, x)` | `x` beszúrása az `i`. helyre |
+> | `.remove(x)` | az első `x` értékű elem törlése |
+> | `.pop()` | az utolsó elem kiemelése és eltávolítása |
+> | `len(mylist)` | a lista hossza (elemszám) |
+> | `.sort()` | növekvő sorrendbe rendezi (helyben) |
+>
+> **Metafora:** a lista olyan, mint egy **polc dobozokkal**, minden doboznak van egy száma (0, 1, 2...), és bármikor tehettek bele, vehettek ki, vagy átrendezhetitek a dobozokat.
+
 # Listák
 
 A lista egy olyan adattípus, amely több érték tárolására szolgál egy változóban. 
@@ -12,6 +33,12 @@ Tartalmazhat:
 ## Elemek a listában
 
 A listában minden elem egy meghatározott helyet foglal el. Ezt **index**nek nevezzük. Az index sorszám, amelyik 0-tól kezdődik az utolsó elem sorszámáig
+
+```mermaid
+flowchart LR
+    A["0: 'apple'"] --- B["1: 'banana'"] --- C["2: 'cherry'"]
+```
+
 ```py
 mylist = ["apple", "banana", "cherry"]
 print(mylist)
@@ -138,14 +165,6 @@ myList[bananaIndex], myList[appleIndex] = myList[appleIndex], myList[bananaIndex
 print(myList)
 ```
 
-## Feladatok
-[e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e01_fillList.md)
-
-[e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e02_fillListWithinInterval.md)
-
-[e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e03_maxMin.md)
-
-[e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e04_maxMinIndexAverage.md)
 
 ## Véletlen számokkal való feltöltés
 ### variant 1
@@ -204,21 +223,43 @@ print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
 ```
 Sorba rendezi az elemeket **csökkenő** sorrend szerint a `reverse = True` segítségével.
 
-## Feladat
-> [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e05_randomEvenOdd.md)
+> # 💥 Rontsátok el!
+>
+> Mi a probléma ezzel a programmal? Miért nem `[1, 2, 3]` a kimenet?
+>
+> ```py
+> numbers = [3, 1, 2]
+> sorted(numbers)
+> print(numbers)
+> ```
+>
+> Javítsátok ki úgy, hogy a `numbers` valóban rendezve legyen. Mi a különbség a `.sort()` és a `sorted()` között?
 
-## Feladat
-> [e06_switchNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e06_switchNumbers.md)
+> # 📋 Feladatok
+> - [e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e01_fillList.md)
+> - [e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e02_fillListWithinInterval.md)
+> - [e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e03_maxMin.md)
+> - [e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e04_maxMinIndexAverage.md)
+> - [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e05_randomEvenOdd.md)
+> - [e06_switchNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e06_switchNumbers.md)
+> - [e07_separateTextNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e07_separateTextNumbers.md)
 
-## Feladat
-> [e07_separateTextNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/10_lists/e07_separateTextNumbers.md)
-
-# Kérdések
-1. Mire szolgálnak a listák?
-1. Készítsetek egy üres listát, és írassátok ki a képernyőre.
-1. Mire szolgál az index?
-1. Írjátok ki  egy tetszőleges lista első és utolsó elemét.
-1. Töröljétek egy tetszőleges lista összes elemét a `del` paranccsal.
-1. Egy 4 elemű listához adjatok hozzá egy tetszőleges új elemet az `.insert()` paranccsal.
-1. Egy tetszőleges elemű listához adjatok hozzá egy tetszőleges új elemet az `.insert()` paranccsal.
-1. Egy számokból álló listában írjátok ki a legkisebb és legnagyobb értéket, és azoknak az indexét.
+> # ❓ Kérdések
+>
+> 1. Mire szolgálnak a listák?
+> 2. Készítsetek egy üres listát, és írassátok ki a képernyőre.
+> 3. Mire szolgál az index?
+> 4. Írjátok ki egy tetszőleges lista első és utolsó elemét.
+> 5. Töröljétek egy tetszőleges lista összes elemét a `del` paranccsal.
+> 6. Egy 4 elemű listához adjatok hozzá egy tetszőleges új elemet az `.insert()` paranccsal.
+> 7. Egy tetszőleges elemű listához adjatok hozzá egy tetszőleges új elemet az `.append()` paranccsal.
+> 8. Egy számokból álló listában írjátok ki a legkisebb és legnagyobb értéket, és azoknak az indexét.
+> 9. Mi a különbség a `.remove()` és a `.pop()` között?
+> 10. Mit ír ki ez a program?
+>
+>     ```py
+>     mylist = [10, 20, 30]
+>     mylist.append(40)
+>     mylist.pop(0)
+>     print(mylist)
+>     ```

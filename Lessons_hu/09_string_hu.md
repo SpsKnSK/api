@@ -1,4 +1,35 @@
+> # ✏️ Stringek (szövegek)
+>
+> A **string** karakterek sorozata. Minden karakternek van egy **indexe** (sorszáma), ami **0-tól** indul.
+>
+> ```text
+> s  z  ö  v  e  g
+> 0  1  2  3  4  5
+> ```
+>
+> | Művelet | Jelentés | Példa (`szoveg = "szöveg"`) |
+> |---|---|---|
+> | `szoveg[i]` | az `i`. karakter | `szoveg[3]` → `"v"` |
+> | `szoveg[a:b]` | `a`-tól `b`-ig (b nélkül) | `szoveg[1:4]` → `"zöv"` |
+> | `.lower()` / `.upper()` | kis-/nagybetűssé alakít | |
+> | `.replace(x, y)` | `x`-et `y`-ra cseréli | |
+> | `.split()` | szétvágja szóközök mentén | |
+> | `len(szoveg)` | a string hossza | |
+>
+> **Metafora:** a string olyan, mint egy **gyöngysor**, ahol minden gyöngy egy karakter, és mindegyiknek van egy cimkéje: 0, 1, 2, 3... A `[a:b]` egy darabot vág ki a gyöngysorból.
+
 # String, karakterláncok és műveletek
+
+## Mi az a string?
+
+Eddig a stringet (szöveget) egyetlen egésznek kezeltük: `"szia"`. Valójában a string **karakterek sorozata** — mint a gyöngysor, ahol minden gyöngy egy betű, szám vagy jel.
+
+```mermaid
+flowchart LR
+    A["0: s"] --- B["1: z"] --- C["2: ö"] --- D["3: v"] --- E["4: e"] --- F["5: g"]
+```
+
+Minden karakternek van egy **indexe**, a sorszáma, ami mindig **0-val kezdődik**. Ez az egyik leggyakoribb hibaforrás kezdőknek: az 1. karakter indexe **nem 1, hanem 0**.
 
 ```py
 szoveg='szöveg'
@@ -6,6 +37,15 @@ print(szoveg[3])   # kiíratjuk a 4. karaktert a stringből
 print(szoveg[1:])  # kiíratjuk a stringet 2. karaktertől
 print(szoveg[:4])  # kiíratjuk a stringet a 4. karakterig
 print(szoveg[1:len(szoveg)]) #kiíratjuk a stringet a 2. karaktertől a végéig.
+```
+
+Kimenet:
+
+```text
+v
+zöveg
+szöv
+zöveg
 ```
 
 - `.lower()` - kisbetű
@@ -142,6 +182,7 @@ print(numbersString)
 ```
 
 ## `in`
+A `in` kulcsszóval megvizsgálhatjuk, hogy egy karakter (vagy résszöveg) benne van-e egy stringben:
 ```py
 betu = input("Adj meg egy betűt")
 maganhangzok = "aeiouAEIOU"
@@ -150,9 +191,9 @@ if betu in maganhangzok:
 else:
     print(betu, "mássalhangzó")
 ```
-> Mit változtatnátok rajta? 
 
 ##  Példa
+A `<` és `>` jelekkel stringeket is összehasonlíthatunk: Python az ábécésorrendet nézi (kisbetű/nagybetű számít!).
 ```py
 limonade = "limonade"
 szo = input("Írjon be egy tetszőleges szót : ")
@@ -192,15 +233,36 @@ print(karakterLista)
 ['t', 'e', 's', 't']
 ```
 
-## Feladatok
-- [Mondatelemzés](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e01_workWithCharacters.md#hu)
+> # 💥 Rontsátok el!
+>
+> Mit ír ki ez a program? Miért csak `"veg"` jelenik meg, nem `"öveg"`?
+>
+> ```py
+> szoveg = "szöveg"
+> print(szoveg[3:6])
+> ```
+>
+> Javítsátok ki úgy, hogy tényleg `"öveg"` legyen a kimenet (nézzétek meg, hányadik indexen van az `ö` betű). Utána próbáljátok ki: mi történik, ha `szoveg[10]`-et kértek le egy 6 karakteres stringből?
 
-- [Kacsák](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e02_ducks.md#hu)
+> # 📋 Feladatok
+> - [Mondatelemzés](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e01_workWithCharacters.md#hu)
+> - [Kacsák](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e02_ducks.md#hu)
+> - [Mondatelemzés 2](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e03_workingWithSentence.md#hu)
+> - [Betűcsere](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e04_replace.md#hu)
+> - [Szókiírás](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e05_printWord.md#hu)
+> - [Mondategyesítés](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e06_assemblyASentence.md#hu)
 
-- [Mondatelemzés 2](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e03_workingWithSentence.md#hu)
-
-- [Betűcsere](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e04_replace.md#hu)
-
-- [Szókiírás](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e05_printWord.md#hu)
-
-- [Mondategyesítés](https://github.com/SpsKnSK/api/blob/main/Exercies/09_string/e06_assemblyASentence.md#hu)
+> # ❓ Kérdések
+>
+> 1. Melyik indexe van egy string első karakterének?
+> 2. Mit ad vissza a `szoveg[2:5]`?
+> 3. Mi a különbség a `.lower()` és `.upper()` között?
+> 4. Hogyan tudjátok megszámolni, hányszor fordul elő egy karakter egy stringben?
+> 5. Mit csinál a `.split()`, és mit ad vissza?
+> 6. Miért lehet egy stringen `for` ciklussal végigmenni?
+> 7. Mit ír ki ez a program?
+>
+>    ```py
+>    szo = "python"
+>    print(szo[1:4])
+>    ```
