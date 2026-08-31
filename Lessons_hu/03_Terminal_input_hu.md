@@ -1,5 +1,40 @@
 # `input()` függvény
 
+> ## ✏️ Füzetbe `input()`
+>
+> **Mire jó?** Szöveget olvas be a billentyűzetről, amit elmentünk egy változóba.
+>
+> **Alak:** `valtozo = input("kérdés a felhasználónak")`
+>
+> | Amit írok | Mit csinál |
+> |---|---|
+> | `input()` | vár, amíg beírunk valamit + Enter |
+> | `input("Hany eves vagy? ")` | előbb kiírja a kérdést, aztán vár (megspórolunk egy `print`-et) |
+> | `nev = input(...)` | a beírt adat a `nev` változóba kerül |
+>
+> **⚠️ A legfontosabb:** az `input()` **mindig szöveget (string)** ad vissza, akkor is, ha számot írunk be!
+>
+> | Amit írok | Eredmény |
+> |---|---|
+> | `szam = input(...)` | `"50"` – szöveg, nem lehet vele számolni |
+> | `szam = int(input(...))` | `50` – egész szám |
+> | `magassag = float(input(...))` | `1.5` – tizedes szám |
+>
+> ```py
+> szam = input("Adj meg egy szamot: ")   # beírjuk: 50
+> print(szam + 12)   # HIBA! szoveg + szam nem megy
+>
+> szam = int(input("Adj meg egy szamot: "))
+> print(szam + 12)   # 62
+> ```
+>
+> **Így dönts:**
+> ```
+> Szamolni akarok vele?  --> igen, egesz szam  --> int(input(...))
+>                        --> igen, tizedes     --> float(input(...))
+>                        --> nem (nev, varos)  --> input(...)
+> ```
+
 Adat (karakterlánc) beolvasása és elmentése egy változóba.
 ```py
 >>> szoveg = input()
@@ -14,8 +49,8 @@ A program lefuttatásakor az üzenet megjelenik a képernyőn, a program pedig v
 ## Példa 
 
 ```py
->>> szoveg = input("Hány óra van?")
-hány óra van?9
+>>> szoveg = input("Hany ora van? ")
+Hany ora van? 9
 >>> print(szoveg)
 9
 ```
@@ -37,23 +72,30 @@ Mit takar az `int` szócska?
 Próbáljunk meg most hozzáadni 12-t a szam változóhoz.
 
 ## Feladatok
+1. Rontsátok el szándékosan! Írjatok olyan sorokat `input()`-tal, amiket a Python hibával utasít vissza. Ötletek:
+    - `szam = input("Adj meg egy szamot: ")` után `print(szam + 12)`
+    - `int(input("Hany eves vagy? "))`, de betűt írtok be, nem számot
+    - `int(input("Terulet: "))`, de tizedes számot írtok be, pl. `1.5`
+    - lemarad az egyik zárójel az `int(input(...))` végéről
+
+    Olvassátok el a hibaüzenetet: hogy hívják a hibát, és mit árul el arról, mi a baj?
 1. Írjatok programot, amely megkérdezi, hogy hogy hívnak. Miután megadtuk nevünket, kérdezze meg, hány évesek vagyunk, majd írjon ki egy összegző mondatot, hogy ki ül a gép előtt. `Szia [evszam] eves [nev], latom, te ulsz a gep elott`
 1. Írjatok programot, amely a bekért adatokból összeállít egy névjegykártyát és kiírja a képernyőre.
 Adataink: Név, Lakhely, Elérhetőség
 
-```
-Nev: [nev]
-Lakhely: [lakhely]
-Elerhetoseg: [elerhetoseg]
-```
+    ```
+    Nev: [nev]
+    Lakhely: [lakhely]
+    Elerhetoseg: [elerhetoseg]
+    ```
 1. Kérjünk be három természetes számot, ezek rendre 5, 2 és 1 eurósaink számát jelentik. Határozzuk meg, és írassuk ki a teljes összeget.
 példa:
-```
-5 eurosok szama: 2
-2 eurosok szama: 3
-1 eurosok szama: 1
-Ez osszesen 17 euro.
-```
+    ```
+    5 eurosok szama: 2
+    2 eurosok szama: 3
+    1 eurosok szama: 1
+    Ez osszesen 17 euro.
+    ```
 # Kerekítés
 - `round` függvénnyel
 - `round(a, x)`
@@ -61,12 +103,15 @@ Ez osszesen 17 euro.
 - `x` - tizedes helyek száma
 
 Pl. `round(12.345, 2)` eredménye `12.35`
+
+Ha az `x`-et elhagyjuk, egész számra kerekít: `round(12.345)` eredménye `12`.
+
 A szám helyére változó is írható!
 ## Feladatok
 1. Írjatok programot, amely bekér két számot, majd kiírja a hányadosukat 3 tizedes helyre.
 Ezután írassátok ki az egész részre való osztás eredményét és a maradékot.
 Ügyeljetek rá, hogy a program laikus felhasználók számára is használható legyen (a program írjon egy-két szót is, ne csak a konkrét eredményeket).
-> `/` tizedes osztás: `18/7=2.571428571428571`
+> `/` tizedes osztás: `18/7=2.5714285714285716`
  
 > `//` egészszámú osztás: `18//7=2`
  
@@ -75,7 +120,7 @@ Ezután írassátok ki az egész részre való osztás eredményét és a marad�
 Adatok, amiket megadunk: kör átmérője, Pí értéke: `3.14159`.
 Végeredmény:
 `Az X cm átmérőjű körnek Y cm a kerülete és Z négyzetcm a területe.`
-1. Írjatok programot, amely kiírja a kis szorzótáblát a beadott számra (1-től 10-ig).
+1. Írjátok ki a kis szorzótáblát a beadott számra (1-től 10-ig). Egyelőre elég 10 külön `print` sorral.
     ```
     Melyik szorzótáblát írjam ki? 11
     1*11=11
@@ -89,9 +134,10 @@ Végeredmény:
     - A citrom kilója 1.2€ 
     - A narancs kilója 1.5€
     
-    1. Írjatok programot, amely megmondja, mennyi pénzt vigyünk magunkkal, ha 1 kg almát, 1,5 kg citromot és 2 kg narancsot veszünk.
+    1. Írjatok programot, amely megmondja, mennyi pénzt vigyünk magunkkal, ha 1 kg almát, 1.5 kg citromot és 2 kg narancsot veszünk.
     Próbáljunk ki más értékeket is.
     Pl. mindenből 3 kilót, 5 kilót veszünk, stb.
+    > Figyelem: a kilók tizedes számok is lehetnek, ezért itt `float(input(...))` kell!
     1. Kérjétek be a felhasználótól, mennyi pénze van, s abból hány **egész** kiló almát, citromot és narancsot tud venni.
 
 ## Kérdések
