@@ -34,7 +34,7 @@ Feladat: egy programnak ki kell írnia az 1-től 100-ig terjedő számokat. Mit 
 
 A ciklus olyan programszerkezet, amely utasítások egy **blokkját** ismétli. Olyan, mint egy társasjáték szabálya:
 
-> "Amíg van pénzed, lépj egy mezőt, majd fizess 100 forintot.”
+> "Amíg van pénzed, lépj egy mezőt, majd fizess 100 forintot."
 
 Minden körben ugyanaz történik, aztán újra eldöntjük: **van még pénzed?** Ha igen, jön a következő kör. Ha nem, vége.
 
@@ -139,7 +139,7 @@ Kimenet: `1`, `2`, `4`, `5`
 
 > # ❓ Kérdések
 >
-> 1. Milyen hétköznapi helyzetet tudtok mondani, amelyben valamit "amíg” ismétlünk?
+> 1. Milyen hétköznapi helyzetet tudtok mondani, amelyben valamit "amíg" ismétlünk?
 > 2. Mi a különbség az `if` és a `while` között?
 > 3. Mi a ciklusmag, és hogyan jelöli a Python?
 > 4. Miért kell a `while` feltételének egyszer hamissá válnia?

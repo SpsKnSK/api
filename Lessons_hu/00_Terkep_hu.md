@@ -4,6 +4,10 @@ Ez az oldal segít eligazodni a tananyagon: **mi a kötelező alap**, mi az, ami
 
 > 🧰 **Gondolj rá úgy, mint egy szerszámosládára!** Minden lecke egy új szerszám. A cél nem az, hogy az összes szerszám nevét fejből fújjátok, hanem hogy amikor egy feladatba belefutsz, **tudjátok, melyik fiókban keressétek** a megoldást.
 
+🤖 [AI használata a tanuláshoz](00_AI_hu.md) — hogyan kérdezz és dolgozz jól az AI-val.
+
+🔧 [VS Code használata](00_VsCode_hu.md) — egyszerű lépések a fejlesztői környezethez.
+
 ```mermaid
 flowchart TD
     A["01 Algoritmusok"] --> B["02 print()"]
@@ -63,7 +67,7 @@ Ezek nélkül semmilyen Python-program nem érthető. Ha ezekben bizonytalan vag
 | 06 | [`while` ciklus](06_while_hu.md) | Amikor nem tudod előre, hányszor kell ismételni. | `while feltetel:` |
 | 07 | [`for` ciklus](07_for_hu.md) | Amikor előre tudod, min/hányszor mész végig. | `for i in range(...):` |
 | 09 | [Listák](09_lists_hu.md) | Sok érték egyben, egy változóban. | `[]`, index, `.append()`, `.sort()` |
-| 10 | [String-ek](10_string_hu.md) | A szöveg is "darabolható”, karakterről karakterre. | `[a:b]`, `.split()`, `.join()` |
+| 10 | [String-ek](10_string_hu.md) | A szöveg is "darabolható", karakterről karakterre. | `[a:b]`, `.split()`, `.join()` |
 | 11 | [Függvények](11_functions_hu.md) | Ismétlődő kódot egy helyre teszünk, és elnevezzük. | `def`, `return`, paraméterek |
 
 ### **Mire figyelj végig ezekben?** 
@@ -88,15 +92,15 @@ Nem annyira alap, mint a fentiek, de a gyakorlatban gyakran szükség lesz rá.
 
 ---
 
-## 🔵 "Elég csak tudni, hogy létezik” — nem kell mélyen érteni
+## 🔵 "Elég csak tudni, hogy létezik" — nem kell mélyen érteni
 
 Ezekről elég annyit tudni: **mi ez, és mikor vegyem elő** — nem kell fejből tudni megírni egy összetett osztályhierarchiát vagy egy grafikus felületet, de hasznos felismerni, ha valahol találkozol vele (pl. egy más nyelvű kódban, vagy egy könyvtár dokumentációjában).
 
 | # | Lecke | Elég ennyit tudni róla |
 |---|---|---|
-| 11 | [Lambda függvények](11_lambda_functions_hu.md) *(opcionális)* | Létezik egy "egysoros, névtelen függvény” is — ritkán kell saját kódban megírni |
+| 11 | [Lambda függvények](11_lambda_functions_hu.md) *(opcionális)* | Létezik egy "egysoros, névtelen függvény" is — ritkán kell saját kódban megírni |
 | 13 | [Osztályok (`class`)](13_classes_1_hu.md) | Az osztály olyan, mint egy **saját, összetett adattípus terve** — ha sok, összetartozó adatot és hozzá tartozó műveletet kell egyben kezelni, ez a szerszám |
-| 14 | [Öröklődés és polimorfizmus](14_inheritance_polymorphism_hu.md) | Osztályok tudnak "örökölni” egymástól — csak a fogalom szintjén elég ismerni |
+| 14 | [Öröklődés és polimorfizmus](14_inheritance_polymorphism_hu.md) | Osztályok tudnak "örökölni" egymástól — csak a fogalom szintjén elég ismerni |
 | 17 | [Tkinter — grafikus felület](17_tkinter_hu.md) | Létezik mód ablakos programot is írni Pythonban — elég tudni, hogy ez a neve, és nagyjából hogy néz ki |
 
 > A `13_classes_2` és `13_classes_3` leckék még mélyebbre mennek (JSON mentés, `@property`, context manager stb.) — ezek kifejezetten **haladó, opcionális** anyagok, csak akkor érdemes velük foglalkozni, ha valaki külön érdeklődik utána.

@@ -6,7 +6,7 @@
 >
 > **Mi az?** Névvel ellátott doboz a memóriában, amiben egy értéket tárolunk. A neve alapján bármikor előszedhetjük.
 >
-> **Értékadás:** `nev = ertek` – a `=` **nem** egyenlőség, hanem: "tedd bele!”
+> **Értékadás:** `nev = ertek` – a `=` **nem** egyenlőség, hanem: "tedd bele!"
 > ```py
 > kor = 16          # a kor dobozba bekerül a 16
 > kor = kor + 1     # kivesszük, hozzáadunk 1-et, visszatesszük -> 17

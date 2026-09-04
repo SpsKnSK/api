@@ -23,11 +23,11 @@ Mindig a **legkisebb szükséges segítséget** kérd —  megoldás helyett a r
 
 | Ha ez a helyzet... | ...ezt kérdezd |
 |---|---|
-| Elakadtál, nem tudod, hol kezdd | „Adj egy tippet, de ne mondd meg a megoldást.” |
-| Nem értesz egy fogalmat | „Magyarázd el egyszerű példával, mi az a `for` ciklus.” |
-| Van egy hibás programod | „Ez a kódom, ezt vártam, ezt kaptam. Segíts megtalálni, melyik részt vizsgáljam meg — ne javítsd ki helyettem.” |
-| Kész a megoldásod, ellenőriznéd | „Nézd át programozói szemmel: van-e hiba, felesleges rész? Magyarázd el, mit miért javasolsz.” |
-| Gyakorolnál még | „Adj egy hasonló nehézségű gyakorlófeladatot, de ne írd meg a megoldást.” |
+| Elakadtál, nem tudod, hol kezdd | "Adj egy tippet, de ne mondd meg a megoldást." |
+| Nem értesz egy fogalmat | "Magyarázd el egyszerű példával, mi az a `for` ciklus." |
+| Van egy hibás programod | "Ez a kódom, ezt vártam, ezt kaptam. Segíts megtalálni, melyik részt vizsgáljam meg — ne javítsd ki helyettem." |
+| Kész a megoldásod, ellenőriznéd | "Nézd át programozói szemmel: van-e hiba, felesleges rész? Magyarázd el, mit miért javasolsz." |
+| Gyakorolnál még | "Adj egy hasonló nehézségű gyakorlófeladatot, de ne írd meg a megoldást." |
 
 ~~"Oldd meg ezt a feladatot."~~
 
@@ -78,11 +78,33 @@ AI: Jó kérdés, próbáld ki, és nézd meg, mit tapasztalsz!
 
 👉 Vedd észre: a diák nem a `while` teljes leckéjét kérte újra, hanem **egy konkrét, meg nem értett részletre** kérdezett rá, és tovább kérdezett, amíg nem lett világos.
 
+**3. AI-detektív — keress hibát a kódban**
+
+```
+Én: Nézd meg ezt a programot, a számsorozat összegét akarom kiíratni:
+        szamok = [1, 2, 3, 4, 5]
+        osszeg = 0
+        for i in range(len(szamok)):
+            osszeg = szamok[i]
+        print(osszeg)
+    A programban van egy hibam, de nem talalom. Ne áruld el, hol van —
+    csak azt mondd meg, hogy merre keressem.
+
+AI: Rendben, gondolkodj el azon, mi történik az `osszeg` változóval minden
+    körben. Mit csinál pontosan az `osszeg = szamok[i]` sor?
+
+Én: Ahh, ez mindig felülírja az összeget, nem hozzáadja! Növelni kell az értékét `osszeg = osszeg + szamok[i]`.
+
+AI: Próbáld ki, és nézd meg, hogy most már a helyes eredményt kapod-e.
+```
+
+👉 Itt a diák maga futtatta le a kódot, maga kereste meg a hibát, és csak azután kért megerősítést az AI-tól — nem a javítást kérte.
+
 ## 🚫 Amit nem csinálunk
 
-- ❌ „Oldd meg a házimat.”
+- ❌ "Oldd meg a házimat."
 - ❌ Kész kód bemásolása anélkül, hogy értenénk.
-- ❌ „Működik, tehát jó.”
+- ❌ "Működik, tehát jó."
 - ❌ Olyan kód beadása, amiről nem tudjuk elmagyarázni, mit csinál.
 
 ## ✅ Amit csinálunk
@@ -94,7 +116,7 @@ AI: Jó kérdés, próbáld ki, és nézd meg, mit tapasztalsz!
 
 ## 🏆 A legfontosabb szabály
 
-Ne azt kérdezd: _„Hogyan csinálod meg helyettem?”_
-Hanem ezt: _„Hogyan tudsz segíteni abban, hogy én meg tudjam csinálni?”_
+Ne azt kérdezd: _"Hogyan csinálod meg helyettem?"_
+Hanem ezt: _"Hogyan tudsz segíteni abban, hogy én meg tudjam csinálni?"_
 
 🧠 A cél nem az, hogy AI nélkül tudj programozni. A cél az, hogy **AI-val is tudj gondolkodni**.

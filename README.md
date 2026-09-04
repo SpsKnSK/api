@@ -7,6 +7,11 @@ odpoveď.
 🗺️ [Mapa učiva](Lessons_sk/00_Mapa_sk.md) — prehľad všetkých lekcií a ich
 priority.
 
+🤖 [Používanie AI pri učení](Lessons_sk/00_AI_sk.md) — ako sa pýtať a
+pracovať s AI správne.
+
+🔧 [Používanie VS Code](Lessons_sk/00_VsCode_sk.md) — jednoduché kroky pre vývojové prostredie.
+
 ## 🧠 Ako pracujeme na hodine?
 
 Učenie neprebieha len vtedy, keď sleduješ, čo robím, ale najmä vtedy, keď
@@ -42,6 +47,8 @@ AI môžeš používať **rozumne**:
 - ❌ nekopíruj hotové riešenia bez toho, aby si im rozumel.
 
 To, čo odovzdáš, musíš vedieť aj vysvetliť a obhájiť.
+
+📖 Podrobný návod: [Používanie AI pri učení](Lessons_sk/00_AI_sk.md)
 
 ### 🎮 Premýšľaj ako v hre
 
@@ -136,6 +143,10 @@ nem tudod a választ.
 🗺️ [Térkép a tananyaghoz](Lessons_hu/00_Terkep_hu.md) — az összes lecke és
 azok prioritásának áttekintése.
 
+🤖 [AI használata a tanuláshoz](Lessons_hu/00_AI_hu.md) — hogyan kérdezz és dolgozz jól az AI-val.
+
+🔧 [VS Code használata](Lessons_hu/00_VsCode_hu.md) — egyszerű lépések a fejlesztői környezethez.
+
 ## 🧠 Hogyan dolgozunk az órán?
 
 A tanulás nem csak akkor történik, amikor nézed, amit csinálok, hanem főleg
@@ -171,6 +182,8 @@ Használd az AI-t okosan:
 - ❌ ne másolj kész megoldást anélkül, hogy megértenéd.
 
 Amit bead, azt meg is kell tudnod magyarázni és védeni.
+
+📖 Részletes útmutató: [AI használata a tanuláshoz](Lessons_hu/00_AI_hu.md)
 
 ### 🎮 Gondolkodj úgy, mint egy játékban
 

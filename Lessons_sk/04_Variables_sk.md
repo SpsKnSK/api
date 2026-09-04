@@ -4,7 +4,7 @@
 >
 > **Čo to je?** Menom označená krabica v pamäti, do ktorej uložíme jednu hodnotu. Podľa mena ju vieme kedykoľvek vybrať.
 >
-> **Priradenie:** `meno = hodnota` – `=` **nie je** rovnosť, ale: "vlož do toho!”
+> **Priradenie:** `meno = hodnota` – `=` **nie je** rovnosť, ale: "vlož do toho!"
 > ```py
 > vek = 16          # do krabice vek sa vloží 16
 > vek = vek + 1     # vyberieme, pripočítame 1, vložíme späť -> 17
