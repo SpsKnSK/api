@@ -35,6 +35,8 @@ Mindig a **legkisebb szükséges segítséget** kérd —  megoldás helyett a r
 
 ## 💬 Mintapélda egy jó beszélgetésre
 
+**1. Hibakeresés**
+
 ```
 Én: Ezt a Python feladatot próbálom megoldani.
     A célom: kiírni a lista páros számait.
@@ -48,6 +50,33 @@ AI: Nézd meg az if feltételedet — mit csinál a % operátor, és mit vizsgá
 Én: Ahh, azt hiszem a feltételem rossz, kipróbálom.
 ```
 
+**2. Ha egy fogalmat nem értesz**
+
+```
+Én: Nem értem, mi az a `while` ciklus. Magyarázd el egyszerűen, egy hétköznapi
+    hasonlattal, és utána mutass egy nagyon egyszerű Python példát.
+    Ne oldd meg vele a feladatomat, csak a fogalmat magyarázd el.
+
+AI: Képzeld el, hogy addig szórsz cukrot a teába, amíg elég édes nem lesz —
+    nem tudod előre, hányszor kell, csak azt, hogy mikor állj le.
+    Ez a `while` lényege: addig ismétled, amíg egy feltétel igaz.
+    Példa:
+        szam = 0
+        while szam < 3:
+            print(szam)
+            szam = szam + 1
+
+Én: Szóval a `while` mindig ellenőrzi a feltételt, mielőtt újra lefut?
+
+AI: Pontosan — minden körben előbb megnézi a feltételt, és csak akkor fut le
+    újra a blokk, ha az igaz.
+
+Én: Oké, és mi történik, ha elfelejtem növelni a `szam`-ot?
+
+AI: Jó kérdés, próbáld ki, és nézd meg, mit tapasztalsz!
+```
+
+👉 Vedd észre: a diák nem a `while` teljes leckéjét kérte újra, hanem **egy konkrét, meg nem értett részletre** kérdezett rá, és tovább kérdezett, amíg nem lett világos.
 
 ## 🚫 Amit nem csinálunk
 
