@@ -174,15 +174,16 @@ Amit bead, azt meg is kell tudnod magyarázni és védeni.
 
 ### 🎮 Gondolkodj úgy, mint egy játékban
 
-- Nem sikerül? → próbáld újra.
+- Nem sikerül? → próbáld újra, más irányból.
 - Elakadsz? → bontsd kisebb lépésekre.
-- Hiba? → tanulj belőle.
+- Hiba? → tanulj belőle, jegyezd fel, mit tanultál.
 
 ### 🧩 Hogyan tanulunk?
 
 - kis lépésekben haladunk,
 - sokat gyakorlunk,
-- gyakran félig kész kódot kapsz, amit ki kell egészítened.
+- félig kész kódot kapsz, amit ki kell egészítened,
+- jó kódot kapsz, amit el kell rontanod.
 
 👉 Nem a gyorsaság számít, hanem a megértés.
 
@@ -192,37 +193,25 @@ Amit bead, azt meg is kell tudnod magyarázni és védeni.
 - Kommunikáció: `Discord`
 - Jegyzet: saját rendszer (füzet vagy digitális jegyzetek)
 
-## 📚 Témák
-
-- alap adattípusok: `int`, `string`, `float`,
-- feltételek: `if`, `elif`, `else`,
-- ciklusok: `for`, `while`,
-- karakterláncok és szövegek kezelése,
-- függvények: `def`,
-- osztályok és öröklés: `class`,
-- dátumok: `import datetime`,
-- fájlok: `open`,
-- hibakezelés: `try-except-finally`.
-
 ## 📏 Alapszabályok
 
-1. 📵 A mobiltelefon nem zavarhatja a saját és mások munkáját.
+1. 📵 A mobiltelefonok egy közös helyen vannak összegyűjtve.
 2. 💻 Az iskola számítógépeit használjuk.
 3. ☁️ A fájlokat és jegyzeteket saját felhőbe mentheted.
-4. 🗣️ Kérdezni szabad, sőt ajánlott.
-5. 🤝 Segíthettek egymásnak.
+4. 🗣️ Minél többet kérdezel, annál többet tanulsz.
+5. 🤝 Segíthettek egymásnak, kivéve a dolgozatoknál.
 6. 🍎 Enni és inni a számítógéptől távol lehet.
 7. 🚶 Felállhatsz vagy sétálhatsz, de ne zavard a többieket.
 8. 🌿 Szünetben pihenj a számítógéptől.
 
 ## ⚠️ Az óra zavarása
 
-Ha valaki nem dolgozik (például játszik vagy folyamatosan telefonozik), azt
-úgy veszem, hogy nem szeretne haladni. Ennek lehetséges következményei:
+Ha valaki nem dolgozik (például játszik), zavarja a többieket, ennek ezek lehetnek a következményei:
 
 - gyors felelés jegyre,
 - elégtelen aktivitási jegy,
 - egyéni feladat,
+- dolgozat az egész osztálynak,
 - több önálló munka.
 
 👉 Te döntöd el, hogyan használod az idődet.
@@ -236,42 +225,33 @@ Nem csak a végeredmény számít. Értékelem:
 - az aktivitást,
 - a fejlődést.
 
-| Ponthatár | Jegy |
-|-----------|------|
-| 0         | 5    |
-| 35        | 4    |
-| 50        | 3    |
-| 70        | 2    |
-| 90        | 1    |
+| Ponthatár % | Jegy |
+|-------------|------|
+| 0           | 5    |
+| 35          | 4    |
+| 50          | 3    |
+| 70          | 2    |
+| 90          | 1    |
 
 A bizonyítvány jegyénél a jegyek átlaga számít. A **4,00-nál alacsonyabb**
 átlag végső jegye **5**.
 
 ## 📝 Jegyzetek
 
-Az órai anyagokat megosztom veletek, de ajánlom, hogy saját jegyzeteket is
-készítsetek füzetbe vagy digitálisan.
+Minden témának a fejlécében van egy rövid tartalmi összefoglaló, ezt füzetbe kell írnotok. A többi anyagot ezen az oldalon találjátok, de melegen ajánlom, hogy saját jegyzeteket is készítsetek (főleg amikor volt egy "Aha" élményed egy feladat megoldása közben).
 
 > Az előrehaladás elsősorban tőled függ.
 
 ## ✍️ Dolgozatok
 
-A dolgozatokat az EduPage-en, számítógépen írjátok, ha nem döntök másképp.
-Csak az átvett és gyakorolt anyag szerepel bennük:
+A dolgozatokat az EduPage-en, számítógépen, vagy papíron írjátok, ha nem döntök másképp. **Csak** az átvett anyag szerepel bennük:
 
 - *nyitott kérdések*, amelyekre írásban válaszoltok,
-- *feladatok*, amelyekben rövid programokat írtok.
+- *feladatok*, amelyekben programot írtok,
+- néhány dolgozatnál használhatod a füzeted és a githubot (viszont ha nincs a fejedben rendszerezve az anyag, sok időt fogsz keresgéléssel tölteni).
 
 ## 🏠 Házi feladatok
 
 A házi feladatokat mindenki önállóan oldja meg. Lehetnek nehezebbek az órai
-feladatoknál, de mindig a tanult anyagra és a gyakorolt logikára épülnek.
-
-### A házi feladatok értékelése
-
-- Az EduPage-en kiadott feladatot **1 héten** belül kell beadnod, ha nem
-  határozok másképp. Határidő után a feladat jegye 5.
-- Másolt házi feladat esetén:
-  - időrendben az elsőként beadott feladatot értékelem, függetlenül a
-    tényleges szerzőtől,
-  - a többi beadott másolat jegye 5.
+feladatoknál, de mindig a tanult anyagra épülnek. További útmutatót a
+feladattal együtt kaptok.
