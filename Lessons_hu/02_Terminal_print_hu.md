@@ -1,40 +1,79 @@
-# print() - Üzenetek a képernyőre 💬
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
 
-Képzeld el, hogy a `print()` olyan, mint amikor üzenetet küldesz valakinek! Csak itt a számítógép "chat ablakára" (terminálra) írod ki az üzeneteket.
+> # ✏️ `print()`
+>
+> **Mire jó?** Kiírja a képernyőre azt, amit a zárójelbe teszünk: szöveget, számot, változót, művelet eredményét.
+>
+> **Alak:** `print(érték1, érték2, sep=" ", end="\n")` a `sep` és az `end` nem kötelező
+>
+> | Amit írok | Mit jelent |
+> |---|---|
+> | `print("Szia")` | szöveg (idézőjelben!) |
+> | `print(12)` | szám (idézőjel nélkül) |
+> | `print(szam)` | változó **tartalma** |
+> | `print(a+b)` | előbb számol, aztán ír |
+> | `print(a, b)` | a vessző = szóköz a kimenetben |
+> | `sep="."` | mi kerüljön az értékek **közé** (alap: szóköz) |
+> | `end=" "` | mi kerüljön a sor **végére** (alap: új sor `\n`) |
+> | `""` | üres string |
+> | `\n` | új sor jele |
+> | `\t` | tabulátor |
+>
+> **Szám vs. szöveg:**
+> ```py
+> print(1+1)      # 2   -> összeadás
+> print("1"+"1")  # 11  -> összeragasztás
+> ```
+>
+> **Példa:**
+> ```py
+> print(192, 168, 100, 1, sep=".")
+> print("Szia", end=" ")
+> print("Peter!")
+> ```
+> képernyőn
+> ```
+> 192.168.100.1
+> Szia Peter!
+> ```
+>
+> **Metafora:** a `print()` olyan, mint egy **kirakat**: bármit teszel bele zárójelbe, azt kiteszi, hogy mindenki lássa a "kirakatban" (a képernyőn).
+# print()
+- Adatok, információk kiíratása a képernyőre
+- Kiírathatunk:
+    - Szöveget
+    - Számokat
+    - Változó tartalmát
+    - Több változóval elvégzett matematikai műveletek eredményét
 
-## Mit tudunk kiírni?
-🎮 **Szövegeket** - mint a gamer tagek  
-📊 **Számokat** - pontszámok, szintek, statisztikák  
-📱 **Változók tartalmát** - mint a felhasználói adatok  
-🔢 **Számítások eredményét** - mint a játékban szerzett XP  
+### Feladat
+1. Szöveg kiíratása (mi a különbség?):
+    ```py
+    print("Hello World")
+    print('Hello World')
+    ```
+1. Szám kiíratása (mi a különbség?):
+    ```py
+    print(123.45)
+    print(123,45)
+    ```
+1. Változó kiíratása
+    ```py
+    szam1=5
+    print(szam1)
+    ```
+1. Összeg kiíratása
+    ```py
+    szam1=5
+    szam2=11
+    print(szam1+szam2)
+    ```
 
-## Kezdjük az alapokkal! 
+## `print()` – vegyes kiíratás
+Lehetőség van egy print-en belül több adat kiíratására.
 
-### 1. Szövegek kiírása - mint egy chatüzenet
-```py
-print("Szia! Milyen a napod? 😊")
-print('Ez is szöveg, csak más idézőjelekkel')
-```
+Ezeket az adatokat vesszővel választjuk el egymástól
 
-### 2. Számok - mint a gaming statisztikák
-```py
-print(2024)           # Aktuális év
-print(99.9)          # Wifi sebesség Mbps-ben
-print(420, 69)       # Két szám egyszerre
-```
-
-### 3. Változók - mint a játékosi adatok
-```py
-gamer_tag = "ShadowHunter"
-level = 67
-hp = 850
-
-print(gamer_tag)
-print(level)
-print("HP:", hp)
-```
-
-### 4. Számítások - mint az XP kalkulátor
 ```py
 alap_xp = 1500
 bonus_xp = 350
@@ -85,14 +124,19 @@ Kimenet: `Sziasztok! Mi a helyzet? 🔥`
 
 ### Több sorba (mint Instagram caption):
 ```py
-print('Új poszt! 📸')
-print('Tetszik a új setup? 🖥️')
-print('#gaming #setup #RGB')
+(function) def print(
+    *values: object,
+    sep: str | None = " ",
+    end: str | None = "\n",
+    file: SupportsWrite[str] | None = None,
+    flush: Literal[False] = False
+) -> None
 ```
-
-### Vagy használd a `\n` karaktert (új sor):
+láthatjátok, hogy a `*values` a tetszőleges számú kiírandó érték, utána pedig 4 megnevezett (kulcsszavas) paraméter következik. Mi ebből kettővel fogunk foglalkozni: `sep` és `end`.
+### `sep`- separator
+Ahogy a VS Code segít megérteni a paramétert _string inserted between values, default a space._ Ezzel válasszuk el a bemenő értékeket egymástól:
 ```py
-print('Új poszt! 📸\nTetszik a új setup? 🖥️\n#gaming #setup #RGB')
+print("alma", "banan", "cseresznye")
 ```
 
 Mindkettő ugyanazt az eredményt adja!
@@ -103,59 +147,61 @@ Alapból a `print()` szóközzel választja el a dolgokat. De te döntöd el, mi
 
 #### Gaming leaderboard:
 ```py
-print("1", "ProGamer123", "15420", sep=" | ")
+print("alma", "banan", "cseresznye", sep=".")
 ```
-Kimenet: `1 | ProGamer123 | 15420`
+> kimenet: `alma.banan.cseresznye`
 
-#### URL készítés:
+Próbáljátok meg más karakterekkel.
+
+### `end`
+Ezt a karaktert teszi a sor végére. Mivel az alapértelmezett `end` az új sor karakter `\n`, a két print kimenete egymás alá kerül:
 ```py
-print("https:", "", "github.com", "myusername", "project", sep="/")
+print('Szia')
+print('Peter!')
 ```
-Kimenet: `https://github.com/myusername/project`
+kimenet
+```
+Szia
+Peter!
+```
 
-#### Hashtag generátor:
+Ha más írásjelet szeretnénk tenni a sor végére, akkor az `end` értéket kell változtatni, ezt pedig az alábbi módon tehetjük meg:
 ```py
-print("gaming", "setup", "RGB", "mechanical", sep=" #")
+print('Szia', end=" ")
+print('Peter!')
 ```
-Kimenet: `gaming #setup #RGB #mechanical`
+kimenet: 
+```
+Szia Peter!
+```
 
-#### IP cím:
+Próbáljátok meg más karakterekkel.
+
+## Speciális karakterek
+- `""` üres szöveg (üres string): nem látszik semmi a képernyőn. Olyan, mint a `0` az összeadásnál: `"alma" + ""` továbbra is `alma`
+- `"\n"` új sor karakter: innentől a szöveg új sorban folytatódik
+- `"\t"` tabulátor: nagyobb, oszlopokba rendező köz
 ```py
-print(192, 168, 1, 1, sep=".")
+print("alma\nbanan")
+print("alma\tbanan")
 ```
-Kimenet: `192.168.1.1`
+kimenet
+```
+alma
+banan
+alma    banan
+```
 
-### `end` - Mit tesz a sor végére?
-Alapból minden `print()` után új sorba ugrik. De ezt meg tudod változtatni!
-
-#### Loading animation effect:
+## Megjegyzés (komment) – a `#` jel
+A `#` jel utáni részt a Python **nem hajtja végre**, csak nekünk szól emlékeztetőül:
 ```py
-print("Loading", end="")
-print(".", end="")
-print(".", end="")
-print(".", end=" ")
-print("Done! ✅")
+# ez egy megjegyzes, nem fut le
+print("Szia")  # a sor vegen is lehet
 ```
-Kimenet: `Loading... Done! ✅`
 
-#### Twitch chat style:
-```py
-print("xX_ProGamer_Xx:", end=" ")
-print("GG WP! 🔥")
-```
-Kimenet: `xX_ProGamer_Xx: GG WP! 🔥`
-
-#### Progress bar style:
-```py
-print("██████", end="")
-print("░░░░", end=" ")
-print("60%")
-```
-Kimenet: `██████░░░░ 60%`
-
-## Fontos különbség: Szám vs. Szöveg 🤔
-
-### A klasszikus csapda:
+## Mi a különbség az 1 és az "1" között?
+- az `1` az szám, ami annyit tesz, mint a matekban 1-es érték
+- az `"1"` szöveg, úgy képzeljétek el, mintha azt írnátok a számítógépnek, hogy `egy`, nem érték, hanem szöveg
 ```py
 print(1 + 1)       # Matematikai számítás
 print("1" + "1")   # Szöveg összefűzés
@@ -165,127 +211,53 @@ Kimenet:
 2
 11
 ```
+> Számoknál a `+` **összead**, szövegnél **összeragaszt**.
 
-### Gaming példa:
+
+## Gyakorlat
+Adott 3 változó a következő értékekkel:
 ```py
-level = 50
-coins = 1250
-
-print("Szint:", level + 10)           # Számítás: 60
-print("Coins: " + str(coins))         # Szöveg: "Coins: 1250"
+elso=12
+masodik=24
+harmadik=34
 ```
-
-### Social media followers:
-```py
-followers = 847
-print("Követők száma:", followers)              # 847
-print("Követők szövegként: " + str(followers))  # "Követők szövegként: 847"
-```
-
-## Speciális karakterek - Easter eggs 🥚
-- `""` - üres string (mint a 0 az összeadásban)
-- `"\n"` - új sor (Enter billentyű)
-- `"\t"` - tab karakter (mint Tab billentyű)
-
-
-## 🚀 Próbáld ki! - Gaming Dashboard
-Készíts egy gamer statisztika kijelzőt! Adott adatok:
-
-```py
-username = "ShadowNinja"
-level = 47
-hp = 850
-mana = 420
-coins = 15750
-```
-
-### 1. Játékos adatlap:
-Írd ki így:
-```
-=== JÁTÉKOS PROFIL ===
-Név: ShadowNinja
-Szint: 47
-HP: 850
-Mana: 420
-Coins: 15750
-```
-
-### 2. Számítások:
-- Írd ki a HP és Mana összegét
-- Számold ki, hány coinjába kerül, ha HP-t vásárol (1 HP = 10 coin)
-- Készíts egy "power level" számítást: (HP + Mana) * Level
-
-### 3. Kreatív kihívás:
-Készíts egy "health bar" vizualizációt:
-```
-HP: ████████░░ (850/1000)
-```
-
-## 🧠 Kvíz - Mennyire vagy profi?
-
-### Alapok:
-1. **Mi a `print()` függvény célja?** (Hint: Mint WhatsApp üzenet küldése)
-2. **Mi a különbség a `42` és a `"42"` között?** (Gaming tipp: mint level vs. gamer tag)
-
-### Profi szint:
-3. **Készítsd el ezt a kimenetet egy `print()` használatával:**
-   ```
-   TikTok•Instagram•YouTube
-   ```
-   Adott: `print("TikTok", "Instagram", "YouTube", ???)`
-
-4. **Hogyan írnád ki ezt?**
-   ```
-   Loading... 🎮 Ready!
-   ```
-   Két `print()` használatával, de egy sorba!
-
-### Hacker szint:
-5. **Készíts "streaming overlay" szöveget:**
-   ```py
-   viewers = 847
-   likes = 156
-   # Cél: "👀 847 viewers | ❤️ 156 likes"
-   ```
-
-6. **Debug kód - mi a hiba?**
-   ```py
-   score = 1500
-   print("High score: " + score)  # Error! 💥
-   ```
-
-### Kreatív feladat:
-7. **Készíts ASCII art logót a nevedből** (használd a `sep` és `end` paramétereket!)
-
-### Bonus:
-8. **Mi történik itt?**
-   ```py
-   print("Best", "Game", "Ever", sep="", end="!!!\n")
-   print("Rate:", 10, "/", 10, sep="")
-   ```
-
-> **Pro tipp:** Ezeket mind ki tudod próbálni VS Code-ban! 🔥 
-
-## 📝 Gyakorlati kérdések - Ellenőrizd a tudásod!
-1. **Jellemezd a `print()` függvényt, mire szolgál?** (Gondolj a chat üzenetekre! 💬)
-2. **Ha több értéket, változót akarunk használni a `print()` függvényben, hogyan tehetjük azt meg?** 
-3. **Hogyan jelenik meg a `""` üres karakter a képernyőn?** 
-4. **Hogyan jelenik meg a `"\n"` karakter a képernyőn?** 
-5. **Mi a különbség az `5` és az `"5"` között?** (Hint: mint a szint számok vs. gamer tagek! 🏆)
-6. **Mire használjuk a `print()` függvény `sep` paraméterét, mi az alapértelmezett értéke?** Adj példát URL vagy hashtag készítésre!
-7. **Mire használjuk a `print()` függvény `end` paraméterét, mi az alapértelmezett értéke?** Adj példát loading animációra vagy chat üzenetre!
-8. **Változtassátok meg a `sep` paramétert a következő kódban úgy, hogy reális gaming server IP-címet kapjatok:**
-    ```py
-    print(192, 168, 0, 100)
+1. Írassátok ki ezt a három számot a képernyőre a következő formában: 
     ```
-    elvárt kimenet:
-    > 192.168.0.100
-9. **Változtassátok meg az `end` paramétert a következő kódban úgy, hogy egymás mellé írja ki a szöveget, mint egy Twitch chat üzenet:**
-    ```py
-    print('xX_Gamer_Xx:')
-    print('GG! 🔥')
+    Elso szam: 12
+    Masodik szam: 24
+    Harmadik szam: 34
     ```
-    elvárt kimenet:
-    > xX_Gamer_Xx: GG! 🔥
+    Oldjátok meg úgy is, hogy csak **egy** `print`-et használtok.
+2. Írassátok ki a három szám összegét és az első két szám szorzatát.
 
-10. **Mire szolgál a `#` jel a Python kódban?**
+> # 💥 Rontsátok el!
+> Írjatok olyan `print` sorokat, amiket a Python hibával utasít vissza. Ötletek:
+>
+> - hiányzó zárójel vagy idézőjel
+> - kevert idézőjel
+> - a függvény nevének elrontása (pl. nagy `P` betű)
+> - idézőjel nélküli szöveg
+> - több vessző, pont alkalmazása
+>
+> Olvassátok el a hibaüzenetet: melyik sorra mutat, és mi a hiba neve? Mire jutottatok?
+
+> # ❓ Kérdések
+> 1. Jellemezd a `print` függvényt, mire szolgál?
+> 1. Ha több értéket, változót akarunk használni a `print` függvényben, hogyan tehetjük azt meg? Soroljatok fel példákat.
+> 1. Hogyan jelenik meg a `""` üres string a képernyőn? Mutassatok rá példát!
+> 1. Hogyan jelenik meg a `"\n"` karakter a képernyőn? Mutassatok rá példát!
+> 1. Mi a különbség az `5` és az `"5"` között?
+> 1. Mire használjuk a `print` függvény `sep` paraméterét, mi az alapértelmezett értéke?
+> 1. Mire használjuk a `print` függvény `end` paraméterét, mi az alapértelmezett értéke?
+> 1. Változtassátok meg a `sep` paramétert a következő kódban úgy, hogy reális ip-címet kapjatok:
+>     ```py
+>     print(192,168,100,1)
+>     ```
+>     elvárt kimenet: `192.168.100.1`
+> 1. Változtassátok meg az `end` paramétert a következő kódban úgy, hogy egymás mellé írja ki a szöveget:
+>     ```py
+>     print('Szia')
+>     print('Peter!')
+>     ```
+>     elvárt kimenet: `Szia Peter!`
+> 1. Mire szolgál a `#` jel?

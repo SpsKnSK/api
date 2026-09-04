@@ -1,3 +1,30 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
+> # ✏️ Extrák - try, format, ternary
+>
+> Ez a lecke **nem kötelező tananyag**, hanem hasznos kiegészítő trükkök gyűjteménye. Nem baj, ha most kihagyjátok, később bármikor visszatérhettek rá.
+>
+> **`try-except`:** hibát kezel, hogy a program ne álljon le.
+> ```py
+> try:
+>     int("alma")
+> except Exception as e:
+>     print(f"Hiba történt: {e}")
+> ```
+>
+> **f-string:** a legkényelmesebb formázás.
+> ```py
+> nev = "Anna"
+> print(f"Szia, {nev}!")
+> ```
+>
+> **Ternary (soros if):** rövid értékadás feltétellel.
+> ```py
+> a = 20 if 10 > 20 else 10
+> ```
+>
+> **Metafora:** a `try-except` olyan, mint egy **biztonsági háló**: ha valami elszakad (hiba történik), nem zuhansz le (nem áll le a program), hanem szépen elkapja.
+
 # try-except-finally
 A hibák kezelésére szolgál. Hiba merülhet fel a következő esetekben:
 - 0-val osztunk `print(10/0)`
@@ -9,7 +36,7 @@ Ilyen esetekben használhatjuk a `try-except-finally` parancsokat:
 try:
     int('alma')
 except Exception as e:
-    print(f"Hiba tortent: {e}")
+    print(f"Hiba történt: {e}")
 finally:
     print("Finally branch will be always executed")
 ```
@@ -19,7 +46,7 @@ finally:
 try:
     raise Exception("Ez egy saját hiba")
 except Exception as e:
-    print(f"Hiba tortent: {e}")
+    print(f"Hiba történt: {e}")
 ```
 
 # format
@@ -28,14 +55,14 @@ except Exception as e:
 [Itt találtok hozzá több leírást a w3schools oldalán](https://www.w3schools.com/python/python_string_formatting.asp)
 ## format parancs
 
-A `str`-t elkészítitek a következőképpen: `"valami szoveg {valtozo_indexe} meg valami szoveg {valtozo_indexe}"`. Az index 0-tól indul, és a `format` parancs bemenő paramétereiként használjátok
+A `str`-t elkészítitek a következőképpen: `"valami szöveg {változó_indexe} még valami szöveg {változó_indexe}"`. Az index 0-tól indul, és a `format` parancs bemenő paramétereiként használjátok
 
 ```py
 speedLimit = 130
 speed = 110
 formattedString = "You are going {0} in a {1} area"
 
-stringToDisplay = formattedString.format(speedLimit, speed)
+stringToDisplay = formattedString.format(speed, speedLimit)
 
 print(stringToDisplay)
 ```
@@ -82,3 +109,7 @@ print(a)
 a = 20 if 10 > 20 else 10
 print(a)
 ```
+
+> # 📋 Feladatok
+> - [e01_get2NumbersAndWriteThemOut.md](../Exercies/08_try_format_ternary/e01_get2NumbersAndWriteThemOut.md)
+>

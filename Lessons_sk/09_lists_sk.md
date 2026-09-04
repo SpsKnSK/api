@@ -1,0 +1,291 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
+> # ✏️ Zoznamy
+>
+> **Zoznam** je viac hodnôt spolu, v jednej premennej. Na rozdiel od jednej „krabice“ je to celá **polica**, kde má každé miesto svoje poradové číslo (**index**), od 0.
+>
+> ```py
+> moj_zoznam = ["jablko", "banán", "čerešňa"]
+> print(moj_zoznam[0])   # "jablko"
+> ```
+>
+> | Operácia | Význam |
+> |---|---|
+> | `moj_zoznam[i]` | `i`-ty prvok (počítané od 0) |
+> | `.append(x)` | pridá `x` na **koniec** zoznamu |
+> | `.insert(i, x)` | vloží `x` na pozíciu `i` |
+> | `.remove(x)` | odstráni prvý prvok s hodnotou `x` |
+> | `.pop()` | vyberie a odstráni posledný prvok |
+> | `len(moj_zoznam)` | dĺžka zoznamu (počet prvkov) |
+> | `.sort()` | zoradí vzostupne (na mieste) |
+>
+> **Metafora:** zoznam je ako **polica s krabicami** — každá krabica má svoje číslo (0, 1, 2...) a kedykoľvek do nej môžete niečo pridať, vybrať z nej niečo alebo krabice popresúvať.
+
+# Zoznamy
+
+## 📑 Obsah
+| Časť | O čom je |
+|---|---|
+| [Prvky v zozname](#prvky-v-zozname) | index, prístup |
+| [Príklad](#príklad) | ukážka |
+| [Zmena hodnoty prvku v zozname](#zmena-hodnoty-prvku-v-zozname) | `zoznam[i] = ...` |
+| [`len()`](#len) | dĺžka |
+| [Odstránenie prvku](#odstránenie-prvku) | `del`, `.remove()` |
+| [Vyňatie prvku pomocou `.pop()`](#vyňatie-prvku-pomocou-pop) | vyberie + vráti |
+| [Úplné vymazanie zoznamu `.clear()`](#úplné-vymazanie-zoznamu-clear) | prázdny zoznam |
+| [Pridanie nového prvku](#pridanie-nového-prvku) | `.append()`, `.insert()`, `.index()`, `.count()`, `.extend()`, `.reverse()` |
+| [Výmena dvoch prvkov v zozname](#výmena-dvoch-prvkov-v-zozname) | výmena cez indexy |
+| [Naplnenie zoznamu náhodnými číslami](#naplnenie-zoznamu-náhodnými-číslami) | `random` |
+| [Zoradenie](#zoradenie) | `.sort()` vs `sorted()` |
+
+
+Zoznam je dátový typ, ktorý slúži na uchovávanie viacerých hodnôt v jednej premennej.
+
+Môže obsahovať:
+- Celé čísla
+- Reťazce
+- Desatinné čísla
+- Iný zoznam
+- Atď., rôzne typy údajov.
+
+## Prvky v zozname
+
+V zozname zaberá každý prvok určitú pozíciu, ktorá sa nazýva **index**. Index začína od 0 až po pozíciu posledného prvku.
+```mermaid
+flowchart LR
+    A["0: 'apple'"] --- B["1: 'banana'"] --- C["2: 'cherry'"]
+```
+
+```py
+moj_zoznam = ["jablko", "hruška", "čerešňa"]
+print(moj_zoznam)
+
+print(moj_zoznam[0])
+print(moj_zoznam[1])
+print(moj_zoznam[2])
+```
+
+Hodnota premennej `moj_zoznam` je `list`.
+
+## Príklad
+```py
+udaje = ['pondelok', 'utorok', 'streda', 1800]
+print(udaje[2])
+```
+
+## Zmena hodnoty prvku v zozname
+```py
+udaje = ['pondelok', 'utorok', 'streda', 1800]
+print(udaje)
+udaje[3] = udaje[3] + 47
+print(udaje)
+```
+Iný príklad:
+```py
+udaje = ['pondelok', 'utorok', 'streda', 1800]
+print(udaje)
+udaje[3] = 'júl'
+print(udaje)
+```
+## `len()`
+```py
+moj_zoznam = ["jablko", "hruška", "čerešňa"]
+print(len(moj_zoznam))
+```
+
+## Odstránenie prvku
+```py
+moj_zoznam = ["jablko", "hruška", "čerešňa"]
+del(moj_zoznam[1])
+print(moj_zoznam)
+```
+alebo
+```py
+moj_zoznam = ["jablko", "hruška", "čerešňa"]
+moj_zoznam.remove("jablko")
+print(moj_zoznam)
+```
+## Vyňatie prvku pomocou `.pop()`
+Vyberie posledný prvok, a môže sa uložiť do premennej, zároveň ho odstráni zo zoznamu.
+```py
+moj_zoznam = ["jablko", "hruška", "čerešňa"]
+hodnota = moj_zoznam.pop()
+print(moj_zoznam)
+print(hodnota)
+```
+
+## Úplné vymazanie zoznamu `.clear()`
+```py
+moj_zoznam = ["jablko", "hruška", "čerešňa"]
+moj_zoznam.clear()
+print(moj_zoznam)
+```
+## Pridanie nového prvku
+### `.append(value)` nový prvok na koniec zoznamu
+```py
+moj_zoznam = ["jablko", "hruška", "čerešňa"]
+moj_zoznam.append('kiwi')
+print(moj_zoznam)
+```
+### `.insert(index, value)` nový prvok na danú pozíciu
+```py
+moj_zoznam = ["jablko", "hruška", "čerešňa"]
+moj_zoznam.insert(1, 'kiwi')
+print(moj_zoznam)
+```
+### `.index(element)`
+Vráti index zadaného prvku, ak ho nájde, inak vráti `ValueError` výnimku.
+
+```py
+from random import sample
+
+moj_zoznam = sample(range(1, 50), 7)
+index_najmensieho = moj_zoznam.index(min(moj_zoznam))
+print(f"Najmenší prvok v {moj_zoznam} je na indexe {index_najmensieho}, jeho hodnota je {moj_zoznam[index_najmensieho]}")
+```
+### `.count(searchedElement)`
+Spočíta počet výskytov daných prvkov v zozname.
+```py
+moj_zoznam = [1, 1, 2, 3, 4, 5, 5, 1, 1]
+print(moj_zoznam.count(1))
+```
+### `.extend(anotherList)`
+Zlúči dva zoznamy.
+```py
+from random import sample
+
+moj_zoznam = sample(range(1, 50), 3)
+tvoj_zoznam = sample(range(100, 500), 2)
+print(moj_zoznam)
+print(tvoj_zoznam)
+moj_zoznam.extend(tvoj_zoznam)
+print(moj_zoznam)
+```
+### `.reverse()`
+Otočí poradie prvkov v zozname.
+```py
+from random import sample
+
+moj_zoznam = sample(range(1, 50), 5)
+print(moj_zoznam)
+moj_zoznam.reverse()
+print(moj_zoznam)
+```
+
+## Výmena dvoch prvkov v zozname
+```py
+moj_zoznam = ["jablko", "hruška", "čerešňa"]
+jablkoIndex, hruškaIndex = moj_zoznam.index("jablko"), moj_zoznam.index("hruška")
+
+print(moj_zoznam)
+
+moj_zoznam[hruškaIndex], moj_zoznam[jablkoIndex] = moj_zoznam[jablkoIndex], moj_zoznam[hruškaIndex]
+
+print(moj_zoznam)
+```
+
+## Naplnenie zoznamu náhodnými číslami
+### Variant 1
+```py
+from random import randint
+
+moj_zoznam = []
+while index < dlzka_zoznamu:
+    moj_zoznam.append(randint(minimum_intervalu, maximum_intervalu))
+    index += 1
+print(moj_zoznam)
+```
+### Variant 2
+```py
+from random import sample
+moj_zoznam = sample(range(minimum, maximum), pocet_prvkov)
+print(moj_zoznam)
+```
+
+
+# Zoradenie
+
+Prvky zoznamu môžeme zoradiť pomocou dvoch funkcií:
+- `myList.sort()`
+- `sorted(myList)`
+
+## `.sort()`
+
+```python
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+numbers.sort()
+print(numbers)  # [-5, -3, 1, 2, 3, 4, 98, 565]
+```
+
+Zoradí prvky **vzostupne**.
+
+```python
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+numbers.sort(reverse=True)
+print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
+```
+
+Zoradí prvky **zostupne** pomocou `reverse=True`.
+
+## `sorted()`
+
+```python
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+sorted(numbers)
+print(numbers)  # [1, 2, 3, 4, -5, 98, 565, -3]
+numbers = sorted(numbers)
+print(numbers)  # [-5, -3, 1, 2, 3, 4, 98, 565]
+```
+
+Zoradí prvky **vzostupne**, ale treba si uvedomiť, že `sorted` vytvorí nový zoznam, preto je potrebné znovu priradiť hodnotu premennej `numbers`.
+
+```python
+numbers = [1, 2, 3, 4, -5, 98, 565, -3]
+sorted(numbers, reverse=True)
+print(numbers)  # [1, 2, 3, 4, -5, 98, 565, -3]
+numbers = sorted(numbers, reverse=True)
+print(numbers)  # [565, 98, 4, 3, 2, 1, -3, -5]
+```
+
+Zoradí prvky **zostupne** pomocou `reverse=True`.
+
+> # 💥 Pokazte to!
+>
+> Aký je problém s týmto programom? Prečo výstup nie je `[1, 2, 3]`?
+>
+> ```py
+> numbers = [3, 1, 2]
+> sorted(numbers)
+> print(numbers)
+> ```
+>
+> Opravte ho tak, aby `numbers` naozaj bol zoradený. Aký je rozdiel medzi `.sort()` a `sorted()`?
+
+> # 📋 Úlohy
+> - [e01_fillList.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e01_fillList.md)
+> - [e02_fillListWithinInterval.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e02_fillListWithinInterval.md)
+> - [e03_maxMin.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e03_maxMin.md)
+> - [e04_maxMinIndexAverage.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e04_maxMinIndexAverage.md)
+> - [e05_randomEvenOdd.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e05_randomEvenOdd.md)
+> - [e06_switchNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e06_switchNumbers.md)
+> - [e07_separateTextNumbers.md](https://github.com/SpsKnSK/api/blob/main/Exercies/09_lists/e07_separateTextNumbers.md)
+
+> # ❓ Otázky
+>
+> 1. Na čo slúžia zoznamy?
+> 2. Vytvorte prázdny zoznam a vypíšte ho na obrazovku.
+> 3. Na čo slúži index?
+> 4. Vypíšte prvý a posledný prvok ľubovoľného zoznamu.
+> 5. Odstráňte všetky prvky ľubovoľného zoznamu pomocou príkazu `del`.
+> 6. Do 4-prvkového zoznamu pridajte ľubovoľný nový prvok pomocou príkazu `.insert()`.
+> 7. Do ľubovoľného zoznamu pridajte ľubovoľný nový prvok pomocou príkazu `.append()`.
+> 8. V zozname čísel vypíšte najmenšiu a najväčšiu hodnotu a ich indexy.
+> 9. Aký je rozdiel medzi `.remove()` a `.pop()`?
+> 10. Čo vypíše tento program?
+>
+>     ```py
+>     mylist = [10, 20, 30]
+>     mylist.append(40)
+>     mylist.pop(0)
+>     print(mylist)
+>     ```

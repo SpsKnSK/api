@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 # Algoritmy a ich vlastnosti
 
 ## Čo znamená algoritmus?
@@ -173,21 +175,21 @@ print("Hello!")
    - Každý nech si ukláda do svojho priečinka!
 3. **Spustenie programu** (tlačidlo F5 alebo gombík pre spustenie)
 
-# Prečo je Python dobrý?
+# Python programovacie prostredie
 
-## Výhody
+## Základné informácie
 
-- **Zadarmo** - každý si ho môže stiahnuť a používať
-- **Funguje na všetkých počítačoch** - Windows, Mac, Linux
-- **Ľahko sa učí** - môžeme písať jednoduchými slovami
-- **Dá sa použiť na veľa vecí:**
-    - Tvorba hier
-    - Webové stránky
-    - Analýza údajov
-    - Programovanie robotov
-    - A ešte veľa iného!
+- Zdarma na stiahnutie
+- Možnosť spustenia na akomkoľvek operačnom systéme
+- Malá náročnosť na miesto
+- Množstvo knižníc -> Veľmi využiteľný na rôznych oblastiach
+    - Základné programovanie
+    - Riadenie procesov
+    - Správa databáz
+    - Atď.
 
-## VS Code prostredie
-- **Editor** - tu píšeme kód
-- **Terminál** - tu spúšťame program a vidíme výsledky
-- **Správca súborov** - tu vidíme súbory nášho projektu
+## Podrobne o prostredí
+- Z hľadiska syntaxe a pokročilosti sa podobá jazyku C.
+- Pracujeme s dvoma hlavnými oknami.
+    - **Príkazový riadok** – tu spúšťame napísaný program
+    - **Editor skriptov** – tu píšeme programy

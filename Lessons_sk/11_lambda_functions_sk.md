@@ -1,3 +1,24 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
+> # ✏️ Lambda funkcie (voliteľné)
+>
+> **Lambda** je krátka, anonymná, jednoradová funkcia.
+>
+> ```py
+> stvorec = lambda x: x ** 2
+> print(stvorec(4))   # 16
+> ```
+>
+> To isté ako:
+> ```py
+> def stvorec(x):
+>     return x ** 2
+> ```
+>
+> Najčastejšie ju používame spolu s `map()`, `filter()` a `sorted(key=...)`, keď treba inej funkcii odovzdať jednoduchú operáciu.
+>
+> **Metafora:** lambda je ako **post-it lístok**, na ktorý si rýchlo napíšete jednoradový pokyn a hneď ho niekomu odovzdáte — neoplatí sa mu dávať meno ako „riadnej“ funkcii.
+
 # Lambda funkcie
 
 Lambda funkcie sa nedefinujú pomocou príkazu `def`, ale pomocou príkazu `lambda`, zvyčajne sa nazývajú ako *"in-line funkcie"*.
@@ -120,3 +141,35 @@ Pomocou `reduce` napíšte nasledujúce funkcie:
 # Zhrnutie
 
 Lambda funkcie sú krátke, anonymné funkcie, ktoré sa používajú na jednoduché operácie. Sú obzvlášť užitočné, keď chceme jednoduchú funkciu odovzdať inej funkcii, napríklad funkciám `map`, `filter`, `sorted` alebo `reduce`.
+
+> # 💥 Pokazte to!
+>
+> Aká je chyba v tomto programe?
+>
+> ```py
+> numbers = [1, 2, 3, 4]
+> squared = map(lambda x: x**2, numbers)
+> print(squared)
+> ```
+>
+> Prečo sa nezobrazí `[1, 4, 9, 16]`? Opravte to tak, aby sa naozaj vypísal zoznam.
+
+> # 📋 Úlohy
+> - Pomocou `reduce` napíšte tieto funkcie: `min`, `max`, `sum`.
+> - Zo zoznamu slov (`["jablko", "hruška", "orech", "slivka"]`) pomocou `sorted()` a lambda zoradte slová podľa dĺžky.
+> - Pomocou `filter()` a lambda vyberte zo zoznamu čísel prvky väčšie ako 10.
+
+> # ❓ Otázky
+>
+> 1. V čom sa lambda funkcia líši od funkcie napísanej pomocou `def`?
+> 2. Kedy sa oplatí použiť lambda funkciu a kedy nie?
+> 3. Na čo slúži funkcia `map()`?
+> 4. Na čo slúži funkcia `filter()`?
+> 5. Čo robí `sorted(zoznam, key=lambda x: ...)`?
+> 6. Čo vypíše tento program?
+>
+>    ```py
+>    numbers = [1, 2, 3, 4, 5]
+>    odd_numbers = list(filter(lambda x: x % 2 != 0, numbers))
+>    print(odd_numbers)
+>    ```

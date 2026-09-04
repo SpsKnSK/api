@@ -1,6 +1,34 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
+> # ✏️ Fájlkezelés
+>
+> ```py
+> with open("munkafajl.txt", "w") as f:
+>     f.write("Ez egy tesztsor 12345")
+>
+> with open("munkafajl.txt", "r") as f:
+>     tartalom = f.read()
+>     print(tartalom)
+> ```
+>
+> | Mód | Jelentés |
+> |---|---|
+> | `r` | csak olvasás |
+> | `w` | csak írás (felülírja a fájlt!) |
+> | `a` | hozzáfűzés a fájl végéhez |
+> | `r+` | írás és olvasás egyszerre |
+>
+> - `f.read()` — teljes tartalom
+> - `f.readline()` — egy sor
+> - `f.readlines()` — lista, minden sor egy elem
+> - `f.write(szoveg)` — csak `str`-t fogad el! (`str(szam)`-mal alakítsd át)
+> - `with open(...) as f:` — a fájl **automatikusan bezárul** a blokk végén, nem kell `f.close()`
+>
+> **Metafora:** a fájl olyan, mint egy **közös jegyzetfüzet**: ha kinyitod (`open`), írhatsz vagy olvashatsz belőle, de ha elfelejted becsukni (`close`), más program esetleg nem tud hozzáférni. A `with` olyan, mint egy **automata ajtó**: magától becsukódik, amikor kilépsz.
+
 # Fájlkezelés
 Az eddigi programjaink csak nagyon kevés adatot kezeltek, kétféleképpen vittünk be adatokat:
-- billentyűzetről az `input` függvény segétségével
+- billentyűzetről az `input` függvény segítségével
 - véletlenszerűen generáltuk őket a `random` osztállyal
 
 Amikor nagymennyiségű adatot akarunk kezelni, akkor jönnek kapóra a fájlok (adatbázisok).
@@ -39,7 +67,7 @@ módosító| tulajdonság
 `t`|a fájlt szövegként nyissa meg, alapméretezett
 `b`|a fájlt binárisan nyissa meg
 
-> Ha egy fáljt binárisan akarunk megnyitni: `f = open('munkafajl.txt', 'rb')` akkor **read binary** módosítót használunk
+> Ha egy fájlt binárisan akarunk megnyitni: `f = open('munkafajl.txt', 'rb')` akkor **read binary** módosítót használunk
 
 ## Fájl olvasása
 - `f.read(size)`
@@ -62,8 +90,8 @@ módosító| tulajdonság
 - Egy paraméter esetén az aktuális indexű pozícióra állítja a kurzort.
 
 ## Írás a fájlba
-`f.write("szoveg")` a zárójelbe írt szöveg kerül bele a fájlba.
-> A fájlba csak `str` adattípust tudunk írni, ha nás típusú értékünk van, akkor azt `string`-gé kell alakítani `str(1)`
+`f.write("szöveg")` a zárójelbe írt szöveg kerül bele a fájlba.
+> A fájlba csak `str` adattípust tudunk írni, ha más típusú értékünk van, akkor azt `string`-gé kell alakítani `str(1)`
 
 ## Fájl bezárása
 `f.close()` A fájlokat minden használat után be **kell** zárni
@@ -147,9 +175,34 @@ with open(full_path, "r") as f:
    for sor in f.readlines():
       print(sor)
 ```
-# Szemlétetők
-1. [Egész számok mentése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/01_saveNumbers.py)
-1. [Saját adattípus mentése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/01_saveClass.py)
-# Feladatok
-1. [Véletlen számok beírása](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e01_saveRandomNumbers.md)
-1. [Véletlen számok sorbarendezése](https://github.com/SpsKnSK/api/tree/main/Exercies/16_files/e02_sortRandomNumbers.md)
+
+> # 💥 Rontsátok el!
+>
+> Mi a hiba ebben a programban?
+>
+> ```py
+> f = open("munkafajl.txt", "w")
+> f.write(12345)
+> f.close()
+> ```
+>
+> Milyen hibaüzenetet kaptok? Miért? Hogyan kell kijavítani, hogy a `12345` számot mégis bele tudjuk írni a fájlba?
+
+> # 📋 Feladatok
+> - [01_saveNumbers.py](../Exercies/16_files/01_saveNumbers.py) — szemléltető: egész számok mentése
+> - [01_saveClass.py](../Exercies/16_files/02_saveClass.py) — szemléltető: saját adattípus mentése
+> - [e01_saveRandomNumbers.md](../Exercies/16_files/e01_saveRandomNumbers.md)
+> - [e02_sortRandomNumbers.md](../Exercies/16_files/e02_sortRandomNumbers.md)
+> - [e03_longestLine.md](../Exercies/16_files/e03_longestLine.md)
+> - [e04_loadStudents.md](../Exercies/16_files/e04_loadStudents.md)
+> - [e05_creditCard.md](../Exercies/16_files/e05_creditCard.md)
+> - [e06_longestWordInFile.md](../Exercies/16_files/e06_longestWordInFile.md)
+> - [e07_characterCount.md](../Exercies/16_files/e07_characterCount.md)
+
+> # ❓ Kérdések
+>
+> 1. Mi a különbség az `r`, `w` és `a` fájlmegnyitási módok között?
+> 2. Miért érdemes a `with` parancsot használni fájlok megnyitásához?
+> 3. Milyen adattípust fogad el a `.write()` függvény, és mit kell tenni, ha számot szeretnénk kiírni?
+> 4. Mire jó az `os.path.dirname(__file__)`?
+> 5. Mi a különbség a `.read()`, `.readline()` és `.readlines()` függvények között?

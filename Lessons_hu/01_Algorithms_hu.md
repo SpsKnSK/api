@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 # Algoritmusok és  tulajdonságaik
 
 ## Mit jelent az algoritmus?
