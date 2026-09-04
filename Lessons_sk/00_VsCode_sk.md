@@ -7,12 +7,12 @@
 - Tento priečinok bude tvoj **pracovný adresár**.
 ## 2. 🗂 Otvorenie priečinka vo VS Code
 - Spusti **Visual Studio Code**.
-- Klikni v ľavom menu na **"Súbor"** → **"Otvoriť priečinok..."** *("Open folder...")*.
+- Klikni v ľavom menu na **"Súbor"** *("File")* → **"Otvoriť priečinok..."** *("Open Folder...")*.
 - Vyber svoj priečinok s menom (napr. `jozko_mrkvicka`).
 - Tento priečinok sa stane tvojím **predvoleným pracovným priestorom** – sem sa budú ukladať všetky súbory.
 
 ## 3. 📝 Vytvorenie nového Python súboru
-- Naľavo klikni na ikonu **"Nový súbor"**.
+- Naľavo klikni na ikonu **"Nový súbor"** *("New File")*.
 - Pomenuj súbor, vždy s príponou `.py` (napr. `prvy_program.py`).
 - Napíš svoj kód, napr.:
     ```
@@ -21,7 +21,7 @@
 ## 4, ▶ Spustenie kódu
 - Stlač klávesu `F5` pre spustenie kódu.
 - Ak to nefunguje, hore v menu klikni:
-- **"Spustiť"** → **"Spustiť bez ladenia"**
+- **"Spustiť"** *("Run")* → **"Spustiť bez ladenia"** *("Run Without Debugging")*
 ## 5. ⚪ Čo znamená biely krúžok?
 - Ak sa vedľa názvu súboru objaví biely krúžok, znamená to: **urobil si zmenu na súbore, ale ešte si ju neuložil.**
 - Stlač `Ctrl` + `S` pre uloženie.
