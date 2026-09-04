@@ -2,103 +2,114 @@
 
 # Algoritmy a ich vlastnosti
 
-## Algoritmus
-- Množinu inštrukcií, ktoré vedú k riešeniu úlohy, nazývame **algoritmus**, s nimi sa stretávame každý deň.
-- **Inštrukcie** môžu byť udelené rôznymi spôsobmi: ústne, kreslením, písaním, maďarským jazykom, anglickým jazykom alebo programovacím jazykom.
-- Algoritmus je cesta k riešeniu nastalého problému.
-    - Máme úlohu získať napríklad dva fixy.
+## Čo znamená algoritmus?
+- **Algoritmus** je návod krok za krokom, ktorý nám pomôže vyriešiť nejakú úlohu. V každodennom živote používame algoritmy!
+- Tieto pokyny môžeme zapísať rôzne: môžeme o nich hovoriť, nakresliť ich, napísať slovami alebo aj programovacím jazykom.
+- Algoritmus je jednoducho recept na riešenie problému.
+    - Napríklad: ako získať dva fixy?
 
-## Typy
+## Druhy
 
-1. Algoritmus môže byť sekvencia niekoľkých elementárnych činností vykonávaných za sebou (**sekvenčný**) postup, ako napríklad.
-    - Choďte na oddelenie!
-    - Nájdite správcu!
-    - Požiadajte ho o dva fixy!
-    - Prineste fixy do prednáškovej miestnosti!
+1. **Jednoduché kroky za sebou** (**sekvencia**) - ako recept na varenie:
+    - Choď do kancelárie!
+    - Nájdi učiteľa!
+    - Požiadaj ho o dva fixy!
+    - Vráť sa do triedy!
 
-1. Riešenie môže na určitých bodoch nebyť viditeľné dopredu a bude závislé na **podmienkach**, ktoré musíme vybrať iné a iné riešenie. Napríklad:
-    - Choďte na oddelenie!
-    - Nájdite správcu!
-    - <ins>Ak</ins> ho nájdete, <ins>tak</ins>
-        - Požiadajte ho o dva fixy!
-    - <ins>inak</ins>
-        - Nájdite fixy niekde inde!
-    - Vráťte sa do prednáškovej miestnosti!
+2. **Rozhodovanie podľa situácie** (**vetvenie**) - musíme sa rozhodnúť:
+    - Choď do kancelárie!
+    - Nájdi učiteľa!
+    - <ins>Ak</ins> je tam, <ins>tak</ins>
+        - Požiadaj ho o dva fixy!
+    - <ins>Ak tam nie je</ins>
+        - Nájdi fixy niekde inde!
+    - Vráť sa do triedy!
 
-1. Môže sa stať, že pre riešenie bude nutné niektorú činnosť vykonať viac krát, teda opakovať (**iterovať**).
-    - Urob to dvakrát
-        - Požiadajte ho o jeden fix!
-Iteráciu niekedy nazývame cyklus.
+3. **Opakovanie** **(cyklus)** - keď musíme niečo robiť viackrát:
+    - Urob to dvakrát:
+        - Požiadaj o jeden fix!
+    
+Opakovanie nazývame aj cyklus, lebo "chodíme dokola".
 
-## Algoritmus v informatike
+## Algoritmus v programovaní
 
-Štruktúru algoritmu teda tvoria **sekvencie**, **selekcie** a **iterácie**, ktoré môžu byť ľubovoľne vnorené do seba v ľubovoľnej hĺbke.
+Teda každý algoritmus sa skladá z týchto častí: **kroky za sebou**, **rozhodnutia** a **opakovania**. Môžeme ich kombinovať a vkladať do seba.
 
-Tvorbe algoritmu sa hovorí algoritmizácia.
+Návrh algoritmu sa nazýva algoritmizácia.
 
-Má tri spôsoby zápisu.
-- Pomocou priebehového diagramu
-- Ústne
-- Pomocou štruktúrovanej formy
+Môžeme ho zapísať tromi spôsobmi:
+- **Vývojovým diagramom** (obrázkom)
+- **Slovami** (opisom)
+- **Štruktúrovanou formou** (špeciálny diagram)
 
-## Priebehový diagram
+## Vývojový diagram
+
+Vývojový diagram je ako mapa pre náš program:
 
 ```mermaid
 flowchart TB
     kezdetVagyVeg([Začiatok alebo koniec])
-    parancs[Prikaz]
-    if{podmienka, vetvenie}
+    parancs[Pokyn/Príkaz]
+    if{Otázka/Rozhodnutie}
 ```
-Výber najväčšieho čísla
-> `:=` bude rovné
+
+**Príklad:** Výber najväčšieho čísla z troch čísel
+> Znak `:=` znamená: "nech sa rovná"
 ```mermaid
-flowchart LR
-	Začiatok([Začiatok])
+flowchart TB
+	Zaciatok([Začiatok])
     Vstup[Vstup: A, B, C]
-    Pokiaľ1{A>B}
+    If1{A>B}
     MaxB[Max := B]
     MaxA[Max := A]
-    Pokiaľ2{C>Max}
+    If2{C>Max}
     Koniec([Koniec]) 
     MaxC[Max := C]
-    Výstup[Výstup: Max]
+    Vystup[Výstup: Max]
 
-    Začiatok --> Vstup
-    Vstup --> Pokiaľ1
-    Pokiaľ1 -- B>A --> MaxB
-    Pokiaľ1 -- A>B --> MaxA
-    MaxA --> Pokiaľ2
-    MaxB --> Pokiaľ2
-    Pokiaľ2 -- C < Max --> Výstup
-    Pokiaľ2 -- C > Max --> MaxC
-    MaxC --> Výstup
-    Výstup --> Koniec
+    Zaciatok --> Vstup
+    Vstup --> If1
+    If1 -- B>A --> MaxB
+    If1 -- A>B --> MaxA
+    MaxA --> If2
+    MaxB --> If2
+    If2 -- C < Max --> Vystup
+    If2 -- C > Max --> MaxC
+    MaxC --> Vystup
+    Vystup --> Koniec
 ```
 
-## Vlastnosti algoritmu
-### Univerzalita
-Aby bol náš algoritmus vhodný na riešenie rôznych, ale rovnakého typu úloh, musí byť napísaný všeobecne.
-- Napríklad výpočet plochy štvorca.
+# Dôležité vlastnosti algoritmu
 
-### Determinizmus
-Po zadání rovnakých vstupných hodnôt musí algoritmus vrátiť rovnaký výsledok.
+## Univerzálnosť
+Algoritmus by mal byť použiteľný pre viacero podobných úloh, nie len pre jeden konkrétny prípad.
+- Napríklad: dokážeme vypočítať plochu hoci akého štvorca, nie len jedného konkrétneho.
 
-## Úloha
+## Spoľahlivosť
+Ak zadáme rovnaké údaje, vždy musíme dostať rovnaký výsledok.
+- Napríklad: 5+3 je vždy 8, nie raz 8 a inokedy 9.
 
-- Vymyslite príklad každodenných činností, ktoré je možné popísať algoritmom!
-- Nakreslite k tomu priebehový diagram ceruzkou!
+# Úlohy
 
-# Python
+## 1. úloha
+- Premyslite si nejakú každodennú činnosť (napr. varenie čaju, opravu bicykla), ktorú možno rozdeliť na kroky!
+- Nakreslite k nej jednoduchý vývojový diagram!
 
-## Štruktúra jazyka Python
+## 2. úloha
+- Pracujte v pároch: jeden bude "robot", druhý "programátor"
+- Programátor nech dáva jednoduché príkazy robotovi, aby získal fix v triede
+
+# Python programovanie
+
+## Ako vyzerá Python program?
 
 ```py
-# Importy (načítanie modulov a balíkov)
+# Načítanie knižníc (ak ich potrebujeme)
 import nazov_modulu
 from iny_modul import nazov_funkcie
 
-# Deklarácia globálnych premenných (voliteľné)
-globalna premenna = 10
+# Vytvorenie premenných (použiteľných v celom programe)
+globalna_premenna = 10
 
 # Definícia tried
 class Osoba:
@@ -118,7 +129,7 @@ if __name__ == "__main__":
     argumenty = sys.argv
 
     # Deklarácia lokálnych premenných
-    lokalna premenna = "Ahoj, svet!"
+    lokalna_premenna = "Ahoj, svet!"
 
     # Volanie funkcie a spracovanie výsledku
     vysledok = nazov_funkcie(5, 3)
@@ -131,9 +142,7 @@ if __name__ == "__main__":
         print("Výsledok nie je väčší ako 5.")
 
     for i in range(3):
-        print("Cyklus:", i
-
-)
+        print("Cyklus:", i)
 
     # Čítanie vstupu a výstupu
     vstupny_text = input("Prosím, napíšte niečo: ")
@@ -144,23 +153,27 @@ def ina_funkcia():
     pass
 ```
 
-## Premenné a konštanty
-- `int` celé čísla
-- `str` reťazec znakov
-- `float` desatinné čísla
-- `datetime` dátum
-- `list[]` zoznam, pole
-- `dict[,]` slovník
+## Aké typy údajov môžeme ukladať?
+- `int` - celé čísla (napr. 5, -3, 100)
+- `str` - text (napr. "Ahoj", "Peter")
+- `float` - desatinné čísla (napr. 3.14, -2.5)
+- `list[]` - zoznam pre viac údajov (napr. [1, 2, 3])
+- `dict{}` - slovník pre páry kľúč-hodnota (napr. {"meno": "Anna"})
 
-## Úloha
-Vypíšte na obrazovku pozdrav `Hello!` pomocou funkcie `print()`
+## Prvá úloha
+Vypíšte na obrazovku: `Hello!`
 
-## Písanie kódu
-- Vytvorenie nového skriptu
-- Uloženie napísaného skriptu
-    - Každý nech si uloží do vlastného priečinka (zložky) s menom
-    - Časté ukladanie (Ctrl+S), nielen keď je program úplne hotový!!!
-- Spustenie skriptu (F5 alebo z menu Súbor)
+Použite príkaz `print()`! Takto:
+```python
+print("Hello!")
+```
+
+## Ako píšeme kód?
+
+1. **Vytvorenie nového súboru** - s koncovkou `.py`
+2. **Časté ukladanie** (Ctrl+S) - nie len na konci!
+   - Každý nech si ukláda do svojho priečinka!
+3. **Spustenie programu** (tlačidlo F5 alebo gombík pre spustenie)
 
 # Python programovacie prostredie
 

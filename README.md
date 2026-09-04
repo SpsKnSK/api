@@ -1,271 +1,270 @@
-# SK API :computer: pre 2. ročník 
+# SK API :computer: pre 2. ročník
 
-Na tomto predmete sa budeme učiť programovací jazyk Python :snake:. Cieľom nie je len písať kód, ale naučiť sa **riešiť problémy aj vtedy, keď nepoznáš odpoveď**.
+Na tomto predmete sa budeme učiť programovací jazyk Python :snake:. Cieľom
+nie je len písať kód, ale naučiť sa riešiť problémy aj vtedy, keď nepoznáš
+odpoveď.
 
----
+🗺️ [Mapa učiva](Lessons_sk/00_Mapa_sk.md) — prehľad všetkých lekcií a ich
+priority.
 
-🗺️ [Mapa učiva](Lessons_sk/00_Mapa_sk.md) — tu nájdeš prehľad všetkých lekcií, čo je základ a čo je len navyše.
+🤖 [Používanie AI pri učení](Lessons_sk/00_AI_sk.md) — ako sa pýtať a
+pracovať s AI správne.
+
+🔧 [Používanie VS Code](Lessons_sk/00_VsCode_sk.md) — jednoduché kroky pre vývojové prostredie.
 
 ## 🧠 Ako pracujeme na hodine?
 
-👉 Učenie neprebieha len vtedy, keď len sleduješ, čo robím, ale keď **sám skúšaš a premýšľaš**.
+Učenie neprebieha len vtedy, keď sleduješ, čo robím, ale najmä vtedy, keď
+sám skúšaš a premýšľaš. Preto:
 
-Preto:
-- budeš pracovať
-- budeš robiť chyby (to je dobré)
-- zasekneš sa (to je ešte lepšie)
+- budeš pracovať,
+- budeš robiť chyby (to je dobré),
+- občas sa zasekneš (to je ešte lepšie).
 
----
-
-## 🔍 Keď sa zasekneš, urob toto
+### 🔍 Keď sa zasekneš, urob toto
 
 1. Spýtaj sa: _"Čo určite viem?"_
 2. Spýtaj sa: _"Aký je cieľ?"_
-3. Spýtaj sa: _"Aký je **najmenší krok**, ktorý viem spraviť?"_
-4. Napíš `print` a pozri sa, čo sa deje  
+3. Spýtaj sa: _"Aký je najmenší krok, ktorý viem spraviť?"_
+4. Napíš `print` a pozri sa, čo sa deje.
 
 👉 Toto je najdôležitejšia schopnosť počas celého roka.
 
----
+### 🚫 Pravidlo "neviem"
 
-## 🚫 Pravidlo "neviem"
+Nemôžeš povedať "neviem", pokiaľ si neskúsil aspoň jednu vec.
 
-👉 Nemôžeš povedať "neviem", pokiaľ si neskúsil aspoň **jednu vec**.  
-✔️ "Skúsil som toto, stalo sa toto, tu som sa zasekol" → pomôžem  
-❌ "neviem" → premýšľaš ďalej
+- ✔️ "Skúsil som toto, stalo sa toto, tu som sa zasekol." → pomôžem.
+- ❌ "Neviem." → premýšľaš ďalej.
 
----
+### 🤖 Používanie AI
 
-## 🤖 Používanie AI
+AI môžeš používať **rozumne**:
 
-Bude na to priestor, hlavne maj pred očami, aby si ju používal rozumne:  
-✔️ pýtaj sa  
-✔️ pýtaj si vysvetlenie  
-✔️ hľadaj chyby  
-❌ Kopírovanie hotových riešení s hláškou "veď to funguje" bez akéhokoľvek vysvetlenia je jasný dôkaz, že tomu nerozumieš – takéto riešenie sa **nepočíta**.  
-👉 To, čo odovzdáš, musíš vedieť aj obhájiť. 
+- ✔️ pýtaj sa,
+- ✔️ pýtaj si vysvetlenie,
+- ✔️ hľadaj chyby,
+- ❌ nekopíruj hotové riešenia bez toho, aby si im rozumel.
 
----
+To, čo odovzdáš, musíš vedieť aj vysvetliť a obhájiť.
 
-## 🎮 Premýšľaj ako v hre
+📖 Podrobný návod: [Používanie AI pri učení](Lessons_sk/00_AI_sk.md)
 
-- Nepodarilo sa? → skúsiš znova  
-- Zasekol si sa? → rozdelíš na menšie kroky  
-- Chyba? → poučíš sa z nej  
+### 🎮 Premýšľaj ako v hre
 
----
+- Nepodarilo sa? → skús znova iným smerom.
+- Zasekol si sa? → rozdeľ problém na menšie kroky.
+- Chyba? → pouč sa z nej, zapíš si, čo si sa naučil
 
-## 🧩 Ako sa učíme?
+### 🧩 Ako sa učíme?
 
-- postupujeme malými krokmi  
-- budeme veľa trénovať  
-- často dostanete čiastočne hotový kód, doplníte  
+- postupujeme malými krokmi,
+- veľa trénujeme,
+- dostanete čiastočne hotový kód, ktorý treba doplniť, 
+- dostanete dobrý kód, ktorý treba pokaziť
 
 👉 Nejde o rýchlosť, ale o pochopenie.
 
----
-
 ## 🛠️ Nástroje
 
-- IDE: `Visual Studio Code`  
-- Komunikácia: `Discord`  
-- Poznámky: vlastný systém (zošit / digitálne)
+- IDE: `Visual Studio Code`
+- Komunikácia: `Discord`
+- Poznámky: vlastný systém (zošit alebo digitálne poznámky)
 
----
+## 📏 Základné pravidlá
 
-## 📚 Témy
-
-- Základné dátové typy (`int`, `string`, `float`)
-- Podmienky (`if`, `elif`, `else`)
-- Cykly (`for`, `while`)
-- Funkcie (`def`)
-- Triedy a dedenie (`class`)
-- Práca so súbormi
-- Ošetrenie chýb
-
----
-
-## 📏 Základné pravidlá (rámec)
-
-1. 📵 Mobil počas hodiny nesmie rušiť prácu (vlastnú, ani ostatných)  
-2. 💻 Používame školské počítače  
-3. ☁️ Svoje súbory si ukladaj do cloudu  
-4. 🗣️ Pýtať sa je dovolené a odporúčané  
-5. 🤝 Môžete si navzájom pomáhať  
-6. 🍎 Jesť a piť môžeš mimo počítača  
-7. 🚶 Môžeš sa postaviť alebo sa prejsť, ale neruš ostatných  
-8. 🌿 Počas prestávky si dajte oddych od počítača  
-
----
+1. 📵 Mobily pozbierané na jednej kope.
+2. 💻 Používame školské počítače.
+3. ☁️ Súbory a poznámky si môžeš ukladať do vlastného cloudu.
+4. 🗣️ Čím viac sa pýtaš, tým viac sa dozvieš.
+5. 🤝 Môžete si navzájom pomáhať, okrem písomiek.
+6. 🍎 Jesť a piť môžeš mimo počítača.
+7. 🚶 Môžeš sa postaviť alebo prejsť, bez rušenia ostatných.
+8. 🌿 Počas prestávky si oddýchni od počítača.
 
 ## ⚠️ Rušenie hodiny
 
-Ak niekto nepracuje (napr. hrá hry, stále je na mobile):
+Ak niekto nepracuje (napríklad hrá hry), ruší ostatných, môže to mať tieto dôsledky:
 
-👉 beriem to tak, že **nechce napredovať**
-
-Možné dôsledky:
-- rýchle odpovedanie na známku
-- 5ka za aktivitu (nerobenie úlohy)
-- individuálna úloha  
-- viac samostatnej práce  
+- rýchle odpovedanie na známku,
+- nedostatočná známka za aktivitu,
+- individuálna úloha,
+- písomka pre celú triedu,
+- viac samostatnej práce.
 
 👉 Je na tebe, ako využiješ svoj čas.
 
----
-
 ## 📊 Hodnotenie
 
-Nezáleží len na výsledku:
+Nezáleží len na výsledku. Hodnotí sa aj:
 
-- snaha  
-- premýšľanie  
-- aktivita  
-- zlepšenie  
+- snaha,
+- premýšľanie,
+- aktivita,
+- zlepšenie.
 
-👉 Ak pracuješ a napreduješ, bude to v poriadku.
+| Hranica %| Známka |
+|----------|--------|
+| 0        | 5      |
+| 35       | 4      |
+| 50       | 3      |
+| 70       | 2      |
+| 90       | 1      |
+
+Na vysvedčení sa berie do úvahy priemer známok. Priemer nižší ako **4,00**
+znamená výslednú známku **5**.
+
+## 📝 Poznámky
+
+Každá téma má v hlavičke krátky obsah učiva, to budete mať v zošite. Ostatné materiály nájdete na tejto stránke, ale vrelo odporúčam robiť si aj vlastné poznámky (hlavne keď ste mali "Aha" moment pri riešení úloh)
+
+> To, ako budeš napredovať, závisí hlavne od teba.
+
+## ✍️ Písomky
+
+Písomky budú prebiehať cez EduPage pri počítači, alebo na papier, ak neurčím inak. Budú obsahovať **iba** prebratú látku:
+
+- *otvorené otázky*, na ktoré odpovedáš písomne,
+- *zadania*, v ktorých napíšeš program
+- pri niektorých písomkách budete mať možnosť používať zošit, github (na druhej strane, keď to nebudeš mať v hlave usporiadané, veľa času budeš tráviť s hladaním)
+
+## 🏠 Domáce úlohy
+
+Domáce úlohy rieši každý samostatne. Môžu byť náročnejšie než úlohy na hodine, ale vždy budú vychádzať z prebratej látky. Ďalšie pokyny dostanete s úlohou.
 
 ---
 
-## 🧠 To najdôležitejšie
+# HU API :computer: 2. osztály számára
 
-👉 **Cieľom nie je poznať odpoveď.  
-👉 Cieľom je vedieť, čo robiť, keď odpoveď nepoznáš.**
+Ezen az órán a Python :snake: programozási nyelvet tanuljuk. A cél nem csak
+az, hogy kódot írj, hanem hogy akkor is meg tudd oldani a problémákat, amikor
+nem tudod a választ.
 
-# HU API :computer: 2. osztály számára 
+🗺️ [Térkép a tananyaghoz](Lessons_hu/00_Terkep_hu.md) — az összes lecke és
+azok prioritásának áttekintése.
 
-Ezen az órán a Python :snake: programozási nyelvet tanuljuk. A cél nem csak az, hogy kódot írj, hanem hogy **meg tudd oldani a problémákat akkor is, amikor nem tudod a választ**.
+🤖 [AI használata a tanuláshoz](Lessons_hu/00_AI_hu.md) — hogyan kérdezz és dolgozz jól az AI-val.
 
----
-
-🗺️ [Térkép a tananyaghoz](Lessons_hu/00_Terkep_hu.md) — itt találod az összes lecke áttekintését, hogy mi az alap és mi a kiegészítés.
+🔧 [VS Code használata](Lessons_hu/00_VsCode_hu.md) — egyszerű lépések a fejlesztői környezethez.
 
 ## 🧠 Hogyan dolgozunk az órán?
 
-👉 A tanulás nem csak akkor történik, amikor nézed, amit csinálok, hanem amikor **te magad próbálkozol és gondolkodsz**.
+A tanulás nem csak akkor történik, amikor nézed, amit csinálok, hanem főleg
+akkor, amikor **te magad próbálkozol és gondolkodsz**. Ezért:
 
-Ezért:
-- dolgozni fogsz  
-- hibázni fogsz (ez jó)  
-- el fogsz akadni (ez még jobb)  
+- dolgozni fogsz,
+- hibázni fogsz (ez jó),
+- néha el fogsz akadni (ez még jobb).
 
----
+### 🔍 Ha elakadsz, ezt csináld
 
-## 🔍 Ha elakadsz, ezt csináld
+1. Kérdezd meg: _"Mit tudok biztosan?"_
+2. Kérdezd meg: _"Mi a cél?"_
+3. Kérdezd meg: _"Mi a legkisebb lépés, amit meg tudok csinálni?"_
+4. Írj egy `print`-et, és nézd meg, mi történik.
 
-1. Kérdezd meg: _„Mit tudok biztosan?”_  
-2. Kérdezd meg: _„Mi a cél?”_  
-3. Kérdezd meg: _„Mi a **legkisebb lépés**, amit meg tudok csinálni?”_  
-4. Írj egy `print`-et, és nézd meg mi történik  
+👉 Ez a legfontosabb képesség az egész évben.
 
-👉 Ez a legfontosabb skill az egész évben.
+### 🚫 A "nem tudom" szabály
 
----
+Nem mondhatod, hogy "nem tudom", amíg nem próbáltál ki legalább egy dolgot.
 
-## 🚫 „Nem tudom” szabály
+- ✔️ "Ezt próbáltam, ez történt, itt akadtam el." → segítek.
+- ❌ "Nem tudom." → gondolkodsz tovább.
 
-👉 Nem mondhatod, hogy „nem tudom”, amíg nem próbáltál ki legalább **egy dolgot**.  
+### 🤖 Az AI használata
 
-✔️ „Ezt próbáltam, ez történt, itt akadtam el” → segítek  
-❌ „nem tudom” → gondolkodsz tovább  
+Használd az AI-t okosan:
 
----
+- ✔️ kérdezz,
+- ✔️ kérj magyarázatot,
+- ✔️ keress hibákat,
+- ❌ ne másolj kész megoldást anélkül, hogy megértenéd.
 
-## 🤖 AI használata
+Amit bead, azt meg is kell tudnod magyarázni és védeni.
 
-Lesz rá lehetőség, de használd okosan:  
+📖 Részletes útmutató: [AI használata a tanuláshoz](Lessons_hu/00_AI_hu.md)
 
-✔️ kérdezz  
-✔️ kérj magyarázatot  
-✔️ keress hibákat  
+### 🎮 Gondolkodj úgy, mint egy játékban
 
-❌ Kész megoldások bemásolása „de hát működik” alapon, bármilyen magyarázat nélkül egyértelmű jele annak, hogy nem érted – az ilyen megoldás **nem számít**.  
+- Nem sikerül? → próbáld újra, más irányból.
+- Elakadsz? → bontsd kisebb lépésekre.
+- Hiba? → tanulj belőle, jegyezd fel, mit tanultál.
 
-👉 Amit beadod, azt meg is kell tudnod védeni.
+### 🧩 Hogyan tanulunk?
 
----
-
-## 🎮 Gondolkodj úgy, mint egy játékban
-
-- Nem sikerül? → újrapróbálod  
-- Elakadsz? → kisebb lépésekre bontod  
-- Hiba? → tanulsz belőle  
-
----
-
-## 🧩 Hogyan tanulunk?
-
-- kis lépésekben haladunk  
-- sokat fogunk gyakorolni  
-- gyakran kapsz félig kész kódot, amit kiegészítesz  
+- kis lépésekben haladunk,
+- sokat gyakorlunk,
+- félig kész kódot kapsz, amit ki kell egészítened,
+- jó kódot kapsz, amit el kell rontanod.
 
 👉 Nem a gyorsaság számít, hanem a megértés.
 
----
-
 ## 🛠️ Eszközök
 
-- IDE: `Visual Studio Code`  
-- Kommunikáció: `Discord`  
-- Jegyzet: saját rendszer (füzet / digitális)
+- IDE: `Visual Studio Code`
+- Kommunikáció: `Discord`
+- Jegyzet: saját rendszer (füzet vagy digitális jegyzetek)
 
----
+## 📏 Alapszabályok
 
-## 📚 Témák
-
-- Alap adattípusok (`int`, `string`, `float`)
-- Elágazások (`if`, `elif`, `else`)
-- Ciklusok (`for`, `while`)
-- Függvények (`def`)
-- Osztályok és öröklés (`class`)
-- Fájlkezelés
-- Hibakezelés
-
----
-
-## 📏 Alapszabályok (keretek)
-
-1. 📵 Órán a mobil nem zavarhatja a munkát (a sajátodat és másokét sem)  
-2. 💻 Az iskola gépeit használjuk  
-3. ☁️ A fájljaidat mentsd felhőbe  
-4. 🗣️ Kérdezni szabad, sőt ajánlott  
-5. 🤝 Segíthettek egymásnak  
-6. 🍎 Enni, inni lehet, de a géptől távol  
-7. 🚶 Felállhatsz, mozoghatsz, de másokat ne zavarj  
-8. 🌿 Szünetben pihenj egyet a számítógéptől  
-
----
+1. 📵 A mobiltelefonok egy közös helyen vannak összegyűjtve.
+2. 💻 Az iskola számítógépeit használjuk.
+3. ☁️ A fájlokat és jegyzeteket saját felhőbe mentheted.
+4. 🗣️ Minél többet kérdezel, annál többet tanulsz.
+5. 🤝 Segíthettek egymásnak, kivéve a dolgozatoknál.
+6. 🍎 Enni és inni a számítógéptől távol lehet.
+7. 🚶 Felállhatsz vagy sétálhatsz, de ne zavard a többieket.
+8. 🌿 Szünetben pihenj a számítógéptől.
 
 ## ⚠️ Az óra zavarása
 
-Ha valaki nem dolgozik (pl. játszik, folyamatosan telefonozik):
+Ha valaki nem dolgozik (például játszik), zavarja a többieket, ennek ezek lehetnek a következményei:
 
-👉 azt úgy veszem, hogy **nem szeretne haladni**
-
-Lehetséges következmények:
-- gyors felelés jegyre  
-- 5-ös aktivitásra (feladat nem végzése)  
-- egyéni feladat  
-- több önálló munka  
+- gyors felelés jegyre,
+- elégtelen aktivitási jegy,
+- egyéni feladat,
+- dolgozat az egész osztálynak,
+- több önálló munka.
 
 👉 Te döntöd el, hogyan használod az idődet.
 
----
-
 ## 📊 Értékelés
 
-Nem csak a végeredmény számít:
+Nem csak a végeredmény számít. Értékelem:
 
-- próbálkozás  
-- gondolkodás  
-- aktivitás  
-- fejlődés  
+- a próbálkozást,
+- a gondolkodást,
+- az aktivitást,
+- a fejlődést.
 
-👉 Ha dolgozol és haladsz, nem lesz gond.
+| Ponthatár % | Jegy |
+|-------------|------|
+| 0           | 5    |
+| 35          | 4    |
+| 50          | 3    |
+| 70          | 2    |
+| 90          | 1    |
 
----
+A bizonyítvány jegyénél a jegyek átlaga számít. A **4,00-nál alacsonyabb**
+átlag végső jegye **5**.
 
-## 🧠 A legfontosabb
+## 📝 Jegyzetek
 
-👉 **Nem az a cél, hogy tudd a választ.  
-👉 Az a cél, hogy tudd, mit csinálj, amikor nem tudod.**
+Minden témának a fejlécében van egy rövid tartalmi összefoglaló, ezt füzetbe kell írnotok. A többi anyagot ezen az oldalon találjátok, de melegen ajánlom, hogy saját jegyzeteket is készítsetek (főleg amikor volt egy "Aha" élményed egy feladat megoldása közben).
+
+> Az előrehaladás elsősorban tőled függ.
+
+## ✍️ Dolgozatok
+
+A dolgozatokat az EduPage-en, számítógépen, vagy papíron írjátok, ha nem döntök másképp. **Csak** az átvett anyag szerepel bennük:
+
+- *nyitott kérdések*, amelyekre írásban válaszoltok,
+- *feladatok*, amelyekben programot írtok,
+- néhány dolgozatnál használhatod a füzeted és a githubot (viszont ha nincs a fejedben rendszerezve az anyag, sok időt fogsz keresgéléssel tölteni).
+
+## 🏠 Házi feladatok
+
+A házi feladatokat mindenki önállóan oldja meg. Lehetnek nehezebbek az órai
+feladatoknál, de mindig a tanult anyagra épülnek. További útmutatót a
+feladattal együtt kaptok.

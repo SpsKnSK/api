@@ -75,38 +75,54 @@ Lehetőség van egy print-en belül több adat kiíratására.
 Ezeket az adatokat vesszővel választjuk el egymástól
 
 ```py
-darab = 12
-print(darab, "gitárhúr")
+alap_xp = 1500
+bonus_xp = 350
+print("Összes XP:", alap_xp + bonus_xp)
+print("Dupla XP esemény:", (alap_xp + bonus_xp) * 2)
 ```
-Lehetőségünk van műveleteket végrehajtani a printen belül több féle típusú adattal.
 
-```py
-szam1 = 12
-szam2 = 8
-print(szam1+szam2, szam1*szam2)
-```
-Szöveg - tehát string – esetében a következő a helyzet.
-```py
-print('egy csomag', 'gitar'+'hur')
-```
-### Egymás mellé vs. egymás alá
-Egymás mellé írt szöveg esetén 1 printet használunk, és mindent a zárójelébe írunk.
-```py
-print('Szia', 'Peti!')
-```
-Egymás alá írt szöveg esetében minden sorra egy-egy printet használunk.
-```py
-print('Szia')
-print('Peti!')
-```
-vagy az újsor karaktert `\n`
-```py
-print('Szia\nPeti!')
-```
-## `sep` és `end` paraméterek
+## Több dolog egyszerre - mint a social media post 📱
 
+Egy `print()` függvényben többféle információt is kiírhatsz egyszerre, vesszővel elválasztva:
 
-Ha megnézzük, hogy a `print` függvény definícióját:
+### Gaming példák:
+```py
+player_name = "xX_ProGamer_Xx"
+score = 15420
+
+print("Játékos:", player_name, "Pontszám:", score)
+print("Következő szint:", score + 580, "pontban")
+```
+
+### Streaming setup:
+```py
+fps = 60
+resolution = "1080p"
+print("Stream minőség:", fps, "FPS", resolution)
+```
+
+### Social media vibe:
+```py
+likes = 347
+comments = 28
+print("📸 Poszt statisztikák:", likes, "❤️", comments, "💬")
+```
+
+### String összefűzés (concatenation):
+```py
+username = "CoolKid"
+domain = "gmail.com"
+print("Email:", username + "@" + domain)
+```
+## Elrendezés: Egy sorba vs. több sorba 📝
+
+### Egy sorba (mint egy Twitter poszt):
+```py
+print('Sziasztok!', 'Mi a helyzet?', '🔥')
+```
+Kimenet: `Sziasztok! Mi a helyzet? 🔥`
+
+### Több sorba (mint Instagram caption):
 ```py
 (function) def print(
     *values: object,
@@ -122,9 +138,14 @@ Ahogy a VS Code segít megérteni a paramétert _string inserted between values,
 ```py
 print("alma", "banan", "cseresznye")
 ```
-> kimenet: `alma banan cseresznye`
 
-Ha más írásjelet szeretnénk tenni közéjük, akkor a `sep` értéket kell változtatni, ezt pedig az alábbi módon tehetjük meg:
+Mindkettő ugyanazt az eredményt adja!
+## Profi trükkök: `sep` és `end` paraméterek 🎯
+
+### `sep` - Separator (elválasztó karakter)
+Alapból a `print()` szóközzel választja el a dolgokat. De te döntöd el, mit tesz közéjük!
+
+#### Gaming leaderboard:
 ```py
 print("alma", "banan", "cseresznye", sep=".")
 ```
@@ -182,10 +203,10 @@ print("Szia")  # a sor vegen is lehet
 - az `1` az szám, ami annyit tesz, mint a matekban 1-es érték
 - az `"1"` szöveg, úgy képzeljétek el, mintha azt írnátok a számítógépnek, hogy `egy`, nem érték, hanem szöveg
 ```py
-print(1+1)
-print("1"+"1")
+print(1 + 1)       # Matematikai számítás
+print("1" + "1")   # Szöveg összefűzés
 ```
-kimenet
+Kimenet:
 ```
 2
 11

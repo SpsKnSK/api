@@ -4,6 +4,10 @@ Táto stránka pomáha zorientovať sa v učive: čo je **povinný základ**, o 
 
 > 🧰 **Predstav si to ako skrinku s náradím!** Každá lekcia je nový nástroj. Cieľom nie je poznať naspamäť názvy všetkých nástrojov, ale vedieť, **v ktorej zásuvke ho hľadať**, keď narazíš na úlohu.
 
+🤖 [Používanie AI pri učení](00_AI_sk.md) — ako sa pýtať a pracovať s AI správne.
+
+🔧 [Používanie VS Code](00_VsCode_sk.md) — jednoduché kroky pre vývojové prostredie.
+
 ```mermaid
 flowchart TD
     A["01 Algoritmy"] --> B["02 print()"]
@@ -12,24 +16,25 @@ flowchart TD
     D --> E["05 If"]
     E --> F["06 while"]
     F --> G["07 for"]
-    G --> H["08 try/format/ternary 🟡"]
-    H --> I["09 Zoznamy"]
+    D --> H["08 try/format/ternary 🟡"]
+    E --> H
+    G --> I["09 Zoznamy"]
     I --> J["10 Reťazce"]
     J --> K["11 Funkcie"]
     K --> L["11 Lambda 🔵"]
-    K --> M["12 Slovník, množina 🟡"]
+    I --> M["12 Slovník, množina, tuple"]
     K --> N["15 Globálne/lokálne premenné 🟡"]
-    K --> O["16 Práca so súbormi 🟡"]
-    K --> P["13 Triedy 🔵"]
+    K --> O["16 Práca so súbormi"]
+    O --> P["13 Triedy"]
     P --> Q["14 Dedenie 🔵"]
     P --> R["17 Tkinter 🔵"]
 
     classDef alap fill:#c8f7c5,stroke:#2e7d32,color:#1b1b1b;
     classDef extra fill:#fff3b0,stroke:#b8860b,color:#1b1b1b;
     classDef opcio fill:#cfe3ff,stroke:#1565c0,color:#1b1b1b;
-    class A,B,C,D,E,F,G,I,J,K alap;
-    class H,M,N,O extra;
-    class L,P,Q,R opcio;
+    class A,B,C,D,E,F,G,I,J,K,M,O,P alap;
+    class H,N extra;
+    class L,Q,R opcio;
 ```
 
 🟢 zelená = základ, ideš postupne po poradí · 🟡 žltá = užitočný doplnok, ak je čas · 🔵 modrá = stačí vedieť, že existuje
@@ -59,10 +64,15 @@ Bez tohto sa žiadny Python program nedá pochopiť. Ak si tu neistý, vráť sa
 | 06 | [Cyklus `while`](06_while_sk.md) | Keď vopred nevieš, koľkokrát treba opakovať. | `while podmienka:` |
 | 07 | [Cyklus `for`](07_for_sk.md) | Keď vopred vieš, cez čo/koľkokrát prejsť. | `for i in range(...):` |
 | 09 | [Zoznamy](09_lists_sk.md) | Veľa hodnôt v jednej premennej. | `[]`, index, `.append()`, `.sort()` |
-| 10 | [Reťazce (string)](10_string_sk.md) | Aj text sa dá „rozobrať” na znaky. | `[a:b]`, `.split()`, `.join()` |
+| 10 | [Reťazce (string)](10_string_sk.md) | Aj text sa dá "rozobrať" na znaky. | `[a:b]`, `.split()`, `.join()` |
 | 11 | [Funkcie](11_functions_sk.md) | Opakujúci sa kód dáme na jedno miesto a pomenujeme. | `def`, `return`, parametre |
 
-**Na čo si dávaj pozor vo všetkých?** **Blok** (kód odsadený pod niečím), dvojbodka `:` na konci riadku, a to, že Python **rozlišuje malé a veľké písmená**. Tieto 3 veci spôsobujú väčšinu chýb začiatočníkov — ak toto pochopíš, čítanie kódu bude oveľa jednoduchšie.
+### **Na čo si dávaj pozor vo všetkých?**
+- **Blok** (kód odsadený pod niečím, `tab`, `tabulátor`)
+- dvojbodka `:` na konci riadku
+- a to, že Python **rozlišuje malé a veľké písmená**
+
+Tieto 3 veci spôsobujú väčšinu chýb začiatočníkov — ak toto pochopíš, čítanie kódu bude oveľa jednoduchšie.
 
 ---
 
@@ -74,20 +84,20 @@ Nie je to úplný základ ako vyššie, ale v praxi to budeš často potrebovať
 |---|---|---|
 | 08 | [try, format, ternary](08_try_format_ternary_sk.md) *(voliteľné)* | Ošetrenie chýb, pekný výpis (f-string), skrátený if na jednom riadku |
 | 12 | [Slovník a množina](12_list_set_dictionary_tuple_sk_1.md) | Keď chceš pristupovať k údaju nie podľa indexu, ale podľa **kľúča** (`dict`), alebo keď ťa duplicity nezaujímajú (`set`) |
-| 15 | [Globálne a lokálne premenné](15_localAndGlobalVariables_sk.md) | Prečo jedna funkcia „nevidí” premennú z inej — vysvetľuje veľa záhadných chýb |
+| 15 | [Globálne a lokálne premenné](15_localAndGlobalVariables_sk.md) | Prečo jedna funkcia "nevidí" premennú z inej — vysvetľuje veľa záhadných chýb |
 | 16 | [Práca so súbormi](16_files_sk.md) | Údaje treba vedieť nielen vypísať, ale aj **uložiť** |
 
 ---
 
-## 🔵 „Stačí vedieť, že to existuje” — netreba do hĺbky
+## 🔵 "Stačí vedieť, že to existuje" — netreba do hĺbky
 
 O týchto stačí vedieť: **čo to je a kedy to použiť** — netreba naspamäť vedieť napísať zložitú hierarchiu tried alebo grafické rozhranie, ale je užitočné to spoznať, keď sa s tým niekde stretneš (napr. v kóde v inom jazyku, alebo v dokumentácii knižnice).
 
 | # | Lekcia | Stačí vedieť toto |
 |---|---|---|
-| 11 | [Lambda funkcie](11_lambda_functions_sk.md) *(voliteľné)* | Existuje aj „jednoriadková, anonymná funkcia” — vo vlastnom kóde ju budeš potrebovať zriedka |
+| 11 | [Lambda funkcie](11_lambda_functions_sk.md) *(voliteľné)* | Existuje aj "jednoriadková, anonymná funkcia" — vo vlastnom kóde ju budeš potrebovať zriedka |
 | 13 | [Triedy (`class`)](13_classes_1_sk.md) | Trieda je ako **plán vlastného, zloženého dátového typu** — ak treba spolu spravovať veľa súvisiacich údajov a operácií, toto je ten nástroj |
-| 14 | [Dedenie a polymorfizmus](14_inheritance_polymorphism_sk.md) | Triedy môžu „dediť” jedna od druhej — stačí poznať pojem |
+| 14 | [Dedenie a polymorfizmus](14_inheritance_polymorphism_sk.md) | Triedy môžu "dediť" jedna od druhej — stačí poznať pojem |
 | 17 | [Tkinter — grafické rozhranie](17_tkinter_sk.md) | Existuje spôsob, ako v Pythone písať aj okenné programy — stačí vedieť, že sa to tak volá a približne ako to vyzerá |
 
 > Lekcie `13_classes_2` a `13_classes_3` idú ešte hlbšie (ukladanie do JSON, `@property`, context manager atď.) — toto sú vyslovene **pokročilé, voliteľné** témy, oplatí sa nimi zaoberať iba vtedy, ak sa o to niekto sám zaujíma.
