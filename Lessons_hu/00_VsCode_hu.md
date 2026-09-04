@@ -24,7 +24,7 @@
 - **"Futtatás"** → **"Futtatás indítása"**
 ## 5. ⚪ Mi az a fehér kör?
 - Ha a fájl neve mellett egy fehér kör jelenik meg, az azt jelenti: **változtattál a fájlon, de még nem mentetted el.**
-- Nyomj Ctrl + S a mentéshez.
+- Nyomj `Ctrl` + `S` a mentéshez.
 
 ## 6. 🐍 Fontos!
 - Győződj meg róla, hogy a `VS Code` felismerte a **Python környezetet**.
