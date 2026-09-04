@@ -51,7 +51,7 @@
 # If – Elif - Else
 ## Rövid ismétlő elmélet
 
-- Hogy fut le egy program, milyen az „iránya“?
+- Hogy fut le egy program, milyen az "iránya"?
 - Mi az, ami ezt befolyásolhatja?
 
 > Program futtatása: általában utasítás utasítás után – szekvens haladás.

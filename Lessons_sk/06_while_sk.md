@@ -38,7 +38,7 @@ Keď treba ten istý krok vykonať viackrát, použijeme **cyklus**.
 
 Cyklus je programová konštrukcia, ktorá opakuje **blok** príkazov. Je to podobné pravidlu spoločenskej hry:
 
-> „Kým máš peniaze, posuň sa o jedno políčko a zaplať 100 forintov.“
+> "Kým máš peniaze, posuň sa o jedno políčko a zaplať 100 forintov."
 
 V každom kole sa stane to isté a potom sa znova rozhodne: **máš ešte peniaze?** Ak áno, nasleduje ďalšie kolo. Ak nie, je koniec.
 
@@ -144,7 +144,7 @@ Výstup: `1`, `2`, `4`, `5`
 > # 📋 Úlohy
 >
 > 1. Vypýtajte si od používateľa číslo, potom pomocou cyklu `while` vypíšte všetky celé čísla od 1 po dané číslo.
-> 2. Napíšte program, ktorý odpočítava od 100 do 0 a potom vypíše: „Šťastný nový rok!“
+> 2. Napíšte program, ktorý odpočítava od 100 do 0 a potom vypíše: "Šťastný nový rok!"
 > 3. Vypýtajte si od používateľa čísla postupne, kým nezadá `0`, potom vypíšte súčet doteraz zadaných čísel.
 > 4. Pomocou cyklu `while` vypíšte čísla deliteľné 3 do 50.
 >
@@ -152,7 +152,7 @@ Výstup: `1`, `2`, `4`, `5`
 
 > # ❓ Otázky
 >
-> 1. Akú bežnú situáciu poznáte, v ktorej niečo opakujeme „kým“?
+> 1. Akú bežnú situáciu poznáte, v ktorej niečo opakujeme "kým"?
 > 2. Aký je rozdiel medzi `if` a `while`?
 > 3. Čo je jadro cyklu a ako ho Python označuje?
 > 4. Prečo sa musí podmienka `while` raz stať nepravdivou?

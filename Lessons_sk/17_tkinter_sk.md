@@ -6,7 +6,7 @@
 > 1. `import tkinter as tk` — načítanie knižnice
 > 2. `root = tk.Tk()` — vytvorenie hlavného okna
 > 3. vytvorenie a rozmiestnenie widgetov (`.pack()` alebo `.grid()` alebo `.place()`)
-> 4. `root.mainloop()` — udržiava okno „nažive“, kým ho nezavrieme
+> 4. `root.mainloop()` — udržiava okno "nažive", kým ho nezavrieme
 >
 > ```py
 > import tkinter as tk

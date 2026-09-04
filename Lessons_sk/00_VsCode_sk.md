@@ -9,7 +9,7 @@
 
 ## 2. 🗂 Otvorenie priečinka vo VS Code
 - Spusti **Visual Studio Code**.
-- Klikni v ľavom menu na **„Súbor“** → **„Otvoriť priečinok...“** *(„Open folder...“)*.
+- Klikni v ľavom menu na **"Súbor"** → **"Otvoriť priečinok..."** *("Open folder...")*.
 - Vyber svoj priečinok s menom (napr. `jozko_mrkvicka`).
 - Tento priečinok sa stane tvojím **predvoleným pracovným priestorom** – sem sa budú ukladať všetky súbory.
 
