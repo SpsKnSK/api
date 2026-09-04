@@ -147,19 +147,19 @@ akkor, amikor **te magad próbálkozol és gondolkodsz**. Ezért:
 
 ### 🔍 Ha elakadsz, ezt csináld
 
-1. Kérdezd meg: _"Mit tudok biztosan?”_
-2. Kérdezd meg: _"Mi a cél?”_
-3. Kérdezd meg: _"Mi a legkisebb lépés, amit meg tudok csinálni?”_
+1. Kérdezd meg: _"Mit tudok biztosan?"_
+2. Kérdezd meg: _"Mi a cél?"_
+3. Kérdezd meg: _"Mi a legkisebb lépés, amit meg tudok csinálni?"_
 4. Írj egy `print`-et, és nézd meg, mi történik.
 
 👉 Ez a legfontosabb képesség az egész évben.
 
-### 🚫 A "nem tudom” szabály
+### 🚫 A "nem tudom" szabály
 
-Nem mondhatod, hogy "nem tudom”, amíg nem próbáltál ki legalább egy dolgot.
+Nem mondhatod, hogy "nem tudom", amíg nem próbáltál ki legalább egy dolgot.
 
-- ✔️ "Ezt próbáltam, ez történt, itt akadtam el.” → segítek.
-- ❌ "Nem tudom.” → gondolkodsz tovább.
+- ✔️ "Ezt próbáltam, ez történt, itt akadtam el." → segítek.
+- ❌ "Nem tudom." → gondolkodsz tovább.
 
 ### 🤖 Az AI használata
 

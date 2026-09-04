@@ -12,24 +12,25 @@ flowchart TD
     D --> E["05 If"]
     E --> F["06 while"]
     F --> G["07 for"]
-    G --> H["08 try/format/ternary 🟡"]
-    H --> I["09 Zoznamy"]
+    D --> H["08 try/format/ternary 🟡"]
+    E --> H
+    G --> I["09 Zoznamy"]
     I --> J["10 Reťazce"]
     J --> K["11 Funkcie"]
     K --> L["11 Lambda 🔵"]
-    K --> M["12 Slovník, množina 🟡"]
+    I --> M["12 Slovník, množina, tuple"]
     K --> N["15 Globálne/lokálne premenné 🟡"]
-    K --> O["16 Práca so súbormi 🟡"]
-    K --> P["13 Triedy 🔵"]
+    K --> O["16 Práca so súbormi"]
+    O --> P["13 Triedy"]
     P --> Q["14 Dedenie 🔵"]
     P --> R["17 Tkinter 🔵"]
 
     classDef alap fill:#c8f7c5,stroke:#2e7d32,color:#1b1b1b;
     classDef extra fill:#fff3b0,stroke:#b8860b,color:#1b1b1b;
     classDef opcio fill:#cfe3ff,stroke:#1565c0,color:#1b1b1b;
-    class A,B,C,D,E,F,G,I,J,K alap;
-    class H,M,N,O extra;
-    class L,P,Q,R opcio;
+    class A,B,C,D,E,F,G,I,J,K,M,O,P alap;
+    class H,N extra;
+    class L,Q,R opcio;
 ```
 
 🟢 zelená = základ, ideš postupne po poradí · 🟡 žltá = užitočný doplnok, ak je čas · 🔵 modrá = stačí vedieť, že existuje
@@ -62,7 +63,12 @@ Bez tohto sa žiadny Python program nedá pochopiť. Ak si tu neistý, vráť sa
 | 10 | [Reťazce (string)](10_string_sk.md) | Aj text sa dá "rozobrať” na znaky. | `[a:b]`, `.split()`, `.join()` |
 | 11 | [Funkcie](11_functions_sk.md) | Opakujúci sa kód dáme na jedno miesto a pomenujeme. | `def`, `return`, parametre |
 
-**Na čo si dávaj pozor vo všetkých?** **Blok** (kód odsadený pod niečím), dvojbodka `:` na konci riadku, a to, že Python **rozlišuje malé a veľké písmená**. Tieto 3 veci spôsobujú väčšinu chýb začiatočníkov — ak toto pochopíš, čítanie kódu bude oveľa jednoduchšie.
+### **Na čo si dávaj pozor vo všetkých?**
+- **Blok** (kód odsadený pod niečím, `tab`, `tabulátor`)
+- dvojbodka `:` na konci riadku
+- a to, že Python **rozlišuje malé a veľké písmená**
+
+Tieto 3 veci spôsobujú väčšinu chýb začiatočníkov — ak toto pochopíš, čítanie kódu bude oveľa jednoduchšie.
 
 ---
 

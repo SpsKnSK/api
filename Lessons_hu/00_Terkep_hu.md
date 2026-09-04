@@ -12,27 +12,30 @@ flowchart TD
     D --> E["05 If"]
     E --> F["06 while"]
     F --> G["07 for"]
-    G --> H["08 try/format/ternary 🟡"]
-    H --> I["09 Listák"]
+    D --> H["08 try/format/ternary 🟡"]
+    E --> H
+    G --> I["09 Listák"]
     I --> J["10 String-ek"]
     J --> K["11 Függvények"]
     K --> L["11 Lambda 🔵"]
-    K --> M["12 Szótár, halmaz 🟡"]
+    I --> M["12 Szótár, halmaz, tuple"]
     K --> N["15 Globális/lokális változók 🟡"]
-    K --> O["16 Fájlkezelés 🟡"]
-    K --> P["13 Osztályok 🔵"]
+    K --> O["16 Fájlkezelés"]
+    O --> P["13 Osztályok"]
     P --> Q["14 Öröklődés 🔵"]
     P --> R["17 Tkinter 🔵"]
 
     classDef alap fill:#c8f7c5,stroke:#2e7d32,color:#1b1b1b;
     classDef extra fill:#fff3b0,stroke:#b8860b,color:#1b1b1b;
     classDef opcio fill:#cfe3ff,stroke:#1565c0,color:#1b1b1b;
-    class A,B,C,D,E,F,G,I,J,K alap;
-    class H,M,N,O extra;
-    class L,P,Q,R opcio;
+    class A,B,C,D,E,F,G,I,J,K,M,O,P alap;
+    class H,N extra;
+    class L,Q,R opcio;
 ```
 
-🟢 zöld = alap, végigmész rajta sorban · 🟡 sárga = hasznos kiegészítés, ha van rá idő · 🔵 kék = elég tudni, hogy létezik
+- 🟢 zöld = alap, végigmész rajta sorban
+- 🟡 sárga = hasznos kiegészítés, ha van rá idő 
+- 🔵 kék = elég tudni, hogy létezik
 
 ---
 ## A tananyagok struktúrája
@@ -63,7 +66,12 @@ Ezek nélkül semmilyen Python-program nem érthető. Ha ezekben bizonytalan vag
 | 10 | [String-ek](10_string_hu.md) | A szöveg is "darabolható”, karakterről karakterre. | `[a:b]`, `.split()`, `.join()` |
 | 11 | [Függvények](11_functions_hu.md) | Ismétlődő kódot egy helyre teszünk, és elnevezzük. | `def`, `return`, paraméterek |
 
-**Mire figyelj végig ezekben?** A **blokk** (behúzással jelölt kódrész), a sor végi **kettőspont** `:`, és hogy a Python **kis- és nagybetű érzékeny**. Ez a 3 dolog okozza a kezdők hibáinak nagy részét — ha ezt érted, a kód olvasása sokkal könnyebb lesz.
+### **Mire figyelj végig ezekben?** 
+- A **blokk** (behúzással jelölt kódrész. `tab`, `tabulator`)
+- a sor végi **kettőspont** `:`
+- és hogy a Python **kis- és nagybetű érzékeny**. 
+
+Ez a 3 dolog okozza a kezdők hibáinak nagy részét — ha ezt érted, a kód olvasása sokkal könnyebb lesz.
 
 ---
 
