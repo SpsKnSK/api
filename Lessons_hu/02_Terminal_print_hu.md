@@ -2,24 +2,24 @@
 
 > # ✏️ `print()`
 >
-> **Mire jó?** Kiírja a képernyőre azt, amit a zárójelbe teszünk: szöveget, számot, változót, művelet eredményét.
+> **Mire jó?** Kiírja a képernyőre azt, amit a zárójelbe írunk: szöveget, számot, változót vagy egy művelet eredményét.
 >
-> **Alak:** `print(érték1, érték2, sep=" ", end="\n")` a `sep` és az `end` nem kötelező
+> **Alak:** `print(érték1, érték2, sep=" ", end="\n")` – a `sep` és az `end` nem kötelező
 >
 > | Amit írok | Mit jelent |
 > |---|---|
 > | `print("Szia")` | szöveg (idézőjelben!) |
 > | `print(12)` | szám (idézőjel nélkül) |
-> | `print(szam)` | változó **tartalma** |
-> | `print(a+b)` | előbb számol, aztán ír |
+> | `print(szam)` | a változó **tartalma** |
+> | `print(a+b)` | előbb számol, aztán kiír |
 > | `print(a, b)` | a vessző = szóköz a kimenetben |
-> | `sep="."` | mi kerüljön az értékek **közé** (alap: szóköz) |
-> | `end=" "` | mi kerüljön a sor **végére** (alap: új sor `\n`) |
-> | `""` | üres string |
+> | `sep="."` | mi kerüljön az értékek **közé** (alapértelmezetten: szóköz) |
+> | `end=" "` | mi kerüljön a sor **végére** (alapértelmezetten: új sor `\n`) |
+> | `""` | üres szöveg |
 > | `\n` | új sor jele |
 > | `\t` | tabulátor |
 >
-> **Szám vs. szöveg:**
+> **Szám vagy szöveg:**
 > ```py
 > print(1+1)      # 2   -> összeadás
 > print("1"+"1")  # 11  -> összeragasztás
@@ -31,98 +31,82 @@
 > print("Szia", end=" ")
 > print("Peter!")
 > ```
-> képernyőn
+> a képernyőn
 > ```
 > 192.168.100.1
 > Szia Peter!
 > ```
 >
-> **Metafora:** a `print()` olyan, mint egy **kirakat**: bármit teszel bele zárójelbe, azt kiteszi, hogy mindenki lássa a "kirakatban" (a képernyőn).
-# print()
-- Adatok, információk kiíratása a képernyőre
-- Kiírathatunk:
+> **Metafora:** a `print()` olyan, mint egy **kirakat**: amit kiállítasz benne (a zárójelbe írsz), azt a vásárló is látja (a képernyőn jelenik meg).
+
+# `print()`
+- Adatok és információk kiírása a képernyőre
+- Kiírhatunk:
     - Szöveget
     - Számokat
     - Változó tartalmát
-    - Több változóval elvégzett matematikai műveletek eredményét
+    - Több változóval végzett matematikai műveletek eredményét
 
-### Feladat
-1. Szöveg kiíratása (mi a különbség?):
+### Feladatok
+1. Szöveg kiírása (mi a különbség?):
     ```py
-    print("Hello World")
-    print('Hello World')
+    print("Szia világ")
+    print('Szia világ')
     ```
-1. Szám kiíratása (mi a különbség?):
+1. Szám kiírása (mi a különbség?):
     ```py
     print(123.45)
     print(123,45)
     ```
-1. Változó kiíratása
+1. Változó kiírása
     ```py
-    szam1=5
+    szam1 = 5
     print(szam1)
     ```
-1. Összeg kiíratása
+1. Összeg kiírása
     ```py
-    szam1=5
-    szam2=11
-    print(szam1+szam2)
+    szam1 = 5
+    szam2 = 11
+    print(szam1 + szam2)
     ```
 
-## `print()` – vegyes kiíratás
-Lehetőség van egy print-en belül több adat kiíratására.
+## `print()` – vegyes kiírás
+Egy `print()` utasításon belül több adatot is kiírhatunk.
 
-Ezeket az adatokat vesszővel választjuk el egymástól
+Ezeket az adatokat vesszővel választjuk el.
 
 ```py
-alap_xp = 1500
-bonus_xp = 350
-print("Összes XP:", alap_xp + bonus_xp)
-print("Dupla XP esemény:", (alap_xp + bonus_xp) * 2)
+darab = 12
+print(darab, "gitárhúr")
 ```
+Egy `print()` utasításon belül különböző típusú adatokkal is végezhetünk műveleteket.
 
-## Több dolog egyszerre - mint a social media post 📱
-
-Egy `print()` függvényben többféle információt is kiírhatsz egyszerre, vesszővel elválasztva:
-
-### Gaming példák:
 ```py
-player_name = "xX_ProGamer_Xx"
-score = 15420
-
-print("Játékos:", player_name, "Pontszám:", score)
-print("Következő szint:", score + 580, "pontban")
+szam1 = 12
+szam2 = 8
+print(szam1 + szam2, szam1 * szam2)
 ```
-
-### Streaming setup:
+Szöveg, vagyis string esetén egy kicsit más a helyzet.
 ```py
-fps = 60
-resolution = "1080p"
-print("Stream minőség:", fps, "FPS", resolution)
+print('egy csomag', 'gitár'+'húr')
 ```
-
-### Social media vibe:
+### Kiírás egymás mellé vagy egymás alá
+Ha a szöveget egy sorba szeretnénk kiírni, csak egy `print()` utasítást használunk, és az adatokat a zárójelbe írjuk.
 ```py
-likes = 347
-comments = 28
-print("📸 Poszt statisztikák:", likes, "❤️", comments, "💬")
+print('Szia', 'Peter!')
 ```
-
-### String összefűzés (concatenation):
+Ha a szöveget külön sorokba szeretnénk kiírni, több `print()` utasítást használunk, minden sorhoz egyet.
 ```py
-username = "CoolKid"
-domain = "gmail.com"
-print("Email:", username + "@" + domain)
+print('Szia')
+print('Peter!')
 ```
-## Elrendezés: Egy sorba vs. több sorba 📝
-
-### Egy sorba (mint egy Twitter poszt):
+vagy használhatjuk az új sor jelét, a `\n` karaktert is
 ```py
-print('Sziasztok!', 'Mi a helyzet?', '🔥')
+print('Szia\nPeter!')
 ```
-Kimenet: `Sziasztok! Mi a helyzet? 🔥`
+## `sep` és `end` paraméterek
 
-### Több sorba (mint Instagram caption):
+Ha megnézzük a `print` függvény definícióját:
 ```py
 (function) def print(
     *values: object,
@@ -132,81 +116,76 @@ Kimenet: `Sziasztok! Mi a helyzet? 🔥`
     flush: Literal[False] = False
 ) -> None
 ```
-láthatjátok, hogy a `*values` a tetszőleges számú kiírandó érték, utána pedig 4 megnevezett (kulcsszavas) paraméter következik. Mi ebből kettővel fogunk foglalkozni: `sep` és `end`.
-### `sep`- separator
-Ahogy a VS Code segít megérteni a paramétert _string inserted between values, default a space._ Ezzel válasszuk el a bemenő értékeket egymástól:
+láthatjuk, hogy a `*values` tetszőleges számú kiírandó értéket jelent, utána pedig 4 megnevezett (kulcsszavas) paraméter következik. Ezek közül kettővel fogunk foglalkozni: a `sep` és az `end` paraméterrel.
+### `sep` – elválasztó
+Ahogy a Visual Studio Code segít megérteni ezt a paramétert: _string inserted between values, default a space._ Ezzel a szöveggel választjuk el a bemenő értékeket egymástól:
 ```py
-print("alma", "banan", "cseresznye")
+print("alma", "körte", "cseresznye")
 ```
+> kimenet: `alma körte cseresznye`
 
-Mindkettő ugyanazt az eredményt adja!
-## Profi trükkök: `sep` és `end` paraméterek 🎯
-
-### `sep` - Separator (elválasztó karakter)
-Alapból a `print()` szóközzel választja el a dolgokat. De te döntöd el, mit tesz közéjük!
-
-#### Gaming leaderboard:
+Ha más jelet szeretnénk közéjük tenni, a `sep` értékét így változtathatjuk meg:
 ```py
-print("alma", "banan", "cseresznye", sep=".")
+print("alma", "körte", "cseresznye", sep=".")
 ```
-> kimenet: `alma.banan.cseresznye`
+> kimenet: `alma.körte.cseresznye`
 
-Próbáljátok meg más karakterekkel.
+Próbáljátok ki más elválasztókkal is.
 
 ### `end`
-Ezt a karaktert teszi a sor végére. Mivel az alapértelmezett `end` az új sor karakter `\n`, a két print kimenete egymás alá kerül:
+Ez a szöveg kerül a sor végére. Mivel az `end` alapértelmezett értéke az új sor jele, a `\n`, két `print` utasítás kimenete egymás alá kerül:
 ```py
 print('Szia')
 print('Peter!')
 ```
-kimenet
+kimenet:
 ```
 Szia
 Peter!
 ```
 
-Ha más írásjelet szeretnénk tenni a sor végére, akkor az `end` értéket kell változtatni, ezt pedig az alábbi módon tehetjük meg:
+Ha más szöveget szeretnénk a sor végére írni, az `end` értékét így változtathatjuk meg:
 ```py
 print('Szia', end=" ")
 print('Peter!')
 ```
-kimenet: 
+kimenet:
 ```
 Szia Peter!
 ```
 
-Próbáljátok meg más karakterekkel.
+Próbáljátok ki más karakterekkel is.
 
 ## Speciális karakterek
 - `""` üres szöveg (üres string): nem látszik semmi a képernyőn. Olyan, mint a `0` az összeadásnál: `"alma" + ""` továbbra is `alma`
-- `"\n"` új sor karakter: innentől a szöveg új sorban folytatódik
-- `"\t"` tabulátor: nagyobb, oszlopokba rendező köz
+- `"\n"` új sor jele: a szöveg innen új sorban folytatódik
+- `"\t"` tabulátor: nagyobb szóköz, amely oszlopokba rendezi az adatokat
 ```py
-print("alma\nbanan")
-print("alma\tbanan")
+print("alma\nkörte")
+print("alma\tkörte")
 ```
-kimenet
+kimenet:
 ```
 alma
-banan
-alma    banan
+körte
+alma    körte
 ```
 
 ## Megjegyzés (komment) – a `#` jel
-A `#` jel utáni részt a Python **nem hajtja végre**, csak nekünk szól emlékeztetőül:
+A `#` jel utáni részt a Python **nem hajtja végre**, csak nekünk szóló emlékeztető:
 ```py
 # ez egy megjegyzes, nem fut le
-print("Szia")  # a sor vegen is lehet
+print("Szia")  # a sor végén is lehet
 ```
 
-## Mi a különbség az 1 és az "1" között?
-- az `1` az szám, ami annyit tesz, mint a matekban 1-es érték
-- az `"1"` szöveg, úgy képzeljétek el, mintha azt írnátok a számítógépnek, hogy `egy`, nem érték, hanem szöveg
+## Mi a különbség az `1` és az `"1"` között?
+- Az `1` egy szám, amely a matematikai egyes értéket jelenti.
+- Az `"1"` szöveg. Képzeljétek el úgy, mintha azt írnátok a számítógépnek, hogy `egy`: nem érték, hanem szöveg.
 ```py
-print(1 + 1)       # Matematikai számítás
-print("1" + "1")   # Szöveg összefűzés
+print(1+1)
+print("1"+"1")
 ```
-Kimenet:
+kimenet:
 ```
 2
 11
@@ -214,47 +193,48 @@ Kimenet:
 > Számoknál a `+` **összead**, szövegnél **összeragaszt**.
 
 
-## Gyakorlat
-Adott 3 változó a következő értékekkel:
+## Példák
+Adott három változó a következő értékekkel:
 ```py
-elso=12
-masodik=24
-harmadik=34
+elso = 12
+masodik = 24
+harmadik = 34
 ```
-1. Írassátok ki ezt a három számot a képernyőre a következő formában: 
+1. Írjátok ki ezt a három számot a képernyőre a következőképpen:
     ```
     Elso szam: 12
     Masodik szam: 24
     Harmadik szam: 34
     ```
-    Oldjátok meg úgy is, hogy csak **egy** `print`-et használtok.
-2. Írassátok ki a három szám összegét és az első két szám szorzatát.
+    Oldjátok meg úgy is, hogy csak **egy** `print` utasítást használtok.
+
+2. Írjátok ki a három szám összegét és az első két szám szorzatát.
 
 > # 💥 Rontsátok el!
-> Írjatok olyan `print` sorokat, amiket a Python hibával utasít vissza. Ötletek:
+> Írjatok olyan `print` sorokat, amelyeket a Python hibával utasít vissza. Ötletek:
 >
 > - hiányzó zárójel vagy idézőjel
-> - kevert idézőjel
-> - a függvény nevének elrontása (pl. nagy `P` betű)
+> - kevert idézőjelek
+> - a függvény nevének elrontása (például nagy `P` betű)
 > - idézőjel nélküli szöveg
-> - több vessző, pont alkalmazása
+> - több vessző vagy pont használata
 >
 > Olvassátok el a hibaüzenetet: melyik sorra mutat, és mi a hiba neve? Mire jutottatok?
 
 > # ❓ Kérdések
-> 1. Jellemezd a `print` függvényt, mire szolgál?
-> 1. Ha több értéket, változót akarunk használni a `print` függvényben, hogyan tehetjük azt meg? Soroljatok fel példákat.
-> 1. Hogyan jelenik meg a `""` üres string a képernyőn? Mutassatok rá példát!
-> 1. Hogyan jelenik meg a `"\n"` karakter a képernyőn? Mutassatok rá példát!
+> 1. Jellemezzétek a `print` függvényt! Mire szolgál?
+> 1. Ha több értéket vagy változót szeretnénk használni a `print` függvényben, hogyan tehetjük meg? Soroljatok fel példákat.
+> 1. Hogyan jelenik meg az üres string, a `""` a képernyőn? Mutassatok rá példát.
+> 1. Hogyan jelenik meg a `"\n"` karakter a képernyőn? Mutassatok rá példát.
 > 1. Mi a különbség az `5` és az `"5"` között?
-> 1. Mire használjuk a `print` függvény `sep` paraméterét, mi az alapértelmezett értéke?
-> 1. Mire használjuk a `print` függvény `end` paraméterét, mi az alapértelmezett értéke?
-> 1. Változtassátok meg a `sep` paramétert a következő kódban úgy, hogy reális ip-címet kapjatok:
+> 1. Mire használjuk a `print` függvény `sep` paraméterét, és mi az alapértelmezett értéke?
+> 1. Mire használjuk a `print` függvény `end` paraméterét, és mi az alapértelmezett értéke?
+> 1. Változtassátok meg a `sep` paramétert a következő kódban úgy, hogy valódi IP-címet kapjatok:
 >     ```py
 >     print(192,168,100,1)
 >     ```
 >     elvárt kimenet: `192.168.100.1`
-> 1. Változtassátok meg az `end` paramétert a következő kódban úgy, hogy egymás mellé írja ki a szöveget:
+> 1. Változtassátok meg az `end` paramétert a következő kódban úgy, hogy a szövegek egymás mellé kerüljenek:
 >     ```py
 >     print('Szia')
 >     print('Peter!')
