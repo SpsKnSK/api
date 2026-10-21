@@ -92,14 +92,20 @@ else:
 Mindig van egy fő `if`, amiben lehet több `if` utasítás.
 
 ~~~python
-print("gondoltam egy szamra")
 szam = 55
+
 if szam > 30:
+    print("A szam nagyobb 30-nal.")
     if szam > 40:
+        print("A szam nagyobb 40-nel.")
         if szam > 50:
-            print("a szam nagyobb 50-nel")
+            print("A szam nagyobb 50-nel.")
         else:
-            print("a szam kisebb 50-nel")
+            print("A szam legfeljebb 50.")
+    else:
+        print("A szam legfeljebb 40.")
+else:
+    print("A szam legfeljebb 30.")
 ~~~
 
 ## Logikai operátorok, feltételek összekapcsolása
@@ -140,13 +146,13 @@ a = 4
 b = 7
 c = 9
 
-if ((a < b) and (b <= c) and (a != 4)) or not (a == c):
+if (a < b and b <= c) or not (a == c):
     print("A feltétel igaz.")
 else:
     print("A feltétel hamis.")
 ~~~
 
-A program három változót használ, és három összehasonlítást végez: 
+A program három változót használ, és három összehasonlítást végez:
 - `a < b`
 - `b <= c`
 - `a == c`
