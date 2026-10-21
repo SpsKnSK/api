@@ -62,7 +62,7 @@ Bez tohto sa žiadny Python program nedá pochopiť. Ak si tu neistý, vráť sa
 | 04 | [Premenné](04_Variables_sk.md) | Údaje treba niekde uložiť. | Krabice s nálepkou: `int`, `float`, `str`, `bool` |
 | 05 | [If, vetvenie](05_if/01_basic.md) ([podrobnejšia lekcia](05_if/02_main.md)) | Tu sa program učí **rozhodovať**. | `if` / `elif` / `else`, blok, odsadenie, dvojbodka |
 | 06 | [Cyklus `while`](06_while/01_basic.md) ([podrobnejšia lekcia](06_while/02_main.md)) | Keď vopred nevieš, koľkokrát treba opakovať. | `while podmienka:` |
-| 07 | [Cyklus `for`](07_for_zaklady_sk.md) ([podrobnejšia lekcia](07_for_sk.md)) | Keď vopred vieš, cez čo/koľkokrát prejsť. | `for i in range(...):` |
+| 07 | [Cyklus `for`](07_for/01_basic.md) ([podrobnejšia lekcia](07_for/02_main.md)) | Keď vopred vieš, cez čo/koľkokrát prejsť. | `for i in range(...):` |
 | 09 | [Zoznamy](09_lists_sk.md) | Veľa hodnôt v jednej premennej. | `[]`, index, `.append()`, `.sort()` |
 | 10 | [Reťazce (string)](10_string_sk.md) | Aj text sa dá "rozobrať" na znaky. | `[a:b]`, `.split()`, `.join()` |
 | 11 | [Funkcie](11_functions_sk.md) | Opakujúci sa kód dáme na jedno miesto a pomenujeme. | `def`, `return`, parametre |
@@ -110,7 +110,7 @@ O týchto stačí vedieť: **čo to je a kedy to použiť** — netreba naspamä
 |---|---|
 | ...sa niečo opýta a podľa toho rozhodne | `if` / `elif` / `else` ([05](05_if/02_main.md)) |
 | ...opakuje niečo, kým je niečo pravda | `while` ([06](06_while/02_main.md)) |
-| ...prechádza zoznamom alebo daným počtom krokov | `for` ([07](07_for_sk.md)) |
+| ...prechádza zoznamom alebo daným počtom krokov | `for` ([07](07_for/02_main.md)) |
 | ...má uchovávať veľa podobných údajov | zoznam ([09](09_lists_sk.md)) alebo slovník ([12](12_list_set_dictionary_tuple_sk_1.md)) |
 | ...treba rozobrať text, hľadať v ňom | operácie s reťazcami ([10](10_string_sk.md)) |
 | ...ten istý kód sa v nej opakuje viackrát | urob z neho funkciu ([11](11_functions_sk.md)) |
