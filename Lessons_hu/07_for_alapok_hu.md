@@ -81,7 +81,7 @@ Kérj be egy nevet, majd a `for` ciklussal írd ki a név betűit külön sorokb
 
 Írd ki az 1-től 10-ig terjedő számokat és mellettük a négyzetüket, például: `3 - 9`.
 
-További gyakorlófeladatok: [for – feladatok](../Exercies/07_for/feladatok_hu.md).
+További gyakorlófeladatok: [for – feladatok](../Exercies/07_for/exercises_hu.md).
 
 ## Ellenőrizd, érted-e!
 
