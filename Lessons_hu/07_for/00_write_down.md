@@ -2,6 +2,8 @@
 
 **Mire való?** A `for` ciklust akkor használjuk, ha előre tudjuk, milyen értékeken vagy hányszor ismétlünk.
 
+**Metafora:** a `for` olyan, mint egy **névsorolvasás**: előre tudod, kik vannak a listán, és sorban végigmész rajtuk — nem kell magadnak számolgatnod, hogy hányszor lépj.
+
 ```python
 for i in range(1, 6):
     print(i)
