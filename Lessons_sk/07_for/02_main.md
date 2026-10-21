@@ -85,6 +85,30 @@ n
 a
 ```
 
+## `break` a `continue`
+
+Príkaz `break` okamžite ukončí cyklus:
+
+```python
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+```
+
+Výstup: `1, 2, 3, 4`
+
+Príkaz `continue` preskočí zvyšok aktuálneho kola a cyklus pokračuje ďalšou hodnotou:
+
+```python
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+```
+
+Výstup: `1, 2, 4, 5`
+
 ## Vývojový diagram
 
 ```mermaid
