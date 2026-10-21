@@ -24,4 +24,4 @@ Kimenet: `1, 2, 3`
 3. A ciklusban általában változtatni kell valamin, hogy a feltétel egyszer hamissá váljon.
 4. Ha a feltétel sosem lesz hamis, végtelen ciklus keletkezhet.
 
-**Metafora:** a `while` olyan, mint egy **társasjáték szabálya**: "amíg van pénzed, lépj egy mezőt:. Minden kör után újra megkérdezzük: igaz még a feltétel? Ha igen, jön a következő kör, ha nem, vége.
+**Metafora:** a `while` olyan, mint egy **társasjáték szabálya**: „amíg van pénzed, lépj egy mezőt”. Minden kör után újra megkérdezzük: igaz még a feltétel? Ha igen, jön a következő kör, ha nem, vége.
