@@ -63,7 +63,7 @@ Ezek nélkül semmilyen Python-program nem érthető. Ha ezekben bizonytalan vag
 | 02 | [`print()`](02_Terminal_print_hu.md) | Enélkül a program semmit nem mutat neked. | Kiíratás a képernyőre |
 | 03 | [`input()`](03_Terminal_input_hu.md) | Enélkül a program nem tud kérdezni. | Adat beolvasása |
 | 04 | [Változók](04_Variables_hu.md) | Adatot valahol tárolni kell. | Dobozok címkével: `int`, `float`, `str`, `bool` |
-| 05 | [If, elágazás](05_if_hu.md) | A program itt tanul meg **dönteni**. | `if` / `elif` / `else`, blokk, behúzás, kettőspont |
+| 05 | [If, elágazás](05_if_alapok_hu.md) ([részletes lecke](05_if_hu.md)) | A program itt tanul meg **dönteni**. | `if` / `else`, feltétel, blokk, behúzás, kettőspont |
 | 06 | [`while` ciklus](06_while_hu.md) | Amikor nem tudod előre, hányszor kell ismételni. | `while feltetel:` |
 | 07 | [`for` ciklus](07_for_hu.md) | Amikor előre tudod, min/hányszor mész végig. | `for i in range(...):` |
 | 09 | [Listák](09_lists_hu.md) | Sok érték egyben, egy változóban. | `[]`, index, `.append()`, `.sort()` |
