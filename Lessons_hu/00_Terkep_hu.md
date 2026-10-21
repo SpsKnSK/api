@@ -63,7 +63,7 @@ Ezek nélkül semmilyen Python-program nem érthető. Ha ezekben bizonytalan vag
 | 02 | [`print()`](02_Terminal_print_hu.md) | Enélkül a program semmit nem mutat neked. | Kiíratás a képernyőre |
 | 03 | [`input()`](03_Terminal_input_hu.md) | Enélkül a program nem tud kérdezni. | Adat beolvasása |
 | 04 | [Változók](04_Variables_hu.md) | Adatot valahol tárolni kell. | Dobozok címkével: `int`, `float`, `str`, `bool` |
-| 05 | [If, elágazás](07_if/02_main.md) ([részletes lecke](07_if/02_main.md)) | A program itt tanul meg **dönteni**. | `if` / `else`, feltétel, blokk, behúzás, kettőspont |
+| 05 | [If, elágazás](05_if/02_main.md) ([részletes lecke](05_if/02_main.md)) | A program itt tanul meg **dönteni**. | `if` / `else`, feltétel, blokk, behúzás, kettőspont |
 | 06 | [`while` ciklus](06_while_alapok_hu.md) ([részletes lecke](06_while_hu.md)) | Amikor nem tudod előre, hányszor kell ismételni. | `while feltetel:` |
 | 07 | [`for` ciklus](07_for_alapok_hu.md) ([részletes lecke](07_for_hu.md)) | Amikor előre tudod, min/hányszor mész végig. | `for i in range(...):` |
 | 09 | [Listák](09_lists_hu.md) | Sok érték egyben, egy változóban. | `[]`, index, `.append()`, `.sort()` |
@@ -111,11 +111,11 @@ Ezekről elég annyit tudni: **mi ez, és mikor vegyem elő** — nem kell fejb�
 
 | A feladat... | ...akkor valószínűleg ez kell |
 |---|---|
-| ...kér tőled valamit és utána dönt | `if` / `elif` / `else` ([05](07_if/02_main.md)) |
+| ...kér tőled valamit és utána dönt | `if` / `elif` / `else` ([05](05_if/02_main.md)) |
 | ...ismétel, amíg valami igaz | `while` ([06](06_while_hu.md)) |
 | ...végigmegy egy listán vagy egy adott számú körön | `for` ([07](07_for_hu.md)) |
 | ...sok hasonló adatot kell tárolnia | lista ([09](09_lists_hu.md)) vagy szótár ([12](12_list_set_dictionary_tuple_hu_1.md)) |
 | ...szöveget kell darabolnia, keresnie benne | string-műveletek ([10](10_string_hu.md)) |
 | ...ugyanaz a kódrészlet többször is előfordul benne | írj belőle függvényt ([11](11_functions_hu.md)) |
 | ...adatot kell megőriznie a program lezárása után is | fájlkezelés ([16](16_files_hu.md)) |
-| ...furcsa hibát dob, és nem érted, miért | nézd meg a behúzást, a `:`-t, és a kis/nagybetűket ([05](07_if/02_main.md)) |
+| ...furcsa hibát dob, és nem érted, miért | nézd meg a behúzást, a `:`-t, és a kis/nagybetűket ([05](05_if/02_main.md)) |
