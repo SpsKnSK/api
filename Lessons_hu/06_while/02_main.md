@@ -60,8 +60,32 @@ Ez a program nem áll le magától, mert `i` értéke nem változik, így a felt
 
 ## `break` és `continue`
 
-- A `break` azonnal kilép a ciklusból.
-- A `continue` kihagyja az aktuális kör hátralévő részét, majd újra ellenőrzi a feltételt.
+- A `break` **azonnal befejezi a ciklust**, akkor is, ha a `while` feltétele egyébként még igaz lenne.
+- A `continue` kihagyja az aktuális kör hátralévő részét, és a ciklus a következő körrel folytatódik.
+
+### A `break` bemutatása
+
+```python
+i = 1
+while i <= 5:
+    print(i)
+    if i == 3:
+        break
+    i = i + 1
+print("Vége")
+```
+
+Kimenet:
+```text
+1
+2
+3
+Vége
+```
+
+Amikor `i` értéke 3, a `break` azonnal kilép a ciklusból. A 4 és az 5 már nem jelenik meg, a ciklus utáni `print("Vége")` viszont lefut.
+
+### A `continue` bemutatása
 
 ```python
 i = 0
@@ -72,4 +96,4 @@ while i < 5:
     print(i)
 ```
 
-Kimenet: `1, 2, 4, 5` – a 3-at kihagyjuk.
+Kimenet: `1, 2, 4, 5` – a 3-at kihagyjuk, de a ciklus folytatódik.
