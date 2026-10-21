@@ -73,39 +73,3 @@ while i < 5:
 ```
 
 Výstup: `1, 2, 4, 5` – číslo 3 sa preskočí.
-
-## 💥 Pokazte to!
-
-Spustite tento program. Prečo sa nezastaví?
-
-```python
-i = 0
-while i < 3:
-    print(i)
-```
-
-Opravte ho tak, aby vypísal 0, 1, 2 a potom sa zastavil. Potom presuňte zvyšovanie pred `print(i)`. Ako sa zmení výstup?
-
-## 📋 Úlohy
-
-1. Načítaj číslo a vypíš celé čísla od 1 po zadané číslo.
-2. Odpočítavaj od 100 do 0 a potom vypíš: „Šťastný nový rok!“
-3. Načítavaj čísla, kým používateľ nezadá 0, potom vypíš ich súčet.
-4. Vypíš čísla deliteľné 3 až po 50.
-
-## ❓ Otázky
-
-1. Akú bežnú situáciu poznáš, v ktorej niečo opakujeme „kým“?
-2. Aký je rozdiel medzi `if` a `while`?
-3. Čo je jadro cyklu a ako ho Python označuje?
-4. Prečo sa musí podmienka `while` raz stať nepravdivou?
-5. Čo vypíše tento program?
-   ```python
-   i = 2
-   while i < 8:
-       print(i, end=" ")
-       i = i + 2
-   ```
-6. Na čo slúži `break` a na čo `continue`?
-
-Ďalšie precvičovanie: [while – úlohy](05_exercises.md).
