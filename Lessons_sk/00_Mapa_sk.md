@@ -60,9 +60,9 @@ Bez tohto sa žiadny Python program nedá pochopiť. Ak si tu neistý, vráť sa
 | 02 | [`print()`](02_Terminal_print_sk.md) | Bez toho ti program nič neukáže. | Výpis na obrazovku |
 | 03 | [`input()`](03_Terminal_input_sk.md) | Bez toho sa program nevie opýtať. | Načítanie údajov |
 | 04 | [Premenné](04_Variables_sk.md) | Údaje treba niekde uložiť. | Krabice s nálepkou: `int`, `float`, `str`, `bool` |
-| 05 | [If, vetvenie](05_if_sk.md) | Tu sa program učí **rozhodovať**. | `if` / `elif` / `else`, blok, odsadenie, dvojbodka |
-| 06 | [Cyklus `while`](06_while_sk.md) | Keď vopred nevieš, koľkokrát treba opakovať. | `while podmienka:` |
-| 07 | [Cyklus `for`](07_for_sk.md) | Keď vopred vieš, cez čo/koľkokrát prejsť. | `for i in range(...):` |
+| 05 | [If, vetvenie](05_if_alapok_sk.md) ([podrobnejšia lekcia](05_if_sk.md)) | Tu sa program učí **rozhodovať**. | `if` / `elif` / `else`, blok, odsadenie, dvojbodka |
+| 06 | [Cyklus `while`](06_while_alapok_sk.md) ([podrobnejšia lekcia](06_while_sk.md)) | Keď vopred nevieš, koľkokrát treba opakovať. | `while podmienka:` |
+| 07 | [Cyklus `for`](07_for_alapok_sk.md) ([podrobnejšia lekcia](07_for_sk.md)) | Keď vopred vieš, cez čo/koľkokrát prejsť. | `for i in range(...):` |
 | 09 | [Zoznamy](09_lists_sk.md) | Veľa hodnôt v jednej premennej. | `[]`, index, `.append()`, `.sort()` |
 | 10 | [Reťazce (string)](10_string_sk.md) | Aj text sa dá "rozobrať" na znaky. | `[a:b]`, `.split()`, `.join()` |
 | 11 | [Funkcie](11_functions_sk.md) | Opakujúci sa kód dáme na jedno miesto a pomenujeme. | `def`, `return`, parametre |
