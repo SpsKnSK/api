@@ -73,39 +73,3 @@ while i < 5:
 ```
 
 Kimenet: `1, 2, 4, 5` – a 3-at kihagyjuk.
-
-## 💥 Rontsátok el!
-
-Futtassátok ezt a programot. Miért nem áll le?
-
-```python
-i = 0
-while i < 3:
-    print(i)
-```
-
-Javítsátok úgy, hogy 0, 1, 2 jelenjen meg, majd a program leálljon. Utána tegyétek a növelést a `print(i)` elé. Hogyan változik a kimenet?
-
-## 📋 Feladatok
-
-1. Kérj be egy számot, majd írd ki az 1-től a megadott számig terjedő egész számokat.
-2. Számolj vissza 100-tól 0-ig, majd írd ki: „Boldog új évet!”
-3. Kérj be számokat egymás után, amíg a felhasználó 0-t nem ad meg, majd írd ki az összegüket.
-4. Írd ki a 3-mal osztható számokat 50-ig.
-
-## ❓ Kérdések
-
-1. Milyen hétköznapi helyzetet tudsz mondani, amikor valamit „amíg” ismétlünk?
-2. Mi a különbség az `if` és a `while` között?
-3. Mi a ciklusmag, és hogyan jelöli a Python?
-4. Miért kell a `while` feltételének egyszer hamissá válnia?
-5. Mit ír ki a következő program?
-   ```python
-   i = 2
-   while i < 8:
-       print(i, end=" ")
-       i = i + 2
-   ```
-6. Mire való a `break`, és mire a `continue`?
-
-További gyakorlás: [while – feladatok](05_exercises.md).
