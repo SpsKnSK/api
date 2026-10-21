@@ -132,3 +132,16 @@ Olvassátok el a hibaüzenetet:
 - Hogy hívják a hibát, és melyik sorra mutat?
 - Melyik hibát jelzi a Python azonnal?
 - Melyik esetben fut le a program, mégis rossz eredményt ad?
+
+### Kiinduló kód: mozijegy-ellenőrzés
+
+Másold ki ezt a programot, majd próbáld elrontani a fenti ötletek alapján. Minden változtatás után futtasd le, és figyeld meg, milyen hibát kapsz, vagy hogyan változik a program működése.
+
+~~~python
+kor = 17
+
+if kor >= 18:
+    print("Beléphetsz.")
+else:
+    print("Még nem léphetsz be.")
+~~~
