@@ -64,8 +64,8 @@ Ezek nélkül semmilyen Python-program nem érthető. Ha ezekben bizonytalan vag
 | 03 | [`input()`](03_Terminal_input_hu.md) | Enélkül a program nem tud kérdezni. | Adat beolvasása |
 | 04 | [Változók](04_Variables_hu.md) | Adatot valahol tárolni kell. | Dobozok címkével: `int`, `float`, `str`, `bool` |
 | 05 | [If, elágazás](05_if_alapok_hu.md) ([részletes lecke](05_if_hu.md)) | A program itt tanul meg **dönteni**. | `if` / `else`, feltétel, blokk, behúzás, kettőspont |
-| 06 | [`while` ciklus](06_while_hu.md) | Amikor nem tudod előre, hányszor kell ismételni. | `while feltetel:` |
-| 07 | [`for` ciklus](07_for_hu.md) | Amikor előre tudod, min/hányszor mész végig. | `for i in range(...):` |
+| 06 | [`while` ciklus](06_while_alapok_hu.md) ([részletes lecke](06_while_hu.md)) | Amikor nem tudod előre, hányszor kell ismételni. | `while feltetel:` |
+| 07 | [`for` ciklus](07_for_alapok_hu.md) ([részletes lecke](07_for_hu.md)) | Amikor előre tudod, min/hányszor mész végig. | `for i in range(...):` |
 | 09 | [Listák](09_lists_hu.md) | Sok érték egyben, egy változóban. | `[]`, index, `.append()`, `.sort()` |
 | 10 | [String-ek](10_string_hu.md) | A szöveg is "darabolható", karakterről karakterre. | `[a:b]`, `.split()`, `.join()` |
 | 11 | [Függvények](11_functions_hu.md) | Ismétlődő kódot egy helyre teszünk, és elnevezzük. | `def`, `return`, paraméterek |
