@@ -1,33 +1,36 @@
-## ✏️ Füzetbe – Változók
+## ✏️ Füzetbe – Elágazás (if)
 
-**Mi az?** Névvel ellátott doboz a memóriában, amiben egy értéket tárolunk. A neve alapján bármikor előszedhetjük.
+**Mire való?** Az `if` segítségével a program egy feltétel alapján dönt: ha a feltétel igaz (`True`), végrehajtja az `if` alatti utasításokat; különben az `else` ág fut le.
 
-**Értékadás:** `nev = ertek` – a `=` **nem** egyenlőség, hanem: „tedd bele!”
 ~~~python
-kor = 16          # a kor dobozba bekerül a 16
-kor = kor + 1     # kivesszük, hozzáadunk 1-et, visszatesszük -> 17
+kor = 17
+
+if kor >= 18:
+    print("Beléphetsz.")
+else:
+    print("Még nem léphetsz be.")
 ~~~
 
-| Típus | Jele | Példa |
-|---|---|---|
-| egész szám | `int` | `10`, `-9`, `0` |
-| tizedes szám | `float` | `3.14`, `95.78` |
-| szöveg | `str` | `"alma"`, `'3gomb'`, `'11'`, `"-38"` |
-| logikai | `bool` | `True`, `False` |
+**Összehasonlító operátorok:**
 
-**Névadás:** csak betű, szám és `_`; **nem** kezdődhet számmal; nincs benne szóköz és kötőjel; nem lehet foglalt szó (`print`, `input`).
+| Operátor | Jelentés |
+|---|---|
+| `<` | kisebb |
+| `<=` | kisebb vagy egyenlő |
+| `==` | egyenlő |
+| `>` | nagyobb |
+| `>=` | nagyobb vagy egyenlő |
+| `!=` | nem egyenlő |
 
-**Fontos műveletek:**
+**Logikai operátorok:**
 
-| | | | |
-|---|---|---|---|
-| `+` összeadás | `-` kivonás | `*` szorzás | `/` osztás |
-| `//` egész osztás | `%` maradék | `**` hatvány | `round(a, x)` kerekítés |
+- `and` – és: minden feltételnek igaznak kell lennie.
+- `or` – vagy: legalább az egyik feltétel igaz.
+- `not` – tagadás: megfordítja az igaz/hamis értéket.
 
-**⚠️ A leggyakoribb hiba:** `=` értékadás, `==` összehasonlítás!
-~~~python
-x = 5      # betettem az 5-öt
-x == 5     # kérdés: x „dobozban” 5 van? -> True
-~~~
+**Fontos szabályok:**
 
-**Metafora:** a változó olyan, mint egy **felcímkézett doboz**: a címke a neve, a tartalma a változó értéke. Ha újat teszünk bele, a régi kiesik — egyszerre csak egy érték van a dobozban.
+- Az `if` és az `else` sor végére kettőspont (`:`) kerül.
+- A hozzájuk tartozó utasításokat behúzással írjuk.
+- Az `if` feltételében az `==` az egyenlőséget vizsgálja; az `=` értéket ad egy változónak.
+- Az `if/else` szerkezetben a két ág közül pontosan az egyik fut le.
