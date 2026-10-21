@@ -2,7 +2,9 @@
 
 **Cyklus:** opakovanie bloku príkazov.
 
-**Predstav si to takto:** napĺňaš pohár vodou. Kým pohár nie je plný, prileješ trochu vody a potom znova skontroluješ, či je už plný. Tak funguje aj cyklus `while`: skontroluje podmienku, vykoná úlohu a potom ju skontroluje znova. Keď podmienka prestane platiť (napríklad pohár je plný), cyklus sa zastaví.
+**Metafora:** cyklus `while` je ako **pravidlo spoločenskej hry**: „kým máš peniaze, posuň sa o jedno políčko“. Po každom kole sa znova pýtame: platí podmienka ešte? Ak áno, nasleduje ďalšie kolo; ak nie, hra sa končí.
+
+**Ďalší príklad:** napĺňaš pohár vodou. Kým pohár nie je plný, prileješ trochu vody a znova skontroluješ, či je už plný. Keď sa pohár naplní, cyklus sa zastaví.
 
 ```python
 while podmienka:
