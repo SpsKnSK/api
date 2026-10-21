@@ -2,10 +2,6 @@
 
 **Cyklus:** opakovanie bloku príkazov.
 
-**Metafora:** cyklus `while` je ako **pravidlo spoločenskej hry**: „kým máš peniaze, posuň sa o jedno políčko“. Po každom kole sa znova pýtame: platí podmienka ešte? Ak áno, nasleduje ďalšie kolo; ak nie, hra sa končí.
-
-**Ďalší príklad:** napĺňaš pohár vodou. Kým pohár nie je plný, prileješ trochu vody a znova skontroluješ, či je už plný. Keď sa pohár naplní, cyklus sa zastaví.
-
 ```python
 while podmienka:
     prikazy  # jadro cyklu
@@ -27,3 +23,5 @@ Výstup: `1, 2, 3`
 2. Príkazy jadra cyklu sú odsadené.
 3. V cykle treba často meniť premennú, aby sa podmienka raz stala nepravdivou.
 4. Ak podmienka nikdy nebude nepravdivá, vznikne nekonečný cyklus.
+
+**Metafora:** cyklus `while` je ako **pravidlo spoločenskej hry**: "kým máš peniaze, posuň sa o jedno políčko". Po každom kole sa znova pýtame: platí podmienka ešte? Ak áno, nasleduje ďalšie kolo; ak nie, hra sa končí.
