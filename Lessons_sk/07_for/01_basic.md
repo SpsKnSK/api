@@ -71,10 +71,6 @@ for cislo in range(_____, _____):
 
 Vypíš čísla od 0 do 10 vrátane. Dávaj pozor: horná hranica funkcie `range()` sa nevypisuje.
 
-### 3. Samostatná úloha
-
-Načítaj meno a pomocou cyklu `for` vypíš jeho písmená, každé na samostatný riadok.
-
 ### ⭐ Dobrovoľná výzva
 
 Vypíš čísla od 1 do 10 a vedľa každého aj jeho druhú mocninu, napríklad: `3 - 9`.
