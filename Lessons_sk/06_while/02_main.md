@@ -60,8 +60,32 @@ Program sa sám nezastaví, pretože hodnota `i` sa nemení a podmienka ostáva 
 
 ## `break` a `continue`
 
-- `break` okamžite ukončí cyklus.
-- `continue` preskočí zvyšok aktuálneho kola a potom znova skontroluje podmienku.
+- `break` **okamžite ukončí cyklus**, aj keď by podmienka `while` bola stále pravdivá.
+- `continue` preskočí zvyšok aktuálneho kola a cyklus pokračuje ďalším kolom.
+
+### Ukážka príkazu `break`
+
+```python
+i = 1
+while i <= 5:
+    print(i)
+    if i == 3:
+        break
+    i = i + 1
+print("Koniec")
+```
+
+Výstup:
+```text
+1
+2
+3
+Koniec
+```
+
+Keď má `i` hodnotu 3, príkaz `break` okamžite ukončí cyklus. Čísla 4 a 5 sa už nevypíšu, ale `print("Koniec")` za cyklom sa vykoná.
+
+### Ukážka príkazu `continue`
 
 ```python
 i = 0
@@ -72,4 +96,4 @@ while i < 5:
     print(i)
 ```
 
-Výstup: `1, 2, 4, 5` – číslo 3 sa preskočí.
+Výstup: `1, 2, 4, 5` – číslo 3 sa preskočí, ale cyklus pokračuje.
