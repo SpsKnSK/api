@@ -1,4 +1,4 @@
-🗺️ [Vissza a tananyag térképéhez](00_Terkep_hu.md)
+🗺️ [Vissza a tananyag térképéhez](00_Terkep_hu.md) · [Részletesebb tananyag: If–Elif–Else](05_if_hu.md)
 
 # 05 – Elágazás: if
 
