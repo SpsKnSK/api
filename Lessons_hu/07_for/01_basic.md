@@ -71,10 +71,6 @@ for szam in range(_____, _____):
 
 Írd ki a számokat 0-tól 10-ig, a 0-t és a 10-et is beleértve. Figyelj arra, hogy a `range()` felső határa nem jelenik meg.
 
-### 3. Önálló feladat
-
-Kérj be egy nevet, majd a `for` ciklussal írd ki a név betűit külön sorokba.
-
 ### ⭐ Opcionális kihívás
 
 Írd ki az 1-től 10-ig terjedő számokat és mellettük a négyzetüket, például: `3 - 9`.
