@@ -85,6 +85,30 @@ n
 a
 ```
 
+## `break` és `continue`
+
+A `break` azonnal kilép a ciklusból:
+
+```python
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+```
+
+Kimenet: `1, 2, 3, 4`
+
+A `continue` kihagyja az aktuális kör hátralévő részét, és a ciklus a következő értékkel folytatódik:
+
+```python
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+```
+
+Kimenet: `1, 2, 4, 5`
+
 ## Folyamatábra
 
 ```mermaid
