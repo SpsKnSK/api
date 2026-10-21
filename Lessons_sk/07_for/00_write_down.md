@@ -2,6 +2,8 @@
 
 **Na čo slúži?** Cyklus `for` používame vtedy, keď vopred vieme, na akých hodnotách alebo koľkokrát opakujeme.
 
+**Metafora:** cyklus `for` je ako **čítanie zoznamu mien**: vopred vieš, kto je na zozname, a postupne prechádzaš všetky mená — nemusíš si sám počítať, koľko krokov máš urobiť.
+
 ```python
 for i in range(1, 6):
     print(i)
