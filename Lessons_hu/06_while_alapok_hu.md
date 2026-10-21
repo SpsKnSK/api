@@ -92,7 +92,7 @@ Kérj be egy jelszót. Amíg a felhasználó nem a `python123` szót írja be, k
 
 Készíts számkitalálós játékot: a titkos szám legyen 7. A program addig kérjen új tippet, amíg a felhasználó el nem találja. Találatkor írja ki: `Eltaláltad!`
 
-További gyakorlófeladatok: [while – feladatok](../Exercies/06_while/feladatok_hu.md).
+További gyakorlófeladatok: [while – feladatok](../Exercies/06_while/exercises_hu.md).
 
 ## Ellenőrizd, érted-e!
 
