@@ -140,12 +140,17 @@ a = 4
 b = 7
 c = 9
 
-if (a < b and b <= c) or not (a == c):
+if ((a < b) and (b <= c)) or not (a == c):
     print("A feltétel igaz.")
 else:
     print("A feltétel hamis.")
 ~~~
 
-A program három változót használ, és három összehasonlítást végez: `a < b`, `b <= c` és `a == c`. Az első két feltételt az `and` kapcsolja össze, ezt az eredményt az `or` kapcsolja a `not (a == c)` feltételhez. A program az `if` és az `else` közül pontosan az egyik ágat hajtja végre.
+A program három változót használ, és három összehasonlítást végez: 
+- `a < b`
+- `b <= c`
+- `a == c`
 
-> A `()` nem kellenek, de jobban szemlélteti, melyik feltétel tartozik egybe.
+Az első két feltételt az `and` kapcsolja össze, ezt az eredményt az `or` kapcsolja a `not (a == c)` feltételhez. A program az `if` és az `else` közül pontosan az egyik ágat hajtja végre.
+
+> A `()` nem mindig kellenek, de jobban szemlélteti, melyik feltétel tartozik egybe.
