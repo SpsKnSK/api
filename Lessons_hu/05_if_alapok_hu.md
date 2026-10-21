@@ -96,7 +96,7 @@ Kérj be egy hőmérsékletet, majd írd ki:
 
 Ezután próbáld meg úgy módosítani a programot, hogy pontosan 0 esetén külön üzenetet írjon ki.
 
-További gyakorlófeladatok: [If – feladatok](../Exercies/05_if/feladatok_hu.md).
+További gyakorlófeladatok: [If – feladatok](../Exercies/05_if/exercises_hu.md).
 
 ## Ellenőrizd, érted-e!
 
