@@ -140,7 +140,7 @@ a = 4
 b = 7
 c = 9
 
-if ((a < b) and (b <= c)) or not (a == c):
+if ((a < b) and (b <= c) and (a != 4)) or not (a == c):
     print("A feltétel igaz.")
 else:
     print("A feltétel hamis.")
