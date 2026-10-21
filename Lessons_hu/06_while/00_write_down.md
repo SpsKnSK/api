@@ -2,7 +2,9 @@
 
 **Ciklus:** utasítások egy blokkjának ismétlése.
 
-**Képzeld el így:** egy poharat töltesz vízzel. Amíg a pohár nincs tele, töltesz még bele egy kicsit, majd újra megnézed, tele van-e. A `while` ciklus is így működik: ellenőrzi a feltételt, végrehajtja a feladatot, aztán újra ellenőriz. Amikor a feltétel már hamis (például a pohár tele van), megáll.
+**Metafora:** a `while` olyan, mint egy **társasjáték szabálya**: „amíg van pénzed, lépj egy mezőt”. Minden kör után újra megkérdezzük: igaz még a feltétel? Ha igen, jön a következő kör, ha nem, vége.
+
+**Másik példa:** egy poharat töltesz vízzel. Amíg a pohár nincs tele, töltesz még bele egy kicsit, majd újra megnézed, tele van-e. Amikor a pohár megtelik, a ciklus leáll.
 
 ```python
 while feltetel:
