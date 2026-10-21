@@ -138,15 +138,14 @@ a | `not a`
 ~~~python
 a = 4
 b = 7
-c = 4
-d = 9
+c = 9
 
-if (a < b) and (b <= d) and (a == c) and (d > c) and (d >= b) and (not (a > c) or (b == d)):
+if (a < b and b <= c) or not (a == c):
     print("A feltétel igaz.")
 else:
     print("A feltétel hamis.")
 ~~~
 
-Ebben a példában a program nem kér be adatot: az `a`, `b`, `c` és `d` változók értékét a program elején adjuk meg. A feltételben mind az öt összehasonlító operátor (`<`, `<=`, `==`, `>`, `>=`), valamint a logikai `and`, `or` és `not` is szerepel. A program az `if` és az `else` közül pontosan az egyik ágat hajtja végre.
+A program három változót használ, és három összehasonlítást végez: `a < b`, `b <= c` és `a == c`. Az első két feltételt az `and` kapcsolja össze, ezt az eredményt az `or` kapcsolja a `not (a == c)` feltételhez. A program az `if` és az `else` közül pontosan az egyik ágat hajtja végre.
 
 > A `()` nem kellenek, de jobban szemlélteti, melyik feltétel tartozik egybe.
