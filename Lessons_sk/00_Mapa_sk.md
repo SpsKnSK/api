@@ -60,7 +60,7 @@ Bez tohto sa žiadny Python program nedá pochopiť. Ak si tu neistý, vráť sa
 | 02 | [`print()`](02_Terminal_print_sk.md) | Bez toho ti program nič neukáže. | Výpis na obrazovku |
 | 03 | [`input()`](03_Terminal_input_sk.md) | Bez toho sa program nevie opýtať. | Načítanie údajov |
 | 04 | [Premenné](04_Variables_sk.md) | Údaje treba niekde uložiť. | Krabice s nálepkou: `int`, `float`, `str`, `bool` |
-| 05 | [If, vetvenie](05_if_zaklady_sk.md) ([podrobnejšia lekcia](05_if_sk.md)) | Tu sa program učí **rozhodovať**. | `if` / `elif` / `else`, blok, odsadenie, dvojbodka |
+| 05 | [If, vetvenie](05_if/01_basic.md) ([podrobnejšia lekcia](05_if/02_main.md)) | Tu sa program učí **rozhodovať**. | `if` / `elif` / `else`, blok, odsadenie, dvojbodka |
 | 06 | [Cyklus `while`](06_while_zaklady_sk.md) ([podrobnejšia lekcia](06_while_sk.md)) | Keď vopred nevieš, koľkokrát treba opakovať. | `while podmienka:` |
 | 07 | [Cyklus `for`](07_for_zaklady_sk.md) ([podrobnejšia lekcia](07_for_sk.md)) | Keď vopred vieš, cez čo/koľkokrát prejsť. | `for i in range(...):` |
 | 09 | [Zoznamy](09_lists_sk.md) | Veľa hodnôt v jednej premennej. | `[]`, index, `.append()`, `.sort()` |
@@ -108,7 +108,7 @@ O týchto stačí vedieť: **čo to je a kedy to použiť** — netreba naspamä
 
 | Ak úloha... | ...tak pravdepodobne treba toto |
 |---|---|
-| ...sa niečo opýta a podľa toho rozhodne | `if` / `elif` / `else` ([05](05_if_sk.md)) |
+| ...sa niečo opýta a podľa toho rozhodne | `if` / `elif` / `else` ([05](05_if/02_main.md)) |
 | ...opakuje niečo, kým je niečo pravda | `while` ([06](06_while_sk.md)) |
 | ...prechádza zoznamom alebo daným počtom krokov | `for` ([07](07_for_sk.md)) |
 | ...má uchovávať veľa podobných údajov | zoznam ([09](09_lists_sk.md)) alebo slovník ([12](12_list_set_dictionary_tuple_sk_1.md)) |
