@@ -6,7 +6,7 @@
 2. Vytvor prázdny zoznam a vypíš ho na obrazovku.
 3. Na čo slúži index a od akého čísla sa začína indexovanie?
 4. Vypíš prvý a posledný prvok ľubovoľného zoznamu.
-5. Odstráň všetky prvky zoznamu pomocou príkazu `del`. Aký je rozdiel medzi `del zoznam[index]` a `zoznam.clear()`?
+5. Odstráň všetky prvky zoznamu pomocou príkazu `del`. Aký je rozdiel medzi `del zoznam[:]` a `zoznam.clear()`?
 6. Do zoznamu so štyrmi prvkami vlož nový prvok pomocou `.insert()`.
 7. Pridaj nový prvok do ľubovoľného zoznamu pomocou `.append()`.
 8. V zozname čísel vypíš najmenšiu a najväčšiu hodnotu a potom aj ich indexy.
