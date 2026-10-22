@@ -2,16 +2,16 @@
 >
 > **Lambda** je krátka, anonymná, jednoradová funkcia.
 >
-> ~~~py
+> ```py
 > stvorec = lambda x: x ** 2
 > print(stvorec(4))   # 16
-> ~~~
+> ```
 >
 > To isté ako:
-> ~~~py
+> ```py
 > def stvorec(x):
 >     return x ** 2
-> ~~~
+> ```
 >
 > Najčastejšie ju používame spolu s `map()`, `filter()` a `sorted(key=...)`, keď treba inej funkcii odovzdať jednoduchú operáciu.
 >
