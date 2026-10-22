@@ -57,6 +57,14 @@ del gyumolcsok[1]
 print(gyumolcsok)  # ['alma', 'szilva']
 ```
 
+A `del lista[:]` a lista összes elemét törli, miközben maga a lista változó megmarad. A `del lista` ezzel szemben a változót törli.
+
+```python
+szamok = [1, 2, 3]
+del szamok[:]
+print(szamok)  # []
+```
+
 ### `lista.remove(érték)`
 
 A `.remove()` metódus az első, megadott értékkel megegyező elemet törli. Ha az érték nem szerepel a listában, `ValueError` hibát kapunk.
