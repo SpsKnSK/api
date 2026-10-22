@@ -21,6 +21,11 @@ print(ovocie[1])  # hruška
 print(ovocie[2])  # slivka
 ```
 
+```mermaid
+flowchart LR
+    A["0: 'jablko'"] --- B["1: 'hruška'"] --- C["2: 'slivka'"]
+```
+
 Posledný prvok môžeme získať aj záporným indexom: `ovocie[-1]`. Ak použijeme index, ktorý neexistuje, dostaneme chybu `IndexError`.
 
 ## Zmena hodnoty prvku

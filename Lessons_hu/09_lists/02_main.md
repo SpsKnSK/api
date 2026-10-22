@@ -21,6 +21,11 @@ print(gyumolcsok[1])  # körte
 print(gyumolcsok[2])  # szilva
 ```
 
+```mermaid
+flowchart LR
+    A["0: 'alma'"] --- B["1: 'körte'"] --- C["2: 'szilva'"]
+```
+
 A lista utolsó eleme negatív indexszel is elérhető: `gyumolcsok[-1]`. Olyan indexet ne használj, amely nem létezik, mert az `IndexError` hibát okoz.
 
 ## Egy listaelem értékének megváltoztatása
