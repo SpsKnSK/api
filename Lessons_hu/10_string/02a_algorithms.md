@@ -12,10 +12,10 @@ A táblázat utolsó oszlopában kattintható hivatkozás vezet a részletes mag
 | `text.replace(old, new)` | cserével létrehozott új string | [`.replace()`](02_main.md#replace-from-to) |
 | `text.split()` | szóközök mentén feldarabolt lista | [`.split()`](02_main.md#split) |
 | `text.split(".")` | a megadott elválasztó mentén feldarabolt lista | [Darabolás adott karakter mentén](02_main.md#split---darabolas-adott-karakter-menten) |
-| `text.index(x)` | az első előfordulás indexe; hiányzó értéknél `ValueError` | [`.index()`](02_main.md#index-substring) |
+| `text.index(x)` | az első előfordulás indexe; hiányzó értéknél `ValueError` | [`.index()`](02_main.md#indexsubstring) |
 | `text.count(x)` | előfordulások száma | [`.count()`](02_main.md#count-substring) |
 | `len(text)` | karakterek száma | [`len()`](02_main.md#lentext) |
-| `separator.join(parts)` | stringek összefűzése elválasztóval | [`join()` és számok összefűzése](02_main.md#elvalaszt%C3%B3joinstringcollection) |
+| `separator.join(parts)` | stringek összefűzése elválasztóval | [`join()` és számok összefűzése](02_main.md#elvalasztojoinstringcollection) |
 | `x in text` | `True`, ha `x` megtalálható a stringben | [Tartalmazás vizsgálata](02_main.md#in--tartalmazas-vizsgalata) |
 | `list(text)` | karakterek listája | [String mint kollekció](02_main.md#str-mint-kollekcio) |
 
