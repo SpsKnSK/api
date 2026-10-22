@@ -56,7 +56,7 @@ Kisbetűssé alakítja a szöveg betűit.
 ```python
 text = "Pista elment a Tescoba."
 textWithLower = text.lower()
-print(f"{text}\\n{textWithLower}")
+print(f"{text}\n{textWithLower}")
 ```
 
 ## `.upper()`
@@ -66,7 +66,7 @@ Nagybetűssé alakítja a szöveg betűit.
 ```python
 text = "Pista elment a Tescoba."
 textWithUpper = text.upper()
-print(f"{text}\\n{textWithUpper}")
+print(f"{text}\n{textWithUpper}")
 ```
 
 ## `.replace(from, to)`
@@ -76,7 +76,7 @@ A megadott szövegrészt egy másikra cseréli. Az eredeti string nem változik 
 ```python
 text = "Sps KN"
 replacedText = text.replace("KN", "BA")
-print(f"{text}\\n{replacedText}")
+print(f"{text}\n{replacedText}")
 ```
 
 Kimenet:
@@ -92,7 +92,7 @@ Alapértelmezésben szóközök mentén feldarabolja a szöveget, és listát ad
 ```python
 text = "The quick brown fox jumped over the lazy fox."
 splitText = text.split()
-print(f"{text}\\n{splitText}")
+print(f"{text}\n{splitText}")
 ```
 
 Kimenet:
@@ -113,6 +113,16 @@ print(text.split("."))
 Kimenet:
 ```text
 ['Once upon a time', ' He met a princess', ' They became friends', '']
+```
+
+## Az eredeti hosszabb példa: mondatok feldarabolása
+
+Az eredeti tananyag hosszabb történetét pontok mentén daraboljuk fel. A pont utáni szóközök a részek elején megmaradnak, és a záró pont miatt az utolsó elem üres string.
+
+```python
+text = "Once upon a time, a prince lived in a grand castle. He met a beautiful princess in a nearby kingdom. They became friends and shared many adventures. One day, the princess was captured by a dragon. The brave prince decided to rescue her. He fought the dragon with courage. The dragon was defeated and fled. The prince freed the princess. They returned to the castle together. They lived happily ever after."
+splitText = text.split(".")
+print(f"{text}\\n{splitText}")
 ```
 
 ## `.index(substring)`
@@ -177,6 +187,18 @@ print(numbersString)
 ```
 
 Kimenet: `12:-4:7`
+
+Az eredeti véletlenszámos példa a számokat különböző elválasztókkal fűzi össze. Mivel a `randint()` véletlen számokat ad, a konkrét kimenet minden futásnál más lehet.
+
+```python
+from random import randint
+
+numbers = [randint(-100, 100) for _ in range(10)]
+print(numbers)
+print(":".join([str(n) for n in numbers]))
+print("abc".join([f"{n}" for n in numbers]))
+print(" ".join([f"({n})" for n in numbers]))
+```
 
 ## `in` – tartalmazás vizsgálata
 
