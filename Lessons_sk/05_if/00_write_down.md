@@ -1,34 +1,48 @@
-## ✏️ Do zošita – Vetvenie (if)
+# ✏️ If, vetvenie
 
-**Na čo slúži?** Pomocou `if` sa program rozhoduje podľa podmienky. Ak je podmienka pravdivá (`True`), vykonajú sa príkazy vo vetve `if`; inak sa môže vykonať vetva `else`.
+**Na čo slúži?** Program sa **rozvetví**: časť kódu sa vykoná iba vtedy, ak je podmienka pravdivá.
 
-~~~python
-vek = 17
-
-if vek >= 18:
-    print("Môžeš vstúpiť.")
+```py
+if podmienka1:
+    prikazy1
+elif podmienka2:
+    prikazy2
 else:
-    print("Ešte nemôžeš vstúpiť.")
-~~~
+    ine_prikazy
+```
 
-**Porovnávacie operátory:**
+| Časť | Povinná? | Kedy sa vykoná |
+|---|---|---|
+| `if` | **vždy** | ak je jeho podmienka pravdivá |
+| `elif` | nie | ak sú predošlé nepravdivé, ale táto je pravdivá (môže ich byť viac) |
+| `else` | nie | ak **žiadna** podmienka nebola pravdivá |
 
-| Operátor | Význam |
-|---|---|
-| `<` | menší |
-| `<=` | menší alebo rovný |
-| `==` | rovný |
-| `>` | väčší |
-| `>=` | väčší alebo rovný |
-| `!=` | nerovný |
+**⚠️ 3 veci, na ktoré nesmieš zabudnúť:**
+1. na konci riadku **dvojbodka** `:`
+2. riadky pod ním **odsadené** (odsadenie, Tab)
+3. `==` je porovnanie, `=` je iba priradenie
 
-**Logické operátory:**
-- `and` – a: všetky podmienky musia byť pravdivé.
-- `or` – alebo: pravdivá musí byť aspoň jedna podmienka.
-- `not` – negácia: obráti pravdivostnú hodnotu.
+**Blok:** skupina príkazov odsadených pod `if`. Vykonajú sa spolu, alebo spolu vypadnú. **Odsadenie** určuje, kiaľ blok siaha.
+```py
+if znamka == 1:
+    print("Gratulujem!")   # \_ blok: patrí k if
+    print("Si šikovný!")   # /
+print("Koniec")            # toto sa vykoná vždy
+```
 
-**Dôležité pravidlá:**
-- Riadok s `if`, `elif` alebo `else` sa končí dvojbodkou (`:`).
-- Príkazy patriace do vetvy musia byť odsadené.
-- `==` porovnáva hodnoty; `=` priraďuje hodnotu premennej.
-- V jednej konštrukcii `if/elif/else` sa vykoná najviac jedna vetva.
+**Vykoná sa iba prvá pravdivá vetva!** Ak `znamka = 2`, vykoná sa vetva pre 2, ostatné sa ani nepozrú.
+
+**Podmienky:**
+
+| | | | |
+|-|-|-|-|
+| `==` rovné | `!=` nerovné | `<` menšie | `>` väčšie |
+| `<=` menšie-rovné | `>=` väčšie-rovné | | |
+
+**Spojenie:** `and` = obe pravdivé · `or` = aspoň jedna pravdivá · `not` = obráti
+```py
+if (vek > 12) and (vek < 20):
+    print("tínedžer")
+```
+
+**Metafora:** `if` je ako **rázcestie**: program tam dorazí, pozrie sa na tabuľu (podmienku) a podľa nej pôjde ďalej jednou alebo druhou cestou — vydať sa môže iba **jednou**.

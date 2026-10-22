@@ -1,36 +1,48 @@
-## ✏️ Füzetbe – Elágazás (if)
+# ✏️ If, elágazás
 
-**Mire való?** Az `if` segítségével a program egy feltétel alapján dönt: ha a feltétel igaz (`True`), végrehajtja az `if` alatti utasításokat; különben az `else` ág fut le.
+**Mire jó?** A program **elágazik**: csak akkor fut le egy kódrészlet, ha egy feltétel igaz.
 
-~~~python
-kor = 17
-
-if kor >= 18:
-    print("Beléphetsz.")
+```py
+if feltetel1:
+    utasitasok1
+elif feltetel2:
+    utasitasok2
 else:
-    print("Még nem léphetsz be.")
-~~~
+    utasitasok_else
+```
 
-**Összehasonlító operátorok:**
+| Rész | Kell? | Mikor fut le |
+|---|---|---|
+| `if` | **mindig** | ha a feltétele igaz |
+| `elif` | nem | ha a fentiek hamisak, de ez igaz (akárhány lehet) |
+| `else` | nem | ha **egyik** feltétel sem volt igaz |
 
-| Operátor | Jelentés |
-|---|---|
-| `<` | kisebb |
-| `<=` | kisebb vagy egyenlő |
-| `==` | egyenlő |
-| `>` | nagyobb |
-| `>=` | nagyobb vagy egyenlő |
-| `!=` | nem egyenlő |
+**⚠️ 3 dolog, amit el ne felejts:**
+1. a sor végén **kettőspont** `:`
+2. az alatta lévő sorok **beljebb** (behúzás, Tab)
+3. `==` az összehasonlítás, `=` csak értékadás
 
-**Logikai operátorok:**
+**Blokk:** az `if` alatt beljebb írt utasítások csoportja. Együtt futnak le, vagy együtt maradnak ki. A behúzás** jelöli ki, meddig tart.
+```py
+if jegy == 1:
+    print("Gratulalok!")   # \_ blokk: az if-hez tartozik
+    print("Ugyes vagy!")   # /
+print("Vege")              # ez mindig lefut
+```
 
-- `and` – és: minden feltételnek igaznak kell lennie.
-- `or` – vagy: legalább az egyik feltétel igaz.
-- `not` – tagadás: megfordítja az igaz/hamis értéket.
+**Csak az első igaz ág fut le!** Ha `jegy = 2`, a 2-es ág lefut, a többit meg se nézi.
 
-**Fontos szabályok:**
+**Feltételek:**
 
-- Az `if` és az `else` sor végére kettőspont (`:`) kerül.
-- A hozzájuk tartozó utasításokat behúzással írjuk.
-- Az `if` feltételében az `==` az egyenlőséget vizsgálja; az `=` értéket ad egy változónak.
-- Az `if/else` szerkezetben a két ág közül pontosan az egyik fut le.
+| | | | |
+|-|-|-|-|
+| `==` egyenlő | `!=` nem egyenlő | `<` kisebb | `>` nagyobb |
+| `<=` kisebb-egyenlő | `>=` nagyobb-egyenlő | | |
+
+**Összekapcsolás:** `and` = mindkettő igaz · `or` = legalább az egyik igaz · `not` = megfordítja
+```py
+if (kor > 12) and (kor < 20):
+    print("tini")
+```
+
+**Metafora:** az `if` olyan, mint egy **útelágazás**: a program odaér, megnézi a táblát (feltétel), és aszerint megy tovább az egyik vagy a másik úton — csak **egy** ágon indulhat el.

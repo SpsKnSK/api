@@ -1,27 +1,28 @@
-# ✏️ Do zošita – cyklus `while`
+# ✏️ Cykly - `while`
 
-**Cyklus:** opakovanie bloku príkazov.
+**Cyklus:** opakujeme tie isté príkazy.
 
-```python
+```py
 while podmienka:
-    prikazy  # jadro cyklu
+    prikazy    # toto je jadro cyklu (blok)
+    prikazy    # toto je jadro cyklu (blok)
+    prikazy    # toto je jadro cyklu (blok)
+    prikazy    # toto je jadro cyklu (blok)
 ```
 
-Cyklus `while` opakuje jadro cyklu **dovtedy, kým je podmienka pravdivá**. Po každom kole podmienku znova skontroluje.
+`while` opakuje jadro cyklu **dovtedy, kým je podmienka pravdivá**. Po každom kole znovu preverí podmienku.
 
-```python
+**Nezabudni:**
+1. na konci riadka `while podmienka` je dvojbodka `:`;
+2. riadky jadra cyklu sú odsadené;
+3. podmienka sa musí raz stať nepravdivou, inak je cyklus nekonečný.
+
+```py
 i = 1
 while i <= 3:
     print(i)
     i = i + 1
 ```
+Výstup: `1`, `2`, `3`
 
-Výstup: `1, 2, 3`
-
-**Nezabudni:**
-1. Riadok `while` sa končí dvojbodkou (`:`).
-2. Príkazy jadra cyklu sú odsadené.
-3. V cykle treba často meniť premennú, aby sa podmienka raz stala nepravdivou.
-4. Ak podmienka nikdy nebude nepravdivá, vznikne nekonečný cyklus.
-
-**Metafora:** cyklus `while` je ako **pravidlo spoločenskej hry**: "kým máš peniaze, posuň sa o jedno políčko". Po každom kole sa znova pýtame: platí podmienka ešte? Ak áno, nasleduje ďalšie kolo; ak nie, hra sa končí.
+**Metafora:** `while` je ako **pravidlo spoločenskej hry**: "kým máš peniaze, posuň sa o jedno políčko". Po každom kole sa znova pýtame: platí ešte podmienka? Ak áno, nasleduje ďalšie kolo, ak nie, je koniec.
