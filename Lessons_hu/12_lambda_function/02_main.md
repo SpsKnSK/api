@@ -17,6 +17,37 @@ lambda argumentum1, argumentum2: kifejezes
 
 A lambda függvények rövid, névtelen függvények, amelyeket általában egyszerű műveletekhez használnak. Különösen hasznosak, amikor egy egyszerű függvényt szeretnénk átadni egy másik függvénynek, például a `map()`, `filter()` vagy `sorted()` függvénynek.
 
+## Végigmenni a szó összes betűjén egy `for` ciklussal
+
+A `for` ciklus egy szöveg karakterein is végig tud menni. Minden körben a következő betű kerül a `betu` változóba.
+
+~~~python
+szoveg = "alma"
+
+for betu in szoveg:
+    print(betu)
+~~~
+
+Kimenet:
+
+~~~text
+a
+l
+m
+a
+~~~
+
+### A ciklus működése – folyamatábra
+
+~~~mermaid
+flowchart TD
+    A["szoveg = 'alma'"] --> B["Következő karakter"]
+    B --> C{"Van még karakter?"}
+    C -- "Igen" --> D["Kiírjuk a karaktert"]
+    D --> B
+    C -- "Nem" --> E["A ciklus véget ér"]
+~~~
+
 ### Egyszerű lambda függvény
 
 Ez a lambda függvény két számot ad össze:
