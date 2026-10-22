@@ -64,7 +64,7 @@ Bez tohto sa žiadny Python program nedá pochopiť. Ak si tu neistý, vráť sa
 | 06 | [Cyklus `while`](06_while/01_basic.md) ([podrobnejšia lekcia](06_while/02_main.md)) | Keď vopred nevieš, koľkokrát treba opakovať. | `while podmienka:` |
 | 07 | [Cyklus `for`](07_for/01_basic.md) ([podrobnejšia lekcia](07_for/02_main.md)) | Keď vopred vieš, cez čo/koľkokrát prejsť. | `for i in range(...):` |
 | 09 | [Zoznamy](09_lists/01_basic.md) | Veľa hodnôt v jednej premennej. | `[]`, index, `.append()`, `.sort()` |
-| 10 | [Reťazce (string)](10_string_sk.md) | Aj text sa dá "rozobrať" na znaky. | `[a:b]`, `.split()`, `.join()` |
+| 10 | [Reťazce (string)](10_string/01_basic.md) | Aj text sa dá "rozobrať" na znaky. | `[a:b]`, `.split()`, `.join()` |
 | 11 | [Funkcie](11_functions_sk.md) | Opakujúci sa kód dáme na jedno miesto a pomenujeme. | `def`, `return`, parametre |
 
 ### **Na čo si dávaj pozor vo všetkých?**
@@ -112,7 +112,7 @@ O týchto stačí vedieť: **čo to je a kedy to použiť** — netreba naspamä
 | ...opakuje niečo, kým je niečo pravda | `while` ([06](06_while/02_main.md)) |
 | ...prechádza zoznamom alebo daným počtom krokov | `for` ([07](07_for/02_main.md)) |
 | ...má uchovávať veľa podobných údajov | zoznam ([09](09_lists/02_main.md)) alebo slovník ([12](12_list_set_dictionary_tuple_sk_1.md)) |
-| ...treba rozobrať text, hľadať v ňom | operácie s reťazcami ([10](10_string_sk.md)) |
+| ...treba rozobrať text, hľadať v ňom | operácie s reťazcami ([10](10_string/01_basic.md)) |
 | ...ten istý kód sa v nej opakuje viackrát | urob z neho funkciu ([11](11_functions_sk.md)) |
 | ...má uchovať údaje aj po ukončení programu | práca so súbormi ([16](16_files_sk.md)) |
 | ...hádže čudnú chybu a nevieš prečo | skontroluj odsadenie, dvojbodku a malé/veľké písmená ([05](05_if_sk.md)) |
