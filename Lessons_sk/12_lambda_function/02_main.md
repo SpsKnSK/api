@@ -17,6 +17,37 @@ lambda argument1, argument2: vyraz
 
 Lambda funkcie sú krátke, anonymné funkcie, ktoré sa zvyčajne používajú na jednoduché operácie. Sú užitočné najmä vtedy, keď chceme jednoduchú funkciu odovzdať inej funkcii, napríklad `map()`, `filter()` alebo `sorted()`.
 
+## Prechod cez všetky písmená pomocou cyklu `for`
+
+Cyklus `for` môže prechádzať aj znakmi textu. V každom opakovaní sa do premennej `pismeno` uloží ďalší znak.
+
+~~~python
+text = "alma"
+
+for pismeno in text:
+    print(pismeno)
+~~~
+
+Výstup:
+
+~~~text
+a
+l
+m
+a
+~~~
+
+### Ako cyklus funguje – vývojový diagram
+
+~~~mermaid
+flowchart TD
+    A["text = 'alma'"] --> B["Ďalší znak"]
+    B --> C{"Zostáva ešte znak?"}
+    C -- "Áno" --> D["Vypíšeme znak"]
+    D --> B
+    C -- "Nie" --> E["Cyklus sa skončí"]
+~~~
+
 ### Jednoduchá lambda funkcia
 
 Táto lambda funkcia sčíta dve čísla:
