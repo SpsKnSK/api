@@ -62,7 +62,7 @@ Ezek nélkül semmilyen Python-program nem érthető. Ha ezekben bizonytalan vag
 | 01 | [Algoritmusok](01_Algorithms_hu.md) | Mielőtt kódot írnál, meg kell tanulnod **lépésekben gondolkodni**. | Folyamatábra, szekvencia/elágazás/ciklus fogalma |
 | 02 | [`print()`](02_print/01_basic.md) | Enélkül a program semmit nem mutat neked. | Kiíratás a képernyőre |
 | 03 | [`input()`](03_input/01_basic.md) | Enélkül a program nem tud kérdezni. | Adat beolvasása |
-| 04 | [Változók](04_Variables_hu.md) | Adatot valahol tárolni kell. | Dobozok címkével: `int`, `float`, `str`, `bool` |
+| 04 | [Változók](04_variables/01_basic.md) | Adatot valahol tárolni kell. | Dobozok címkével: `int`, `float`, `str`, `bool` |
 | 05 | [If, elágazás](05_if/02_main.md) ([részletes lecke](05_if/02_main.md)) | A program itt tanul meg **dönteni**. | `if` / `else`, feltétel, blokk, behúzás, kettőspont |
 | 06 | [`while` ciklus](06_while/01_basic.md) ([részletes lecke](06_while/02_main.md)) | Amikor nem tudod előre, hányszor kell ismételni. | `while feltetel:` |
 | 07 | [`for` ciklus](07_for/01_basic.md) ([részletes lecke](07_for/02_main.md)) | Amikor előre tudod, min/hányszor mész végig. | `for i in range(...):` |
