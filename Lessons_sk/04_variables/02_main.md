@@ -52,7 +52,16 @@ flowchart RL
 - `5 // 3 = 1` celočíselné delenie
 - `5 % 3 = 2` zvyšok po delení
 - `5 ** 3 = 125` umocňovanie
-- `sqrt(5)` odmocnina (na to je potrebný matematický modul)
+- `sqrt(5)` odmocnina (na to je potrebný matematický modul).
+
+Na odmocňovanie treba importovať modul `math` a funkciu zavolať ako `math.sqrt()`:
+
+```py
+import math
+print(math.sqrt(5))
+```
+
+Výstup: `2.23606797749979`.
 
 ## Zaokrúhlenie
 - pomocou funkcie `round`
