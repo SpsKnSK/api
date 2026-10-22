@@ -2,8 +2,6 @@
 
 **Na čo slúži?** Cyklus `for` používame vtedy, keď vopred vieme, na akých hodnotách alebo koľkokrát opakujeme.
 
-**Metafora:** cyklus `for` je ako **čítanie zoznamu mien**: vopred vieš, kto je na zozname, a postupne prechádzaš všetky mená — nemusíš si sám počítať, koľko krokov máš urobiť.
-
 ```python
 for i in range(1, 6):
     print(i)
@@ -13,19 +11,12 @@ for i in range(1, 6):
 
 **Najdôležitejšie tvary `range()`:**
 
-| Kód | Hodnoty |
+| Kód | Vypísané hodnoty |
 |---|---|
 | `range(5)` | `0, 1, 2, 3, 4` |
 | `range(2, 5)` | `2, 3, 4` |
 | `range(1, 10, 2)` | `1, 3, 5, 7, 9` |
 
-Horná hranica **nepatrí** do postupnosti. Telo cyklu je odsadený blok.
+Horná hranica **nepatrí** do intervalu. Jadro cyklu je aj tu odsadený blok.
 
-**Počítanie odzadu:**
-
-```python
-for i in range(10, 0, -2):
-    print(i)
-```
-
-Výstup: `10, 8, 6, 4, 2`
+**Metafora:** `for` je ako **čítanie zoznamu mien**: vopred vieš, kto je na zozname, a postupne ich všetkých prejdeš — nemusíš si sám počítať, koľkokrát máš opakovať.
