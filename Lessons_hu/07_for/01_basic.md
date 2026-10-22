@@ -4,7 +4,7 @@
 
 ## Mit fogok megtanulni?
 
-A lecke végére képes leszek a `for` ciklussal végigmenni egy előre meghatározott számsoron vagy egy szöveg betűin. Meg fogom érteni a `range()` alapjait, és azt is, miért nem kerül bele a felső határ a sorozatba.
+A lecke végére képes leszek a `for` ciklussal végigmenni egy előre meghatározott számsoron. Meg fogom érteni a `range()` alapjait, és azt is, miért nem kerül bele a felső határ a sorozatba.
 
 ## Miért van erre szükségem?
 
