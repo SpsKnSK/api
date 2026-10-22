@@ -1,3 +1,5 @@
+🗺️ [Vissza a tananyag térképéhez](../../Lessons_hu/00_Terkep_hu.md) · [Vissza a téma áttekintéséhez](README.md)
+
 # `print()`
 - Adatok és információk kiírása a képernyőre
 - Kiírhatunk:
