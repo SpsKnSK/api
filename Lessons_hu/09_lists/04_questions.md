@@ -6,7 +6,7 @@
 2. Készíts egy üres listát, és írasd ki a képernyőre.
 3. Mire szolgál az index, és honnan kezdődik az indexelés?
 4. Írd ki egy tetszőleges lista első és utolsó elemét.
-5. Töröld egy lista összes elemét a `del` utasítással. Mi a különbség a `del lista[index]` és a `lista.clear()` között?
+5. Töröld egy lista összes elemét a `del` utasítással. Mi a különbség a `del lista[:]` és a `lista.clear()` között?
 6. Egy négy elemű listához adj hozzá egy új elemet az `.insert()` segítségével.
 7. Adj hozzá egy új elemet egy tetszőleges listához az `.append()` segítségével.
 8. Egy számokból álló listában írd ki a legkisebb és legnagyobb értéket, majd ezek indexét is.
