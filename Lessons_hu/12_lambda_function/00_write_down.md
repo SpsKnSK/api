@@ -2,16 +2,16 @@
 >
 > A **lambda** egy rövid, névtelen, egysoros függvény.
 >
-> ~~~py
+> ```py
 > negyzet = lambda x: x ** 2
 > print(negyzet(4))   # 16
-> ~~~
+> ```
 >
 > Ugyanaz, mint:
-> ~~~py
+> ```py
 > def negyzet(x):
 >     return x ** 2
-> ~~~
+> ```
 >
 > Leggyakrabban a `map()`, `filter()`, `sorted(key=...)` függvényekkel együtt használjuk, amikor egy egyszerű műveletet kell egy másik függvénynek átadni.
 >
