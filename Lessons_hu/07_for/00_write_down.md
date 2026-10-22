@@ -1,22 +1,22 @@
-# ✏️ Cykly - `for`
+## ✏️ Füzetbe – Ciklus: for
 
-Cyklus `for` používame vtedy, keď vopred vieme, na akých hodnotách alebo koľkokrát opakujeme.
+**Mire jó?** A `for` ciklust akkor használjuk, ha előre tudjuk, milyen értékeken vagy hányszor ismétlünk.
 
-```py
+```python
 for i in range(1, 6):
     print(i)
 ```
 
-Výstup: `1`, `2`, `3`, `4`, `5`
+**Kimenet:** `1, 2, 3, 4, 5`
 
-**Najdôležitejšie tvary `range()`:**
+**A `range()` legfontosabb alakjai:**
 
-| Kód | Vypísané hodnoty |
+| Kód | Kiírt értékek |
 |---|---|
 | `range(5)` | `0, 1, 2, 3, 4` |
 | `range(2, 5)` | `2, 3, 4` |
 | `range(1, 10, 2)` | `1, 3, 5, 7, 9` |
 
-Horná hranica **nepatrí** do intervalu. Jadro cyklu je aj tu odsadený blok.
+A felső határ **nem tartozik bele**. A ciklusmag itt is egy behúzott blokk.
 
-**Metafora:** `for` je ako **čítanie zoznamu mien**: vopred vieš, kto je na zozname, a postupne ich všetkých prejdeš — nemusíš si sám počítať, koľkokrát máš opakovať.
+**Metafora:** a `for` olyan, mint egy **névsorolvasás**: előre tudod, kik vannak a listán, és sorban végigmész rajtuk — nem kell magadnak számolgatnod, hogy hányszor lépj.
