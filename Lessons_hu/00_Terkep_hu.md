@@ -60,7 +60,7 @@ Ezek nélkül semmilyen Python-program nem érthető. Ha ezekben bizonytalan vag
 | # | Lecke | Miért kell? | Szerszám, amit kapsz |
 |---|---|---|---|
 | 01 | [Algoritmusok](01_Algorithms_hu.md) | Mielőtt kódot írnál, meg kell tanulnod **lépésekben gondolkodni**. | Folyamatábra, szekvencia/elágazás/ciklus fogalma |
-| 02 | [`print()`](02_Terminal_print_hu.md) | Enélkül a program semmit nem mutat neked. | Kiíratás a képernyőre |
+| 02 | [`print()`](02_print/01_basic.md) | Enélkül a program semmit nem mutat neked. | Kiíratás a képernyőre |
 | 03 | [`input()`](03_Terminal_input_hu.md) | Enélkül a program nem tud kérdezni. | Adat beolvasása |
 | 04 | [Változók](04_Variables_hu.md) | Adatot valahol tárolni kell. | Dobozok címkével: `int`, `float`, `str`, `bool` |
 | 05 | [If, elágazás](05_if/02_main.md) ([részletes lecke](05_if/02_main.md)) | A program itt tanul meg **dönteni**. | `if` / `else`, feltétel, blokk, behúzás, kettőspont |
