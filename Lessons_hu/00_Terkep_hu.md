@@ -21,7 +21,7 @@ flowchart TD
     G --> I["09 Listák"]
     I --> J["10 String-ek"]
     J --> K["11 Függvények"]
-    K --> L["11 Lambda 🔵"]
+    K --> L["12 Lambda 🔵"]
     I --> M["12 Szótár, halmaz, tuple"]
     K --> N["15 Globális/lokális változók 🟡"]
     K --> O["16 Fájlkezelés"]
@@ -98,7 +98,7 @@ Ezekről elég annyit tudni: **mi ez, és mikor vegyem elő** — nem kell fejb�
 
 | # | Lecke | Elég ennyit tudni róla |
 |---|---|---|
-| 11 | [Lambda függvények](11_lambda_functions_hu.md) *(opcionális)* | Létezik egy "egysoros, névtelen függvény" is — ritkán kell saját kódban megírni |
+| 12 | [Lambda függvények](12_lambda_function/01_basic.md) ([részletes lecke](12_lambda_function/02_main.md)) *(opcionális)* | Létezik egy "egysoros, névtelen függvény" is — ritkán kell saját kódban megírni |
 | 13 | [Osztályok (`class`)](13_classes_1_hu.md) | Az osztály olyan, mint egy **saját, összetett adattípus terve** — ha sok, összetartozó adatot és hozzá tartozó műveletet kell egyben kezelni, ez a szerszám |
 | 14 | [Öröklődés és polimorfizmus](14_inheritance_polymorphism_hu.md) | Osztályok tudnak "örökölni" egymástól — csak a fogalom szintjén elég ismerni |
 | 17 | [Tkinter — grafikus felület](17_tkinter_hu.md) | Létezik mód ablakos programot is írni Pythonban — elég tudni, hogy ez a neve, és nagyjából hogy néz ki |
