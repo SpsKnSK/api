@@ -68,7 +68,7 @@ Ezek nélkül semmilyen Python-program nem érthető. Ha ezekben bizonytalan vag
 | 07 | [`for` ciklus](07_for/01_basic.md) ([részletes lecke](07_for/02_main.md)) | Amikor előre tudod, min/hányszor mész végig. | `for i in range(...):` |
 | 09 | [Listák](09_lists/01_basic.md) | Sok érték egyben, egy változóban. | `[]`, index, `.append()`, `.sort()` |
 | 10 | [String-ek](10_string/01_basic.md) | A szöveg is "darabolható", karakterről karakterre. | `[a:b]`, `.split()`, `.join()` |
-| 11 | [Függvények](11_functions_hu.md) | Ismétlődő kódot egy helyre teszünk, és elnevezzük. | `def`, `return`, paraméterek |
+| 11 | [Függvények](11_functions/01_basic.md) ([részletes lecke](11_functions/02_main.md)) | Ismétlődő kódot egy helyre teszünk, és elnevezzük. | `def`, `return`, paraméterek |
 
 ### **Mire figyelj végig ezekben?** 
 - A **blokk** (behúzással jelölt kódrész. `tab`, `tabulator`)
@@ -116,6 +116,6 @@ Ezekről elég annyit tudni: **mi ez, és mikor vegyem elő** — nem kell fejb�
 | ...végigmegy egy listán vagy egy adott számú körön | `for` ([07](07_for/02_main.md)) |
 | ...sok hasonló adatot kell tárolnia | lista ([09](09_lists/02_main.md)) vagy szótár ([12](12_list_set_dictionary_tuple_hu_1.md)) |
 | ...szöveget kell darabolnia, keresnie benne | string-műveletek ([10](10_string/01_basic.md)) |
-| ...ugyanaz a kódrészlet többször is előfordul benne | írj belőle függvényt ([11](11_functions_hu.md)) |
+| ...ugyanaz a kódrészlet többször is előfordul benne | írj belőle függvényt ([11](11_functions/02_main.md)) |
 | ...adatot kell megőriznie a program lezárása után is | fájlkezelés ([16](16_files_hu.md)) |
 | ...furcsa hibát dob, és nem érted, miért | nézd meg a behúzást, a `:`-t, és a kis/nagybetűket ([05](05_if/02_main.md)) |
