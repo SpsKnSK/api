@@ -12,7 +12,7 @@ Posledný stĺpec tabuľky obsahuje klikateľný odkaz na podrobné vysvetlenie 
 | `text.replace(old, new)` | nový reťazec s nahradením | [`.replace()`](02_main.md#replacefrom-to) |
 | `text.split()` | zoznam rozdelený podľa medzier | [`.split()`](02_main.md#split) |
 | `text.split(".")` | zoznam rozdelený podľa zadaného oddeľovača | [Rozdelenie podľa znaku](02_main.md#split---rozdelenie-podla-zadaneho-znaku) |
-| `text.index(x)` | index prvého výskytu; ak chýba, vyvolá `ValueError` | [`.index()`](02_main.md#index-substring) |
+| `text.index(x)` | index prvého výskytu; ak chýba, vyvolá `ValueError` | [`.index()`](02_main.md#indexsubstring) |
 | `text.count(x)` | počet výskytov | [`.count()`](02_main.md#count-substring) |
 | `len(text)` | počet znakov | [`len()`](02_main.md#lentext) |
 | `separator.join(parts)` | spojenie reťazcov pomocou oddeľovača | [`join()` a spájanie čísel](02_main.md#oddelovacjoinstringcollection) |
