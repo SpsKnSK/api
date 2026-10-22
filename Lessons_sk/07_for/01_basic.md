@@ -4,7 +4,7 @@
 
 ## Čo sa naučím?
 
-Na konci lekcie budem vedieť pomocou cyklu `for` prechádzať vopred určenú postupnosť čísel alebo písmen v texte. Pochopím základy funkcie `range()` a to, prečo sa horná hranica do postupnosti nezapočítava.
+Na konci lekcie budem vedieť pomocou cyklu `for` prechádzať vopred určenú postupnosť čísel. Pochopím základy funkcie `range()` a to, prečo sa horná hranica do postupnosti nezapočítava.
 
 ## Prečo to potrebujem?
 
