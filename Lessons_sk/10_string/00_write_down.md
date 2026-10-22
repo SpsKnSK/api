@@ -16,4 +16,4 @@
 > | `.split()` | rozdelí podľa medzier | |
 > | `len(text)` | dĺžka reťazca | |
 >
-> **Metafora:** reťazec je ako **retiazka z korálikov** — každý korálik je jeden znak a každý má svoju menovku: 0, 1, 2, 3... Výraz `[a:b]` vystrihne kus tejto retiazky.
+> **Metafora:** reťazec je ako **retiazka z korálikov** — každý korálik je jeden znak a každý má svoju menovku: 0, 1, 2, 3...
