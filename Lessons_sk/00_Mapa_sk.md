@@ -58,7 +58,7 @@ Bez tohto sa žiadny Python program nedá pochopiť. Ak si tu neistý, vráť sa
 |---|---|---|---|
 | 01 | [Algoritmy](01_Algorithms_sk.md) | Skôr než napíšeš kód, musíš vedieť rozmýšľať **v krokoch**. | Vývojový diagram, sekvencia/výber/opakovanie |
 | 02 | [`print()`](02_print/01_basic.md) | Bez toho ti program nič neukáže. | Výpis na obrazovku |
-| 03 | [`input()`](03_Terminal_input_sk.md) | Bez toho sa program nevie opýtať. | Načítanie údajov |
+| 03 | [`input()`](03_input/01_basic.md) | Bez toho sa program nevie opýtať. | Načítanie údajov |
 | 04 | [Premenné](04_Variables_sk.md) | Údaje treba niekde uložiť. | Krabice s nálepkou: `int`, `float`, `str`, `bool` |
 | 05 | [If, vetvenie](05_if/01_basic.md) ([podrobnejšia lekcia](05_if/02_main.md)) | Tu sa program učí **rozhodovať**. | `if` / `elif` / `else`, blok, odsadenie, dvojbodka |
 | 06 | [Cyklus `while`](06_while/01_basic.md) ([podrobnejšia lekcia](06_while/02_main.md)) | Keď vopred nevieš, koľkokrát treba opakovať. | `while podmienka:` |
