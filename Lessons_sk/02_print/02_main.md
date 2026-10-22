@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu učiva](../../Lessons_sk/00_Mapa_sk.md) · [Späť na prehľad témy](README.md)
+
 # `print()`
 - Výpis údajov a informácií na obrazovku
 - Môžeme vypísať:
