@@ -21,7 +21,7 @@ flowchart TD
     G --> I["09 Zoznamy"]
     I --> J["10 Reťazce"]
     J --> K["11 Funkcie"]
-    K --> L["11 Lambda 🔵"]
+    K --> L["12 Lambda 🔵"]
     I --> M["12 Slovník, množina, tuple"]
     K --> N["15 Globálne/lokálne premenné 🟡"]
     K --> O["16 Práca so súbormi"]
@@ -95,7 +95,7 @@ O týchto stačí vedieť: **čo to je a kedy to použiť** — netreba naspamä
 
 | # | Lekcia | Stačí vedieť toto |
 |---|---|---|
-| 11 | [Lambda funkcie](11_lambda_functions_sk.md) *(voliteľné)* | Existuje aj "jednoriadková, anonymná funkcia" — vo vlastnom kóde ju budeš potrebovať zriedka |
+| 12 | [Lambda funkcie](12_lambda_function/01_basic.md) ([podrobná lekcia](12_lambda_function/02_main.md)) *(voliteľné)* | Existuje aj "jednoriadková, anonymná funkcia" — vo vlastnom kóde ju budeš potrebovať zriedka |
 | 13 | [Triedy (`class`)](13_classes_1_sk.md) | Trieda je ako **plán vlastného, zloženého dátového typu** — ak treba spolu spravovať veľa súvisiacich údajov a operácií, toto je ten nástroj |
 | 14 | [Dedenie a polymorfizmus](14_inheritance_polymorphism_sk.md) | Triedy môžu "dediť" jedna od druhej — stačí poznať pojem |
 | 17 | [Tkinter — grafické rozhranie](17_tkinter_sk.md) | Existuje spôsob, ako v Pythone písať aj okenné programy — stačí vedieť, že sa to tak volá a približne ako to vyzerá |
