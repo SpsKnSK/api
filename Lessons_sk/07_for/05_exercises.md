@@ -23,6 +23,13 @@ Pri riešení dávaj pozor na začiatočnú hodnotu, hornú hranicu a prípadný
 11. Odpočítavaj od 20 do 0 po dvoch.
 12. Vypíš čísla od 1 do 10 a vedľa každého aj jeho tretiu mocninu.
 
+## Ďalšie úlohy z pôvodnej lekcie
+
+13. Vypíš celé čísla od 1 do 15 a k nim ich druhú mocninu.
+14. Vypíš čísla deliteľné 3 do 100.
+15. Vypíš čísla medzi 50 a 99 deliteľné 7.
+16. Odpočítaj od 50 do 20 po štyroch.
+
 ## Kontrola
 
 Pri každom riešení skontroluj:
