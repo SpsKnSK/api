@@ -82,7 +82,7 @@ Nie je to úplný základ ako vyššie, ale v praxi to budeš často potrebovať
 
 | # | Lekcia | Na čo slúži? |
 |---|---|---|
-| 08 | [try, format, ternary](08_try_format_ternary_sk.md) *(voliteľné)* | Ošetrenie chýb, pekný výpis (f-string), skrátený if na jednom riadku |
+| 08 | [try, format, ternary](08_try_format_ternary/01_basic.md) *(voliteľné)* | Ošetrenie chýb, pekný výpis (f-string), skrátený if na jednom riadku |
 | 12 | [Slovník a množina](12_list_set_dictionary_tuple_sk_1.md) | Keď chceš pristupovať k údaju nie podľa indexu, ale podľa **kľúča** (`dict`), alebo keď ťa duplicity nezaujímajú (`set`) |
 | 15 | [Globálne a lokálne premenné](15_localAndGlobalVariables_sk.md) | Prečo jedna funkcia "nevidí" premennú z inej — vysvetľuje veľa záhadných chýb |
 | 16 | [Práca so súbormi](16_files_sk.md) | Údaje treba vedieť nielen vypísať, ale aj **uložiť** |
