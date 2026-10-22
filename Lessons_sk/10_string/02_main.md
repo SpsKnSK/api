@@ -55,7 +55,7 @@ Vráti text s malými písmenami.
 ```python
 text = "Pista elment a Tescoba."
 textWithLower = text.lower()
-print(f"{text}\\n{textWithLower}")
+print(f"{text}\n{textWithLower}")
 ```
 
 ## `.upper()`
@@ -65,7 +65,7 @@ Vráti text s veľkými písmenami.
 ```python
 text = "Pista elment a Tescoba."
 textWithUpper = text.upper()
-print(f"{text}\\n{textWithUpper}")
+print(f"{text}\n{textWithUpper}")
 ```
 
 ## `.replace(from, to)`
@@ -75,7 +75,7 @@ Nahradí zadanú časť textu inou. Pôvodný reťazec sa nezmení; metóda vrá
 ```python
 text = "Sps KN"
 replacedText = text.replace("KN", "BA")
-print(f"{text}\\n{replacedText}")
+print(f"{text}\n{replacedText}")
 ```
 
 Výstup:
@@ -91,7 +91,7 @@ Predvolene rozdelí text podľa medzier a vráti zoznam.
 ```python
 text = "The quick brown fox jumped over the lazy fox."
 splitText = text.split()
-print(f"{text}\\n{splitText}")
+print(f"{text}\n{splitText}")
 ```
 
 Výstup:
@@ -112,6 +112,16 @@ print(text.split("."))
 Výstup:
 ```text
 ['Once upon a time', ' He met a princess', ' They became friends', '']
+```
+
+## Pôvodný dlhší príklad: rozdelenie viet
+
+V pôvodnom učive sa dlhší príbeh rozdelí podľa bodiek. Medzery za bodkami zostanú na začiatku častí a bodka na konci spôsobí, že posledný prvok bude prázdny reťazec.
+
+```python
+text = "Once upon a time, a prince lived in a grand castle. He met a beautiful princess in a nearby kingdom. They became friends and shared many adventures. One day, the princess was captured by a dragon. The brave prince decided to rescue her. He fought the dragon with courage. The dragon was defeated and fled. The prince freed the princess. They returned to the castle together. They lived happily ever after."
+splitText = text.split(".")
+print(f"{text}\\n{splitText}")
 ```
 
 ## `.index(substring)`
@@ -176,6 +186,18 @@ print(numbersString)
 ```
 
 Výstup: `12:-4:7`
+
+Pôvodný príklad s náhodnými číslami ich spája pomocou rôznych oddeľovačov. Keďže `randint()` vracia náhodné čísla, konkrétny výstup sa pri každom spustení môže líšiť.
+
+```python
+from random import randint
+
+numbers = [randint(-100, 100) for _ in range(10)]
+print(numbers)
+print(":".join([str(n) for n in numbers]))
+print("abc".join([f"{n}" for n in numbers]))
+print(" ".join([f"({n})" for n in numbers]))
+```
 
 ## `in` – kontrola obsahu
 
