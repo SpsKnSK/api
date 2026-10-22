@@ -57,6 +57,14 @@ del ovocie[1]
 print(ovocie)  # ['jablko', 'slivka']
 ```
 
+Príkaz `del zoznam[:]` odstráni všetky prvky, ale samotná premenná zoznamu zostane. Naopak, `del zoznam` odstráni premennú.
+
+```python
+cisla = [1, 2, 3]
+del cisla[:]
+print(cisla)  # []
+```
+
 ### `zoznam.remove(hodnota)`
 
 Metóda `.remove()` odstráni prvý prvok so zadanou hodnotou. Ak sa hodnota v zozname nenachádza, vznikne chyba `ValueError`.
