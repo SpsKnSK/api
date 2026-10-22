@@ -23,6 +23,13 @@ A feladatoknál figyelj a `range()` kezdőértékére, felső határára és –
 11. Számolj vissza 20-tól 0-ig kettesével.
 12. Írd ki az 1-től 10-ig terjedő számokat és mellettük a köbüket.
 
+## További feladatok az eredeti leckéből
+
+13. Írd ki az 1-től 15-ig terjedő egész számokat és melléjük a négyzetüket.
+14. Írd ki a 3-mal osztható számokat 100-ig.
+15. Írd ki az 50 és 99 közötti, 7-tel osztható számokat.
+16. Számolj vissza 50-től 20-ig négyesével.
+
 ## Ellenőrzés
 
 Minden megoldásnál nézd meg:
