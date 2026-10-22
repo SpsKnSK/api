@@ -52,7 +52,16 @@ flowchart RL
 - `5 // 3 = 1` osztás egész része
 - `5 % 3 = 2` osztás maradéka
 - `5 ** 3 = 125` hatvány
-- `sqrt(5)` négyzetgyökvonás (matematikai modul szükséges hozzá)
+- `sqrt(5)` négyzetgyökvonás (matematikai modul szükséges hozzá).
+
+A négyzetgyökvonáshoz importálni kell a `math` modult, és a függvényt `math.sqrt()` alakban hívhatjuk:
+
+```py
+import math
+print(math.sqrt(5))
+```
+
+Kimenet: `2.23606797749979`.
 
 ## Kerekítés
 - `round` függvénnyel
