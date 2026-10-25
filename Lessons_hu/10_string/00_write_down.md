@@ -1,3 +1,5 @@
+🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+
 > # ✏️ Stringek (szövegek)
 >
 > A **string** karakterek sorozata. Minden karakternek van egy **indexe** (sorszáma), ami **0-tól** indul.
@@ -10,7 +12,7 @@
 > | Művelet | Jelentés | Példa (`szoveg = "szöveg"`) |
 > |---|---|---|
 > | `szoveg[i]` | az `i`. karakter | `szoveg[3]` → `"v"` |
-> | `szoveg[a:b]` | `a`-tól `b`-ig (`b` nélkül) | `szoveg[1:4]` → `"zöv"` |
+> | `szoveg[a:b]` | `a`-tól `b`-ig (b nélkül) | `szoveg[1:4]` → `"zöv"` |
 > | `.lower()` / `.upper()` | kis-/nagybetűssé alakít | |
 > | `.replace(x, y)` | `x`-et `y`-ra cseréli | |
 > | `.split()` | szétvágja szóközök mentén | |
