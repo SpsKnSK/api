@@ -97,11 +97,11 @@ O týchto stačí vedieť: **čo to je a kedy to použiť** — netreba naspamä
 | # | Lekcia | Stačí vedieť toto |
 |---|---|---|
 | 12 | [Lambda funkcie](12_lambda_function/01_basic.md) ([podrobná lekcia](12_lambda_function/02_main.md)) *(voliteľné)* | Existuje aj "jednoriadková, anonymná funkcia" — vo vlastnom kóde ju budeš potrebovať zriedka |
-| 13 | [Triedy (`class`)](13_classes_1_sk.md) | Trieda je ako **plán vlastného, zloženého dátového typu** — ak treba spolu spravovať veľa súvisiacich údajov a operácií, toto je ten nástroj |
+| 13 | [Triedy (`class`) — základy](13_class_1/01_basic.md) | Trieda je ako **plán vlastného, zloženého dátového typu** — ak treba spolu spravovať veľa súvisiacich údajov a operácií, toto je ten nástroj |
 | 14 | [Dedenie a polymorfizmus](14_inheritance_polymorphism_sk.md) | Triedy môžu "dediť" jedna od druhej — stačí poznať pojem |
 | 17 | [Tkinter — grafické rozhranie](17_tkinter_sk.md) | Existuje spôsob, ako v Pythone písať aj okenné programy — stačí vedieť, že sa to tak volá a približne ako to vyzerá |
 
-> Lekcie `13_classes_2` a `13_classes_3` idú ešte hlbšie (ukladanie do JSON, `@property`, context manager atď.) — toto sú vyslovene **pokročilé, voliteľné** témy, oplatí sa nimi zaoberať iba vtedy, ak sa o to niekto sám zaujíma.
+> Lekcie [13.2 Triedy — pokročilé](13_class_2/README.md) a [13.3 Triedy — hlbšie poznatky](13_class_3/README.md) idú ešte hlbšie (ukladanie do JSON, `@property`, context manager atď.) — toto sú vyslovene **pokročilé, voliteľné** témy, oplatí sa nimi zaoberať iba vtedy, ak sa o to niekto sám zaujíma.
 
 ---
 
