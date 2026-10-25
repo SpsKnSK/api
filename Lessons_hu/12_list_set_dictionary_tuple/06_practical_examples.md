@@ -1,4 +1,4 @@
-🗺️ [Vissza a térképhez](00_Terkep_hu.md)
+🗺️ [Vissza a térképhez](../00_Terkep_hu.md)
 
 > # Szótár és halmaz
 >
