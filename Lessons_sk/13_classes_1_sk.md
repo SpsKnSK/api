@@ -1,8 +1,8 @@
 🗺️ [Späť na mapu](00_Mapa_sk.md)
 
-> # ?? Triedy (`class`)
+> # ✏️ Triedy (`class`)
 >
-> Trieda je **pl�n**, in�tancia (objekt) je z nej vytvoren� **konkr�tna vec**.
+> Trieda je **plán**, inštancia (objekt) je z nej vytvorené **konkrétna vec**.
 >
 > ```py
 > class Macka:
@@ -13,48 +13,48 @@
 >     def Predie(self):
 >         print(f"{self.Meno} je {self.Farba} macka a pradie")
 >
-> cica = Macka("Cilka", "strieborn�")   # vytvorenie in�tancie - konkr�tny objekt
+> cica = Macka("Cilka", "strieborná")   # vytvorenie inštancie - konkrétny objekt
 > cica.Predie()
 > ```
 >
-> - `class Nazov:` - vytvorenie triedy (pl�nu)
-> - `__init__(self, ...)` - spust� sa pri ka�dom vytvoren� in�tancie, nastav� pociatocn� vlastnosti
-> - `self` - "t�to konkr�tna in�tancia", cez nu pristupujeme k vlastn�m vlastnostiam a funkci�m
+> - `class Nazov:` - vytvorenie triedy (plánu)
+> - `__init__(self, ...)` - spustí sa pri každom vytvorené inštancie, nastaví počiatočné vlastnosti
+> - `self` - "táto konkrétna inštancia", cez nu pristupujeme k vlastným vlastnostiam a funkciám
 > - `self.Vlastnost = hodnota` - nastavenie vlastnosti
-> - `__str__(self)` - urcuje, ako bude objekt vyzerat po preveden� na text (`str`) alebo pri v�pise
+> - `__str__(self)` - urcuje, ako bude objekt vyzerat po prevedení na text (`str`) alebo pri výpise
 >
-> **Metafora:** trieda je ako **forma na su�ienky**: samotn� forma nie je su�ienka, ale ka�d� su�ienka z nej dostane rovnak� z�kladn� tvar (a pritom ju m�eme ozdobit inak).
+> **Metafora:** trieda je ako **forma na sušienky**: samotná forma nie je sušienka, ale každý sušienka z nej dostane rovnaké základné tvar (a pritom ju môžeme ozdobit inak).
 
-# Triedy, vlastn�/zlo�en� d�tov� typy `class`
+# Triedy, vlastné/zložené dátový typy `class`
 
-Doposial sme sa stretli a pracovali s d�tov�mi typmi ako `int`, `float`, `str`, `random`, `list`, `dict`, ale teraz sme schopn� �st dalej a definovat si vlastn� d�tov� typ.
+Doposial sme sa stretli a pracovali s dátovými typmi ako `int`, `float`, `str`, `random`, `list`, `dict`, ale teraz sme schopní ísť dalej a definovat si vlastné dátový typ.
 
-S `class` pr�kazom definujeme, hovor�me Pythonu, ako by sme chceli, aby n� vlastn� d�tov� typ vyzeral:
-- s ak�mi vlastnostami (attributes, property) by mal byt vybaven� -> co **m�**
-- s ak�mi funkciami by mal byt vybaven� -> co vie **robit**
+S `class` príkazom definujeme, hovoríme Pythonu, ako by sme chceli, aby náš vlastné dátový typ vyzeral:
+- s akými vlastnostami (attributes, property) by mal byt vybavený -> co **má**
+- s akými funkciami by mal byt vybavený -> co vie **robit**
 
-`class` je ak�si **n�vrh**, ako by sme chceli, aby vyzerali **objekty**, **in�tancie**, ktor� z neho vytvor�me.
+`class` je akýsi **návrh**, ako by sme chceli, aby vyzerali **objekty**, **inštancie**, ktorý z neho vytvoríme.
 
-> **Objekt** alebo **in�tancia** je s�hrn d�t, ktor� je re�lne ulo�en� v pam�ti. Premenn� ukazuje na t�to konkr�tnu adresu a tak urcuje alebo men� jej hodnotu.
+> **Objekt** alebo **inštancia** je súhrn dát, ktorý je reálne uložené v pamäti. Premenná ukazuje na táto konkrétnu adresu a tak urcuje alebo mení jej hodnotu.
 
-Definovanie triedy pomocou pr�kazu `class`. V nasleduj�com pr�klade vytv�rame n�vrh triedy, ktor� sa vol� `MyClass` a m� vlastnost `x`:
+Definovanie triedy pomocou príkazu `class`. V nasledujúcom príklade vytvárame návrh triedy, ktorý sa volá `MyClass` a má vlastnost `x`:
 
 ```py
 class MyClass:
   x = 5
 ```
 
-Ak chceme z tejto triedy, n�vrhu, vytvorit objekt, m�eme to urobit nasledovne:
+Ak chceme z tejto triedy, návrhu, vytvorit objekt, môžeme to urobit nasledovne:
 
 ```py
 p1 = MyClass()
 print(p1.x)
 ```
 
-S triedou e�te nevieme pracovat (okrem niekolk�ch v�nimiek), z nej mus�me vytvorit objekt, in�tanciu.
+S triedou ešte nevieme pracovat (okrem niekoľkých výnimiek), z nej musíme vytvorit objekt, inštanciu.
 
 ## Macka
-M�eme si to predstavit aj tak, �e v pr�rode je **macka**, vieme, �e je obvykle chlpat�, m� 4 nohy, m� meno, mnauk�, mazn� sa, sp�, atd. - toto je n�vrh na "v�robu" macky. Ale ak u� m�me konkr�tnu macku u n�s doma, alebo v susedstve (Murko, Labka, Belka, Cilka), u� pre nu udelujeme konkr�tne vlastnosti.
+Môžeme si to predstavit aj tak, že v prírode je **macka**, vieme, že je obvykle chlpatá, má 4 nohy, má meno, mňauká, mazná sa, spí, atd. - toto je návrh na "výrobu" macky. Ale ak už máme konkrétnu macku u nás doma, alebo v susedstve (Murko, Labka, Belka, Cilka), už pre nu udelujeme konkrétne vlastnosti.
 
 ```mermaid
 classDiagram
@@ -74,8 +74,8 @@ classDiagram
     
     Macka <|.. mojaMacka : <<instance>>
     
-    note for Macka "Trieda = N�vrh</br>Urcuje �trukt�ru"
-    note for mojaMacka "In�tancia = Konkr�tny objekt</br>S konkr�tnymi hodnotami"
+    note for Macka "Trieda = Návrh</br>Urcuje štruktúru"
+    note for mojaMacka "Inštancia = Konkrétny objekt</br>S konkrétnymi hodnotami"
 ```
 
 ```py
@@ -93,9 +93,9 @@ mojaMacka.PredstavSa()
 ```
 
 ## `__init__()` funkcia
-> Pocas **inicializ�cie** vytv�rame in�tanciu objektu z triedy, to znamen�, �e v pam�ti poc�taca sa sa alokuje, prideluje oblast vo velkosti potrebnej pre vytvorenie danej triedy. Tak�e z v�eobecn�ho opisu (co je t� trieda) vytv�rame konkr�tny objekt v pam�ti pomocou funkcie `__init__()`.
+> Pocas **inicializácie** vytvárame inštanciu objektu z triedy, to znamená, že v pamäti počítača sa sa alokuje, prideluje oblast vo velkosti potrebnej pre vytvorenie danej triedy. Takže z všeobecného opisu (co je tá trieda) vytvárame konkrétny objekt v pamäti pomocou funkcie `__init__()`.
 
-T�to funkcia n�m hovor�, ako by sme chceli, aby vyzeralo vytv�ranie objektu z na�ej triedy. M�e to fungovat aj bez nej, v tedy funkcia nem� vstupn� parametre, ale v tom pr�pade by pou��vatel musel vlastnosti nastavit "rucne". Funkcia `__init__()` **zabezpecuje**, �e z triedy m�eme vytvorit objekt **len vtedy**, ak mu poskytneme uveden� vlastnosti.
+Táto funkcia nám hovorí, ako by sme chceli, aby vyzeralo vytváranie objektu z našej triedy. Môže to fungovat aj bez nej, v tedy funkcia nemá vstupné parametre, ale v tom prípade by používateľ musel vlastnosti nastavit "rucne". Funkcia `__init__()` **zabezpecuje**, že z triedy môžeme vytvorit objekt **len vtedy**, ak mu poskytneme uvedené vlastnosti.
 ```py
 class Macka:
 
@@ -112,7 +112,7 @@ mojaMacka.PocetNoh = 3.5
 #mojaMacka.Farba = "strieborna"
 mojaMacka.PredstavSa()
 ```
-> Ka�d� trieda m� funkciu s n�zvom `__init__()`, ktor� je v�dy vykonan� pri vytv�ran� objektu, aj ked neposkytneme �iadne vstupn� parametre. Ak je funkcia `__init__()` pr�zdna, nemus�te ju samostatne vytv�rat.
+> Každý trieda má funkciu s názvom `__init__()`, ktorý je vždy vykonaná pri vytvárané objektu, aj ked neposkytneme žiadne vstupné parametre. Ak je funkcia `__init__()` prázdna, nemusíte ju samostatne vytvárať.
 ```py
 class TriedaBezVlastnosti:
     def __init__(self) -> None:
@@ -122,7 +122,7 @@ test = TriedaBezVlastnosti()
 ```
 
 ## `self`
-Parameter `self` je odkaz na aktu�lnu in�tanciu triedy, a sl��i na pr�stup k funkci�m a vlastnostiam tejto in�tancie.
+Parameter `self` je odkaz na aktuálnu inštanciu triedy, a slúži na prístup k funkciám a vlastnostiam tejto inštancie.
 ```mermaid
 classDiagram
     class Auto {
@@ -138,7 +138,7 @@ classDiagram
     
     Auto <|.. test : <<instance>>
     
-    note for Auto "*VypisZnacku()* - s parametrom self</br>Patr� k objektu</br>*Vypis()* - bez self</br>Patr� k triede (statick�)"
+    note for Auto "*VypisZnacku()* - s parametrom self</br>Patrí k objektu</br>*Vypis()* - bez self</br>Patrí k triede (statické)"
 ```
 ```py
 class Auto:
@@ -146,21 +146,21 @@ class Auto:
         self.Znacka = znacka
     
     def VypisVyrobcu(self):
-        print(f"V�robca auta je {self.Znacka}")
+        print(f"Výrobca auta je {self.Znacka}")
 
     def Vypis():
-        print("Jednoducho vyp�em")
+        print("Jednoducho vypíšem")
 
 test = Auto("Skoda")
 test.VypisVyrobcu()
 Auto.Vypis()
 ```
-Pomocou `self` m�eme pristupovat k vlastnostiam a funkci�m konkr�tneho objektu:
-- `VypisVyrobcu` funguje len na objekte `test`, to sa naz�va **funkcia objektu** alebo funkcia priraden� k objektu
-- `test.Vypis()` nebude fungovat, preto�e objekt `test` nem� funkciu `Vypis()` (ch�ba `self`)
-- `Auto.Vypis()` funguje, a je to **funkcia triedy**, alebo v in�ch programovac�ch jazykoch je to pova�ovan� za **statick�** funkciu
-- `Auto.VypisVyrobcu()` nebude fungovat, preto�e to nie je funkcia triedy, ale funkcia in�tancie, objektu
-### Pr�klad
+Pomocou `self` môžeme pristupovat k vlastnostiam a funkciám konkrétneho objektu:
+- `VypisVyrobcu` funguje len na objekte `test`, to sa nazýva **funkcia objektu** alebo funkcia priradené k objektu
+- `test.Vypis()` nebude fungovat, pretože objekt `test` nemá funkciu `Vypis()` (chýba `self`)
+- `Auto.Vypis()` funguje, a je to **funkcia triedy**, alebo v iných programovacích jazykoch je to považovaná za **statické** funkciu
+- `Auto.VypisVyrobcu()` nebude fungovat, pretože to nie je funkcia triedy, ale funkcia inštancie, objektu
+### Príklad
 ```py
 class Osoba:
   def __init__(self, meno, vek):
@@ -173,14 +173,14 @@ print(o1)
 print(o1.meno)
 print(o1.vek)
 ```
-V�stup by mal byt podobn�:
+Výstup by mal byt podobné:
 ```
 <__main__.Osoba object at 0x00000185EC9D75D0>
 Janko
 36
 ```
 ## Funkcia `__str__()`
-Pomocou tejto funkcie m�eme ovplyvnit, ako bude na�a trieda vyzerat, ked ju premen�me na `str`
+Pomocou tejto funkcie môžeme ovplyvnit, ako bude naša trieda vyzerat, ked ju premeníme na `str`
 
 ```mermaid
 classDiagram
@@ -192,14 +192,14 @@ classDiagram
     }
     
     class p1 {
-        meno = "J�n"
+        meno = "Ján"
         vek = 36
     }
     
     Osoba <|.. p1 : <<instance>>
     
-    note for Osoba "__str__() urcuje,</br>ako vyzer� objekt</br>ked ho prevedieme na string"
-    note for p1 "*print(p1)* v�sledok: J�n(36)</br> Namiesto: *Osoba object*"
+    note for Osoba "__str__() urcuje,</br>ako vyzerá objekt</br>ked ho prevedieme na string"
+    note for p1 "*print(p1)* výsledok: Ján(36)</br> Namiesto: *Osoba object*"
 ```
 
 ```py
@@ -214,7 +214,7 @@ class Osoba:
 o1 = Osoba("Janko", 36)
 
 print(o1, type(o1))
-# pr�padne
+# prípadne
 osobaString = str(o1)
 print(osobaString, type(osobaString))
 ```
@@ -234,22 +234,22 @@ osoba = Osoba("Janko", 17)
 print(osobaSlovnik, type(osobaSlovnik))
 print(osoba, type(osoba))
 
-# vyp�sanie individu�lnych vlastnost�:
+# vypísanie individuálnych vlastností:
 print("osobaSlovnik['Vek']", osobaSlovnik["Vek"])
 print('osoba.Vek', osoba.Vek)
 
-# zmena individu�lnych vlastnost�
+# zmena individuálnych vlastností
 osobaSlovnik["Vek"] = 98
 osoba.Vek = 10
 
 print("osobaSlovnik['Vek']", osobaSlovnik["Vek"])
 print('osoba.Vek', osoba.Vek)
 ```
-Kl�ce slovn�ka m�eme pova�ovat vlastnostami triedy, pri slovn�ku mus�me d�vat pozor, aby sme **v�dy** spr�vne zadali kl�c, pri triede n�m Python editor s�m pon�kne n�zov vlastnosti Trieda m�e byt roz��ren� o r�zne funkcie.
+Kľúče slovníka môžeme považovať vlastnostami triedy, pri slovníku musíme dávať pozor, aby sme **vždy** správne zadali kľúč, pri triede nám Python editor sám ponúkne názov vlastnosti Trieda môže byt rozšírené o rôzne funkcie.
 
-> # ?? Pokazte to!
+> # ✏️ Pokazte to!
 >
-> Ak� je chyba v tomto programe?
+> Aké je chyba v tomto programe?
 >
 > ```py
 > class Macka:
@@ -257,36 +257,36 @@ Kl�ce slovn�ka m�eme pova�ovat vlastnostami triedy, pri slovn�ku mus�
 >         self.Meno = meno
 >         self.Farba = farba
 >
-> cirmi = Macka("Cirmi", "strieborn�")
+> cirmi = Macka("Cirmi", "strieborná")
 > print(cirmi.Predie())
 > ```
 >
-> Preco to nefunguje? Co treba doplnit, aby trieda `Macka` vedela priast a nielen uchov�vat svoje meno a farbu?
+> Preco to nefunguje? Co treba doplnit, aby trieda `Macka` vedela priast a nielen uchovávať svoje meno a farbu?
 >
-> # ?? �lohy
+> # ✏️ Úlohy
 > - [e01_fish.md](../Exercies/13_classes/e01_fish.md)
 > - [e02_worker.md](../Exercies/13_classes/e02_worker.md)
 > - [e03_bankAccount.md](../Exercies/13_classes/e03_bankAccount.md)
 > - [e04_figureSkating.md](../Exercies/13_classes/e04_figureSkating.md)
 >
-> # ? Ot�zky
+> # ✏️ Otázky
 >
-> 1. Vytvorte triedu `Pes`, ktor� m� meno a farbu. Tieto hodnoty nastavte pri vytvoren� in�tancie pomocou funkcie `__init__`. Vytvorte 2 in�tancie:
+> 1. Vytvorte triedu `Pes`, ktorý má meno a farbu. Tieto hodnoty nastavte pri vytvorené inštancie pomocou funkcie `__init__`. Vytvorte 2 inštancie:
 >    1. meno nech je Cezar, farbu si zvolte sami
 >    2. meno si zvolte sami, farba nech je biela
->    - Vyp�te ich vlastnosti na obrazovku.
-> 2. Vytvorte triedu `Auto` s t�mito vlastnostami: farba, znacka, model, rok v�roby. M�ete pou�it funkciu `__init__`, ale nemus�te. Definujte tieto 2 funkcie:
->    1. `Start` - vyp�e na obrazovku: "[farba] auto z roku [rok v�roby], znacky [znacka] [model], sa rozbehlo"
->    2. `Stop` - vyp�e na obrazovku: "Auto sa zastavilo"
->    - vytvorte 3 in�tancie
->    - vlo�te ich do zoznamu
+>    - Vypíšte ich vlastnosti na obrazovku.
+> 2. Vytvorte triedu `Auto` s týmito vlastnostami: farba, znacka, model, rok výroby. Môžete použiť funkciu `__init__`, ale nemusíte. Definujte tieto 2 funkcie:
+>    1. `Start` - vypíše na obrazovku: "[farba] auto z roku [rok výroby], znacky [znacka] [model], sa rozbehlo"
+>    2. `Stop` - vypíše na obrazovku: "Auto sa zastavilo"
+>    - vytvorte 3 inštancie
+>    - vložte ich do zoznamu
 >    - a zavolajte na nich obe funkcie
-> 3. Vytvorte triedu `Pracovnik` s t�mito vlastnostami: id, plat, pohlavie, vek. Upravte funkciu `__str__` tak, aby vracala tento retazec: "Zamestnanec s id [id] je [pohlavie], zar�ba [plat] eur a m� [vek] rokov." Pomocou kni�nice `random`:
->    - vygenerujte n�hodn� pocet zamestnancov v intervale <75;120>
+> 3. Vytvorte triedu `Pracovnik` s týmito vlastnostami: id, plat, pohlavie, vek. Upravte funkciu `__str__` tak, aby vracala tento retazec: "Zamestnanec s id [id] je [pohlavie], zarába [plat] eur a má [vek] rokov." Pomocou knižnice `random`:
+>    - vygenerujte náhodný pocet zamestnancov v intervale <75;120>
 >      - `id` nech je z intervalu <10000;100000>
 >      - `plat` nech je z intervalu <1000;5000>
->      - `pohlavie`: mu� alebo �ena
+>      - `pohlavie`: muž alebo žena
 >      - `vek` nech je z intervalu <20;99>
->    - vygenerovan� in�tancie `Pracovnik` vlo�te do zoznamu a vyp�te ich hodnoty na obrazovku
-> 4. Na co sl��i parameter `self` a kedy ho m�eme vynechat z defin�cie funkcie?
+>    - vygenerované inštancie `Pracovnik` vložte do zoznamu a vypíšte ich hodnoty na obrazovku
+> 4. Na co slúži parameter `self` a kedy ho môžeme vynechat z definície funkcie?
 
