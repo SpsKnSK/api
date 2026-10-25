@@ -1,6 +1,6 @@
 # 💥 Rontsátok el!
 
-Másold ki a programot, futtasd le, majd javítsd ki a hibákat és a helytelen eredményeket.
+Másold ki a programot, futtasd le, majd javítsd ki a hibákat és a helytelen eredményeket. A program az első futási hibánál leáll, ezért mindig az első hibát javítsd, majd futtasd újra.
 
 ```python
 szoveg = "szöveg"
