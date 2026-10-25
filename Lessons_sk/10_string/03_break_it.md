@@ -1,15 +1,15 @@
 # 💥 Pokazte to!
 
-Skopíruj program, spusti ho a potom oprav chyby a nesprávne výsledky.
+Skopíruj program, spusti ho a potom oprav chyby a nesprávne výsledky. Program sa zastaví pri prvej chybe počas behu, preto vždy oprav prvú chybu a potom ho spusti znova.
 
 ```python
 text = "reťazec"
 
 print(text[3:8])          # Prečo to nie je "ťazec"?
-print(text[10])           # Čo sa stane?
 print(text.upper)         # Čo chýba?
 print(text.replace("r", "p"))
 print(" ".join([1, 2, 3]))  # Prečo je to nesprávne?
+print(text[10])           # Čo sa stane?
 ```
 
 Úlohy:
