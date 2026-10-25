@@ -59,7 +59,7 @@ Ezek nélkül semmilyen Python-program nem érthető. Ha ezekben bizonytalan vag
 
 | # | Lecke | Miért kell? | Szerszám, amit kapsz |
 |---|---|---|---|
-| 01 | [Algoritmusok](01_Algorithms_hu.md) | Mielőtt kódot írnál, meg kell tanulnod **lépésekben gondolkodni**. | Folyamatábra, szekvencia/elágazás/ciklus fogalma |
+| 01 | [Algoritmusok](01_algorithms/01_basic.md) | Mielőtt kódot írnál, meg kell tanulnod **lépésekben gondolkodni**. | Folyamatábra, szekvencia/elágazás/ciklus fogalma |
 | 02 | [`print()`](02_print/01_basic.md) | Enélkül a program semmit nem mutat neked. | Kiíratás a képernyőre |
 | 03 | [`input()`](03_input/01_basic.md) | Enélkül a program nem tud kérdezni. | Adat beolvasása |
 | 04 | [Változók](04_variables/01_basic.md) | Adatot valahol tárolni kell. | Dobozok címkével: `int`, `float`, `str`, `bool` |
