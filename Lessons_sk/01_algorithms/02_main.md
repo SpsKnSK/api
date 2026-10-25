@@ -107,34 +107,62 @@ V učive sa naučíme vypisovať výsledky (`print()`), načítavať údaje (`in
 
 Nasledujúci príklad ukazuje časti zložitejšieho Python súboru. **Teraz sa to nemusíš učiť ani tomu rozumieť**; funkcie, triedy, importy a časť `__main__` prídu na rad neskôr.
 
-```python
+```py
+# Načítanie knižníc (ak ich potrebujeme)
 import nazov_modulu
 from iny_modul import nazov_funkcie
 
+# Vytvorenie premenných (použiteľných v celom programe)
 globalna_premenna = 10
 
+# Definícia tried
 class Osoba:
     def __init__(self, meno, priezvisko):
         self.Meno, self.Priezvisko = meno, priezvisko
 
+# Definícia funkcií
 def nazov_funkcie(param1, param2):
+    # Telo funkcie
     vysledok = param1 + param2
     return vysledok
 
+# Hlavná časť programu (main)
 if __name__ == "__main__":
+    # Spracovanie príkazového riadku (voliteľné)
+    import sys
+    argumenty = sys.argv
+
+    # Deklarácia lokálnych premenných
+    lokalna_premenna = "Ahoj, svet!"
+
+    # Volanie funkcie a spracovanie výsledku
     vysledok = nazov_funkcie(5, 3)
     print("Výsledok:", vysledok)
+
+    # Cykly, vetvenie a iné riadiace štruktúry
     if vysledok > 5:
         print("Výsledok je väčší ako 5.")
     else:
         print("Výsledok nie je väčší ako 5.")
+
     for i in range(3):
         print("Cyklus:", i)
-    vstupny_text = input("Prosím, napíš niečo: ")
+
+    # Čítanie vstupu a výstupu
+    vstupny_text = input("Prosím, napíšte niečo: ")
     print("Vstup:", vstupny_text)
 
+# Kód patriaci k modulu (voliteľné)
 def ina_funkcia():
     pass
 ```
 
-V ďalších lekciách budeme pracovať s rôznymi druhmi údajov, napríklad celými a desatinnými číslami, textom, zoznamami a slovníkmi.
+## Aké typy údajov môžeme ukladať?
+
+- `int` – celé čísla (napríklad `5`, `-3`, `100`)
+- `str` – text (napríklad `"Ahoj"`, `"Peter"`)
+- `float` – desatinné čísla (napríklad `3.14`, `-2.5`)
+- `list` – zoznam viacerých údajov (napríklad `[1, 2, 3]`)
+- `dict` – slovník dvojíc kľúč–hodnota (napríklad `{"meno": "Anna"}`)
+
+Tieto typy podrobnejšie spoznáme v ďalších lekciách.
