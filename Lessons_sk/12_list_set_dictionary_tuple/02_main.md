@@ -13,7 +13,7 @@ graph TB
         style L3 fill:#90EE90,color:#000000
     end
 
-    ListaJegyzet["?? Modifikovateľný<br/>?? Indexované<br/>?? Duplikáty povolené"]
+    ListaJegyzet["Meniteľný<br/>Indexovaný<br/>Duplicity povolené"]
 
     Lista -.-> ListaJegyzet
 
@@ -27,6 +27,23 @@ print(f"Prvý prvok: {ovocie_zoznam[0]}")
 ovocie_zoznam[1] = 'slivka'  # Modifikovateľný
 print(f"Modifikovaná zoznam: {ovocie_zoznam}")
 ```
+## Prechádzanie pomocou cyklu `for`
+
+Cyklus `for` prejde každý prvok zoznamu:
+
+```python
+ovocie = ['jablko', 'hruška', 'čerešňa']
+for plod in ovocie:
+    print(plod)
+```
+
+Výstup:
+```text
+jablko
+hruška
+čerešňa
+```
+
 ## Vlastnosti
 - Používame hranaté zátvorky `[]`
 - Môže obsahovat ľubovoľný dátový typ, aj zmiešane
@@ -106,7 +123,7 @@ graph TB
         style D2 fill:#87CEEB,color:#000000
         style D3 fill:#87CEEB,color:#000000
     end
-    SzotarJegyzet["?? Kľúč-hodnota páry<br/>?? Indexované podla kľúča<br/>?? Modifikovateľný"]
+    SzotarJegyzet["Dvojice kľúč-hodnota<br/>Indexovaný podla kľúča<br/>Meniteľný"]
     Szotar -.-> SzotarJegyzet
     style SzotarJegyzet fill:#E1F5FE,color:#000000
 ```
