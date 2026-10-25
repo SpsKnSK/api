@@ -1,36 +1,36 @@
 🗺️ [Späť na mapu](00_Mapa_sk.md)
 
-> # ?? Zoznam, mno�ina, slovn�k, n-tica
+> # ✏️ Zoznam, množina, slovník, n-tica
 >
-> �tyri typy **kolekci�**, ka�d� m� in� "osobnost":
+> štyri typy **kolekcií**, každý má inú "osobnost":
 >
-> | Typ | Znak | Poradie? | M�u sa opakovat? | D� sa menit? |
+> | Typ | Znak | Poradie? | Môžu sa opakovat? | Dá sa menit? |
 > |---|---|---|---|---|
-> | `list` | `[]` | �no (index) | �no | �no |
-> | `set` | `{}` | nie | **nie** | �no |
-> | `dict` | `{kl�c: hodnota}` | �no (kl�c) | kl�c nie, hodnota �no | �no |
-> | `tuple` | `()` | �no (index) | �no | **nie** |
+> | `list` | `[]` | áno (index) | áno | áno |
+> | `set` | `{}` | nie | **nie** | áno |
+> | `dict` | `{kľúč: hodnota}` | áno (kľúč) | kľúč nie, hodnota áno | áno |
+> | `tuple` | `()` | áno (index) | áno | **nie** |
 >
 > ```py
-> zoznam = ['jablko', 'hru�ka']      # m� poradie, d� sa indexovat aj menit
-> mnozina = {'jablko', 'hru�ka'}     # nem� poradie, nem� duplicity
-> slovnik = {'meno': 'Anna'}         # kl�c -> hodnota
-> ntica = (10, 20)                   # ako zoznam, ale ned� sa menit
+> zoznam = ['jablko', 'hruška']      # má poradie, dá sa indexovat aj menit
+> mnozina = {'jablko', 'hruška'}     # nemá poradie, nemá duplicity
+> slovnik = {'meno': 'Anna'}         # kľúč -> hodnota
+> ntica = (10, 20)                   # ako zoznam, ale nedá sa menit
 > ```
 >
 > **Metafora:**
-> - **Zoznam** = **oc�slovan� polica**: m�e� z nej brat, prid�vat aj pres�vat veci.
-> - **Mno�ina** = **vrece s jedinecn�mi gul�ckami**: poradie nie je d�le�it� a dve rovnak� tam nezostan�.
-> - **Slovn�k** = **telef�nny zoznam**: nehlad� podla poradia, ale podla **mena** (kl�c -> hodnota).
-> - **N-tica** = **zapecaten� �katula**: co do nej raz vlo��, to u� nevymen�.
+> - **Zoznam** = **očíslované polica**: môžeš z nej brat, pridávať aj presúvať veci.
+> - **Množina** = **vrece s jedinečnými guľôčkami**: poradie nie je dôležité a dve rovnaké tam nezostanú.
+> - **Slovník** = **telefónny zoznam**: nehľadá podla poradia, ale podla **mena** (kľúč -> hodnota).
+> - **N-tica** = **zapečatená škatula**: co do nej raz vloží, to už nevymení.
 
 # Zoznam `list`: `[]`
 ```mermaid
 graph TB
     subgraph Lista["Zoznam (list) - []"]
         L0["Index: 0<br/>Hodnota: 'jablko'"]
-        L1["Index: 1<br/>Hodnota: 'hru�ka'"]
-        L2["Index: 2<br/>Hodnota: 'cere�na'"]
+        L1["Index: 1<br/>Hodnota: 'hruška'"]
+        L2["Index: 2<br/>Hodnota: 'čerešňa'"]
         L3["Index: 3<br/>Hodnota: 'jablko'"]
         L0 --> L1 --> L2 --> L3
         style L0 fill:#90EE90,color:#000000
@@ -39,119 +39,119 @@ graph TB
         style L3 fill:#90EE90,color:#000000
     end
 
-    ListaJegyzet["?? Modifikovateln�<br/>?? Indexovan�<br/>?? Duplik�ty povolen�"]
+    ListaJegyzet["?? Modifikovateľný<br/>?? Indexované<br/>?? Duplikáty povolené"]
 
     Lista -.-> ListaJegyzet
 
     style ListaJegyzet fill:#E8F5E9,color:#000000
 ```
 ```python
-# Zoznam - indexovan�, modifikovateln�, duplik�ty povolen�
-ovocie_zoznam = ['jablko', 'hru�ka', 'cere�na', 'jablko']
+# Zoznam - indexované, modifikovateľný, duplikáty povolené
+ovocie_zoznam = ['jablko', 'hruška', 'čerešňa', 'jablko']
 print(f"Zoznam: {ovocie_zoznam}")
-print(f"Prv� prvok: {ovocie_zoznam[0]}")
-ovocie_zoznam[1] = 'slivka'  # Modifikovateln�
-print(f"Modifikovan� zoznam: {ovocie_zoznam}")
+print(f"Prvý prvok: {ovocie_zoznam[0]}")
+ovocie_zoznam[1] = 'slivka'  # Modifikovateľný
+print(f"Modifikovaná zoznam: {ovocie_zoznam}")
 ```
 ## Vlastnosti
-- Pou��vame hranat� z�tvorky `[]`
-- M�e obsahovat lubovoln� d�tov� typ, aj zmie�ane
-  - `[1,2.3,"jablko", True]` zmie�an�
-  - `[1,2,3]` len c�sla
-- Pr�stup k hodnote je indexovan�, zac�na od `0`
-  - Ak je hodnota na "pravej" strane rovn� sa `hodnota = zoznam[i]`, alebo len pou�ijeme hodnotu `print(zoznam[i])`, **dostaneme** sp�t hodnotu prvka
+- Používame hranaté zátvorky `[]`
+- Môže obsahovat ľubovoľný dátový typ, aj zmiešane
+  - `[1,2.3,"jablko", True]` zmiešané
+  - `[1,2,3]` len čísla
+- Prístup k hodnote je indexované, začína od `0`
+  - Ak je hodnota na "pravej" strane rovná sa `hodnota = zoznam[i]`, alebo len použijeme hodnotu `print(zoznam[i])`, **dostaneme** späť hodnotu prvka
   ```py
-  zoznam = ['jablko', 'hru�ka', 'cere�na']
-  print(zoznam[1]) # vyp�e hru�ka
+  zoznam = ['jablko', 'hruška', 'čerešňa']
+  print(zoznam[1]) # vypíše hruška
   jablko = zoznam[0]
   print(jablko)
   ```
-  - Ak je hodnota na "lavej" strane rovn�tka, prirad�me hodnotu
+  - Ak je hodnota na "lavej" strane rovnátka, priradíme hodnotu
   ```py
-  zoznam = ['jablko', 'hru�ka', 'cere�na']
-  print(zoznam[1]) # vyp�e hru�ka
+  zoznam = ['jablko', 'hruška', 'čerešňa']
+  print(zoznam[1]) # vypíše hruška
   zoznam[1] = "kiwi"
-  print(zoznam[1]) # vyp�e kiwi
+  print(zoznam[1]) # vypíše kiwi
   ```
-- `.append(hodnota)` - prid� nov� hodnotu na **koniec** zoznamu
-- `.index(hodnota)` - vr�ti **poz�ciu** `hodnoty`, ak ju nen�jde, vyvol� `ValueError` v�nimku
+- `.append(hodnota)` - pridá nové hodnotu na **koniec** zoznamu
+- `.index(hodnota)` - vráti **pozíciu** `hodnoty`, ak ju nenájde, vyvolá `ValueError` výnimku
 
-# Mno�ina `set`: `{}`
-Python definuje d�tov� typ mno�ina, `set` ako z�kladn� typ. Mno�ina je neusporiadan� kolekcia, kde ka�d� prvok m�e byt pr�tomn� **iba raz**.
+# Množina `set`: `{}`
+Python definuje dátový typ množina, `set` ako základné typ. Množina je neusporiadaná kolekcia, kde každý prvok môže byt prítomný **iba raz**.
 
-Z�kladn� pou�itie: 
-- kontrola pr�tomnosti dan�ho prvku
-- filtrovanie duplicitn�ch prvkov.
+Základné použitie: 
+- kontrola prítomnosti daného prvku
+- filtrovanie duplicitných prvkov.
 
 ## Vlastnosti
-- Pou��vame zlo�en� z�tvorky `{}`, alebo zo zoznamu, retazca pou�ijeme pr�kaz `set()` na vytvorenie mno�iny `mnozina = set([1,1,1,2,3,5,4,4,4,8])`
-- M�e obsahovat lubovoln� d�tov� typ, aj zmie�ane
-- Ka�d� prvok je jedinecn�, vyskytuje sa len raz
-## Pr�klad
-Kolko c�sel som uh�dol v lot�rii:
+- Používame zložené zátvorky `{}`, alebo zo zoznamu, retazca použijeme príkaz `set()` na vytvorenie množiny `mnozina = set([1,1,1,2,3,5,4,4,4,8])`
+- Môže obsahovat ľubovoľný dátový typ, aj zmiešane
+- Každý prvok je jedinečný, vyskytuje sa len raz
+## Príklad
+Kolko čísel som uhádol v lotérii:
 ```py
 vyherneCisla = {1, 2, 3, 4, 5, 6}
 mojeCisla = {1, 2, 7, 8, 9, 0}
 
-print("Tieto som uh�dol: ", vyherneCisla & mojeCisla)
+print("Tieto som uhádol: ", vyherneCisla & mojeCisla)
 ```
 
-## Zo zoznamu mno�ina
+## Zo zoznamu množina
 ```py
-kosik = ["jablko", "pomaranc", "jablko", "hru�ka", "pomaranc", "ban�n"]
+kosik = ["jablko", "pomaranc", "jablko", "hruška", "pomaranc", "banán"]
 print("pomaranc" in kosik)
 mnozinaKosik = set(kosik)
 print(mnozinaKosik)
 ```
 
-## Oper�cie s mno�inami
-Objekty typu `set` podporuj� matematick� oper�cie ako:
+## Operácie s množinami
+Objekty typu `set` podporujú matematické operácie ako:
 - zjednotenie (union), `a | b`
-- priesecn�k (intersection), `a & b`
+- priesečník (intersection), `a & b`
 - rozdiel (difference),  `a - b`
-- a symetrick� rozdiel (symmetric difference). `a ^ b`
+- a symetrická rozdiel (symmetric difference). `a ^ b`
 
 ```py
 abrakadabra = set('abracadabra')
 alhambra = set('alhambra')
-print(f'Unik�tne prvky v abrakadabra {abrakadabra}')
-print(f'Unik�tne prvky v alhambra {alhambra}')
-print(f'Prvky v abrakadabra, ktor� nie s� v alhambra: {abrakadabra-alhambra}')
+print(f'Unikátne prvky v abrakadabra {abrakadabra}')
+print(f'Unikátne prvky v alhambra {alhambra}')
+print(f'Prvky v abrakadabra, ktorý nie sú v alhambra: {abrakadabra-alhambra}')
 print(f'Prvky v abrakadabra alebo v alhambra: {abrakadabra|alhambra}')
-print(f'Prvky v abrakadabra a v alhambra s�casne: {abrakadabra&alhambra}')
-print(f'Prvky v abrakadabra alebo v alhambra, ale nie oboje s�casne: {abrakadabra^alhambra}')
+print(f'Prvky v abrakadabra a v alhambra súčasne: {abrakadabra&alhambra}')
+print(f'Prvky v abrakadabra alebo v alhambra, ale nie oboje súčasne: {abrakadabra^alhambra}')
 ```
-# Slovn�k `dictionary`: `{k:v}`
+# Slovník `dictionary`: `{k:v}`
 ```mermaid
 graph TB
-    subgraph Szotar["Slovn�k (dictionary) - {}"]
-        D1["Kl�c: 'meno'<br/>Hodnota: 'J�n'"]
-        D2["Kl�c: 'vek'<br/>Hodnota: 25"]
-        D3["Kl�c: 'mesto'<br/>Hodnota: 'Bratislava'"]
+    subgraph Szotar["Slovník (dictionary) - {}"]
+        D1["Kľúč: 'meno'<br/>Hodnota: 'Ján'"]
+        D2["Kľúč: 'vek'<br/>Hodnota: 25"]
+        D3["Kľúč: 'mesto'<br/>Hodnota: 'Bratislava'"]
         style D1 fill:#87CEEB,color:#000000
         style D2 fill:#87CEEB,color:#000000
         style D3 fill:#87CEEB,color:#000000
     end
-    SzotarJegyzet["?? Kl�c-hodnota p�ry<br/>?? Indexovan� podla kl�ca<br/>?? Modifikovateln�"]
+    SzotarJegyzet["?? Kľúč-hodnota páry<br/>?? Indexované podla kľúča<br/>?? Modifikovateľný"]
     Szotar -.-> SzotarJegyzet
     style SzotarJegyzet fill:#E1F5FE,color:#000000
 ```
 ```python
-# Slovn�k - kl�c-hodnota p�ry
-osoba = {'meno': 'J�n', 'vek': 25, 'mesto': 'Bratislava'}
-print(f"\nSlovn�k: {osoba}")
+# Slovník - kľúč-hodnota páry
+osoba = {'meno': 'Ján', 'vek': 25, 'mesto': 'Bratislava'}
+print(f"\nSlovník: {osoba}")
 print(f"Meno: {osoba['meno']}")
-osoba['vek'] = 26  # Modifikovateln�
-print(f"Modifikovan� slovn�k: {osoba}")
+osoba['vek'] = 26  # Modifikovateľný
+print(f"Modifikovaná slovník: {osoba}")
 ```
-D�tov� typ slovn�k sl��i na ukladanie p�rov `kl�c:hodnota`. Slovn�k je kolekcia, kde:
-- `{kl�c:hodnota}`, pricom kl�c a hodnota m�u byt lubovoln�ho d�tov�ho typu, m�u byt aj zmie�an� v r�mci jedn�ho slovn�ka
-- na pr�stup k hodnote pou��vame z�tvorky `[]`, rovnako ako pri zoznamoch, pricom tu ud�vame kl�c: `print(mojSlovnik["kluc"])`
-- je zoraden� (od Pythonu verzie >3.7)
-- je modifikovateln�
-- neobsahuje duplicitn� kl�ce
+Dátový typ slovník slúži na ukladanie párov `kľúč:hodnota`. Slovník je kolekcia, kde:
+- `{kľúč:hodnota}`, pricom kľúč a hodnota môžu byt ľubovoľného dátového typu, môžu byt aj zmiešané v rámci jedného slovníka
+- na prístup k hodnote používame zátvorky `[]`, rovnako ako pri zoznamoch, pricom tu uvádzame kľúč: `print(mojSlovnik["kluc"])`
+- je zoradený (od Pythonu verzie >3.7)
+- je modifikovateľný
+- neobsahuje duplicitný kľúče
 
-## Pr�klad v�pisu cel�ho slovn�ka
+## Príklad výpisu celého slovníka
 ```py
 autoSlovnik = {
   "znacka": "Ford",
@@ -160,7 +160,7 @@ autoSlovnik = {
 }
 print(autoSlovnik)
 ```
-## Pr�klad v�pisu hodnoty pre dan� kl�c
+## Príklad výpisu hodnoty pre dané kľúč
 ```py
 autoSlovnik = {
   "znacka": "Ford",
@@ -179,7 +179,7 @@ autoSlovnik = {
 }
 print(autoSlovnik[znackaKluc])
 ```
-## Pr�klad zmeny hodnoty pre dan� kl�c
+## Príklad zmeny hodnoty pre dané kľúč
 ```py
 znackaKluc = "znacka"
 autoSlovnik = {
@@ -192,8 +192,8 @@ autoSlovnik[znackaKluc] = "Hyundai"
 print(autoSlovnik[znackaKluc])
 ```
 
-## Kl�ce s duplicitami nie s� povolen�
-Neozn�mi chybu, ale v�dy prep�e hodnotu
+## Kľúče s duplicitami nie sú povolené
+Neoznámi chybu, ale vždy prepíše hodnotu
 ```py
 autoSlovnik = {
   "znacka": "Ford",
@@ -203,24 +203,24 @@ autoSlovnik = {
 }
 print(autoSlovnik)
 ```
-## Aktualiz�cia, `.update`
+## Aktualizácia, `.update`
 ```py
 autoSlovnik = {
   "znacka": "Ford",
   "model": "Mustang",
   "rok": 1964,
 }
-# ak existuje kl�c model, prep�e hodnotu
+# ak existuje kľúč model, prepíše hodnotu
 autoSlovnik.update({"model":"Mondeo"})
 
-# ak neexistuje kl�c model, pripoj� ho
+# ak neexistuje kľúč model, pripojí ho
 autoSlovnik.update({"jeElektricke":False})
 
 print(autoSlovnik)
 ```
 
 ## `.get`
-Ak chceme pristupovat k neexistuj�cemu kl�cu v slovn�ku, program signalizuje chybu a zastav� sa:
+Ak chceme pristupovat k neexistujúcemu kľúču v slovníku, program signalizuje chybu a zastaví sa:
 
 ```py
 autoSlovnik = {
@@ -231,7 +231,7 @@ autoSlovnik = {
 print(autoSlovnik["isElectric"])
 ```
 
-Aby sme tomu predi�li, m�eme pou�it funkciu `.get`:
+Aby sme tomu predišli, môžeme použiť funkciu `.get`:
 
 ```py
 autoSlovnik = {
@@ -245,9 +245,9 @@ print(autoSlovnik.get("isElectric", "neobsahuje"))
 
 # Tuple `tuple`: `()`
 
-**Tuple**, n-tica, je nemodifikovateln� d�tov� typ s mo�nostou obsahovat modifikovateln� prvky. Tuple v�stup v�dy obsahuje z�tvorky, tak�e m�u byt spr�vne vnoren�; m�eme ich zad�vat s alebo bez z�tvoriek, ale v niektor�ch pr�padoch s� z�tvorky nevyhnutn� (ked s� s�castou v�c�ieho v�razu).
+**Tuple**, n-tica, je nemodifikovateľný dátový typ s možnosťou obsahovat modifikovateľný prvky. Tuple výstup vždy obsahuje zátvorky, takže môžu byt správne vnorené; môžeme ich zadávať s alebo bez zátvoriek, ale v niektorých prípadoch sú zátvorky nevyhnutné (ked sú súčasťou väčšieho výrazu).
 
-Napr�klad, ak vlo��me **zoznam** do tuple:
+Napríklad, ak vložíme **zoznam** do tuple:
 
 ```py
 ucitSa = ['matematika', 'fyzika']
@@ -257,23 +257,23 @@ rozvrh[0][1] = 'slovencina'
 print(rozvrh[0][1]) # slovencina
 ```
 
-Nasleduj�ci k�d vyvol� chybu:
+Nasledujúci kód vyvolá chybu:
 
 ```py
-ovocie = ('jablko', 'hru�ka', 'cere�na')
+ovocie = ('jablko', 'hruška', 'čerešňa')
 ovocie[0] = 'kiwi'
 ```
 
 ## Vlastnosti
-- Pou��vaj� sa z�tvorky `()`
-- Prvky tuple nie s� modifikovateln�
-- M�eme pou�it lubovoln� d�tov� typ
-- Podobne ako retazce, tuple s� nemodifikovateln�, nem�eme priradit hodnotu jednotliv�mu prvku (`myTuple[0] = 10` vyvol� chybu)
-- M�eme vytvorit tuple, ktor� obsahuje modifikovateln� prvky, napr�klad polia/zoznamy (`myTuple = ([1,2,3],4)`, tu m�eme menit hodnoty `myTuple[0][1]=10`, preto�e ide o zoznam)
+- Používajú sa zátvorky `()`
+- Prvky tuple nie sú modifikovateľný
+- Môžeme použiť ľubovoľný dátový typ
+- Podobne ako retazce, tuple sú nemodifikovateľný, nemôžeme priradit hodnotu jednotlivému prvku (`myTuple[0] = 10` vyvolá chybu)
+- Môžeme vytvorit tuple, ktorý obsahuje modifikovateľný prvky, napríklad polia/zoznamy (`myTuple = ([1,2,3],4)`, tu môžeme menit hodnoty `myTuple[0][1]=10`, pretože ide o zoznam)
 
-## Naco je to dobr�?
+## Naco je to dobré?
 
-Funkcia m�e vr�tit len jednu hodnotu, ale ak t�to hodnota je typu, ktor� obsahuje viac hodn�t, m�e byt tuple rie�en�m. Form�lne nap�san�:
+Funkcia môže vrátiť len jednu hodnotu, ale ak táto hodnota je typu, ktorý obsahuje viac hodnôt, môže byt tuple riešením. Formálne napísané:
 
 ```py
 def Pripocitaj10(a:int, b:int)->tuple[int,int]:
@@ -283,21 +283,21 @@ vysledok = Pripocitaj10(40,50)
 print(vysledok)
 ```
 
-Alebo trochu jednoduch�ie a rozdelenie tuple na dve (alebo viac) premenn�:
+Alebo trochu jednoduchšie a rozdelenie tuple na dve (alebo viac) premenná:
 
 ```py
 def Pripocitaj10(a:int, b:int)->tuple[int,int]:
-    return a+10, b+10 # v tomto pr�pade nemus�me pou��vat z�tvorky
+    return a+10, b+10 # v tomto prípade nemusíme používať zátvorky
 
 x, y = Pripocitaj10(40,50)
 print(x, y)
 ```
 
-`(x, y)` uchov�vanie s�radn�c, z�znamy o zamestnancoch v datab�ze
+`(x, y)` uchovávanie súradníc, záznamy o zamestnancoch v databáze
 
-> # ?? Pokazte to!
+> # ✏️ Pokazte to!
 >
-> Ak� je chyba v tomto programe?
+> Aké je chyba v tomto programe?
 >
 > ```py
 > suradnice = (10, 20, 30)
@@ -305,23 +305,23 @@ print(x, y)
 > print(suradnice)
 > ```
 >
-> Preco nie je mo�n� zmenit prvok n-tice? Upravte k�d tak, aby sa `suradnice` spr�vali ako **zoznam** a zmena u� fungovala.
+> Preco nie je možné zmenit prvok n-tice? Upravte kód tak, aby sa `suradnice` správali ako **zoznam** a zmena už fungovala.
 >
-> # ?? �lohy
+> # ✏️ Úlohy
 > - [e01_workerDb.md](../Exercies/12_list_set_dictionary_tuple/e01_workerDb.md)
 > - [e02_checkDuplicates.md](../Exercies/12_list_set_dictionary_tuple/e02_checkDuplicates.md)
 > - [e03_DistincElementCount.md](../Exercies/12_list_set_dictionary_tuple/e03_DistincElementCount.md)
 >
-> # ? Ot�zky
+> # ✏️ Otázky
 >
-> 1. Ak� s� hlavn� vlastnosti `set`, ako ho oznacujeme?
-> 2. Ak� s� hlavn� vlastnosti `dict`, ako ho oznacujeme?
-> 3. Ak� s� hlavn� vlastnosti `list`, ako ho oznacujeme?
-> 4. Ak� s� hlavn� vlastnosti `tuple`, ako ho oznacujeme?
-> 5. Ako urc�me prienik dvoch mno��n? Uvedte pr�klad.
-> 6. Vytvorte zoznam, v ktorom bud� 3 hodnoty typu slovn�k predstavuj�ce osoby s kl�cmi: meno, priezvisko, rok narodenia.
-> 7. Z nasleduj�ceho zoznamu vytvorte mno�inu: `myList = [5,10,30,28,-99,5,0,0,65,124,214,25,5]`
-> 8. Kedy m�eme pou�it funkciu `.get` pri slovn�koch? Uvedte pr�klad.
-> 9. Vytvorte slovn�k s 3 p�rmi kl�c-hodnota, potom aktualizujte jeden kl�c a pridajte nov� p�r kl�c-hodnota.
-> 10. Preco nie je mo�n� zmenit prvok n-tice?
+> 1. Aké sú hlavné vlastnosti `set`, ako ho oznacujeme?
+> 2. Aké sú hlavné vlastnosti `dict`, ako ho oznacujeme?
+> 3. Aké sú hlavné vlastnosti `list`, ako ho oznacujeme?
+> 4. Aké sú hlavné vlastnosti `tuple`, ako ho oznacujeme?
+> 5. Ako určíme prienik dvoch množín? Uvedte príklad.
+> 6. Vytvorte zoznam, v ktorom budú 3 hodnoty typu slovník predstavujúce osoby s kľúčmi: meno, priezvisko, rok narodenia.
+> 7. Z nasledujúceho zoznamu vytvorte množinu: `myList = [5,10,30,28,-99,5,0,0,65,124,214,25,5]`
+> 8. Kedy môžeme použiť funkciu `.get` pri slovníkoch? Uvedte príklad.
+> 9. Vytvorte slovník s 3 pármi kľúč-hodnota, potom aktualizujte jeden kľúč a pridajte nové pár kľúč-hodnota.
+> 10. Preco nie je možné zmenit prvok n-tice?
 
