@@ -122,7 +122,7 @@ Az eredeti tananyag hosszabb történetét pontok mentén daraboljuk fel. A pont
 ```python
 text = "Once upon a time, a prince lived in a grand castle. He met a beautiful princess in a nearby kingdom. They became friends and shared many adventures. One day, the princess was captured by a dragon. The brave prince decided to rescue her. He fought the dragon with courage. The dragon was defeated and fled. The prince freed the princess. They returned to the castle together. They lived happily ever after."
 splitText = text.split(".")
-print(f"{text}\\n{splitText}")
+print(f"{text}\n{splitText}")
 ```
 
 ## `.index(substring)`
