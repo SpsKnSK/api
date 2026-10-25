@@ -11,4 +11,7 @@
 > 9. Készítsetek egy 3 kulcs-érték párossal rendelkező szótárat és frissítsétek az egyik kulcsot, majd adjatok hozzá egy újabb kulcs-érték párost.
 > 10. Miért nem lehet egy tuple elemét megváltoztatni?
 
-
+> 11. Hogyan lehet egy szótárból csak a kulcsokat listaként kinyerni?
+> 12. Hogyan lehet eltávolítani egy véletlenszerű elemet a halmazból?
+> 13. Mi történik, ha egy nem létező kulcsot kérünk le `my_dict['foo']` és `my_dict.get('foo')` segítségével?
+> 14. Hogyan lehet egy szótárat fordított sorrendben, kulcs szerint bejárni?
