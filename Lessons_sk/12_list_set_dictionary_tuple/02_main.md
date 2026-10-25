@@ -136,7 +136,7 @@ osoba['vek'] = 26  # Modifikovateľný
 print(f"Modifikovaná slovník: {osoba}")
 ```
 Dátový typ slovník slúži na ukladanie párov `kľúč:hodnota`. Slovník je kolekcia, kde:
-- `{kľúč:hodnota}`, pricom kľúč a hodnota môžu byt ľubovoľného dátového typu, môžu byt aj zmiešané v rámci jedného slovníka
+- `{kľúč:hodnota}`, pričom kľúč musí byť hashovateľný (napríklad text alebo číslo), hodnota môže byť ľubovoľného dátového typu; typy sa môžu v jednom slovníku miešať
 - na prístup k hodnote používame zátvorky `[]`, rovnako ako pri zoznamoch, pricom tu uvádzame kľúč: `print(mojSlovnik["kluc"])`
 - je zoradený (od Pythonu verzie >3.7)
 - je modifikovateľný
