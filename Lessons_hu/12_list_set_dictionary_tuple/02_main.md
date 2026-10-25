@@ -46,7 +46,7 @@ barack
 
 ## Tulajdonságok
 - `[]` szögeletes zárójeleket használjuk
-- bármilyen adattípust tartalmazhat, akár keverve is
+- különböző típusú elemeket is tartalmazhat; az elemeknek hash-elhetőnek kell lenniük, ezért például lista nem lehet halmazelem
   - `[1,2.3,"alma", True]` kevert
   - `[1,2,3]` csak számok
 - index-szel jutunk hozzá az értékhez, `0`val kezdődik 
