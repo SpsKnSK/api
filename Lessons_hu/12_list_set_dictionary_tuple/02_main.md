@@ -27,6 +27,23 @@ print(f"Első elem: {gyumolcsok_lista[0]}")
 gyumolcsok_lista[1] = 'szilva'  # Módosítható
 print(f"Módosított lista: {gyumolcsok_lista}")
 ```
+## Bejárás `for` ciklussal
+
+A `for` ciklussal végigmehetünk a lista minden elemén:
+
+```python
+gyumolcsok = ['alma', 'körte', 'barack']
+for gyumolcs in gyumolcsok:
+    print(gyumolcs)
+```
+
+Kimenet:
+```text
+alma
+körte
+barack
+```
+
 ## Tulajdonságok
 - `[]` szögeletes zárójeleket használjuk
 - bármilyen adattípust tartalmazhat, akár keverve is
