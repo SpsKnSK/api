@@ -7,7 +7,7 @@
 | `set` | `set(zoznam)` | Vytvorí množinu a odstráni duplicity |
 | `set` | `.add(hodnota)` / `.update(iterovateľný)` | Pridá jeden alebo viac prvkov |
 | `set` | `.remove(hodnota)` / `.discard(hodnota)` | Odstráni prvok; `.discard()` nevyvolá chybu, ak chýba |
-| `set` | `a | b` / `a & b` / `a - b` / `a ^ b` | Zjednotenie / prienik / rozdiel / symetrický rozdiel |
+| `set` | `a \| b` / `a & b` / `a - b` / `a ^ b` | Zjednotenie / prienik / rozdiel / symetrický rozdiel |
 | `dict` | `d[kľúč]` / `.get(kľúč, predvolená_hodnota)` | Získanie hodnoty / bezpečné získanie |
 | `dict` | `.keys()` / `.values()` / `.items()` | Kľúče / hodnoty / dvojice kľúč-hodnota |
 | `dict` | `.update(slovník)` | Zmení hodnotu alebo pridá nový kľúč |
