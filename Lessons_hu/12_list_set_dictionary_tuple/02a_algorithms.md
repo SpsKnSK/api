@@ -7,7 +7,7 @@
 | `set` | `set(lista)` | Halmazt készít, eltávolítja a duplikátumokat |
 | `set` | `.add(érték)` / `.update(iterálható)` | Egy vagy több elem hozzáadása |
 | `set` | `.remove(érték)` / `.discard(érték)` | Eltávolítás; a `.discard()` nem jelez hibát, ha hiányzik |
-| `set` | `a | b` / `a & b` / `a - b` / `a ^ b` | Unió / metszet / különbség / szimmetrikus különbség |
+| `set` | `a \| b` / `a & b` / `a - b` / `a ^ b` | Unió / metszet / különbség / szimmetrikus különbség |
 | `dict` | `d[kulcs]` / `.get(kulcs, alapérték)` | Érték lekérése / biztonságos lekérés |
 | `dict` | `.keys()` / `.values()` / `.items()` | Kulcsok / értékek / kulcs-érték párok |
 | `dict` | `.update(szótár)` | Meglévő érték frissítése vagy új kulcs felvétele |
