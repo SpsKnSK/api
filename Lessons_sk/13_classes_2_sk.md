@@ -1,14 +1,14 @@
 🗺️ [Späť na mapu](00_Mapa_sk.md)
 
-> # ?? Triedy - pokrocil� (`__repr__`, `__dict__`, JSON)
+> # ✏️ Triedy - pokročilé (`__repr__`, `__dict__`, JSON)
 >
-> *Voliteln�, pokrocil� ucivo.*
+> *Voliteľné, pokročilé ucivo.*
 >
-> - `__str__(self)` - pou��vatelsky pr�vetiv� v�pis (`print(objekt)`)
-> - `__repr__(self)` - v�voj�rsky pr�vetiv�, podrobn� v�pis (v zoznamoch sa zobraz� tento)
-> - `objekt.__dict__` - vlastnosti objektu ako slovn�k
-> - `json.dump(data, file)` / `json.load(file)` - ulo�enie a nac�tanie z JSON s�boru
-> - `Trieda(**slovnik)` - vytvor� objekt zo slovn�ka ("rozbalenie")
+> - `__str__(self)` - používateľsky prívetivý výpis (`print(objekt)`)
+> - `__repr__(self)` - vývojársky prívetivý, podrobná výpis (v zoznamoch sa zobrazí tento)
+> - `objekt.__dict__` - vlastnosti objektu ako slovník
+> - `json.dump(data, file)` / `json.load(file)` - uloženie a načítanie z JSON súboru
+> - `Trieda(**slovnik)` - vytvorí objekt zo slovníka ("rozbalenie")
 >
 > ```py
 > class Kniha:
@@ -20,24 +20,24 @@
 >
 > kniha = Kniha("1984", 3500)
 > print(kniha.__dict__)                 # {'nazov': '1984', 'cena': 3500}
-> nova_kniha = Kniha(**kniha.__dict__)  # sp�t na objekt
+> nova_kniha = Kniha(**kniha.__dict__)  # späť na objekt
 > print(nova_kniha)
 > ```
 >
-> **Metafora:** `__dict__` je, akoby sme objekt **vybalili zo �katule**: ka�d� jeho vlastnost je v oznacenej priehradke, ktor� vieme lahko ulo�it (do JSON-u) a nesk�r ju rovnako lahko znovu zabalit.
+> **Metafora:** `__dict__` je, akoby sme objekt **vybalili zo škatule**: každý jeho vlastnost je v oznacenej priehradke, ktorý vieme lahko uložiť (do JSON-u) a neskôr ju rovnako lahko znovu zabalit.
 
-# Triedy - Pokrocil� t�my
+# Triedy - Pokročilé témy
 
-T�to kapitola je urcen� �tudentom, ktor� sa chc� hlb�ie zaoberat programovan�m a pou��van�m tried.
+Táto kapitola je určené študentom, ktorý sa chcú hlbšie zaoberat programovaním a používaním tried.
 
 ## Funkcia `__repr__()`
 
-Funkcia `__repr__()` vracia "ofici�lnu" textov� reprezent�ciu triedy. Je urcen� predov�etk�m pre v�voj�rov a ide�lne by mala vr�tit retazec, pomocou ktor�ho m�eme znovu vytvorit objekt.
+Funkcia `__repr__()` vracia "oficiálnu" textová reprezentáciu triedy. Je určené predovšetkým pre vývojárov a ideálne by mala vrátiť retazec, pomocou ktorého môžeme znovu vytvorit objekt.
 
 ### Rozdiel medzi `__str__()` a `__repr__()`
 
-- `__str__()`: Pou��vatelsky pr�vetiv�, citateln� v�stup
-- `__repr__()`: Pre v�voj�rov, jednoznacn�, podrobn� inform�cia
+- `__str__()`: Používateľsky prívetivý, čitateľný výstup
+- `__repr__()`: Pre vývojárov, jednoznačný, podrobná informácia
 
 ```py
 class Auto:
@@ -57,15 +57,15 @@ auto1 = Auto("Toyota", 2020, 5000000)
 print(str(auto1))   # Toyota (2020)
 print(repr(auto1))  # Auto(znacka='Toyota', rok=2020, cena=5000000)
 
-# Pri v�pise prvkov zoznamu sa pou��va __repr__
+# Pri výpise prvkov zoznamu sa používa __repr__
 auta = [Auto("Ford", 2019, 4500000), Auto("BMW", 2021, 8000000)]
 print(auta)
 # [Auto(znacka='Ford', rok=2019, cena=4500000), Auto(znacka='BMW', rok=2021, cena=8000000)]
 ```
 
-## Atrib�t `__dict__`
+## Atribút `__dict__`
 
-`__dict__` je �peci�lny atrib�t, ktor� obsahuje v�etky in�tancn� premenn� objektu vo forme slovn�ka.
+`__dict__` je špeciálny atribút, ktorý obsahuje všetky inštančné premenná objektu vo forme slovníka.
 
 ```py
 class Osoba:
@@ -74,19 +74,19 @@ class Osoba:
         self.vek = vek
         self.mesto = mesto
 
-osoba = Osoba("Kov�cs J�nos", 25, "Budape�t")
+osoba = Osoba("Kovács János", 25, "Budapešť")
 
-# Zobrazenie atrib�tov objektu
+# Zobrazenie atribútov objektu
 print(osoba.__dict__)
-# {'meno': 'Kov�cs J�nos', 'vek': 25, 'mesto': 'Budape�t'}
+# {'meno': 'Kovács János', 'vek': 25, 'mesto': 'Budapešť'}
 
-# Dynamick� pridanie atrib�tu
-osoba.povolanie = "in�inier"
+# Dynamické pridanie atribútu
+osoba.povolanie = "inžinier"
 print(osoba.__dict__)
-# {'meno': 'Kov�cs J�nos', 'vek': 25, 'mesto': 'Budape�t', 'povolanie': 'in�inier'}
+# {'meno': 'Kovács János', 'vek': 25, 'mesto': 'Budapešť', 'povolanie': 'inžinier'}
 ```
 
-### Pou�itie `__dict__` na iter�ciu
+### Použitie `__dict__` na iteráciu
 
 ```py
 class Produkt:
@@ -96,23 +96,23 @@ class Produkt:
         self.sklad = sklad
     
     def info(self):
-        print("�daje produktu:")
+        print("údaje produktu:")
         for kluc, hodnota in self.__dict__.items():
             print(f"  {kluc}: {hodnota}")
 
 produkt = Produkt("Laptop", 250000, 15)
 produkt.info()
-# �daje produktu:
+# údaje produktu:
 #   nazov: Laptop
 #   cena: 250000
 #   sklad: 15
 ```
 
-## Pr�ca s JSON a objektami
+## Práca s JSON a objektami
 
-JSON (JavaScript Object Notation) je popul�rny form�t �dajov, ktor� sa casto pou��va na ukladanie a prenos d�t. V Pythone s n�m pracujeme pomocou modulu `json`.
+JSON (JavaScript Object Notation) je populárny formát údajov, ktorý sa casto používa na ukladanie a prenos dát. V Pythone s nám pracujeme pomocou modulu `json`.
 
-### Ulo�enie objektu do JSON s�boru
+### Uloženie objektu do JSON súboru
 
 ```py
 import json
@@ -124,7 +124,7 @@ class Student:
         self.znamky = znamky
     
     def to_dict(self):
-        """Prevod objektu na slovn�k"""
+        """Prevod objektu na slovník"""
         return {
             'meno': self.meno,
             'vek': self.vek,
@@ -134,14 +134,14 @@ class Student:
 # Vytvorenie objektu Student
 student1 = Student("Nagy Anna", 18, [5, 4, 5, 4, 5])
 
-# Ulo�enie do JSON s�boru
+# Uloženie do JSON súboru
 with open('student.json', 'w', encoding='utf-8') as f:
     json.dump(student1.to_dict(), f, ensure_ascii=False, indent=4)
 
-print("�daje �tudenta ulo�en� do s�boru student.json")
+print("údaje študenta uložené do súboru student.json")
 ```
 
-Obsah s�boru `student.json`:
+Obsah súboru `student.json`:
 ```json
 {
     "meno": "Nagy Anna",
@@ -150,7 +150,7 @@ Obsah s�boru `student.json`:
 }
 ```
 
-### Nac�tanie JSON s�boru a vytvorenie objektu
+### Načítanie JSON súboru a vytvorenie objektu
 
 ```py
 import json
@@ -163,23 +163,23 @@ class Student:
     
     @classmethod
     def from_dict(cls, data):
-        """Vytvorenie objektu zo slovn�ka"""
+        """Vytvorenie objektu zo slovníka"""
         return cls(data['meno'], data['vek'], data['znamky'])
     
     def __str__(self):
-        return f"{self.meno} ({self.vek} rokov), zn�mky: {self.znamky}"
+        return f"{self.meno} ({self.vek} rokov), známky: {self.znamky}"
 
-# Nac�tanie JSON s�boru
+# Načítanie JSON súboru
 with open('student.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
-# Vytvorenie objektu z nac�tan�ch �dajov
+# Vytvorenie objektu z načítaných údajov
 student = Student.from_dict(data)
 print(student)
-# Nagy Anna (18 rokov), zn�mky: [5, 4, 5, 4, 5]
+# Nagy Anna (18 rokov), známky: [5, 4, 5, 4, 5]
 ```
 
-### Ulo�enie viacer�ch objektov do JSON s�boru
+### Uloženie viacerých objektov do JSON súboru
 
 ```py
 import json
@@ -204,35 +204,35 @@ class Student:
     def __repr__(self):
         return f"Student(meno='{self.meno}', vek={self.vek}, znamky={self.znamky})"
 
-# Vytvorenie �tudentov
+# Vytvorenie študentov
 studenti = [
     Student("Nagy Anna", 18, [5, 4, 5]),
-    Student("Kov�cs P�ter", 19, [4, 5, 4]),
-    Student("Szab� Kata", 18, [5, 5, 5])
+    Student("Kovács Péter", 19, [4, 5, 4]),
+    Student("Szabó Kata", 18, [5, 5, 5])
 ]
 
-# Ulo�enie do JSON s�boru
+# Uloženie do JSON súboru
 studenti_dict = [student.to_dict() for student in studenti]
 with open('studenti.json', 'w', encoding='utf-8') as f:
     json.dump(studenti_dict, f, ensure_ascii=False, indent=4)
 
-print("�tudenti ulo�en�")
+print("študenti uložené")
 
-# Nac�tanie zo JSON s�boru
+# Načítanie zo JSON súboru
 with open('studenti.json', 'r', encoding='utf-8') as f:
     nacitane_data = json.load(f)
 
 # Vytvorenie objektov
 nacitani_studenti = [Student.from_dict(data) for data in nacitane_data]
 
-print("\nNac�tan� �tudenti:")
+print("\nNačítané študenti:")
 for student in nacitani_studenti:
     print(student)
 ```
 
-### Pr�ca s JSON pomocou `__dict__`
+### Práca s JSON pomocou `__dict__`
 
-Ak je trieda jednoduch� (obsahuje len z�kladn� typy), m�eme priamo pou�it atrib�t `__dict__`:
+Ak je trieda jednoduchý (obsahuje len základné typy), môžeme priamo použiť atribút `__dict__`:
 
 ```py
 import json
@@ -250,21 +250,21 @@ class Kniha:
 # Vytvorenie knihy
 kniha = Kniha("1984", "George Orwell", 1949, 3500)
 
-# Ulo�enie do JSON pomocou __dict__
+# Uloženie do JSON pomocou __dict__
 with open('kniha.json', 'w', encoding='utf-8') as f:
     json.dump(kniha.__dict__, f, ensure_ascii=False, indent=4)
 
-# Nac�tanie zo JSON
+# Načítanie zo JSON
 with open('kniha.json', 'r', encoding='utf-8') as f:
     kniha_data = json.load(f)
 
-# Vytvorenie objektu pomocou ** oper�tora (dictionary unpacking)
+# Vytvorenie objektu pomocou ** operátora (dictionary unpacking)
 nova_kniha = Kniha(**kniha_data)
 print(nova_kniha)
 # Kniha(nazov='1984', autor='George Orwell', rok=1949, cena=3500)
 ```
 
-## �pln� pr�klad: Spr�vca kni�nice
+## úplný príklad: Správca knižnice
 
 ```py
 import json
@@ -290,29 +290,29 @@ class Kniznica:
         self.nacitaj()
     
     def pridaj(self, kniha):
-        """Pridanie knihy do kni�nice"""
+        """Pridanie knihy do knižnice"""
         self.knihy.append(kniha)
         self.uloz()
-        print(f"Kniha pridan�: {kniha}")
+        print(f"Kniha pridané: {kniha}")
     
     def vypis(self):
-        """Vyp�sanie v�etk�ch kn�h"""
+        """Vypísanie všetkých kníh"""
         if not self.knihy:
-            print("Kni�nica je pr�zdna")
+            print("Knižnica je prázdna")
             return
         
-        print("\nObsah kni�nice:")
+        print("\nObsah knižnice:")
         for i, kniha in enumerate(self.knihy, 1):
             print(f"{i}. {kniha}")
     
     def uloz(self):
-        """Ulo�enie kn�h do JSON s�boru"""
+        """Uloženie kníh do JSON súboru"""
         knihy_dict = [kniha.__dict__ for kniha in self.knihy]
         with open(self.subor, 'w', encoding='utf-8') as f:
             json.dump(knihy_dict, f, ensure_ascii=False, indent=4)
     
     def nacitaj(self):
-        """Nac�tanie kn�h zo JSON s�boru"""
+        """Načítanie kníh zo JSON súboru"""
         if not path.exists(self.subor):
             return
         
@@ -320,27 +320,27 @@ class Kniznica:
             with open(self.subor, 'r', encoding='utf-8') as f:
                 knihy_data = json.load(f)
                 self.knihy = [Kniha(**data) for data in knihy_data]
-                print(f"{len(self.knihy)} kn�h nac�tan�ch")
+                print(f"{len(self.knihy)} kníh načítaných")
         except json.JSONDecodeError:
-            print("Chyba pri nac�tan� JSON s�boru")
+            print("Chyba pri načítané JSON súboru")
 
-# Pou�itie
+# Použitie
 kniznica = Kniznica()
 
-# Pridanie nov�ch kn�h
+# Pridanie nových kníh
 kniznica.pridaj(Kniha("1984", "George Orwell", 1949, 3500))
 kniznica.pridaj(Kniha("Zvieracia farma", "George Orwell", 1945, 2800))
-kniznica.pridaj(Kniha("Hviezdy nad Egerom", "G�rdonyi G�za", 1901, 3200))
+kniznica.pridaj(Kniha("Hviezdy nad Egerom", "Gárdonyi Géza", 1901, 3200))
 
-# Vyp�sanie kn�h
+# Vypísanie kníh
 kniznica.vypis()
 ```
 
-## U�itocn� tipy
+## Užitočné tipy
 
-### 1. Pou�itie `@property` pri ukladan� do JSON
+### 1. Použitie `@property` pri ukladané do JSON
 
-Ak chceme ulo�it aj vypoc�tan� hodnoty:
+Ak chceme uložiť aj vypočítané hodnoty:
 
 ```py
 class Student:
@@ -356,11 +356,11 @@ class Student:
         return {
             'meno': self.meno,
             'znamky': self.znamky,
-            'priemer': self.priemer  # Vypoc�tan� hodnota sa tie� ulo��
+            'priemer': self.priemer  # Vypočítané hodnota sa tiež uloží
         }
 ```
 
-### 2. Pr�ca s d�tumami v JSON
+### 2. Práca s dátumami v JSON
 
 ```py
 import json
@@ -374,21 +374,21 @@ class Udalost:
     def to_dict(self):
         return {
             'nazov': self.nazov,
-            'datum': self.datum.isoformat()  # Konverzia do ISO form�tu
+            'datum': self.datum.isoformat()  # Konverzia do ISO formátu
         }
     
     @classmethod
     def from_dict(cls, data):
         return cls(data['nazov'], data['datum'])
 
-udalost = Udalost("Program�torsk� s�ta�", datetime(2026, 3, 15))
+udalost = Udalost("Programátorská súťaž", datetime(2026, 3, 15))
 print(udalost.to_dict())
-# {'nazov': 'Program�torsk� s�ta�', 'datum': '2026-03-15T00:00:00'}
+# {'nazov': 'Programátorská súťaž', 'datum': '2026-03-15T00:00:00'}
 ```
 
-> # ?? Pokazte to!
+> # ✏️ Pokazte to!
 >
-> Ak� je chyba v tomto programe?
+> Aké je chyba v tomto programe?
 >
 > ```py
 > class Kniha:
@@ -400,20 +400,20 @@ print(udalost.to_dict())
 > print(kniha)
 > ```
 >
-> V�pis bude vyzerat asi takto: `<__main__.Kniha object at 0x...>`. Co v triede ch�ba, aby `print(kniha)` vyp�sal �daje pekne a citatelne?
+> Výpis bude vyzerat asi takto: `<__main__.Kniha object at 0x...>`. Co v triede chýba, aby `print(kniha)` vypísal údaje pekne a citatelne?
 >
-> # ?? �lohy
-> 1. Vytvor triedu `Ziak`, ktor� obsahuje meno �iaka, vek a obl�ben� predmety (zoznam). Implementuj met�dy `__str__()` a `__repr__()`.
-> 2. Vytvor triedu `Kapela`, ktor� uklad� zoznam hudobn�kov. Implementuj ukladanie a nac�tavanie z JSON.
-> 3. Roz��r pr�klad Spr�vca kni�nice o met�du `hladaj(autor)`, ktor� vr�ti v�etky knihy dan�ho autora.
-> 4. Vytvor triedu `Dennik`, ktor� uklad� denn� z�znamy (d�tum a text). Pou�ij JSON s�bor na ukladanie �dajov.
+> # ✏️ Úlohy
+> 1. Vytvor triedu `Ziak`, ktorý obsahuje meno žiaka, vek a obľúbené predmety (zoznam). Implementuj metódy `__str__()` a `__repr__()`.
+> 2. Vytvor triedu `Kapela`, ktorý ukladá zoznam hudobníkov. Implementuj ukladanie a načítavanie z JSON.
+> 3. Rozšír príklad Správca knižnice o metódu `hladaj(autor)`, ktorý vráti všetky knihy daného autora.
+> 4. Vytvor triedu `Dennik`, ktorý ukladá denné záznamy (dátum a text). Použij JSON súbor na ukladanie údajov.
 >
-> Dal�ie �lohy n�jdete v [priecinku s cviceniami](../Exercies/13_classes/).
+> Ďalšie úlohy nájdete v [priecinku s cviceniami](../Exercies/13_classes/).
 >
-> # ? Ot�zky
+> # ✏️ Otázky
 >
-> 1. Ak� je rozdiel medzi funkciami `__str__()` a `__repr__()`?
-> 2. Na co sl��i atrib�t `__dict__` objektu?
-> 3. Preco je pohodln� vytvorit objekt zo slovn�ka pomocou oper�tora `**`?
-> 4. Preco sa oplat� mat v triede `Kniznica` samostatn� funkcie `uloz()` a `nacitaj()`, namiesto rucnej pr�ce so s�bormi zaka�d�m?
+> 1. Aké je rozdiel medzi funkciami `__str__()` a `__repr__()`?
+> 2. Na co slúži atribút `__dict__` objektu?
+> 3. Preco je pohodlné vytvorit objekt zo slovníka pomocou operátora `**`?
+> 4. Preco sa oplatí mat v triede `Kniznica` samostatné funkcie `uloz()` a `nacitaj()`, namiesto rucnej práce so súbormi zakaždým?
 
