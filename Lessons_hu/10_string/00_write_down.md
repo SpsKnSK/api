@@ -16,4 +16,4 @@
 > | `.split()` | szétvágja szóközök mentén | |
 > | `len(szoveg)` | a string hossza | |
 >
-> **Metafora:** a string olyan, mint egy **gyöngysor**, ahol minden gyöngy egy karakter, és mindegyiknek van egy cimkéje: 0, 1, 2, 3...
+> **Metafora:** a string olyan, mint egy **gyöngysor**, ahol minden gyöngy egy karakter, és mindegyiknek van egy cimkéje: 0, 1, 2, 3... A `[a:b]` egy darabot vág ki a gyöngysorból.
