@@ -65,6 +65,7 @@ Bez tohto sa žiadny Python program nedá pochopiť. Ak si tu neistý, vráť sa
 | 07 | [Cyklus `for`](07_for/01_basic.md) ([podrobnejšia lekcia](07_for/02_main.md)) | Keď vopred vieš, cez čo/koľkokrát prejsť. | `for i in range(...):` |
 | 09 | [Zoznamy](09_lists/01_basic.md) | Veľa hodnôt v jednej premennej. | `[]`, index, `.append()`, `.sort()` |
 | 10 | [Reťazce (string)](10_string/01_basic.md) | Aj text sa dá "rozobrať" na znaky. | `[a:b]`, `.split()`, `.join()` |
+| 12 | [Zoznam, množina, slovník, n-tica](12_list_set_dictionary_tuple/01_basic.md) ([podrobná lekcia](12_list_set_dictionary_tuple/02_main.md)) | Ukladanie viacerých hodnôt a dvojíc kľúč–hodnota. | `list`, `set`, `dict`, `tuple` |
 | 11 | [Funkcie](11_functions/01_basic.md) ([podrobná lekcia](11_functions/02_main.md)) | Opakujúci sa kód dáme na jedno miesto a pomenujeme. | `def`, `return`, parametre |
 
 ### **Na čo si dávaj pozor vo všetkých?**
@@ -83,7 +84,7 @@ Nie je to úplný základ ako vyššie, ale v praxi to budeš často potrebovať
 | # | Lekcia | Na čo slúži? |
 |---|---|---|
 | 08 | [try, format, ternary](08_try_format_ternary/01_basic.md) *(voliteľné)* | Ošetrenie chýb, pekný výpis (f-string), skrátený if na jednom riadku |
-| 12 | [Slovník a množina](12_list_set_dictionary_tuple_sk_1.md) | Keď chceš pristupovať k údaju nie podľa indexu, ale podľa **kľúča** (`dict`), alebo keď ťa duplicity nezaujímajú (`set`) |
+| 12 | [Slovník a množina](12_list_set_dictionary_tuple/02_main.md) | Keď chceš pristupovať k údaju nie podľa indexu, ale podľa **kľúča** (`dict`), alebo keď ťa duplicity nezaujímajú (`set`) |
 | 15 | [Globálne a lokálne premenné](15_localAndGlobalVariables_sk.md) | Prečo jedna funkcia "nevidí" premennú z inej — vysvetľuje veľa záhadných chýb |
 | 16 | [Práca so súbormi](16_files_sk.md) | Údaje treba vedieť nielen vypísať, ale aj **uložiť** |
 
@@ -111,7 +112,7 @@ O týchto stačí vedieť: **čo to je a kedy to použiť** — netreba naspamä
 | ...sa niečo opýta a podľa toho rozhodne | `if` / `elif` / `else` ([05](05_if/02_main.md)) |
 | ...opakuje niečo, kým je niečo pravda | `while` ([06](06_while/02_main.md)) |
 | ...prechádza zoznamom alebo daným počtom krokov | `for` ([07](07_for/02_main.md)) |
-| ...má uchovávať veľa podobných údajov | zoznam ([09](09_lists/02_main.md)) alebo slovník ([12](12_list_set_dictionary_tuple_sk_1.md)) |
+| ...má uchovávať veľa podobných údajov | zoznam ([09](09_lists/02_main.md)) alebo slovník ([12](12_list_set_dictionary_tuple/02_main.md)) |
 | ...treba rozobrať text, hľadať v ňom | operácie s reťazcami ([10](10_string/01_basic.md)) |
 | ...ten istý kód sa v nej opakuje viackrát | urob z neho funkciu ([11](11_functions/02_main.md)) |
 | ...má uchovať údaje aj po ukončení programu | práca so súbormi ([16](16_files_sk.md)) |
