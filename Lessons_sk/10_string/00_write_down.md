@@ -1,3 +1,5 @@
+🗺️ [Späť na mapu](00_Mapa_sk.md)
+
 > # ✏️ Reťazce (texty)
 >
 > **Reťazec** je postupnosť znakov. Každý znak má svoj **index** (poradové číslo), ktoré začína od **0**.
