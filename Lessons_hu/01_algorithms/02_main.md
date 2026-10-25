@@ -107,34 +107,62 @@ A tananyag során megtanuljuk kiírni az eredményeket (`print()`), adatokat beo
 
 A következő példa egy összetettebb Python-fájl részeit mutatja be. **Ezt most nem kell megtanulni vagy megérteni**; a függvények, osztályok, importok és a `__main__` rész későbbi témák.
 
-```python
+```py
+# Könyvtárak betöltése (ha szükséges)
 import modul_nev
 from masik_modul import fuggveny_nev
 
+# Változók létrehozása (az egész programban használható)
 global_valtozo = 10
 
+# Osztályok definiálása
 class Person:
     def __init__(self, name, surname):
         self.Name, self.Surname = name, surname
 
+# Függvények definiálása
 def fuggveny_nev(param1, param2):
+    # Függvény törzse
     eredmeny = param1 + param2
     return eredmeny
 
+# Fő programrész (main)
 if __name__ == "__main__":
+    # Parancssori argumentumok feldolgozása (opcionális)
+    import sys
+    argumentumok = sys.argv
+
+    # Lokális változók deklarálása
+    lokal_valtozo = "Hello, világ!"
+
+    # Függvény hívás és eredmény kezelése
     eredmeny = fuggveny_nev(5, 3)
     print("Eredmény:", eredmeny)
+
+    # Ciklusok, elágazások és más vezérlési szerkezetek
     if eredmeny > 5:
         print("Az eredmény nagyobb mint 5.")
     else:
         print("Az eredmény nem nagyobb mint 5.")
+
     for i in range(3):
         print("Ciklus:", i)
+
+    # Bemenet olvasása és kiíratása
     input_text = input("Kérem, írjon be valamit: ")
     print("Bevitel:", input_text)
 
+# Modulhoz tartozó kód (opcionális)
 def masik_fuggveny():
     pass
 ```
 
-A későbbi leckékben többféle adattal is dolgozunk, például egész számokkal, tizedes számokkal, szövegekkel, listákkal és szótárakkal.
+## Milyen típusú adatokat tárolhatunk?
+
+- `int` – egész számok (például `5`, `-3`, `100`)
+- `str` – szöveg (például `"Hello"`, `"Péter"`)
+- `float` – tizedes számok (például `3.14`, `-2.5`)
+- `list` – több adatot tároló lista (például `[1, 2, 3]`)
+- `dict` – kulcs–érték párokat tároló szótár (például `{"név": "Anna"}`)
+
+Ezeket a típusokat későbbi leckékben részletesebben tanuljuk.
