@@ -5,7 +5,7 @@
 ```python
 text = "slovo"
 print(text[0])    # s
-print(text[3])    # o
+print(text[3])    # v
 print(text[1:4])  # lov
 ```
 
