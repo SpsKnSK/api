@@ -157,7 +157,7 @@ szemely['kor'] = 26  # Módosítható
 print(f"Módosított szótár: {szemely}")
 ```
 A szótár adatípus arra szolgál, hogy kulcs:érték párosokat mentsen el. A szótár olyan gyűjtemény, amely: 
-- {kulcs:érték}, ahol a kulcs és az érték bármilyen adattípus lehet, egy szótáron belül akár keveredhet is 
+- {kulcs:érték}, ahol a kulcs hash-elhető típusú (például szöveg vagy szám), az érték pedig bármilyen adattípus lehet; egy szótáron belül keveredhetnek is 
 - ha egy értékhez akarunk hozzáférni, akkor a `[]` zárójeleket használjuk, mint a listáknál, éppenséggel itt a kulcsot adjuk meg: `print(myDict["key"])`
 - sorba rendezett (Python >3.7)
 - megváltoztatható
