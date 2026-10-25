@@ -6,10 +6,10 @@ Másold ki a programot, futtasd le, majd javítsd ki a hibákat és a helytelen 
 szoveg = "szöveg"
 
 print(szoveg[3:6])       # Miért nem "öveg"?
-print(szoveg[10])        # Mi történik?
 print(szoveg.upper)      # Mi hiányzik?
-print(szoveg.replace("s", "a")) 
+print(szoveg.replace("s", "a"))
 print(" ".join([1, 2, 3]))  # Miért hibás?
+print(szoveg[10])        # Mi történik?
 ```
 
 Feladatok:
