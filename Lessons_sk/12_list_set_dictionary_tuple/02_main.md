@@ -68,7 +68,7 @@ hruška
 - `.index(hodnota)` - vráti **pozíciu** `hodnoty`, ak ju nenájde, vyvolá `ValueError` výnimku
 
 # Množina `set`: `{}`
-Python definuje dátový typ množina, `set` ako základné typ. Množina je neusporiadaná kolekcia, kde každý prvok môže byt prítomný **iba raz**.
+Python definuje dátový typ množina, `set` ako základné typ. Množina je neusporiadaná kolekcia, kde každý prvok môže byť prítomný **iba raz**. Prvky musia byť hashovateľné, preto do množiny nemožno vložiť napríklad zoznam.
 
 Základné použitie: 
 - kontrola prítomnosti daného prvku
