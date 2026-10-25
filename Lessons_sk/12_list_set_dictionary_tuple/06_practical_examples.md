@@ -1,4 +1,4 @@
-🗺️ [Späť na mapu](00_Mapa_sk.md)
+🗺️ [Späť na mapu](../00_Mapa_sk.md)
 
 > # ✏️ Slovník a množina
 >
