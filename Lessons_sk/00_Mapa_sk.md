@@ -56,7 +56,7 @@ Bez tohto sa žiadny Python program nedá pochopiť. Ak si tu neistý, vráť sa
 
 | # | Lekcia | Prečo je to potrebné? | Nástroj, ktorý dostaneš |
 |---|---|---|---|
-| 01 | [Algoritmy](01_Algorithms_sk.md) | Skôr než napíšeš kód, musíš vedieť rozmýšľať **v krokoch**. | Vývojový diagram, sekvencia/výber/opakovanie |
+| 01 | [Algoritmy](01_algorithms/01_basic.md) | Skôr než napíšeš kód, musíš vedieť rozmýšľať **v krokoch**. | Vývojový diagram, sekvencia/výber/opakovanie |
 | 02 | [`print()`](02_print/01_basic.md) | Bez toho ti program nič neukáže. | Výpis na obrazovku |
 | 03 | [`input()`](03_input/01_basic.md) | Bez toho sa program nevie opýtať. | Načítanie údajov |
 | 04 | [Premenné](04_variables/01_basic.md) | Údaje treba niekde uložiť. | Krabice s nálepkou: `int`, `float`, `str`, `bool` |
