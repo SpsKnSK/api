@@ -102,7 +102,7 @@ Ezekről elég annyit tudni: **mi ez, és mikor vegyem elő** — nem kell fejb�
 | 12 | [Lambda függvények](12_lambda_function/01_basic.md) ([részletes lecke](12_lambda_function/02_main.md)) *(opcionális)* | Létezik egy "egysoros, névtelen függvény" is — ritkán kell saját kódban megírni |
 | 13 | [Osztályok (`class`) — alapok](13_class_1/01_basic.md) | Az osztály olyan, mint egy **saját, összetett adattípus terve** — ha sok, összetartozó adatot és hozzá tartozó műveletet kell egyben kezelni, ez a szerszám |
 | 14 | [Öröklődés és polimorfizmus](14_inheritance_polymorphism/01_basic.md) | Osztályok tudnak "örökölni" egymástól — csak a fogalom szintjén elég ismerni |
-| 17 | [Tkinter — grafikus felület](17_tkinter_hu.md) | Létezik mód ablakos programot is írni Pythonban — elég tudni, hogy ez a neve, és nagyjából hogy néz ki |
+| 17 | [Tkinter — grafikus felület](17_tkinter/01_basic.md) | Létezik mód ablakos programot is írni Pythonban — elég tudni, hogy ez a neve, és nagyjából hogy néz ki |
 
 > A [13.2. osztályok — haladó](13_class_2/README.md) és a [13.3. osztályok — mélyebb ismeretek](13_class_3/README.md) leckék még mélyebbre mennek (JSON mentés, `@property`, context manager stb.) — ezek kifejezetten **haladó, opcionális** anyagok, csak akkor érdemes velük foglalkozni, ha valaki külön érdeklődik utána.
 
