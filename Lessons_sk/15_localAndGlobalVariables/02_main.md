@@ -80,6 +80,28 @@ flowchart TD
     C -->|Použije global x a priradí hodnotu| F["Zmení sa globálna premenná x"]
 ```
 
+## Príklad: cyklus `for` prejde všetky písmená textu
+
+Funkcia číta globálnu premennú `meno` a `pismeno` je premenná cyklu vo vnútri funkcie.
+
+```python
+meno = "Anna"
+
+def vypis_pismena():
+    for pismeno in meno:
+        print(pismeno)
+
+vypis_pismena()
+```
+
+Výstup:
+```text
+A
+n
+n
+a
+```
+
 ## Rozdiel medzi globálnou a lokálnou premennou
 
 Ak vo funkcii vytvoríš premennú s rovnakým názvom, bude lokálna a použiteľná iba vo funkcii. Globálna premenná s rovnakým názvom si zachová pôvodnú hodnotu.
