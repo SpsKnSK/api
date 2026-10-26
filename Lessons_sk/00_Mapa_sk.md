@@ -99,7 +99,7 @@ O týchto stačí vedieť: **čo to je a kedy to použiť** — netreba naspamä
 | 12 | [Lambda funkcie](12_lambda_function/01_basic.md) ([podrobná lekcia](12_lambda_function/02_main.md)) *(voliteľné)* | Existuje aj "jednoriadková, anonymná funkcia" — vo vlastnom kóde ju budeš potrebovať zriedka |
 | 13 | [Triedy (`class`) — základy](13_class_1/01_basic.md) | Trieda je ako **plán vlastného, zloženého dátového typu** — ak treba spolu spravovať veľa súvisiacich údajov a operácií, toto je ten nástroj |
 | 14 | [Dedenie a polymorfizmus](14_inheritance_polymorphism/01_basic.md) | Triedy môžu "dediť" jedna od druhej — stačí poznať pojem |
-| 17 | [Tkinter — grafické rozhranie](17_tkinter_sk.md) | Existuje spôsob, ako v Pythone písať aj okenné programy — stačí vedieť, že sa to tak volá a približne ako to vyzerá |
+| 17 | [Tkinter — grafické rozhranie](17_tkinter/01_basic.md) | Existuje spôsob, ako v Pythone písať aj okenné programy — stačí vedieť, že sa to tak volá a približne ako to vyzerá |
 
 > Lekcie [13.2 Triedy — pokročilé](13_class_2/README.md) a [13.3 Triedy — hlbšie poznatky](13_class_3/README.md) idú ešte hlbšie (ukladanie do JSON, `@property`, context manager atď.) — toto sú vyslovene **pokročilé, voliteľné** témy, oplatí sa nimi zaoberať iba vtedy, ak sa o to niekto sám zaujíma.
 
