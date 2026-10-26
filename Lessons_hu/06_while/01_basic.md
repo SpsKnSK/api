@@ -20,7 +20,13 @@ while lepes <= 3:
 print("Vége!")
 ```
 
-Kimenet: `1, 2, 3, Vége!`
+Kimenet:
+```text
+1
+2
+3
+Vége!
+```
 
 - `lepes = 1`: elindítjuk a számlálást.
 - `while lepes <= 3:`: ellenőrizzük a feltételt.

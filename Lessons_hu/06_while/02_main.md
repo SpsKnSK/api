@@ -19,12 +19,17 @@ flowchart TD
 Mindkettő feltételt vizsgál, de az `if` blokkja legfeljebb egyszer fut le, a `while` blokkja pedig ismétlődik, amíg a feltétel igaz.
 
 ```python
+elet = 2
+
 if elet > 0:
     print("A játék folytatódik.")
 
 while elet > 0:
     print("Új kör kezdődik.")
+    elet = elet - 1
 ```
+
+Az `if` blokk egyszer ellenőrzi a feltételt. A `while` minden kör után újra ellenőrzi, és itt csökkentjük az életek számát, hogy a ciklus véget érjen.
 
 ## A `while` szintaxisa
 
@@ -46,7 +51,15 @@ while i <= 5:
 print("Vége")
 ```
 
-A kimenet 1-től 5-ig a számok, majd „Vége”. Az `i = i + 1` módosítja a feltételben szereplő változót. Amikor `i` értéke 6 lesz, az `i <= 5` hamis, ezért a ciklus befejeződik.
+Kimenet:
+```text
+1
+2
+3
+4
+5
+Vége
+``` Az `i = i + 1` módosítja a feltételben szereplő változót. Amikor `i` értéke 6 lesz, az `i <= 5` hamis, ezért a ciklus befejeződik.
 
 ## Végtelen ciklus
 
@@ -96,4 +109,39 @@ while i < 5:
     print(i)
 ```
 
-Kimenet: `1, 2, 4, 5` – a 3-at kihagyjuk, de a ciklus folytatódik.
+Kimenet:
+```text
+1
+2
+4
+5
+```
+
+A 3-at kihagyjuk, de a ciklus folytatódik.
+
+### Tippelj futtatás előtt!
+
+**A)** Mit ír ki a program, és mikor ér véget?
+
+```python
+i = 1
+while i <= 5:
+    if i == 3:
+        break
+    print(i)
+    i = i + 1
+print("Kész")
+```
+
+**B)** Melyik szám marad ki a kimenetből?
+
+```python
+i = 0
+while i < 5:
+    i = i + 1
+    if i == 3:
+        continue
+    print(i)
+```
+
+Figyeld meg: a `continue` előtt növeljük az `i` értékét. Ha a növelés a `continue` után lenne, a 3-as értéknél a ciklus végtelenné válhatna.

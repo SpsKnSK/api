@@ -23,6 +23,11 @@ while i <= 3:
     print(i)
     i = i + 1
 ```
-Výstup: `1`, `2`, `3`
+Výstup:
+```text
+1
+2
+3
+```
 
 **Metafora:** `while` je ako **pravidlo spoločenskej hry**: "kým máš peniaze, posuň sa o jedno políčko". Po každom kole sa znova pýtame: platí ešte podmienka? Ak áno, nasleduje ďalšie kolo, ak nie, je koniec.

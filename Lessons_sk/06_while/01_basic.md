@@ -20,7 +20,13 @@ while krok <= 3:
 print("Koniec!")
 ```
 
-Výstup: `1, 2, 3, Koniec!`
+Výstup:
+```text
+1
+2
+3
+Koniec!
+```
 
 - `krok = 1`: začneme počítať.
 - `while krok <= 3:`: skontrolujeme podmienku.

@@ -12,3 +12,12 @@
        i = i + 2
    ```
 6. Mire való a `break`, és mire a `continue`?
+7. Mit ír ki a következő program? Miért nem jelenik meg a 3?
+   ```python
+   i = 0
+   while i < 5:
+       i = i + 1
+       if i == 3:
+           continue
+       print(i)
+   ```

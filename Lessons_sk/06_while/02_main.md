@@ -19,12 +19,17 @@ flowchart TD
 Oba príkazy skúmajú podmienku, ale blok `if` sa vykoná najviac raz, zatiaľ čo blok `while` sa opakuje, kým podmienka ostáva pravdivá.
 
 ```python
+zivot = 2
+
 if zivot > 0:
     print("Hra pokračuje.")
 
 while zivot > 0:
     print("Začína nové kolo.")
+    zivot = zivot - 1
 ```
+
+Blok `if` skontroluje podmienku raz. Cyklus `while` ju kontroluje po každom kole; tu počet životov znižujeme, aby sa cyklus skončil.
 
 ## Syntax `while`
 
@@ -46,7 +51,15 @@ while i <= 5:
 print("Koniec")
 ```
 
-Výstupom sú čísla od 1 po 5 a potom „Koniec“. Riadok `i = i + 1` mení premennú v podmienke. Keď bude `i` rovné 6, podmienka `i <= 5` už nebude pravdivá a cyklus sa skončí.
+Výstup:
+```text
+1
+2
+3
+4
+5
+Koniec
+``` Riadok `i = i + 1` mení premennú v podmienke. Keď bude `i` rovné 6, podmienka `i <= 5` už nebude pravdivá a cyklus sa skončí.
 
 ## Nekonečný cyklus
 
@@ -96,4 +109,39 @@ while i < 5:
     print(i)
 ```
 
-Výstup: `1, 2, 4, 5` – číslo 3 sa preskočí, ale cyklus pokračuje.
+Výstup:
+```text
+1
+2
+4
+5
+```
+
+Číslo 3 sa preskočí, ale cyklus pokračuje.
+
+### Najprv hádaj, potom spusti!
+
+**A)** Čo program vypíše a kedy sa skončí?
+
+```python
+i = 1
+while i <= 5:
+    if i == 3:
+        break
+    print(i)
+    i = i + 1
+print("Hotovo")
+```
+
+**B)** Ktoré číslo vo výstupe chýba?
+
+```python
+i = 0
+while i < 5:
+    i = i + 1
+    if i == 3:
+        continue
+    print(i)
+```
+
+Všimni si: hodnotu `i` zvyšujeme pred príkazom `continue`. Ak by sa zvýšenie nachádzalo až za `continue`, pri hodnote 3 by cyklus mohol byť nekonečný.
