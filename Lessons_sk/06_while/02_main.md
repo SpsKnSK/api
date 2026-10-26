@@ -59,7 +59,9 @@ Výstup:
 4
 5
 Koniec
-``` Riadok `i = i + 1` mení premennú v podmienke. Keď bude `i` rovné 6, podmienka `i <= 5` už nebude pravdivá a cyklus sa skončí.
+```
+
+Riadok `i = i + 1` mení premennú v podmienke. Keď bude `i` rovné 6, podmienka `i <= 5` už nebude pravdivá a cyklus sa skončí.
 
 ## Nekonečný cyklus
 

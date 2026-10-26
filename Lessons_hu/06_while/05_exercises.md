@@ -17,6 +17,11 @@ A feladatokat sorban oldd meg. Először gondold végig, mit kell ismételni, é
 8. Kérj be számokat egymás után, és add össze őket. A 0 beírása fejezze be a bekérést. A végén írd ki az összeget.
 9. Készíts számkitalálós játékot, amely addig kér tippet, amíg a tipp 7 nem lesz.
 
+## ⭐ Opcionális kihívás
+
+10. Kérj be egy pozitív egész számot. Ha a felhasználó 0-t vagy negatív számot ad meg, kérd be újra, amíg megfelelő számot nem ad.
+11. Készíts egyszerű menüt, amely kiírja: `1 – Köszönés`, `2 – Búcsúzás`, `0 – Kilépés`. A menü addig jelenjen meg újra, amíg a felhasználó a 0-t nem választja.
+
 ## 🔵 Gyakorlás: `break` és `continue`
 
 12. Írj ciklust, amely 1-től számol felfelé, de `break` segítségével megáll, amikor eléri a 4-et. A ciklus utáni sor írja ki: `Vége!`.
@@ -31,10 +36,6 @@ A feladatokat sorban oldd meg. Először gondold végig, mit kell ismételni, é
         i = i + 1
     ```
 
-## ⭐ Opcionális kihívás
-
-10. Kérj be egy pozitív egész számot. Ha a felhasználó 0-t vagy negatív számot ad meg, kérd be újra, amíg megfelelő számot nem ad.
-11. Készíts egyszerű menüt, amely kiírja: `1 – Köszönés`, `2 – Búcsúzás`, `0 – Kilépés`. A menü addig jelenjen meg újra, amíg a felhasználó a 0-t nem választja.
 
 ## Ellenőrzés
 

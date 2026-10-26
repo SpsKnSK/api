@@ -59,7 +59,9 @@ Kimenet:
 4
 5
 Vége
-``` Az `i = i + 1` módosítja a feltételben szereplő változót. Amikor `i` értéke 6 lesz, az `i <= 5` hamis, ezért a ciklus befejeződik.
+```
+
+Az `i = i + 1` módosítja a feltételben szereplő változót. Amikor `i` értéke 6 lesz, az `i <= 5` hamis, ezért a ciklus befejeződik.
 
 ## Végtelen ciklus
 
