@@ -69,6 +69,17 @@ Výstup:
 Python je úžasný
 ```
 
+### Rozsah premenných – prehľadný diagram
+
+```mermaid
+flowchart TD
+    A["Globálna x = 'úžasný'"] --> B["Volanie funkcie"]
+    B --> C{"Funkcia iba číta x?"}
+    C -->|Áno| D["Globálna hodnota x je dostupná na čítanie"]
+    C -->|Priradí lokálne x| E["Funkcia používa vlastnú lokálnu premennú x"]
+    C -->|Použije global x a priradí hodnotu| F["Zmení sa globálna premenná x"]
+```
+
 ## Rozdiel medzi globálnou a lokálnou premennou
 
 Ak vo funkcii vytvoríš premennú s rovnakým názvom, bude lokálna a použiteľná iba vo funkcii. Globálna premenná s rovnakým názvom si zachová pôvodnú hodnotu.
