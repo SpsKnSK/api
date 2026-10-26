@@ -69,6 +69,17 @@ Kimenet:
 Python is awesome
 ```
 
+### A változók hatóköre – áttekintő ábra
+
+```mermaid
+flowchart TD
+    A["Globális x = 'awesome'"] --> B["Függvény meghívása"]
+    B --> C{"A függvény csak olvassa x-et?"}
+    C -->|Igen| D["A globális x értéke olvasható"]
+    C -->|Lokális x-et rendel hozzá| E["A függvény saját lokális x-et használ"]
+    C -->|global x-et használ és értéket rendel hozzá| F["A globális x módosul"]
+```
+
 ## Globális és lokális változó különbsége
 
 Ha egy függvényen belül azonos nevű változót hozol létre, ez a változó lokális lesz, és csak a függvényen belül használható. Az azonos nevű globális változó megmarad az eredeti értékével.
