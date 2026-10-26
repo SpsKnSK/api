@@ -66,7 +66,8 @@ f.close()
   - `0` – začiatok súboru
   - `1` – aktuálna pozícia
   - `2` – koniec súboru
-- Pri jednom parametri nastaví kurzor na pozíciu s daným indexom.
+- Pri jednom parametri nastaví kurzor na zadanú pozíciu.
+- **Poznámka:** pri textových súboroch je použitie `seek()` obmedzené: s počiatočnými bodmi `1` a `2` nemožno používať ľubovoľný posun. Uvedené hodnoty preto slúžia ako všeobecný prehľad; v praxi je dôležitejšie používať `with` a čítať súbor po riadkoch.
 
 ## Zápis do súboru
 
