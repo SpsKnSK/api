@@ -66,7 +66,8 @@ További lehetőségek:
   - `0` – a fájl eleje
   - `1` – az aktuális pozíció
   - `2` – a fájl vége
-- Egy paraméter esetén az aktuális indexű pozícióra állítja a kurzort.
+- Egy paraméter esetén a megadott pozícióra állítja a kurzort.
+- **Megjegyzés:** szöveges fájloknál a `seek()` használata korlátozott: a `0`-tól eltérő kezdőpontokkal (`1`, `2`) nem használható tetszőleges eltolással. Ezért a fenti értékek általános áttekintésként szerepelnek; a gyakorlatban a `with` és a soronkénti olvasás fontosabb.
 
 ## Írás a fájlba
 
