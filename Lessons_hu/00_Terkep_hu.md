@@ -89,7 +89,7 @@ Nem annyira alap, mint a fentiek, de a gyakorlatban gyakran szükség lesz rá.
 | 08 | [try, format, ternary](08_try_format_ternary/01_basic.md) *(opcionális)* | Hibakezelés, szép kiíratás (f-string), rövid if egy sorban |
 | 12 | [Szótár és halmaz](12_list_set_dictionary_tuple/02_main.md) | Amikor nem index, hanem **kulcs** alapján akarsz adatot elérni (`dict`), vagy amikor a duplikátumok nem érdekelnek (`set`) |
 | 15 | [Globális és lokális változók](15_localAndGlobalVariables/01_basic.md) | Miért nem látja egy függvény a másik változóját — ez sok rejtélyes hibát megmagyaráz |
-| 16 | [Fájlkezelés](16_files_hu.md) | Adatot nem csak kiírni, hanem el is **menteni** kell tudni |
+| 16 | [Fájlkezelés](16_files/01_basic.md) | Adatot nem csak kiírni, hanem el is **menteni** kell tudni |
 
 ---
 
@@ -118,5 +118,5 @@ Ezekről elég annyit tudni: **mi ez, és mikor vegyem elő** — nem kell fejb�
 | ...sok hasonló adatot kell tárolnia | lista ([09](09_lists/02_main.md)) vagy szótár ([12](12_list_set_dictionary_tuple/02_main.md)) |
 | ...szöveget kell darabolnia, keresnie benne | string-műveletek ([10](10_string/01_basic.md)) |
 | ...ugyanaz a kódrészlet többször is előfordul benne | írj belőle függvényt ([11](11_functions/02_main.md)) |
-| ...adatot kell megőriznie a program lezárása után is | fájlkezelés ([16](16_files_hu.md)) |
+| ...adatot kell megőriznie a program lezárása után is | fájlkezelés ([16](16_files/01_basic.md)) |
 | ...furcsa hibát dob, és nem érted, miért | nézd meg a behúzást, a `:`-t, és a kis/nagybetűket ([05](05_if/02_main.md)) |
