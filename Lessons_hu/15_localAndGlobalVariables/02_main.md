@@ -80,6 +80,28 @@ flowchart TD
     C -->|global x-et használ és értéket rendel hozzá| F["A globális x módosul"]
 ```
 
+## Példa: a `for` ciklus végigmegy a szöveg betűin
+
+A függvény a globális `nev` változót olvassa, a `betu` pedig a függvényen belüli ciklusváltozó.
+
+```python
+nev = "Anna"
+
+def betuk_kiirasa():
+    for betu in nev:
+        print(betu)
+
+betuk_kiirasa()
+```
+
+Kimenet:
+```text
+A
+n
+n
+a
+```
+
 ## Globális és lokális változó különbsége
 
 Ha egy függvényen belül azonos nevű változót hozol létre, ez a változó lokális lesz, és csak a függvényen belül használható. Az azonos nevű globális változó megmarad az eredeti értékével.
