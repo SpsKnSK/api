@@ -88,7 +88,7 @@ Nem annyira alap, mint a fentiek, de a gyakorlatban gyakran szükség lesz rá.
 |---|---|---|
 | 08 | [try, format, ternary](08_try_format_ternary/01_basic.md) *(opcionális)* | Hibakezelés, szép kiíratás (f-string), rövid if egy sorban |
 | 12 | [Szótár és halmaz](12_list_set_dictionary_tuple/02_main.md) | Amikor nem index, hanem **kulcs** alapján akarsz adatot elérni (`dict`), vagy amikor a duplikátumok nem érdekelnek (`set`) |
-| 15 | [Globális és lokális változók](15_localAndGlobalVariables_hu.md) | Miért nem látja egy függvény a másik változóját — ez sok rejtélyes hibát megmagyaráz |
+| 15 | [Globális és lokális változók](15_localAndGlobalVariables/01_basic.md) | Miért nem látja egy függvény a másik változóját — ez sok rejtélyes hibát megmagyaráz |
 | 16 | [Fájlkezelés](16_files_hu.md) | Adatot nem csak kiírni, hanem el is **menteni** kell tudni |
 
 ---
