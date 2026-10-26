@@ -86,7 +86,7 @@ Nie je to úplný základ ako vyššie, ale v praxi to budeš často potrebovať
 | 08 | [try, format, ternary](08_try_format_ternary/01_basic.md) *(voliteľné)* | Ošetrenie chýb, pekný výpis (f-string), skrátený if na jednom riadku |
 | 12 | [Slovník a množina](12_list_set_dictionary_tuple/02_main.md) | Keď chceš pristupovať k údaju nie podľa indexu, ale podľa **kľúča** (`dict`), alebo keď ťa duplicity nezaujímajú (`set`) |
 | 15 | [Globálne a lokálne premenné](15_localAndGlobalVariables/01_basic.md) | Prečo jedna funkcia "nevidí" premennú z inej — vysvetľuje veľa záhadných chýb |
-| 16 | [Práca so súbormi](16_files_sk.md) | Údaje treba vedieť nielen vypísať, ale aj **uložiť** |
+| 16 | [Práca so súbormi](16_files/01_basic.md) | Údaje treba vedieť nielen vypísať, ale aj **uložiť** |
 
 ---
 
@@ -115,5 +115,5 @@ O týchto stačí vedieť: **čo to je a kedy to použiť** — netreba naspamä
 | ...má uchovávať veľa podobných údajov | zoznam ([09](09_lists/02_main.md)) alebo slovník ([12](12_list_set_dictionary_tuple/02_main.md)) |
 | ...treba rozobrať text, hľadať v ňom | operácie s reťazcami ([10](10_string/01_basic.md)) |
 | ...ten istý kód sa v nej opakuje viackrát | urob z neho funkciu ([11](11_functions/02_main.md)) |
-| ...má uchovať údaje aj po ukončení programu | práca so súbormi ([16](16_files_sk.md)) |
+| ...má uchovať údaje aj po ukončení programu | práca so súbormi ([16](16_files/01_basic.md)) |
 | ...hádže čudnú chybu a nevieš prečo | skontroluj odsadenie, dvojbodku a malé/veľké písmená ([05](05_if_sk.md)) |
