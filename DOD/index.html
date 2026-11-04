@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vyber jazyk / Válassz nyelvet</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b1220;color:#f5f8ff;font:18px Arial,sans-serif}
+    main{width:min(100% - 32px,760px);padding:35px 0}
+    h1{margin:0 0 12px;text-align:center;font-size:clamp(30px,6vw,42px)}
+    p{margin:0 0 28px;text-align:center;line-height:1.5;color:#a8b9d2}
+    nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    a{position:relative;display:grid;place-items:center;min-height:130px;overflow:hidden;padding:28px 18px;border:2px solid #29364d;border-radius:12px;background:#151f32;color:#f5f8ff;text-align:center;text-decoration:none;font-size:22px;font-weight:bold}
+    a:hover,a:focus-visible{border-color:#55e4e7;outline:3px solid #55e4e7;outline-offset:3px}
+    .flag{position:absolute;inset:0;opacity:.28;transition:opacity .2s ease;pointer-events:none}
+    a:hover .flag,a:focus-visible .flag{opacity:1}
+    a:hover .language,a:focus-visible .language{color:#000}
+    .flag.sk{background:linear-gradient(to bottom,#fff 0 33.33%,#0b4ea2 33.33% 66.67%,#ee1c25 66.67%)}
+    .flag.hu{background:linear-gradient(to bottom,#ce2939 0 33.33%,#fff 33.33% 66.67%,#477050 66.67%)}
+    .language{position:relative}
+    @media(max-width:520px){nav{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Vyber jazyk / Válassz nyelvet</h1>
+    <p>Pokračuj po <b>slovensky</b> / folytasd <b>magyarul</b>.</p>
+    <nav aria-label="Výber jazyka / Nyelvválasztás">
+      <a href="SK/index.html" lang="sk">
+        <span class="flag sk" aria-hidden="true"></span>
+        <span class="language">Slovenčina</span>
+      </a>
+      <a href="HU/index.html" lang="hu">
+        <span class="flag hu" aria-hidden="true"></span>
+        <span class="language">Magyar</span>
+      </a>
+    </nav>
+  </main>
+</body>
+</html>
