@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="sk">
+<meta charset="utf-8">
+<style>
+body { background: #152440; color: white; font-family: Arial; text-align: center; padding: 35px; }
+h1 { color: #55e4e7; }
+button { background: #55e4e7; border: 0; padding: 15px; font-size: 18px; cursor: pointer; }
+input { padding: 12px; font-size: 18px; max-width: 90%; }
+</style>
+<h1>Moja prvá vlastná stránka</h1>
+<p>Aká je tvoja prezývka?</p>
+<input id="nev" placeholder="Napr. Pixel" maxlength="30">
+<button onclick="koszont()">Pozdrav ma!</button>
+<h2 id="uzenet">Tu sa zobrazí tvoja správa.</h2>
+<!-- TAJNÁ ÚLOHA: z nasledujúceho riadka vymaž slovo hidden! -->
+<p hidden>★ Našiel/našla si tajnú správu!</p>
+<script>
+function koszont() {
+    const nev = document.getElementById('nev').value.trim();
+    document.getElementById('uzenet').textContent =
+        nev ? 'Ahoj, ' + nev + '! Teraz to už ovládaš ty.' : 'Najprv zadaj prezývku!';
+}
+</script>
+</html>
