@@ -16,5 +16,19 @@
     "send_at": "2026-11-17T15:25:00+01:00",
     "sent_at": "2026-11-17T14:27:41+00:00",
     "discord_message_id": "1572256920478285884"
+  },
+  {
+    "id": "hu-functions-2026-11-23-1900",
+    "language": "HU",
+    "send_at": "2026-11-23T19:00:00+01:00",
+    "status": "pending",
+    "message": "@everyone\n\nSzerbusztok, a hétfői házi feladat [függvények](https://github.com/SpsKnSK/api/blob/main/Lessons_hu/11_functions_hu.md#%EF%B8%8F-f%C3%BCggv%C3%A9nyek) a *Mi az?*-tól a *Metafora*-ig (és igen, azt is).\n\nTovábbi szép hetet :sparkles:"
+  },
+  {
+    "id": "sk-functions-2026-11-23-1900",
+    "language": "SK",
+    "send_at": "2026-11-23T19:00:00+01:00",
+    "status": "pending",
+    "message": "@everyone\n\nAhojte, domáca úloha na pondelok prepísať do zošita [funkcie](https://github.com/SpsKnSK/api/blob/main/Lessons_sk/11_functions_sk.md#%EF%B8%8F-funkcie) od *Čo to je?* až po *Metafora* (vrátane).\n\nPrajem krásny zvyšok týždňa :sparkles:"
   }
 ]
