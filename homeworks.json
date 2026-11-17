@@ -11,8 +11,10 @@
   {
     "id": "hu-string-notes-2026-11-17",
     "language": "HU",
-    "status": "pending",
+    "status": "sent",
     "message": "@everyone \n\nSzerbusztok, a hétfői házi feladat [string](https://github.com/SpsKnSK/api/blob/main/Lessons_hu/10_string_hu.md#%EF%B8%8F-stringek-sz%C3%B6vegek)  a _Mi az?_-tól a _Metafora_-ig (és igen, azt is)\n\nTovábbi szép hetet :blush:",
-    "send_at": "2026-11-17T15:25:00+01:00"
+    "send_at": "2026-11-17T15:25:00+01:00",
+    "sent_at": "2026-11-17T14:27:41+00:00",
+    "discord_message_id": "1572256920478285884"
   }
 ]
