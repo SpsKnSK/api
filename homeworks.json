@@ -2,9 +2,11 @@
   {
     "id": "sk-string-notes-2026-11-17",
     "language": "SK",
-    "status": "pending",
+    "status": "sent",
     "message": "@everyone \n\nAhojte, domaca uloha na pondelok prepisat do zosita [string](https://github.com/SpsKnSK/api/blob/main/Lessons_sk/10_string_sk.md#%EF%B8%8F-re%C5%A5azce-texty) od _Čo to je?_ az po _Metafora_\n\nPrajem krasny zvysok tyzdna :clap:",
-    "send_at": "2026-11-17T15:25:00+01:00"
+    "send_at": "2026-11-17T15:25:00+01:00",
+    "sent_at": "2026-11-17T14:27:39+00:00",
+    "discord_message_id": "1572256911619923979"
   },
   {
     "id": "hu-string-notes-2026-11-17",
