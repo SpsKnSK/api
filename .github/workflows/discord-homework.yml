@@ -2,9 +2,8 @@ name: Discord homework scheduler
 
 on:
   schedule:
-    # UTC: minutes 02, 07, 12, etc. Avoid crowded top-of-hour slots.
-    # GitHub may delay or drop scheduled runs; these are not exact-time alarms.
-    - cron: "*/5 * * * *"
+    # Run at minute 13 of every hour (UTC). GitHub may delay or drop scheduled runs.
+    - cron: "13 * * * *"
   workflow_dispatch:
 
 permissions:
